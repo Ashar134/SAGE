@@ -9,12 +9,18 @@ from rest_framework.decorators import api_view
 
 def home_page(request):
     return HttpResponse("Hello, This is our Django API Home Page") 
-"""
 
 
 # Testing that our Django API is working fine or not
 
 @api_view(['GET'])
-def home_page(request):
+def index(request):
     return Response({"message": "Hello, This is our Django API Home Page"}) 
 
+"""
+
+
+
+# Our main working start from here
+def homepage(request):
+    return render(request, "homepage.html")

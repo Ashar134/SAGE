@@ -1,7 +1,15 @@
-from django.urls import path
-from .views import home_page
+from django.urls import path, include
+from . import views
 
  
 urlpatterns = [
-    path('', home_page, name='home_page'),  
+    # For testing the index view
+    # path('', views.index, name='index'),  
+    path("", views.homepage, name="homepage"),
+
+
 ]
+
+
+
+
