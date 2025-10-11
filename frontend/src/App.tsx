@@ -1,13 +1,15 @@
 import './App.css'
-import React , { useState, useEffect} from 'react'
+import { useState, useEffect} from 'react'
 import axios from 'axios'
+
+// Testing that our React frontend is working fine with our Django API backend
 
 function App() {
 
   const [message, setMessage] = useState('')
   
   useEffect(() => { 
-    axios.get('http://127.0.0.1:8000/')
+    axios.get('http://127.0.0.1:8000/api')
       .then(response => {
         setMessage(response.data.message)
       })

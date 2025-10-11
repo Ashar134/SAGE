@@ -3,8 +3,8 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
 # Create your views here.
-
-"""
+# Testing that our Django server is working fine or not
+""""
 # Testing that our Django server is working fine or not
 
 def home_page(request):
@@ -18,6 +18,7 @@ def index(request):
     return Response({"message": "Hello, This is our Django API Home Page"}) 
 
 """
+
 
 
 

@@ -4,7 +4,9 @@ from . import views
  
 urlpatterns = [
     # For testing the index view
-    # path('', views.index, name='index'),  
+    # path('api/', views.index, name='index'), 
+     
+     
     path("", views.homepage, name="homepage"),
 
 
