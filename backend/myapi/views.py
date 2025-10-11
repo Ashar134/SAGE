@@ -23,5 +23,11 @@ def index(request):
 
 
 # Our main working start from here
+# Homepage or Website main page view
 def homepage(request):
     return render(request, "homepage.html")
+
+
+# Login and Registration Page
+def authenticate_user(request):
+    return render(request, "authentication_page.html")

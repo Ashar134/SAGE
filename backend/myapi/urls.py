@@ -8,6 +8,7 @@ urlpatterns = [
      
      
     path("", views.homepage, name="homepage"),
+    path("auth/", views.authenticate_user, name="authentication_page"),
 
 
 ]
