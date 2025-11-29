@@ -1,0 +1,1416 @@
+[
+  {
+    "type": "easy",
+    "category": "Machine Learning",
+    "question": "What is data preprocessing?",
+    "answers": {
+      "A1": "Processing raw data before analysis",
+      "A2": "Cleaning, transforming data to prepare for ML models",
+      "A3": "Initial data handling",
+      "A4": "Data preparation"
+    },
+    "key": "Cleaning, transforming data to prepare for ML models",
+    "justification": "Preprocessing is critical for model performance",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is the difference between supervised and unsupervised learning?",
+    "answers": {
+      "A1": "Supervised is faster",
+      "A2": "Supervised uses labeled data; unsupervised uses unlabeled data",
+      "A3": "Unsupervised is better",
+      "A4": "They are the same"
+    },
+    "key": "Supervised uses labeled data; unsupervised uses unlabeled data",
+    "justification": "Key distinction in ML paradigms",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Linear Regression",
+    "question": "What does the slope represent in linear regression?",
+    "answers": {
+      "A1": "The angle of the line",
+      "A2": "The rate of change in output for unit change in input",
+      "A3": "Line steepness",
+      "A4": "Graph inclination"
+    },
+    "key": "The rate of change in output for unit change in input",
+    "justification": "Slope indicates variable relationship strength",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Linear Regression",
+    "question": "What is multivariate linear regression?",
+    "answers": {
+      "A1": "Regression with multiple varieties",
+      "A2": "Regression with multiple input features and one output",
+      "A3": "Multiple output regression",
+      "A4": "Variety-based regression"
+    },
+    "key": "Regression with multiple input features and one output",
+    "justification": "Multivariate regression handles multiple predictors",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Logistic Regression",
+    "question": "Why use logistic regression instead of linear regression for classification?",
+    "answers": {
+      "A1": "Linear regression is less accurate",
+      "A2": "Logistic regression outputs probabilities between 0 and 1",
+      "A3": "Linear regression cannot predict",
+      "A4": "Logistic is always better"
+    },
+    "key": "Logistic regression outputs probabilities between 0 and 1",
+    "justification": "Sigmoid ensures valid probability outputs",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Decision Trees",
+    "question": "What is information gain?",
+    "answers": {
+      "A1": "Gaining information",
+      "A2": "Reduction in entropy after a split",
+      "A3": "Information increase",
+      "A4": "Knowledge acquisition"
+    },
+    "key": "Reduction in entropy after a split",
+    "justification": "Information gain guides splitting decisions",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Decision Trees",
+    "question": "What is entropy in decision trees?",
+    "answers": {
+      "A1": "Thermodynamic entropy",
+      "A2": "Measure of impurity or disorder in data",
+      "A3": "Data randomness",
+      "A4": "Disorder measure"
+    },
+    "key": "Measure of impurity or disorder in data",
+    "justification": "Entropy quantifies data homogeneity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "k-Nearest Neighbors",
+    "question": "How does kNN make predictions?",
+    "answers": {
+      "A1": "Using a distance formula",
+      "A2": "Majority vote or average of k nearest points' labels",
+      "A3": "Finding nearest neighbors",
+      "A4": "Proximity calculation"
+    },
+    "key": "Majority vote or average of k nearest points' labels",
+    "justification": "kNN uses simple neighbor voting mechanism",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "k-Nearest Neighbors",
+    "question": "What is the computational complexity of kNN?",
+    "answers": {
+      "A1": "O(log n)",
+      "A2": "O(n) - must compute distance to all training points",
+      "A3": "O(1)",
+      "A4": "O(n log n)"
+    },
+    "key": "O(n) - must compute distance to all training points",
+    "justification": "kNN has lazy learning property",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Support Vector Machines",
+    "question": "What does SVM do with non-linearly separable data?",
+    "answers": {
+      "A1": "Cannot handle it",
+      "A2": "Uses kernel trick to map data to higher dimension",
+      "A3": "Ignores it",
+      "A4": "Approximates linearity"
+    },
+    "key": "Uses kernel trick to map data to higher dimension",
+    "justification": "Kernel trick enables SVM for non-linear problems",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Support Vector Machines",
+    "question": "What is kernel trick in SVM?",
+    "answers": {
+      "A1": "A trick involving kernels",
+      "A2": "Computing similarity in high-dimension space without explicit transformation",
+      "A3": "Kernel selection",
+      "A4": "Dimensional transformation"
+    },
+    "key": "Computing similarity in high-dimension space without explicit transformation",
+    "justification": "Kernel trick makes SVM computationally efficient",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Random Forests",
+    "question": "How does Random Forest prevent overfitting?",
+    "answers": {
+      "A1": "Using random data",
+      "A2": "Averaging predictions of multiple trees with random features",
+      "A3": "Random selection",
+      "A4": "Tree randomization"
+    },
+    "key": "Averaging predictions of multiple trees with random features",
+    "justification": "Ensemble averaging reduces individual tree overfitting",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Clustering",
+    "question": "What is the elbow method?",
+    "answers": {
+      "A1": "A method about elbows",
+      "A2": "Finding optimal k by plotting variance and looking for 'elbow' point",
+      "A3": "Arm-based method",
+      "A4": "Angular selection"
+    },
+    "key": "Finding optimal k by plotting variance and looking for 'elbow' point",
+    "justification": "Elbow method helps select K in K-means",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Clustering",
+    "question": "What is silhouette score?",
+    "answers": {
+      "A1": "Outline measure",
+      "A2": "Metric evaluating cluster cohesion and separation",
+      "A3": "Cluster shape",
+      "A4": "Form evaluation"
+    },
+    "key": "Metric evaluating cluster cohesion and separation",
+    "justification": "Silhouette score measures clustering quality",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Neural Networks",
+    "question": "What problem does activation function solve?",
+    "answers": {
+      "A1": "It activates neurons",
+      "A2": "Enables nonlinear mapping, allowing networks to learn complex functions",
+      "A3": "It activates learning",
+      "A4": "Enables computation"
+    },
+    "key": "Enables nonlinear mapping, allowing networks to learn complex functions",
+    "justification": "Without nonlinearity, deep networks become linear",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Neural Networks",
+    "question": "What is vanishing gradient problem?",
+    "answers": {
+      "A1": "Gradients that disappear",
+      "A2": "Gradients become very small in deep networks, hindering learning",
+      "A3": "Gradient loss",
+      "A4": "Gradient depletion"
+    },
+    "key": "Gradients become very small in deep networks, hindering learning",
+    "justification": "Vanishing gradient prevents learning in early layers",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Neural Networks",
+    "question": "What is exploding gradient problem?",
+    "answers": {
+      "A1": "Gradients exploding",
+      "A2": "Gradients become very large, causing instability",
+      "A3": "Gradient growth",
+      "A4": "Magnitude explosion"
+    },
+    "key": "Gradients become very large, causing instability",
+    "justification": "Exploding gradient causes training instability",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Neural Networks",
+    "question": "What is dropout?",
+    "answers": {
+      "A1": "Dropping out of training",
+      "A2": "Randomly deactivating neurons during training to prevent overfitting",
+      "A3": "Neuron removal",
+      "A4": "Layer deactivation"
+    },
+    "key": "Randomly deactivating neurons during training to prevent overfitting",
+    "justification": "Dropout is regularization technique",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Neural Networks",
+    "question": "What is batch normalization?",
+    "answers": {
+      "A1": "Normalizing batches",
+      "A2": "Standardizing layer inputs during training for faster convergence",
+      "A3": "Batch processing",
+      "A4": "Data standardization"
+    },
+    "key": "Standardizing layer inputs during training for faster convergence",
+    "justification": "Batch norm stabilizes and accelerates training",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "CNN",
+    "question": "What is pooling in CNN?",
+    "answers": {
+      "A1": "Swimming pool processing",
+      "A2": "Downsampling operation reducing spatial dimensions",
+      "A3": "Data aggregation",
+      "A4": "Dimension reduction"
+    },
+    "key": "Downsampling operation reducing spatial dimensions",
+    "justification": "Pooling reduces computation and extracts important features",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "CNN",
+    "question": "What is max pooling?",
+    "answers": {
+      "A1": "Maximum value selection",
+      "A2": "Taking maximum value from pooling window",
+      "A3": "Pool maximization",
+      "A4": "Value selection"
+    },
+    "key": "Taking maximum value from pooling window",
+    "justification": "Max pooling preserves prominent features",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is feature engineering?",
+    "answers": {
+      "A1": "Designing features",
+      "A2": "Creating new features from raw data to improve model",
+      "A3": "Feature creation",
+      "A4": "Attribute design"
+    },
+    "key": "Creating new features from raw data to improve model",
+    "justification": "Feature engineering is crucial for model performance",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is dimensionality reduction?",
+    "answers": {
+      "A1": "Reducing space dimensions",
+      "A2": "Technique reducing number of features while preserving information",
+      "A3": "Feature reduction",
+      "A4": "Space compression"
+    },
+    "key": "Technique reducing number of features while preserving information",
+    "justification": "Dimensionality reduction improves efficiency",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is Principal Component Analysis (PCA)?",
+    "answers": {
+      "A1": "Primary component analysis",
+      "A2": "Unsupervised technique finding principal components of variance",
+      "A3": "Component analysis",
+      "A4": "Variance analysis"
+    },
+    "key": "Unsupervised technique finding principal components of variance",
+    "justification": "PCA is standard dimensionality reduction method",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is bias-variance tradeoff?",
+    "answers": {
+      "A1": "Choosing between bias and variance",
+      "A2": "Balance between model underfitting (high bias) and overfitting (high variance)",
+      "A3": "Balancing parameters",
+      "A4": "Trade-off selection"
+    },
+    "key": "Balance between model underfitting (high bias) and overfitting (high variance)",
+    "justification": "Bias-variance tradeoff is fundamental ML concept",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is boosting?",
+    "answers": {
+      "A1": "Increasing power",
+      "A2": "Ensemble technique combining weak learners sequentially",
+      "A3": "Amplifying effect",
+      "A4": "Enhancement method"
+    },
+    "key": "Ensemble technique combining weak learners sequentially",
+    "justification": "Boosting reduces bias iteratively",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is bagging?",
+    "answers": {
+      "A1": "Using bags for data",
+      "A2": "Bootstrap aggregating - creating multiple datasets by sampling with replacement",
+      "A3": "Sampling method",
+      "A4": "Data aggregation"
+    },
+    "key": "Bootstrap aggregating - creating multiple datasets by sampling with replacement",
+    "justification": "Bagging reduces variance through averaging",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is AdaBoost?",
+    "answers": {
+      "A1": "Adaptive boosting",
+      "A2": "Boosting algorithm focusing on misclassified samples iteratively",
+      "A3": "Adaptive learning",
+      "A4": "Adaptive training"
+    },
+    "key": "Boosting algorithm focusing on misclassified samples iteratively",
+    "justification": "AdaBoost adapts to difficult samples",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is gradient boosting?",
+    "answers": {
+      "A1": "Boosting with gradients",
+      "A2": "Ensemble method building trees sequentially using gradient descent",
+      "A3": "Gradient learning",
+      "A4": "Sequential boosting"
+    },
+    "key": "Ensemble method building trees sequentially using gradient descent",
+    "justification": "Gradient boosting is highly effective ensemble method",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is early stopping in training?",
+    "answers": {
+      "A1": "Stopping early",
+      "A2": "Halting training when validation performance stops improving",
+      "A3": "Early termination",
+      "A4": "Premature halt"
+    },
+    "key": "Halting training when validation performance stops improving",
+    "justification": "Early stopping prevents overfitting",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is L1 regularization?",
+    "answers": {
+      "A1": "First type of regularization",
+      "A2": "Adding penalty proportional to absolute weight values",
+      "A3": "Lasso penalty",
+      "A4": "Linear penalty"
+    },
+    "key": "Adding penalty proportional to absolute weight values",
+    "justification": "L1 (Lasso) encourages sparsity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is L2 regularization?",
+    "answers": {
+      "A1": "Second type of regularization",
+      "A2": "Adding penalty proportional to squared weight values",
+      "A3": "Ridge penalty",
+      "A4": "Quadratic penalty"
+    },
+    "key": "Adding penalty proportional to squared weight values",
+    "justification": "L2 (Ridge) reduces large weights",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is elastic net?",
+    "answers": {
+      "A1": "Elastic network",
+      "A2": "Combining L1 and L2 regularization",
+      "A3": "Elastic regularization",
+      "A4": "Hybrid penalty"
+    },
+    "key": "Combining L1 and L2 regularization",
+    "justification": "Elastic net combines benefits of Lasso and Ridge",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Neural Networks",
+    "question": "What is transfer learning?",
+    "answers": {
+      "A1": "Transferring data",
+      "A2": "Using pre-trained model on new task to improve learning",
+      "A3": "Model transfer",
+      "A4": "Knowledge transfer"
+    },
+    "key": "Using pre-trained model on new task to improve learning",
+    "justification": "Transfer learning saves training time",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Neural Networks",
+    "question": "What is fine-tuning?",
+    "answers": {
+      "A1": "Fine adjustments",
+      "A2": "Continuing training of pre-trained model on new data",
+      "A3": "Subtle adjustments",
+      "A4": "Detailed tuning"
+    },
+    "key": "Continuing training of pre-trained model on new data",
+    "justification": "Fine-tuning adapts models to new domains",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is one-hot encoding?",
+    "answers": {
+      "A1": "Encoding with one hot",
+      "A2": "Converting categorical variables to binary vectors",
+      "A3": "Hot encoding",
+      "A4": "Single encoding"
+    },
+    "key": "Converting categorical variables to binary vectors",
+    "justification": "One-hot encoding handles categorical features",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is label encoding?",
+    "answers": {
+      "A1": "Labeling",
+      "A2": "Assigning integer values to categorical variables",
+      "A3": "Integer assignment",
+      "A4": "Category numbering"
+    },
+    "key": "Assigning integer values to categorical variables",
+    "justification": "Label encoding for ordinal categories",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is imbalanced data problem?",
+    "answers": {
+      "A1": "Data that is imbalanced",
+      "A2": "Training data with unequal class distribution",
+      "A3": "Unequal amounts",
+      "A4": "Distribution mismatch"
+    },
+    "key": "Training data with unequal class distribution",
+    "justification": "Imbalanced data requires special techniques",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is SMOTE?",
+    "answers": {
+      "A1": "Synthetic oversampling",
+      "A2": "Technique creating synthetic samples for minority class",
+      "A3": "Synthetic method",
+      "A4": "Oversampling approach"
+    },
+    "key": "Technique creating synthetic samples for minority class",
+    "justification": "SMOTE addresses class imbalance",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Clustering",
+    "question": "What is silhouette analysis?",
+    "answers": {
+      "A1": "Analyzing silhouettes",
+      "A2": "Evaluating cluster quality using silhouette coefficients",
+      "A3": "Shape analysis",
+      "A4": "Form evaluation"
+    },
+    "key": "Evaluating cluster quality using silhouette coefficients",
+    "justification": "Silhouette analysis validates clustering",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Clustering",
+    "question": "What is DBSCAN?",
+    "answers": {
+      "A1": "Database scan",
+      "A2": "Density-based clustering separating dense regions",
+      "A3": "Database clustering",
+      "A4": "Scanning method"
+    },
+    "key": "Density-based clustering separating dense regions",
+    "justification": "DBSCAN finds arbitrary cluster shapes",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is anomaly detection?",
+    "answers": {
+      "A1": "Detecting anomalies",
+      "A2": "Identifying outliers or unusual patterns in data",
+      "A3": "Unusual detection",
+      "A4": "Outlier finding"
+    },
+    "key": "Identifying outliers or unusual patterns in data",
+    "justification": "Anomaly detection finds data abnormalities",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is a confusion matrix useful for?",
+    "answers": {
+      "A1": "Creating confusion",
+      "A2": "Understanding classification errors (TP, TN, FP, FN)",
+      "A3": "Analyzing confusion",
+      "A4": "Error classification"
+    },
+    "key": "Understanding classification errors (TP, TN, FP, FN)",
+    "justification": "Confusion matrix details all prediction types",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is TPR (True Positive Rate)?",
+    "answers": {
+      "A1": "Tree Path Ratio",
+      "A2": "Sensitivity - ratio of correct positives to all actual positives",
+      "A3": "Positive rate",
+      "A4": "True rate"
+    },
+    "key": "Sensitivity - ratio of correct positives to all actual positives",
+    "justification": "TPR measures recall or sensitivity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is FPR (False Positive Rate)?",
+    "answers": {
+      "A1": "Fast Processing Rate",
+      "A2": "Ratio of incorrect positives to all actual negatives",
+      "A3": "Positive false rate",
+      "A4": "False rate"
+    },
+    "key": "Ratio of incorrect positives to all actual negatives",
+    "justification": "FPR measures false positive rate",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Neural Networks",
+    "question": "What is an epoch?",
+    "answers": {
+      "A1": "A time period",
+      "A2": "One complete pass through entire training dataset",
+      "A3": "Training step",
+      "A4": "Iteration"
+    },
+    "key": "One complete pass through entire training dataset",
+    "justification": "Epochs control total training time",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Neural Networks",
+    "question": "What is batch size?",
+    "answers": {
+      "A1": "Size of a batch",
+      "A2": "Number of samples processed before weight update",
+      "A3": "Batch amount",
+      "A4": "Sample count"
+    },
+    "key": "Number of samples processed before weight update",
+    "justification": "Batch size affects memory and convergence",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Neural Networks",
+    "question": "What is learning rate?",
+    "answers": {
+      "A1": "Rate of learning",
+      "A2": "Controls step size in gradient descent updates",
+      "A3": "Learning speed",
+      "A4": "Update size"
+    },
+    "key": "Controls step size in gradient descent updates",
+    "justification": "Learning rate is critical hyperparameter",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "CNN",
+    "question": "What is a feature map?",
+    "answers": {
+      "A1": "Map of features",
+      "A2": "Output of convolution filter representing detected features",
+      "A3": "Feature representation",
+      "A4": "Pattern map"
+    },
+    "key": "Output of convolution filter representing detected features",
+    "justification": "Feature maps detect image patterns",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "CNN",
+    "question": "What is stride in convolution?",
+    "answers": {
+      "A1": "Step taken",
+      "A2": "Number of pixels filter moves each step",
+      "A3": "Movement distance",
+      "A4": "Step size"
+    },
+    "key": "Number of pixels filter moves each step",
+    "justification": "Stride affects output size",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "CNN",
+    "question": "What is padding in convolution?",
+    "answers": {
+      "A1": "Adding padding",
+      "A2": "Adding zeros around image borders for convolution",
+      "A3": "Border addition",
+      "A4": "Edge padding"
+    },
+    "key": "Adding zeros around image borders for convolution",
+    "justification": "Padding preserves spatial dimensions",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "Explain the curse of dimensionality",
+    "answers": {
+      "A1": "Dimension is cursed",
+      "A2": "Performance degrades with increasing dimensions due to sparse data",
+      "A3": "Dimensional curse",
+      "A4": "Feature curse"
+    },
+    "key": "Performance degrades with increasing dimensions due to sparse data",
+    "justification": "Curse of dimensionality affects all ML algorithms",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is manifold learning?",
+    "answers": {
+      "A1": "Learning manifolds",
+      "A2": "Learning low-dimensional representation of high-dimensional data",
+      "A3": "Manifold representation",
+      "A4": "Dimensional mapping"
+    },
+    "key": "Learning low-dimensional representation of high-dimensional data",
+    "justification": "Manifold learning finds intrinsic structure",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is t-SNE?",
+    "answers": {
+      "A1": "Tangent Stochastic Neighbor Embedding",
+      "A2": "Technique for visualizing high-dimensional data using probabilistic similarities",
+      "A3": "T-distributed visualization",
+      "A4": "Similarity embedding"
+    },
+    "key": "Technique for visualizing high-dimensional data using probabilistic similarities",
+    "justification": "t-SNE preserves local structure in visualization",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Support Vector Machines",
+    "question": "What is soft margin in SVM?",
+    "answers": {
+      "A1": "Soft borders",
+      "A2": "Allowing some misclassifications to find better generalization",
+      "A3": "Flexible margin",
+      "A4": "Relaxed boundary"
+    },
+    "key": "Allowing some misclassifications to find better generalization",
+    "justification": "Soft margin enables handling noisy data",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Support Vector Machines",
+    "question": "What are support vectors?",
+    "answers": {
+      "A1": "Vector supports",
+      "A2": "Data points closest to decision boundary that define hyperplane",
+      "A3": "Critical points",
+      "A4": "Boundary vectors"
+    },
+    "key": "Data points closest to decision boundary that define hyperplane",
+    "justification": "Support vectors determine the classifier",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Decision Trees",
+    "question": "What is tree depth and how does it affect overfitting?",
+    "answers": {
+      "A1": "Depth is unimportant",
+      "A2": "Deeper trees can memorize training data, increasing overfitting",
+      "A3": "More depth is better",
+      "A4": "Depth affects speed"
+    },
+    "key": "Deeper trees can memorize training data, increasing overfitting",
+    "justification": "Tree depth controls complexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Neural Networks",
+    "question": "What is representation learning?",
+    "answers": {
+      "A1": "Learning representation",
+      "A2": "Learning useful feature representations automatically from raw data",
+      "A3": "Data representation",
+      "A4": "Feature mapping"
+    },
+    "key": "Learning useful feature representations automatically from raw data",
+    "justification": "Deep learning is essentially representation learning",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Neural Networks",
+    "question": "What is residual connection (skip connection)?",
+    "answers": {
+      "A1": "Residual connections",
+      "A2": "Allowing gradients to bypass layers, enabling very deep networks",
+      "A3": "Connection shortcut",
+      "A4": "Skip link"
+    },
+    "key": "Allowing gradients to bypass layers, enabling very deep networks",
+    "justification": "Skip connections solve vanishing gradient",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Neural Networks",
+    "question": "What is recurrent neural network (RNN)?",
+    "answers": {
+      "A1": "Recurring network",
+      "A2": "Network with connections to previous outputs for sequential data",
+      "A3": "Recurrent architecture",
+      "A4": "Looping network"
+    },
+    "key": "Network with connections to previous outputs for sequential data",
+    "justification": "RNNs process sequences",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Neural Networks",
+    "question": "What is LSTM (Long Short-Term Memory)?",
+    "answers": {
+      "A1": "Long Short-Term Memory",
+      "A2": "RNN variant with gates to remember/forget information",
+      "A3": "Memory network",
+      "A4": "Gate mechanism"
+    },
+    "key": "RNN variant with gates to remember/forget information",
+    "justification": "LSTM solves RNN gradient problems",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Neural Networks",
+    "question": "What is attention mechanism?",
+    "answers": {
+      "A1": "Paying attention",
+      "A2": "Computing weighted sum over all inputs based on relevance",
+      "A3": "Attention model",
+      "A4": "Focus mechanism"
+    },
+    "key": "Computing weighted sum over all inputs based on relevance",
+    "justification": "Attention improves model interpretability",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Neural Networks",
+    "question": "What is transformer architecture?",
+    "answers": {
+      "A1": "Transforming architecture",
+      "A2": "Architecture using only attention without recurrence for sequences",
+      "A3": "Transformation model",
+      "A4": "Sequence architecture"
+    },
+    "key": "Architecture using only attention without recurrence for sequences",
+    "justification": "Transformers enable parallel processing",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "CNN",
+    "question": "What are dilated convolutions?",
+    "answers": {
+      "A1": "Dilated filters",
+      "A2": "Convolutions with gaps in filter to increase receptive field",
+      "A3": "Expanded convolution",
+      "A4": "Spaced convolution"
+    },
+    "key": "Convolutions with gaps in filter to increase receptive field",
+    "justification": "Dilated convolutions capture larger context",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Clustering",
+    "question": "What is Gaussian Mixture Model (GMM)?",
+    "answers": {
+      "A1": "Gaussian model",
+      "A2": "Probabilistic model assuming data from mixture of Gaussians",
+      "A3": "Mixture model",
+      "A4": "Gaussian clustering"
+    },
+    "key": "Probabilistic model assuming data from mixture of Gaussians",
+    "justification": "GMM provides soft clustering",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is expectation-maximization (EM) algorithm?",
+    "answers": {
+      "A1": "Maximum expectation",
+      "A2": "Iterative algorithm for maximum likelihood estimation with hidden variables",
+      "A3": "EM algorithm",
+      "A4": "Likelihood maximization"
+    },
+    "key": "Iterative algorithm for maximum likelihood estimation with hidden variables",
+    "justification": "EM is fundamental in probabilistic learning",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is maximum likelihood estimation (MLE)?",
+    "answers": {
+      "A1": "Maximum possible likelihood",
+      "A2": "Finding parameters that maximize probability of observed data",
+      "A3": "Likelihood maximization",
+      "A4": "Probability optimization"
+    },
+    "key": "Finding parameters that maximize probability of observed data",
+    "justification": "MLE is fundamental statistical principle",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is Bayesian inference?",
+    "answers": {
+      "A1": "Bayes' inference",
+      "A2": "Using Bayes theorem to update beliefs with observed data",
+      "A3": "Bayesian method",
+      "A4": "Probabilistic inference"
+    },
+    "key": "Using Bayes theorem to update beliefs with observed data",
+    "justification": "Bayesian inference provides uncertainty",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is variational inference?",
+    "answers": {
+      "A1": "Variable inference",
+      "A2": "Approximate Bayesian inference using optimization",
+      "A3": "Variation method",
+      "A4": "Approximation method"
+    },
+    "key": "Approximate Bayesian inference using optimization",
+    "justification": "Variational inference scales to large data",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is generative model?",
+    "answers": {
+      "A1": "Model that generates",
+      "A2": "Model learning joint distribution P(X,Y) to generate samples",
+      "A3": "Generation model",
+      "A4": "Sample generator"
+    },
+    "key": "Model learning joint distribution P(X,Y) to generate samples",
+    "justification": "Generative models can create new data",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is discriminative model?",
+    "answers": {
+      "A1": "Discriminating model",
+      "A2": "Model learning P(Y|X) to make predictions",
+      "A3": "Discrimination model",
+      "A4": "Classification model"
+    },
+    "key": "Model learning P(Y|X) to make predictions",
+    "justification": "Discriminative models focus on decision boundary",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Neural Networks",
+    "question": "What is adversarial training?",
+    "answers": {
+      "A1": "Hostile training",
+      "A2": "Training model with adversarial examples for robustness",
+      "A3": "Competing training",
+      "A4": "Adversarial learning"
+    },
+    "key": "Training model with adversarial examples for robustness",
+    "justification": "Adversarial training improves model robustness",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Neural Networks",
+    "question": "What are adversarial examples?",
+    "answers": {
+      "A1": "Unusual examples",
+      "A2": "Carefully perturbed inputs causing model misclassification",
+      "A3": "Counter examples",
+      "A4": "Attack samples"
+    },
+    "key": "Carefully perturbed inputs causing model misclassification",
+    "justification": "Adversarial examples reveal model vulnerabilities",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is meta-learning?",
+    "answers": {
+      "A1": "Meta analysis",
+      "A2": "Learning how to learn, quickly adapting to new tasks",
+      "A3": "Learning learning",
+      "A4": "Second-order learning"
+    },
+    "key": "Learning how to learn, quickly adapting to new tasks",
+    "justification": "Meta-learning enables few-shot learning",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is few-shot learning?",
+    "answers": {
+      "A1": "Learning from few samples",
+      "A2": "Learning new tasks from very limited labeled examples",
+      "A3": "Limited learning",
+      "A4": "Small sample learning"
+    },
+    "key": "Learning new tasks from very limited labeled examples",
+    "justification": "Few-shot learning mimics human learning",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is zero-shot learning?",
+    "answers": {
+      "A1": "No sample learning",
+      "A2": "Recognizing unseen classes using semantic information",
+      "A3": "Unseen recognition",
+      "A4": "Class inference"
+    },
+    "key": "Recognizing unseen classes using semantic information",
+    "justification": "Zero-shot learning requires external knowledge",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is domain adaptation?",
+    "answers": {
+      "A1": "Adapting domains",
+      "A2": "Transferring model from source domain to target domain",
+      "A3": "Domain transfer",
+      "A4": "Domain shift"
+    },
+    "key": "Transferring model from source domain to target domain",
+    "justification": "Domain adaptation handles distribution shift",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is federated learning?",
+    "answers": {
+      "A1": "Federal learning",
+      "A2": "Training on decentralized data without centralizing it",
+      "A3": "Distributed learning",
+      "A4": "Network learning"
+    },
+    "key": "Training on decentralized data without centralizing it",
+    "justification": "Federated learning preserves privacy",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is reinforcement learning?",
+    "answers": {
+      "A1": "Reinforcing learning",
+      "A2": "Learning through interaction with environment using rewards",
+      "A3": "Reward-based learning",
+      "A4": "Interactive learning"
+    },
+    "key": "Learning through interaction with environment using rewards",
+    "justification": "Reinforcement learning learns from feedback",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is Q-learning?",
+    "answers": {
+      "A1": "Queue learning",
+      "A2": "Reinforcement learning estimating action-value function",
+      "A3": "Quality learning",
+      "A4": "Query learning"
+    },
+    "key": "Reinforcement learning estimating action-value function",
+    "justification": "Q-learning is model-free RL algorithm",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is policy gradient?",
+    "answers": {
+      "A1": "Policy slope",
+      "A2": "RL approach directly learning policy using gradient",
+      "A3": "Gradient policy",
+      "A4": "Policy descent"
+    },
+    "key": "RL approach directly learning policy using gradient",
+    "justification": "Policy gradient methods are flexible RL approach",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is active learning?",
+    "answers": {
+      "A1": "Active participation",
+      "A2": "Selecting most informative samples for labeling",
+      "A3": "Selective learning",
+      "A4": "Query learning"
+    },
+    "key": "Selecting most informative samples for labeling",
+    "justification": "Active learning reduces labeling cost",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is curriculum learning?",
+    "answers": {
+      "A1": "Educational learning",
+      "A2": "Training on gradually harder tasks",
+      "A3": "Progressive training",
+      "A4": "Ordered learning"
+    },
+    "key": "Training on gradually harder tasks",
+    "justification": "Curriculum learning mimics human education",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is self-supervised learning?",
+    "answers": {
+      "A1": "Self-teaching",
+      "A2": "Learning from unlabeled data using self-generated labels",
+      "A3": "Unsupervised learning",
+      "A4": "Independent learning"
+    },
+    "key": "Learning from unlabeled data using self-generated labels",
+    "justification": "Self-supervised learning leverages unlabeled data",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is multi-task learning?",
+    "answers": {
+      "A1": "Multiple tasks",
+      "A2": "Learning multiple related tasks simultaneously",
+      "A3": "Task sharing",
+      "A4": "Parallel tasks"
+    },
+    "key": "Learning multiple related tasks simultaneously",
+    "justification": "Multi-task learning shares representations",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is metric learning?",
+    "answers": {
+      "A1": "Learning metrics",
+      "A2": "Learning distance metrics for comparing data",
+      "A3": "Distance learning",
+      "A4": "Similarity metric"
+    },
+    "key": "Learning distance metrics for comparing data",
+    "justification": "Metric learning improves similarity tasks",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Neural Networks",
+    "question": "What is contrastive learning?",
+    "answers": {
+      "A1": "Contrasting learning",
+      "A2": "Learning representations by contrasting similar/dissimilar pairs",
+      "A3": "Comparison learning",
+      "A4": "Similarity learning"
+    },
+    "key": "Learning representations by contrasting similar/dissimilar pairs",
+    "justification": "Contrastive learning is powerful pretraining method",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Neural Networks",
+    "question": "What is knowledge distillation?",
+    "answers": {
+      "A1": "Distilling knowledge",
+      "A2": "Training small model to mimic large model",
+      "A3": "Model compression",
+      "A4": "Knowledge transfer"
+    },
+    "key": "Training small model to mimic large model",
+    "justification": "Knowledge distillation enables model compression",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is explainable AI (XAI)?",
+    "answers": {
+      "A1": "Explaining AI",
+      "A2": "Making ML models interpretable and understandable",
+      "A3": "Interpretable models",
+      "A4": "Model transparency"
+    },
+    "key": "Making ML models interpretable and understandable",
+    "justification": "XAI is important for trustworthy AI",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is LIME?",
+    "answers": {
+      "A1": "Linden Mapping Engine",
+      "A2": "Local Interpretable Model-agnostic Explanations",
+      "A3": "Limitation Method",
+      "A4": "Line Mapping"
+    },
+    "key": "Local Interpretable Model-agnostic Explanations",
+    "justification": "LIME explains individual predictions",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is SHAP?",
+    "answers": {
+      "A1": "Shape Analysis",
+      "A2": "SHapley Additive exPlanations for interpretability",
+      "A3": "Shared Approach",
+      "A4": "Shape Method"
+    },
+    "key": "SHapley Additive exPlanations for interpretability",
+    "justification": "SHAP provides game-theory based explanations",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is fairness in ML?",
+    "answers": {
+      "A1": "Fair treatment",
+      "A2": "Ensuring models don't discriminate against groups",
+      "A3": "Equality in predictions",
+      "A4": "Bias-free models"
+    },
+    "key": "Ensuring models don't discriminate against groups",
+    "justification": "Fairness is critical for ethical AI",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is concept drift?",
+    "answers": {
+      "A1": "Drifting concepts",
+      "A2": "Change in data distribution over time",
+      "A3": "Distribution change",
+      "A4": "Temporal shift"
+    },
+    "key": "Change in data distribution over time",
+    "justification": "Concept drift challenges online learning",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is online learning?",
+    "answers": {
+      "A1": "Learning online",
+      "A2": "Learning incrementally from streaming data",
+      "A3": "Streaming learning",
+      "A4": "Sequential learning"
+    },
+    "key": "Learning incrementally from streaming data",
+    "justification": "Online learning handles continuous data streams",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is data augmentation for NLP?",
+    "answers": {
+      "A1": "Increasing text data",
+      "A2": "Creating variations of text to improve robustness",
+      "A3": "Text generation",
+      "A4": "Data expansion"
+    },
+    "key": "Creating variations of text to improve robustness",
+    "justification": "Text augmentation improves generalization",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is word embedding?",
+    "answers": {
+      "A1": "Embedding words",
+      "A2": "Representing words as dense vectors in semantic space",
+      "A3": "Vector representation",
+      "A4": "Word vectorization"
+    },
+    "key": "Representing words as dense vectors in semantic space",
+    "justification": "Word embeddings capture semantic meaning",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is Word2Vec?",
+    "answers": {
+      "A1": "Vector to Vector",
+      "A2": "Neural network model learning word embeddings",
+      "A3": "Word encoding",
+      "A4": "Embedding model"
+    },
+    "key": "Neural network model learning word embeddings",
+    "justification": "Word2Vec is foundational embedding method",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "CNN",
+    "question": "What is batch effect in image data?",
+    "answers": {
+      "A1": "Batch processing effect",
+      "A2": "Systematic differences across image batches/devices",
+      "A3": "Group effect",
+      "A4": "Batch variation"
+    },
+    "key": "Systematic differences across image batches/devices",
+    "justification": "Batch effects confound training",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is neural architecture search (NAS)?",
+    "answers": {
+      "A1": "Searching neural network",
+      "A2": "Automating design of neural network architectures",
+      "A3": "Architecture discovery",
+      "A4": "Automated design"
+    },
+    "key": "Automating design of neural network architectures",
+    "justification": "NAS discovers optimal architectures",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is hyperparameter optimization?",
+    "answers": {
+      "A1": "Optimizing parameters",
+      "A2": "Finding best hyperparameters via grid/random/Bayesian search",
+      "A3": "Parameter tuning",
+      "A4": "Configuration optimization"
+    },
+    "key": "Finding best hyperparameters via grid/random/Bayesian search",
+    "justification": "Hyperparameter optimization improves performance",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is ensemble diversity?",
+    "answers": {
+      "A1": "Variety in ensemble",
+      "A2": "Diversity of ensemble members improves ensemble performance",
+      "A3": "Member variety",
+      "A4": "Model differences"
+    },
+    "key": "Diversity of ensemble members improves ensemble performance",
+    "justification": "Diversity is key to ensemble success",
+    "frequency": 0
+  }
+]

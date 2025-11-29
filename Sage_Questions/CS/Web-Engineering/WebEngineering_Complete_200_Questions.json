@@ -1,0 +1,2222 @@
+[
+  {
+    "type": "medium",
+    "category": "CSS",
+    "question": "When you specify font-family as 'Arial, sans-serif', what happens if Arial is unavailable on the user's device?",
+    "answers": {
+      "A1": "The browser leaves the text blank",
+      "A2": "The browser uses the next font in the list (sans-serif)",
+      "A3": "The browser crashes",
+      "A4": "The page fails to load"
+    },
+    "key": "The browser uses the next font in the list (sans-serif)",
+    "justification": "Browsers try fonts in order. If Arial isn't available, they move to the next option. 'sans-serif' is a generic fallback font.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "CSS",
+    "question": "What does '2em' mean in the context of CSS font-size when the parent element has font-size: 16px?",
+    "answers": {
+      "A1": "2 pixels",
+      "A2": "32 pixels (2 × 16px)",
+      "A3": "2 percentage points",
+      "A4": "2 millimeters"
+    },
+    "key": "32 pixels (2 × 16px)",
+    "justification": "'em' is relative to the element's font-size. If parent is 16px, then 2em = 2 × 16 = 32px.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "CSS",
+    "question": "Which font-weight value is equivalent to 'bold'?",
+    "answers": {
+      "A1": "400",
+      "A2": "600",
+      "A3": "700",
+      "A4": "800"
+    },
+    "key": "700",
+    "justification": "Font-weight values: 400 = normal, 700 = bold, 900 = black.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "CSS",
+    "question": "What is the difference between 'italic' and 'oblique' in CSS font-style?",
+    "answers": {
+      "A1": "They are identical",
+      "A2": "Italic is a separate font face; oblique simulates slanting",
+      "A3": "Oblique is deprecated",
+      "A4": "Italic works only in Firefox"
+    },
+    "key": "Italic is a separate font face; oblique simulates slanting",
+    "justification": "Italic is designed as a distinct font face, while oblique is mathematically skewed.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "CSS",
+    "question": "What is the purpose of line-height: 1.5 in CSS?",
+    "answers": {
+      "A1": "Increases the font size by 1.5 times",
+      "A2": "Sets the distance between lines to 1.5 times the font size",
+      "A3": "Reduces spacing between words",
+      "A4": "Adds 1.5px of margin"
+    },
+    "key": "Sets the distance between lines to 1.5 times the font size",
+    "justification": "line-height controls vertical spacing between lines of text. 1.5 means 1.5 × current font-size.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "CSS",
+    "question": "Which CSS property adds both an underline and a line through text?",
+    "answers": {
+      "A1": "text-decoration: underline line-through;",
+      "A2": "text-style: underline;",
+      "A3": "text-format: underline-through;",
+      "A4": "text-decoration: double-line;"
+    },
+    "key": "text-decoration: underline line-through;",
+    "justification": "Multiple text-decoration values can be combined with spaces.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "CSS",
+    "question": "What does text-transform: capitalize do?",
+    "answers": {
+      "A1": "Converts all text to uppercase",
+      "A2": "Converts the first letter of each word to uppercase",
+      "A3": "Converts all text to lowercase",
+      "A4": "Capitalizes the first letter only"
+    },
+    "key": "Converts the first letter of each word to uppercase",
+    "justification": "capitalize transforms the first character of each word to uppercase.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "CSS",
+    "question": "What does letter-spacing: 2px do?",
+    "answers": {
+      "A1": "Adds 2 pixels between words",
+      "A2": "Adds 2 pixels between individual letters",
+      "A3": "Increases font size by 2px",
+      "A4": "Adds 2px of margin to text"
+    },
+    "key": "Adds 2 pixels between individual letters",
+    "justification": "letter-spacing adjusts the space between characters, not words.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "CSS",
+    "question": "Which pseudo-class is used to style a link that has been visited by the user?",
+    "answers": {
+      "A1": "a:hover",
+      "A2": "a:active",
+      "A3": "a:visited",
+      "A4": "a:focus"
+    },
+    "key": "a:visited",
+    "justification": "The :visited pseudo-class styles links that have been clicked/visited before.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "CSS",
+    "question": "What does text-indent: 30px do?",
+    "answers": {
+      "A1": "Indents the entire paragraph by 30px",
+      "A2": "Indents only the first line of the paragraph by 30px",
+      "A3": "Adds 30px margin to the left",
+      "A4": "Adds 30px padding to the first word"
+    },
+    "key": "Indents only the first line of the paragraph by 30px",
+    "justification": "text-indent affects only the first line of a text block.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "CSS",
+    "question": "What does background-repeat: no-repeat do?",
+    "answers": {
+      "A1": "Repeats the background image horizontally",
+      "A2": "Repeats the background image vertically",
+      "A3": "Shows the background image only once",
+      "A4": "Removes the background entirely"
+    },
+    "key": "Shows the background image only once",
+    "justification": "no-repeat prevents the background image from tiling.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "CSS",
+    "question": "What is the purpose of background-position: center center?",
+    "answers": {
+      "A1": "Repeats background only in the center",
+      "A2": "Positions the background image at the center of the container",
+      "A3": "Makes the background transparent",
+      "A4": "Crops the background image"
+    },
+    "key": "Positions the background image at the center of the container",
+    "justification": "background-position specifies where the background image starts.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "CSS",
+    "question": "What is the difference between background-size: cover and background-size: contain?",
+    "answers": {
+      "A1": "cover is smaller; contain is larger",
+      "A2": "cover fills container and clips content; contain fits without clipping",
+      "A3": "contain is faster",
+      "A4": "They are identical"
+    },
+    "key": "cover fills container and clips content; contain fits without clipping",
+    "justification": "cover may clip; contain ensures full visibility with possible empty space.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "CSS",
+    "question": "What does background-attachment: fixed do?",
+    "answers": {
+      "A1": "Prevents the background from scrolling",
+      "A2": "Makes the background scroll faster",
+      "A3": "Fixes the size of the background",
+      "A4": "Repeats the background infinitely"
+    },
+    "key": "Prevents the background from scrolling",
+    "justification": "fixed creates a parallax effect where the background stays in place while content scrolls.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "CSS",
+    "question": "What does padding: 10px 15px 20px 25px represent?",
+    "answers": {
+      "A1": "All sides are padded equally",
+      "A2": "Top 10px, Right 15px, Bottom 20px, Left 25px",
+      "A3": "Top 10px for all elements",
+      "A4": "Margin values only"
+    },
+    "key": "Top 10px, Right 15px, Bottom 20px, Left 25px",
+    "justification": "Four values represent: top, right, bottom, left (clockwise order).",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "CSS",
+    "question": "What is the shorthand for border: 2px solid red; border-radius: 5px?",
+    "answers": {
+      "A1": "border-style: solid; border-width: 2px;",
+      "A2": "Both properties together create a rounded rectangle border",
+      "A3": "border-round: 2px solid red 5px;",
+      "A4": "They cannot be combined"
+    },
+    "key": "Both properties together create a rounded rectangle border",
+    "justification": "border defines edge, border-radius defines corner curvature.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "CSS",
+    "question": "Which border-style value creates a 3D grooved appearance?",
+    "answers": {
+      "A1": "ridge",
+      "A2": "groove",
+      "A3": "inset",
+      "A4": "outset"
+    },
+    "key": "groove",
+    "justification": "groove creates an inset/beveled effect; ridge is its opposite.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "CSS",
+    "question": "What is CSS nesting and why is it useful?",
+    "answers": {
+      "A1": "Creating nested HTML elements",
+      "A2": "Writing nested selectors directly in CSS to improve readability",
+      "A3": "Nesting classes inside divs",
+      "A4": "Combining multiple stylesheets"
+    },
+    "key": "Writing nested selectors directly in CSS to improve readability",
+    "justification": "CSS nesting reduces repetition and improves code organization.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "CSS",
+    "question": "In CSS nesting, what does the '&' symbol represent?",
+    "answers": {
+      "A1": "Any selector",
+      "A2": "The parent selector",
+      "A3": "A wildcard for all elements",
+      "A4": "A logical AND operator"
+    },
+    "key": "The parent selector",
+    "justification": "&' refers back to the outer selector in nested rules.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "CSS",
+    "question": "What does object-fit: cover do for images?",
+    "answers": {
+      "A1": "Covers the container while preserving aspect ratio, clipping if necessary",
+      "A2": "Fits the image without preserving aspect ratio",
+      "A3": "Removes the image from display",
+      "A4": "Makes the image fill the entire page"
+    },
+    "key": "Covers the container while preserving aspect ratio, clipping if necessary",
+    "justification": "cover fills the container; may clip content to maintain aspect ratio.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "CSS",
+    "question": "What does object-fit: contain do?",
+    "answers": {
+      "A1": "Clips the image to fit",
+      "A2": "Fits entire image in container with empty space if needed",
+      "A3": "Stretches image to fill container",
+      "A4": "Removes the image"
+    },
+    "key": "Fits entire image in container with empty space if needed",
+    "justification": "contain preserves aspect ratio and shows entire image.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "CSS",
+    "question": "What is the default value of object-fit?",
+    "answers": {
+      "A1": "contain",
+      "A2": "cover",
+      "A3": "fill",
+      "A4": "scale-down"
+    },
+    "key": "fill",
+    "justification": "fill stretches content to fill container, ignoring aspect ratio.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "CSS",
+    "question": "What does object-fit: scale-down do?",
+    "answers": {
+      "A1": "Scales up the image",
+      "A2": "Reduces image to smallest size that fits container while preserving aspect ratio",
+      "A3": "Removes the image",
+      "A4": "Scales down to 50% of original size"
+    },
+    "key": "Reduces image to smallest size that fits container while preserving aspect ratio",
+    "justification": "scale-down shows the smallest version of 'none' or 'contain'.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Responsive Design",
+    "question": "What does the viewport meta tag do in a web page?",
+    "answers": {
+      "A1": "Sets the background color",
+      "A2": "Controls how the page renders on different devices",
+      "A3": "Sets the title of the page",
+      "A4": "Links external CSS files"
+    },
+    "key": "Controls how the page renders on different devices",
+    "justification": "The viewport meta tag optimizes display for mobile and responsive design.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Responsive Design",
+    "question": "What does 'width=device-width' in the viewport meta tag mean?",
+    "answers": {
+      "A1": "Sets page width to 980px",
+      "A2": "Page width adjusts to the device's screen width",
+      "A3": "Locks the page width",
+      "A4": "Disables zooming"
+    },
+    "key": "Page width adjusts to the device's screen width",
+    "justification": "This enables responsive scaling for mobile devices.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Responsive Design",
+    "question": "What does 'initial-scale=1.0' in the viewport meta tag do?",
+    "answers": {
+      "A1": "Sets initial zoom level to 100%",
+      "A2": "Prevents all zooming",
+      "A3": "Sets font size",
+      "A4": "Enables pinch zoom only"
+    },
+    "key": "Sets initial zoom level to 100%",
+    "justification": "initial-scale controls the zoom when the page first loads.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Responsive Design",
+    "question": "Without a viewport meta tag, how did browsers handle fixed-width web pages on mobile devices?",
+    "answers": {
+      "A1": "Displayed them at 100% zoom",
+      "A2": "Scaled down the entire page to fit the screen",
+      "A3": "Displayed them at normal size and required horizontal scrolling",
+      "A4": "Rejected the page as incompatible"
+    },
+    "key": "Scaled down the entire page to fit the screen",
+    "justification": "Browsers would zoom out fixed pages to fit mobile screens, making text too small.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Responsive Design",
+    "question": "What is the basic syntax of a media query?",
+    "answers": {
+      "A1": "@media (condition) { CSS rules }",
+      "A2": "@media type (feature) { CSS rules }",
+      "A3": "@media type and/or (feature) { CSS rules }",
+      "A4": "@media { condition: value; }"
+    },
+    "key": "@media type and/or (feature) { CSS rules }",
+    "justification": "Media queries use @media with optional type and required feature conditions.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Responsive Design",
+    "question": "What does @media screen mean?",
+    "answers": {
+      "A1": "Applies styles only for video displays",
+      "A2": "Applies styles for devices with a screen",
+      "A3": "Applies styles for printed pages",
+      "A4": "Applies styles for all devices"
+    },
+    "key": "Applies styles for devices with a screen",
+    "justification": "screen media type targets devices with displays.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Responsive Design",
+    "question": "What does @media print do?",
+    "answers": {
+      "A1": "Applies styles for print preview only",
+      "A2": "Applies styles when printing or in print preview",
+      "A3": "Prints the CSS code",
+      "A4": "Disables printing"
+    },
+    "key": "Applies styles when printing or in print preview",
+    "justification": "print media type targets printed documents.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Responsive Design",
+    "question": "What does @media speech do?",
+    "answers": {
+      "A1": "Applies styles for voice assistants",
+      "A2": "Applies styles for screen readers and audio browsers",
+      "A3": "Applies styles for video",
+      "A4": "Applies styles for text-to-speech"
+    },
+    "key": "Applies styles for screen readers and audio browsers",
+    "justification": "speech media type targets devices that read content aloud.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Responsive Design",
+    "question": "What is the 'width' media feature used for?",
+    "answers": {
+      "A1": "Sets the width of all elements",
+      "A2": "Checks if viewport width matches a condition (can use min-width, max-width)",
+      "A3": "Sets the page width",
+      "A4": "Controls browser window width"
+    },
+    "key": "Checks if viewport width matches a condition (can use min-width, max-width)",
+    "justification": "width feature allows responsive breakpoints based on viewport dimensions.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Responsive Design",
+    "question": "What does @media (min-width: 600px) mean?",
+    "answers": {
+      "A1": "Applies styles only when viewport is less than 600px",
+      "A2": "Applies styles when viewport is at least 600px wide",
+      "A3": "Applies styles to elements with minimum 600px width",
+      "A4": "Sets minimum width to 600px"
+    },
+    "key": "Applies styles when viewport is at least 600px wide",
+    "justification": "min-width sets a lower breakpoint threshold.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Responsive Design",
+    "question": "What does @media (max-width: 768px) mean?",
+    "answers": {
+      "A1": "Applies styles when viewport is at least 768px",
+      "A2": "Applies styles when viewport is at most 768px wide",
+      "A3": "Sets maximum width for all elements",
+      "A4": "Prevents resizing beyond 768px"
+    },
+    "key": "Applies styles when viewport is at most 768px wide",
+    "justification": "max-width sets an upper breakpoint threshold.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Responsive Design",
+    "question": "What does @media (orientation: landscape) check for?",
+    "answers": {
+      "A1": "If the page is scrollable horizontally",
+      "A2": "If the viewport width is greater than height",
+      "A3": "If CSS is oriented left-to-right",
+      "A4": "If the device supports rotation"
+    },
+    "key": "If the viewport width is greater than height",
+    "justification": "landscape orientation means width > height (opposite of portrait).",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Responsive Design",
+    "question": "What does the 'and' operator do in media queries?",
+    "answers": {
+      "A1": "Combines two unrelated conditions",
+      "A2": "Combines multiple conditions that must ALL be true",
+      "A3": "Provides an alternative condition",
+      "A4": "Negates a condition"
+    },
+    "key": "Combines multiple conditions that must ALL be true",
+    "justification": "'and' requires all conditions to be satisfied.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Responsive Design",
+    "question": "What does the comma operator do in media queries?",
+    "answers": {
+      "A1": "Separates conditions that must both be true",
+      "A2": "Provides alternative conditions (OR logic)",
+      "A3": "Applies styles to multiple selectors",
+      "A4": "Ends a media query"
+    },
+    "key": "Provides alternative conditions (OR logic)",
+    "justification": "Comma acts as OR; if ANY condition is true, styles apply.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Responsive Design",
+    "question": "What is the purpose of @media not (max-width: 600px)?",
+    "answers": {
+      "A1": "Applies styles when width is less than 600px",
+      "A2": "Applies styles when width is greater than 600px",
+      "A3": "Negates all styles",
+      "A4": "Applies to print media only"
+    },
+    "key": "Applies styles when width is greater than 600px",
+    "justification": "'not' negates the condition.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "What was JavaScript originally called?",
+    "answers": {
+      "A1": "Java",
+      "A2": "ECMAScript",
+      "A3": "LiveScript",
+      "A4": "DynamicScript"
+    },
+    "key": "LiveScript",
+    "justification": "JavaScript was renamed to capitalize on Java's popularity at the time.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "What is a JavaScript engine?",
+    "answers": {
+      "A1": "A JavaScript library",
+      "A2": "A program that executes JavaScript code",
+      "A3": "A browser feature",
+      "A4": "A type of variable"
+    },
+    "key": "A program that executes JavaScript code",
+    "justification": "Engines like V8 (Chrome), SpiderMonkey (Firefox) parse and execute JS.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "Which JavaScript engine is used in Chrome?",
+    "answers": {
+      "A1": "SpiderMonkey",
+      "A2": "V8",
+      "A3": "JavaScriptCore",
+      "A4": "Chakra"
+    },
+    "key": "V8",
+    "justification": "V8 is Google's engine used in Chrome and Node.js.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "Which JavaScript engine is used in Firefox?",
+    "answers": {
+      "A1": "V8",
+      "A2": "SpiderMonkey",
+      "A3": "JavaScriptCore",
+      "A4": "Chakra"
+    },
+    "key": "SpiderMonkey",
+    "justification": "SpiderMonkey is Mozilla's JavaScript engine.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "JavaScript",
+    "question": "What is the difference between 'var' and 'let' in terms of scope?",
+    "answers": {
+      "A1": "var is block-scoped; let is function-scoped",
+      "A2": "let is block-scoped; var is function-scoped",
+      "A3": "They have identical scope",
+      "A4": "var is global; let is local"
+    },
+    "key": "let is block-scoped; var is function-scoped",
+    "justification": "let respects block scope ({}) while var leaks out of blocks.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "Can you redeclare a variable with 'let'?",
+    "answers": {
+      "A1": "Yes, always",
+      "A2": "No, never",
+      "A3": "Yes, in different blocks",
+      "A4": "Only with 'var'"
+    },
+    "key": "Yes, in different blocks",
+    "justification": "let allows redeclaration in different scopes, but not in the same scope.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "What is the purpose of the 'const' keyword?",
+    "answers": {
+      "A1": "Declares a constant variable that cannot be reassigned",
+      "A2": "Declares a global variable",
+      "A3": "Declares a private variable",
+      "A4": "Declares a temporary variable"
+    },
+    "key": "Declares a constant variable that cannot be reassigned",
+    "justification": "const prevents reassignment but doesn't prevent mutation of objects.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "JavaScript",
+    "question": "Are variables declared with 'var' case-sensitive?",
+    "answers": {
+      "A1": "No, variable names are always lowercase",
+      "A2": "Yes, 'apple' and 'Apple' are different variables",
+      "A3": "Only for global variables",
+      "A4": "Only in strict mode"
+    },
+    "key": "Yes, 'apple' and 'Apple' are different variables",
+    "justification": "JavaScript is case-sensitive for all identifiers.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "What does alert() do in JavaScript?",
+    "answers": {
+      "A1": "Logs a message to the console",
+      "A2": "Displays a popup dialog box with a message",
+      "A3": "Sends an alert to the server",
+      "A4": "Plays an audio alert"
+    },
+    "key": "Displays a popup dialog box with a message",
+    "justification": "alert() is a browser interaction function.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "What does prompt() return if the user clicks 'Cancel'?",
+    "answers": {
+      "A1": "Empty string",
+      "A2": "null",
+      "A3": "undefined",
+      "A4": "false"
+    },
+    "key": "null",
+    "justification": "prompt() returns null when the user cancels.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "What does confirm() return if the user clicks 'OK'?",
+    "answers": {
+      "A1": "true",
+      "A2": "1",
+      "A3": "'OK'",
+      "A4": "undefined"
+    },
+    "key": "true",
+    "justification": "confirm() returns boolean: true for OK, false for Cancel.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "JavaScript",
+    "question": "What is the proper way to declare multiple variables in JavaScript?",
+    "answers": {
+      "A1": "let x = 1 let y = 2;",
+      "A2": "let x = 1, y = 2;",
+      "A3": "let x = 1; let y = 2;",
+      "A4": "Both B and C are correct"
+    },
+    "key": "Both B and C are correct",
+    "justification": "Both comma-separated and individual declarations are valid.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "Can JavaScript execute on servers?",
+    "answers": {
+      "A1": "No, only in browsers",
+      "A2": "Yes, with Node.js",
+      "A3": "Only with special plugins",
+      "A4": "Only on Windows servers"
+    },
+    "key": "Yes, with Node.js",
+    "justification": "Node.js allows JavaScript execution outside the browser.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "What can in-browser JavaScript do? (Select the most comprehensive answer)",
+    "answers": {
+      "A1": "Only display text",
+      "A2": "Manipulate HTML/CSS, respond to user actions, make network requests, manage cookies",
+      "A3": "Only read files from the computer",
+      "A4": "Only perform mathematical calculations"
+    },
+    "key": "Manipulate HTML/CSS, respond to user actions, make network requests, manage cookies",
+    "justification": "In-browser JS can do most web operations except access system files.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "DOM",
+    "question": "What is the DOM?",
+    "answers": {
+      "A1": "A JavaScript library",
+      "A2": "An object representation of HTML/XML document structure",
+      "A3": "A type of database",
+      "A4": "A CSS framework"
+    },
+    "key": "An object representation of HTML/XML document structure",
+    "justification": "DOM represents the page as a tree of objects.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "DOM",
+    "question": "What is a node in the DOM?",
+    "answers": {
+      "A1": "A JavaScript function",
+      "A2": "An object representing a part of the document (element, text, comment)",
+      "A3": "A type of CSS property",
+      "A4": "A browser feature"
+    },
+    "key": "An object representing a part of the document (element, text, comment)",
+    "justification": "Nodes are the building blocks of the DOM tree.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "DOM",
+    "question": "What does document.getElementById() do?",
+    "answers": {
+      "A1": "Selects all elements with a given id",
+      "A2": "Selects the first element with a given id",
+      "A3": "Selects elements by class name",
+      "A4": "Selects all div elements"
+    },
+    "key": "Selects the first element with a given id",
+    "justification": "getElementById() returns a single element (ids are unique).",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "DOM",
+    "question": "What does document.getElementsByClassName() return?",
+    "answers": {
+      "A1": "A single element",
+      "A2": "A live HTMLCollection of all elements with the class",
+      "A3": "An array",
+      "A4": "Nothing"
+    },
+    "key": "A live HTMLCollection of all elements with the class",
+    "justification": "getElementsByClassName() returns a collection, not a single element.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "DOM",
+    "question": "What does document.querySelector() do?",
+    "answers": {
+      "A1": "Selects all matching elements",
+      "A2": "Selects the first element matching a CSS selector",
+      "A3": "Selects elements by tag name only",
+      "A4": "Queries the server"
+    },
+    "key": "Selects the first element matching a CSS selector",
+    "justification": "querySelector() uses CSS selectors and returns first match.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "DOM",
+    "question": "What does document.querySelectorAll() return?",
+    "answers": {
+      "A1": "A single element",
+      "A2": "A NodeList of all matching elements",
+      "A3": "An HTMLCollection",
+      "A4": "An array of elements"
+    },
+    "key": "A NodeList of all matching elements",
+    "justification": "querySelectorAll() returns a static NodeList of all matches.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "DOM",
+    "question": "What does element.innerHTML do?",
+    "answers": {
+      "A1": "Gets/sets the text content only",
+      "A2": "Gets/sets HTML content including tags",
+      "A3": "Gets/sets only attributes",
+      "A4": "Gets the style of the element"
+    },
+    "key": "Gets/sets HTML content including tags",
+    "justification": "innerHTML can contain HTML tags; innerText is text-only.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "DOM",
+    "question": "What is the difference between innerHTML and innerText?",
+    "answers": {
+      "A1": "innerHTML includes HTML; innerText is text-only",
+      "A2": "They are identical",
+      "A3": "innerText is faster",
+      "A4": "innerHTML works only in Firefox"
+    },
+    "key": "innerHTML includes HTML; innerText is text-only",
+    "justification": "innerHTML parses HTML; innerText treats content as plain text.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "DOM",
+    "question": "How do you change the style of an element using JavaScript?",
+    "answers": {
+      "A1": "element.css('property', 'value')",
+      "A2": "element.style.property = 'value'",
+      "A3": "element.setStyle('property', 'value')",
+      "A4": "element.property = 'value'"
+    },
+    "key": "element.style.property = 'value'",
+    "justification": "The style property gives access to inline CSS.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "DOM",
+    "question": "What does element.className = 'myclass' do?",
+    "answers": {
+      "A1": "Adds a class to the element",
+      "A2": "Replaces all classes with 'myclass'",
+      "A3": "Appends a class without removing others",
+      "A4": "Removes all classes"
+    },
+    "key": "Replaces all classes with 'myclass'",
+    "justification": "className replaces all existing classes.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "DOM",
+    "question": "What does element.classList.add('newclass') do?",
+    "answers": {
+      "A1": "Replaces existing classes",
+      "A2": "Adds 'newclass' without removing others",
+      "A3": "Removes all classes",
+      "A4": "Gets all classes"
+    },
+    "key": "Adds 'newclass' without removing others",
+    "justification": "classList.add() appends a class without affecting others.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "DOM",
+    "question": "What does document.createElement() do?",
+    "answers": {
+      "A1": "Finds an element",
+      "A2": "Creates a new DOM element",
+      "A3": "Deletes an element",
+      "A4": "Clones an element"
+    },
+    "key": "Creates a new DOM element",
+    "justification": "createElement() creates a new element but doesn't add it to the page.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "DOM",
+    "question": "What does element.appendChild(newElement) do?",
+    "answers": {
+      "A1": "Prepends the new element",
+      "A2": "Adds newElement as a child at the end",
+      "A3": "Replaces the element",
+      "A4": "Removes the element"
+    },
+    "key": "Adds newElement as a child at the end",
+    "justification": "appendChild() inserts as the last child.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "DOM",
+    "question": "What does element.parentNode give you?",
+    "answers": {
+      "A1": "The first child",
+      "A2": "The parent element of the current element",
+      "A3": "All sibling elements",
+      "A4": "The document object"
+    },
+    "key": "The parent element of the current element",
+    "justification": "parentNode navigates up the DOM tree.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "DOM",
+    "question": "What does element.firstChild return?",
+    "answers": {
+      "A1": "The first element child",
+      "A2": "The first child node (including text/comments)",
+      "A3": "The parent element",
+      "A4": "All children"
+    },
+    "key": "The first child node (including text/comments)",
+    "justification": "firstChild includes all node types, not just elements.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "DOM",
+    "question": "What does element.nextSibling return?",
+    "answers": {
+      "A1": "The next element sibling",
+      "A2": "The next sibling node",
+      "A3": "The parent element",
+      "A4": "The last child"
+    },
+    "key": "The next sibling node",
+    "justification": "nextSibling navigates horizontally in the tree.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Events",
+    "question": "What is an event listener in JavaScript?",
+    "answers": {
+      "A1": "A function that listens to the page loading",
+      "A2": "A function that waits for a specific event to occur on an element",
+      "A3": "A type of JavaScript variable",
+      "A4": "A browser tool for debugging"
+    },
+    "key": "A function that waits for a specific event to occur on an element",
+    "justification": "Event listeners trigger functions in response to user or system events.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Events",
+    "question": "How do you add an event listener to an element?",
+    "answers": {
+      "A1": "element.listen('click', function() {})",
+      "A2": "element.addEventListener('click', function() {})",
+      "A3": "element.onEvent('click', function() {})",
+      "A4": "element.click(function() {})"
+    },
+    "key": "element.addEventListener('click', function() {})",
+    "justification": "addEventListener() is the standard method for attaching event listeners.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Events",
+    "question": "What is the difference between an event handler and event listener?",
+    "answers": {
+      "A1": "They are identical",
+      "A2": "Handler is the function; listener is the mechanism that detects the event",
+      "A3": "Handler works only in Firefox; listener in Chrome",
+      "A4": "Listener is deprecated"
+    },
+    "key": "Handler is the function; listener is the mechanism that detects the event",
+    "justification": "An event listener waits for events; event handler is the function called.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Events",
+    "question": "What does the 'click' event do?",
+    "answers": {
+      "A1": "Triggers when the mouse hovers over an element",
+      "A2": "Triggers when an element is clicked",
+      "A3": "Triggers when the page loads",
+      "A4": "Triggers when the page scrolls"
+    },
+    "key": "Triggers when an element is clicked",
+    "justification": "click event fires on mouse button click.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Events",
+    "question": "What is the 'mouseover' event?",
+    "answers": {
+      "A1": "Triggers when the mouse clicks the element",
+      "A2": "Triggers when the mouse moves over the element",
+      "A3": "Triggers when the mouse leaves the element",
+      "A4": "Triggers on double-click"
+    },
+    "key": "Triggers when the mouse moves over the element",
+    "justification": "mouseover fires when mouse enters the element area.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Events",
+    "question": "What is the 'mouseout' event?",
+    "answers": {
+      "A1": "Triggers when the mouse hovers",
+      "A2": "Triggers when the mouse leaves the element",
+      "A3": "Triggers on element click",
+      "A4": "Triggers on page scroll"
+    },
+    "key": "Triggers when the mouse leaves the element",
+    "justification": "mouseout fires when mouse exits the element area.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Events",
+    "question": "What is the 'keypress' event?",
+    "answers": {
+      "A1": "Triggers when a key is held down",
+      "A2": "Triggers when a key is pressed and released",
+      "A3": "Triggers when the Enter key is pressed",
+      "A4": "Triggers on shift+key"
+    },
+    "key": "Triggers when a key is pressed and released",
+    "justification": "keypress fires for printable character keys.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Events",
+    "question": "What is the 'change' event for input fields?",
+    "answers": {
+      "A1": "Triggers as user types",
+      "A2": "Triggers when the input loses focus and its value changed",
+      "A3": "Triggers on page load",
+      "A4": "Triggers on form submission"
+    },
+    "key": "Triggers when the input loses focus and its value changed",
+    "justification": "change fires when value is modified and focus is lost.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Events",
+    "question": "What is the 'focus' event?",
+    "answers": {
+      "A1": "Triggers when the element loses focus",
+      "A2": "Triggers when the element gains focus",
+      "A3": "Triggers when the page loads",
+      "A4": "Triggers on mouse hover"
+    },
+    "key": "Triggers when the element gains focus",
+    "justification": "focus fires when an element becomes the active element.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Events",
+    "question": "What is the 'blur' event?",
+    "answers": {
+      "A1": "Triggers when the element gains focus",
+      "A2": "Triggers when the element loses focus",
+      "A3": "Triggers on mouse click",
+      "A4": "Triggers on key press"
+    },
+    "key": "Triggers when the element loses focus",
+    "justification": "blur is the opposite of focus; fires when element loses focus.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Events",
+    "question": "What is the 'submit' event?",
+    "answers": {
+      "A1": "Triggers when a form field is filled",
+      "A2": "Triggers when a form is submitted",
+      "A3": "Triggers when the page loads",
+      "A4": "Triggers on button hover"
+    },
+    "key": "Triggers when a form is submitted",
+    "justification": "submit fires when a form is submitted via button click or Enter.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Events",
+    "question": "What is the Window 'load' event?",
+    "answers": {
+      "A1": "Triggers when the page starts loading",
+      "A2": "Triggers when the entire page and resources finish loading",
+      "A3": "Triggers when JavaScript loads",
+      "A4": "Triggers on user scroll"
+    },
+    "key": "Triggers when the entire page and resources finish loading",
+    "justification": "load fires after all resources (images, styles, scripts) are loaded.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Events",
+    "question": "What is the Window 'unload' event?",
+    "answers": {
+      "A1": "Triggers when page starts unloading",
+      "A2": "Triggers when the user leaves the page",
+      "A3": "Triggers on page load",
+      "A4": "Triggers on element click"
+    },
+    "key": "Triggers when the user leaves the page",
+    "justification": "unload fires when the page is being unloaded (navigation away).",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Events",
+    "question": "What is the Window 'resize' event?",
+    "answers": {
+      "A1": "Triggers when text resizes",
+      "A2": "Triggers when the browser window is resized",
+      "A3": "Triggers on page load",
+      "A4": "Triggers on form submission"
+    },
+    "key": "Triggers when the browser window is resized",
+    "justification": "resize fires whenever the viewport dimensions change.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Events",
+    "question": "What is the Window 'scroll' event?",
+    "answers": {
+      "A1": "Triggers when the page scrolls",
+      "A2": "Triggers when elements are hidden",
+      "A3": "Triggers on page load",
+      "A4": "Triggers on button click"
+    },
+    "key": "Triggers when the page scrolls",
+    "justification": "scroll fires whenever the user scrolls the page.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Events",
+    "question": "What does the 'beforeunload' event allow?",
+    "answers": {
+      "A1": "Prevents page unloading completely",
+      "A2": "Shows a confirmation dialog before user leaves",
+      "A3": "Automatically saves data",
+      "A4": "Tracks user navigation"
+    },
+    "key": "Shows a confirmation dialog before user leaves",
+    "justification": "beforeunload can display a prompt asking user to confirm leaving.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Events",
+    "question": "What is event.key in the keypress event?",
+    "answers": {
+      "A1": "The keyboard shortcut used",
+      "A2": "The character code of the pressed key",
+      "A3": "The actual character/key pressed",
+      "A4": "The browser key mapping"
+    },
+    "key": "The actual character/key pressed",
+    "justification": "event.key returns the string representation of the key.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Events",
+    "question": "Can you have multiple event listeners on the same element?",
+    "answers": {
+      "A1": "No, only one listener per element",
+      "A2": "Yes, multiple listeners can be attached",
+      "A3": "Only if they're the same event",
+      "A4": "Only in modern browsers"
+    },
+    "key": "Yes, multiple listeners can be attached",
+    "justification": "Multiple addEventListener() calls stack up.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Events",
+    "question": "What is the 'dblclick' event?",
+    "answers": {
+      "A1": "Triggers on single click",
+      "A2": "Triggers when an element is double-clicked",
+      "A3": "Triggers on right-click",
+      "A4": "Triggers on hover"
+    },
+    "key": "Triggers when an element is double-clicked",
+    "justification": "dblclick fires on two rapid clicks.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Events",
+    "question": "What does removeEventListener() do?",
+    "answers": {
+      "A1": "Disables an event permanently",
+      "A2": "Removes a specific event listener from an element",
+      "A3": "Removes all event listeners",
+      "A4": "Pauses event listening"
+    },
+    "key": "Removes a specific event listener from an element",
+    "justification": "removeEventListener() detaches a listener using same handler reference.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Window",
+    "question": "What is the Window object?",
+    "answers": {
+      "A1": "The HTML document",
+      "A2": "The global object in a browser environment",
+      "A3": "A specific element on the page",
+      "A4": "A JavaScript library"
+    },
+    "key": "The global object in a browser environment",
+    "justification": "The window object is the top-level global object in browsers.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Window",
+    "question": "What does window.innerWidth give you?",
+    "answers": {
+      "A1": "The width of the document",
+      "A2": "The width of the viewport",
+      "A3": "The width of the screen",
+      "A4": "The width of the window frame"
+    },
+    "key": "The width of the viewport",
+    "justification": "innerWidth is the browser's visible content area width.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Window",
+    "question": "What does window.innerHeight give you?",
+    "answers": {
+      "A1": "The height of the document",
+      "A2": "The height of the viewport",
+      "A3": "The height of the screen",
+      "A4": "The height of the window decoration"
+    },
+    "key": "The height of the viewport",
+    "justification": "innerHeight is the browser's visible content area height.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Window",
+    "question": "What does window.open() do?",
+    "answers": {
+      "A1": "Opens a file dialog",
+      "A2": "Opens a new browser window/tab",
+      "A3": "Opens a new document",
+      "A4": "Opens developer tools"
+    },
+    "key": "Opens a new browser window/tab",
+    "justification": "window.open(url, target, specs) opens a new window.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Window",
+    "question": "What does window.close() do?",
+    "answers": {
+      "A1": "Closes the current tab",
+      "A2": "Closes the current window",
+      "A3": "Closes all windows",
+      "A4": "Closes developer tools"
+    },
+    "key": "Closes the current window",
+    "justification": "window.close() closes the browser window (may not work in all contexts).",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Window",
+    "question": "What does window.print() do?",
+    "answers": {
+      "A1": "Prints to the console",
+      "A2": "Opens the print dialog",
+      "A3": "Prints the page to a file",
+      "A4": "Sends data to a printer directly"
+    },
+    "key": "Opens the print dialog",
+    "justification": "window.print() opens the print preview dialog.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Window",
+    "question": "What does window.alert() do?",
+    "answers": {
+      "A1": "Logs a message to console",
+      "A2": "Shows a popup dialog with a message",
+      "A3": "Sends an alert to the server",
+      "A4": "Displays a notification"
+    },
+    "key": "Shows a popup dialog with a message",
+    "justification": "alert() displays a blocking modal dialog.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Window",
+    "question": "What does window.confirm() display?",
+    "answers": {
+      "A1": "A text input dialog",
+      "A2": "A yes/no confirmation dialog",
+      "A3": "An alert message",
+      "A4": "A file picker"
+    },
+    "key": "A yes/no confirmation dialog",
+    "justification": "confirm() shows OK and Cancel buttons.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Window",
+    "question": "What does window.prompt() do?",
+    "answers": {
+      "A1": "Asks a yes/no question",
+      "A2": "Requests text input from the user",
+      "A3": "Shows an alert",
+      "A4": "Displays a file picker"
+    },
+    "key": "Requests text input from the user",
+    "justification": "prompt() displays an input field for user response.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Window",
+    "question": "What is window.location used for?",
+    "answers": {
+      "A1": "Getting the user's physical location",
+      "A2": "Getting/setting the URL of the current page",
+      "A3": "Finding elements on the page",
+      "A4": "Navigating between browser tabs"
+    },
+    "key": "Getting/setting the URL of the current page",
+    "justification": "window.location contains the URL and navigation methods.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Window",
+    "question": "What is window.location.href?",
+    "answers": {
+      "A1": "The domain of the page",
+      "A2": "The full URL of the current page",
+      "A3": "The page title",
+      "A4": "The host name only"
+    },
+    "key": "The full URL of the current page",
+    "justification": "href contains the complete URL.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "What are arrow functions?",
+    "answers": {
+      "A1": "A type of CSS selector",
+      "A2": "A concise syntax for writing functions in ES6+",
+      "A3": "A browser navigation feature",
+      "A4": "A type of loop"
+    },
+    "key": "A concise syntax for writing functions in ES6+",
+    "justification": "Arrow functions (=>) provide shorter function syntax.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "What is the basic syntax of an arrow function?",
+    "answers": {
+      "A1": "(parameters) -> { body }",
+      "A2": "(parameters) => { body }",
+      "A3": "function(parameters) => { body }",
+      "A4": "(parameters) -> body"
+    },
+    "key": "(parameters) => { body }",
+    "justification": "Arrow functions use => syntax.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "How do you write an arrow function with a single parameter?",
+    "answers": {
+      "A1": "(x) => x * 2",
+      "A2": "x => x * 2",
+      "A3": "Both A and B are correct",
+      "A4": "function x => x * 2"
+    },
+    "key": "Both A and B are correct",
+    "justification": "Parentheses are optional for single parameters.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "How do you write an arrow function with multiple parameters?",
+    "answers": {
+      "A1": "x, y => x + y",
+      "A2": "(x, y) => x + y",
+      "A3": "Both A and B are correct",
+      "A4": "x y => x + y"
+    },
+    "key": "(x, y) => x + y",
+    "justification": "Multiple parameters require parentheses.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "What does 'const add = (a, b) => a + b;' do?",
+    "answers": {
+      "A1": "Creates a function that adds two numbers",
+      "A2": "Declares a constant variable",
+      "A3": "Adds two constants",
+      "A4": "Creates a loop"
+    },
+    "key": "Creates a function that adds two numbers",
+    "justification": "This arrow function is stored in the const variable 'add'.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "JavaScript",
+    "question": "Can arrow functions be used as constructors?",
+    "answers": {
+      "A1": "Yes, always",
+      "A2": "No, they cannot be used with the 'new' keyword",
+      "A3": "Only with special syntax",
+      "A4": "Only in Node.js"
+    },
+    "key": "No, they cannot be used with the 'new' keyword",
+    "justification": "Arrow functions don't have their own 'this' and can't be constructors.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "What is the difference between 'this' in arrow vs regular functions?",
+    "answers": {
+      "A1": "Arrow functions have no access to 'this'",
+      "A2": "Arrow functions use parent's 'this'; regular functions get their own 'this'",
+      "A3": "Regular functions are better for 'this'",
+      "A4": "They handle 'this' identically"
+    },
+    "key": "Arrow functions use parent's 'this'; regular functions get their own 'this'",
+    "justification": "Arrow functions inherit 'this' from enclosing scope.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "JavaScript",
+    "question": "What does it mean to omit curly braces in arrow functions?",
+    "answers": {
+      "A1": "The function body is empty",
+      "A2": "Single expression is implicitly returned",
+      "A3": "Function is disabled",
+      "A4": "Curly braces are required"
+    },
+    "key": "Single expression is implicitly returned",
+    "justification": "const double = x => x * 2; returns x * 2 automatically.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "What is form validation?",
+    "answers": {
+      "A1": "Checking that form data is correct before submission",
+      "A2": "Styling form elements",
+      "A3": "Sending form data",
+      "A4": "Creating form elements"
+    },
+    "key": "Checking that form data is correct before submission",
+    "justification": "Validation ensures data meets requirements.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "Can you prevent form submission with JavaScript?",
+    "answers": {
+      "A1": "No, always submits",
+      "A2": "Yes, with event.preventDefault()",
+      "A3": "Only in certain browsers",
+      "A4": "Only on the server"
+    },
+    "key": "Yes, with event.preventDefault()",
+    "justification": "preventDefault() stops default form submission.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "What type of input validation is client-side?",
+    "answers": {
+      "A1": "Validation on the server",
+      "A2": "Validation in the browser before sending",
+      "A3": "Validation after receiving data",
+      "A4": "Validation in the database"
+    },
+    "key": "Validation in the browser before sending",
+    "justification": "Client-side validation happens on user's computer.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "JavaScript",
+    "question": "Why is server-side validation important?",
+    "answers": {
+      "A1": "It's faster than client-side",
+      "A2": "It ensures data security; client validation can be bypassed",
+      "A3": "It's easier to implement",
+      "A4": "It reduces page load time"
+    },
+    "key": "It ensures data security; client validation can be bypassed",
+    "justification": "Server validation protects against malicious input.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "What does input.value give you?",
+    "answers": {
+      "A1": "The HTML of the input",
+      "A2": "The current value entered by the user",
+      "A3": "The type of the input",
+      "A4": "The placeholder text"
+    },
+    "key": "The current value entered by the user",
+    "justification": "value property contains what user typed.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "How do you check if an input is empty in JavaScript?",
+    "answers": {
+      "A1": "if (input.value)",
+      "A2": "if (input.value === '')",
+      "A3": "if (input.empty())",
+      "A4": "if (!input.value)"
+    },
+    "key": "Both B and D are valid",
+    "justification": "Both ways check if value is empty string or falsy.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Performance",
+    "question": "What is browser caching?",
+    "answers": {
+      "A1": "Storing data on the server",
+      "A2": "Storing files locally so they don't need to be re-downloaded",
+      "A3": "Compressing files",
+      "A4": "Encrypting files"
+    },
+    "key": "Storing files locally so they don't need to be re-downloaded",
+    "justification": "Caching improves performance by reducing HTTP requests.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Performance",
+    "question": "Why are external CSS and JavaScript files better than inline?",
+    "answers": {
+      "A1": "They load faster always",
+      "A2": "They can be cached and reused across pages",
+      "A3": "They use less bandwidth initially",
+      "A4": "They are more secure"
+    },
+    "key": "They can be cached and reused across pages",
+    "justification": "External files are cached per domain, reducing redundant downloads.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Performance",
+    "question": "What is cache busting?",
+    "answers": {
+      "A1": "Clearing the browser cache",
+      "A2": "Adding version numbers to files to force re-download",
+      "A3": "Disabling caching completely",
+      "A4": "Compressing files for cache"
+    },
+    "key": "Adding version numbers to files to force re-download",
+    "justification": "Cache busting (e.g., file.css?v=2) forces browsers to fetch updates.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Performance",
+    "question": "What does the Cache-Control header do?",
+    "answers": {
+      "A1": "Controls what files are loaded",
+      "A2": "Specifies how long files should be cached",
+      "A3": "Encrypts cached data",
+      "A4": "Disables caching entirely"
+    },
+    "key": "Specifies how long files should be cached",
+    "justification": "Cache-Control headers tell browsers cache expiration times.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "What is transpilation in JavaScript?",
+    "answers": {
+      "A1": "Translating JavaScript to HTML",
+      "A2": "Converting code in one language to another language",
+      "A3": "Compiling JavaScript",
+      "A4": "Minifying JavaScript"
+    },
+    "key": "Converting code in one language to another language",
+    "justification": "Transpilers convert newer/other languages to JavaScript.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "What is TypeScript?",
+    "answers": {
+      "A1": "A JavaScript library",
+      "A2": "A superset of JavaScript with strict typing",
+      "A3": "A browser feature",
+      "A4": "A CSS framework"
+    },
+    "key": "A superset of JavaScript with strict typing",
+    "justification": "TypeScript adds static type checking to JavaScript.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "JavaScript",
+    "question": "What does CoffeeScript provide?",
+    "answers": {
+      "A1": "Object-oriented features",
+      "A2": "Syntactic sugar for cleaner JavaScript syntax",
+      "A3": "Type checking",
+      "A4": "Database integration"
+    },
+    "key": "Syntactic sugar for cleaner JavaScript syntax",
+    "justification": "CoffeeScript offers simplified syntax.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "JavaScript",
+    "question": "What is Brython used for?",
+    "answers": {
+      "A1": "Transpiling TypeScript",
+      "A2": "Running Python in the browser by converting to JavaScript",
+      "A3": "Optimizing JavaScript performance",
+      "A4": "Minifying code"
+    },
+    "key": "Running Python in the browser by converting to JavaScript",
+    "justification": "Brython transpiles Python code to JavaScript.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "CSS",
+    "question": "What is rem (relative em)?",
+    "answers": {
+      "A1": "Relative to parent element's font size",
+      "A2": "Relative to root element's font size",
+      "A3": "A fixed size unit",
+      "A4": "Relative to viewport width"
+    },
+    "key": "Relative to root element's font size",
+    "justification": "rem always uses root element's font-size, unlike em.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "CSS",
+    "question": "What does prefers-color-scheme do?",
+    "answers": {
+      "A1": "Selects a color scheme manually",
+      "A2": "Detects user's system color preference (dark/light)",
+      "A3": "Changes colors based on time of day",
+      "A4": "Sets default website colors"
+    },
+    "key": "Detects user's system color preference (dark/light)",
+    "justification": "prefers-color-scheme is a media feature for dark mode support.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "CSS",
+    "question": "What does aspect-ratio media feature check?",
+    "answers": {
+      "A1": "The width of the viewport",
+      "A2": "The height of the viewport",
+      "A3": "The ratio of width to height of the viewport",
+      "A4": "The screen resolution"
+    },
+    "key": "The ratio of width to height of the viewport",
+    "justification": "aspect-ratio checks viewport proportions.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Backend",
+    "question": "What is PHP?",
+    "answers": {
+      "A1": "A client-side scripting language",
+      "A2": "A server-side scripting language for web development",
+      "A3": "A CSS preprocessor",
+      "A4": "A JavaScript framework"
+    },
+    "key": "A server-side scripting language for web development",
+    "justification": "PHP executes on the server and generates HTML sent to browsers.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Backend",
+    "question": "What is the basic syntax for connecting to a database in PHP?",
+    "answers": {
+      "A1": "connect_db()",
+      "A2": "mysqli_connect() or PDO",
+      "A3": "database.connect()",
+      "A4": "SQL_connect()"
+    },
+    "key": "mysqli_connect() or PDO",
+    "justification": "PHP uses mysqli or PDO for database connections.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Backend",
+    "question": "What is the purpose of $_POST in PHP?",
+    "answers": {
+      "A1": "Stores session data",
+      "A2": "Accesses form data sent via POST method",
+      "A3": "Stores cookies",
+      "A4": "Accesses URL parameters"
+    },
+    "key": "Accesses form data sent via POST method",
+    "justification": "$_POST is a superglobal containing POST request data.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Backend",
+    "question": "What is the difference between $_GET and $_POST?",
+    "answers": {
+      "A1": "They are identical",
+      "A2": "GET sends data in URL; POST sends in request body",
+      "A3": "POST is faster",
+      "A4": "GET is more secure"
+    },
+    "key": "GET sends data in URL; POST sends in request body",
+    "justification": "GET parameters are visible in URL; POST is hidden.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Backend",
+    "question": "What is SQL injection?",
+    "answers": {
+      "A1": "A type of coffee drink",
+      "A2": "A security vulnerability where malicious SQL is injected into queries",
+      "A3": "Injecting JavaScript into HTML",
+      "A4": "A database optimization technique"
+    },
+    "key": "A security vulnerability where malicious SQL is injected into queries",
+    "justification": "SQL injection attacks exploit unsanitized inputs.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Backend",
+    "question": "What is prepared statement in PHP/SQL?",
+    "answers": {
+      "A1": "A pre-written SQL query",
+      "A2": "A parameterized query that prevents SQL injection",
+      "A3": "A statement that executes automatically",
+      "A4": "A type of loop"
+    },
+    "key": "A parameterized query that prevents SQL injection",
+    "justification": "Prepared statements use placeholders for safe queries.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Backend",
+    "question": "What does mysqli_connect() return?",
+    "answers": {
+      "A1": "A boolean true/false",
+      "A2": "A connection object or false on failure",
+      "A3": "An array of data",
+      "A4": "A query result"
+    },
+    "key": "A connection object or false on failure",
+    "justification": "mysqli_connect() returns a connection resource or null.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Backend",
+    "question": "What is the purpose of fetch() in PHP?",
+    "answers": {
+      "A1": "Retrieves data from a form",
+      "A2": "Retrieves the next row from a query result",
+      "A3": "Sends data to a server",
+      "A4": "Creates a new database"
+    },
+    "key": "Retrieves the next row from a query result",
+    "justification": "fetch() returns one row at a time from results.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Backend",
+    "question": "What is a session in web development?",
+    "answers": {
+      "A1": "A period when a user is browsing",
+      "A2": "Persistent data stored server-side for a user",
+      "A3": "A type of cookie",
+      "A4": "A database transaction"
+    },
+    "key": "Persistent data stored server-side for a user",
+    "justification": "Sessions maintain user state across requests.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Backend",
+    "question": "How do you start a session in PHP?",
+    "answers": {
+      "A1": "start_session()",
+      "A2": "session_start()",
+      "A3": "create_session()",
+      "A4": "new Session()"
+    },
+    "key": "session_start()",
+    "justification": "session_start() initializes the session.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Backend",
+    "question": "What is the $_SESSION array in PHP?",
+    "answers": {
+      "A1": "A global array storing session data",
+      "A2": "An array of server variables",
+      "A3": "An array of form data",
+      "A4": "An array of cookies"
+    },
+    "key": "A global array storing session data",
+    "justification": "$_SESSION stores user-specific persistent data.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Backend",
+    "question": "How do you access a session variable in PHP?",
+    "answers": {
+      "A1": "session['username']",
+      "A2": "$_SESSION['username']",
+      "A3": "SESSION.username",
+      "A4": "$session->username"
+    },
+    "key": "$_SESSION['username']",
+    "justification": "Session variables accessed via $_SESSION superglobal.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "HTML",
+    "question": "What is semantic HTML?",
+    "answers": {
+      "A1": "HTML with inline styles",
+      "A2": "HTML that uses meaningful tags describing content",
+      "A3": "HTML compressed for performance",
+      "A4": "HTML with scripts"
+    },
+    "key": "HTML that uses meaningful tags describing content",
+    "justification": "Semantic tags like <article>, <nav> describe purpose.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "HTML",
+    "question": "What is the <header> tag used for?",
+    "answers": {
+      "A1": "Page title",
+      "A2": "Introductory content or navigation for section",
+      "A3": "The <head> of document",
+      "A4": "Column headers in tables"
+    },
+    "key": "Introductory content or navigation for section",
+    "justification": "<header> contains introductory content.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "HTML",
+    "question": "What is the <nav> tag used for?",
+    "answers": {
+      "A1": "Navigation links",
+      "A2": "Page navigation section",
+      "A3": "Displaying numbers",
+      "A4": "Creating navbars with JavaScript"
+    },
+    "key": "Page navigation section",
+    "justification": "<nav> contains navigation links.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "HTML",
+    "question": "What is the <article> tag for?",
+    "answers": {
+      "A1": "Academic articles only",
+      "A2": "Self-contained content like blog posts",
+      "A3": "Article headers",
+      "A4": "Sections of a page"
+    },
+    "key": "Self-contained content like blog posts",
+    "justification": "<article> wraps independent content.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "HTML",
+    "question": "What is the <section> tag for?",
+    "answers": {
+      "A1": "Dividing the page",
+      "A2": "Generic grouping of related content",
+      "A3": "Creating sections of a form",
+      "A4": "Displaying sections"
+    },
+    "key": "Generic grouping of related content",
+    "justification": "<section> groups thematically related content.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "HTML",
+    "question": "What is the <footer> tag for?",
+    "answers": {
+      "A1": "Footer text only",
+      "A2": "Closing content, copyright, links",
+      "A3": "The bottom of pages",
+      "A4": "Page layout"
+    },
+    "key": "Closing content, copyright, links",
+    "justification": "<footer> contains ending content.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "HTML",
+    "question": "What is the <aside> tag for?",
+    "answers": {
+      "A1": "Sidebar content",
+      "A2": "Content tangentially related to main content",
+      "A3": "Hiding content",
+      "A4": "Comments on content"
+    },
+    "key": "Content tangentially related to main content",
+    "justification": "<aside> holds supplementary information.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Best Practices",
+    "question": "What is accessibility in web development?",
+    "answers": {
+      "A1": "Making websites fast",
+      "A2": "Making websites usable for people with disabilities",
+      "A3": "Optimizing for search engines",
+      "A4": "Reducing file sizes"
+    },
+    "key": "Making websites usable for people with disabilities",
+    "justification": "Accessibility ensures all users can access content.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Best Practices",
+    "question": "What are alt attributes on images for?",
+    "answers": {
+      "A1": "Alternative design",
+      "A2": "Describing image for accessibility and SEO",
+      "A3": "Alternative image sources",
+      "A4": "Image title"
+    },
+    "key": "Describing image for accessibility and SEO",
+    "justification": "Alt text helps screen readers and appears if images don't load.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Best Practices",
+    "question": "What is responsive web design?",
+    "answers": {
+      "A1": "Websites that respond to user input",
+      "A2": "Designs that adapt to different screen sizes",
+      "A3": "Websites that load quickly",
+      "A4": "Interactive websites"
+    },
+    "key": "Designs that adapt to different screen sizes",
+    "justification": "Responsive design works on all devices.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Best Practices",
+    "question": "What is SEO (Search Engine Optimization)?",
+    "answers": {
+      "A1": "Selling products online",
+      "A2": "Techniques to improve search engine rankings",
+      "A3": "Search engine software",
+      "A4": "Keyword encryption"
+    },
+    "key": "Techniques to improve search engine rankings",
+    "justification": "SEO helps websites rank higher in search results.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Best Practices",
+    "question": "What is the viewport meta tag important for?",
+    "answers": {
+      "A1": "Page title",
+      "A2": "Mobile responsiveness",
+      "A3": "Styling",
+      "A4": "JavaScript execution"
+    },
+    "key": "Mobile responsiveness",
+    "justification": "Viewport meta tag enables proper mobile rendering.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  }
+]

@@ -1,0 +1,802 @@
+[
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Measurements",
+    "question": "The branch of physics which deals with the ultimate particles of which the matter is composed is:",
+    "answers": {
+      "A1": "Plasma physics",
+      "A2": "Atomic physics",
+      "A3": "Nuclear physics",
+      "A4": "Particle physics"
+    },
+    "key": "Particle physics",
+    "justification": "Particle physics deals with ultimate particles of matter",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Measurements",
+    "question": "The branch of physics which deals with atomic nuclei is called:",
+    "answers": {
+      "A1": "Acoustics",
+      "A2": "Thermodynamics",
+      "A3": "Magnetism",
+      "A4": "Nuclear physics"
+    },
+    "key": "Nuclear physics",
+    "justification": "Nuclear physics studies atomic nuclei and nuclear phenomena",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Physics",
+    "chapter": "Measurements",
+    "question": "Silicon is abundantly obtained from:",
+    "answers": {
+      "A1": "Water",
+      "A2": "Metal",
+      "A3": "Sand",
+      "A4": "Stones"
+    },
+    "key": "Sand",
+    "justification": "Silicon is found abundantly in sand and rocks",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Physics",
+    "chapter": "Measurements",
+    "question": "The number of base units are:",
+    "answers": {
+      "A1": "Three",
+      "A2": "Five",
+      "A3": "Seven",
+      "A4": "Nine"
+    },
+    "key": "Seven",
+    "justification": "SI system has 7 base units: m, kg, s, A, K, mol, cd",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Measurements",
+    "question": "Which of the following is a derived quantity:",
+    "answers": {
+      "A1": "Force",
+      "A2": "Mass",
+      "A3": "Length",
+      "A4": "Time"
+    },
+    "key": "Force",
+    "justification": "Force is derived from mass and acceleration (F=ma)",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Measurements",
+    "question": "Which of the following is SI base unit:",
+    "answers": {
+      "A1": "gram",
+      "A2": "slug",
+      "A3": "Newton",
+      "A4": "kilogram"
+    },
+    "key": "kilogram",
+    "justification": "Kilogram is the SI base unit of mass",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Physics",
+    "chapter": "Measurements",
+    "question": "Which one of the following is not a unit of length:",
+    "answers": {
+      "A1": "Angstrom",
+      "A2": "Micron",
+      "A3": "Radian",
+      "A4": "Light year"
+    },
+    "key": "Radian",
+    "justification": "Radian is a unit of angle, not length",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Measurements",
+    "question": "Which is not a base unit in SI units:",
+    "answers": {
+      "A1": "Kilogram",
+      "A2": "Joule",
+      "A3": "Ampere",
+      "A4": "Kelvin"
+    },
+    "key": "Joule",
+    "justification": "Joule is a derived unit of energy, not a base unit",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Physics",
+    "chapter": "Measurements",
+    "question": "An example of derived unit is:",
+    "answers": {
+      "A1": "Candela",
+      "A2": "Ampere",
+      "A3": "Coulomb",
+      "A4": "Mole"
+    },
+    "key": "Coulomb",
+    "justification": "Coulomb is derived unit of charge (1 C = 1 A.s)",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Measurements",
+    "question": "Candela is the SI unit of:",
+    "answers": {
+      "A1": "Charge",
+      "A2": "Luminous intensity",
+      "A3": "Power",
+      "A4": "Refractive index"
+    },
+    "key": "Luminous intensity",
+    "justification": "Candela (cd) is the SI base unit of luminous intensity",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Vectors and Equilibrium",
+    "question": "Which one is a vector:",
+    "answers": {
+      "A1": "Length",
+      "A2": "Volume",
+      "A3": "Velocity",
+      "A4": "Work"
+    },
+    "key": "Velocity",
+    "justification": "Velocity has both magnitude and direction",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Physics",
+    "chapter": "Vectors and Equilibrium",
+    "question": "An example of scalar quantity is:",
+    "answers": {
+      "A1": "Displacement",
+      "A2": "Speed",
+      "A3": "Velocity",
+      "A4": "Torque"
+    },
+    "key": "Speed",
+    "justification": "Speed has magnitude only, without direction",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Vectors and Equilibrium",
+    "question": "Name the quantity which is vector:",
+    "answers": {
+      "A1": "Density",
+      "A2": "Power",
+      "A3": "Charge",
+      "A4": "Moment of Force"
+    },
+    "key": "Moment of Force",
+    "justification": "Moment of Force (torque) is a vector quantity",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Physics",
+    "chapter": "Vectors and Equilibrium",
+    "question": "Rectangular coordinate system is also called:",
+    "answers": {
+      "A1": "Polar coordinate system",
+      "A2": "Cartesian coordinate system",
+      "A3": "Cylindrical coordinate system",
+      "A4": "Space coordinate system"
+    },
+    "key": "Cartesian coordinate system",
+    "justification": "Cartesian system uses rectangular coordinates (x, y, z)",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Vectors and Equilibrium",
+    "question": "The resultant of two forces 30 N and 40 N acting at right angles to each other is:",
+    "answers": {
+      "A1": "30 N",
+      "A2": "40 N",
+      "A3": "50 N",
+      "A4": "70 N"
+    },
+    "key": "50 N",
+    "justification": "R = √(30² + 40²) = √(900 + 1600) = √2500 = 50 N",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Physics",
+    "chapter": "Motion and Force",
+    "question": "A body covering equal displacement in equal interval of time possesses:",
+    "answers": {
+      "A1": "Variable velocity",
+      "A2": "Uniform acceleration",
+      "A3": "Uniform velocity",
+      "A4": "None of above"
+    },
+    "key": "Uniform velocity",
+    "justification": "Equal displacement in equal time means constant velocity",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Motion and Force",
+    "question": "Instantaneous and average velocities become equal when body:",
+    "answers": {
+      "A1": "Has zero acceleration",
+      "A2": "Has uniform velocity",
+      "A3": "Has variable velocity",
+      "A4": "Moves in a circle"
+    },
+    "key": "Has zero acceleration",
+    "justification": "With zero acceleration, velocity is constant throughout",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Physics",
+    "chapter": "Motion and Force",
+    "question": "Slope of velocity time graph is:",
+    "answers": {
+      "A1": "Acceleration",
+      "A2": "Distance",
+      "A3": "Force",
+      "A4": "Momentum"
+    },
+    "key": "Acceleration",
+    "justification": "dv/dt = acceleration, which is slope of v-t graph",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Motion and Force",
+    "question": "The area between velocity-time graph and the time axis is numerically equal to:",
+    "answers": {
+      "A1": "Velocity",
+      "A2": "Distance",
+      "A3": "Time",
+      "A4": "Acceleration"
+    },
+    "key": "Distance",
+    "justification": "Area under v-t curve represents displacement/distance",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Work and Energy",
+    "question": "Area under the curve of force-displacement graph is equal to:",
+    "answers": {
+      "A1": "Displacement",
+      "A2": "Work",
+      "A3": "Power",
+      "A4": "Energy"
+    },
+    "key": "Work",
+    "justification": "Work = ∫F.dx, represented by area under F-d curve",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Work and Energy",
+    "question": "Work done will be maximum if the angle between force F and displacement d is:",
+    "answers": {
+      "A1": "45°",
+      "A2": "90°",
+      "A3": "180°",
+      "A4": "0°"
+    },
+    "key": "0°",
+    "justification": "W = Fd cos(θ); maximum when cos(0°) = 1",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Physics",
+    "chapter": "Work and Energy",
+    "question": "The work done is said to be negative when force and displacement are:",
+    "answers": {
+      "A1": "Parallel",
+      "A2": "Anti-parallel",
+      "A3": "Perpendicular",
+      "A4": "None"
+    },
+    "key": "Anti-parallel",
+    "justification": "W = Fd cos(180°) = -Fd when anti-parallel (opposite)",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Physics",
+    "chapter": "Work and Energy",
+    "question": "If mass of moving object is doubled, its kinetic energy becomes:",
+    "answers": {
+      "A1": "2 times",
+      "A2": "4 times",
+      "A3": "8 times",
+      "A4": "16 times"
+    },
+    "key": "2 times",
+    "justification": "KE = ½mv²; doubling m doubles KE",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Physics",
+    "chapter": "Circular Motion",
+    "question": "1 revolution equals:",
+    "answers": {
+      "A1": "57°",
+      "A2": "90°",
+      "A3": "180°",
+      "A4": "360°"
+    },
+    "key": "360°",
+    "justification": "One complete revolution = 360 degrees",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Circular Motion",
+    "question": "One radian is equal to:",
+    "answers": {
+      "A1": "67.3°",
+      "A2": "57.3°",
+      "A3": "87.3°",
+      "A4": "60°"
+    },
+    "key": "57.3°",
+    "justification": "1 radian = 180/π ≈ 57.3 degrees",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Circular Motion",
+    "question": "The SI unit of angular momentum is Js. It can also be expressed as:",
+    "answers": {
+      "A1": "kg m s⁻¹",
+      "A2": "kg m² s⁻¹",
+      "A3": "kg m² s⁻²",
+      "A4": "kg m⁻² s⁻¹"
+    },
+    "key": "kg m² s⁻¹",
+    "justification": "Angular momentum L = Iω has units kg.m².s⁻¹",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Physics",
+    "chapter": "Circular Motion",
+    "question": "The rate of change of angular displacement is called:",
+    "answers": {
+      "A1": "Angular displacement",
+      "A2": "Angular velocity",
+      "A3": "Angular acceleration",
+      "A4": "Torque"
+    },
+    "key": "Angular velocity",
+    "justification": "dθ/dt = angular velocity (ω)",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Electrostatics",
+    "question": "Coulomb's law is only applicable for:",
+    "answers": {
+      "A1": "Big charges",
+      "A2": "Small charges",
+      "A3": "Point charges",
+      "A4": "Any charges"
+    },
+    "key": "Point charges",
+    "justification": "Coulomb's law (F = kq₁q₂/r²) applies to point charges",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Electrostatics",
+    "question": "Presence of dielectric always:",
+    "answers": {
+      "A1": "Increases the electrostatic force",
+      "A2": "Decreases the electrostatic force",
+      "A3": "Does not affect the electrostatic force",
+      "A4": "Doubles the electrostatic force"
+    },
+    "key": "Decreases the electrostatic force",
+    "justification": "Dielectric reduces electric field and electrostatic force",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Physics",
+    "chapter": "Electrostatics",
+    "question": "The electric field created by positive charge is:",
+    "answers": {
+      "A1": "Radially outward",
+      "A2": "Zero",
+      "A3": "Circular",
+      "A4": "Radially inward"
+    },
+    "key": "Radially outward",
+    "justification": "Electric field lines emanate (go out) from positive charges",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Electrostatics",
+    "question": "The electric field created by negative charge is always:",
+    "answers": {
+      "A1": "Radially outward",
+      "A2": "Radially inward",
+      "A3": "Circular",
+      "A4": "Zero"
+    },
+    "key": "Radially inward",
+    "justification": "Electric field lines point toward (go in) negative charges",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Physics",
+    "chapter": "Current Electricity",
+    "question": "One coulomb per second is equal to:",
+    "answers": {
+      "A1": "Joule",
+      "A2": "Volt",
+      "A3": "Ampere",
+      "A4": "Watt"
+    },
+    "key": "Ampere",
+    "justification": "1 Coulomb/second = 1 Ampere (by definition)",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Current Electricity",
+    "question": "In metallic conductor the current is due to flow of _____ charge:",
+    "answers": {
+      "A1": "Positive",
+      "A2": "Negative",
+      "A3": "Proton",
+      "A4": "None"
+    },
+    "key": "Negative",
+    "justification": "Electrons (negative charges) flow in metallic conductors",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Current Electricity",
+    "question": "Conventional current flow from:",
+    "answers": {
+      "A1": "Higher potential to lower potential",
+      "A2": "Lower potential to higher potential",
+      "A3": "Lower potential to lower potential",
+      "A4": "None"
+    },
+    "key": "Higher potential to lower potential",
+    "justification": "Conventional current flows from +ve to -ve terminal",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Physics",
+    "chapter": "Current Electricity",
+    "question": "Mathematical form of Ohm's law is:",
+    "answers": {
+      "A1": "I = VR",
+      "A2": "I = V/R",
+      "A3": "I = R/V",
+      "A4": "R = IV"
+    },
+    "key": "I = V/R",
+    "justification": "Ohm's law: Current = Voltage/Resistance",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Electromagnetism",
+    "question": "The units of magnetic field B in SI system is:",
+    "answers": {
+      "A1": "Weber",
+      "A2": "Tesla",
+      "A3": "Gauss",
+      "A4": "Newton"
+    },
+    "key": "Tesla",
+    "justification": "Tesla (T) is the SI unit of magnetic field strength",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Physics",
+    "chapter": "Electromagnetism",
+    "question": "A charged particle is projected into uniform magnetic field. Which parameter is affected:",
+    "answers": {
+      "A1": "Energy",
+      "A2": "Momentum",
+      "A3": "Speed",
+      "A4": "Velocity"
+    },
+    "key": "Momentum",
+    "justification": "Magnetic force changes momentum but not kinetic energy or speed",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Electromagnetism",
+    "question": "The SI unit of magnetic flux is:",
+    "answers": {
+      "A1": "Tesla",
+      "A2": "Weber",
+      "A3": "Joule",
+      "A4": "Newton"
+    },
+    "key": "Weber",
+    "justification": "Weber (Wb) is the SI unit of magnetic flux",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Physics",
+    "chapter": "Electromagnetism",
+    "question": "Force on a moving charge in uniform magnetic field is maximum when angle is:",
+    "answers": {
+      "A1": "0°",
+      "A2": "30°",
+      "A3": "60°",
+      "A4": "90°"
+    },
+    "key": "90°",
+    "justification": "F = qvB sin(θ); maximum when sin(90°) = 1",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Electromagnetic Induction",
+    "question": "The induced e.m.f. is produced due to:",
+    "answers": {
+      "A1": "Motion of coil",
+      "A2": "Motion of magnet",
+      "A3": "Rate of change of flux",
+      "A4": "None"
+    },
+    "key": "Rate of change of flux",
+    "justification": "Faraday's law: EMF = -dΦ/dt",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Electromagnetic Induction",
+    "question": "The direction of induced current is given by:",
+    "answers": {
+      "A1": "Faraday's law",
+      "A2": "Lenz's law",
+      "A3": "Ohm's law",
+      "A4": "Kirchhoff's rule"
+    },
+    "key": "Lenz's law",
+    "justification": "Lenz's law determines the direction of induced current",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Physics",
+    "chapter": "Electromagnetic Induction",
+    "question": "If velocity of conductor in magnetic field B is zero, induced emf is:",
+    "answers": {
+      "A1": "-vBL",
+      "A2": "-v/BL",
+      "A3": "-BL/v",
+      "A4": "Zero"
+    },
+    "key": "Zero",
+    "justification": "Motional EMF = BLv; if v = 0, then EMF = 0",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Electromagnetic Induction",
+    "question": "One henry is equal to:",
+    "answers": {
+      "A1": "1 ohm × 1 second",
+      "A2": "1 ohm × 1 meter",
+      "A3": "1 ohm × 1 coulomb",
+      "A4": "None of these"
+    },
+    "key": "1 ohm × 1 second",
+    "justification": "1 Henry = 1 V.s/A = 1 Ω.s",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Nuclear Physics",
+    "question": "Strong nuclear force:",
+    "answers": {
+      "A1": "Increases with increasing charge",
+      "A2": "Decreases with increasing charge",
+      "A3": "Is independent of charge",
+      "A4": "None"
+    },
+    "key": "Is independent of charge",
+    "justification": "Strong nuclear force acts on both protons and neutrons",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Physics",
+    "chapter": "Nuclear Physics",
+    "question": "The half-life of uranium-238 is:",
+    "answers": {
+      "A1": "1.67 × 10⁸ years",
+      "A2": "3.3 × 10⁹ years",
+      "A3": "4.5 × 10⁸ years",
+      "A4": "4.5 × 10⁹ years"
+    },
+    "key": "4.5 × 10⁹ years",
+    "justification": "U-238 half-life is approximately 4.5 billion years",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Nuclear Physics",
+    "question": "One amu is equal to:",
+    "answers": {
+      "A1": "931 MeV",
+      "A2": "9.31 MeV",
+      "A3": "93.1 MeV",
+      "A4": "0.931 MeV"
+    },
+    "key": "931 MeV",
+    "justification": "1 amu = 931.5 MeV/c² (mass-energy conversion)",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Physics",
+    "chapter": "Nuclear Physics",
+    "question": "Which of the following is similar to electron:",
+    "answers": {
+      "A1": "α-rays",
+      "A2": "β-rays",
+      "A3": "γ-rays",
+      "A4": "Photons"
+    },
+    "key": "β-rays",
+    "justification": "β-rays are electrons (or positrons) emitted from radioactive nuclei",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Waves",
+    "question": "When two identical waves move in same direction they produce:",
+    "answers": {
+      "A1": "Standing waves",
+      "A2": "Interference",
+      "A3": "Beats",
+      "A4": "None"
+    },
+    "key": "Interference",
+    "justification": "Superposition of identical waves produces interference pattern",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Physics",
+    "chapter": "Alternating Current",
+    "question": "Alternating current changes:",
+    "answers": {
+      "A1": "Its magnitude and direction",
+      "A2": "Only direction",
+      "A3": "Only magnitude",
+      "A4": "None"
+    },
+    "key": "Its magnitude and direction",
+    "justification": "AC periodically changes both magnitude and direction",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Physics",
+    "chapter": "Thermodynamics",
+    "question": "When velocity time graph is straight parallel to time axis then:",
+    "answers": {
+      "A1": "Acceleration is constant",
+      "A2": "Acceleration is variable",
+      "A3": "Acceleration is zero",
+      "A4": "Velocity is zero"
+    },
+    "key": "Acceleration is zero",
+    "justification": "Horizontal v-t graph means constant velocity and zero acceleration",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  }
+]

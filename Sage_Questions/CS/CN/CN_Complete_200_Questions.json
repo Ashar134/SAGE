@@ -1,0 +1,3001 @@
+[
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is a computer network?",
+    "answers": {
+      "A1": "A collection of computers",
+      "A2": "Interconnected computing devices that communicate to share data and resources",
+      "A3": "A group of servers",
+      "A4": "Multiple computers"
+    },
+    "key": "Interconnected computing devices that communicate to share data and resources",
+    "justification": "Definition of computer network",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is the OSI model?",
+    "answers": {
+      "A1": "Operating System Interface",
+      "A2": "Open Systems Interconnection model with 7 layers",
+      "A3": "Old System Interface",
+      "A4": "Online System Information"
+    },
+    "key": "Open Systems Interconnection model with 7 layers",
+    "justification": "OSI model is fundamental networking framework",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is IPv4?",
+    "answers": {
+      "A1": "Internet version 4",
+      "A2": "32-bit address scheme for identifying devices",
+      "A3": "IP version 4",
+      "A4": "Internet protocol version"
+    },
+    "key": "32-bit address scheme for identifying devices",
+    "justification": "IPv4 uses 32-bit addresses",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is IPv6?",
+    "answers": {
+      "A1": "Internet version 6",
+      "A2": "128-bit address scheme supporting more addresses",
+      "A3": "IP version 6",
+      "A4": "Improved IPv4"
+    },
+    "key": "128-bit address scheme supporting more addresses",
+    "justification": "IPv6 addresses IPv4 exhaustion",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is TCP?",
+    "answers": {
+      "A1": "Transfer Computer Protocol",
+      "A2": "Connection-oriented protocol ensuring reliable data delivery",
+      "A3": "Testing Control Protocol",
+      "A4": "Transmission Computer Program"
+    },
+    "key": "Connection-oriented protocol ensuring reliable data delivery",
+    "justification": "TCP is connection-oriented and reliable",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is UDP?",
+    "answers": {
+      "A1": "User Data Protocol",
+      "A2": "Connectionless protocol with faster but less reliable delivery",
+      "A3": "Unified Data Protocol",
+      "A4": "User Digital Protocol"
+    },
+    "key": "Connectionless protocol with faster but less reliable delivery",
+    "justification": "UDP is connectionless and faster",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is HTTP?",
+    "answers": {
+      "A1": "Hypertext Transfer Protocol",
+      "A2": "Protocol for transferring web pages and data",
+      "A3": "High Tech Transfer Protocol",
+      "A4": "Home Text Transfer Protocol"
+    },
+    "key": "Protocol for transferring web pages and data",
+    "justification": "HTTP is web protocol",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is DNS?",
+    "answers": {
+      "A1": "Data Network Service",
+      "A2": "System for translating domain names to IP addresses",
+      "A3": "Database Name Service",
+      "A4": "Digital Network System"
+    },
+    "key": "System for translating domain names to IP addresses",
+    "justification": "DNS enables hostname to IP translation",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is DHCP?",
+    "answers": {
+      "A1": "Dynamic Host Computer Protocol",
+      "A2": "Protocol for automatic IP address assignment",
+      "A3": "Data Host Configuration Protocol",
+      "A4": "Dynamic Hardware Communication Protocol"
+    },
+    "key": "Protocol for automatic IP address assignment",
+    "justification": "DHCP automates IP configuration",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is a router?",
+    "answers": {
+      "A1": "A device for storing data",
+      "A2": "Device that forwards packets between networks",
+      "A3": "A computer for browsing",
+      "A4": "A storage device"
+    },
+    "key": "Device that forwards packets between networks",
+    "justification": "Routers connect and route between networks",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is a switch?",
+    "answers": {
+      "A1": "Power on/off device",
+      "A2": "Network device forwarding frames within same network",
+      "A3": "Router device",
+      "A4": "Firewall device"
+    },
+    "key": "Network device forwarding frames within same network",
+    "justification": "Switches operate at data link layer",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is bandwidth?",
+    "answers": {
+      "A1": "Width of network cable",
+      "A2": "Maximum data transfer rate of a network link",
+      "A3": "Network speed",
+      "A4": "Connection capacity"
+    },
+    "key": "Maximum data transfer rate of a network link",
+    "justification": "Bandwidth measures data transfer capacity",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is latency?",
+    "answers": {
+      "A1": "Bandwidth measurement",
+      "A2": "Time delay for data to travel from source to destination",
+      "A3": "Data loss",
+      "A4": "Connection speed"
+    },
+    "key": "Time delay for data to travel from source to destination",
+    "justification": "Latency measures delay",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is a packet?",
+    "answers": {
+      "A1": "Software package",
+      "A2": "Unit of data transmitted over network",
+      "A3": "Network hardware",
+      "A4": "Router device"
+    },
+    "key": "Unit of data transmitted over network",
+    "justification": "Packets are fundamental data units",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is a socket?",
+    "answers": {
+      "A1": "Physical outlet",
+      "A2": "Endpoint of network communication identified by IP and port",
+      "A3": "Network cable",
+      "A4": "Connection point"
+    },
+    "key": "Endpoint of network communication identified by IP and port",
+    "justification": "Sockets identify network endpoints",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is NAT?",
+    "answers": {
+      "A1": "Network Address Tool",
+      "A2": "Technique to map private IP addresses to public address",
+      "A3": "Network Traffic",
+      "A4": "Network Access Topology"
+    },
+    "key": "Technique to map private IP addresses to public address",
+    "justification": "NAT enables address translation",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is ICMP?",
+    "answers": {
+      "A1": "Internet Code Message Protocol",
+      "A2": "Internet Control Message Protocol for diagnostics",
+      "A3": "Internet Communication Protocol",
+      "A4": "Internet Checksum Message Protocol"
+    },
+    "key": "Internet Control Message Protocol for diagnostics",
+    "justification": "ICMP used for ping and traceroute",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is ping?",
+    "answers": {
+      "A1": "A sound effect",
+      "A2": "Utility to test host reachability using ICMP",
+      "A3": "Network game",
+      "A4": "Data transfer method"
+    },
+    "key": "Utility to test host reachability using ICMP",
+    "justification": "Ping tests network connectivity",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is traceroute?",
+    "answers": {
+      "A1": "Route planning tool",
+      "A2": "Utility to trace path packets take to destination",
+      "A3": "Network path",
+      "A4": "Route discovery"
+    },
+    "key": "Utility to trace path packets take to destination",
+    "justification": "Traceroute shows packet path",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is MAC address?",
+    "answers": {
+      "A1": "Macintosh address",
+      "A2": "Media Access Control address for identifying devices on LAN",
+      "A3": "Machine Address Code",
+      "A4": "Network address"
+    },
+    "key": "Media Access Control address for identifying devices on LAN",
+    "justification": "MAC addresses identify LAN devices",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is TTL?",
+    "answers": {
+      "A1": "Time To Load",
+      "A2": "Field limiting packet lifetime to prevent infinite loops",
+      "A3": "Transmission Time Limit",
+      "A4": "Transfer Time Length"
+    },
+    "key": "Field limiting packet lifetime to prevent infinite loops",
+    "justification": "TTL prevents packet loops",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is a subnet?",
+    "answers": {
+      "A1": "Submarine network",
+      "A2": "Division of network into smaller networks",
+      "A3": "Network partition",
+      "A4": "Network section"
+    },
+    "key": "Division of network into smaller networks",
+    "justification": "Subnetting organizes networks",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is subnet mask?",
+    "answers": {
+      "A1": "Security mask",
+      "A2": "Used to identify network portion of IP address",
+      "A3": "Network identification",
+      "A4": "Address filter"
+    },
+    "key": "Used to identify network portion of IP address",
+    "justification": "Subnet mask separates network and host",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is default gateway?",
+    "answers": {
+      "A1": "Main entrance",
+      "A2": "Router that forwards packets to other networks",
+      "A3": "Network exit",
+      "A4": "Primary router"
+    },
+    "key": "Router that forwards packets to other networks",
+    "justification": "Default gateway routes traffic",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is FTP?",
+    "answers": {
+      "A1": "Fast Transfer Process",
+      "A2": "Protocol for transferring files over network",
+      "A3": "File Transmission Protocol",
+      "A4": "Fast Transfer Protocol"
+    },
+    "key": "Protocol for transferring files over network",
+    "justification": "FTP transfers files",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is SMTP?",
+    "answers": {
+      "A1": "Simple Message Transfer",
+      "A2": "Protocol for sending emails",
+      "A3": "System Mail Transmission",
+      "A4": "Simple Mail Service"
+    },
+    "key": "Protocol for sending emails",
+    "justification": "SMTP sends emails",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is IMAP?",
+    "answers": {
+      "A1": "Internet Message Access",
+      "A2": "Protocol for retrieving emails from server",
+      "A3": "Internet Mail Protocol",
+      "A4": "Incoming Mail Access"
+    },
+    "key": "Protocol for retrieving emails from server",
+    "justification": "IMAP retrieves emails",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is encryption?",
+    "answers": {
+      "A1": "Making smaller",
+      "A2": "Converting data to unreadable form for security",
+      "A3": "Data compression",
+      "A4": "Encoding format"
+    },
+    "key": "Converting data to unreadable form for security",
+    "justification": "Encryption secures data",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is SSL/TLS?",
+    "answers": {
+      "A1": "Secure System Link",
+      "A2": "Protocols for secure communication over Internet",
+      "A3": "Transfer Layer Security",
+      "A4": "System Transport Link"
+    },
+    "key": "Protocols for secure communication over Internet",
+    "justification": "SSL/TLS secures web traffic",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is HTTPS?",
+    "answers": {
+      "A1": "High Tech Transfer",
+      "A2": "HTTP with encryption for secure web browsing",
+      "A3": "Hypertext Transfer Secure",
+      "A4": "HTTP Secure Version"
+    },
+    "key": "HTTP with encryption for secure web browsing",
+    "justification": "HTTPS secures web traffic",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is a firewall?",
+    "answers": {
+      "A1": "Physical wall",
+      "A2": "Security system controlling network traffic",
+      "A3": "Network barrier",
+      "A4": "Security device"
+    },
+    "key": "Security system controlling network traffic",
+    "justification": "Firewalls protect networks",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is WAN?",
+    "answers": {
+      "A1": "Wide Area Networking",
+      "A2": "Wide Area Network spanning large geographic areas",
+      "A3": "Wide Access Network",
+      "A4": "Wireless Area Network"
+    },
+    "key": "Wide Area Network spanning large geographic areas",
+    "justification": "WAN spans multiple locations",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is LAN?",
+    "answers": {
+      "A1": "Local Area Networking",
+      "A2": "Local Area Network within limited geographic area",
+      "A3": "Local Access Network",
+      "A4": "Link Area Network"
+    },
+    "key": "Local Area Network within limited geographic area",
+    "justification": "LAN covers local area",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is VPN?",
+    "answers": {
+      "A1": "Virtual Private Network",
+      "A2": "Encrypted connection over public network",
+      "A3": "Very Protected Network",
+      "A4": "Virtual Protection Network"
+    },
+    "key": "Encrypted connection over public network",
+    "justification": "VPN provides secure remote access",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is Ethernet?",
+    "answers": {
+      "A1": "Internet network",
+      "A2": "Technology for local network communication",
+      "A3": "Wired connection",
+      "A4": "Data link protocol"
+    },
+    "key": "Technology for local network communication",
+    "justification": "Ethernet is common LAN technology",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is WiFi?",
+    "answers": {
+      "A1": "Wireless Fidelity",
+      "A2": "Wireless technology for local network access",
+      "A3": "Wireless Internet",
+      "A4": "Wireless Connection"
+    },
+    "key": "Wireless technology for local network access",
+    "justification": "WiFi enables wireless networking",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is a protocol?",
+    "answers": {
+      "A1": "Formal agreement",
+      "A2": "Set of rules for network communication",
+      "A3": "Communication standard",
+      "A4": "Data format"
+    },
+    "key": "Set of rules for network communication",
+    "justification": "Protocols define communication rules",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is congestion control?",
+    "answers": {
+      "A1": "Traffic management",
+      "A2": "Mechanism to prevent network overload",
+      "A3": "Packet delay",
+      "A4": "Network slowdown"
+    },
+    "key": "Mechanism to prevent network overload",
+    "justification": "Congestion control manages network traffic",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is flow control?",
+    "answers": {
+      "A1": "Controlling water flow",
+      "A2": "Preventing receiver buffer overflow",
+      "A3": "Packet ordering",
+      "A4": "Traffic regulation"
+    },
+    "key": "Preventing receiver buffer overflow",
+    "justification": "Flow control protects receiver",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is a gateway?",
+    "answers": {
+      "A1": "Physical gate",
+      "A2": "Device/software providing access between networks",
+      "A3": "Network entrance",
+      "A4": "Border device"
+    },
+    "key": "Device/software providing access between networks",
+    "justification": "Gateways bridge different networks",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is proxy server?",
+    "answers": {
+      "A1": "Representative server",
+      "A2": "Server acting as intermediary for client requests",
+      "A3": "Backup server",
+      "A4": "Cache server"
+    },
+    "key": "Server acting as intermediary for client requests",
+    "justification": "Proxy servers intermediate connections",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is CDN?",
+    "answers": {
+      "A1": "Content Database Network",
+      "A2": "Distributed network of servers for content delivery",
+      "A3": "Central Data Network",
+      "A4": "Content Distribution System"
+    },
+    "key": "Distributed network of servers for content delivery",
+    "justification": "CDN delivers content efficiently",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is QoS?",
+    "answers": {
+      "A1": "Quality of System",
+      "A2": "Mechanisms ensuring performance levels for network traffic",
+      "A3": "Quality Standards",
+      "A4": "Service Quality"
+    },
+    "key": "Mechanisms ensuring performance levels for network traffic",
+    "justification": "QoS maintains service levels",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is broadcast?",
+    "answers": {
+      "A1": "Media broadcast",
+      "A2": "Sending data to all devices in network",
+      "A3": "Network broadcast",
+      "A4": "All device message"
+    },
+    "key": "Sending data to all devices in network",
+    "justification": "Broadcast reaches all devices",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is unicast?",
+    "answers": {
+      "A1": "Single cast",
+      "A2": "One-to-one communication",
+      "A3": "Direct communication",
+      "A4": "Point-to-point"
+    },
+    "key": "One-to-one communication",
+    "justification": "Unicast sends to single destination",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is multicast?",
+    "answers": {
+      "A1": "Multiple cast",
+      "A2": "One-to-many communication",
+      "A3": "Group communication",
+      "A4": "Multiple destination"
+    },
+    "key": "One-to-many communication",
+    "justification": "Multicast sends to group",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is URL?",
+    "answers": {
+      "A1": "Universal Resource",
+      "A2": "Uniform Resource Locator specifying web address",
+      "A3": "Web address",
+      "A4": "Location identifier"
+    },
+    "key": "Uniform Resource Locator specifying web address",
+    "justification": "URL specifies location",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is ARP?",
+    "answers": {
+      "A1": "Address Routing Protocol",
+      "A2": "Protocol mapping IP addresses to MAC addresses",
+      "A3": "Address Relay Protocol",
+      "A4": "Access Resolution Protocol"
+    },
+    "key": "Protocol mapping IP addresses to MAC addresses",
+    "justification": "ARP resolves IP to MAC",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is checksum?",
+    "answers": {
+      "A1": "Sum of money",
+      "A2": "Value for detecting data transmission errors",
+      "A3": "Error detection",
+      "A4": "Data verification"
+    },
+    "key": "Value for detecting data transmission errors",
+    "justification": "Checksums detect errors",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is retransmission?",
+    "answers": {
+      "A1": "Sending again",
+      "A2": "Resending lost or damaged packets",
+      "A3": "Packet resend",
+      "A4": "Data recovery"
+    },
+    "key": "Resending lost or damaged packets",
+    "justification": "Retransmission recovers lost packets",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is MTU?",
+    "answers": {
+      "A1": "Message Transfer Unit",
+      "A2": "Largest frame size transmittable on network",
+      "A3": "Maximum Transfer Unit",
+      "A4": "Message Transmission Unit"
+    },
+    "key": "Largest frame size transmittable on network",
+    "justification": "MTU limits frame size",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is ACK?",
+    "answers": {
+      "A1": "Receipt verification",
+      "A2": "Confirmation that data was received correctly",
+      "A3": "Receiving signal",
+      "A4": "Confirmation message"
+    },
+    "key": "Confirmation that data was received correctly",
+    "justification": "ACK confirms receipt",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is the difference between TCP and UDP?",
+    "answers": {
+      "A1": "TCP is faster",
+      "A2": "TCP is connection-oriented and reliable; UDP is connectionless",
+      "A3": "UDP is more secure",
+      "A4": "They are identical"
+    },
+    "key": "TCP is connection-oriented and reliable; UDP is connectionless",
+    "justification": "Key difference between protocols",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is the three-way handshake?",
+    "answers": {
+      "A1": "Three data transfers",
+      "A2": "SYN, SYN-ACK, ACK sequence establishing connection",
+      "A3": "Three messages",
+      "A4": "Connection protocol"
+    },
+    "key": "SYN, SYN-ACK, ACK sequence establishing connection",
+    "justification": "Handshake initiates TCP connection",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is DHCP DORA process?",
+    "answers": {
+      "A1": "Four steps",
+      "A2": "Discover, Offer, Request, Acknowledge",
+      "A3": "IP allocation",
+      "A4": "Dynamic assignment"
+    },
+    "key": "Discover, Offer, Request, Acknowledge",
+    "justification": "DHCP uses DORA process",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is DNS resolution?",
+    "answers": {
+      "A1": "Problem solving",
+      "A2": "Translating domain name to IP address",
+      "A3": "Name lookup",
+      "A4": "Address translation"
+    },
+    "key": "Translating domain name to IP address",
+    "justification": "DNS resolves names to addresses",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is routing?",
+    "answers": {
+      "A1": "Physical pathway",
+      "A2": "Process of determining path for data packets",
+      "A3": "Path selection",
+      "A4": "Packet forwarding"
+    },
+    "key": "Process of determining path for data packets",
+    "justification": "Routing determines packet path",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is OSPF?",
+    "answers": {
+      "A1": "Open System Protocol",
+      "A2": "Open Shortest Path First routing protocol",
+      "A3": "Optimized System Protocol",
+      "A4": "Open Service Protocol"
+    },
+    "key": "Open Shortest Path First routing protocol",
+    "justification": "OSPF is link-state routing protocol",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is BGP?",
+    "answers": {
+      "A1": "Basic Gateway Protocol",
+      "A2": "Border Gateway Protocol for inter-domain routing",
+      "A3": "Border Group Protocol",
+      "A4": "Basic Group Protocol"
+    },
+    "key": "Border Gateway Protocol for inter-domain routing",
+    "justification": "BGP routes between autonomous systems",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is packet switching?",
+    "answers": {
+      "A1": "Physical switching",
+      "A2": "Dividing data into packets routed independently",
+      "A3": "Data switching",
+      "A4": "Packet routing"
+    },
+    "key": "Dividing data into packets routed independently",
+    "justification": "Packets switch independently",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is circuit switching?",
+    "answers": {
+      "A1": "Electrical switching",
+      "A2": "Dedicated connection maintained for entire communication",
+      "A3": "Connection switching",
+      "A4": "Circuit connection"
+    },
+    "key": "Dedicated connection maintained for entire communication",
+    "justification": "Circuit maintains dedicated connection",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is a repeater?",
+    "answers": {
+      "A1": "Device that repeats",
+      "A2": "Device that amplifies network signal",
+      "A3": "Signal amplifier",
+      "A4": "Connection device"
+    },
+    "key": "Device that amplifies network signal",
+    "justification": "Repeaters extend network range",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is a hub?",
+    "answers": {
+      "A1": "Central device",
+      "A2": "Older network device broadcasting to all ports",
+      "A3": "Network center",
+      "A4": "Connection point"
+    },
+    "key": "Older network device broadcasting to all ports",
+    "justification": "Hubs broadcast to all ports",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is CIDR?",
+    "answers": {
+      "A1": "Classless IP routing",
+      "A2": "Classless Inter-Domain Routing notation",
+      "A3": "Addressing notation",
+      "A4": "IP notation"
+    },
+    "key": "Classless Inter-Domain Routing notation",
+    "justification": "CIDR notation represents subnets",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is socket API?",
+    "answers": {
+      "A1": "Physical socket",
+      "A2": "Interface for network communication in applications",
+      "A3": "Socket implementation",
+      "A4": "Network interface"
+    },
+    "key": "Interface for network communication in applications",
+    "justification": "Socket API enables network programming",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is SYN flood?",
+    "answers": {
+      "A1": "Excessive synchronization",
+      "A2": "DoS attack sending many SYN packets",
+      "A3": "Sync overflow",
+      "A4": "Connection flood"
+    },
+    "key": "DoS attack sending many SYN packets",
+    "justification": "SYN flood is common attack",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is DDoS?",
+    "answers": {
+      "A1": "Distributed Data Service",
+      "A2": "Distributed Denial of Service attack",
+      "A3": "Data Distribution System",
+      "A4": "Distributed Device Service"
+    },
+    "key": "Distributed Denial of Service attack",
+    "justification": "DDoS overwhelms network",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is port number?",
+    "answers": {
+      "A1": "Physical connection",
+      "A2": "16-bit number identifying network services",
+      "A3": "Network interface",
+      "A4": "Connection port"
+    },
+    "key": "16-bit number identifying network services",
+    "justification": "Ports identify network services",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is forwarding?",
+    "answers": {
+      "A1": "Going forward",
+      "A2": "Moving packets from input to output port",
+      "A3": "Packet sending",
+      "A4": "Data transfer"
+    },
+    "key": "Moving packets from input to output port",
+    "justification": "Forwarding moves packets through routers",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is IP header?",
+    "answers": {
+      "A1": "Top of IP file",
+      "A2": "Control information containing addressing info",
+      "A3": "Packet header",
+      "A4": "Data section"
+    },
+    "key": "Control information containing addressing info",
+    "justification": "IP header contains protocol information",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is data plane?",
+    "answers": {
+      "A1": "Data area",
+      "A2": "Forwards packets using forwarding table",
+      "A3": "Packet transfer",
+      "A4": "Data transfer"
+    },
+    "key": "Forwards packets using forwarding table",
+    "justification": "Data plane handles packet forwarding",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is control plane?",
+    "answers": {
+      "A1": "Control area",
+      "A2": "Determines routing paths for packets",
+      "A3": "Packet control",
+      "A4": "Route planning"
+    },
+    "key": "Determines routing paths for packets",
+    "justification": "Control plane determines routes",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is longest prefix matching?",
+    "answers": {
+      "A1": "Longest match",
+      "A2": "Forwarding based on longest matching prefix",
+      "A3": "Prefix matching",
+      "A4": "Route matching"
+    },
+    "key": "Forwarding based on longest matching prefix",
+    "justification": "Prefix matching selects routes",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is VLAN?",
+    "answers": {
+      "A1": "Virtual Local Area Network",
+      "A2": "Logical network created from switches",
+      "A3": "Virtual Network",
+      "A4": "Virtual LAN"
+    },
+    "key": "Logical network created from switches",
+    "justification": "VLANs segment networks logically",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is subnetting?",
+    "answers": {
+      "A1": "Network submarine",
+      "A2": "Dividing network into smaller subnetworks",
+      "A3": "Network division",
+      "A4": "Network segmentation"
+    },
+    "key": "Dividing network into smaller subnetworks",
+    "justification": "Subnetting organizes networks",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is RTO?",
+    "answers": {
+      "A1": "Transmission timeout",
+      "A2": "Time TCP waits before retransmitting",
+      "A3": "Timeout interval",
+      "A4": "Retransmit time"
+    },
+    "key": "Time TCP waits before retransmitting",
+    "justification": "RTO determines retransmit timing",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is an AS?",
+    "answers": {
+      "A1": "Independent system",
+      "A2": "Network under single administrative control",
+      "A3": "Autonomous network",
+      "A4": "Self-governing network"
+    },
+    "key": "Network under single administrative control",
+    "justification": "AS is routing domain",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is inter-domain routing?",
+    "answers": {
+      "A1": "Interior routing",
+      "A2": "Routing between autonomous systems",
+      "A3": "External routing",
+      "A4": "System routing"
+    },
+    "key": "Routing between autonomous systems",
+    "justification": "Inter-domain routing connects ASes",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is intra-domain routing?",
+    "answers": {
+      "A1": "Interior routing",
+      "A2": "Routing within autonomous system",
+      "A3": "Internal routing",
+      "A4": "Domain routing"
+    },
+    "key": "Routing within autonomous system",
+    "justification": "Intra-domain routing within AS",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is RIP?",
+    "answers": {
+      "A1": "Router Information",
+      "A2": "Distance vector routing protocol",
+      "A3": "Routing Protocol",
+      "A4": "Information Protocol"
+    },
+    "key": "Distance vector routing protocol",
+    "justification": "RIP uses distance vectors",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is EIGRP?",
+    "answers": {
+      "A1": "Enhanced Interior",
+      "A2": "Enhanced Interior Gateway Routing Protocol",
+      "A3": "Enhanced Gateway",
+      "A4": "Interior Protocol"
+    },
+    "key": "Enhanced Interior Gateway Routing Protocol",
+    "justification": "EIGRP is hybrid protocol",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is hierarchical routing?",
+    "answers": {
+      "A1": "Tiered routing",
+      "A2": "Routing organizing network into domains",
+      "A3": "Structured routing",
+      "A4": "Layered routing"
+    },
+    "key": "Routing organizing network into domains",
+    "justification": "Hierarchy scales routing",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is Nagle's algorithm?",
+    "answers": {
+      "A1": "Network algorithm",
+      "A2": "TCP algorithm reducing small packets",
+      "A3": "Data reduction",
+      "A4": "Packet optimization"
+    },
+    "key": "TCP algorithm reducing small packets",
+    "justification": "Nagle reduces network overhead",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is persistent HTTP?",
+    "answers": {
+      "A1": "Continuous HTTP",
+      "A2": "HTTP keeping connection open",
+      "A3": "Connection reuse",
+      "A4": "Continuous connection"
+    },
+    "key": "HTTP keeping connection open",
+    "justification": "Persistent reduces overhead",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is pipelining?",
+    "answers": {
+      "A1": "Pipeline processing",
+      "A2": "Multiple requests before responses",
+      "A3": "Request batching",
+      "A4": "Sequential processing"
+    },
+    "key": "Multiple requests before responses",
+    "justification": "Pipelining improves throughput",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is HTTP/2?",
+    "answers": {
+      "A1": "HTTP version 2",
+      "A2": "Protocol with multiplexing",
+      "A3": "Improved HTTP",
+      "A4": "HTTP 2.0"
+    },
+    "key": "Protocol with multiplexing",
+    "justification": "HTTP/2 improves performance",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is handshake?",
+    "answers": {
+      "A1": "Hand connection",
+      "A2": "Process establishing secure connection",
+      "A3": "Security setup",
+      "A4": "Connection init"
+    },
+    "key": "Process establishing secure connection",
+    "justification": "Handshake negotiates security",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is certificate pinning?",
+    "answers": {
+      "A1": "Pinning cert",
+      "A2": "Restricting to specific certificates",
+      "A3": "Certificate restriction",
+      "A4": "Security pinning"
+    },
+    "key": "Restricting to specific certificates",
+    "justification": "Pinning prevents MITM",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is PFS?",
+    "answers": {
+      "A1": "Perfect security",
+      "A2": "Protects past sessions from key compromise",
+      "A3": "Future security",
+      "A4": "Session protection"
+    },
+    "key": "Protects past sessions from key compromise",
+    "justification": "PFS protects historical traffic",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is DNSSEC?",
+    "answers": {
+      "A1": "DNS security",
+      "A2": "Extensions securing DNS responses",
+      "A3": "Secure DNS",
+      "A4": "DNS protection"
+    },
+    "key": "Extensions securing DNS responses",
+    "justification": "DNSSEC validates DNS",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is BGP hijacking?",
+    "answers": {
+      "A1": "Route hijacking",
+      "A2": "Attack announcing false routes",
+      "A3": "Route manipulation",
+      "A4": "BGP attack"
+    },
+    "key": "Attack announcing false routes",
+    "justification": "Hijacking reroutes traffic",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is MPLS?",
+    "answers": {
+      "A1": "Multi-Protocol Labeling",
+      "A2": "Forwarding using labels",
+      "A3": "Label Switching",
+      "A4": "Multiprotocol System"
+    },
+    "key": "Forwarding using labels",
+    "justification": "MPLS enables traffic engineering",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is SDN?",
+    "answers": {
+      "A1": "Software Definition",
+      "A2": "Centralized control through software",
+      "A3": "Software Network",
+      "A4": "Defined Networking"
+    },
+    "key": "Centralized control through software",
+    "justification": "SDN decouples control plane",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is OpenFlow?",
+    "answers": {
+      "A1": "Open data flow",
+      "A2": "Protocol enabling SDN control",
+      "A3": "Flow protocol",
+      "A4": "Open protocol"
+    },
+    "key": "Protocol enabling SDN control",
+    "justification": "OpenFlow implements SDN",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is network slicing?",
+    "answers": {
+      "A1": "Network division",
+      "A2": "Creating isolated virtual networks",
+      "A3": "Network segmentation",
+      "A4": "Virtual slicing"
+    },
+    "key": "Creating isolated virtual networks",
+    "justification": "Slicing virtualizes networks",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is NFV?",
+    "answers": {
+      "A1": "Function virtualization",
+      "A2": "Running functions as software",
+      "A3": "Virtual functions",
+      "A4": "Function software"
+    },
+    "key": "Running functions as software",
+    "justification": "NFV softwarizes networking",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is bit rate?",
+    "answers": {
+      "A1": "Rate of bits",
+      "A2": "Number of bits transmitted per second",
+      "A3": "Data rate",
+      "A4": "Transfer speed"
+    },
+    "key": "Number of bits transmitted per second",
+    "justification": "Bit rate measures transmission speed",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is throughput?",
+    "answers": {
+      "A1": "Passing through",
+      "A2": "Actual data delivery rate",
+      "A3": "Data rate",
+      "A4": "Transfer rate"
+    },
+    "key": "Actual data delivery rate",
+    "justification": "Throughput measures performance",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is delay?",
+    "answers": {
+      "A1": "Postponement",
+      "A2": "Time to send packet across network",
+      "A3": "Wait time",
+      "A4": "Processing time"
+    },
+    "key": "Time to send packet across network",
+    "justification": "Delay measures latency",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is jitter?",
+    "answers": {
+      "A1": "Nervous movement",
+      "A2": "Variation in packet arrival delay",
+      "A3": "Delay variation",
+      "A4": "Timing inconsistency"
+    },
+    "key": "Variation in packet arrival delay",
+    "justification": "Jitter affects real-time apps",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is packet loss?",
+    "answers": {
+      "A1": "Losing packets",
+      "A2": "Packets not reaching destination",
+      "A3": "Data loss",
+      "A4": "Communication failure"
+    },
+    "key": "Packets not reaching destination",
+    "justification": "Loss degrades performance",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is Dijkstra's algorithm?",
+    "answers": {
+      "A1": "Sorting data",
+      "A2": "Finding shortest path in networks",
+      "A3": "Network encryption",
+      "A4": "Data compression"
+    },
+    "key": "Finding shortest path in networks",
+    "justification": "Dijkstra finds optimal routes",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is Bellman-Ford algorithm?",
+    "answers": {
+      "A1": "Bell algorithm",
+      "A2": "Distance vector routing algorithm",
+      "A3": "Forward routing",
+      "A4": "Route computation"
+    },
+    "key": "Distance vector routing algorithm",
+    "justification": "Bellman-Ford enables DV routing",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is distance vector?",
+    "answers": {
+      "A1": "Vector distance",
+      "A2": "Routing where routers share distance info",
+      "A3": "Distance measurement",
+      "A4": "Vector routing"
+    },
+    "key": "Routing where routers share distance info",
+    "justification": "DV shares routing info",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is link state?",
+    "answers": {
+      "A1": "State of links",
+      "A2": "Routing using entire network topology",
+      "A3": "Link information",
+      "A4": "State routing"
+    },
+    "key": "Routing using entire network topology",
+    "justification": "Link state uses topology",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is congestion window?",
+    "answers": {
+      "A1": "Window size",
+      "A2": "TCP parameter controlling transmission",
+      "A3": "Flow control",
+      "A4": "Transmission window"
+    },
+    "key": "TCP parameter controlling transmission",
+    "justification": "cwnd manages flow",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is slow start?",
+    "answers": {
+      "A1": "Slow beginning",
+      "A2": "TCP starting with small window",
+      "A3": "Gradual start",
+      "A4": "Initial phase"
+    },
+    "key": "TCP starting with small window",
+    "justification": "Slow start ramps up",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is congestion avoidance?",
+    "answers": {
+      "A1": "Avoiding congestion",
+      "A2": "TCP phase increasing linearly",
+      "A3": "Prevention strategy",
+      "A4": "Congestion prevention"
+    },
+    "key": "TCP phase increasing linearly",
+    "justification": "Avoidance maintains stability",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is fast recovery?",
+    "answers": {
+      "A1": "Quick recovery",
+      "A2": "TCP responding to loss",
+      "A3": "Loss recovery",
+      "A4": "Error recovery"
+    },
+    "key": "TCP responding to loss",
+    "justification": "Fast recovery reduces retransmit",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is window size?",
+    "answers": {
+      "A1": "Size of window",
+      "A2": "Number of bytes receiver can accept",
+      "A3": "Flow control size",
+      "A4": "Buffer size"
+    },
+    "key": "Number of bytes receiver can accept",
+    "justification": "Window size controls flow",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is selective repeat?",
+    "answers": {
+      "A1": "Repeat selection",
+      "A2": "Protocol retransmitting only lost packets",
+      "A3": "Selective retransmit",
+      "A4": "Loss recovery"
+    },
+    "key": "Protocol retransmitting only lost packets",
+    "justification": "SR improves efficiency",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is go-back-N?",
+    "answers": {
+      "A1": "Backward go",
+      "A2": "Protocol retransmitting from lost packet",
+      "A3": "Retransmit protocol",
+      "A4": "Backward recovery"
+    },
+    "key": "Protocol retransmitting from lost packet",
+    "justification": "GBN simpler but less efficient",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is cumulative ACK?",
+    "answers": {
+      "A1": "Cumulative acknowledge",
+      "A2": "ACK confirming all packets up to number",
+      "A3": "Combined ACK",
+      "A4": "Total ACK"
+    },
+    "key": "ACK confirming all packets up to number",
+    "justification": "Cumulative ACK used in TCP",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is exponential backoff?",
+    "answers": {
+      "A1": "Exponential increase",
+      "A2": "Doubling timeout on each retransmit",
+      "A3": "Backoff strategy",
+      "A4": "Timeout increase"
+    },
+    "key": "Doubling timeout on each retransmit",
+    "justification": "Backoff prevents network flooding",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is head-of-line blocking?",
+    "answers": {
+      "A1": "First in line",
+      "A2": "Slow packet blocking faster packets",
+      "A3": "Queue blocking",
+      "A4": "First packet"
+    },
+    "key": "Slow packet blocking faster packets",
+    "justification": "HOL affects performance",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is multiplexing?",
+    "answers": {
+      "A1": "Multiple signals",
+      "A2": "Combining multiple signals on single link",
+      "A3": "Signal combination",
+      "A4": "Link sharing"
+    },
+    "key": "Combining multiple signals on single link",
+    "justification": "Multiplexing shares resources",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is demultiplexing?",
+    "answers": {
+      "A1": "Multiple signals",
+      "A2": "Separating multiplexed signals",
+      "A3": "Signal separation",
+      "A4": "Link separation"
+    },
+    "key": "Separating multiplexed signals",
+    "justification": "Demux reverses multiplexing",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is anycast?",
+    "answers": {
+      "A1": "Any cast",
+      "A2": "Routing to any one of destinations",
+      "A3": "Flexible delivery",
+      "A4": "Multiple routing"
+    },
+    "key": "Routing to any one of destinations",
+    "justification": "Anycast flexible routing",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is traceroute use?",
+    "answers": {
+      "A1": "Route planning",
+      "A2": "Finding hops to destination",
+      "A3": "Path discovery",
+      "A4": "Route tracing"
+    },
+    "key": "Finding hops to destination",
+    "justification": "Traceroute reveals path",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is MSS?",
+    "answers": {
+      "A1": "Maximum size segment",
+      "A2": "Largest segment size TCP sends",
+      "A3": "Maximum segment",
+      "A4": "Segment size"
+    },
+    "key": "Largest segment size TCP sends",
+    "justification": "MSS prevents fragmentation",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is path MTU discovery?",
+    "answers": {
+      "A1": "MTU discovery",
+      "A2": "Finding MTU along path",
+      "A3": "Maximum transmission unit",
+      "A4": "Path discovery"
+    },
+    "key": "Finding MTU along path",
+    "justification": "PMTUD optimizes MTU",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is counting to infinity?",
+    "answers": {
+      "A1": "Infinite counting",
+      "A2": "Distance vector routing loop problem",
+      "A3": "Routing loop",
+      "A4": "Infinite distance"
+    },
+    "key": "Distance vector routing loop problem",
+    "justification": "CTI is DV protocol issue",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is split horizon?",
+    "answers": {
+      "A1": "Horizon split",
+      "A2": "Prevents advertising routes back",
+      "A3": "Route prevention",
+      "A4": "Backward prevention"
+    },
+    "key": "Prevents advertising routes back",
+    "justification": "Split horizon prevents loops",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is poisoned reverse?",
+    "answers": {
+      "A1": "Poison reversal",
+      "A2": "Advertising infinity for reverse path",
+      "A3": "Route poisoning",
+      "A4": "Infinite advertisement"
+    },
+    "key": "Advertising infinity for reverse path",
+    "justification": "Poisoned reverse prevents loops",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is metric?",
+    "answers": {
+      "A1": "Measurement unit",
+      "A2": "Cost value for route decision",
+      "A3": "Route cost",
+      "A4": "Distance measure"
+    },
+    "key": "Cost value for route decision",
+    "justification": "Metrics guide routing",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is cost function?",
+    "answers": {
+      "A1": "Expense calculation",
+      "A2": "Function computing link cost",
+      "A3": "Route cost",
+      "A4": "Link expense"
+    },
+    "key": "Function computing link cost",
+    "justification": "Cost guides routing",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is route aggregation?",
+    "answers": {
+      "A1": "Route combination",
+      "A2": "Combining multiple routes into one",
+      "A3": "Route merging",
+      "A4": "Route consolidation"
+    },
+    "key": "Combining multiple routes into one",
+    "justification": "Aggregation reduces table size",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is route flapping?",
+    "answers": {
+      "A1": "Route fluctuation",
+      "A2": "Route changing frequently",
+      "A3": "Unstable route",
+      "A4": "Route instability"
+    },
+    "key": "Route changing frequently",
+    "justification": "Flapping causes convergence issues",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is convergence?",
+    "answers": {
+      "A1": "Coming together",
+      "A2": "Routing protocols reaching stable state",
+      "A3": "Network stability",
+      "A4": "Stable routing"
+    },
+    "key": "Routing protocols reaching stable state",
+    "justification": "Convergence time matters",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is FIFO queue?",
+    "answers": {
+      "A1": "First in first out",
+      "A2": "Queue processing in arrival order",
+      "A3": "Queue discipline",
+      "A4": "Ordered queue"
+    },
+    "key": "Queue processing in arrival order",
+    "justification": "FIFO is basic queue",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is priority queue?",
+    "answers": {
+      "A1": "Queue priority",
+      "A2": "Serving packets by priority",
+      "A3": "Prioritized queue",
+      "A4": "Priority discipline"
+    },
+    "key": "Serving packets by priority",
+    "justification": "Priority improves service",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is weighted fair queuing?",
+    "answers": {
+      "A1": "Fair queue weighting",
+      "A2": "Allocating bandwidth by weight",
+      "A3": "Fair allocation",
+      "A4": "Weighted allocation"
+    },
+    "key": "Allocating bandwidth by weight",
+    "justification": "WFQ ensures fairness",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is policing?",
+    "answers": {
+      "A1": "Law enforcement",
+      "A2": "Enforcing traffic rate limit",
+      "A3": "Rate control",
+      "A4": "Traffic enforcement"
+    },
+    "key": "Enforcing traffic rate limit",
+    "justification": "Policing limits traffic",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is shaping?",
+    "answers": {
+      "A1": "Forming shape",
+      "A2": "Buffering excess traffic",
+      "A3": "Traffic buffering",
+      "A4": "Traffic regulation"
+    },
+    "key": "Buffering excess traffic",
+    "justification": "Shaping smooths traffic",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is token bucket?",
+    "answers": {
+      "A1": "Token container",
+      "A2": "Algorithm controlling data flow",
+      "A3": "Rate limiting",
+      "A4": "Flow control"
+    },
+    "key": "Algorithm controlling data flow",
+    "justification": "Token bucket enforces rate",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is leaky bucket?",
+    "answers": {
+      "A1": "Leaking container",
+      "A2": "Smoothing bursty traffic",
+      "A3": "Traffic smoothing",
+      "A4": "Rate leveling"
+    },
+    "key": "Smoothing bursty traffic",
+    "justification": "Leaky bucket smooths traffic",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is RTT estimation?",
+    "answers": {
+      "A1": "Estimating round trip",
+      "A2": "Computing expected round-trip time",
+      "A3": "Trip time",
+      "A4": "Time estimation"
+    },
+    "key": "Computing expected round-trip time",
+    "justification": "RTT estimation critical for TCP",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is EWMA?",
+    "answers": {
+      "A1": "Exponential weight",
+      "A2": "Exponentially weighted moving average",
+      "A3": "Weighted average",
+      "A4": "Moving average"
+    },
+    "key": "Exponentially weighted moving average",
+    "justification": "EWMA smooths estimates",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is deviation?",
+    "answers": {
+      "A1": "Deviation from path",
+      "A2": "Variation from RTT estimate",
+      "A3": "Variance measure",
+      "A4": "Error measure"
+    },
+    "key": "Variation from RTT estimate",
+    "justification": "Deviation affects timeout",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is Karn's algorithm?",
+    "answers": {
+      "A1": "Algorithm name",
+      "A2": "Avoiding RTT update on retransmit",
+      "A3": "RTT algorithm",
+      "A4": "Estimate algorithm"
+    },
+    "key": "Avoiding RTT update on retransmit",
+    "justification": "Karn prevents ambiguity",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is SACK?",
+    "answers": {
+      "A1": "Selective acknowledge",
+      "A2": "Selective acknowledgment of received blocks",
+      "A3": "Block acknowledgment",
+      "A4": "Selective ACK"
+    },
+    "key": "Selective acknowledgment of received blocks",
+    "justification": "SACK improves recovery",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is duplicate ACK?",
+    "answers": {
+      "A1": "Repeated acknowledge",
+      "A2": "ACK for already received packet",
+      "A3": "Repeated ACK",
+      "A4": "Extra ACK"
+    },
+    "key": "ACK for already received packet",
+    "justification": "Duplicate ACKs signal loss",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is fast retransmit?",
+    "answers": {
+      "A1": "Quick retransmit",
+      "A2": "Retransmitting on 3 duplicate ACKs",
+      "A3": "Early retransmit",
+      "A4": "Speedy retransmit"
+    },
+    "key": "Retransmitting on 3 duplicate ACKs",
+    "justification": "Fast retransmit recovers quickly",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is receive window?",
+    "answers": {
+      "A1": "Receiver window",
+      "A2": "Bytes receiver can accept",
+      "A3": "Buffer window",
+      "A4": "Capacity window"
+    },
+    "key": "Bytes receiver can accept",
+    "justification": "rwnd controls flow",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is MAN?",
+    "answers": {
+      "A1": "Medium Area Network",
+      "A2": "Metropolitan Area Network between LAN and WAN",
+      "A3": "Main Area Network",
+      "A4": "Multiple Access Network"
+    },
+    "key": "Metropolitan Area Network between LAN and WAN",
+    "justification": "MAN covers metropolitan area",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is jitter?",
+    "answers": {
+      "A1": "Nervous movement",
+      "A2": "Variation in delay of packet arrival",
+      "A3": "Delay variation",
+      "A4": "Timing inconsistency"
+    },
+    "key": "Variation in delay of packet arrival",
+    "justification": "Jitter affects real-time applications",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is collision?",
+    "answers": {
+      "A1": "Physical impact",
+      "A2": "Event when two devices transmit simultaneously",
+      "A3": "Data conflict",
+      "A4": "Transmission conflict"
+    },
+    "key": "Event when two devices transmit simultaneously",
+    "justification": "Collisions cause data loss",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is CSMA/CD?",
+    "answers": {
+      "A1": "Carrier Sense Multiple Access",
+      "A2": "Protocol detecting and handling collisions",
+      "A3": "Carrier Detection Protocol",
+      "A4": "Collision Detection System"
+    },
+    "key": "Protocol detecting and handling collisions",
+    "justification": "CSMA/CD handles collisions",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is load balancing?",
+    "answers": {
+      "A1": "Balancing weight",
+      "A2": "Distributing network traffic across servers",
+      "A3": "Server management",
+      "A4": "Traffic distribution"
+    },
+    "key": "Distributing network traffic across servers",
+    "justification": "Load balancing optimizes performance",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is anycast?",
+    "answers": {
+      "A1": "Any cast",
+      "A2": "Routing to any one of multiple destinations",
+      "A3": "Flexible delivery",
+      "A4": "Multiple destination"
+    },
+    "key": "Routing to any one of multiple destinations",
+    "justification": "Anycast provides flexible routing",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is daemon?",
+    "answers": {
+      "A1": "Evil spirit",
+      "A2": "Background process providing network service",
+      "A3": "Background service",
+      "A4": "System process"
+    },
+    "key": "Background process providing network service",
+    "justification": "Daemons run background services",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is polling?",
+    "answers": {
+      "A1": "Voting process",
+      "A2": "Repeatedly checking for data/events",
+      "A3": "Checking status",
+      "A4": "Monitoring method"
+    },
+    "key": "Repeatedly checking for data/events",
+    "justification": "Polling checks status repeatedly",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is SDP?",
+    "answers": {
+      "A1": "Service Discovery",
+      "A2": "Session Description Protocol",
+      "A3": "Session Definition",
+      "A4": "Service Definition"
+    },
+    "key": "Session Description Protocol",
+    "justification": "SDP describes multimedia sessions",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is SIP?",
+    "answers": {
+      "A1": "Session Initiation",
+      "A2": "Protocol for establishing multimedia sessions",
+      "A3": "System Interface",
+      "A4": "Session Interface"
+    },
+    "key": "Protocol for establishing multimedia sessions",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is RTP?",
+    "answers": {
+      "A1": "Real Time Protocol",
+      "A2": "Transport protocol for real-time media",
+      "A3": "Real Transfer Protocol",
+      "A4": "Real-time Transfer"
+    },
+    "key": "Transport protocol for real-time media",
+    "justification": "RTP carries real-time data",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is RTCP?",
+    "answers": {
+      "A1": "Real Time Control",
+      "A2": "Protocol monitoring RTP quality",
+      "A3": "Real Transfer Control",
+      "A4": "Real-time Control"
+    },
+    "key": "Protocol monitoring RTP quality",
+    "justification": "RTCP monitors RTP",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is network interface?",
+    "answers": {
+      "A1": "Interface design",
+      "A2": "Hardware/software connection to network",
+      "A3": "Connection device",
+      "A4": "Network port"
+    },
+    "key": "Hardware/software connection to network",
+    "justification": "NIC connects device to network",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is NIC?",
+    "answers": {
+      "A1": "Network Interface Card",
+      "A2": "Hardware providing network connection",
+      "A3": "Network Connection",
+      "A4": "Network Card"
+    },
+    "key": "Hardware providing network connection",
+    "justification": "NIC is network adapter",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is CAM?",
+    "answers": {
+      "A1": "Content Addressable Memory",
+      "A2": "Table storing MAC to port mappings",
+      "A3": "Content Address",
+      "A4": "Address Memory"
+    },
+    "key": "Table storing MAC to port mappings",
+    "justification": "CAM enables fast MAC lookup",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is ARQ?",
+    "answers": {
+      "A1": "Automatic Repeat Request",
+      "A2": "Protocol requesting retransmission of errors",
+      "A3": "Error Request",
+      "A4": "Automatic Request"
+    },
+    "key": "Protocol requesting retransmission of errors",
+    "justification": "ARQ handles errors",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is Stop-and-Wait?",
+    "answers": {
+      "A1": "Stop then wait",
+      "A2": "Protocol waiting for ACK before sending next",
+      "A3": "Simple protocol",
+      "A4": "Sequential protocol"
+    },
+    "key": "Protocol waiting for ACK before sending next",
+    "justification": "Stop-and-wait is simple protocol",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is sliding window?",
+    "answers": {
+      "A1": "Moving window",
+      "A2": "Protocol allowing multiple in-flight packets",
+      "A3": "Window protocol",
+      "A4": "Flow control"
+    },
+    "key": "Protocol allowing multiple in-flight packets",
+    "justification": "Sliding window improves efficiency",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is CRC?",
+    "answers": {
+      "A1": "Cyclic Redundancy Check",
+      "A2": "Error detection code",
+      "A3": "Error Correction",
+      "A4": "Cyclic Check"
+    },
+    "key": "Error detection code",
+    "justification": "CRC detects bit errors",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is Hamming distance?",
+    "answers": {
+      "A1": "Distance measure",
+      "A2": "Number of bit positions where codes differ",
+      "A3": "Bit difference",
+      "A4": "Code distance"
+    },
+    "key": "Number of bit positions where codes differ",
+    "justification": "Hamming distance measures error",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is parity bit?",
+    "answers": {
+      "A1": "Equal bit",
+      "A2": "Extra bit for error detection",
+      "A3": "Error detection bit",
+      "A4": "Check bit"
+    },
+    "key": "Extra bit for error detection",
+    "justification": "Parity detects single bit error",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is interleaving?",
+    "answers": {
+      "A1": "Inserting between",
+      "A2": "Spreading bits to reduce burst errors",
+      "A3": "Bit spreading",
+      "A4": "Error spreading"
+    },
+    "key": "Spreading bits to reduce burst errors",
+    "justification": "Interleaving protects against bursts",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is FEC?",
+    "answers": {
+      "A1": "Forward Error Correction",
+      "A2": "Code recovering errors without retransmit",
+      "A3": "Error Correction",
+      "A4": "Forward Correction"
+    },
+    "key": "Code recovering errors without retransmit",
+    "justification": "FEC recovers from errors",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is ARQ hybrid?",
+    "answers": {
+      "A1": "Hybrid request",
+      "A2": "Combining ARQ with FEC",
+      "A3": "Hybrid protocol",
+      "A4": "Combined protocol"
+    },
+    "key": "Combining ARQ with FEC",
+    "justification": "Hybrid improves efficiency",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is Go-Back-N?",
+    "answers": {
+      "A1": "Going back",
+      "A2": "Protocol retransmitting from error",
+      "A3": "Retransmit protocol",
+      "A4": "Backward protocol"
+    },
+    "key": "Protocol retransmitting from error",
+    "justification": "GBN retransmits from error",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is Selective Repeat?",
+    "answers": {
+      "A1": "Repeat selected",
+      "A2": "Retransmitting only lost packets",
+      "A3": "Selective protocol",
+      "A4": "Loss recovery"
+    },
+    "key": "Retransmitting only lost packets",
+    "justification": "SR more efficient than GBN",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is CSMA/CA?",
+    "answers": {
+      "A1": "Carrier Sense Multiple Access",
+      "A2": "Collision avoidance protocol for wireless",
+      "A3": "Avoidance protocol",
+      "A4": "Access protocol"
+    },
+    "key": "Collision avoidance protocol for wireless",
+    "justification": "CSMA/CA used in WiFi",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is RTS/CTS?",
+    "answers": {
+      "A1": "Request To Send",
+      "A2": "Handshake preventing collisions",
+      "A3": "Send handshake",
+      "A4": "Clear protocol"
+    },
+    "key": "Handshake preventing collisions",
+    "justification": "RTS/CTS improves MAC",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is token ring?",
+    "answers": {
+      "A1": "Ring token",
+      "A2": "Network passing token around ring",
+      "A3": "Token network",
+      "A4": "Ring protocol"
+    },
+    "key": "Network passing token around ring",
+    "justification": "Token ring uses token passing",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is FDDI?",
+    "answers": {
+      "A1": "Fiber Distributed Data",
+      "A2": "High-speed fiber network",
+      "A3": "Fiber Network",
+      "A4": "Distributed Interface"
+    },
+    "key": "High-speed fiber network",
+    "justification": "FDDI uses fiber optics",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is PPP?",
+    "answers": {
+      "A1": "Point-to-Point Protocol",
+      "A2": "Serial line communication protocol",
+      "A3": "Point Protocol",
+      "A4": "Serial Protocol"
+    },
+    "key": "Serial line communication protocol",
+    "justification": "PPP connects to ISP",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is SLIP?",
+    "answers": {
+      "A1": "Serial Line IP",
+      "A2": "Older serial connection protocol",
+      "A3": "Serial Protocol",
+      "A4": "Line Protocol"
+    },
+    "key": "Older serial connection protocol",
+    "justification": "SLIP older than PPP",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is congestion collapse?",
+    "answers": {
+      "A1": "Network collapse",
+      "A2": "Throughput decreases with increased load",
+      "A3": "Network overload",
+      "A4": "System failure"
+    },
+    "key": "Throughput decreases with increased load",
+    "justification": "Collapse causes network failure",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is RED?",
+    "answers": {
+      "A1": "Random Early Detection",
+      "A2": "Randomly dropping packets early",
+      "A3": "Early Detection",
+      "A4": "Random Dropping"
+    },
+    "key": "Randomly dropping packets early",
+    "justification": "RED prevents congestion collapse",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is ECN?",
+    "answers": {
+      "A1": "Explicit Congestion Notification",
+      "A2": "Marking packets to signal congestion",
+      "A3": "Congestion Notification",
+      "A4": "Explicit Marking"
+    },
+    "key": "Marking packets to signal congestion",
+    "justification": "ECN signals without dropping",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is Vegas?",
+    "answers": {
+      "A1": "City name",
+      "A2": "TCP variant predicting congestion",
+      "A3": "TCP variant",
+      "A4": "Prediction algorithm"
+    },
+    "key": "TCP variant predicting congestion",
+    "justification": "Vegas proactive approach",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is RENO?",
+    "answers": {
+      "A1": "City name",
+      "A2": "TCP variant with fast recovery",
+      "A3": "TCP variant",
+      "A4": "Recovery algorithm"
+    },
+    "key": "TCP variant with fast recovery",
+    "justification": "Reno improves recovery",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is NewReno?",
+    "answers": {
+      "A1": "New variant",
+      "A2": "TCP with better partial ACK handling",
+      "A3": "TCP variant",
+      "A4": "New algorithm"
+    },
+    "key": "TCP with better partial ACK handling",
+    "justification": "NewReno handles partial ACK",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is BIC?",
+    "answers": {
+      "A1": "Acceleration",
+      "A2": "TCP optimized for high speed networks",
+      "A3": "TCP variant",
+      "A4": "Speed algorithm"
+    },
+    "key": "TCP optimized for high speed networks",
+    "justification": "BIC scales to high BDP",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is CUBIC?",
+    "answers": {
+      "A1": "Cubic shape",
+      "A2": "TCP with cubic growth function",
+      "A3": "TCP variant",
+      "A4": "Growth algorithm"
+    },
+    "key": "TCP with cubic growth function",
+    "justification": "CUBIC used in Linux",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is BBR?",
+    "answers": {
+      "A1": "Bottleneck Bandwidth RTT",
+      "A2": "TCP modeling network as pipe",
+      "A3": "Bandwidth algorithm",
+      "A4": "Rate algorithm"
+    },
+    "key": "TCP modeling network as pipe",
+    "justification": "BBR novel approach",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is QUIC?",
+    "answers": {
+      "A1": "Quick protocol",
+      "A2": "UDP-based reliable transport",
+      "A3": "Quick transfer",
+      "A4": "Fast protocol"
+    },
+    "key": "UDP-based reliable transport",
+    "justification": "QUIC improves performance",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is bandwidth delay product?",
+    "answers": {
+      "A1": "Product of metrics",
+      "A2": "Maximum window size to use link fully",
+      "A3": "Combined metric",
+      "A4": "Product calculation"
+    },
+    "key": "Maximum window size to use link fully",
+    "justification": "BDP determines window",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is IP fragmentation?",
+    "answers": {
+      "A1": "Breaking IP",
+      "A2": "Splitting datagram for transmission",
+      "A3": "Fragment creation",
+      "A4": "Datagram splitting"
+    },
+    "key": "Splitting datagram for transmission",
+    "justification": "Fragmentation handles MTU",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is IP reassembly?",
+    "answers": {
+      "A1": "Reassembling IP",
+      "A2": "Combining fragments at destination",
+      "A3": "Fragment combining",
+      "A4": "Assembly process"
+    },
+    "key": "Combining fragments at destination",
+    "justification": "Reassembly reconstructs datagram",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is NAPT?",
+    "answers": {
+      "A1": "Network Address Port",
+      "A2": "Translating both address and port",
+      "A3": "Address translation",
+      "A4": "Port translation"
+    },
+    "key": "Translating both address and port",
+    "justification": "NAPT enables private networks",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is ALG?",
+    "answers": {
+      "A1": "Application Level Gateway",
+      "A2": "Modifying packets for protocol support",
+      "A3": "Application Gateway",
+      "A4": "Level Gateway"
+    },
+    "key": "Modifying packets for protocol support",
+    "justification": "ALG handles NAT traversal",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is UPnP?",
+    "answers": {
+      "A1": "Universal Plug and Play",
+      "A2": "Protocol for device discovery and control",
+      "A3": "Universal Protocol",
+      "A4": "Plug and Play"
+    },
+    "key": "Protocol for device discovery and control",
+    "justification": "UPnP simplifies setup",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is interface?",
+    "answers": {
+      "A1": "User GUI",
+      "A2": "Connection point between systems",
+      "A3": "Display screen",
+      "A4": "Input device"
+    },
+    "key": "Connection point between systems",
+    "justification": "Interface connects systems",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Computer Networks",
+    "question": "What is middleware?",
+    "answers": {
+      "A1": "Software location",
+      "A2": "Software between applications and OS",
+      "A3": "Middle software",
+      "A4": "Application layer"
+    },
+    "key": "Software between applications and OS",
+    "justification": "Middleware coordinates communication",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is service discovery?",
+    "answers": {
+      "A1": "Finding services",
+      "A2": "Process locating network services",
+      "A3": "Service location",
+      "A4": "Service finding"
+    },
+    "key": "Process locating network services",
+    "justification": "Discovery enables service access",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is mDNS?",
+    "answers": {
+      "A1": "Multi DNS",
+      "A2": "DNS for local networks without servers",
+      "A3": "Multicast DNS",
+      "A4": "Local DNS"
+    },
+    "key": "DNS for local networks without servers",
+    "justification": "mDNS enables local discovery",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Computer Networks",
+    "question": "What is bonjour?",
+    "answers": {
+      "A1": "French greeting",
+      "A2": "Apple's implementation of mDNS",
+      "A3": "Service discovery",
+      "A4": "Network protocol"
+    },
+    "key": "Apple's implementation of mDNS",
+    "justification": "Bonjour simplifies networking",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is MIB?",
+    "answers": {
+      "A1": "Management Information Base",
+      "A2": "Database of network device variables",
+      "A3": "Information Base",
+      "A4": "Management Base"
+    },
+    "key": "Database of network device variables",
+    "justification": "MIB used for SNMP",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is SNMP?",
+    "answers": {
+      "A1": "Simple Network Message",
+      "A2": "Protocol for network management",
+      "A3": "Simple Protocol",
+      "A4": "Network Protocol"
+    },
+    "key": "Protocol for network management",
+    "justification": "SNMP manages devices",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Computer Networks",
+    "question": "What is syslog?",
+    "answers": {
+      "A1": "System log",
+      "A2": "Protocol for sending log messages",
+      "A3": "Logging protocol",
+      "A4": "System logging"
+    },
+    "key": "Protocol for sending log messages",
+    "justification": "Syslog centralizes logging",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  }
+]

@@ -1,0 +1,823 @@
+[
+  {
+    "type": "easy",
+    "question": "Tom and Harry share a certain sum of money in the ratio 3 : 5. If Harry has \\$240, how much money is shared?",
+    "answers": {
+      "A1": "\\$322",
+      "A2": "\\$486",
+      "A3": "\\$256",
+      "A4": "\\$384"
+    },
+    "key": "\\$384",
+    "credit": "Ali Abbas",
+    "frequency": 2
+  },
+  {
+    "type": "medium",
+    "question": "At 12 noon my watch was correct. However, it then started to lose 18 minutes per hour. Four hours ago it stopped completely and is now showing the time as 15.30. What is the correct time?",
+    "answers": {
+      "A1": "8 PM",
+      "A2": "9 PM",
+      "A3": "7 PM",
+      "A4": "9 AM"
+    },
+    "key": "9 PM",
+    "credit": "Ali Abbas",
+    "frequency": 1
+  },
+  {
+    "type": "medium",
+    "question": "A man jogs at 6 mph over a certain journey and walks back over the same journey at 3 mph. What is his average speed for the journey?",
+    "answers": {
+      "A1": "3mph",
+      "A2": "4mph",
+      "A3": "2mph",
+      "A4": "5mph"
+    },
+    "key": "4mph",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "medium",
+    "question": "A train travelling at a speed of 50 mph enters a tunnel that is 1.75 miles long. The length of the train is 3/8 miles. How long does it take for all the train to pass through the tunnel, from the moment the front enters to the moment the rear emerges?",
+    "answers": {
+      "A1": "3 minutes 18 seconds",
+      "A2": "2 minutes 18 seconds",
+      "A3": "2 minutes 33 seconds",
+      "A4": "3 minutes 33 seconds"
+    },
+    "key": "2 minutes 33 seconds",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "7964325 is to 6975234, and 5822139 is to 2859312. Therefore, 7469851 is to ?",
+    "answers": {
+      "A1": "6471589",
+      "A2": "6972139",
+      "A3": "5825234",
+      "A4": "6975234"
+    },
+    "key": "6471589",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "medium",
+    "question": "I met four of my old school friends today whose names have linked patterns. In the morning I first saw PATRICIA and later bumped into RICHIE. Then in the afternoon I saw CHRISTABEL. Who did I encounter in the evening? ",
+    "answers": {
+      "A1": "Stella",
+      "A2": "Thelma",
+      "A3": "Sally",
+      "A4": "Thora"
+    },
+    "key": "Stella",
+    "credit": "Ali Abbas",
+    "frequency": 1
+  },
+  {
+    "type": "easy",
+    "question": "Which letter is two to the left of the letter that is four to the right of the letter immediately to the right of the letter A? (A B C D E F G H)",
+    "answers": {
+      "A1": "C",
+      "A2": "E",
+      "A3": "D",
+      "A4": "F"
+    },
+    "key": "D",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "medium",
+    "question": "What letter comes next in the sequence: A D H K O ?",
+    "answers": {
+      "A1": "Q",
+      "A2": "R",
+      "A3": "S",
+      "A4": "T"
+    },
+    "key": "R",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "hard",
+    "question": "How many minutes is it before midnight if 32 minutes ago it was three times as many minutes past 22.00?",
+    "answers": {
+      "A1": "32 minutes",
+      "A2": "22 minutes",
+      "A3": "42 minutes",
+      "A4": "12 minutes"
+    },
+    "key": "22 minutes",
+    "credit": "Ali Abbas",
+    "frequency": 1
+  },
+  {
+    "type": "easy",
+    "question": "Multiply the highest odd number in the grid by the lowest even number.\\\\ \\begin{tabular}{|c|c|c|} \n \\hline 23 & 24 & 41 \\tabularnewline\\hline 57 & 92 & 91 \\tabularnewline\\hline 18 & 16 & 28 \\tabularnewline\\hline 56 & 21 & 19 \\tabularnewline\\hline \n \\end{tabular}",
+    "answers": {
+      "A1": "1656",
+      "A2": "1932",
+      "A3": "1840",
+      "A4": "1456"
+    },
+    "key": "1456",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "Harry is one and a third as old as Larry and Larry is one and a third as old as Carrie. Together their ages total 74. How old are Larry, Harry and Carrie?",
+    "answers": {
+      "A1": "Harry: 48, Larry: 36, Carrie: 27",
+      "A2": "Harry: 16, Larry: 12, Carrie: 9",
+      "A3": "Harry: 32, Larry: 24, Carrie: 18",
+      "A4": "Harry: 36, Larry: 27, Carrie: 12"
+    },
+    "key": "Harry: 32, Larry: 24, Carrie: 18",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "hard",
+    "question": "In 13 years time the combined ages of my three brothers will be 94. What will it be in nine years time?",
+    "answers": {
+      "A1": "91",
+      "A2": "72",
+      "A3": "82",
+      "A4": "Not sufficient information to answer."
+    },
+    "key": "82",
+    "credit": "Ali Abbas",
+    "frequency": 1
+  },
+  {
+    "type": "easy",
+    "question": "How many circles of different size appear in the figure below: \\\\ \\includegraphics[width=5cm]{img/anal12}",
+    "answers": {
+      "A1": "5",
+      "A2": "6",
+      "A3": "7",
+      "A4": "8"
+    },
+    "key": "6",
+    "credit": "Ali Abbas",
+    "frequency": 1
+  },
+  {
+    "type": "easy",
+    "question": "In this sequence, identify what should appear at the end: 100, 97.25, 91.75, 83.5, $\\ldots$",
+    "answers": {
+      "A1": "71.5",
+      "A2": "72.5",
+      "A3": "74.5",
+      "A4": "73.0"
+    },
+    "key": "72.5",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "medium",
+    "question": "Find the starting point and visit every square once each to finish at the treasure marked T. For example: 1N 2W means 1 North, 2 West, 1E 1S means 1 East, 1 South.\\\\ \\begin{tabular}{|c|c|c|} \n \\hline 1S 1E & 2S 1E & 2W 1S \\tabularnewline\\hline 1S 1E & 1E 1N & 1W 1N  \\tabularnewline\\hline 1N 2E & T & 2N 2W  \\tabularnewline\\hline \n \\end{tabular}",
+    "answers": {
+      "A1": "1S 1E",
+      "A2": "2W 1S",
+      "A3": "1N 2E",
+      "A4": "2N 2W"
+    },
+    "key": "1N 2E",
+    "credit": "Ali Abbas",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "question": "Peter, Paul and Mary share out a certain sum of money between them. Peter gets 2 / 5, Paul gets 0.55 and Mary gets \\$45.00. How much is the original sum of money?",
+    "answers": {
+      "A1": "\\$800",
+      "A2": "\\$900",
+      "A3": "\\$700",
+      "A4": "\\$1000"
+    },
+    "key": "\\$900",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "How much does a bag of flour weigh if it weighs 1 kilogram plus the weight of half the bag of flour?",
+    "answers": {
+      "A1": "2 Kg",
+      "A2": "3 Kg",
+      "A3": "1 Kg",
+      "A4": "5 Kg"
+    },
+    "key": "2 Kg",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "Simplify $\\dfrac{27}{74} \\div \\dfrac{9}{37} \\times \\dfrac{6}{17}$ to the lowest fraction.",
+    "answers": {
+      "A1": "\\dfrac{9}{17}",
+      "A2": "\\dfrac{8}{17}",
+      "A3": "\\dfrac{9}{19}",
+      "A4": "\\dfrac{8}{19}"
+    },
+    "key": "\\dfrac{9}{17}",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "hard",
+    "question": "If IQS : LNV, then JRM : ?",
+    "answers": {
+      "A1": "LOP",
+      "A2": "MOP",
+      "A3": "LIP",
+      "A4": "MOW"
+    },
+    "key": "MOP",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "medium",
+    "question": "Look at both numbers both horizontally and vertically and work out which number should replace the question mark. \\\\ \\begin{tabular}{|c|c|c|} \n \\hline 8 & 3 & 4 \\tabularnewline\\hline 9 & 4 & 6 \\tabularnewline\\hline 12 & 2 & ? \\tabularnewline\\hline \n \\end{tabular}",
+    "answers": {
+      "A1": "4",
+      "A2": "6",
+      "A3": "2",
+      "A4": "0"
+    },
+    "key": "4",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "If 2 = H are BTO is two heads are better than one, what is the meaning of 2 = S to ES?",
+    "answers": {
+      "A1": "Two sides to Every Story",
+      "A2": "Two heads to Every Story",
+      "A3": "Two sides are better than one",
+      "A4": "Two heads are better than one"
+    },
+    "key": "Two sides to Every Story",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "medium",
+    "question": "In a game of eight players lasting for 70 minutes, six substitutes alternate with each player. This means that all players, including the substitutes, are on the pitch for the same length of time. For how long?",
+    "answers": {
+      "A1": "40 minutes",
+      "A2": "35 minutes",
+      "A3": "45 minutes",
+      "A4": "50 minutes"
+    },
+    "key": "40 minutes",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "If the following is folded into a cube, which of the objects will be produced?\\\\ \\includegraphics[width=5cm]{img/anal7}",
+    "answers": {
+      "A1": "\\includegraphics[width=1.5cm]{img/anal8}",
+      "A2": "\\includegraphics[width=1.5cm]{img/anal9}",
+      "A3": "\\includegraphics[width=1.5cm]{img/anal10}",
+      "A4": "\\includegraphics[width=1.5cm]{img/anal11}"
+    },
+    "key": "\\includegraphics[width=1.5cm]{img/anal11}",
+    "credit": "Ali Abbas",
+    "frequency": 1
+  },
+  {
+    "type": "easy",
+    "question": "What number should replace the question mark in this sequence: 1, 3, 4, 7, 11, 18, 29, ?",
+    "answers": {
+      "A1": "48",
+      "A2": "46",
+      "A3": "47",
+      "A4": "45"
+    },
+    "key": "47",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "medium",
+    "question": "What letter is immediately to the left of the letter that is immediately below the letter two to the left of the letter I? \\\\ \\begin{tabular}{|c|c|c|c|c|c|} \n \\hline A & B & C & D & E &  \\tabularnewline\\hline F & G & H & I & J & \\tabularnewline\\hline K & L & M & N & O &  \\tabularnewline\\hline P & Q & R & S & T & \\tabularnewline\\hline U & V & W & X & Y & Z \\tabularnewline\\hline \n \\end{tabular}",
+    "answers": {
+      "A1": "K",
+      "A2": "R",
+      "A3": "S",
+      "A4": "D"
+    },
+    "key": "K",
+    "credit": "Ali Abbas",
+    "frequency": 2
+  },
+  {
+    "type": "hard",
+    "question": "Three teams from Peshawar, Islamabad, and Lahore are competing for two trophies. One tropy is for badminton, and one for table tennis. How many different outcomes of the two competitions exist?",
+    "answers": {
+      "A1": "6",
+      "A2": "8",
+      "A3": "9",
+      "A4": "12"
+    },
+    "key": "9",
+    "credit": "Ali Abbas",
+    "frequency": 1
+  },
+  {
+    "type": "easy",
+    "question": "Jack is twice as old as Jill, but in five years time, he will only be one and a half times as old. How old are Jack and Jill now?",
+    "answers": {
+      "A1": "Jack: 10 and Jill: 5",
+      "A2": "Jack: 20 and Jill: 10",
+      "A3": "Jack: 2 and Jill: 1",
+      "A4": "Jack: 50 and Jill: 25"
+    },
+    "key": "Jack: 10 and Jill: 5",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "medium",
+    "question": "In eight years time the combined age of me and my two sons will be 124. What will it be in five years time?",
+    "answers": {
+      "A1": "118",
+      "A2": "110",
+      "A3": "114",
+      "A4": "115"
+    },
+    "key": "115",
+    "credit": "Ali Abbas",
+    "frequency": 1
+  },
+  {
+    "type": "medium",
+    "question": "In the sequence: A B C D E F G H, what letter is two letters to the left of the letter immediately to the right of the letter three letters to the right of the letter A?",
+    "answers": {
+      "A1": "G",
+      "A2": "D",
+      "A3": "B",
+      "A4": "C"
+    },
+    "key": "C",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "hard",
+    "question": "MTD is to PXB as FRJ is to ?",
+    "answers": {
+      "A1": "VHI",
+      "A2": "PIB",
+      "A3": "BPI",
+      "A4": "IVH"
+    },
+    "key": "IVH",
+    "credit": "Ali Abbas",
+    "frequency": 2
+  },
+  {
+    "type": "easy",
+    "question": "On taking delivery of a consignment of eggs the market stall owner was furious to find that several were cracked. In fact, on counting them up in order to assess the damage he found that 72 were cracked, which was 12 per cent of the total consignment. How many eggs in total were in the consignment?",
+    "answers": {
+      "A1": "600",
+      "A2": "620",
+      "A3": "580",
+      "A4": "400"
+    },
+    "key": "600",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "medium",
+    "question": "What is the missing section from below? \\\\ \\begin{tabular}{|c|c|c|c|c|c|} \n \\hline 3 & 9 & 1 & 2 & 8 & 3 \\tabularnewline\\hline 9 &   &   & 2 & 1 & 9 \\tabularnewline\\hline 1 &   &   & 3 & 9 & 1 \\tabularnewline\\hline 2 & 1 & 9 & 3 & 8 & 2 \\tabularnewline\\hline 8 & 3 & 9 & 1 & 2 & 8 \\tabularnewline\\hline 3 & 8 & 2 & 1 & 9 & 3 \\tabularnewline\\hline \n \\end{tabular}",
+    "answers": {
+      "A1": "\\begin{tabular}{|c|c|}\n\\hline 8 & 3 \\tabularnewline\\hline 8 & 2 \\tabularnewline\\hline\n\\end{tabular}",
+      "A2": "\\begin{tabular}{|c|c|}\n\\hline 3 & 8 \\tabularnewline\\hline 2 & 8 \\tabularnewline\\hline\n\\end{tabular}",
+      "A3": "\\begin{tabular}{|c|c|}\n\\hline 8 & 2 \\tabularnewline\\hline 8 & 3 \\tabularnewline\\hline\n\\end{tabular}",
+      "A4": "\\begin{tabular}{|c|c|}\n\\hline 2 & 8 \\tabularnewline\\hline 3 & 8 \\tabularnewline\\hline\n\\end{tabular}"
+    },
+    "key": "\\begin{tabular}{|c|c|}\n\\hline 3 & 8 \\tabularnewline\\hline 2 & 8 \\tabularnewline\\hline\n\\end{tabular}",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "hard",
+    "question": "You have 59 cubic blocks. What is the minimum number that needs to be taken away in order to construct a solid cube with none left over?",
+    "answers": {
+      "A1": "32",
+      "A2": "28",
+      "A3": "48",
+      "A4": "16"
+    },
+    "key": "32",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "hard",
+    "question": "My watch was correct at noon, after which it started to lose 17 minutes per hour until six hours ago it stopped completely. It now shows the time as 2.52 pm. What time is it now?",
+    "answers": {
+      "A1": "10:00 PM",
+      "A2": "10:12 PM",
+      "A3": "09:50 PM",
+      "A4": "10:30 PM"
+    },
+    "key": "10:00 PM",
+    "credit": "Ali Abbas",
+    "frequency": 1
+  },
+  {
+    "type": "easy",
+    "question": "Alf has four times as many pencils as Jim, and Jim has three times as many pencils as Sid. Altogether they have 192. How many has each?",
+    "answers": {
+      "A1": "Alf = 120, Jim: 30, Sid = 10",
+      "A2": "Alf = 128, Jim: 32, Sid = 10",
+      "A3": "Alf = 144, Jim: 36, Sid = 12",
+      "A4": "Alf = 180, Jim: 45, Sid = 15"
+    },
+    "key": "Alf = 144, Jim: 36, Sid = 12",
+    "credit": "Ali Abbas",
+    "frequency": 1
+  },
+  {
+    "type": "medium",
+    "question": "How many minutes is it before 12 noon if nine minutes ago it was twice as many minutes past 10 am?",
+    "answers": {
+      "A1": "32",
+      "A2": "37",
+      "A3": "39",
+      "A4": "40"
+    },
+    "key": "37",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "medium",
+    "question": "Determine the number that should replace the mark given in the following picture:\\\\ \\includegraphics[width=5cm]{img/anal6}",
+    "answers": {
+      "A1": "3",
+      "A2": "4",
+      "A3": "6",
+      "A4": "7"
+    },
+    "key": "4",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "medium",
+    "question": "A man has 53 socks in his drawer: 21 identical blue, 15 identical black and 17 identical red. The lights are fused and he is completely in the dark. How many socks must he take out to make 100 per cent certain he has a pair of black socks?",
+    "answers": {
+      "A1": "35",
+      "A2": "40",
+      "A3": "45",
+      "A4": "50"
+    },
+    "key": "40",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "How many lines are appearing below?\\\\ \\includegraphics[width=5cm]{img/anal5}",
+    "answers": {
+      "A1": "9",
+      "A2": "10",
+      "A3": "11",
+      "A4": "12"
+    },
+    "key": "11",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "What number should replace the question mark in the sequence: 0, 1, 2, 4, 6, 9, 12, 16, ?",
+    "answers": {
+      "A1": "17",
+      "A2": "18",
+      "A3": "20",
+      "A4": "22"
+    },
+    "key": "20",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "What number should replace the question mark?\\\\ \\includegraphics[width=5cm]{img/anal4}",
+    "answers": {
+      "A1": "3",
+      "A2": "4",
+      "A3": "1",
+      "A4": "2"
+    },
+    "key": "4",
+    "credit": "Ali Abbas",
+    "frequency": 1
+  },
+  {
+    "type": "easy",
+    "question": "What number should replace the question mark?\\\\ \\begin{tabular}{|c|c|c|} \n \\hline 70 & 91 & 120 \\tabularnewline\\hline 14 & 13 & 24 \\tabularnewline\\hline 5 & 7 & ? \\tabularnewline\\hline \n \\end{tabular}",
+    "answers": {
+      "A1": "10",
+      "A2": "15",
+      "A3": "12",
+      "A4": "5"
+    },
+    "key": "5",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "63 : 369 \\\\47 : 7411\\\\86 : ?",
+    "answers": {
+      "A1": "6212",
+      "A2": "6814",
+      "A3": "5810",
+      "A4": "9711"
+    },
+    "key": "6814",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "What letter should replace the question mark?\\\\ \\includegraphics[width=5cm]{img/anal3}",
+    "answers": {
+      "A1": "C",
+      "A2": "N",
+      "A3": "P",
+      "A4": "O"
+    },
+    "key": "P",
+    "credit": "Ali Abbas",
+    "frequency": 1
+  },
+  {
+    "type": "easy",
+    "question": "Which number is the odd one out? \\\\ \\includegraphics[width=5cm]{img/anal2}",
+    "answers": {
+      "A1": "18",
+      "A2": "9",
+      "A3": "5",
+      "A4": "16"
+    },
+    "key": "18",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "What number should replace the question mark below: \\\\ \\begin{tabular}{|c|c|c|c|} \n \\hline 7 & 6 & 4 & 52 \\tabularnewline\\hline 9 & 3 & 5 & 60 \\tabularnewline\\hline 10 & 5 & 4 & 60 \\tabularnewline\\hline 8 & 7 & 3 & ? \\tabularnewline\\hline \n \\end{tabular}",
+    "answers": {
+      "A1": "63",
+      "A2": "7",
+      "A3": "52",
+      "A4": "45"
+    },
+    "key": "45",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "medium",
+    "question": "Which two numbers come next in the sequence: 38, 24, 62, 12, 74, ?",
+    "answers": {
+      "A1": "28, 102",
+      "A2": "30, 100",
+      "A3": "26, 106",
+      "A4": "32, 108"
+    },
+    "key": "28, 102",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "medium",
+    "question": "A week contains the days: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. If three days ago was the day before Friday what day will be after tomorrow?",
+    "answers": {
+      "A1": "Sunday",
+      "A2": "Thursday",
+      "A3": "Wednesday",
+      "A4": "Tuesday"
+    },
+    "key": "Tuesday",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "What number should replace the question mark? \\\\ \\includegraphics[width=3cm]{img/anal1}",
+    "answers": {
+      "A1": "31",
+      "A2": "15",
+      "A3": "18",
+      "A4": "4"
+    },
+    "key": "31",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "What is the value of x in the expression: $64 - 12 \\times 2 + 6 \\div 3 = x$",
+    "answers": {
+      "A1": "50",
+      "A2": "42",
+      "A3": "48",
+      "A4": "63"
+    },
+    "key": "42",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "What number should replace the question mark below: \\\\ \\begin{tabular}{|c|c|c|c|} \n \\hline 7 & 10 & 9 & 6 \\tabularnewline\\hline 5 & 1 & 3 & 7 \\tabularnewline\\hline 2 & 3 & 2 & 1 \\tabularnewline\\hline 4 & 12 & 8 & ? \\tabularnewline\\hline \n \\end{tabular}",
+    "answers": {
+      "A1": "0",
+      "A2": "2",
+      "A3": "1",
+      "A4": "4"
+    },
+    "key": "0",
+    "credit": "Ali Abbas",
+    "frequency": 1
+  },
+  {
+    "type": "easy",
+    "question": "What number should replace the question mark below: \\\\9 2 6 = 24\\\\7 9 9 = 72\\\\9 5 6 = ?",
+    "answers": {
+      "A1": "51",
+      "A2": "48",
+      "A3": "53",
+      "A4": "47"
+    },
+    "key": "51",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "medium",
+    "question": "A car travels at a speed of 40 mph over a certain distance and then returns over the same distance at a speed of 60 mph. What is the average speed for the total journey?",
+    "answers": {
+      "A1": "46 mph",
+      "A2": "48 mph",
+      "A3": "50 mph",
+      "A4": "52 mph"
+    },
+    "key": "48 mph",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "What number will come at the question mark in the sequence: 25, 32, 27, 36, ?",
+    "answers": {
+      "A1": "31",
+      "A2": "29",
+      "A3": "27",
+      "A4": "33"
+    },
+    "key": "29",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "What letter will come after J in the sequence: A, C, F, J, ?",
+    "answers": {
+      "A1": "G",
+      "A2": "N",
+      "A3": "O",
+      "A4": "Y"
+    },
+    "key": "O",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "medium",
+    "question": "The average of three numbers is 48. The average of two of these numbers is 56. What is the third number?",
+    "answers": {
+      "A1": "32",
+      "A2": "84",
+      "A3": "52",
+      "A4": "104"
+    },
+    "key": "32",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "Which off the following is the odd one out?",
+    "answers": {
+      "A1": "5 7 12 19",
+      "A2": "8 3 11 14",
+      "A3": "9 7 16 13",
+      "A4": "7 8 15 23"
+    },
+    "key": "9 7 16 13",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "What number should replace the question mark in the sequence: 0, 1, 2, 4, 6, 9, 12, 16, ?",
+    "answers": {
+      "A1": "18",
+      "A2": "17",
+      "A3": "22",
+      "A4": "20"
+    },
+    "key": "20",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "Which one is the odd one out?",
+    "answers": {
+      "A1": "triangle",
+      "A2": "hexagon",
+      "A3": "cube",
+      "A4": "pentagon"
+    },
+    "key": "cube",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "Which one is the odd number out?",
+    "answers": {
+      "A1": "462",
+      "A2": "683",
+      "A3": "385",
+      "A4": "198"
+    },
+    "key": "683",
+    "credit": "Ali Abbas"
+  },
+  {
+    "type": "easy",
+    "question": "Which number appears next in the pattern? 13, 17, 19, 23, ?",
+    "answers": {
+      "A1": "25",
+      "A2": "27",
+      "A3": "29",
+      "A4": "33"
+    },
+    "key": "29",
+    "credit": "Ghulam Ali Abid"
+  },
+  {
+    "type": "easy",
+    "question": "0.33 / 0.1 = ?",
+    "answers": {
+      "A1": "0.033",
+      "A2": "3.31",
+      "A3": "3.3",
+      "A4": "33"
+    },
+    "key": "3.3",
+    "credit": "Ghulam Ali Abid"
+  },
+  {
+    "type": "easy",
+    "question": "Which number appears next in the pattern? 21, 23, 26, 30, ?",
+    "answers": {
+      "A1": "32",
+      "A2": "33",
+      "A3": "35",
+      "A4": "37"
+    },
+    "key": "35",
+    "credit": "Ghulam Ali Abid"
+  },
+  {
+    "type": "easy",
+    "question": "Aslam rents a car for his marriage. On Monday, he used petrol of Rs. 1,200. On Tuesday and Wednesday, his petrol costs Rs. 1,500 on each day. On Thursday and Friday, the petrol costs him Rs. 1,800. What is the average daily cost for the five days?",
+    "answers": {
+      "A1": "1,200",
+      "A2": "1,500",
+      "A3": "900",
+      "A4": "None of the above"
+    },
+    "key": "1,200",
+    "credit": "Ghulam Ali Abid"
+  },
+  {
+    "type": "easy",
+    "question": "If $x = -2$, find $f(x) = x - x^2 + x^3$",
+    "answers": {
+      "A1": "-14",
+      "A2": "8",
+      "A3": "-2",
+      "A4": "18"
+    },
+    "key": "-14",
+    "credit": "Ghulam Ali Abid"
+  },
+  {
+    "type": "easy",
+    "question": "A car covers a distance of 250 km in 2 hours and 30 minutes and then covers 200 km in 2 hours. What is the average speed of the car during this trip?",
+    "answers": {
+      "A1": "80 km/h",
+      "A2": "100 km/h",
+      "A3": "120 km/h",
+      "A4": "140 km/h"
+    },
+    "key": "100 km/h",
+    "credit": "Ghulam Ali Abid"
+  },
+  {
+    "type": "easy",
+    "question": "The original price of a shirt is Rs. 1,200. What would be its price after 22 \\% sale?",
+    "answers": {
+      "A1": "1,086",
+      "A2": "876",
+      "A3": "936",
+      "A4": "1,046"
+    },
+    "key": "936",
+    "credit": "Ghulam Ali Abid"
+  }
+]

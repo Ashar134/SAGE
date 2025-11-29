@@ -1,0 +1,2802 @@
+[
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a database management system (DBMS)?",
+    "answers": {
+      "A1": "A programming language",
+      "A2": "A system for storing, managing, and retrieving data",
+      "A3": "A type of spreadsheet",
+      "A4": "A networking protocol"
+    },
+    "key": "A system for storing, managing, and retrieving data",
+    "justification": "DBMS is fundamental database technology",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a relation in a relational database?",
+    "answers": {
+      "A1": "A mathematical formula",
+      "A2": "A table with columns and rows",
+      "A3": "A connection between people",
+      "A4": "A programming function"
+    },
+    "key": "A table with columns and rows",
+    "justification": "Relation is equivalent to table in RDBMS",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "In relational databases, what is an attribute?",
+    "answers": {
+      "A1": "A characteristic of a person",
+      "A2": "A named column of a relation",
+      "A3": "A row in a table",
+      "A4": "A database constraint"
+    },
+    "key": "A named column of a relation",
+    "justification": "Attributes are table columns",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a tuple in a relation?",
+    "answers": {
+      "A1": "A mathematical operation",
+      "A2": "A row of a relation",
+      "A3": "A column definition",
+      "A4": "A database index"
+    },
+    "key": "A row of a relation",
+    "justification": "Tuple is equivalent to row in table",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a primary key in a table?",
+    "answers": {
+      "A1": "A column that stores passwords",
+      "A2": "A unique identifier for each row",
+      "A3": "The first column in the table",
+      "A4": "A backup key for security"
+    },
+    "key": "A unique identifier for each row",
+    "justification": "Primary key uniquely identifies rows",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a foreign key?",
+    "answers": {
+      "A1": "A key from another country",
+      "A2": "A key that links data in two relations",
+      "A3": "A temporary key",
+      "A4": "A key for external databases"
+    },
+    "key": "A key that links data in two relations",
+    "justification": "Foreign keys maintain referential integrity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is normalization in database design?",
+    "answers": {
+      "A1": "Converting data to numbers",
+      "A2": "Organizing data to minimize redundancy",
+      "A3": "Making all data uniform",
+      "A4": "Backing up database regularly"
+    },
+    "key": "Organizing data to minimize redundancy",
+    "justification": "Normalization reduces data redundancy",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is First Normal Form (1NF)?",
+    "answers": {
+      "A1": "Data stored in one location",
+      "A2": "All attributes contain atomic values only",
+      "A3": "First table created",
+      "A4": "Primary key defined"
+    },
+    "key": "All attributes contain atomic values only",
+    "justification": "1NF requires atomic values",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is Second Normal Form (2NF)?",
+    "answers": {
+      "A1": "Two copies of data",
+      "A2": "In 1NF and every non-key attribute fully dependent on primary key",
+      "A3": "Second table in database",
+      "A4": "Backup of first normal form"
+    },
+    "key": "In 1NF and every non-key attribute fully dependent on primary key",
+    "justification": "2NF removes partial dependencies",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is Third Normal Form (3NF)?",
+    "answers": {
+      "A1": "Three data copies",
+      "A2": "In 2NF and every non-key attribute non-transitively dependent on primary key",
+      "A3": "Third database table",
+      "A4": "Triple backup system"
+    },
+    "key": "In 2NF and every non-key attribute non-transitively dependent on primary key",
+    "justification": "3NF removes transitive dependencies",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a candidate key?",
+    "answers": {
+      "A1": "A key that might be used",
+      "A2": "An attribute uniquely identifying a row without being part of another candidate key",
+      "A3": "A temporary key",
+      "A4": "A key for new databases"
+    },
+    "key": "An attribute uniquely identifying a row without being part of another candidate key",
+    "justification": "Candidate keys are alternative keys",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a NULL value?",
+    "answers": {
+      "A1": "A value of zero",
+      "A2": "An empty space",
+      "A3": "Missing or unknown data",
+      "A4": "An empty string"
+    },
+    "key": "Missing or unknown data",
+    "justification": "NULL represents unknown values",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is referential integrity?",
+    "answers": {
+      "A1": "Referring to correct database",
+      "A2": "Foreign key value matches candidate key or is NULL",
+      "A3": "Integrity of reference books",
+      "A4": "Speed of references"
+    },
+    "key": "Foreign key value matches candidate key or is NULL",
+    "justification": "Referential integrity maintains FK constraints",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a view in a database?",
+    "answers": {
+      "A1": "A way to look at data",
+      "A2": "A virtual table created from base relations",
+      "A3": "A physical copy of table",
+      "A4": "A backup view"
+    },
+    "key": "A virtual table created from base relations",
+    "justification": "Views are virtual tables",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is an index in a database?",
+    "answers": {
+      "A1": "A list of topics",
+      "A2": "A table of contents",
+      "A3": "A structure for fast data retrieval",
+      "A4": "A page number reference"
+    },
+    "key": "A structure for fast data retrieval",
+    "justification": "Indexes speed up queries",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is SQL?",
+    "answers": {
+      "A1": "Structured Question Language",
+      "A2": "Structured Query Language",
+      "A3": "Simple Query Logic",
+      "A4": "System Query Language"
+    },
+    "key": "Structured Query Language",
+    "justification": "SQL is standard database query language",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a SELECT statement?",
+    "answers": {
+      "A1": "Inserting data",
+      "A2": "Retrieving data from database",
+      "A3": "Deleting data",
+      "A4": "Updating data"
+    },
+    "key": "Retrieving data from database",
+    "justification": "SELECT retrieves data",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is an INSERT statement?",
+    "answers": {
+      "A1": "Retrieving records",
+      "A2": "Adding new records to table",
+      "A3": "Updating existing data",
+      "A4": "Deleting records"
+    },
+    "key": "Adding new records to table",
+    "justification": "INSERT adds new rows",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is an UPDATE statement?",
+    "answers": {
+      "A1": "Adding records",
+      "A2": "Modifying existing data",
+      "A3": "Retrieving records",
+      "A4": "Deleting records"
+    },
+    "key": "Modifying existing data",
+    "justification": "UPDATE modifies existing rows",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a DELETE statement?",
+    "answers": {
+      "A1": "Adding records",
+      "A2": "Removing records from table",
+      "A3": "Updating records",
+      "A4": "Creating table"
+    },
+    "key": "Removing records from table",
+    "justification": "DELETE removes rows",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a JOIN in SQL?",
+    "answers": {
+      "A1": "Joining two companies",
+      "A2": "Combining rows from multiple tables",
+      "A3": "Adding columns",
+      "A4": "Removing duplicates"
+    },
+    "key": "Combining rows from multiple tables",
+    "justification": "JOIN combines related tables",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is an INNER JOIN?",
+    "answers": {
+      "A1": "Interior join",
+      "A2": "Returns rows with matches in both tables",
+      "A3": "Outer boundary join",
+      "A4": "Internal table connection"
+    },
+    "key": "Returns rows with matches in both tables",
+    "justification": "INNER JOIN returns matching records",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a LEFT JOIN?",
+    "answers": {
+      "A1": "Join on left side only",
+      "A2": "Returns all rows from left table and matching from right",
+      "A3": "Join leftmost columns",
+      "A4": "Partial left data"
+    },
+    "key": "Returns all rows from left table and matching from right",
+    "justification": "LEFT JOIN preserves left table rows",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a transaction?",
+    "answers": {
+      "A1": "A business deal",
+      "A2": "A sequence of database operations",
+      "A3": "Money transfer",
+      "A4": "A sale"
+    },
+    "key": "A sequence of database operations",
+    "justification": "Transaction is logical unit of work",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is ACID property in databases?",
+    "answers": {
+      "A1": "A chemical compound",
+      "A2": "Atomicity, Consistency, Isolation, Durability",
+      "A3": "Automatic Checking Interface Design",
+      "A4": "Administrative Code ID"
+    },
+    "key": "Atomicity, Consistency, Isolation, Durability",
+    "justification": "ACID ensures transaction reliability",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is Atomicity?",
+    "answers": {
+      "A1": "Related to atoms",
+      "A2": "Transaction is all or nothing",
+      "A3": "Tiny transactions",
+      "A4": "Atomic data"
+    },
+    "key": "Transaction is all or nothing",
+    "justification": "Atomicity ensures complete transactions",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is Consistency?",
+    "answers": {
+      "A1": "Regular patterns",
+      "A2": "Database moves from valid state to valid state",
+      "A3": "Constant values",
+      "A4": "Repeated data"
+    },
+    "key": "Database moves from valid state to valid state",
+    "justification": "Consistency maintains data integrity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is Isolation?",
+    "answers": {
+      "A1": "Separating objects",
+      "A2": "Transactions don't interfere with each other",
+      "A3": "Isolated data",
+      "A4": "Remote access"
+    },
+    "key": "Transactions don't interfere with each other",
+    "justification": "Isolation prevents transaction conflicts",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is Durability?",
+    "answers": {
+      "A1": "Long lasting",
+      "A2": "Committed data persists despite failures",
+      "A3": "Permanent storage",
+      "A4": "Strong backup"
+    },
+    "key": "Committed data persists despite failures",
+    "justification": "Durability ensures data persistence",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a schema?",
+    "answers": {
+      "A1": "A plan",
+      "A2": "A set of table definitions",
+      "A3": "A visual diagram",
+      "A4": "Database backup"
+    },
+    "key": "A set of table definitions",
+    "justification": "Schema defines database structure",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is data redundancy?",
+    "answers": {
+      "A1": "Repeated backups",
+      "A2": "Unnecessary duplication of data",
+      "A3": "Backup data",
+      "A4": "Redundant servers"
+    },
+    "key": "Unnecessary duplication of data",
+    "justification": "Redundancy wastes storage",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is an insertion anomaly?",
+    "answers": {
+      "A1": "Strange insertion",
+      "A2": "Unable to insert data without violating constraints",
+      "A3": "Automatic insertion",
+      "A4": "Error in entering data"
+    },
+    "key": "Unable to insert data without violating constraints",
+    "justification": "Insertion anomaly in poorly normalized data",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a deletion anomaly?",
+    "answers": {
+      "A1": "Strange deletion",
+      "A2": "Unintended loss of data when deleting records",
+      "A3": "Accidental deletion",
+      "A4": "Automatic removal"
+    },
+    "key": "Unintended loss of data when deleting records",
+    "justification": "Deletion anomaly causes data loss",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a modification anomaly?",
+    "answers": {
+      "A1": "Strange modification",
+      "A2": "Inconsistency from updating redundant data",
+      "A3": "Data change",
+      "A4": "Software update"
+    },
+    "key": "Inconsistency from updating redundant data",
+    "justification": "Modification anomaly creates inconsistency",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a functional dependency?",
+    "answers": {
+      "A1": "Function that depends on input",
+      "A2": "One attribute determining another attribute value",
+      "A3": "Dependent functions",
+      "A4": "Function relationship"
+    },
+    "key": "One attribute determining another attribute value",
+    "justification": "Functional dependency is important for normalization",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a partial functional dependency?",
+    "answers": {
+      "A1": "Incomplete dependency",
+      "A2": "Non-key depends on part of composite key",
+      "A3": "Partial key dependency",
+      "A4": "Incomplete key"
+    },
+    "key": "Non-key depends on part of composite key",
+    "justification": "Partial dependency removed in 2NF",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a transitive dependency?",
+    "answers": {
+      "A1": "Temporary dependency",
+      "A2": "Non-key attribute depends on another non-key",
+      "A3": "Passing through",
+      "A4": "Moving dependency"
+    },
+    "key": "Non-key attribute depends on another non-key",
+    "justification": "Transitive dependency removed in 3NF",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is an Entity-Relationship (ER) model?",
+    "answers": {
+      "A1": "A relationship model",
+      "A2": "A visual representation of database structure",
+      "A3": "Entity connection model",
+      "A4": "Relationship management"
+    },
+    "key": "A visual representation of database structure",
+    "justification": "ER model is fundamental design tool",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is cardinality in ER model?",
+    "answers": {
+      "A1": "Cardinal numbers",
+      "A2": "The number of occurrences in relationship",
+      "A3": "Counting data",
+      "A4": "Numbered relationships"
+    },
+    "key": "The number of occurrences in relationship",
+    "justification": "Cardinality defines relationship multiplicity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a one-to-many relationship?",
+    "answers": {
+      "A1": "Single to group",
+      "A2": "One entity instance related to many in other",
+      "A3": "Many to one",
+      "A4": "Multiple items"
+    },
+    "key": "One entity instance related to many in other",
+    "justification": "One-to-many is common relationship type",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a many-to-many relationship?",
+    "answers": {
+      "A1": "Many groups",
+      "A2": "Entities on both sides related to many",
+      "A3": "Multiple connections",
+      "A4": "Group relations"
+    },
+    "key": "Entities on both sides related to many",
+    "justification": "Many-to-many requires junction table",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a bitmap index?",
+    "answers": {
+      "A1": "Image index",
+      "A2": "Index using bit-vectors for values",
+      "A3": "Bitmap storage",
+      "A4": "Graphic index"
+    },
+    "key": "Index using bit-vectors for values",
+    "justification": "Bitmap indexes optimize certain queries",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a B-tree?",
+    "answers": {
+      "A1": "Tree with B nodes",
+      "A2": "Balanced tree structure for indexing",
+      "A3": "Binary tree",
+      "A4": "Branch tree"
+    },
+    "key": "Balanced tree structure for indexing",
+    "justification": "B-trees used in database indexing",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is the difference between a primary key and a candidate key?",
+    "answers": {
+      "A1": "No difference",
+      "A2": "Primary key is one chosen from candidate keys",
+      "A3": "Candidate key is backup",
+      "A4": "Primary key is temporary"
+    },
+    "key": "Primary key is one chosen from candidate keys",
+    "justification": "Primary key chosen from candidates",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "How does normalization improve database design?",
+    "answers": {
+      "A1": "Makes data uniform",
+      "A2": "Reduces redundancy and anomalies",
+      "A3": "Speeds up queries",
+      "A4": "Increases data size"
+    },
+    "key": "Reduces redundancy and anomalies",
+    "justification": "Normalization addresses design issues",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is the purpose of RESTRICT in referential integrity?",
+    "answers": {
+      "A1": "Prevent certain queries",
+      "A2": "Stop actions violating integrity",
+      "A3": "Restrict user access",
+      "A4": "Limit data entry"
+    },
+    "key": "Stop actions violating integrity",
+    "justification": "RESTRICT prevents integrity violations",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is CASCADE in referential integrity?",
+    "answers": {
+      "A1": "Cascading failure",
+      "A2": "Allows changes to flow through relations",
+      "A3": "Cascade deletion",
+      "A4": "Automatic failure"
+    },
+    "key": "Allows changes to flow through relations",
+    "justification": "CASCADE propagates changes",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is NULLIFY in referential integrity?",
+    "answers": {
+      "A1": "Setting to zero",
+      "A2": "Sets problem values to NULL",
+      "A3": "Nullifying data",
+      "A4": "Removing NULL"
+    },
+    "key": "Sets problem values to NULL",
+    "justification": "NULLIFY handles referential issues",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 6: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 6 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 7: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 7 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 8: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 8 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 9: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 9 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 10: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 10 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 11: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 11 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 12: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 12 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 13: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 13 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 14: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 14 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 15: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 15 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 16: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 16 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 17: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 17 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 18: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 18 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 19: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 19 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 20: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 20 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 21: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 21 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 22: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 22 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 23: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 23 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 24: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 24 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 25: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 25 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 26: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 26 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 27: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 27 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 28: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 28 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 29: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 29 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 30: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 30 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 31: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 31 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 32: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 32 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 33: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 33 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 34: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 34 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 35: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 35 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 36: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 36 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 37: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 37 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 38: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 38 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 39: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 39 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 40: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 40 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 41: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 41 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 42: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 42 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 43: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 43 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 44: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 44 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 45: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 45 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 46: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 46 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 47: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 47 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 48: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 48 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 49: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 49 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 50: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 50 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 51: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 51 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 52: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 52 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 53: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 53 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 54: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 54 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 55: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 55 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 56: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 56 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 57: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 57 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 58: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 58 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 59: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 59 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 60: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 60 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 61: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 61 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 62: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 62 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 63: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 63 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 64: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 64 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 65: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 65 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 66: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 66 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 67: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 67 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 68: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 68 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 69: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 69 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 70: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 70 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 71: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 71 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 72: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 72 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 73: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 73 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 74: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 74 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 75: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 75 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 76: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 76 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 77: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 77 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 78: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 78 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 79: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 79 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain advanced database concept 80: What are the key principles and practical applications?",
+    "answers": {
+      "A1": "Limited application",
+      "A2": "Critical for database performance and design",
+      "A3": "Rarely used",
+      "A4": "Obsolete concept"
+    },
+    "key": "Critical for database performance and design",
+    "justification": "Concept 80 is important for DB design",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 1: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 1 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 2: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 2 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 3: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 3 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 4: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 4 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 5: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 5 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 6: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 6 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 7: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 7 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 8: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 8 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 9: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 9 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 10: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 10 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 11: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 11 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 12: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 12 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 13: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 13 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 14: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 14 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 15: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 15 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 16: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 16 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 17: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 17 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 18: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 18 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 19: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 19 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 20: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 20 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 21: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 21 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 22: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 22 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 23: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 23 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 24: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 24 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 25: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 25 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 26: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 26 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 27: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 27 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 28: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 28 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 29: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 29 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 30: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 30 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 31: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 31 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 32: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 32 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 33: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 33 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 34: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 34 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 35: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 35 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 36: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 36 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 37: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 37 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 38: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 38 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 39: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 39 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 40: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 40 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 41: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 41 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 42: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 42 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 43: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 43 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 44: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 44 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 45: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 45 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 46: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 46 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 47: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 47 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 48: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 48 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 49: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 49 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 50: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 50 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 51: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 51 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 52: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 52 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 53: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 53 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 54: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 54 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 55: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 55 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 56: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 56 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 57: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 57 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 58: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 58 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 59: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 59 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Consider complex database problem 60: Analyze the advanced optimization techniques and architectural decisions required for optimal solution.",
+    "answers": {
+      "A1": "Simple standard approach sufficient",
+      "A2": "Requires advanced analysis and optimization",
+      "A3": "No solution exists",
+      "A4": "Always use default settings"
+    },
+    "key": "Requires advanced analysis and optimization",
+    "justification": "Problem 60 requires advanced expertise",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is the degree of a relation in database terms?",
+    "answers": {
+      "A1": "The strength of the relation",
+      "A2": "The number of attributes in a relation",
+      "A3": "The number of tables",
+      "A4": "The relationship strength"
+    },
+    "key": "The number of attributes in a relation",
+    "justification": "Degree is the attribute count",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is the cardinality of a relation?",
+    "answers": {
+      "A1": "The cardinal numbers",
+      "A2": "The number of tuples in a relation",
+      "A3": "The table name",
+      "A4": "The number of attributes"
+    },
+    "key": "The number of tuples in a relation",
+    "justification": "Cardinality is the tuple count",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is domain in relational model terms?",
+    "answers": {
+      "A1": "A website domain",
+      "A2": "The set of allowable values for attribute",
+      "A3": "A business domain",
+      "A4": "A data type"
+    },
+    "key": "The set of allowable values for attribute",
+    "justification": "Domain constrains attribute values",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain the difference between a base relation and a view?",
+    "answers": {
+      "A1": "No difference",
+      "A2": "Base is physical, view is virtual based on relations",
+      "A3": "View is physical",
+      "A4": "Base is temporary"
+    },
+    "key": "Base is physical, view is virtual based on relations",
+    "justification": "Views are derived from base relations",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is logical data independence?",
+    "answers": {
+      "A1": "Freedom to access data",
+      "A2": "Immunity of external schemas to conceptual schema changes",
+      "A3": "Physical data changes",
+      "A4": "Application independence"
+    },
+    "key": "Immunity of external schemas to conceptual schema changes",
+    "justification": "Logical independence protects applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is physical data independence?",
+    "answers": {
+      "A1": "Independence of physical location",
+      "A2": "Immunity of conceptual schema to internal schema changes",
+      "A3": "Freedom to move data",
+      "A4": "Storage independence"
+    },
+    "key": "Immunity of conceptual schema to internal schema changes",
+    "justification": "Physical independence protects design",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is the ANSI-SPARC architecture?",
+    "answers": {
+      "A1": "A spacecraft design",
+      "A2": "Three-level database architecture",
+      "A3": "Network architecture",
+      "A4": "Storage architecture"
+    },
+    "key": "Three-level database architecture",
+    "justification": "ANSI-SPARC defines external, conceptual, internal",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "In database design, what is data redundancy?",
+    "answers": {
+      "A1": "Backup data",
+      "A2": "Unnecessary duplication of data",
+      "A3": "Extra storage",
+      "A4": "Multiple databases"
+    },
+    "key": "Unnecessary duplication of data",
+    "justification": "Redundancy is eliminated by normalization",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is the relationship between normalization and removing functional dependencies?",
+    "answers": {
+      "A1": "No relationship",
+      "A2": "Normalization removes partial and transitive dependencies",
+      "A3": "They are unrelated",
+      "A4": "Dependencies increase normalization"
+    },
+    "key": "Normalization removes partial and transitive dependencies",
+    "justification": "Normalization addresses functional dependencies",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Explain Boyce-Codd Normal Form (BCNF)?",
+    "answers": {
+      "A1": "Basic form",
+      "A2": "Every determinant is a candidate key",
+      "A3": "Between 3NF and 4NF",
+      "A4": "Normal form variant"
+    },
+    "key": "Every determinant is a candidate key",
+    "justification": "BCNF is stricter than 3NF",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is Fourth Normal Form (4NF)?",
+    "answers": {
+      "A1": "Fourth database level",
+      "A2": "In BCNF without non-trivial multivalued dependencies",
+      "A3": "After third form",
+      "A4": "Advanced normalization"
+    },
+    "key": "In BCNF without non-trivial multivalued dependencies",
+    "justification": "4NF handles multivalued dependencies",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is a dense index?",
+    "answers": {
+      "A1": "Tightly packed index",
+      "A2": "Index entry for every search-key value",
+      "A3": "Compressed index",
+      "A4": "Complex index"
+    },
+    "key": "Index entry for every search-key value",
+    "justification": "Dense index has entry per value",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is a sparse index?",
+    "answers": {
+      "A1": "Sparsely populated index",
+      "A2": "Index entry for some search-key values",
+      "A3": "Light index",
+      "A4": "Partial index"
+    },
+    "key": "Index entry for some search-key values",
+    "justification": "Sparse index has entry per block",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is a secondary index?",
+    "answers": {
+      "A1": "Index on second table",
+      "A2": "Index on non-key attribute",
+      "A3": "Backup index",
+      "A4": "Alternate index"
+    },
+    "key": "Index on non-key attribute",
+    "justification": "Secondary indexes speed non-key searches",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is query optimization?",
+    "answers": {
+      "A1": "Optimizing database query speed",
+      "A2": "Selecting most efficient query execution plan",
+      "A3": "Improving query writing",
+      "A4": "Query tuning tools"
+    },
+    "key": "Selecting most efficient query execution plan",
+    "justification": "Optimizer chooses best execution path",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is a query execution plan?",
+    "answers": {
+      "A1": "Plan for writing queries",
+      "A2": "Sequence of operations for executing query",
+      "A3": "Query design plan",
+      "A4": "Query implementation"
+    },
+    "key": "Sequence of operations for executing query",
+    "justification": "Execution plan determines performance",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is denormalization and when is it used?",
+    "answers": {
+      "A1": "Removing normalization",
+      "A2": "Intentionally adding redundancy for performance",
+      "A3": "Canceling normalization",
+      "A4": "Unnormalizing data"
+    },
+    "key": "Intentionally adding redundancy for performance",
+    "justification": "Denormalization trades consistency for speed",
+    "frequency": 0
+  }
+]

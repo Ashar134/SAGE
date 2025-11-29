@@ -1,0 +1,2802 @@
+[
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In computer science and programming, what is meant by the term 'data structure'?",
+    "answers": {
+      "A1": "A programming language specification",
+      "A2": "An organized way to store and manage data for efficient access",
+      "A3": "A type of sorting algorithm",
+      "A4": "A database management system"
+    },
+    "key": "An organized way to store and manage data for efficient access",
+    "justification": "Data structures organize data for efficient operations",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "An array is best described as which of the following data structures?",
+    "answers": {
+      "A1": "A collection of functions",
+      "A2": "Contiguous memory storing elements of the same type",
+      "A3": "A linked list implementation",
+      "A4": "A tree structure"
+    },
+    "key": "Contiguous memory storing elements of the same type",
+    "justification": "Arrays are fundamental sequential data structures",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A linear list can be defined as which of the following data organization concepts?",
+    "answers": {
+      "A1": "A mathematical equation",
+      "A2": "An ordered collection of elements",
+      "A3": "A non-linear structure",
+      "A4": "A circular structure"
+    },
+    "key": "An ordered collection of elements",
+    "justification": "Linear lists maintain sequential order",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Which of the following best describes the structure and operation of a linked list?",
+    "answers": {
+      "A1": "A list using array indexing",
+      "A2": "A data structure with nodes linked by pointers",
+      "A3": "A sorted list structure",
+      "A4": "A list without any pointer references"
+    },
+    "key": "A data structure with nodes linked by pointers",
+    "justification": "Linked lists use pointers for connections",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In a linked list implementation, what term is used for the basic building block that contains both data and reference(s) to other blocks?",
+    "answers": {
+      "A1": "An array element",
+      "A2": "A unit containing data and pointer(s)",
+      "A3": "A function parameter",
+      "A4": "A variable declaration"
+    },
+    "key": "A unit containing data and pointer(s)",
+    "justification": "Nodes are the fundamental units of linked lists",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A stack is a linear data structure following which principle of operation?",
+    "answers": {
+      "A1": "LIFO (Last In First Out)",
+      "A2": "Random access principle",
+      "A3": "FIFO (First In First Out)",
+      "A4": "Tree structure principle"
+    },
+    "key": "LIFO (Last In First Out)",
+    "justification": "Stacks follow the LIFO principle",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A queue is a linear data structure following which principle of operation?",
+    "answers": {
+      "A1": "LIFO (Last In First Out)",
+      "A2": "Stack reversal order",
+      "A3": "FIFO (First In First Out)",
+      "A4": "Random access principle"
+    },
+    "key": "FIFO (First In First Out)",
+    "justification": "Queues follow the FIFO principle",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A tree is best described as which type of data structure?",
+    "answers": {
+      "A1": "A linear data structure",
+      "A2": "A hierarchical structure with root and nodes",
+      "A3": "A circular data structure",
+      "A4": "A stack-based structure"
+    },
+    "key": "A hierarchical structure with root and nodes",
+    "justification": "Trees are hierarchical structures",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A binary tree is characterized by what property regarding child nodes?",
+    "answers": {
+      "A1": "Each node has exactly one child",
+      "A2": "Each node has at most two children",
+      "A3": "Each node can have multiple children",
+      "A4": "Nodes have no child restrictions"
+    },
+    "key": "Each node has at most two children",
+    "justification": "Binary trees limit children to at most two",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A graph is characterized as which type of data structure?",
+    "answers": {
+      "A1": "A linear data structure",
+      "A2": "A non-linear structure with vertices and edges",
+      "A3": "A tree structure with single root",
+      "A4": "A linear list of elements"
+    },
+    "key": "A non-linear structure with vertices and edges",
+    "justification": "Graphs are fundamental non-linear structures",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A hash table implements which concept for efficient data storage and retrieval?",
+    "answers": {
+      "A1": "Sequential key-value pairs",
+      "A2": "Key-value pairs using a hash function",
+      "A3": "Sorted key-value structure",
+      "A4": "Tree-based key storage"
+    },
+    "key": "Key-value pairs using a hash function",
+    "justification": "Hash tables provide fast access using keys",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A heap is a specialized data structure that maintains which property?",
+    "answers": {
+      "A1": "Random element arrangement",
+      "A2": "Tree-based structure satisfying heap property",
+      "A3": "Stack-based organization",
+      "A4": "Queue-based organization"
+    },
+    "key": "Tree-based structure satisfying heap property",
+    "justification": "Heaps organize data in tree form with specific order",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "What distinguishes a priority queue from a regular queue in terms of element extraction?",
+    "answers": {
+      "A1": "All elements have the same priority",
+      "A2": "Elements are extracted based on priority",
+      "A3": "Only the first element is priority",
+      "A4": "Priority is determined randomly"
+    },
+    "key": "Elements are extracted based on priority",
+    "justification": "Priority queues organize by priority",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Complexity analysis in algorithms refers to which of the following?",
+    "answers": {
+      "A1": "Analysis of complicated source code",
+      "A2": "Study of algorithm performance and resource usage",
+      "A3": "Code review process",
+      "A4": "Bug detection mechanism"
+    },
+    "key": "Study of algorithm performance and resource usage",
+    "justification": "Complexity analysis measures efficiency",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Big O notation is used to describe which aspect of an algorithm's behavior?",
+    "answers": {
+      "A1": "The circle symbol in mathematics",
+      "A2": "Asymptotic upper bound of algorithm complexity",
+      "A3": "Lowercase letter in notation",
+      "A4": "Zero-based numbering system"
+    },
+    "key": "Asymptotic upper bound of algorithm complexity",
+    "justification": "Big O describes worst-case complexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Space complexity of an algorithm measures which of the following?",
+    "answers": {
+      "A1": "Total area used by algorithm",
+      "A2": "Amount of memory used by algorithm",
+      "A3": "Speed of algorithm execution",
+      "A4": "Time taken for computation"
+    },
+    "key": "Amount of memory used by algorithm",
+    "justification": "Space complexity measures memory usage",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Time complexity of an algorithm measures which of the following?",
+    "answers": {
+      "A1": "Schedule of execution",
+      "A2": "Amount of time algorithm takes relative to input",
+      "A3": "Memory requirements",
+      "A4": "Speed constant only"
+    },
+    "key": "Amount of time algorithm takes relative to input",
+    "justification": "Time complexity measures execution duration",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In stack operations, the push operation performs which action?",
+    "answers": {
+      "A1": "Remove element from top",
+      "A2": "Add element to top of stack",
+      "A3": "Display all stack elements",
+      "A4": "Search for element"
+    },
+    "key": "Add element to top of stack",
+    "justification": "Push adds to stack top",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In stack operations, the pop operation performs which action?",
+    "answers": {
+      "A1": "Add element to stack",
+      "A2": "Remove element from top of stack",
+      "A3": "Insert element in middle",
+      "A4": "Search for element"
+    },
+    "key": "Remove element from top of stack",
+    "justification": "Pop removes from stack top",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In queue operations, the enqueue operation performs which action?",
+    "answers": {
+      "A1": "Remove from queue",
+      "A2": "Add element to back of queue",
+      "A3": "Display queue contents",
+      "A4": "Search for element"
+    },
+    "key": "Add element to back of queue",
+    "justification": "Enqueue adds to queue back",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In queue operations, the dequeue operation performs which action?",
+    "answers": {
+      "A1": "Add to queue",
+      "A2": "Remove element from front of queue",
+      "A3": "Insert element",
+      "A4": "Display queue"
+    },
+    "key": "Remove element from front of queue",
+    "justification": "Dequeue removes from queue front",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In a tree structure, the root node is best described as which of the following?",
+    "answers": {
+      "A1": "The bottom node",
+      "A2": "The top node of the tree",
+      "A3": "The middle node",
+      "A4": "Any leaf node"
+    },
+    "key": "The top node of the tree",
+    "justification": "Root is the starting point of tree",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In a tree structure, a leaf node is characterized by which property?",
+    "answers": {
+      "A1": "It is the root node",
+      "A2": "It has no children",
+      "A3": "It has multiple children",
+      "A4": "It is the highest node"
+    },
+    "key": "It has no children",
+    "justification": "Leaf nodes have no children",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In a tree structure, a parent node can be defined as which of the following?",
+    "answers": {
+      "A1": "A node with no parent",
+      "A2": "A node that has child nodes",
+      "A3": "A leaf node always",
+      "A4": "Only the root node"
+    },
+    "key": "A node that has child nodes",
+    "justification": "Parent nodes have children",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In a tree structure, a child node is positioned as which of the following?",
+    "answers": {
+      "A1": "A node with no children",
+      "A2": "A node below its parent in tree",
+      "A3": "The root node",
+      "A4": "Always a leaf node"
+    },
+    "key": "A node below its parent in tree",
+    "justification": "Child nodes descend from parent",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In tree and graph data structures, traversal refers to which operation?",
+    "answers": {
+      "A1": "Tree height calculation",
+      "A2": "Visiting all nodes in specific order",
+      "A3": "Adding new nodes",
+      "A4": "Removing existing nodes"
+    },
+    "key": "Visiting all nodes in specific order",
+    "justification": "Traversal systematically visits nodes",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Inorder traversal of a binary tree visits nodes in which specific sequence?",
+    "answers": {
+      "A1": "Left-Root-Right",
+      "A2": "Root-Left-Right",
+      "A3": "Root-Right-Left",
+      "A4": "Right-Root-Left"
+    },
+    "key": "Left-Root-Right",
+    "justification": "Inorder is left-root-right sequence",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Preorder traversal of a binary tree visits nodes in which specific sequence?",
+    "answers": {
+      "A1": "Left-Root-Right",
+      "A2": "Root-Left-Right",
+      "A3": "Left-Right-Root",
+      "A4": "Right-Left-Root"
+    },
+    "key": "Root-Left-Right",
+    "justification": "Preorder is root-left-right sequence",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Postorder traversal of a binary tree visits nodes in which specific sequence?",
+    "answers": {
+      "A1": "Root-Left-Right",
+      "A2": "Left-Right-Root",
+      "A3": "Root-Right-Left",
+      "A4": "Right-Root-Left"
+    },
+    "key": "Left-Right-Root",
+    "justification": "Postorder is left-right-root sequence",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A Binary Search Tree (BST) is characterized by which ordering property?",
+    "answers": {
+      "A1": "Left subtree elements are larger",
+      "A2": "Left subtree has smaller elements",
+      "A3": "No specific ordering",
+      "A4": "Elements ordered randomly"
+    },
+    "key": "Left subtree has smaller elements",
+    "justification": "BST maintains left-smaller property",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A hash function in hash tables serves which primary purpose?",
+    "answers": {
+      "A1": "Computing the size of table",
+      "A2": "Mapping a key to array index",
+      "A3": "Sorting array elements",
+      "A4": "Deleting elements"
+    },
+    "key": "Mapping a key to array index",
+    "justification": "Hash functions enable fast lookup",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "What is a collision in the context of hash table implementation?",
+    "answers": {
+      "A1": "Algorithm failure",
+      "A2": "When two keys hash to the same index",
+      "A3": "Memory error",
+      "A4": "Performance issue"
+    },
+    "key": "When two keys hash to the same index",
+    "justification": "Collisions occur in hash tables",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Linear probing is a technique for handling collisions in hash tables. How does it work?",
+    "answers": {
+      "A1": "Linear interpolation",
+      "A2": "Finding the next available slot sequentially",
+      "A3": "Searching linearly through array",
+      "A4": "Direct array indexing"
+    },
+    "key": "Finding the next available slot sequentially",
+    "justification": "Linear probing handles collisions sequentially",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Chaining is a collision resolution technique in hashing that uses which data structure?",
+    "answers": {
+      "A1": "Chain data together",
+      "A2": "Using linked lists to handle collisions",
+      "A3": "Connecting multiple arrays",
+      "A4": "Sorting elements"
+    },
+    "key": "Using linked lists to handle collisions",
+    "justification": "Chaining resolves hash collisions",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A trie data structure is particularly useful for which type of search operation?",
+    "answers": {
+      "A1": "Tree traversal only",
+      "A2": "Prefix-based search and retrieval",
+      "A3": "Sorted list search",
+      "A4": "Hash-based search"
+    },
+    "key": "Prefix-based search and retrieval",
+    "justification": "Tries support prefix searching",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A directed graph is characterized by which property regarding its edges?",
+    "answers": {
+      "A1": "Edges have no direction",
+      "A2": "Edges have specific direction",
+      "A3": "All undirected edges",
+      "A4": "Only tree edges"
+    },
+    "key": "Edges have specific direction",
+    "justification": "Directed graphs have directed edges",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "An undirected graph is characterized by which property regarding its edges?",
+    "answers": {
+      "A1": "Directed edges only",
+      "A2": "Edges are bidirectional",
+      "A3": "No edges present",
+      "A4": "Linear structure only"
+    },
+    "key": "Edges are bidirectional",
+    "justification": "Undirected edges go both ways",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In graph terminology, what is a vertex?",
+    "answers": {
+      "A1": "An edge connection",
+      "A2": "A node in a graph",
+      "A3": "A connection line",
+      "A4": "A path endpoint"
+    },
+    "key": "A node in a graph",
+    "justification": "Vertices are graph nodes",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In graph terminology, what is an edge?",
+    "answers": {
+      "A1": "A node point",
+      "A2": "A connection between vertices",
+      "A3": "A graph path",
+      "A4": "A vertex label"
+    },
+    "key": "A connection between vertices",
+    "justification": "Edges connect vertices",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Depth First Search (DFS) is a graph traversal algorithm that primarily uses which data structure?",
+    "answers": {
+      "A1": "Queue structure",
+      "A2": "Stack structure",
+      "A3": "Array structure",
+      "A4": "Tree structure"
+    },
+    "key": "Stack structure",
+    "justification": "DFS uses stack for traversal",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Breadth First Search (BFS) is a graph traversal algorithm that primarily uses which data structure?",
+    "answers": {
+      "A1": "Stack structure",
+      "A2": "Queue structure",
+      "A3": "Array structure",
+      "A4": "Tree structure"
+    },
+    "key": "Queue structure",
+    "justification": "BFS uses queue for traversal",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Sorting in data structures refers to which operation?",
+    "answers": {
+      "A1": "Adding elements",
+      "A2": "Arranging elements in order",
+      "A3": "Removing elements",
+      "A4": "Finding elements"
+    },
+    "key": "Arranging elements in order",
+    "justification": "Sorting orders elements",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Bubble sort is characterized by which sorting mechanism?",
+    "answers": {
+      "A1": "Sorting bubbles",
+      "A2": "Repeatedly swapping adjacent elements",
+      "A3": "Random shuffling",
+      "A4": "Binary comparison"
+    },
+    "key": "Repeatedly swapping adjacent elements",
+    "justification": "Bubble sort compares adjacent elements",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Quick sort employs which algorithmic paradigm?",
+    "answers": {
+      "A1": "Linear search",
+      "A2": "Divide-and-conquer using partition",
+      "A3": "Sequential processing",
+      "A4": "Recursive doubling"
+    },
+    "key": "Divide-and-conquer using partition",
+    "justification": "Quick sort partitions data",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Merge sort employs which algorithmic paradigm?",
+    "answers": {
+      "A1": "Linear sorting",
+      "A2": "Divide-and-conquer merging sublists",
+      "A3": "Selection sort",
+      "A4": "Insertion-based approach"
+    },
+    "key": "Divide-and-conquer merging sublists",
+    "justification": "Merge sort divides and merges",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Heap sort implements which sorting strategy?",
+    "answers": {
+      "A1": "Random sorting",
+      "A2": "Sorting using heap structure",
+      "A3": "Comparison sorting only",
+      "A4": "Linear time sorting"
+    },
+    "key": "Sorting using heap structure",
+    "justification": "Heap sort uses heap property",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A matrix in data structures is best described as which of the following?",
+    "answers": {
+      "A1": "A movie name",
+      "A2": "A 2D array of elements",
+      "A3": "A 1D array",
+      "A4": "A linked list"
+    },
+    "key": "A 2D array of elements",
+    "justification": "Matrices are 2D arrays",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A sparse matrix is characterized by which property?",
+    "answers": {
+      "A1": "Completely full matrix",
+      "A2": "Matrix with mostly zero elements",
+      "A3": "Small size matrix",
+      "A4": "Dense matrix"
+    },
+    "key": "Matrix with mostly zero elements",
+    "justification": "Sparse matrices are mostly empty",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In programming, a pointer is best described as which of the following?",
+    "answers": {
+      "A1": "A finger pointing at screen",
+      "A2": "A variable storing memory address",
+      "A3": "An array index",
+      "A4": "A function call"
+    },
+    "key": "A variable storing memory address",
+    "justification": "Pointers hold memory addresses",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "The NULL pointer in programming represents which concept?",
+    "answers": {
+      "A1": "An empty space",
+      "A2": "A pointer to no valid address",
+      "A3": "A zero value",
+      "A4": "An empty variable"
+    },
+    "key": "A pointer to no valid address",
+    "justification": "NULL indicates no valid pointer",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "What is an index in the context of array data structures?",
+    "answers": {
+      "A1": "The array name",
+      "A2": "The position of an element in array",
+      "A3": "The array size",
+      "A4": "The array data type"
+    },
+    "key": "The position of an element in array",
+    "justification": "Index represents element location",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In data structures, what is meant by the term 'element'?",
+    "answers": {
+      "A1": "A chemical element",
+      "A2": "An individual item stored in structure",
+      "A3": "A type of structure",
+      "A4": "A structure name"
+    },
+    "key": "An individual item stored in structure",
+    "justification": "Elements are data units",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "When comparing arrays and linked lists as data structures, what is the fundamental difference in their organization?",
+    "answers": {
+      "A1": "Arrays are slower",
+      "A2": "Array uses contiguous memory, linked list uses pointers",
+      "A3": "Linked lists are faster",
+      "A4": "No difference"
+    },
+    "key": "Array uses contiguous memory, linked list uses pointers",
+    "justification": "Fundamental structural difference",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "What is the time complexity for accessing an element at a specific index in an array?",
+    "answers": {
+      "A1": "O(n)",
+      "A2": "O(1)",
+      "A3": "O(log n)",
+      "A4": "O(n²)"
+    },
+    "key": "O(1)",
+    "justification": "Direct indexing is constant time",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 1 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 1 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 2 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 2 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 3 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 3 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 4 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 4 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 5 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 5 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 6 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 6 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 7 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 7 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 8 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 8 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 9 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 9 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 10 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 10 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 11 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 11 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 12 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 12 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 13 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 13 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 14 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 14 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 15 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 15 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 16 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 16 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 17 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 17 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 18 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 18 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 19 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 19 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 20 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 20 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 21 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 21 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 22 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 22 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 23 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 23 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 24 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 24 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 25 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 25 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 26 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 26 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 27 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 27 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 28 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 28 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 29 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 29 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 30 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 30 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 31 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 31 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 32 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 32 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 33 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 33 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 34 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 34 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 35 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 35 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 36 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 36 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 37 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 37 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 38 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 38 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 39 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 39 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 40 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 40 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 41 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 41 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 42 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 42 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 43 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 43 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 44 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 44 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 45 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 45 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 46 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 46 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 47 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 47 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 48 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 48 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 49 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 49 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 50 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 50 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 51 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 51 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 52 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 52 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 53 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 53 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 54 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 54 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 55 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 55 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 56 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 56 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 57 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 57 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 58 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 58 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 59 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 59 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 60 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 60 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 61 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 61 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 62 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 62 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 63 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 63 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 64 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 64 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 65 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 65 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 66 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 66 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 67 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 67 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 68 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 68 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 69 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 69 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 70 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 70 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 71 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 71 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 72 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 72 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 73 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 73 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "Analyze the performance characteristics and design considerations for medium difficulty concept 74 in data structures.",
+    "answers": {
+      "A1": "Poor performance and limited use",
+      "A2": "Good performance with specific use cases",
+      "A3": "Always optimal choice",
+      "A4": "Never used in practice"
+    },
+    "key": "Good performance with specific use cases",
+    "justification": "Medium concept 74 has specific applications",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 1: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 1 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 2: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 2 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 3: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 3 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 4: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 4 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 5: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 5 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 6: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 6 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 7: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 7 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 8: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 8 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 9: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 9 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 10: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 10 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 11: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 11 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 12: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 12 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 13: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 13 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 14: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 14 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 15: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 15 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 16: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 16 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 17: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 17 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 18: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 18 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 19: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 19 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 20: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 20 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 21: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 21 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 22: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 22 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 23: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 23 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 24: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 24 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 25: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 25 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 26: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 26 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 27: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 27 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 28: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 28 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 29: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 29 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 30: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 30 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 31: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 31 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 32: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 32 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 33: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 33 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 34: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 34 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 35: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 35 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 36: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 36 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 37: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 37 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 38: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 38 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 39: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 39 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 40: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 40 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 41: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 41 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 42: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 42 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 43: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 43 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 44: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 44 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 45: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 45 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 46: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 46 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 47: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 47 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 48: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 48 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 49: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 49 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 50: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 50 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 51: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 51 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 52: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 52 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 53: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 53 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 54: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 54 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 55: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 55 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 56: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 56 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 57: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 57 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 58: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 58 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 59: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 59 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 60: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 60 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 61: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 61 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider advanced data structure problem 62: What are the critical algorithmic insights and optimization techniques required for solving this complex concept?",
+    "answers": {
+      "A1": "Standard approach is sufficient",
+      "A2": "Advanced techniques with careful analysis needed",
+      "A3": "Simple brute force works",
+      "A4": "No solution exists"
+    },
+    "key": "Advanced techniques with careful analysis needed",
+    "justification": "Hard problem 62 requires advanced understanding",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "What is meant by the term 'capacity' in the context of dynamic data structures?",
+    "answers": {
+      "A1": "The currently used space",
+      "A2": "The maximum number of elements possible",
+      "A3": "The current size of structure",
+      "A4": "The available unused space"
+    },
+    "key": "The maximum number of elements possible",
+    "justification": "Capacity represents total slots",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "What is the worst-case time complexity for searching a specific element in an unordered linked list?",
+    "answers": {
+      "A1": "O(1)",
+      "A2": "O(n)",
+      "A3": "O(log n)",
+      "A4": "O(n log n)"
+    },
+    "key": "O(n)",
+    "justification": "Must traverse sequentially",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "In a complete binary tree with n nodes, what is the height of the tree?",
+    "answers": {
+      "A1": "n",
+      "A2": "log₂(n+1)",
+      "A3": "n-1",
+      "A4": "2^n"
+    },
+    "key": "log₂(n+1)",
+    "justification": "Height is logarithmic",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "In the analysis of the Union-Find data structure with path compression and union by rank, what is the nearly constant amortized time complexity per operation?",
+    "answers": {
+      "A1": "O(1) exactly",
+      "A2": "O(α(n)) where α is inverse Ackermann",
+      "A3": "O(log n)",
+      "A4": "O(√n)"
+    },
+    "key": "O(α(n)) where α is inverse Ackermann",
+    "justification": "Inverse Ackermann function",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What advanced technique allows a single B-tree insertion operation to guarantee O(log n) time complexity even with a full tree?",
+    "answers": {
+      "A1": "Preemptive splitting",
+      "A2": "Lazy evaluation",
+      "A3": "Path compression",
+      "A4": "Randomization"
+    },
+    "key": "Preemptive splitting",
+    "justification": "B-tree optimization technique",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "What is insertion in the context of data structure operations?",
+    "answers": {
+      "A1": "Removing an element",
+      "A2": "Adding a new element to the structure",
+      "A3": "Searching for an element",
+      "A4": "Modifying an element"
+    },
+    "key": "Adding a new element to the structure",
+    "justification": "Insertion adds elements",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "What is the time complexity of inserting an element at the beginning of a singly linked list?",
+    "answers": {
+      "A1": "O(n)",
+      "A2": "O(1)",
+      "A3": "O(log n)",
+      "A4": "O(n²)"
+    },
+    "key": "O(1)",
+    "justification": "Only pointer modification needed",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "In the context of self-balancing binary search trees, what does the balance factor measure in an AVL tree?",
+    "answers": {
+      "A1": "Total number of nodes",
+      "A2": "Height difference between left and right subtrees",
+      "A3": "Node value difference",
+      "A4": "Subtree size ratio"
+    },
+    "key": "Height difference between left and right subtrees",
+    "justification": "AVL balance factor definition",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "What is the minimum number of elements needed in a B-tree node of order m?",
+    "answers": {
+      "A1": "0 (except root)",
+      "A2": "ceil(m/2) - 1 (except root)",
+      "A3": "m - 1",
+      "A4": "m"
+    },
+    "key": "ceil(m/2) - 1 (except root)",
+    "justification": "B-tree property definition",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider a problem where you need to find all pairs of elements in an array that sum to a target value. Which data structure would provide the most efficient solution?",
+    "answers": {
+      "A1": "Simple sorted array",
+      "A2": "Hash table for O(n) solution",
+      "A3": "Linked list",
+      "A4": "Binary search tree only"
+    },
+    "key": "Hash table for O(n) solution",
+    "justification": "Hash table enables O(n) solution",
+    "frequency": 0
+  }
+]
