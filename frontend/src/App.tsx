@@ -1,31 +1,20 @@
 import './App.css'
-import { useState, useEffect} from 'react'
-import axios from 'axios'
+import ProfileIntake from './components/ProfileIntake/ProfileIntake'
 
-// Testing that our React frontend is working fine with our Django API backend
+const App = () => {
+  const path = window.location.pathname
 
-function App() {
+  // Serve profile intake at /profile, otherwise send users to the Django landing page.
+  if (path === '/profile' || path === '/profile-intake') {
+    return (
+      <div className="app-shell">
+        <ProfileIntake />
+      </div>
+    )
+  }
 
-  const [message, setMessage] = useState('')
-  
-  useEffect(() => { 
-    axios.get('http://127.0.0.1:8000/api')
-      .then(response => {
-        setMessage(response.data.message)
-      })
-      .catch(error => {
-        console.error('There was an error fetching the message!', error)
-      })
-  }, [])
-
-  return (
-    <>
-      <h1>Hello World!</h1>
-      <p>Api Response: </p>
-      <p>{message}</p>
-        
-    </>
-  )
+  window.location.href = 'http://127.0.0.1:8000/'
+  return null
 }
 
 export default App

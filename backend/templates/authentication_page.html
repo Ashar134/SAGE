@@ -19,7 +19,8 @@
 
   <div class="container">
     <div class="form-box login">
-      <form action="#" method="POST">
+      <form action="/auth/" method="POST">
+        {% csrf_token %}
         <h1>Login</h1>
         <div class="input-box">
           <input type="email" name="email" placeholder="Email" required>
@@ -42,7 +43,8 @@
     </div>
 
     <div class="form-box register">
-      <form action="#" method="POST">
+      <form action="/auth/" method="POST">
+        {% csrf_token %}
         <h1>Registration</h1>
         <div class="input-box">
           <input type="text" name="username" placeholder="Username" required>

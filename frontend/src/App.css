@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+  color: #0f172a;
+  font-family: "Plus Jakarta Sans", "Manrope", "Inter", system-ui, -apple-system,
+    sans-serif;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
