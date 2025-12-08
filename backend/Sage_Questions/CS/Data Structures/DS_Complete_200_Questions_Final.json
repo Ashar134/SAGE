@@ -1,0 +1,1374 @@
+[
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In computer science and programming, what is meant by the term 'data structure'?",
+    "answers": {
+      "A1": "A programming language specification",
+      "A2": "An organized way to store and manage data for efficient access",
+      "A3": "A type of sorting algorithm",
+      "A4": "A database management system"
+    },
+    "key": "An organized way to store and manage data for efficient access",
+    "justification": "Data structures organize data for efficient operations",
+    "frequency": 2
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "An array is best described as which of the following data structures?",
+    "answers": {
+      "A1": "A collection of functions",
+      "A2": "Contiguous memory storing elements of the same type",
+      "A3": "A linked list implementation",
+      "A4": "A tree structure"
+    },
+    "key": "Contiguous memory storing elements of the same type",
+    "justification": "Arrays are fundamental sequential data structures",
+    "frequency": 16
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A linear list can be defined as which of the following data organization concepts?",
+    "answers": {
+      "A1": "A mathematical equation",
+      "A2": "An ordered collection of elements",
+      "A3": "A non-linear structure",
+      "A4": "A circular structure"
+    },
+    "key": "An ordered collection of elements",
+    "justification": "Linear lists maintain sequential order",
+    "frequency": 10
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Which of the following best describes the structure and operation of a linked list?",
+    "answers": {
+      "A1": "A list using array indexing",
+      "A2": "A data structure with nodes linked by pointers",
+      "A3": "A sorted list structure",
+      "A4": "A list without any pointer references"
+    },
+    "key": "A data structure with nodes linked by pointers",
+    "justification": "Linked lists use pointers for connections",
+    "frequency": 10
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In a linked list implementation, what term is used for the basic building block that contains both data and reference(s) to other blocks?",
+    "answers": {
+      "A1": "An array element",
+      "A2": "A unit containing data and pointer(s)",
+      "A3": "A function parameter",
+      "A4": "A variable declaration"
+    },
+    "key": "A unit containing data and pointer(s)",
+    "justification": "Nodes are the fundamental units of linked lists",
+    "frequency": 11
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A stack is a linear data structure following which principle of operation?",
+    "answers": {
+      "A1": "LIFO (Last In First Out)",
+      "A2": "Random access principle",
+      "A3": "FIFO (First In First Out)",
+      "A4": "Tree structure principle"
+    },
+    "key": "LIFO (Last In First Out)",
+    "justification": "Stacks follow the LIFO principle",
+    "frequency": 8
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A queue is a linear data structure following which principle of operation?",
+    "answers": {
+      "A1": "LIFO (Last In First Out)",
+      "A2": "Stack reversal order",
+      "A3": "FIFO (First In First Out)",
+      "A4": "Random access principle"
+    },
+    "key": "FIFO (First In First Out)",
+    "justification": "Queues follow the FIFO principle",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A tree is best described as which type of data structure?",
+    "answers": {
+      "A1": "A linear data structure",
+      "A2": "A hierarchical structure with root and nodes",
+      "A3": "A circular data structure",
+      "A4": "A stack-based structure"
+    },
+    "key": "A hierarchical structure with root and nodes",
+    "justification": "Trees are hierarchical structures",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A binary tree is characterized by what property regarding child nodes?",
+    "answers": {
+      "A1": "Each node has exactly one child",
+      "A2": "Each node has at most two children",
+      "A3": "Each node can have multiple children",
+      "A4": "Nodes have no child restrictions"
+    },
+    "key": "Each node has at most two children",
+    "justification": "Binary trees limit children to at most two",
+    "frequency": 9
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A graph is characterized as which type of data structure?",
+    "answers": {
+      "A1": "A linear data structure",
+      "A2": "A non-linear structure with vertices and edges",
+      "A3": "A tree structure with single root",
+      "A4": "A linear list of elements"
+    },
+    "key": "A non-linear structure with vertices and edges",
+    "justification": "Graphs are fundamental non-linear structures",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A hash table implements which concept for efficient data storage and retrieval?",
+    "answers": {
+      "A1": "Sequential key-value pairs",
+      "A2": "Key-value pairs using a hash function",
+      "A3": "Sorted key-value structure",
+      "A4": "Tree-based key storage"
+    },
+    "key": "Key-value pairs using a hash function",
+    "justification": "Hash tables provide fast access using keys",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A heap is a specialized data structure that maintains which property?",
+    "answers": {
+      "A1": "Random element arrangement",
+      "A2": "Tree-based structure satisfying heap property",
+      "A3": "Stack-based organization",
+      "A4": "Queue-based organization"
+    },
+    "key": "Tree-based structure satisfying heap property",
+    "justification": "Heaps organize data in tree form with specific order",
+    "frequency": 6
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "What distinguishes a priority queue from a regular queue in terms of element extraction?",
+    "answers": {
+      "A1": "All elements have the same priority",
+      "A2": "Elements are extracted based on priority",
+      "A3": "Only the first element is priority",
+      "A4": "Priority is determined randomly"
+    },
+    "key": "Elements are extracted based on priority",
+    "justification": "Priority queues organize by priority",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Complexity analysis in algorithms refers to which of the following?",
+    "answers": {
+      "A1": "Analysis of complicated source code",
+      "A2": "Study of algorithm performance and resource usage",
+      "A3": "Code review process",
+      "A4": "Bug detection mechanism"
+    },
+    "key": "Study of algorithm performance and resource usage",
+    "justification": "Complexity analysis measures efficiency",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Big O notation is used to describe which aspect of an algorithm's behavior?",
+    "answers": {
+      "A1": "The circle symbol in mathematics",
+      "A2": "Asymptotic upper bound of algorithm complexity",
+      "A3": "Lowercase letter in notation",
+      "A4": "Zero-based numbering system"
+    },
+    "key": "Asymptotic upper bound of algorithm complexity",
+    "justification": "Big O describes worst-case complexity",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Space complexity of an algorithm measures which of the following?",
+    "answers": {
+      "A1": "Total area used by algorithm",
+      "A2": "Amount of memory used by algorithm",
+      "A3": "Speed of algorithm execution",
+      "A4": "Time taken for computation"
+    },
+    "key": "Amount of memory used by algorithm",
+    "justification": "Space complexity measures memory usage",
+    "frequency": 12
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Time complexity of an algorithm measures which of the following?",
+    "answers": {
+      "A1": "Schedule of execution",
+      "A2": "Amount of time algorithm takes relative to input",
+      "A3": "Memory requirements",
+      "A4": "Speed constant only"
+    },
+    "key": "Amount of time algorithm takes relative to input",
+    "justification": "Time complexity measures execution duration",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In stack operations, the push operation performs which action?",
+    "answers": {
+      "A1": "Remove element from top",
+      "A2": "Add element to top of stack",
+      "A3": "Display all stack elements",
+      "A4": "Search for element"
+    },
+    "key": "Add element to top of stack",
+    "justification": "Push adds to stack top",
+    "frequency": 8
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In stack operations, the pop operation performs which action?",
+    "answers": {
+      "A1": "Add element to stack",
+      "A2": "Remove element from top of stack",
+      "A3": "Insert element in middle",
+      "A4": "Search for element"
+    },
+    "key": "Remove element from top of stack",
+    "justification": "Pop removes from stack top",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In queue operations, the enqueue operation performs which action?",
+    "answers": {
+      "A1": "Remove from queue",
+      "A2": "Add element to back of queue",
+      "A3": "Display queue contents",
+      "A4": "Search for element"
+    },
+    "key": "Add element to back of queue",
+    "justification": "Enqueue adds to queue back",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In queue operations, the dequeue operation performs which action?",
+    "answers": {
+      "A1": "Add to queue",
+      "A2": "Remove element from front of queue",
+      "A3": "Insert element",
+      "A4": "Display queue"
+    },
+    "key": "Remove element from front of queue",
+    "justification": "Dequeue removes from queue front",
+    "frequency": 9
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In a tree structure, the root node is best described as which of the following?",
+    "answers": {
+      "A1": "The bottom node",
+      "A2": "The top node of the tree",
+      "A3": "The middle node",
+      "A4": "Any leaf node"
+    },
+    "key": "The top node of the tree",
+    "justification": "Root is the starting point of tree",
+    "frequency": 5
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In a tree structure, a leaf node is characterized by which property?",
+    "answers": {
+      "A1": "It is the root node",
+      "A2": "It has no children",
+      "A3": "It has multiple children",
+      "A4": "It is the highest node"
+    },
+    "key": "It has no children",
+    "justification": "Leaf nodes have no children",
+    "frequency": 9
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In a tree structure, a parent node can be defined as which of the following?",
+    "answers": {
+      "A1": "A node with no parent",
+      "A2": "A node that has child nodes",
+      "A3": "A leaf node always",
+      "A4": "Only the root node"
+    },
+    "key": "A node that has child nodes",
+    "justification": "Parent nodes have children",
+    "frequency": 8
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In a tree structure, a child node is positioned as which of the following?",
+    "answers": {
+      "A1": "A node with no children",
+      "A2": "A node below its parent in tree",
+      "A3": "The root node",
+      "A4": "Always a leaf node"
+    },
+    "key": "A node below its parent in tree",
+    "justification": "Child nodes descend from parent",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In tree and graph data structures, traversal refers to which operation?",
+    "answers": {
+      "A1": "Tree height calculation",
+      "A2": "Visiting all nodes in specific order",
+      "A3": "Adding new nodes",
+      "A4": "Removing existing nodes"
+    },
+    "key": "Visiting all nodes in specific order",
+    "justification": "Traversal systematically visits nodes",
+    "frequency": 5
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Inorder traversal of a binary tree visits nodes in which specific sequence?",
+    "answers": {
+      "A1": "Left-Root-Right",
+      "A2": "Root-Left-Right",
+      "A3": "Root-Right-Left",
+      "A4": "Right-Root-Left"
+    },
+    "key": "Left-Root-Right",
+    "justification": "Inorder is left-root-right sequence",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Preorder traversal of a binary tree visits nodes in which specific sequence?",
+    "answers": {
+      "A1": "Left-Root-Right",
+      "A2": "Root-Left-Right",
+      "A3": "Left-Right-Root",
+      "A4": "Right-Left-Root"
+    },
+    "key": "Root-Left-Right",
+    "justification": "Preorder is root-left-right sequence",
+    "frequency": 10
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Postorder traversal of a binary tree visits nodes in which specific sequence?",
+    "answers": {
+      "A1": "Root-Left-Right",
+      "A2": "Left-Right-Root",
+      "A3": "Root-Right-Left",
+      "A4": "Right-Root-Left"
+    },
+    "key": "Left-Right-Root",
+    "justification": "Postorder is left-right-root sequence",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A Binary Search Tree (BST) is characterized by which ordering property?",
+    "answers": {
+      "A1": "Left subtree elements are larger",
+      "A2": "Left subtree has smaller elements",
+      "A3": "No specific ordering",
+      "A4": "Elements ordered randomly"
+    },
+    "key": "Left subtree has smaller elements",
+    "justification": "BST maintains left-smaller property",
+    "frequency": 10
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A hash function in hash tables serves which primary purpose?",
+    "answers": {
+      "A1": "Computing the size of table",
+      "A2": "Mapping a key to array index",
+      "A3": "Sorting array elements",
+      "A4": "Deleting elements"
+    },
+    "key": "Mapping a key to array index",
+    "justification": "Hash functions enable fast lookup",
+    "frequency": 8
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "What is a collision in the context of hash table implementation?",
+    "answers": {
+      "A1": "Algorithm failure",
+      "A2": "When two keys hash to the same index",
+      "A3": "Memory error",
+      "A4": "Performance issue"
+    },
+    "key": "When two keys hash to the same index",
+    "justification": "Collisions occur in hash tables",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Linear probing is a technique for handling collisions in hash tables. How does it work?",
+    "answers": {
+      "A1": "Linear interpolation",
+      "A2": "Finding the next available slot sequentially",
+      "A3": "Searching linearly through array",
+      "A4": "Direct array indexing"
+    },
+    "key": "Finding the next available slot sequentially",
+    "justification": "Linear probing handles collisions sequentially",
+    "frequency": 8
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Chaining is a collision resolution technique in hashing that uses which data structure?",
+    "answers": {
+      "A1": "Chain data together",
+      "A2": "Using linked lists to handle collisions",
+      "A3": "Connecting multiple arrays",
+      "A4": "Sorting elements"
+    },
+    "key": "Using linked lists to handle collisions",
+    "justification": "Chaining resolves hash collisions",
+    "frequency": 12
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A trie data structure is particularly useful for which type of search operation?",
+    "answers": {
+      "A1": "Tree traversal only",
+      "A2": "Prefix-based search and retrieval",
+      "A3": "Sorted list search",
+      "A4": "Hash-based search"
+    },
+    "key": "Prefix-based search and retrieval",
+    "justification": "Tries support prefix searching",
+    "frequency": 11
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A directed graph is characterized by which property regarding its edges?",
+    "answers": {
+      "A1": "Edges have no direction",
+      "A2": "Edges have specific direction",
+      "A3": "All undirected edges",
+      "A4": "Only tree edges"
+    },
+    "key": "Edges have specific direction",
+    "justification": "Directed graphs have directed edges",
+    "frequency": 11
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "An undirected graph is characterized by which property regarding its edges?",
+    "answers": {
+      "A1": "Directed edges only",
+      "A2": "Edges are bidirectional",
+      "A3": "No edges present",
+      "A4": "Linear structure only"
+    },
+    "key": "Edges are bidirectional",
+    "justification": "Undirected edges go both ways",
+    "frequency": 10
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In graph terminology, what is a vertex?",
+    "answers": {
+      "A1": "An edge connection",
+      "A2": "A node in a graph",
+      "A3": "A connection line",
+      "A4": "A path endpoint"
+    },
+    "key": "A node in a graph",
+    "justification": "Vertices are graph nodes",
+    "frequency": 10
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In graph terminology, what is an edge?",
+    "answers": {
+      "A1": "A node point",
+      "A2": "A connection between vertices",
+      "A3": "A graph path",
+      "A4": "A vertex label"
+    },
+    "key": "A connection between vertices",
+    "justification": "Edges connect vertices",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Depth First Search (DFS) is a graph traversal algorithm that primarily uses which data structure?",
+    "answers": {
+      "A1": "Queue structure",
+      "A2": "Stack structure",
+      "A3": "Array structure",
+      "A4": "Tree structure"
+    },
+    "key": "Stack structure",
+    "justification": "DFS uses stack for traversal",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Breadth First Search (BFS) is a graph traversal algorithm that primarily uses which data structure?",
+    "answers": {
+      "A1": "Stack structure",
+      "A2": "Queue structure",
+      "A3": "Array structure",
+      "A4": "Tree structure"
+    },
+    "key": "Queue structure",
+    "justification": "BFS uses queue for traversal",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Sorting in data structures refers to which operation?",
+    "answers": {
+      "A1": "Adding elements",
+      "A2": "Arranging elements in order",
+      "A3": "Removing elements",
+      "A4": "Finding elements"
+    },
+    "key": "Arranging elements in order",
+    "justification": "Sorting orders elements",
+    "frequency": 6
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Bubble sort is characterized by which sorting mechanism?",
+    "answers": {
+      "A1": "Sorting bubbles",
+      "A2": "Repeatedly swapping adjacent elements",
+      "A3": "Random shuffling",
+      "A4": "Binary comparison"
+    },
+    "key": "Repeatedly swapping adjacent elements",
+    "justification": "Bubble sort compares adjacent elements",
+    "frequency": 12
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Quick sort employs which algorithmic paradigm?",
+    "answers": {
+      "A1": "Linear search",
+      "A2": "Divide-and-conquer using partition",
+      "A3": "Sequential processing",
+      "A4": "Recursive doubling"
+    },
+    "key": "Divide-and-conquer using partition",
+    "justification": "Quick sort partitions data",
+    "frequency": 8
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Merge sort employs which algorithmic paradigm?",
+    "answers": {
+      "A1": "Linear sorting",
+      "A2": "Divide-and-conquer merging sublists",
+      "A3": "Selection sort",
+      "A4": "Insertion-based approach"
+    },
+    "key": "Divide-and-conquer merging sublists",
+    "justification": "Merge sort divides and merges",
+    "frequency": 6
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "Heap sort implements which sorting strategy?",
+    "answers": {
+      "A1": "Random sorting",
+      "A2": "Sorting using heap structure",
+      "A3": "Comparison sorting only",
+      "A4": "Linear time sorting"
+    },
+    "key": "Sorting using heap structure",
+    "justification": "Heap sort uses heap property",
+    "frequency": 9
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A matrix in data structures is best described as which of the following?",
+    "answers": {
+      "A1": "A movie name",
+      "A2": "A 2D array of elements",
+      "A3": "A 1D array",
+      "A4": "A linked list"
+    },
+    "key": "A 2D array of elements",
+    "justification": "Matrices are 2D arrays",
+    "frequency": 6
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "A sparse matrix is characterized by which property?",
+    "answers": {
+      "A1": "Completely full matrix",
+      "A2": "Matrix with mostly zero elements",
+      "A3": "Small size matrix",
+      "A4": "Dense matrix"
+    },
+    "key": "Matrix with mostly zero elements",
+    "justification": "Sparse matrices are mostly empty",
+    "frequency": 8
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In programming, a pointer is best described as which of the following?",
+    "answers": {
+      "A1": "A finger pointing at screen",
+      "A2": "A variable storing memory address",
+      "A3": "An array index",
+      "A4": "A function call"
+    },
+    "key": "A variable storing memory address",
+    "justification": "Pointers hold memory addresses",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "The NULL pointer in programming represents which concept?",
+    "answers": {
+      "A1": "An empty space",
+      "A2": "A pointer to no valid address",
+      "A3": "A zero value",
+      "A4": "An empty variable"
+    },
+    "key": "A pointer to no valid address",
+    "justification": "NULL indicates no valid pointer",
+    "frequency": 8
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "What is an index in the context of array data structures?",
+    "answers": {
+      "A1": "The array name",
+      "A2": "The position of an element in array",
+      "A3": "The array size",
+      "A4": "The array data type"
+    },
+    "key": "The position of an element in array",
+    "justification": "Index represents element location",
+    "frequency": 6
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "In data structures, what is meant by the term 'element'?",
+    "answers": {
+      "A1": "A chemical element",
+      "A2": "An individual item stored in structure",
+      "A3": "A type of structure",
+      "A4": "A structure name"
+    },
+    "key": "An individual item stored in structure",
+    "justification": "Elements are data units",
+    "frequency": 4
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "When comparing arrays and linked lists as data structures, what is the fundamental difference in their organization?",
+    "answers": {
+      "A1": "Arrays are slower",
+      "A2": "Array uses contiguous memory, linked list uses pointers",
+      "A3": "Linked lists are faster",
+      "A4": "No difference"
+    },
+    "key": "Array uses contiguous memory, linked list uses pointers",
+    "justification": "Fundamental structural difference",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "What is the time complexity for accessing an element at a specific index in an array?",
+    "answers": {
+      "A1": "O(n)",
+      "A2": "O(1)",
+      "A3": "O(log n)",
+      "A4": "O(n²)"
+    },
+    "key": "O(1)",
+    "justification": "Direct indexing is constant time",
+    "frequency": 10
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "What is meant by the term 'capacity' in the context of dynamic data structures?",
+    "answers": {
+      "A1": "The currently used space",
+      "A2": "The maximum number of elements possible",
+      "A3": "The current size of structure",
+      "A4": "The available unused space"
+    },
+    "key": "The maximum number of elements possible",
+    "justification": "Capacity represents total slots",
+    "frequency": 5
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "What is the worst-case time complexity for searching a specific element in an unordered linked list?",
+    "answers": {
+      "A1": "O(1)",
+      "A2": "O(n)",
+      "A3": "O(log n)",
+      "A4": "O(n log n)"
+    },
+    "key": "O(n)",
+    "justification": "Must traverse sequentially",
+    "frequency": 9
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "In a complete binary tree with n nodes, what is the height of the tree?",
+    "answers": {
+      "A1": "n",
+      "A2": "log₂(n+1)",
+      "A3": "n-1",
+      "A4": "2^n"
+    },
+    "key": "log₂(n+1)",
+    "justification": "Height is logarithmic",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "In the analysis of the Union-Find data structure with path compression and union by rank, what is the nearly constant amortized time complexity per operation?",
+    "answers": {
+      "A1": "O(1) exactly",
+      "A2": "O(α(n)) where α is inverse Ackermann",
+      "A3": "O(log n)",
+      "A4": "O(√n)"
+    },
+    "key": "O(α(n)) where α is inverse Ackermann",
+    "justification": "Inverse Ackermann function",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What advanced technique allows a single B-tree insertion operation to guarantee O(log n) time complexity even with a full tree?",
+    "answers": {
+      "A1": "Preemptive splitting",
+      "A2": "Lazy evaluation",
+      "A3": "Path compression",
+      "A4": "Randomization"
+    },
+    "key": "Preemptive splitting",
+    "justification": "B-tree optimization technique",
+    "frequency": 10
+  },
+  {
+    "type": "easy",
+    "category": "Data Structures",
+    "question": "What is insertion in the context of data structure operations?",
+    "answers": {
+      "A1": "Removing an element",
+      "A2": "Adding a new element to the structure",
+      "A3": "Searching for an element",
+      "A4": "Modifying an element"
+    },
+    "key": "Adding a new element to the structure",
+    "justification": "Insertion adds elements",
+    "frequency": 8
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "What is the time complexity of inserting an element at the beginning of a singly linked list?",
+    "answers": {
+      "A1": "O(n)",
+      "A2": "O(1)",
+      "A3": "O(log n)",
+      "A4": "O(n²)"
+    },
+    "key": "O(1)",
+    "justification": "Only pointer modification needed",
+    "frequency": 3
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "In the context of self-balancing binary search trees, what does the balance factor measure in an AVL tree?",
+    "answers": {
+      "A1": "Total number of nodes",
+      "A2": "Height difference between left and right subtrees",
+      "A3": "Node value difference",
+      "A4": "Subtree size ratio"
+    },
+    "key": "Height difference between left and right subtrees",
+    "justification": "AVL balance factor definition",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "category": "Data Structures",
+    "question": "What is the minimum number of elements needed in a B-tree node of order m?",
+    "answers": {
+      "A1": "0 (except root)",
+      "A2": "ceil(m/2) - 1 (except root)",
+      "A3": "m - 1",
+      "A4": "m"
+    },
+    "key": "ceil(m/2) - 1 (except root)",
+    "justification": "B-tree property definition",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "Consider a problem where you need to find all pairs of elements in an array that sum to a target value. Which data structure would provide the most efficient solution?",
+    "answers": {
+      "A1": "Simple sorted array",
+      "A2": "Hash table for O(n) solution",
+      "A3": "Linked list",
+      "A4": "Binary search tree only"
+    },
+    "key": "Hash table for O(n) solution",
+    "justification": "Hash table enables O(n) solution",
+    "frequency": 3
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is the time complexity for searching in a balanced binary search tree?",
+    "answers": {
+      "A1": "O(n) linear time for any search",
+      "A2": "O(log n) logarithmic time",
+      "A3": "O(1) constant time direct access",
+      "A4": "O(n²) quadratic time"
+    },
+    "key": "O(log n) logarithmic time",
+    "justification": "Balanced BSTs maintain logarithmic search complexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is the purpose of balancing techniques in binary search trees?",
+    "answers": {
+      "A1": "To make the tree visually symmetric",
+      "A2": "To maintain logarithmic height and search efficiency",
+      "A3": "To reduce memory usage",
+      "A4": "To simplify tree traversal"
+    },
+    "key": "To maintain logarithmic height and search efficiency",
+    "justification": "Balancing prevents degenerate tree structures",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is AVL tree rotation used for?",
+    "answers": {
+      "A1": "To rotate data around the tree",
+      "A2": "To rebalance tree after insertions/deletions",
+      "A3": "To reverse traversal order",
+      "A4": "To sort tree nodes"
+    },
+    "key": "To rebalance tree after insertions/deletions",
+    "justification": "Rotations maintain AVL tree balance property",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is the space complexity of a recursive algorithm that calls itself n times?",
+    "answers": {
+      "A1": "O(1) constant space",
+      "A2": "O(n) linear space for call stack",
+      "A3": "O(log n) logarithmic space",
+      "A4": "O(n²) quadratic space"
+    },
+    "key": "O(n) linear space for call stack",
+    "justification": "Recursion depth creates call stack overhead",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is memoization in dynamic programming?",
+    "answers": {
+      "A1": "Writing down important notes",
+      "A2": "Storing computed results to avoid recalculation",
+      "A3": "Organizing memory efficiently",
+      "A4": "Memorizing algorithm steps"
+    },
+    "key": "Storing computed results to avoid recalculation",
+    "justification": "Memoization optimizes recursive problems",
+    "frequency": 4
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is the difference between dynamic programming and greedy algorithms?",
+    "answers": {
+      "A1": "Dynamic programming is faster",
+      "A2": "DP considers all possibilities; greedy makes locally optimal choices",
+      "A3": "Both are identical in approach",
+      "A4": "Greedy always finds optimal solutions"
+    },
+    "key": "DP considers all possibilities; greedy makes locally optimal choices",
+    "justification": "Fundamental algorithmic paradigm differences",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is an adjacency matrix representation of a graph?",
+    "answers": {
+      "A1": "A matrix of adjacent numbers",
+      "A2": "2D array showing edges between vertices",
+      "A3": "A list of graph vertices",
+      "A4": "Matrix of vertex coordinates"
+    },
+    "key": "2D array showing edges between vertices",
+    "justification": "Adjacency matrix represents graph connectivity",
+    "frequency": 4
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is an adjacency list representation of a graph?",
+    "answers": {
+      "A1": "List of adjacent vertices in order",
+      "A2": "Collection of lists showing edges for each vertex",
+      "A3": "Ordered list of all graph elements",
+      "A4": "Link list of vertices only"
+    },
+    "key": "Collection of lists showing edges for each vertex",
+    "justification": "Adjacency list efficiently represents sparse graphs",
+    "frequency": 12
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is topological sorting used for?",
+    "answers": {
+      "A1": "Arranging data topographically",
+      "A2": "Ordering vertices in directed acyclic graphs",
+      "A3": "Sorting geographical coordinates",
+      "A4": "Arranging tree topology"
+    },
+    "key": "Ordering vertices in directed acyclic graphs",
+    "justification": "Topological sort resolves dependencies",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is the purpose of the Union-Find data structure?",
+    "answers": {
+      "A1": "Finding union of two datasets",
+      "A2": "Efficiently managing disjoint sets and connectivity",
+      "A3": "Finding common elements",
+      "A4": "Combining data structures"
+    },
+    "key": "Efficiently managing disjoint sets and connectivity",
+    "justification": "Union-Find supports set operations optimally",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is a segment tree used for?",
+    "answers": {
+      "A1": "Dividing trees into segments",
+      "A2": "Efficient range queries and updates",
+      "A3": "Tree visualization segments",
+      "A4": "Segmenting data linearly"
+    },
+    "key": "Efficient range queries and updates",
+    "justification": "Segment trees optimize interval operations",
+    "frequency": 3
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is a fenwick tree (binary indexed tree)?",
+    "answers": {
+      "A1": "Tree with binary structure only",
+      "A2": "Tree for efficient prefix sum queries",
+      "A3": "Binary representation of trees",
+      "A4": "Tree indexed by binary numbers"
+    },
+    "key": "Tree for efficient prefix sum queries",
+    "justification": "Fenwick trees enable fast cumulative calculations",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is the purpose of skip lists in data structures?",
+    "answers": {
+      "A1": "Lists that skip elements",
+      "A2": "Probabilistic data structure for fast search",
+      "A3": "Lists with skipped indices",
+      "A4": "Incomplete linked lists"
+    },
+    "key": "Probabilistic data structure for fast search",
+    "justification": "Skip lists provide logarithmic search without balancing",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is the time complexity of inserting n elements into a binary search tree?",
+    "answers": {
+      "A1": "O(n) in best case",
+      "A2": "O(n log n) in average case; O(n²) worst case",
+      "A3": "O(1) per insertion",
+      "A4": "O(2^n) exponential time"
+    },
+    "key": "O(n log n) in average case; O(n²) worst case",
+    "justification": "BST insertion depends on tree balance",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is the purpose of a bloom filter?",
+    "answers": {
+      "A1": "Filtering flowers from data",
+      "A2": "Space-efficient membership testing",
+      "A3": "Removing duplicate elements",
+      "A4": "Sorting bloom data"
+    },
+    "key": "Space-efficient membership testing",
+    "justification": "Bloom filters enable fast probabilistic queries",
+    "frequency": 4
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is a disjoint set union with path compression?",
+    "answers": {
+      "A1": "Separating sets with compression",
+      "A2": "Optimization flattening tree structure during find operations",
+      "A3": "Compressing disconnected sets",
+      "A4": "Data compression for sets"
+    },
+    "key": "Optimization flattening tree structure during find operations",
+    "justification": "Path compression improves amortized performance",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is the purpose of a deque (double-ended queue)?",
+    "answers": {
+      "A1": "Queue with two sides only",
+      "A2": "Allowing insertion and deletion at both ends",
+      "A3": "Double queue for dual purposes",
+      "A4": "Queue with double memory"
+    },
+    "key": "Allowing insertion and deletion at both ends",
+    "justification": "Deques support flexible access patterns",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is a circular buffer used for?",
+    "answers": {
+      "A1": "Circular arrangement of buffers",
+      "A2": "Fixed-size buffer with wraparound",
+      "A3": "Buffer for circular data",
+      "A4": "Rotating data storage"
+    },
+    "key": "Fixed-size buffer with wraparound",
+    "justification": "Circular buffers enable efficient reuse of memory",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is the purpose of hashing in collision detection?",
+    "answers": {
+      "A1": "Creating collisions for testing",
+      "A2": "Distributing keys to minimize hash value collisions",
+      "A3": "Detecting physical collisions",
+      "A4": "Hashing collision data"
+    },
+    "key": "Distributing keys to minimize hash value collisions",
+    "justification": "Good hashing reduces collision frequency",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is double hashing as a collision resolution method?",
+    "answers": {
+      "A1": "Hashing twice in sequence",
+      "A2": "Using two hash functions to find alternative positions",
+      "A3": "Doubling hash output values",
+      "A4": "Hash function applied twice to key"
+    },
+    "key": "Using two hash functions to find alternative positions",
+    "justification": "Double hashing reduces clustering in hash tables",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is quadratic probing in hash tables?",
+    "answers": {
+      "A1": "Probing quadratic functions",
+      "A2": "Using quadratic intervals to find next available slot",
+      "A3": "Probing squared positions",
+      "A4": "Quadratic growth probing"
+    },
+    "key": "Using quadratic intervals to find next available slot",
+    "justification": "Quadratic probing reduces primary clustering",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is load factor in hash tables?",
+    "answers": {
+      "A1": "Factor loading data",
+      "A2": "Ratio of filled slots to table size",
+      "A3": "Load weight of table",
+      "A4": "Factoring loaded data"
+    },
+    "key": "Ratio of filled slots to table size",
+    "justification": "Load factor indicates hash table utilization",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is rehashing in hash tables?",
+    "answers": {
+      "A1": "Hashing again with same function",
+      "A2": "Rebuilding table with larger size and rehashing all entries",
+      "A3": "Repeating hash operations",
+      "A4": "Resetting hash values"
+    },
+    "key": "Rebuilding table with larger size and rehashing all entries",
+    "justification": "Rehashing maintains hash table performance",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is string matching using tries?",
+    "answers": {
+      "A1": "Trying to match string",
+      "A2": "Efficient pattern matching using prefix tree structure",
+      "A3": "Trying different match strategies",
+      "A4": "Trial and error matching"
+    },
+    "key": "Efficient pattern matching using prefix tree structure",
+    "justification": "Tries enable fast string operations",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is the purpose of a suffix tree?",
+    "answers": {
+      "A1": "Tree of suffix values",
+      "A2": "Structure enabling fast substring searches",
+      "A3": "Tree representing string suffixes",
+      "A4": "Suffix data organization"
+    },
+    "key": "Structure enabling fast substring searches",
+    "justification": "Suffix trees optimize string processing",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is Karp-Rabin algorithm for string matching?",
+    "answers": {
+      "A1": "Matching karpfish using rabin",
+      "A2": "Pattern matching using rolling hash function",
+      "A3": "Karp and Rabin's data format",
+      "A4": "Rabbit matching algorithm"
+    },
+    "key": "Pattern matching using rolling hash function",
+    "justification": "Karp-Rabin enables efficient multi-pattern search",
+    "frequency": 5
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is the maximum height of an AVL tree with n nodes?",
+    "answers": {
+      "A1": "n height for linear tree",
+      "A2": "1.44 * log₂(n+1) approximately",
+      "A3": "Exactly log₂(n) height",
+      "A4": "√n height"
+    },
+    "key": "1.44 * log₂(n+1) approximately",
+    "justification": "AVL height is logarithmic with constant factor",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is red-black tree invariant?",
+    "answers": {
+      "A1": "All nodes are red or black colored",
+      "A2": "Maintaining height balance with color properties",
+      "A3": "Red and black nodes alternate",
+      "A4": "Color determines data value"
+    },
+    "key": "Maintaining height balance with color properties",
+    "justification": "Red-black properties ensure logarithmic height",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is the complexity of building a heap from array?",
+    "answers": {
+      "A1": "O(n²) quadratic time",
+      "A2": "O(n) linear time using heapify",
+      "A3": "O(n log n) time required",
+      "A4": "O(log n) logarithmic time"
+    },
+    "key": "O(n) linear time using heapify",
+    "justification": "Bottom-up heapify runs in linear time",
+    "frequency": 4
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is Dijkstra's algorithm used for?",
+    "answers": {
+      "A1": "Finding all graph cycles",
+      "A2": "Finding shortest path from source to vertices",
+      "A3": "Detecting negative cycles",
+      "A4": "Finding longest paths"
+    },
+    "key": "Finding shortest path from source to vertices",
+    "justification": "Dijkstra's solves single-source shortest path",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is Bellman-Ford algorithm advantage over Dijkstra?",
+    "answers": {
+      "A1": "Bellman-Ford is faster",
+      "A2": "Handles negative edge weights",
+      "A3": "Uses less memory",
+      "A4": "Better for directed graphs"
+    },
+    "key": "Handles negative edge weights",
+    "justification": "Bellman-Ford works with negative weights",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is Floyd-Warshall algorithm purpose?",
+    "answers": {
+      "A1": "Finding single shortest path",
+      "A2": "Finding all-pairs shortest paths",
+      "A3": "Detecting cycles only",
+      "A4": "Graph coloring problem"
+    },
+    "key": "Finding all-pairs shortest paths",
+    "justification": "Floyd-Warshall computes distance between all pairs",
+    "frequency": 11
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is Kruskal's algorithm for minimum spanning tree?",
+    "answers": {
+      "A1": "Selecting edges by source vertex",
+      "A2": "Selecting minimum weight edges avoiding cycles",
+      "A3": "Sorting vertices by weight",
+      "A4": "Creating complete graph"
+    },
+    "key": "Selecting minimum weight edges avoiding cycles",
+    "justification": "Kruskal's uses greedy edge selection",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "Data Structures",
+    "question": "What is Prim's algorithm for minimum spanning tree?",
+    "answers": {
+      "A1": "Starting with prime numbers",
+      "A2": "Growing tree from initial vertex",
+      "A3": "Prime factor selection",
+      "A4": "Prime-based edge selection"
+    },
+    "key": "Growing tree from initial vertex",
+    "justification": "Prim's builds MST incrementally",
+    "frequency": 7
+  }
+]
