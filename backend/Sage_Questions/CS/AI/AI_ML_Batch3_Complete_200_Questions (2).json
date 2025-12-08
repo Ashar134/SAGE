@@ -1,0 +1,2552 @@
+[
+  {
+    "type": "easy",
+    "category": "Introduction to AI",
+    "question": "What does AI stand for?",
+    "answers": {
+      "A1": "Artificial Intelligence",
+      "A2": "Automated Instruction",
+      "A3": "Applied Informatics",
+      "A4": "Adaptive Integration"
+    },
+    "key": "Artificial Intelligence",
+    "justification": "AI is the field of computer science aimed at creating intelligent machines.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "easy",
+    "category": "Introduction to AI",
+    "question": "According to the Turing Test, how can we determine if a machine is intelligent?",
+    "answers": {
+      "A1": "By measuring its processing speed",
+      "A2": "By its ability to fool a human into thinking it's human",
+      "A3": "By the amount of code it contains",
+      "A4": "By its physical appearance"
+    },
+    "key": "By its ability to fool a human into thinking it's human",
+    "justification": "The Turing Test is a measure of machine intelligence through conversation.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "easy",
+    "category": "Introduction to AI",
+    "question": "What is a rational agent?",
+    "answers": {
+      "A1": "An agent that always tells the truth",
+      "A2": "An agent that maximizes expected utility",
+      "A3": "An agent that never makes mistakes",
+      "A4": "An agent that can think logically"
+    },
+    "key": "An agent that maximizes expected utility",
+    "justification": "Rational agents make decisions that maximize their expected utility given goals and observations.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Introduction to AI",
+    "question": "What does PEAS stand for in agent design?",
+    "answers": {
+      "A1": "Performance, Environment, Actions, Sensors",
+      "A2": "Program, Execution, Analysis, System",
+      "A3": "Processing, Efficiency, Automation, Speed",
+      "A4": "Protocol, Endpoint, Access, Service"
+    },
+    "key": "Performance, Environment, Actions, Sensors",
+    "justification": "PEAS is used to describe task environments for designing agents.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "easy",
+    "category": "Intelligent Agents",
+    "question": "What is a percept in agent terminology?",
+    "answers": {
+      "A1": "The action an agent takes",
+      "A2": "The input the agent receives from its sensors",
+      "A3": "The goal the agent is trying to achieve",
+      "A4": "The memory of the agent"
+    },
+    "key": "The input the agent receives from its sensors",
+    "justification": "Percepts are sensory inputs from the environment.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "easy",
+    "category": "Intelligent Agents",
+    "question": "What is the difference between a simple reflex agent and a reflex agent with state?",
+    "answers": {
+      "A1": "Simple reflex is faster",
+      "A2": "Simple reflex uses only current percepts; reflex with state uses memory",
+      "A3": "Reflex with state is more basic",
+      "A4": "There is no difference"
+    },
+    "key": "Simple reflex uses only current percepts; reflex with state uses memory",
+    "justification": "Reflex agents with state track history to handle partially observable environments.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "easy",
+    "category": "Intelligent Agents",
+    "question": "What is a fully observable environment?",
+    "answers": {
+      "A1": "An environment that is always visible to humans",
+      "A2": "An environment where sensors provide complete state information",
+      "A3": "An environment with no hidden information",
+      "A4": "An environment with only visual information"
+    },
+    "key": "An environment where sensors provide complete state information",
+    "justification": "Fully observable environments require no internal state tracking.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "easy",
+    "category": "Intelligent Agents",
+    "question": "What is a partially observable environment?",
+    "answers": {
+      "A1": "An environment only partially implemented",
+      "A2": "An environment where sensors have limited information",
+      "A3": "An environment with random changes",
+      "A4": "An environment controlled by multiple agents"
+    },
+    "key": "An environment where sensors have limited information",
+    "justification": "In partially observable environments, agents need internal state to track hidden aspects.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Intelligent Agents",
+    "question": "What is the vacuum-cleaner agent problem?",
+    "answers": {
+      "A1": "A real-world robotic application",
+      "A2": "A classic toy problem used to demonstrate AI concepts",
+      "A3": "A problem with cleaning robot efficiency",
+      "A4": "A problem in machine learning"
+    },
+    "key": "A classic toy problem used to demonstrate AI concepts",
+    "justification": "The vacuum-cleaner world is a simple environment for teaching agent design.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "easy",
+    "category": "Search",
+    "question": "What is a search problem in AI?",
+    "answers": {
+      "A1": "Finding information on the internet",
+      "A2": "Finding a sequence of actions that transforms start state to goal state",
+      "A3": "Searching for optimal solutions only",
+      "A4": "Searching databases"
+    },
+    "key": "Finding a sequence of actions that transforms start state to goal state",
+    "justification": "Search problems formalize how agents plan ahead to achieve goals.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "easy",
+    "category": "Search",
+    "question": "What is the state space in a search problem?",
+    "answers": {
+      "A1": "The physical location of the search",
+      "A2": "All possible configurations of the environment",
+      "A3": "The current state only",
+      "A4": "The number of states"
+    },
+    "key": "All possible configurations of the environment",
+    "justification": "The state space is the set of all reachable configurations.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "easy",
+    "category": "Search",
+    "question": "What is a goal test?",
+    "answers": {
+      "A1": "A test of the agent's goals",
+      "A2": "A condition to check if a state satisfies the desired objective",
+      "A3": "Testing if the goal is realistic",
+      "A4": "An examination of goals"
+    },
+    "key": "A condition to check if a state satisfies the desired objective",
+    "justification": "The goal test determines if the search has found a solution.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Uninformed Search",
+    "question": "What is breadth-first search (BFS)?",
+    "answers": {
+      "A1": "A search that explores nodes layer by layer",
+      "A2": "A search that goes deep first",
+      "A3": "A random search method",
+      "A4": "A search for the widest path"
+    },
+    "key": "A search that explores nodes layer by layer",
+    "justification": "BFS explores all nodes at depth d before exploring depth d+1.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "easy",
+    "category": "Uninformed Search",
+    "question": "What is depth-first search (DFS)?",
+    "answers": {
+      "A1": "A search that explores as far as possible along each branch",
+      "A2": "A search that explores layer by layer",
+      "A3": "A search for the deepest goal",
+      "A4": "A search with depth limitations"
+    },
+    "key": "A search that explores as far as possible along each branch",
+    "justification": "DFS continues down a path until it reaches a leaf node.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "easy",
+    "category": "Uninformed Search",
+    "question": "What is a disadvantage of breadth-first search?",
+    "answers": {
+      "A1": "It operates at an unacceptably slow speed",
+      "A2": "It requires a lot of memory to store all nodes at each level",
+      "A3": "It cannot find solutions in any search space",
+      "A4": "It only works for very small problem spaces"
+    },
+    "key": "It requires a lot of memory to store all nodes at each level",
+    "justification": "BFS memory requirement is exponential in the branching factor.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "easy",
+    "category": "Uninformed Search",
+    "question": "What is a disadvantage of depth-first search?",
+    "answers": {
+      "A1": "It uses excessive amounts of memory resources",
+      "A2": "It may go infinitely deep in infinite-depth graphs",
+      "A3": "It operates too slowly for practical applications",
+      "A4": "It is incapable of finding any solutions"
+    },
+    "key": "It may go infinitely deep in infinite-depth graphs",
+    "justification": "DFS can get stuck in infinite loops without cycle detection.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "easy",
+    "category": "Machine Learning",
+    "question": "What is machine learning?",
+    "answers": {
+      "A1": "Learning about machines",
+      "A2": "Computer programs that automatically improve performance from experience",
+      "A3": "Programming computers manually",
+      "A4": "Machine maintenance"
+    },
+    "key": "Computer programs that automatically improve performance from experience",
+    "justification": "ML enables systems to learn from data without explicit programming.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "easy",
+    "category": "Machine Learning",
+    "question": "What is supervised learning?",
+    "answers": {
+      "A1": "Learning with direct oversight from humans",
+      "A2": "Learning from labeled training data to map inputs to outputs",
+      "A3": "Learning with a supervisor",
+      "A4": "Learning with feedback"
+    },
+    "key": "Learning from labeled training data to map inputs to outputs",
+    "justification": "Supervised learning uses labeled examples to train models.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "easy",
+    "category": "Machine Learning",
+    "question": "What is unsupervised learning?",
+    "answers": {
+      "A1": "Learning without teacher",
+      "A2": "Learning from unlabeled data to find patterns and structures",
+      "A3": "Learning without any guidance",
+      "A4": "Learning autonomously"
+    },
+    "key": "Learning from unlabeled data to find patterns and structures",
+    "justification": "Unsupervised learning discovers hidden patterns in unlabeled data.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "easy",
+    "category": "Machine Learning",
+    "question": "What is the difference between classification and regression?",
+    "answers": {
+      "A1": "Classification is for machines; regression is for humans",
+      "A2": "Classification predicts categories; regression predicts continuous values",
+      "A3": "They are the same",
+      "A4": "Regression is more complex"
+    },
+    "key": "Classification predicts categories; regression predicts continuous values",
+    "justification": "Classification produces discrete labels; regression produces real numbers.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "easy",
+    "category": "Machine Learning",
+    "question": "What is clustering?",
+    "answers": {
+      "A1": "Grouping related data points together based on similarity",
+      "A2": "Arranging data in sequential order by value",
+      "A3": "Sorting data alphabetically or numerically",
+      "A4": "Organizing data points by their physical size"
+    },
+    "key": "Grouping related data points together",
+    "justification": "Clustering is an unsupervised learning technique for grouping similar items.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "easy",
+    "category": "Neural Networks",
+    "question": "What is a neural network inspired by?",
+    "answers": {
+      "A1": "Computer networks",
+      "A2": "The human brain and biological neurons",
+      "A3": "Telephone networks",
+      "A4": "Internet protocols"
+    },
+    "key": "The human brain and biological neurons",
+    "justification": "Artificial neural networks mimic biological neural systems.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Neural Networks",
+    "question": "What is a neuron in a neural network?",
+    "answers": {
+      "A1": "A biological brain cell in the human nervous system",
+      "A2": "A computational unit that processes inputs and produces output",
+      "A3": "A simple node in any graph data structure",
+      "A4": "A biological entity found only in living organisms"
+    },
+    "key": "A computational unit that processes inputs and produces output",
+    "justification": "Artificial neurons compute weighted sums and apply activation functions.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "easy",
+    "category": "Neural Networks",
+    "question": "What is backpropagation?",
+    "answers": {
+      "A1": "Returning to the start of training",
+      "A2": "Going back to look at previous results",
+      "A3": "An algorithm to update neural network weights by computing gradients",
+      "A4": "Moving backward in a network"
+    },
+    "key": "An algorithm to update neural network weights by computing gradients",
+    "justification": "Backpropagation computes gradients to minimize loss in neural networks.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "easy",
+    "category": "Local Search",
+    "question": "What is local search?",
+    "answers": {
+      "A1": "Searching in a specific location",
+      "A2": "Finding solutions by moving to neighboring states that improve the objective",
+      "A3": "Searching locally on the computer",
+      "A4": "Searching without moving"
+    },
+    "key": "Finding solutions by moving to neighboring states that improve the objective",
+    "justification": "Local search moves incrementally toward better solutions.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Local Search",
+    "question": "What is hill climbing?",
+    "answers": {
+      "A1": "Climbing actual hills",
+      "A2": "A local search that always moves to the highest valued neighbor",
+      "A3": "Moving upward only",
+      "A4": "Reaching the top"
+    },
+    "key": "A local search that always moves to the highest valued neighbor",
+    "justification": "Hill climbing greedily moves to improve solutions locally.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Adversarial Search",
+    "question": "What is adversarial search?",
+    "answers": {
+      "A1": "Fighting against someone",
+      "A2": "Search where an agent competes against an opponent",
+      "A3": "Searching for adversaries",
+      "A4": "Opposing search"
+    },
+    "key": "Search where an agent competes against an opponent",
+    "justification": "Adversarial search models games with conflicting goals.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "easy",
+    "category": "Adversarial Search",
+    "question": "What is the minimax algorithm?",
+    "answers": {
+      "A1": "An algorithm that simultaneously finds minimum and maximum values in array",
+      "A2": "An algorithm for game playing that minimizes opponent's maximum payoff",
+      "A3": "An algorithm to find both minimum and maximum values in a dataset",
+      "A4": "A sorting algorithm that arranges elements in ascending order"
+    },
+    "key": "An algorithm for game playing that minimizes opponent's maximum payoff",
+    "justification": "Minimax assumes the opponent plays optimally and makes worst-case decisions.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "easy",
+    "category": "Constraint Satisfaction",
+    "question": "What is a constraint satisfaction problem (CSP)?",
+    "answers": {
+      "A1": "A problem with computer satisfaction",
+      "A2": "A problem with variables, domains, and constraints to satisfy",
+      "A3": "Satisfying user demands",
+      "A4": "A problem with solutions"
+    },
+    "key": "A problem with variables, domains, and constraints to satisfy",
+    "justification": "CSPs require finding variable assignments that satisfy all constraints.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "easy",
+    "category": "Knowledge Representation",
+    "question": "What is forward chaining?",
+    "answers": {
+      "A1": "Moving forward in time",
+      "A2": "Data-driven inference that starts with facts and applies rules",
+      "A3": "Chaining rules forward",
+      "A4": "Forward movement"
+    },
+    "key": "Data-driven inference that starts with facts and applies rules",
+    "justification": "Forward chaining moves from facts to conclusions.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "easy",
+    "category": "Knowledge Representation",
+    "question": "What is backward chaining?",
+    "answers": {
+      "A1": "Going backward in time",
+      "A2": "Goal-driven inference that starts with goal and works backward",
+      "A3": "Chaining rules backward",
+      "A4": "Backward movement"
+    },
+    "key": "Goal-driven inference that starts with goal and works backward",
+    "justification": "Backward chaining starts from goals and finds supporting facts.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "medium",
+    "category": "Intelligent Agents",
+    "question": "What is the difference between a deterministic and stochastic environment?",
+    "answers": {
+      "A1": "Deterministic is predictable; stochastic has uncertainty",
+      "A2": "Stochastic is faster",
+      "A3": "Deterministic requires less computation",
+      "A4": "They are identical"
+    },
+    "key": "Deterministic is predictable; stochastic has uncertainty",
+    "justification": "Deterministic environments have single outcomes; stochastic have probabilistic outcomes.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "medium",
+    "category": "Intelligent Agents",
+    "question": "What is an episodic environment?",
+    "answers": {
+      "A1": "An environment divided into independent episodes",
+      "A2": "An environment that changes continuously",
+      "A3": "An environment with memories",
+      "A4": "An environment controlled by episodes"
+    },
+    "key": "An environment divided into independent episodes",
+    "justification": "Episodic environments have independent tasks; past actions don't affect future ones.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "medium",
+    "category": "Intelligent Agents",
+    "question": "What is a sequential environment?",
+    "answers": {
+      "A1": "An environment with sequential data",
+      "A2": "An environment where current decisions affect future decisions",
+      "A3": "An environment with sequence of events",
+      "A4": "An environment with ordered states"
+    },
+    "key": "An environment where current decisions affect future decisions",
+    "justification": "Sequential environments require planning ahead.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "medium",
+    "category": "Intelligent Agents",
+    "question": "What is a static environment?",
+    "answers": {
+      "A1": "An environment with objects that physically cannot move",
+      "A2": "An environment that doesn't change unless the agent acts",
+      "A3": "An environment where all objects remain in fixed positions",
+      "A4": "An environment that never undergoes any changes whatsoever"
+    },
+    "key": "An environment that doesn't change unless the agent acts",
+    "justification": "Static environments simplify agent design.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Intelligent Agents",
+    "question": "What is a dynamic environment?",
+    "answers": {
+      "A1": "An environment that changes",
+      "A2": "An environment that changes autonomously, requiring continuous adaptation",
+      "A3": "An environment with dynamic objects",
+      "A4": "An environment in motion"
+    },
+    "key": "An environment that changes autonomously, requiring continuous adaptation",
+    "justification": "Dynamic environments are more complex as they change without agent actions.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "medium",
+    "category": "Intelligent Agents",
+    "question": "What is a discrete environment?",
+    "answers": {
+      "A1": "An environment with private or confidential information",
+      "A2": "An environment with finite distinct states",
+      "A3": "An environment divided into physically separate rooms",
+      "A4": "An environment with isolated, disconnected components"
+    },
+    "key": "An environment with finite distinct states",
+    "justification": "Discrete environments have distinct, countable states.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "medium",
+    "category": "Intelligent Agents",
+    "question": "What is a continuous environment?",
+    "answers": {
+      "A1": "An environment that operates 24/7 without interruption",
+      "A2": "An environment with infinite possible states",
+      "A3": "An environment that extends indefinitely in time",
+      "A4": "An environment with no pauses or breaks in operation"
+    },
+    "key": "An environment with infinite possible states",
+    "justification": "Continuous environments have smooth transitions and infinite states.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "medium",
+    "category": "Search",
+    "question": "What is a state space graph different from a search tree?",
+    "answers": {
+      "A1": "They are the same thing",
+      "A2": "Graph represents problem; tree represents search process",
+      "A3": "Tree is theoretical; graph is practical",
+      "A4": "Graph has cycles; tree doesn't"
+    },
+    "key": "Graph represents problem; tree represents search process",
+    "justification": "State graph is mathematical model; search tree is dynamic construction.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Uninformed Search",
+    "question": "What is uniform cost search?",
+    "answers": {
+      "A1": "A search with uniform costs",
+      "A2": "A search that expands nodes with lowest cost from start",
+      "A3": "A search with equal edge costs",
+      "A4": "A search with no cost"
+    },
+    "key": "A search that expands nodes with lowest cost from start",
+    "justification": "UCS guarantees shortest path in graphs with non-negative weights.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "medium",
+    "category": "Uninformed Search",
+    "question": "What is the time complexity of breadth-first search?",
+    "answers": {
+      "A1": "O(n) - linear time in the number of nodes",
+      "A2": "O(b^d) where b is branching factor and d is depth",
+      "A3": "O(log n) - logarithmic time complexity",
+      "A4": "O(n²) - quadratic time complexity"
+    },
+    "key": "O(b^d) where b is branching factor and d is depth",
+    "justification": "BFS explores exponentially many nodes in worst case.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "medium",
+    "category": "Informed Search",
+    "question": "What is heuristic search?",
+    "answers": {
+      "A1": "Searching using rules of thumb",
+      "A2": "Using domain knowledge to guide search toward goals",
+      "A3": "Searching heuristically",
+      "A4": "Trial and error search"
+    },
+    "key": "Using domain knowledge to guide search toward goals",
+    "justification": "Heuristics provide estimates to prioritize search.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "medium",
+    "category": "Informed Search",
+    "question": "What is A* search?",
+    "answers": {
+      "A1": "An optimal search algorithm",
+      "A2": "A search combining actual cost and heuristic estimate",
+      "A3": "A search algorithm starting with A",
+      "A4": "The best search algorithm"
+    },
+    "key": "A search combining actual cost and heuristic estimate",
+    "justification": "A* uses f(n) = g(n) + h(n) where g is cost and h is heuristic.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "medium",
+    "category": "Informed Search",
+    "question": "What is an admissible heuristic?",
+    "answers": {
+      "A1": "A heuristic that admits mistakes",
+      "A2": "A heuristic that never overestimates true cost",
+      "A3": "A heuristic for admission",
+      "A4": "A heuristic that always works"
+    },
+    "key": "A heuristic that never overestimates true cost",
+    "justification": "Admissible heuristics guarantee A* finds optimal solutions.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "medium",
+    "category": "Local Search",
+    "question": "What is simulated annealing?",
+    "answers": {
+      "A1": "A metallurgical process of heating and cooling materials",
+      "A2": "A probabilistic technique that occasionally accepts worse solutions",
+      "A3": "A simulation method for modeling heat transfer",
+      "A4": "An algorithm specifically designed for metal processing"
+    },
+    "key": "A probabilistic technique that occasionally accepts worse solutions",
+    "justification": "Simulated annealing escapes local optima with temperature-dependent probability.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "medium",
+    "category": "Local Search",
+    "question": "What is the problem with local search in general?",
+    "answers": {
+      "A1": "It operates too slowly for practical use",
+      "A2": "It can get stuck in local optima",
+      "A3": "It consumes excessive memory resources",
+      "A4": "It only works for trivially simple problems"
+    },
+    "key": "It can get stuck in local optima",
+    "justification": "Local search may miss global optima.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "medium",
+    "category": "Adversarial Search",
+    "question": "What is alpha-beta pruning?",
+    "answers": {
+      "A1": "A technique for modifying alpha and beta parameter values",
+      "A2": "A technique to eliminate branches that won't affect the final decision",
+      "A3": "A method for physically cutting branches in tree structures",
+      "A4": "A technique used in agriculture for pruning plants"
+    },
+    "key": "A technique to eliminate branches that won't affect the final decision",
+    "justification": "Alpha-beta pruning reduces computation in minimax.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "medium",
+    "category": "Adversarial Search",
+    "question": "What is a ply in game playing?",
+    "answers": {
+      "A1": "A single layer or sheet of material in manufacturing",
+      "A2": "One level of moves (one move by one player)",
+      "A3": "A physical piece used in board games like chess",
+      "A4": "The surface or board on which games are played"
+    },
+    "key": "One level of moves (one move by one player)",
+    "justification": "Ply represents one level in a game tree.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "medium",
+    "category": "Constraint Satisfaction",
+    "question": "What is backtracking in CSP?",
+    "answers": {
+      "A1": "Moving backward in the solution",
+      "A2": "Undoing assignments and trying different values when conflicts occur",
+      "A3": "Going back to the start",
+      "A4": "Returning to previous states"
+    },
+    "key": "Undoing assignments and trying different values when conflicts occur",
+    "justification": "Backtracking is a fundamental CSP solving technique.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is the training set in machine learning?",
+    "answers": {
+      "A1": "Set of machines",
+      "A2": "Data used to train a model",
+      "A3": "Training equipment",
+      "A4": "Set of exercises"
+    },
+    "key": "Data used to train a model",
+    "justification": "Training sets are used to fit ML models.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is overfitting in machine learning?",
+    "answers": {
+      "A1": "Fitting too much data",
+      "A2": "A model that learns training data too well and doesn't generalize",
+      "A3": "Perfect fit to data",
+      "A4": "Too many features"
+    },
+    "key": "A model that learns training data too well and doesn't generalize",
+    "justification": "Overfitting reduces performance on new data.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is underfitting in machine learning?",
+    "answers": {
+      "A1": "Fitting too little data",
+      "A2": "A model that is too simple to capture data patterns",
+      "A3": "Insufficient fitting",
+      "A4": "Too few features"
+    },
+    "key": "A model that is too simple to capture data patterns",
+    "justification": "Underfitting results in poor performance on both training and test data.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is cross-validation?",
+    "answers": {
+      "A1": "Validating across countries",
+      "A2": "Evaluating model performance by splitting data multiple times",
+      "A3": "Cross-checking validation",
+      "A4": "Validation across platforms"
+    },
+    "key": "Evaluating model performance by splitting data multiple times",
+    "justification": "Cross-validation reduces variance in performance estimates.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is Naive Bayes?",
+    "answers": {
+      "A1": "A Bayesian classifier assuming feature independence",
+      "A2": "A simplistic approach to Bayesian statistical inference",
+      "A3": "Applying Bayes theorem without any prior knowledge",
+      "A4": "Any probabilistic method using probability calculations"
+    },
+    "key": "A Bayesian classifier assuming independence",
+    "justification": "Naive Bayes assumes features are conditionally independent.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is K-means clustering?",
+    "answers": {
+      "A1": "Clustering with K dimensions",
+      "A2": "An unsupervised algorithm that partitions data into K clusters",
+      "A3": "Clustering using K means",
+      "A4": "Finding K data points"
+    },
+    "key": "An unsupervised algorithm that partitions data into K clusters",
+    "justification": "K-means iteratively assigns points to nearest centroid.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is dimensionality reduction?",
+    "answers": {
+      "A1": "Reducing the physical size of a database",
+      "A2": "Reducing the number of features while preserving information",
+      "A3": "Reducing dimensions in a physical or spatial sense",
+      "A4": "Deleting or removing unnecessary data points"
+    },
+    "key": "Reducing the number of features while preserving information",
+    "justification": "Dimensionality reduction combats curse of dimensionality.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "medium",
+    "category": "Neural Networks",
+    "question": "What is an activation function?",
+    "answers": {
+      "A1": "A function that determines when neurons fire signals",
+      "A2": "A nonlinear function applied to neuron outputs",
+      "A3": "A function that starts computational processes",
+      "A4": "A function that enables or disables neural pathways"
+    },
+    "key": "A nonlinear function applied to neuron outputs",
+    "justification": "Activation functions introduce nonlinearity enabling neural networks to learn complex patterns.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "medium",
+    "category": "Neural Networks",
+    "question": "What is the ReLU activation function?",
+    "answers": {
+      "A1": "A function that generates rectangular waveforms",
+      "A2": "max(0, x) - returns max of 0 and input",
+      "A3": "A simple linear function f(x) = x with no transformation",
+      "A4": "A function that recurs or repeats its computation"
+    },
+    "key": "max(0, x) - returns max of 0 and input",
+    "justification": "ReLU is popular for its simplicity and effectiveness.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "medium",
+    "category": "Neural Networks",
+    "question": "What is the vanishing gradient problem?",
+    "answers": {
+      "A1": "Gradients that disappear",
+      "A2": "Gradients become very small during backpropagation, hindering learning",
+      "A3": "Gradients that are hidden",
+      "A4": "Loss of gradients"
+    },
+    "key": "Gradients become very small during backpropagation, hindering learning",
+    "justification": "Vanishing gradients prevent deep networks from learning early layers.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "medium",
+    "category": "Knowledge Representation",
+    "question": "What is a rule in rule-based systems?",
+    "answers": {
+      "A1": "A legal regulation or governmental law to follow",
+      "A2": "An if-then statement relating conditions to conclusions",
+      "A3": "A general guideline or best practice recommendation",
+      "A4": "A standard operating procedure in business processes"
+    },
+    "key": "An if-then statement relating conditions to conclusions",
+    "justification": "Rules encode expert knowledge as IF-THEN conditions.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "medium",
+    "category": "Knowledge Representation",
+    "question": "What is an inference engine?",
+    "answers": {
+      "A1": "A mechanical engine used in vehicles for propulsion",
+      "A2": "A component that applies rules to facts to derive conclusions",
+      "A3": "A machine designed for making logical inferences",
+      "A4": "A processor that handles input data operations"
+    },
+    "key": "A component that applies rules to facts to derive conclusions",
+    "justification": "Inference engines execute forward and backward chaining.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is feature extraction?",
+    "answers": {
+      "A1": "Extracting physical features",
+      "A2": "Selecting or creating relevant features from raw data",
+      "A3": "Drawing features",
+      "A4": "Identifying special features"
+    },
+    "key": "Selecting or creating relevant features from raw data",
+    "justification": "Feature extraction prepares data for ML algorithms.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is data normalization?",
+    "answers": {
+      "A1": "Making data normal",
+      "A2": "Scaling features to similar ranges",
+      "A3": "Organizing data",
+      "A4": "Standardizing format"
+    },
+    "key": "Scaling features to similar ranges",
+    "justification": "Normalization prevents features with large scales from dominating.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "hard",
+    "category": "Intelligent Agents",
+    "question": "What is the difference between an agent function and an agent program?",
+    "answers": {
+      "A1": "They are the same",
+      "A2": "Function is abstract specification; program is implementation",
+      "A3": "Function is a program",
+      "A4": "Program is abstract"
+    },
+    "key": "Function is abstract specification; program is implementation",
+    "justification": "Agent function maps percepts to actions; program runs on physical architecture.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "hard",
+    "category": "Search",
+    "question": "What is the problem with depth-first search in infinite graphs?",
+    "answers": {
+      "A1": "It consumes excessive memory resources",
+      "A2": "It may never terminate if it follows an infinite path",
+      "A3": "It operates too slowly for practical use",
+      "A4": "It is unable to find any valid solutions"
+    },
+    "key": "It may never terminate if it follows an infinite path",
+    "justification": "DFS lacks cycle detection, causing infinite loops.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Informed Search",
+    "question": "What makes a heuristic consistent (monotonic)?",
+    "answers": {
+      "A1": "It's always correct",
+      "A2": "h(n) <= cost(n,n') + h(n') for all arcs",
+      "A3": "It's consistent in output",
+      "A4": "It never changes"
+    },
+    "key": "h(n) <= cost(n,n') + h(n') for all arcs",
+    "justification": "Consistent heuristics are admissible and allow A* pruning.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "hard",
+    "category": "Adversarial Search",
+    "question": "What is the horizon problem in game search?",
+    "answers": {
+      "A1": "Searching to the horizon",
+      "A2": "Limited search depth may cause agents to make poor moves",
+      "A3": "Visibility issues",
+      "A4": "Planning too far ahead"
+    },
+    "key": "Limited search depth may cause agents to make poor moves",
+    "justification": "Horizon problem occurs when evaluation stops at search limit.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is the bias-variance tradeoff?",
+    "answers": {
+      "A1": "A conflict between algorithmic bias and fairness concerns",
+      "A2": "Balancing model simplicity (bias) against fit to data (variance)",
+      "A3": "A competition between bias errors and variance errors",
+      "A4": "A mathematical equation relating bias and variance"
+    },
+    "key": "Balancing model simplicity (bias) against fit to data (variance)",
+    "justification": "High bias causes underfitting; high variance causes overfitting.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is the curse of dimensionality?",
+    "answers": {
+      "A1": "A curse from higher dimensions",
+      "A2": "Performance degrades as number of features increases",
+      "A3": "Dimensionality that is cursed",
+      "A4": "A problem with many dimensions"
+    },
+    "key": "Performance degrades as number of features increases",
+    "justification": "High dimensionality makes data sparse and learning harder.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "hard",
+    "category": "Neural Networks",
+    "question": "What is a convolutional neural network (CNN)?",
+    "answers": {
+      "A1": "A network architecture for conversational AI systems",
+      "A2": "A neural network using convolution operations for feature detection",
+      "A3": "A network designed for handling text conversations",
+      "A4": "A network that converts data between different formats"
+    },
+    "key": "A neural network using convolution operations for feature detection",
+    "justification": "CNNs are effective for image recognition tasks.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Neural Networks",
+    "question": "What is a recurrent neural network (RNN)?",
+    "answers": {
+      "A1": "A network that repeats indefinitely without termination",
+      "A2": "A network with feedback connections enabling memory",
+      "A3": "A network that simply repeats its input as output",
+      "A4": "A network with circular topology for data flow"
+    },
+    "key": "A network with feedback connections enabling memory",
+    "justification": "RNNs are suited for sequence processing.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is an ensemble method?",
+    "answers": {
+      "A1": "Combining musicians",
+      "A2": "Combining multiple models to improve predictions",
+      "A3": "A group of methods",
+      "A4": "Multiple algorithms"
+    },
+    "key": "Combining multiple models to improve predictions",
+    "justification": "Ensemble methods like random forests often outperform single models.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is the difference between generative and discriminative models?",
+    "answers": {
+      "A1": "Generative models create; discriminative models delete",
+      "A2": "Generative models P(X,Y); discriminative models P(Y|X)",
+      "A3": "They are the same",
+      "A4": "Discriminative generates"
+    },
+    "key": "Generative models P(X,Y); discriminative models P(Y|X)",
+    "justification": "Generative models model joint distribution; discriminative model conditional.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is regularization in machine learning?",
+    "answers": {
+      "A1": "Making data regular",
+      "A2": "Adding penalties to model complexity to prevent overfitting",
+      "A3": "Regular updates",
+      "A4": "Organizing data"
+    },
+    "key": "Adding penalties to model complexity to prevent overfitting",
+    "justification": "L1/L2 regularization reduces model complexity.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Neural Networks",
+    "question": "What is gradient descent?",
+    "answers": {
+      "A1": "A process of physically descending along a gradient slope",
+      "A2": "An optimization algorithm that iteratively moves toward lower loss",
+      "A3": "A method for navigating down slopes in terrain",
+      "A4": "An algorithm for descending through data structures"
+    },
+    "key": "An optimization algorithm that iteratively moves toward lower loss",
+    "justification": "Gradient descent is fundamental to training ML models.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "hard",
+    "category": "Neural Networks",
+    "question": "What is stochastic gradient descent (SGD)?",
+    "answers": {
+      "A1": "Random gradient descent",
+      "A2": "Gradient descent using mini-batches instead of full dataset",
+      "A3": "Stochastic descent",
+      "A4": "Randomized optimization"
+    },
+    "key": "Gradient descent using mini-batches instead of full dataset",
+    "justification": "SGD is faster and often works better than batch gradient descent.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is the precision-recall tradeoff?",
+    "answers": {
+      "A1": "A conflict between precision and recall",
+      "A2": "Balancing false positives (precision) vs false negatives (recall)",
+      "A3": "Precision against recall",
+      "A4": "A mathematical relationship"
+    },
+    "key": "Balancing false positives (precision) vs false negatives (recall)",
+    "justification": "Precision and recall are inversely related in many classification tasks.",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "Constraint Satisfaction",
+    "question": "What is arc consistency in CSP?",
+    "answers": {
+      "A1": "A property where all arcs in a graph are consistent",
+      "A2": "A property where every value in a domain is consistent with some value in neighboring domains",
+      "A3": "A measure of consistency between connected arcs",
+      "A4": "An algorithm for checking arc properties in graphs"
+    },
+    "key": "A property where every value in a domain is consistent with some value in neighboring domains",
+    "justification": "Arc consistency reduces domain sizes before search.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "hard",
+    "category": "Local Search",
+    "question": "What is genetic algorithm?",
+    "answers": {
+      "A1": "An algorithm for studying biological genetics and DNA",
+      "A2": "A search technique mimicking biological evolution with selection and mutation",
+      "A3": "A method for programming genetic modifications",
+      "A4": "A simulation of evolutionary processes in nature"
+    },
+    "key": "A search technique mimicking biological evolution with selection and mutation",
+    "justification": "Genetic algorithms use crossover and mutation for optimization.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is semantic meaning in NLP?",
+    "answers": {
+      "A1": "The dictionary definition of individual words",
+      "A2": "Understanding the meaning of text beyond syntax",
+      "A3": "The study of signs and symbols in language",
+      "A4": "Analysis of semantic content in data"
+    },
+    "key": "Understanding the meaning of text beyond syntax",
+    "justification": "Semantic understanding is crucial for NLP applications.",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "Knowledge Representation",
+    "question": "What is ontology in AI?",
+    "answers": {
+      "A1": "A philosophical study of being and existence",
+      "A2": "Formal representation of concepts, properties, and relationships",
+      "A3": "A branch of philosophy examining the nature of existence",
+      "A4": "A system for organizing and storing knowledge data"
+    },
+    "key": "Formal representation of concepts, properties, and relationships",
+    "justification": "Ontologies structure knowledge for AI systems.",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is transfer learning?",
+    "answers": {
+      "A1": "Moving learning materials between storage systems",
+      "A2": "Using knowledge from one task to improve performance on another",
+      "A3": "Transferring skills from one person to another",
+      "A4": "Learning how to transfer data efficiently"
+    },
+    "key": "Using knowledge from one task to improve performance on another",
+    "justification": "Transfer learning reduces data requirements for new tasks.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "medium",
+    "category": "Search",
+    "question": "What is iterative deepening depth-first search (IDDFS)?",
+    "answers": {
+      "A1": "Deepening the search space through iterations",
+      "A2": "DFS with increasing depth limits combining BFS efficiency with DFS memory",
+      "A3": "Repeatedly executing DFS from the beginning",
+      "A4": "Iterating through different depth levels systematically"
+    },
+    "key": "DFS with increasing depth limits combining BFS efficiency with DFS memory",
+    "justification": "IDDFS combines advantages of BFS and DFS.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "medium",
+    "category": "Informed Search",
+    "question": "What is greedy best-first search?",
+    "answers": {
+      "A1": "The best search method for finding greedy solutions",
+      "A2": "A search that expands nodes based on heuristic estimate only",
+      "A3": "The optimal greedy search algorithm available",
+      "A4": "A search that selects the first available option"
+    },
+    "key": "A search that expands nodes based on heuristic estimate only",
+    "justification": "Greedy BFS is not optimal but often efficient.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is a decision tree?",
+    "answers": {
+      "A1": "A tree of decisions",
+      "A2": "A model that makes predictions via tree of yes/no questions",
+      "A3": "A tree structure",
+      "A4": "A decision-making system"
+    },
+    "key": "A model that makes predictions via tree of yes/no questions",
+    "justification": "Decision trees are interpretable and used for classification/regression.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is random forest?",
+    "answers": {
+      "A1": "A randomly generated forest environment in simulations",
+      "A2": "An ensemble method using multiple decision trees",
+      "A3": "A method for randomly selecting tree structures",
+      "A4": "An algorithm inspired by forest ecosystem behavior"
+    },
+    "key": "An ensemble method using multiple decision trees",
+    "justification": "Random forests reduce overfitting compared to single trees.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is support vector machine (SVM)?",
+    "answers": {
+      "A1": "A machine that provides technical support services",
+      "A2": "A classifier that finds optimal hyperplane maximizing margin",
+      "A3": "A machine that supports vector calculations",
+      "A4": "A classification tool for sorting data"
+    },
+    "key": "A classifier that finds optimal hyperplane maximizing margin",
+    "justification": "SVMs are effective for both linear and nonlinear classification.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is logistic regression?",
+    "answers": {
+      "A1": "Regression with logic",
+      "A2": "A classification algorithm using logistic function",
+      "A3": "A logical regression",
+      "A4": "A regression method"
+    },
+    "key": "A classification algorithm using logistic function",
+    "justification": "Logistic regression predicts probability of binary outcomes.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "medium",
+    "category": "Neural Networks",
+    "question": "What is a long short-term memory (LSTM) network?",
+    "answers": {
+      "A1": "A long network architecture with short memory capacity",
+      "A2": "An RNN variant with gates controlling information flow",
+      "A3": "A memory network for storing long-term data",
+      "A4": "A special type of RNN with extended capabilities"
+    },
+    "key": "An RNN variant with gates controlling information flow",
+    "justification": "LSTMs solve vanishing gradient problem in RNNs.",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is reinforcement learning?",
+    "answers": {
+      "A1": "Learning that reinforces previous knowledge",
+      "A2": "Learning through interaction with environment and rewards",
+      "A3": "Strengthening existing learning pathways",
+      "A4": "A method for learning about reward structures"
+    },
+    "key": "Learning through interaction with environment and rewards",
+    "justification": "Reinforcement learning trains agents through trial and error.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is Q-learning?",
+    "answers": {
+      "A1": "Learning about Q values and their meanings",
+      "A2": "A reinforcement learning algorithm learning state-action values",
+      "A3": "Learning focused on quality assessment",
+      "A4": "An algorithm for learning from questions"
+    },
+    "key": "A reinforcement learning algorithm learning state-action values",
+    "justification": "Q-learning is model-free and off-policy.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "medium",
+    "category": "Knowledge Representation",
+    "question": "What is semantic web?",
+    "answers": {
+      "A1": "A web of interconnected meanings and definitions",
+      "A2": "Web with machine-readable meaning using structured data",
+      "A3": "A web focused on meaningful content and messages",
+      "A4": "A network of semantically linked information nodes"
+    },
+    "key": "Web with machine-readable meaning using structured data",
+    "justification": "Semantic web enables better information integration.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "easy",
+    "category": "Introduction to AI",
+    "question": "What is the Turing Award?",
+    "answers": {
+      "A1": "An award for computer scientists",
+      "A2": "The Nobel Prize of Computing given for contributions to AI",
+      "A3": "An award for Turing",
+      "A4": "A computing award"
+    },
+    "key": "The Nobel Prize of Computing given for contributions to AI",
+    "justification": "The Turing Award is the highest honor in computer science.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "easy",
+    "category": "Intelligent Agents",
+    "question": "What is the goal of an intelligent agent?",
+    "answers": {
+      "A1": "To be intelligent",
+      "A2": "To maximize its performance measure",
+      "A3": "To achieve intelligence",
+      "A4": "To perform actions"
+    },
+    "key": "To maximize its performance measure",
+    "justification": "Agents are designed to optimize performance.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "easy",
+    "category": "Search",
+    "question": "What is a goal state?",
+    "answers": {
+      "A1": "A state that looks good",
+      "A2": "A state satisfying the problem's objective",
+      "A3": "The ending state",
+      "A4": "The final position"
+    },
+    "key": "A state satisfying the problem's objective",
+    "justification": "Goal states are what we're trying to reach.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "easy",
+    "category": "Uninformed Search",
+    "question": "What is the frontier in search?",
+    "answers": {
+      "A1": "The boundary or edge of the search space",
+      "A2": "The set of nodes ready to be expanded",
+      "A3": "The frontier boundary between explored and unexplored states",
+      "A4": "Nodes located at the border of the search tree"
+    },
+    "key": "The set of nodes ready to be expanded",
+    "justification": "The frontier holds candidate nodes for expansion.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "easy",
+    "category": "Machine Learning",
+    "question": "What is a training sample?",
+    "answers": {
+      "A1": "A sample collection of training material",
+      "A2": "A single example used to train a model",
+      "A3": "A test used during the training process",
+      "A4": "An example instance from the training dataset"
+    },
+    "key": "A single example used to train a model",
+    "justification": "Training samples are instances in the training set.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "easy",
+    "category": "Machine Learning",
+    "question": "What is a feature in machine learning?",
+    "answers": {
+      "A1": "A characteristic or property of something",
+      "A2": "An input variable representing an aspect of data",
+      "A3": "A special or distinctive property of data",
+      "A4": "An attribute or characteristic used for prediction"
+    },
+    "key": "An input variable representing an aspect of data",
+    "justification": "Features are attributes used for predictions.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Neural Networks",
+    "question": "What is a weight in a neural network?",
+    "answers": {
+      "A1": "Physical weight",
+      "A2": "A parameter multiplying input signals",
+      "A3": "An importance measure",
+      "A4": "A scaling factor"
+    },
+    "key": "A parameter multiplying input signals",
+    "justification": "Weights are learned parameters adjusted during training.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "easy",
+    "category": "Neural Networks",
+    "question": "What is a bias in a neural network?",
+    "answers": {
+      "A1": "An unfair preference toward certain outcomes",
+      "A2": "A learned parameter added to weighted input sum",
+      "A3": "A prejudice in the model's predictions",
+      "A4": "A preference that affects model behavior"
+    },
+    "key": "A learned parameter added to weighted input sum",
+    "justification": "Biases shift activation functions enabling better expressiveness.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "easy",
+    "category": "Adversarial Search",
+    "question": "What is a game tree?",
+    "answers": {
+      "A1": "A physical tree structure used in outdoor games",
+      "A2": "A tree representing all possible game states and moves",
+      "A3": "A generic tree data structure in programming",
+      "A4": "A tree diagram showing the sequence of moves in a game"
+    },
+    "key": "A tree representing all possible game states and moves",
+    "justification": "Game trees are used for game-playing agents.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Knowledge Representation",
+    "question": "What is a fact in knowledge representation?",
+    "answers": {
+      "A1": "Something that is true",
+      "A2": "A statement about the world in a knowledge base",
+      "A3": "Reality",
+      "A4": "Information"
+    },
+    "key": "A statement about the world in a knowledge base",
+    "justification": "Facts are basic units in knowledge bases.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is principal component analysis (PCA)?",
+    "answers": {
+      "A1": "Primary component analysis",
+      "A2": "Dimensionality reduction finding directions of max variance",
+      "A3": "Principal analysis",
+      "A4": "Component finding"
+    },
+    "key": "Dimensionality reduction finding directions of max variance",
+    "justification": "PCA projects data onto principal components.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "hard",
+    "category": "Neural Networks",
+    "question": "What is batch normalization?",
+    "answers": {
+      "A1": "Something that is objectively true in reality",
+      "A2": "A statement about the world in a knowledge base",
+      "A3": "An element of reality or actual occurrence",
+      "A4": "Information stored in a knowledge system"
+    },
+    "key": "Technique normalizing inputs to each layer during training",
+    "justification": "Batch normalization accelerates training.",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is Bayesian optimization?",
+    "answers": {
+      "A1": "Optimization with Bayes",
+      "A2": "Hyperparameter optimization using probabilistic models",
+      "A3": "Bayesian search",
+      "A4": "Probability optimization"
+    },
+    "key": "Hyperparameter optimization using probabilistic models",
+    "justification": "Bayesian optimization is more efficient than grid search.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is anomaly detection?",
+    "answers": {
+      "A1": "Detecting strange behaviors",
+      "A2": "Identifying data points significantly different from normal",
+      "A3": "Finding anomalies",
+      "A4": "Deviation detection"
+    },
+    "key": "Identifying data points significantly different from normal",
+    "justification": "Anomaly detection is used for fraud and outlier detection.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is metric learning?",
+    "answers": {
+      "A1": "Learning metrics",
+      "A2": "Learning distance metrics for comparing data points",
+      "A3": "Distance learning",
+      "A4": "Similarity learning"
+    },
+    "key": "Learning distance metrics for comparing data points",
+    "justification": "Metric learning is useful for clustering and retrieval.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "hard",
+    "category": "Neural Networks",
+    "question": "What is attention mechanism?",
+    "answers": {
+      "A1": "Paying attention",
+      "A2": "A technique allowing models to focus on relevant parts",
+      "A3": "Attention system",
+      "A4": "Focusing mechanism"
+    },
+    "key": "A technique allowing models to focus on relevant parts",
+    "justification": "Attention mechanisms are key to transformers.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is meta-learning?",
+    "answers": {
+      "A1": "Learning about learning",
+      "A2": "Learning algorithms that can quickly adapt to new tasks",
+      "A3": "Automated learning",
+      "A4": "Higher-level learning"
+    },
+    "key": "Learning algorithms that can quickly adapt to new tasks",
+    "justification": "Meta-learning enables few-shot learning.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "hard",
+    "category": "Knowledge Representation",
+    "question": "What is knowledge graph?",
+    "answers": {
+      "A1": "A graph of knowledge",
+      "A2": "A structured representation of entities and relationships",
+      "A3": "Graph of information",
+      "A4": "Relationship diagram"
+    },
+    "key": "A structured representation of entities and relationships",
+    "justification": "Knowledge graphs power semantic search.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is federated learning?",
+    "answers": {
+      "A1": "Learning with federation",
+      "A2": "Training models on decentralized data without centralizing it",
+      "A3": "Distributed learning",
+      "A4": "Network learning"
+    },
+    "key": "Training models on decentralized data without centralizing it",
+    "justification": "Federated learning preserves privacy.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "hard",
+    "category": "Informed Search",
+    "question": "What is iterative lengthening?",
+    "answers": {
+      "A1": "Making things longer iteratively",
+      "A2": "Search with increasing cost limits like IDDFS",
+      "A3": "Lengthening search",
+      "A4": "Progressive limits"
+    },
+    "key": "Search with increasing cost limits like IDDFS",
+    "justification": "Iterative lengthening is similar to IDDFS for cost-based search.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "Local Search",
+    "question": "What is particle swarm optimization?",
+    "answers": {
+      "A1": "Optimization of particles",
+      "A2": "Metaheuristic inspired by bird flocking",
+      "A3": "Swarm intelligence",
+      "A4": "Particle movement"
+    },
+    "key": "Metaheuristic inspired by bird flocking",
+    "justification": "PSO is effective for continuous optimization.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "medium",
+    "category": "Search",
+    "question": "What is bidirectional search?",
+    "answers": {
+      "A1": "Searching in two directions",
+      "A2": "Searching from both start and goal simultaneously",
+      "A3": "Two-way search",
+      "A4": "Forward-backward search"
+    },
+    "key": "Searching from both start and goal simultaneously",
+    "justification": "Bidirectional search can be more efficient.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "medium",
+    "category": "Neural Networks",
+    "question": "What is dropout?",
+    "answers": {
+      "A1": "Dropping neurons",
+      "A2": "Randomly deactivating neurons during training to prevent overfitting",
+      "A3": "Removing layers",
+      "A4": "Stopping training"
+    },
+    "key": "Randomly deactivating neurons during training to prevent overfitting",
+    "justification": "Dropout is a regularization technique.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is the F1 score?",
+    "answers": {
+      "A1": "A scoring formula used in Formula 1 racing",
+      "A2": "Harmonic mean of precision and recall",
+      "A3": "A generic metric for measuring performance",
+      "A4": "A function for scoring classification results"
+    },
+    "key": "Harmonic mean of precision and recall",
+    "justification": "F1 score balances precision and recall.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is ROC curve?",
+    "answers": {
+      "A1": "A rocking curve",
+      "A2": "Curve plotting true positive rate vs false positive rate",
+      "A3": "A performance curve",
+      "A4": "Classification curve"
+    },
+    "key": "Curve plotting true positive rate vs false positive rate",
+    "justification": "ROC curves evaluate classification performance.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is confusion matrix?",
+    "answers": {
+      "A1": "A confusing matrix",
+      "A2": "A table showing classification results",
+      "A3": "An error matrix",
+      "A4": "A results table"
+    },
+    "key": "A table showing classification results",
+    "justification": "Confusion matrix displays TP, TN, FP, FN.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is data augmentation?",
+    "answers": {
+      "A1": "Increasing data size",
+      "A2": "Creating new training examples from existing ones",
+      "A3": "Augmenting data",
+      "A4": "Expanding dataset"
+    },
+    "key": "Creating new training examples from existing ones",
+    "justification": "Data augmentation improves generalization.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is feature scaling?",
+    "answers": {
+      "A1": "The process of scaling feature dimensions manually",
+      "A2": "Normalizing features to similar ranges",
+      "A3": "The physical size or dimension of features",
+      "A4": "Scaling or resizing data to smaller sizes"
+    },
+    "key": "Normalizing features to similar ranges",
+    "justification": "Feature scaling improves many ML algorithms.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is feature selection?",
+    "answers": {
+      "A1": "Selecting features manually",
+      "A2": "Choosing relevant features for model training",
+      "A3": "Feature picking",
+      "A4": "Feature identification"
+    },
+    "key": "Choosing relevant features for model training",
+    "justification": "Feature selection reduces dimensionality and improves interpretability.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "medium",
+    "category": "Neural Networks",
+    "question": "What is epoch in neural networks?",
+    "answers": {
+      "A1": "A time period",
+      "A2": "One complete pass through the training data",
+      "A3": "A training step",
+      "A4": "An iteration"
+    },
+    "key": "One complete pass through the training data",
+    "justification": "Training typically requires multiple epochs.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "medium",
+    "category": "Neural Networks",
+    "question": "What is batch size?",
+    "answers": {
+      "A1": "Size of a batch",
+      "A2": "Number of samples processed before updating weights",
+      "A3": "Number of batches",
+      "A4": "Batch processing size"
+    },
+    "key": "Number of samples processed before updating weights",
+    "justification": "Batch size affects training speed and memory.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "medium",
+    "category": "Constraint Satisfaction",
+    "question": "What is forward checking?",
+    "answers": {
+      "A1": "Checking forward",
+      "A2": "Checking future constraints to detect conflicts early",
+      "A3": "Advancing check",
+      "A4": "Progressive checking"
+    },
+    "key": "Checking future constraints to detect conflicts early",
+    "justification": "Forward checking improves CSP solving efficiency.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "easy",
+    "category": "Adversarial Search",
+    "question": "What is a terminal node in game tree?",
+    "answers": {
+      "A1": "A node with terminal",
+      "A2": "A leaf node representing end of game",
+      "A3": "A final node",
+      "A4": "An ending position"
+    },
+    "key": "A leaf node representing end of game",
+    "justification": "Terminal nodes have final payoffs.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "easy",
+    "category": "Machine Learning",
+    "question": "What is test set?",
+    "answers": {
+      "A1": "A collection of test cases to validate code",
+      "A2": "Held-out data used to evaluate final model",
+      "A3": "Data specifically designated for testing purposes",
+      "A4": "Data used to evaluate and assess model performance"
+    },
+    "key": "Held-out data used to evaluate final model",
+    "justification": "Test set measures generalization performance.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "easy",
+    "category": "Machine Learning",
+    "question": "What is validation set?",
+    "answers": {
+      "A1": "Set to validate",
+      "A2": "Data used to tune hyperparameters",
+      "A3": "Validation data",
+      "A4": "Verification set"
+    },
+    "key": "Data used to tune hyperparameters",
+    "justification": "Validation set helps prevent overfitting.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Machine Learning",
+    "question": "What is accuracy in classification?",
+    "answers": {
+      "A1": "Exact measurements",
+      "A2": "Percentage of correct predictions",
+      "A3": "Precision measure",
+      "A4": "Correctness"
+    },
+    "key": "Percentage of correct predictions",
+    "justification": "Accuracy is basic classification metric.",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "easy",
+    "category": "Knowledge Representation",
+    "question": "What is a rule-based system?",
+    "answers": {
+      "A1": "The exactness of measurements taken",
+      "A2": "Percentage of correct predictions",
+      "A3": "A measure of precision in outcomes",
+      "A4": "The correctness of model outputs"
+    },
+    "key": "System using IF-THEN rules for decision making",
+    "justification": "Rule-based systems use knowledge encoded as rules.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "easy",
+    "category": "Introduction to AI",
+    "question": "What are the four types of agents?",
+    "answers": {
+      "A1": "Good, bad, smart, dumb",
+      "A2": "Reflex, reflex with state, goal-based, utility-based",
+      "A3": "Simple, complex, intelligent, rational",
+      "A4": "Active, passive, learning, reasoning"
+    },
+    "key": "Reflex, reflex with state, goal-based, utility-based",
+    "justification": "Basic agent types in order of sophistication.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "easy",
+    "category": "Uninformed Search",
+    "question": "Which search algorithm is complete?",
+    "answers": {
+      "A1": "DFS only",
+      "A2": "BFS is complete; DFS is not for infinite graphs",
+      "A3": "Both complete",
+      "A4": "Neither complete"
+    },
+    "key": "BFS is complete; DFS is not for infinite graphs",
+    "justification": "Completeness means always finding a solution if one exists.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is class imbalance problem?",
+    "answers": {
+      "A1": "Imbalanced classes",
+      "A2": "When training data has unequal class distributions",
+      "A3": "Class definition",
+      "A4": "Unequal samples"
+    },
+    "key": "When training data has unequal class distributions",
+    "justification": "Class imbalance requires special techniques like SMOTE.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "hard",
+    "category": "Neural Networks",
+    "question": "What is a residual network (ResNet)?",
+    "answers": {
+      "A1": "Network with residue",
+      "A2": "Network with skip connections enabling deeper architectures",
+      "A3": "Residual learning",
+      "A4": "Deep network"
+    },
+    "key": "Network with skip connections enabling deeper architectures",
+    "justification": "ResNets solve degradation problem in deep networks.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is a generative adversarial network (GAN)?",
+    "answers": {
+      "A1": "An adversarial gang",
+      "A2": "Two networks competing where generator creates and discriminator evaluates",
+      "A3": "Generative network",
+      "A4": "Adversarial system"
+    },
+    "key": "Two networks competing where generator creates and discriminator evaluates",
+    "justification": "GANs are powerful for generative tasks.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is variational autoencoder (VAE)?",
+    "answers": {
+      "A1": "Variable autoencoder",
+      "A2": "Autoencoder with probabilistic latent space",
+      "A3": "Autoencoding method",
+      "A4": "Variational encoding"
+    },
+    "key": "Autoencoder with probabilistic latent space",
+    "justification": "VAEs enable generative modeling.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is representation learning?",
+    "answers": {
+      "A1": "Learning to represent",
+      "A2": "Learning feature representations automatically",
+      "A3": "Representation creation",
+      "A4": "Feature learning"
+    },
+    "key": "Learning feature representations automatically",
+    "justification": "Deep learning is mostly representation learning.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "hard",
+    "category": "Neural Networks",
+    "question": "What is dropout rate?",
+    "answers": {
+      "A1": "Rate of dropping",
+      "A2": "Probability of deactivating a neuron during training",
+      "A3": "Dropping probability",
+      "A4": "Deactivation rate"
+    },
+    "key": "Probability of deactivating a neuron during training",
+    "justification": "Common dropout rates are 0.5 to 0.8.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is learning rate schedule?",
+    "answers": {
+      "A1": "Schedule for learning",
+      "A2": "Changing learning rate during training",
+      "A3": "Learning rate over time",
+      "A4": "Rate scheduling"
+    },
+    "key": "Changing learning rate during training",
+    "justification": "Learning rate schedules improve convergence.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is attention weight?",
+    "answers": {
+      "A1": "Weight of attention",
+      "A2": "Normalized scores determining focus on different inputs",
+      "A3": "Importance weight",
+      "A4": "Focus measure"
+    },
+    "key": "Normalized scores determining focus on different inputs",
+    "justification": "Attention weights are typically from softmax.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "hard",
+    "category": "Knowledge Representation",
+    "question": "What is semantic network?",
+    "answers": {
+      "A1": "Network of semantics",
+      "A2": "Graph-based knowledge representation with nodes as concepts",
+      "A3": "Semantic linking",
+      "A4": "Concept network"
+    },
+    "key": "Graph-based knowledge representation with nodes as concepts",
+    "justification": "Semantic networks show relationships visually.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is active learning?",
+    "answers": {
+      "A1": "Learning actively",
+      "A2": "Training where algorithm selects most informative samples",
+      "A3": "Active participation",
+      "A4": "Interactive learning"
+    },
+    "key": "Training where algorithm selects most informative samples",
+    "justification": "Active learning reduces labeling costs.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is semi-supervised learning?",
+    "answers": {
+      "A1": "Partially supervised",
+      "A2": "Learning with both labeled and unlabeled data",
+      "A3": "Semi-training",
+      "A4": "Mixed supervision"
+    },
+    "key": "Learning with both labeled and unlabeled data",
+    "justification": "Semi-supervised learning is practical when labeling is expensive.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is self-supervised learning?",
+    "answers": {
+      "A1": "Self-teaching",
+      "A2": "Learning from unlabeled data by creating labels from data itself",
+      "A3": "Independent learning",
+      "A4": "Automatic supervision"
+    },
+    "key": "Learning from unlabeled data by creating labels from data itself",
+    "justification": "Self-supervised learning enables pretraining.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is data leakage?",
+    "answers": {
+      "A1": "Physical loss of data due to storage failures",
+      "A2": "When test data information leaks into training",
+      "A3": "Loss of information during data transmission",
+      "A4": "A problem with data integrity or corruption"
+    },
+    "key": "When test data information leaks into training",
+    "justification": "Data leakage causes overly optimistic performance estimates.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "hard",
+    "category": "Neural Networks",
+    "question": "What is exploding gradient problem?",
+    "answers": {
+      "A1": "Gradients that explode",
+      "A2": "Gradients become very large during backpropagation",
+      "A3": "Large gradient values",
+      "A4": "Growing gradients"
+    },
+    "key": "Gradients become very large during backpropagation",
+    "justification": "Exploding gradients can be solved with gradient clipping.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is Occam's Razor principle?",
+    "answers": {
+      "A1": "Sharp principle",
+      "A2": "Simpler explanations are preferable to complex ones",
+      "A3": "Razor sharp",
+      "A4": "Cutting principle"
+    },
+    "key": "Simpler explanations are preferable to complex ones",
+    "justification": "Occam's Razor supports models with fewer parameters.",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is model interpretability?",
+    "answers": {
+      "A1": "Interpreting models",
+      "A2": "Ability to understand why model makes specific predictions",
+      "A3": "Model explanation",
+      "A4": "Understanding logic"
+    },
+    "key": "Ability to understand why model makes specific predictions",
+    "justification": "Interpretability is important for critical applications.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Neural Networks",
+    "question": "What is weight initialization?",
+    "answers": {
+      "A1": "Initial weight values",
+      "A2": "Setting starting weights affecting convergence",
+      "A3": "Initialization method",
+      "A4": "Starting weights"
+    },
+    "key": "Setting starting weights affecting convergence",
+    "justification": "Good initialization prevents vanishing/exploding gradients.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "hard",
+    "category": "Machine Learning",
+    "question": "What is loss landscape?",
+    "answers": {
+      "A1": "A graphical landscape showing loss patterns",
+      "A2": "Visualization of how loss changes with parameters",
+      "A3": "A terrain-like representation of loss values",
+      "A4": "A surface showing parameter configurations"
+    },
+    "key": "Visualization of how loss changes with parameters",
+    "justification": "Loss landscape affects optimization difficulty.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is momentum in optimization?",
+    "answers": {
+      "A1": "Physical momentum or motion in movement",
+      "A2": "Technique accumulating gradients for faster convergence",
+      "A3": "The force of movement in optimization",
+      "A4": "Acceleration of the training process"
+    },
+    "key": "Technique accumulating gradients for faster convergence",
+    "justification": "Momentum helps navigate loss landscape.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is Adam optimizer?",
+    "answers": {
+      "A1": "An optimization method",
+      "A2": "Adaptive moment estimation combining momentum and RMSprop",
+      "A3": "Adaptive optimizer",
+      "A4": "Optimization algorithm"
+    },
+    "key": "Adaptive moment estimation combining momentum and RMSprop",
+    "justification": "Adam is widely used in deep learning.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is RMSprop?",
+    "answers": {
+      "A1": "Root mean square propagation",
+      "A2": "Optimizer adapting learning rate per parameter",
+      "A3": "Root mean squared",
+      "A4": "Propagation method"
+    },
+    "key": "Optimizer adapting learning rate per parameter",
+    "justification": "RMSprop helps with non-stationary objectives.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is early stopping?",
+    "answers": {
+      "A1": "Stopping a process before its natural completion",
+      "A2": "Stopping training when validation performance plateaus",
+      "A3": "Terminating training at an early stage",
+      "A4": "Halting model training prematurely without justification"
+    },
+    "key": "Stopping training when validation performance plateaus",
+    "justification": "Early stopping prevents overfitting.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is label smoothing?",
+    "answers": {
+      "A1": "Smoothing labels",
+      "A2": "Technique replacing hard labels with soft targets",
+      "A3": "Smooth classification",
+      "A4": "Label softening"
+    },
+    "key": "Technique replacing hard labels with soft targets",
+    "justification": "Label smoothing reduces overconfidence.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is class weight?",
+    "answers": {
+      "A1": "Weight of classes",
+      "A2": "Weighting samples by class to handle imbalance",
+      "A3": "Class importance",
+      "A4": "Weighting method"
+    },
+    "key": "Weighting samples by class to handle imbalance",
+    "justification": "Class weights help with imbalanced datasets.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "medium",
+    "category": "Intelligent Agents",
+    "question": "What is environment complexity?",
+    "answers": {
+      "A1": "Complicated environment",
+      "A2": "Degree of difficulty for agent decision-making",
+      "A3": "Complex situations",
+      "A4": "Problem difficulty"
+    },
+    "key": "Degree of difficulty for agent decision-making",
+    "justification": "Environment complexity affects agent design requirements.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is mixup?",
+    "answers": {
+      "A1": "Mixing or blending data samples together",
+      "A2": "Data augmentation creating convex combinations of samples",
+      "A3": "Combining samples through mixture operations",
+      "A4": "Interpolation method for augmenting training data"
+    },
+    "key": "Data augmentation creating convex combinations of samples",
+    "justification": "Mixup improves model robustness.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is cutout?",
+    "answers": {
+      "A1": "Cutting out portions of images manually",
+      "A2": "Data augmentation randomly masking image regions",
+      "A3": "A masking method for data augmentation",
+      "A4": "Occlusion technique for training data"
+    },
+    "key": "Data augmentation randomly masking image regions",
+    "justification": "Cutout improves generalization.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "medium",
+    "category": "Machine Learning",
+    "question": "What is cosine similarity?",
+    "answers": {
+      "A1": "A measure of how similar two things are",
+      "A2": "Measuring angle between vectors in high-dimensional space",
+      "A3": "The cosine-based distance between data points",
+      "A4": "Angular distance between feature vectors"
+    },
+    "key": "Measuring angle between vectors in high-dimensional space",
+    "justification": "Cosine similarity is scale-invariant.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Adversarial Search",
+    "question": "What is a max node in minimax?",
+    "answers": {
+      "A1": "Node that maximizes",
+      "A2": "Node representing maximizer's turn",
+      "A3": "Maximum value node",
+      "A4": "Largest node"
+    },
+    "key": "Node representing maximizer's turn",
+    "justification": "Max nodes choose highest valued child.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "easy",
+    "category": "Adversarial Search",
+    "question": "What is a min node in minimax?",
+    "answers": {
+      "A1": "Node that minimizes",
+      "A2": "Node representing minimizer's turn",
+      "A3": "Minimum value node",
+      "A4": "Smallest node"
+    },
+    "key": "Node representing minimizer's turn",
+    "justification": "Min nodes choose lowest valued child.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "easy",
+    "category": "Machine Learning",
+    "question": "What is a hyperparameter?",
+    "answers": {
+      "A1": "Parameter of hyper",
+      "A2": "Parameter set before training, not learned",
+      "A3": "Super parameter",
+      "A4": "High-level parameter"
+    },
+    "key": "Parameter set before training, not learned",
+    "justification": "Hyperparameters need manual tuning.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Machine Learning",
+    "question": "What is a learned parameter?",
+    "answers": {
+      "A1": "A parameter with hyper or superior properties",
+      "A2": "Parameter set before training, not learned",
+      "A3": "A super or advanced type of parameter",
+      "A4": "A high-level configuration parameter"
+    },
+    "key": "Parameter learned from data during training",
+    "justification": "Learned parameters are adjusted during training.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Neural Networks",
+    "question": "What does sigmoid function do?",
+    "answers": {
+      "A1": "A parameter learned through manual study",
+      "A2": "Parameter learned from data during training",
+      "A3": "A parameter taught to the model",
+      "A4": "A parameter instructed during configuration"
+    },
+    "key": "Maps values to (0,1) range",
+    "justification": "Sigmoid is used for binary classification.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Neural Networks",
+    "question": "What does tanh function do?",
+    "answers": {
+      "A1": "A function that curves values into S-shape",
+      "A2": "Maps values to (0,1) range",
+      "A3": "A function that makes values sigmoid-shaped",
+      "A4": "Transforms input range to bounded output"
+    },
+    "key": "Maps values to (-1,1) range",
+    "justification": "Tanh is centered at zero unlike sigmoid.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "easy",
+    "category": "Machine Learning",
+    "question": "What is mean squared error (MSE)?",
+    "answers": {
+      "A1": "The hyperbolic tangent mathematical function",
+      "A2": "Maps values to (-1,1) range",
+      "A3": "A tangent-based transformation function",
+      "A4": "Transforms values using hyperbolic tangent"
+    },
+    "key": "Loss function averaging squared prediction errors",
+    "justification": "MSE is common for regression.",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "easy",
+    "category": "Machine Learning",
+    "question": "What is cross-entropy loss?",
+    "answers": {
+      "A1": "The arithmetic mean of squared error values",
+      "A2": "Loss function averaging squared prediction errors",
+      "A3": "The squared value of mean error",
+      "A4": "Error squared and then averaged"
+    },
+    "key": "Loss function for classification measuring probability difference",
+    "justification": "Cross-entropy is standard for classification.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Machine Learning",
+    "question": "What is optimization?",
+    "answers": {
+      "A1": "Loss calculated between multiple entries",
+      "A2": "Loss function for classification measuring probability difference",
+      "A3": "Entropy-based loss calculation method",
+      "A4": "Cross-calculated loss for predictions"
+    },
+    "key": "Process of improving model parameters",
+    "justification": "Optimization minimizes loss.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "easy",
+    "category": "Machine Learning",
+    "question": "What is convergence in ML?",
+    "answers": {
+      "A1": "The process of making things optimal",
+      "A2": "Process of improving model parameters",
+      "A3": "Optimizing systems for better performance",
+      "A4": "The improvement process for algorithms"
+    },
+    "key": "When learning algorithm reaches stable solution",
+    "justification": "Convergence indicates training completion.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Knowledge Representation",
+    "question": "What is a fact base?",
+    "answers": {
+      "A1": "Coming together of multiple elements",
+      "A2": "When learning algorithm reaches stable solution",
+      "A3": "A meeting point in the optimization",
+      "A4": "The process of coming together during training"
+    },
+    "key": "Storage of known facts in knowledge system",
+    "justification": "Fact bases are queried by inference engines.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  }
+]

@@ -1,47 +1,64 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import "./TestPage.css";
 
 interface Question {
   id: number;
   question: string;
   options: string[];
+  correctAnswer?: string; // used for scoring
 }
 
-
-const questionsData: Question[] = [
-  {
-    id: 1,
-    question: "What is the capital of France?",
-    options: ["Paris", "London", "Madrid", "Berlin"]
-  },
-  {
-    id: 2,
-    question: "React is used for?",
-    options: ["Backend", "Frontend UI", "Network", "Database"]
-  },
-  {
-    id: 3,
-    question: "Which one is a JS library?",
-    options: ["Laravel", "React", "Django", "Flask"]
-  }
-];
-
-
+const API_BASE_URL = "http://localhost:8000"; // Django backend URL
 
 const TestPage = () => {
+  const [questionsData, setQuestionsData] = useState<Question[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [started, setStarted] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(120);
+  const [score, setScore] = useState<number | null>(null);
+  const [timeLeft, setTimeLeft] = useState(7200);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const [answers, setAnswers] = useState<(string | null)[]>(
-    Array(questionsData.length).fill(null)
-  );
+  const [answers, setAnswers] = useState<(string | null)[]>([]);
 
 
   // For each test the voilation then initialize to 0 to start fresh for each test
   const [, setViolations] = useState(0);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+
+  // Fetch questions from API on component mount
+  useEffect(() => {
+    const fetchQuestions = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        
+        // For now, generate CS test (as requested)
+        const response = await fetch(`${API_BASE_URL}/api/generate-test/?expertise=cs`);
+        
+        if (!response.ok) {
+          throw new Error(`Failed to fetch questions: ${response.statusText}`);
+        }
+        
+        const data = await response.json();
+        
+        if (data.success && data.questions) {
+          setQuestionsData(data.questions);
+          setAnswers(Array(data.questions.length).fill(null));
+        } else {
+          throw new Error(data.error || "Failed to load questions");
+        }
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Failed to load questions");
+        console.error("Error fetching questions:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchQuestions();
+  }, []);
 
   useEffect(() => {
     if (toastMessage) {
@@ -50,12 +67,31 @@ const TestPage = () => {
     }
   }, [toastMessage]);
 
+  // CORE TEST LOGIC - Define submitTest early so it can be referenced
+  const submitTest = useCallback(() => {
+    if (submitted) return;
 
+    // Calculate score by comparing selected answer with correct answer
+    let computedScore = 0;
+    questionsData.forEach((q, idx) => {
+      const userAns = answers[idx];
+      const correct = q.correctAnswer;
+      if (
+        userAns &&
+        correct &&
+        userAns.toString().trim().toLowerCase() ===
+          correct.toString().trim().toLowerCase()
+      ) {
+        computedScore += 1;
+      }
+    });
 
+    setScore(computedScore);
+    setSubmitted(true);
+    setToastMessage(`Test Submitted! Score: ${computedScore}/${questionsData.length}`);
+  }, [submitted, questionsData, answers]);
 
   // VIOLATION COUNTING AND HANDLING
-
-
   const addViolation = (reason: string) => {
     setToastMessage(`⚠ Warning: ${reason}`);
 
@@ -92,7 +128,7 @@ const TestPage = () => {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [started, submitted]);
+  }, [started, submitted, submitTest]);
 
 
 
@@ -170,14 +206,12 @@ const TestPage = () => {
 
 
   // CORE TEST LOGIC
-
   const startTest = () => {
-
     // reset violation count
     setViolations(0);
+    setScore(null);
     setStarted(true);
   };
-
 
   const handleSelect = (option: string) => {
     const updated = [...answers];
@@ -197,12 +231,6 @@ const TestPage = () => {
     }
   };
 
-  const submitTest = () => {
-    if (submitted) return;
-    setSubmitted(true);
-    setToastMessage("Test Submitted!");
-  };
-
   const formatTime = (sec: number) => {
     const m = Math.floor(sec / 60);
     const s = sec % 60;
@@ -210,6 +238,48 @@ const TestPage = () => {
   };
 
 
+
+  // Show loading state
+  if (loading) {
+    return (
+      <div className="test-wrapper">
+        <div className="instruction-section">
+          <h2>Loading Test...</h2>
+          <p>Please wait while we prepare your test questions.</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Show error state
+  if (error) {
+    return (
+      <div className="test-wrapper">
+        <div className="instruction-section">
+          <h2>Error Loading Test</h2>
+          <p style={{ color: "red" }}>{error}</p>
+          <button 
+            className="btn start-btn" 
+            onClick={() => window.location.reload()}
+          >
+            Retry
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // Show message if no questions loaded
+  if (questionsData.length === 0) {
+    return (
+      <div className="test-wrapper">
+        <div className="instruction-section">
+          <h2>No Questions Available</h2>
+          <p>Unable to load test questions. Please try again later.</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="test-wrapper">
@@ -219,7 +289,7 @@ const TestPage = () => {
       <div className="instruction-section">
         <div>
           <h2>Test Instructions</h2>
-          <p>You have <strong>2 minutes</strong> to complete the assessment.</p>
+          <p>You have <strong>2 Hours</strong> to complete the assessment.</p>
           <p>This test is continuously monitored to maintain exam integrity. Any detected violation will result in a warning.</p>
           <p>If you receive three warnings, your test will be automatically submitted.</p>
           <p>To ensure a fair testing environment, actions such as text selection, copying, pasting, and switching browser tabs are disabled during the exam.</p>
@@ -244,7 +314,7 @@ const TestPage = () => {
 
 
       {/* ---------- QUESTION SECTION ---------- */}
-      {started && !submitted && (
+      {started && !submitted && questionsData.length > 0 && (
         <div className="question-section">
           <h3>Question {questionsData[currentIndex].id}</h3>
           <p className="question-text">{questionsData[currentIndex].question}</p>
@@ -290,6 +360,11 @@ const TestPage = () => {
         <div className="submit-box">
           <h2>Test Submitted ✔</h2>
           <p>Your answers have been recorded.</p>
+          {score !== null && (
+            <p>
+              Score: <strong>{score}</strong> / {questionsData.length}
+            </p>
+          )}
         </div>
       )}
     </div>
