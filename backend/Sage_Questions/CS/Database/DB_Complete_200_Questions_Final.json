@@ -1,0 +1,1304 @@
+[
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a database management system (DBMS)?",
+    "answers": {
+      "A1": "A programming language",
+      "A2": "A system for storing, managing, and retrieving data",
+      "A3": "A type of spreadsheet",
+      "A4": "A networking protocol"
+    },
+    "key": "A system for storing, managing, and retrieving data",
+    "justification": "DBMS is fundamental database technology",
+    "frequency": 8
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a relation in a relational database?",
+    "answers": {
+      "A1": "A mathematical formula",
+      "A2": "A table with columns and rows",
+      "A3": "A connection between people",
+      "A4": "A programming function"
+    },
+    "key": "A table with columns and rows",
+    "justification": "Relation is equivalent to table in RDBMS",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "In relational databases, what is an attribute?",
+    "answers": {
+      "A1": "A characteristic of a person",
+      "A2": "A named column of a relation",
+      "A3": "A row in a table",
+      "A4": "A database constraint"
+    },
+    "key": "A named column of a relation",
+    "justification": "Attributes are table columns",
+    "frequency": 12
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a tuple in a relation?",
+    "answers": {
+      "A1": "A mathematical operation",
+      "A2": "A row of a relation",
+      "A3": "A column definition",
+      "A4": "A database index"
+    },
+    "key": "A row of a relation",
+    "justification": "Tuple is equivalent to row in table",
+    "frequency": 6
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a primary key in a table?",
+    "answers": {
+      "A1": "A column that stores passwords",
+      "A2": "A unique identifier for each row",
+      "A3": "The first column in the table",
+      "A4": "A backup key for security"
+    },
+    "key": "A unique identifier for each row",
+    "justification": "Primary key uniquely identifies rows",
+    "frequency": 9
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a foreign key?",
+    "answers": {
+      "A1": "A key from another country",
+      "A2": "A key that links data in two relations",
+      "A3": "A temporary key",
+      "A4": "A key for external databases"
+    },
+    "key": "A key that links data in two relations",
+    "justification": "Foreign keys maintain referential integrity",
+    "frequency": 11
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is normalization in database design?",
+    "answers": {
+      "A1": "Converting data to numbers",
+      "A2": "Organizing data to minimize redundancy",
+      "A3": "Making all data uniform",
+      "A4": "Backing up database regularly"
+    },
+    "key": "Organizing data to minimize redundancy",
+    "justification": "Normalization reduces data redundancy",
+    "frequency": 6
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is First Normal Form (1NF)?",
+    "answers": {
+      "A1": "Data stored in one location",
+      "A2": "All attributes contain atomic values only",
+      "A3": "First table created",
+      "A4": "Primary key defined"
+    },
+    "key": "All attributes contain atomic values only",
+    "justification": "1NF requires atomic values",
+    "frequency": 8
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is Second Normal Form (2NF)?",
+    "answers": {
+      "A1": "Two copies of data",
+      "A2": "In 1NF and every non-key attribute fully dependent on primary key",
+      "A3": "Second table in database",
+      "A4": "Backup of first normal form"
+    },
+    "key": "In 1NF and every non-key attribute fully dependent on primary key",
+    "justification": "2NF removes partial dependencies",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is Third Normal Form (3NF)?",
+    "answers": {
+      "A1": "Three data copies",
+      "A2": "In 2NF and every non-key attribute non-transitively dependent on primary key",
+      "A3": "Third database table",
+      "A4": "Triple backup system"
+    },
+    "key": "In 2NF and every non-key attribute non-transitively dependent on primary key",
+    "justification": "3NF removes transitive dependencies",
+    "frequency": 9
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a candidate key?",
+    "answers": {
+      "A1": "A key that might be used",
+      "A2": "An attribute uniquely identifying a row without being part of another candidate key",
+      "A3": "A temporary key",
+      "A4": "A key for new databases"
+    },
+    "key": "An attribute uniquely identifying a row without being part of another candidate key",
+    "justification": "Candidate keys are alternative keys",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a NULL value?",
+    "answers": {
+      "A1": "A value of zero",
+      "A2": "An empty space",
+      "A3": "Missing or unknown data",
+      "A4": "An empty string"
+    },
+    "key": "Missing or unknown data",
+    "justification": "NULL represents unknown values",
+    "frequency": 8
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is referential integrity?",
+    "answers": {
+      "A1": "Referring to correct database",
+      "A2": "Foreign key value matches candidate key or is NULL",
+      "A3": "Integrity of reference books",
+      "A4": "Speed of references"
+    },
+    "key": "Foreign key value matches candidate key or is NULL",
+    "justification": "Referential integrity maintains FK constraints",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a view in a database?",
+    "answers": {
+      "A1": "A way to look at data",
+      "A2": "A virtual table created from base relations",
+      "A3": "A physical copy of table",
+      "A4": "A backup view"
+    },
+    "key": "A virtual table created from base relations",
+    "justification": "Views are virtual tables",
+    "frequency": 13
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is an index in a database?",
+    "answers": {
+      "A1": "A list of topics",
+      "A2": "A table of contents",
+      "A3": "A structure for fast data retrieval",
+      "A4": "A page number reference"
+    },
+    "key": "A structure for fast data retrieval",
+    "justification": "Indexes speed up queries",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is SQL?",
+    "answers": {
+      "A1": "Structured Question Language",
+      "A2": "Structured Query Language",
+      "A3": "Simple Query Logic",
+      "A4": "System Query Language"
+    },
+    "key": "Structured Query Language",
+    "justification": "SQL is standard database query language",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a SELECT statement?",
+    "answers": {
+      "A1": "Inserting data",
+      "A2": "Retrieving data from database",
+      "A3": "Deleting data",
+      "A4": "Updating data"
+    },
+    "key": "Retrieving data from database",
+    "justification": "SELECT retrieves data",
+    "frequency": 10
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is an INSERT statement?",
+    "answers": {
+      "A1": "Retrieving records",
+      "A2": "Adding new records to table",
+      "A3": "Updating existing data",
+      "A4": "Deleting records"
+    },
+    "key": "Adding new records to table",
+    "justification": "INSERT adds new rows",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is an UPDATE statement?",
+    "answers": {
+      "A1": "Adding records",
+      "A2": "Modifying existing data",
+      "A3": "Retrieving records",
+      "A4": "Deleting records"
+    },
+    "key": "Modifying existing data",
+    "justification": "UPDATE modifies existing rows",
+    "frequency": 13
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a DELETE statement?",
+    "answers": {
+      "A1": "Adding records",
+      "A2": "Removing records from table",
+      "A3": "Updating records",
+      "A4": "Creating table"
+    },
+    "key": "Removing records from table",
+    "justification": "DELETE removes rows",
+    "frequency": 3
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a JOIN in SQL?",
+    "answers": {
+      "A1": "Joining two companies",
+      "A2": "Combining rows from multiple tables",
+      "A3": "Adding columns",
+      "A4": "Removing duplicates"
+    },
+    "key": "Combining rows from multiple tables",
+    "justification": "JOIN combines related tables",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is an INNER JOIN?",
+    "answers": {
+      "A1": "Interior join",
+      "A2": "Returns rows with matches in both tables",
+      "A3": "Outer boundary join",
+      "A4": "Internal table connection"
+    },
+    "key": "Returns rows with matches in both tables",
+    "justification": "INNER JOIN returns matching records",
+    "frequency": 5
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a LEFT JOIN?",
+    "answers": {
+      "A1": "Join on left side only",
+      "A2": "Returns all rows from left table and matching from right",
+      "A3": "Join leftmost columns",
+      "A4": "Partial left data"
+    },
+    "key": "Returns all rows from left table and matching from right",
+    "justification": "LEFT JOIN preserves left table rows",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a transaction?",
+    "answers": {
+      "A1": "A business deal",
+      "A2": "A sequence of database operations",
+      "A3": "Money transfer",
+      "A4": "A sale"
+    },
+    "key": "A sequence of database operations",
+    "justification": "Transaction is logical unit of work",
+    "frequency": 5
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is ACID property in databases?",
+    "answers": {
+      "A1": "A chemical compound",
+      "A2": "Atomicity, Consistency, Isolation, Durability",
+      "A3": "Automatic Checking Interface Design",
+      "A4": "Administrative Code ID"
+    },
+    "key": "Atomicity, Consistency, Isolation, Durability",
+    "justification": "ACID ensures transaction reliability",
+    "frequency": 12
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is Atomicity?",
+    "answers": {
+      "A1": "Related to atoms",
+      "A2": "Transaction is all or nothing",
+      "A3": "Tiny transactions",
+      "A4": "Atomic data"
+    },
+    "key": "Transaction is all or nothing",
+    "justification": "Atomicity ensures complete transactions",
+    "frequency": 2
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is Consistency?",
+    "answers": {
+      "A1": "Regular patterns",
+      "A2": "Database moves from valid state to valid state",
+      "A3": "Constant values",
+      "A4": "Repeated data"
+    },
+    "key": "Database moves from valid state to valid state",
+    "justification": "Consistency maintains data integrity",
+    "frequency": 5
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is Isolation?",
+    "answers": {
+      "A1": "Separating objects",
+      "A2": "Transactions don't interfere with each other",
+      "A3": "Isolated data",
+      "A4": "Remote access"
+    },
+    "key": "Transactions don't interfere with each other",
+    "justification": "Isolation prevents transaction conflicts",
+    "frequency": 13
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is Durability?",
+    "answers": {
+      "A1": "Long lasting",
+      "A2": "Committed data persists despite failures",
+      "A3": "Permanent storage",
+      "A4": "Strong backup"
+    },
+    "key": "Committed data persists despite failures",
+    "justification": "Durability ensures data persistence",
+    "frequency": 10
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a schema?",
+    "answers": {
+      "A1": "A plan",
+      "A2": "A set of table definitions",
+      "A3": "A visual diagram",
+      "A4": "Database backup"
+    },
+    "key": "A set of table definitions",
+    "justification": "Schema defines database structure",
+    "frequency": 9
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is data redundancy?",
+    "answers": {
+      "A1": "Repeated backups",
+      "A2": "Unnecessary duplication of data",
+      "A3": "Backup data",
+      "A4": "Redundant servers"
+    },
+    "key": "Unnecessary duplication of data",
+    "justification": "Redundancy wastes storage",
+    "frequency": 8
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is an insertion anomaly?",
+    "answers": {
+      "A1": "Strange insertion",
+      "A2": "Unable to insert data without violating constraints",
+      "A3": "Automatic insertion",
+      "A4": "Error in entering data"
+    },
+    "key": "Unable to insert data without violating constraints",
+    "justification": "Insertion anomaly in poorly normalized data",
+    "frequency": 9
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a deletion anomaly?",
+    "answers": {
+      "A1": "Strange deletion",
+      "A2": "Unintended loss of data when deleting records",
+      "A3": "Accidental deletion",
+      "A4": "Automatic removal"
+    },
+    "key": "Unintended loss of data when deleting records",
+    "justification": "Deletion anomaly causes data loss",
+    "frequency": 5
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a modification anomaly?",
+    "answers": {
+      "A1": "Strange modification",
+      "A2": "Inconsistency from updating redundant data",
+      "A3": "Data change",
+      "A4": "Software update"
+    },
+    "key": "Inconsistency from updating redundant data",
+    "justification": "Modification anomaly creates inconsistency",
+    "frequency": 12
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a functional dependency?",
+    "answers": {
+      "A1": "Function that depends on input",
+      "A2": "One attribute determining another attribute value",
+      "A3": "Dependent functions",
+      "A4": "Function relationship"
+    },
+    "key": "One attribute determining another attribute value",
+    "justification": "Functional dependency is important for normalization",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a partial functional dependency?",
+    "answers": {
+      "A1": "Incomplete dependency",
+      "A2": "Non-key depends on part of composite key",
+      "A3": "Partial key dependency",
+      "A4": "Incomplete key"
+    },
+    "key": "Non-key depends on part of composite key",
+    "justification": "Partial dependency removed in 2NF",
+    "frequency": 12
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a transitive dependency?",
+    "answers": {
+      "A1": "Temporary dependency",
+      "A2": "Non-key attribute depends on another non-key",
+      "A3": "Passing through",
+      "A4": "Moving dependency"
+    },
+    "key": "Non-key attribute depends on another non-key",
+    "justification": "Transitive dependency removed in 3NF",
+    "frequency": 13
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is an Entity-Relationship (ER) model?",
+    "answers": {
+      "A1": "A relationship model",
+      "A2": "A visual representation of database structure",
+      "A3": "Entity connection model",
+      "A4": "Relationship management"
+    },
+    "key": "A visual representation of database structure",
+    "justification": "ER model is fundamental design tool",
+    "frequency": 10
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is cardinality in ER model?",
+    "answers": {
+      "A1": "Cardinal numbers",
+      "A2": "The number of occurrences in relationship",
+      "A3": "Counting data",
+      "A4": "Numbered relationships"
+    },
+    "key": "The number of occurrences in relationship",
+    "justification": "Cardinality defines relationship multiplicity",
+    "frequency": 6
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a one-to-many relationship?",
+    "answers": {
+      "A1": "Single to group",
+      "A2": "One entity instance related to many in other",
+      "A3": "Many to one",
+      "A4": "Multiple items"
+    },
+    "key": "One entity instance related to many in other",
+    "justification": "One-to-many is common relationship type",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a many-to-many relationship?",
+    "answers": {
+      "A1": "Many groups",
+      "A2": "Entities on both sides related to many",
+      "A3": "Multiple connections",
+      "A4": "Group relations"
+    },
+    "key": "Entities on both sides related to many",
+    "justification": "Many-to-many requires junction table",
+    "frequency": 5
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a bitmap index?",
+    "answers": {
+      "A1": "Image index",
+      "A2": "Index using bit-vectors for values",
+      "A3": "Bitmap storage",
+      "A4": "Graphic index"
+    },
+    "key": "Index using bit-vectors for values",
+    "justification": "Bitmap indexes optimize certain queries",
+    "frequency": 7
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is a B-tree?",
+    "answers": {
+      "A1": "Tree with B nodes",
+      "A2": "Balanced tree structure for indexing",
+      "A3": "Binary tree",
+      "A4": "Branch tree"
+    },
+    "key": "Balanced tree structure for indexing",
+    "justification": "B-trees used in database indexing",
+    "frequency": 5
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is the difference between a primary key and a candidate key?",
+    "answers": {
+      "A1": "No difference",
+      "A2": "Primary key is one chosen from candidate keys",
+      "A3": "Candidate key is backup",
+      "A4": "Primary key is temporary"
+    },
+    "key": "Primary key is one chosen from candidate keys",
+    "justification": "Primary key chosen from candidates",
+    "frequency": 8
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "How does normalization improve database design?",
+    "answers": {
+      "A1": "Makes data uniform",
+      "A2": "Reduces redundancy and anomalies",
+      "A3": "Speeds up queries",
+      "A4": "Increases data size"
+    },
+    "key": "Reduces redundancy and anomalies",
+    "justification": "Normalization addresses design issues",
+    "frequency": 6
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is the purpose of RESTRICT in referential integrity?",
+    "answers": {
+      "A1": "Prevent certain queries",
+      "A2": "Stop actions violating integrity",
+      "A3": "Restrict user access",
+      "A4": "Limit data entry"
+    },
+    "key": "Stop actions violating integrity",
+    "justification": "RESTRICT prevents integrity violations",
+    "frequency": 4
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is CASCADE in referential integrity?",
+    "answers": {
+      "A1": "Cascading failure",
+      "A2": "Allows changes to flow through relations",
+      "A3": "Cascade deletion",
+      "A4": "Automatic failure"
+    },
+    "key": "Allows changes to flow through relations",
+    "justification": "CASCADE propagates changes",
+    "frequency": 6
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is NULLIFY in referential integrity?",
+    "answers": {
+      "A1": "Setting to zero",
+      "A2": "Sets problem values to NULL",
+      "A3": "Nullifying data",
+      "A4": "Removing NULL"
+    },
+    "key": "Sets problem values to NULL",
+    "justification": "NULLIFY handles referential issues",
+    "frequency": 1
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is the degree of a relation in database terms?",
+    "answers": {
+      "A1": "The strength of the relation",
+      "A2": "The number of attributes in a relation",
+      "A3": "The number of tables",
+      "A4": "The relationship strength"
+    },
+    "key": "The number of attributes in a relation",
+    "justification": "Degree is the attribute count",
+    "frequency": 10
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is the cardinality of a relation?",
+    "answers": {
+      "A1": "The cardinal numbers",
+      "A2": "The number of tuples in a relation",
+      "A3": "The table name",
+      "A4": "The number of attributes"
+    },
+    "key": "The number of tuples in a relation",
+    "justification": "Cardinality is the tuple count",
+    "frequency": 4
+  },
+  {
+    "type": "easy",
+    "category": "Data Base",
+    "question": "What is domain in relational model terms?",
+    "answers": {
+      "A1": "A website domain",
+      "A2": "The set of allowable values for attribute",
+      "A3": "A business domain",
+      "A4": "A data type"
+    },
+    "key": "The set of allowable values for attribute",
+    "justification": "Domain constrains attribute values",
+    "frequency": 12
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "Explain the difference between a base relation and a view?",
+    "answers": {
+      "A1": "No difference",
+      "A2": "Base is physical, view is virtual based on relations",
+      "A3": "View is physical",
+      "A4": "Base is temporary"
+    },
+    "key": "Base is physical, view is virtual based on relations",
+    "justification": "Views are derived from base relations",
+    "frequency": 4
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is logical data independence?",
+    "answers": {
+      "A1": "Freedom to access data",
+      "A2": "Immunity of external schemas to conceptual schema changes",
+      "A3": "Physical data changes",
+      "A4": "Application independence"
+    },
+    "key": "Immunity of external schemas to conceptual schema changes",
+    "justification": "Logical independence protects applications",
+    "frequency": 2
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is physical data independence?",
+    "answers": {
+      "A1": "Independence of physical location",
+      "A2": "Immunity of conceptual schema to internal schema changes",
+      "A3": "Freedom to move data",
+      "A4": "Storage independence"
+    },
+    "key": "Immunity of conceptual schema to internal schema changes",
+    "justification": "Physical independence protects design",
+    "frequency": 8
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is the ANSI-SPARC architecture?",
+    "answers": {
+      "A1": "A spacecraft design",
+      "A2": "Three-level database architecture",
+      "A3": "Network architecture",
+      "A4": "Storage architecture"
+    },
+    "key": "Three-level database architecture",
+    "justification": "ANSI-SPARC defines external, conceptual, internal",
+    "frequency": 11
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "In database design, what is data redundancy?",
+    "answers": {
+      "A1": "Backup data",
+      "A2": "Unnecessary duplication of data",
+      "A3": "Extra storage",
+      "A4": "Multiple databases"
+    },
+    "key": "Unnecessary duplication of data",
+    "justification": "Redundancy is eliminated by normalization",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is the relationship between normalization and removing functional dependencies?",
+    "answers": {
+      "A1": "No relationship",
+      "A2": "Normalization removes partial and transitive dependencies",
+      "A3": "They are unrelated",
+      "A4": "Dependencies increase normalization"
+    },
+    "key": "Normalization removes partial and transitive dependencies",
+    "justification": "Normalization addresses functional dependencies",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "Explain Boyce-Codd Normal Form (BCNF)?",
+    "answers": {
+      "A1": "Basic form",
+      "A2": "Every determinant is a candidate key",
+      "A3": "Between 3NF and 4NF",
+      "A4": "Normal form variant"
+    },
+    "key": "Every determinant is a candidate key",
+    "justification": "BCNF is stricter than 3NF",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is Fourth Normal Form (4NF)?",
+    "answers": {
+      "A1": "Fourth database level",
+      "A2": "In BCNF without non-trivial multivalued dependencies",
+      "A3": "After third form",
+      "A4": "Advanced normalization"
+    },
+    "key": "In BCNF without non-trivial multivalued dependencies",
+    "justification": "4NF handles multivalued dependencies",
+    "frequency": 4
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is a dense index?",
+    "answers": {
+      "A1": "Tightly packed index",
+      "A2": "Index entry for every search-key value",
+      "A3": "Compressed index",
+      "A4": "Complex index"
+    },
+    "key": "Index entry for every search-key value",
+    "justification": "Dense index has entry per value",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is a sparse index?",
+    "answers": {
+      "A1": "Sparsely populated index",
+      "A2": "Index entry for some search-key values",
+      "A3": "Light index",
+      "A4": "Partial index"
+    },
+    "key": "Index entry for some search-key values",
+    "justification": "Sparse index has entry per block",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is a secondary index?",
+    "answers": {
+      "A1": "Index on second table",
+      "A2": "Index on non-key attribute",
+      "A3": "Backup index",
+      "A4": "Alternate index"
+    },
+    "key": "Index on non-key attribute",
+    "justification": "Secondary indexes speed non-key searches",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is query optimization?",
+    "answers": {
+      "A1": "Optimizing database query speed",
+      "A2": "Selecting most efficient query execution plan",
+      "A3": "Improving query writing",
+      "A4": "Query tuning tools"
+    },
+    "key": "Selecting most efficient query execution plan",
+    "justification": "Optimizer chooses best execution path",
+    "frequency": 5
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is a query execution plan?",
+    "answers": {
+      "A1": "Plan for writing queries",
+      "A2": "Sequence of operations for executing query",
+      "A3": "Query design plan",
+      "A4": "Query implementation"
+    },
+    "key": "Sequence of operations for executing query",
+    "justification": "Execution plan determines performance",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is denormalization and when is it used?",
+    "answers": {
+      "A1": "Removing normalization",
+      "A2": "Intentionally adding redundancy for performance",
+      "A3": "Canceling normalization",
+      "A4": "Unnormalizing data"
+    },
+    "key": "Intentionally adding redundancy for performance",
+    "justification": "Denormalization trades consistency for speed",
+    "frequency": 11
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is the difference between HAVING and WHERE clauses?",
+    "answers": {
+      "A1": "WHERE filters rows before grouping; HAVING filters groups after aggregation",
+      "A2": "They are identical in functionality",
+      "A3": "HAVING filters rows before grouping",
+      "A4": "WHERE is specifically for aggregate functions"
+    },
+    "key": "WHERE filters rows before grouping; HAVING filters groups after aggregation",
+    "justification": "WHERE and HAVING operate at different stages",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is a GROUP BY clause used for?",
+    "answers": {
+      "A1": "Sorting results alphabetically by column",
+      "A2": "Grouping rows by column values for aggregate functions",
+      "A3": "Removing all duplicate rows from results",
+      "A4": "Ordering columns physically in table"
+    },
+    "key": "Grouping rows by column values for aggregate functions",
+    "justification": "GROUP BY creates row groups for aggregation",
+    "frequency": 5
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What are aggregate functions in SQL?",
+    "answers": {
+      "A1": "Functions that join multiple tables together",
+      "A2": "Functions that perform calculations on multiple values",
+      "A3": "Functions that filter data based on conditions",
+      "A4": "Functions that sort data in specific order"
+    },
+    "key": "Functions that perform calculations on multiple values",
+    "justification": "Aggregate functions like SUM, AVG work on row sets",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is an ORDER BY clause?",
+    "answers": {
+      "A1": "Organizing data logically in memory",
+      "A2": "Sorting result rows based on specified columns",
+      "A3": "Arranging table structure physically",
+      "A4": "Reorganizing database schema"
+    },
+    "key": "Sorting result rows based on specified columns",
+    "justification": "ORDER BY sorts results ascending or descending",
+    "frequency": 11
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is DISTINCT in SQL?",
+    "answers": {
+      "A1": "Making data physically distinct",
+      "A2": "Removing duplicate rows from results",
+      "A3": "Creating distinct separate tables",
+      "A4": "Separating data uniquely in storage"
+    },
+    "key": "Removing duplicate rows from results",
+    "justification": "DISTINCT eliminates duplicates in query output",
+    "frequency": 8
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is the LIKE operator used for?",
+    "answers": {
+      "A1": "Finding database records with similar values",
+      "A2": "Pattern matching on string values with wildcards",
+      "A3": "Creating database likes and favorites",
+      "A4": "Comparing numeric values directly"
+    },
+    "key": "Pattern matching on string values with wildcards",
+    "justification": "LIKE searches patterns using % and _ wildcards",
+    "frequency": 8
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is the BETWEEN operator?",
+    "answers": {
+      "A1": "Finding values between multiple tables",
+      "A2": "Selecting values within an inclusive range",
+      "A3": "Connecting data between different systems",
+      "A4": "Placing data logically between columns"
+    },
+    "key": "Selecting values within an inclusive range",
+    "justification": "BETWEEN selects values in specified range",
+    "frequency": 1
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is the IN operator?",
+    "answers": {
+      "A1": "Inserting data values into tables",
+      "A2": "Testing if value matches any in a list",
+      "A3": "Including specific columns in selection",
+      "A4": "Internal database operation process"
+    },
+    "key": "Testing if value matches any in a list",
+    "justification": "IN checks if value exists in specified list",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is a RIGHT JOIN?",
+    "answers": {
+      "A1": "Joining right-side table data only",
+      "A2": "Returns all rows from right table and matching from left",
+      "A3": "Joining rightmost columns together",
+      "A4": "Right-aligned join operation"
+    },
+    "key": "Returns all rows from right table and matching from left",
+    "justification": "RIGHT JOIN preserves all right table rows",
+    "frequency": 5
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is a FULL OUTER JOIN?",
+    "answers": {
+      "A1": "Outer perimeter join of tables",
+      "A2": "Returns all rows from both tables matching or not",
+      "A3": "Full combination of all table data",
+      "A4": "Complete outer merge operation"
+    },
+    "key": "Returns all rows from both tables matching or not",
+    "justification": "FULL OUTER JOIN includes unmatched rows",
+    "frequency": 2
+  },
+  {
+    "type": "medium",
+    "category": "Data Base",
+    "question": "What is a CROSS JOIN?",
+    "answers": {
+      "A1": "Joining data across different systems",
+      "A2": "Cartesian product of all rows from both tables",
+      "A3": "Crossing table boundaries for union",
+      "A4": "Cross-database join operation"
+    },
+    "key": "Cartesian product of all rows from both tables",
+    "justification": "CROSS JOIN produces all combinations",
+    "frequency": 13
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What are subqueries?",
+    "answers": {
+      "A1": "Sub-databases for handling specific queries",
+      "A2": "Query nested within another query",
+      "A3": "Lower-level query operations only",
+      "A4": "Partial query execution blocks"
+    },
+    "key": "Query nested within another query",
+    "justification": "Subqueries provide intermediate result sets",
+    "frequency": 13
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is a correlated subquery?",
+    "answers": {
+      "A1": "Subquery with correlation coefficient",
+      "A2": "Subquery referencing columns from outer query",
+      "A3": "Connected correlated subqueries",
+      "A4": "Linked nested query blocks"
+    },
+    "key": "Subquery referencing columns from outer query",
+    "justification": "Correlated subqueries execute per row",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is the difference between UNION and UNION ALL?",
+    "answers": {
+      "A1": "No meaningful difference between them",
+      "A2": "UNION removes duplicates; UNION ALL keeps all rows",
+      "A3": "UNION ALL is faster than UNION",
+      "A4": "UNION works better for larger datasets"
+    },
+    "key": "UNION removes duplicates; UNION ALL keeps all rows",
+    "justification": "UNION performs duplicate elimination via sort",
+    "frequency": 4
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is INTERSECT?",
+    "answers": {
+      "A1": "Finding intersection points in data",
+      "A2": "Returning rows common to both query results",
+      "A3": "Combining result sets from queries",
+      "A4": "Crossing result sets for comparison"
+    },
+    "key": "Returning rows common to both query results",
+    "justification": "INTERSECT finds common rows",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is EXCEPT (or MINUS)?",
+    "answers": {
+      "A1": "Excluding certain columns from results",
+      "A2": "Rows in first query but not in second",
+      "A3": "Removing data exceptionally",
+      "A4": "Excluding specific tables"
+    },
+    "key": "Rows in first query but not in second",
+    "justification": "EXCEPT returns difference between sets",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is a window function?",
+    "answers": {
+      "A1": "Function for window display operations",
+      "A2": "Function operating on row set within result window",
+      "A3": "Window management function operation",
+      "A4": "Display window function for UI"
+    },
+    "key": "Function operating on row set within result window",
+    "justification": "Window functions work over partitions",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What are Common Table Expressions (CTEs)?",
+    "answers": {
+      "A1": "Common temporary table expressions",
+      "A2": "Named temporary result sets defined in query",
+      "A3": "Commonly used table expression templates",
+      "A4": "Expression templates for reuse"
+    },
+    "key": "Named temporary result sets defined in query",
+    "justification": "CTEs improve readability using WITH clause",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is database replication?",
+    "answers": {
+      "A1": "Creating exact copies of database",
+      "A2": "Maintaining copies of database across systems",
+      "A3": "Backup replication process only",
+      "A4": "Duplicating databases locally"
+    },
+    "key": "Maintaining copies of database across systems",
+    "justification": "Replication ensures availability",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is database sharding?",
+    "answers": {
+      "A1": "Breaking database into fragments",
+      "A2": "Distributing data across multiple servers",
+      "A3": "Fragmenting data for backup",
+      "A4": "Dividing database for security"
+    },
+    "key": "Distributing data across multiple servers",
+    "justification": "Sharding improves scalability",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is database indexing strategy?",
+    "answers": {
+      "A1": "Creating index files manually",
+      "A2": "Planning which columns to index for performance",
+      "A3": "Indexing all columns automatically",
+      "A4": "Creating backup indexes"
+    },
+    "key": "Planning which columns to index for performance",
+    "justification": "Index strategy affects query performance",
+    "frequency": 17
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is EXPLAIN in SQL?",
+    "answers": {
+      "A1": "Explaining query results",
+      "A2": "Showing query execution plan and statistics",
+      "A3": "Explaining database structure",
+      "A4": "Describing table contents"
+    },
+    "key": "Showing query execution plan and statistics",
+    "justification": "EXPLAIN helps optimize queries",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What are prepared statements?",
+    "answers": {
+      "A1": "Statements prepared for execution",
+      "A2": "Pre-compiled SQL with placeholders for security",
+      "A3": "Statements prepared in advance",
+      "A4": "Pre-written SQL queries"
+    },
+    "key": "Pre-compiled SQL with placeholders for security",
+    "justification": "Prepared statements prevent SQL injection",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is SQL injection?",
+    "answers": {
+      "A1": "Injecting SQL into databases",
+      "A2": "Security vulnerability where malicious SQL is inserted",
+      "A3": "Inserting SQL code for updates",
+      "A4": "Injecting queries into system"
+    },
+    "key": "Security vulnerability where malicious SQL is inserted",
+    "justification": "SQL injection is critical security threat",
+    "frequency": 5
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is database partitioning?",
+    "answers": {
+      "A1": "Dividing database into parts",
+      "A2": "Splitting large table into smaller logical parts",
+      "A3": "Physical separation of databases",
+      "A4": "Partitioning disk space"
+    },
+    "key": "Splitting large table into smaller logical parts",
+    "justification": "Partitioning improves performance",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is database archiving?",
+    "answers": {
+      "A1": "Creating archive databases",
+      "A2": "Moving old data to separate storage for retention",
+      "A3": "Archiving database backups",
+      "A4": "Storing database records"
+    },
+    "key": "Moving old data to separate storage for retention",
+    "justification": "Archiving manages old data",
+    "frequency": 4
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is database purging?",
+    "answers": {
+      "A1": "Cleaning database connections",
+      "A2": "Permanently deleting old or unwanted data",
+      "A3": "Removing temporary files",
+      "A4": "Cleaning database cache"
+    },
+    "key": "Permanently deleting old or unwanted data",
+    "justification": "Purging removes obsolete data",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "Data Base",
+    "question": "What is the CAP theorem in databases?",
+    "answers": {
+      "A1": "Capital allocation principle",
+      "A2": "Consistency, Availability, Partition tolerance tradeoff",
+      "A3": "Cache, Analysis, Performance principle",
+      "A4": "Centralization, Availability, Persistence principle"
+    },
+    "key": "Consistency, Availability, Partition tolerance tradeoff",
+    "justification": "CAP theorem limits distributed system design",
+    "frequency": 6
+  }
+]

@@ -1,0 +1,1136 @@
+[
+  {
+    "type": "medium",
+    "question": "What are STL containers in C++?",
+    "answers": {
+      "A1": "Pre-built classes for storing collections of data",
+      "A2": "A type of variable",
+      "A3": "Functions in the C++ library",
+      "A4": "Operating system concepts"
+    },
+    "key": "Pre-built classes for storing collections of data",
+    "justification": "STL (Standard Template Library) containers are template classes that provide efficient data structures like vector, list, map, set, etc.",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "question": "What is the difference between vector and list in STL?",
+    "answers": {
+      "A1": "Vector is slower; list is faster",
+      "A2": "Vector uses contiguous memory (array-based); list uses linked nodes",
+      "A3": "Vector is thread-safe; list is not",
+      "A4": "They are identical"
+    },
+    "key": "Vector uses contiguous memory (array-based); list uses linked nodes",
+    "justification": "Vector provides O(1) random access but O(n) insertion/deletion. List provides O(n) access but O(1) insertion/deletion at known position.",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "medium",
+    "question": "What is the time complexity of accessing an element in a vector?",
+    "answers": {
+      "A1": "O(n)",
+      "A2": "O(log n)",
+      "A3": "O(1)",
+      "A4": "O(n²)"
+    },
+    "key": "O(1)",
+    "justification": "Vector provides constant-time random access since it uses contiguous memory like arrays.",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "question": "What is the time complexity of inserting at the beginning of a vector?",
+    "answers": {
+      "A1": "O(1)",
+      "A2": "O(n)",
+      "A3": "O(log n)",
+      "A4": "O(n log n)"
+    },
+    "key": "O(n)",
+    "justification": "Insertion at the beginning requires shifting all elements, resulting in linear time complexity.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "medium",
+    "question": "What is a map in STL?",
+    "answers": {
+      "A1": "A visual representation of data",
+      "A2": "An associative container storing key-value pairs in sorted order",
+      "A3": "A geographic tool",
+      "A4": "A type of array"
+    },
+    "key": "An associative container storing key-value pairs in sorted order",
+    "justification": "Map stores elements as key-value pairs, maintains sorted order by key, and provides O(log n) search/insert/delete.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "medium",
+    "question": "What is the difference between map and unordered_map?",
+    "answers": {
+      "A1": "Map is slower; unordered_map is faster",
+      "A2": "Map maintains sorted order (O(log n)); unordered_map uses hash (average O(1))",
+      "A3": "unordered_map can have duplicate keys; map cannot",
+      "A4": "They are the same"
+    },
+    "key": "Map maintains sorted order (O(log n)); unordered_map uses hash (average O(1))",
+    "justification": "Map uses balanced tree for ordered access, unordered_map uses hash table for faster average-case access.",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "medium",
+    "question": "What is a set in STL?",
+    "answers": {
+      "A1": "A collection of related objects",
+      "A2": "An ordered container of unique elements",
+      "A3": "A function that sets values",
+      "A4": "A mathematical equation"
+    },
+    "key": "An ordered container of unique elements",
+    "justification": "Set stores unique elements in sorted order and automatically rejects duplicates.",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "medium",
+    "question": "What is the difference between set and multiset?",
+    "answers": {
+      "A1": "Set can have duplicates; multiset cannot",
+      "A2": "Set stores unique elements; multiset allows duplicates",
+      "A3": "Multiset is sorted; set is not",
+      "A4": "They are identical"
+    },
+    "key": "Set stores unique elements; multiset allows duplicates",
+    "justification": "Both maintain sorted order, but set rejects duplicates while multiset allows multiple copies of the same value.",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "medium",
+    "question": "What is a queue in STL?",
+    "answers": {
+      "A1": "A line for customers",
+      "A2": "A FIFO (First-In-First-Out) container",
+      "A3": "A circular data structure",
+      "A4": "A type of pointer"
+    },
+    "key": "A FIFO (First-In-First-Out) container",
+    "justification": "Queue implements FIFO where elements are added at the back and removed from the front.",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "question": "What is a stack in STL?",
+    "answers": {
+      "A1": "A pile of objects",
+      "A2": "A LIFO (Last-In-First-Out) container",
+      "A3": "A type of array",
+      "A4": "A sorting algorithm"
+    },
+    "key": "A LIFO (Last-In-First-Out) container",
+    "justification": "Stack implements LIFO where elements are added and removed from the top (back).",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "medium",
+    "question": "What is an iterator in STL?",
+    "answers": {
+      "A1": "An object that repeats operations",
+      "A2": "A pointer-like object that allows traversing container elements",
+      "A3": "A function that iterates",
+      "A4": "A type of loop"
+    },
+    "key": "A pointer-like object that allows traversing container elements",
+    "justification": "Iterators work like pointers to elements in a container, enabling traversal and manipulation of container elements.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "medium",
+    "question": "What are the different types of iterators in STL?",
+    "answers": {
+      "A1": "Only one type exists",
+      "A2": "Input, Output, Forward, Bidirectional, Random Access",
+      "A3": "Mutable and immutable",
+      "A4": "Static and dynamic"
+    },
+    "key": "Input, Output, Forward, Bidirectional, Random Access",
+    "justification": "Five categories of iterators with different capabilities, from basic input/output to full random access.",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "question": "What is the difference between array and vector?",
+    "answers": {
+      "A1": "Array is dynamic; vector is fixed size",
+      "A2": "Vector is dynamic; array is fixed size",
+      "A3": "They are the same",
+      "A4": "Array is an object; vector is a primitive"
+    },
+    "key": "Vector is dynamic; array is fixed size",
+    "justification": "Arrays have fixed size determined at compile time, while vectors are dynamic and can grow/shrink at runtime.",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "medium",
+    "question": "What is a pointer in C++?",
+    "answers": {
+      "A1": "A variable that stores a memory address",
+      "A2": "A type of data",
+      "A3": "A function that points to something",
+      "A4": "An operator in mathematics"
+    },
+    "key": "A variable that stores a memory address",
+    "justification": "Pointers store the memory address of another variable, allowing indirect access and dynamic memory allocation.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "medium",
+    "question": "What is the difference between a pointer and a reference?",
+    "answers": {
+      "A1": "They are identical",
+      "A2": "Pointer can be null and reassigned; reference cannot be null and is fixed",
+      "A3": "Reference can be null; pointer cannot",
+      "A4": "Pointers are slower than references"
+    },
+    "key": "Pointer can be null and reassigned; reference cannot be null and is fixed",
+    "justification": "References are safer alternatives to pointers - they cannot be null or reassigned after initialization.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "medium",
+    "question": "What is the 'new' operator used for?",
+    "answers": {
+      "A1": "To declare a new variable",
+      "A2": "To allocate memory dynamically on the heap and return a pointer",
+      "A3": "To create a new class",
+      "A4": "To initialize objects"
+    },
+    "key": "To allocate memory dynamically on the heap and return a pointer",
+    "justification": "The 'new' operator allocates memory during runtime and returns a pointer to the allocated memory.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "medium",
+    "question": "What is the 'delete' operator used for?",
+    "answers": {
+      "A1": "To remove a file",
+      "A2": "To deallocate memory that was allocated with 'new'",
+      "A3": "To delete a class definition",
+      "A4": "To remove an element from a container"
+    },
+    "key": "To deallocate memory that was allocated with 'new'",
+    "justification": "The 'delete' operator frees memory allocated on the heap, preventing memory leaks.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "medium",
+    "question": "What is a memory leak?",
+    "answers": {
+      "A1": "Memory that leaks to another program",
+      "A2": "Memory allocated but never deallocated, becoming inaccessible",
+      "A3": "Memory that is corrupted",
+      "A4": "A security vulnerability"
+    },
+    "key": "Memory allocated but never deallocated, becoming inaccessible",
+    "justification": "Memory leaks occur when dynamically allocated memory is not freed, wasting resources and potentially causing program failure.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "medium",
+    "question": "How to avoid memory leaks in C++?",
+    "answers": {
+      "A1": "Use global variables",
+      "A2": "Use smart pointers (unique_ptr, shared_ptr) or follow RAII principles",
+      "A3": "Allocate memory once",
+      "A4": "Use only stack memory"
+    },
+    "key": "Use smart pointers (unique_ptr, shared_ptr) or follow RAII principles",
+    "justification": "Smart pointers automatically manage memory, ensuring resources are freed when objects go out of scope.",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "medium",
+    "question": "What is the difference between stack and heap memory?",
+    "answers": {
+      "A1": "Stack is larger; heap is smaller",
+      "A2": "Stack is automatic, limited, fast; Heap is manual, large, slower",
+      "A3": "They are the same",
+      "A4": "Heap is safer than stack"
+    },
+    "key": "Stack is automatic, limited, fast; Heap is manual, large, slower",
+    "justification": "Stack memory is automatically managed for local variables, heap requires manual management for dynamic allocation.",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "question": "What is operator overloading in C++?",
+    "answers": {
+      "A1": "Using operators multiple times",
+      "A2": "Defining custom behavior for operators when applied to user-defined types",
+      "A3": "Creating new operators",
+      "A4": "Removing built-in operators"
+    },
+    "key": "Defining custom behavior for operators when applied to user-defined types",
+    "justification": "Operator overloading allows operators like +, -, * to work with custom classes by providing specific implementations.",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "medium",
+    "question": "How to overload the + operator in C++?",
+    "answers": {
+      "A1": "By creating a function named add()",
+      "A2": "By defining operator+() method or friend function",
+      "A3": "By modifying the built-in operator",
+      "A4": "It cannot be overloaded"
+    },
+    "key": "By defining operator+() method or friend function",
+    "justification": "The + operator is overloaded by implementing operator+() either as a member function or friend function.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "medium",
+    "question": "What is the difference between prefix and postfix operators (++/--)?",
+    "answers": {
+      "A1": "They are identical",
+      "A2": "Prefix returns reference (faster); postfix returns temporary (slower)",
+      "A3": "Postfix is used in loops; prefix is not",
+      "A4": "Prefix returns temporary; postfix returns reference"
+    },
+    "key": "Prefix returns reference (faster); postfix returns temporary (slower)",
+    "justification": "Prefix (++i) increments and returns reference; postfix (i++) creates a temporary, increments, returns temporary (less efficient).",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "question": "How to overload the [] (subscript) operator?",
+    "answers": {
+      "A1": "By creating a method named subscript()",
+      "A2": "By defining operator[]() method",
+      "A3": "It cannot be overloaded",
+      "A4": "By creating an array"
+    },
+    "key": "By defining operator[]() method",
+    "justification": "The subscript operator [] is overloaded through operator[]() method, often used for custom array-like access.",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "question": "What is the purpose of the == operator overload?",
+    "answers": {
+      "A1": "To assign values",
+      "A2": "To define equality comparison between objects",
+      "A3": "To delete objects",
+      "A4": "To create copies"
+    },
+    "key": "To define equality comparison between objects",
+    "justification": "Overloading == allows custom comparison logic for user-defined types instead of default pointer comparison.",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "medium",
+    "question": "Can assignment operator (=) be overloaded?",
+    "answers": {
+      "A1": "No, it cannot",
+      "A2": "Yes, by defining operator=() method",
+      "A3": "Only in derived classes",
+      "A4": "Only for pointers"
+    },
+    "key": "Yes, by defining operator=() method",
+    "justification": "Assignment operator can be overloaded to provide deep copy or custom assignment behavior for objects.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "medium",
+    "question": "What is the purpose of overloading the () operator?",
+    "answers": {
+      "A1": "To create functions",
+      "A2": "To make an object callable like a function (Functor/Function object)",
+      "A3": "To parenthesize expressions",
+      "A4": "To define scope"
+    },
+    "key": "To make an object callable like a function (Functor/Function object)",
+    "justification": "Overloading () creates function objects (functors) that can be invoked with function call syntax.",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "medium",
+    "question": "What is an exception in OOP?",
+    "answers": {
+      "A1": "An error message",
+      "A2": "An event that disrupts normal program flow, handled through try-catch blocks",
+      "A3": "A type of loop",
+      "A4": "A function that doesn't work"
+    },
+    "key": "An event that disrupts normal program flow, handled through try-catch blocks",
+    "justification": "Exceptions are runtime errors that can be thrown and caught, allowing structured error handling.",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "medium",
+    "question": "What is a try block used for?",
+    "answers": {
+      "A1": "To attempt something multiple times",
+      "A2": "To enclose code that might throw exceptions",
+      "A3": "To create a loop",
+      "A4": "To define a function"
+    },
+    "key": "To enclose code that might throw exceptions",
+    "justification": "A try block contains code that may throw exceptions, allowing catch blocks to handle them.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "medium",
+    "question": "What is a catch block used for?",
+    "answers": {
+      "A1": "To catch fish",
+      "A2": "To handle specific exceptions thrown from try block",
+      "A3": "To create a loop",
+      "A4": "To define variables"
+    },
+    "key": "To handle specific exceptions thrown from try block",
+    "justification": "A catch block specifies what to do when a particular exception is caught from the try block.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "medium",
+    "question": "Can multiple catch blocks follow a single try block?",
+    "answers": {
+      "A1": "No, only one catch block allowed",
+      "A2": "Yes, multiple catch blocks can handle different exception types",
+      "A3": "Only in Java, not C++",
+      "A4": "Only if they handle the same exception type"
+    },
+    "key": "Yes, multiple catch blocks can handle different exception types",
+    "justification": "Multiple catch blocks allow handling different exception types with specific recovery logic for each.",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "question": "What is the purpose of catch(...)?",
+    "answers": {
+      "A1": "To catch all exceptions as a last resort",
+      "A2": "To create a default catch block",
+      "A3": "To catch specific exceptions",
+      "A4": "To define a function"
+    },
+    "key": "To catch all exceptions as a last resort",
+    "justification": "catch(...) is a catch-all handler that catches any exception type not caught by specific catch blocks.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "medium",
+    "question": "What is exception inheritance in C++?",
+    "answers": {
+      "A1": "Inheriting exception classes to create custom exceptions",
+      "A2": "Making inheritance throw exceptions",
+      "A3": "Throwing inherited objects",
+      "A4": "Using exceptions in base classes"
+    },
+    "key": "Inheriting exception classes to create custom exceptions",
+    "justification": "Custom exceptions are created by inheriting from std::exception, allowing specialized error handling.",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "medium",
+    "question": "What is the difference between throw and rethrow?",
+    "answers": {
+      "A1": "They are the same",
+      "A2": "throw creates new exception; rethrow propagates caught exception up the call stack",
+      "A3": "rethrow creates new exception; throw propagates",
+      "A4": "rethrow can only be used in functions"
+    },
+    "key": "throw creates new exception; rethrow propagates caught exception up the call stack",
+    "justification": "throw creates and throws a new exception; rethrow (bare throw in catch) propagates the caught exception.",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "question": "What is const correctness?",
+    "answers": {
+      "A1": "Using const keyword everywhere",
+      "A2": "A programming practice of using const to prevent unintended modifications",
+      "A3": "Making all variables constants",
+      "A4": "A compiler optimization"
+    },
+    "key": "A programming practice of using const to prevent unintended modifications",
+    "justification": "Const correctness means using const strategically to enforce compile-time contracts about object mutability.",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "medium",
+    "question": "What is a const_cast in C++?",
+    "answers": {
+      "A1": "A cast that makes everything constant",
+      "A2": "A cast that adds or removes const qualifier",
+      "A3": "A cast between const and non-const pointers/references",
+      "A4": "A type of inheritance"
+    },
+    "key": "A cast that adds or removes const qualifier",
+    "justification": "const_cast allows explicit conversion between const and non-const types, should be used carefully.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "medium",
+    "question": "What is static_cast in C++?",
+    "answers": {
+      "A1": "A cast for static variables",
+      "A2": "A compile-time type conversion with type checking",
+      "A3": "A runtime type conversion",
+      "A4": "A cast for pointers only"
+    },
+    "key": "A compile-time type conversion with type checking",
+    "justification": "static_cast performs type conversion at compile time with some type checking, used for safe conversions.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "medium",
+    "question": "What is dynamic_cast in C++?",
+    "answers": {
+      "A1": "A cast that changes object dynamically",
+      "A2": "A runtime type conversion used for polymorphic types (requires RTTI)",
+      "A3": "A cast that works only for primitives",
+      "A4": "A compile-time conversion"
+    },
+    "key": "A runtime type conversion used for polymorphic types (requires RTTI)",
+    "justification": "dynamic_cast safely casts pointers/references in inheritance hierarchies, returning null if conversion fails.",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "medium",
+    "question": "What is reinterpret_cast in C++?",
+    "answers": {
+      "A1": "A safe type conversion",
+      "A2": "A low-level cast that reinterprets bit patterns without conversion",
+      "A3": "A cast for inheritance",
+      "A4": "A runtime type check"
+    },
+    "key": "A low-level cast that reinterprets bit patterns without conversion",
+    "justification": "reinterpret_cast performs unsafe conversions by treating objects' bit patterns as different types, use carefully.",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "medium",
+    "question": "What is the Strategy pattern?",
+    "answers": {
+      "A1": "A business strategy",
+      "A2": "A pattern that defines a family of algorithms and makes them interchangeable",
+      "A3": "A pattern for creating strategies",
+      "A4": "A pattern for game development"
+    },
+    "key": "A pattern that defines a family of algorithms and makes them interchangeable",
+    "justification": "Strategy pattern encapsulates algorithms in separate classes, allowing runtime selection of algorithm implementations.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "medium",
+    "question": "What is the Decorator pattern?",
+    "answers": {
+      "A1": "A pattern for decorating classes",
+      "A2": "A pattern that dynamically adds behavior to objects",
+      "A3": "A pattern for UI design",
+      "A4": "A pattern for database decoration"
+    },
+    "key": "A pattern that dynamically adds behavior to objects",
+    "justification": "Decorator pattern wraps objects with decorator classes that add new functionality while preserving original behavior.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "medium",
+    "question": "What is the Adapter pattern?",
+    "answers": {
+      "A1": "A pattern for adapting hardware",
+      "A2": "A pattern that converts interface of one class to expected interface",
+      "A3": "A pattern for database adapters",
+      "A4": "A pattern for network adaptation"
+    },
+    "key": "A pattern that converts interface of one class to expected interface",
+    "justification": "Adapter pattern bridges incompatible interfaces, allowing objects with different interfaces to collaborate.",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "question": "What is the Template Method pattern?",
+    "answers": {
+      "A1": "A pattern for C++ templates",
+      "A2": "A pattern that defines algorithm skeleton in base class, letting derived classes override steps",
+      "A3": "A pattern for method templates",
+      "A4": "A pattern for creating templates"
+    },
+    "key": "A pattern that defines algorithm skeleton in base class, letting derived classes override steps",
+    "justification": "Template Method pattern defines algorithm structure in base class, allowing subclasses to customize specific steps.",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "medium",
+    "question": "What is the Builder pattern?",
+    "answers": {
+      "A1": "A pattern for building classes",
+      "A2": "A pattern that separates object construction from representation",
+      "A3": "A pattern for software development",
+      "A4": "A pattern for database building"
+    },
+    "key": "A pattern that separates object construction from representation",
+    "justification": "Builder pattern constructs complex objects step-by-step, separating construction logic from representation.",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "question": "What is multiple dispatch?",
+    "answers": {
+      "A1": "Calling multiple functions at once",
+      "A2": "Function overloading based on multiple argument types",
+      "A3": "Runtime resolution based on types of multiple objects",
+      "A4": "Parallel execution of methods"
+    },
+    "key": "Runtime resolution based on types of multiple objects",
+    "justification": "Multiple dispatch selects function implementation based on runtime types of multiple arguments, more powerful than single dispatch.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "hard",
+    "question": "What is the Visitor pattern?",
+    "answers": {
+      "A1": "A pattern for visiting websites",
+      "A2": "A pattern that represents operations to be performed on object structures",
+      "A3": "A pattern for traversing graphs",
+      "A4": "A pattern for network communication"
+    },
+    "key": "A pattern that represents operations to be performed on object structures",
+    "justification": "Visitor pattern defines new operations without changing element classes, separating algorithm from object structure.",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "question": "What is the Chain of Responsibility pattern?",
+    "answers": {
+      "A1": "A pattern for responsibility distribution",
+      "A2": "A pattern that passes requests along a chain of handlers",
+      "A3": "A pattern for team management",
+      "A4": "A pattern for database chains"
+    },
+    "key": "A pattern that passes requests along a chain of handlers",
+    "justification": "Chain of Responsibility passes request through chain of handlers until one processes it, decoupling sender from receiver.",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "question": "What is the State pattern?",
+    "answers": {
+      "A1": "A pattern for managing states",
+      "A2": "A pattern that encapsulates object behavior based on internal state",
+      "A3": "A pattern for state machines",
+      "A4": "A pattern for database states"
+    },
+    "key": "A pattern that encapsulates object behavior based on internal state",
+    "justification": "State pattern allows object to change behavior when internal state changes, appearing to change its class.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "question": "What is the Proxy pattern?",
+    "answers": {
+      "A1": "A pattern for proxy servers",
+      "A2": "A pattern that provides surrogate/placeholder for another object",
+      "A3": "A pattern for network proxies",
+      "A4": "A pattern for database access"
+    },
+    "key": "A pattern that provides surrogate/placeholder for another object",
+    "justification": "Proxy pattern controls access to another object through a proxy object, useful for lazy loading and access control.",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "hard",
+    "question": "What is the Facade pattern?",
+    "answers": {
+      "A1": "A pattern for building facades",
+      "A2": "A pattern that provides unified interface to subsystem",
+      "A3": "A pattern for exterior design",
+      "A4": "A pattern for surface treatment"
+    },
+    "key": "A pattern that provides unified interface to subsystem",
+    "justification": "Facade pattern hides complexity of subsystems behind simple interface, improving usability.",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "question": "What is the Bridge pattern?",
+    "answers": {
+      "A1": "A pattern for building bridges",
+      "A2": "A pattern that decouples abstraction from implementation",
+      "A3": "A pattern for connecting modules",
+      "A4": "A pattern for network communication"
+    },
+    "key": "A pattern that decouples abstraction from implementation",
+    "justification": "Bridge pattern separates abstraction from implementation, allowing them to vary independently.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "hard",
+    "question": "What is the Composite pattern?",
+    "answers": {
+      "A1": "A pattern for composing music",
+      "A2": "A pattern that composes objects into tree structures to represent hierarchies",
+      "A3": "A pattern for data composition",
+      "A4": "A pattern for function composition"
+    },
+    "key": "A pattern that composes objects into tree structures to represent hierarchies",
+    "justification": "Composite pattern treats individual objects and compositions uniformly, building tree hierarchies.",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "question": "What is the Prototype pattern?",
+    "answers": {
+      "A1": "A pattern for creating prototypes",
+      "A2": "A pattern that creates objects by cloning prototype",
+      "A3": "A pattern for prototype design",
+      "A4": "A pattern for rapid development"
+    },
+    "key": "A pattern that creates objects by cloning prototype",
+    "justification": "Prototype pattern creates new objects by copying prototype object, avoiding expensive creation costs.",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "hard",
+    "question": "What is the Abstract Factory pattern?",
+    "answers": {
+      "A1": "A pattern for abstract classes",
+      "A2": "A pattern providing interface for creating families of related objects",
+      "A3": "A pattern for factory automation",
+      "A4": "A pattern for abstract methods"
+    },
+    "key": "A pattern providing interface for creating families of related objects",
+    "justification": "Abstract Factory pattern creates families of related objects without specifying concrete classes.",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "question": "What is RTTI (Run-Time Type Information)?",
+    "answers": {
+      "A1": "A compiler optimization",
+      "A2": "A mechanism to obtain and use type information at runtime",
+      "A3": "A type of variable",
+      "A4": "A network protocol"
+    },
+    "key": "A mechanism to obtain and use type information at runtime",
+    "justification": "RTTI allows runtime type identification and safe casting, essential for polymorphic operations.",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "question": "What is typeid() in C++?",
+    "answers": {
+      "A1": "A function that defines types",
+      "A2": "An operator that returns type information of an object at runtime",
+      "A3": "A typedef replacement",
+      "A4": "A type checker"
+    },
+    "key": "An operator that returns type information of an object at runtime",
+    "justification": "typeid() returns a type_info object containing runtime type information, useful for type checking.",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "question": "What is std::type_info?",
+    "answers": {
+      "A1": "Information about type definitions",
+      "A2": "A class providing information about types (name, equality, ordering)",
+      "A3": "A type of container",
+      "A4": "A function for type checking"
+    },
+    "key": "A class providing information about types (name, equality, ordering)",
+    "justification": "type_info provides runtime information about types including names and comparison capabilities.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "question": "What is the Curiously Recurring Template Pattern (CRTP)?",
+    "answers": {
+      "A1": "A weird template pattern",
+      "A2": "A template pattern where class inherits from template of itself",
+      "A3": "A recursion pattern",
+      "A4": "A cryptography pattern"
+    },
+    "key": "A template pattern where class inherits from template of itself",
+    "justification": "CRTP enables compile-time polymorphism without virtual functions, improving performance.",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "question": "What is template metaprogramming?",
+    "answers": {
+      "A1": "Programming with template syntax",
+      "A2": "Writing programs that manipulate types at compile time",
+      "A3": "Designing templates",
+      "A4": "A type of debugging"
+    },
+    "key": "Writing programs that manipulate types at compile time",
+    "justification": "Template metaprogramming uses templates to perform computations at compile time, enabling zero-runtime-overhead abstractions.",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "question": "What is an expression template?",
+    "answers": {
+      "A1": "A template for expression syntax",
+      "A2": "A template technique building expression trees at compile time for optimization",
+      "A3": "A template for mathematical expressions",
+      "A4": "A type of syntax tree"
+    },
+    "key": "A template technique building expression trees at compile time for optimization",
+    "justification": "Expression templates defer evaluation and create optimized code, commonly used in numeric libraries.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "hard",
+    "question": "What is function type?",
+    "answers": {
+      "A1": "A category of functions",
+      "A2": "A type representing pointer to function or callable object",
+      "A3": "A function that returns types",
+      "A4": "A classification of function behavior"
+    },
+    "key": "A type representing pointer to function or callable object",
+    "justification": "Function types represent signatures of functions, used in function pointers and std::function.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "question": "What is std::function?",
+    "answers": {
+      "A1": "A standard function library",
+      "A2": "A wrapper class for function pointers and callable objects with type erasure",
+      "A3": "A function that performs standard operations",
+      "A4": "A template for user-defined functions"
+    },
+    "key": "A wrapper class for function pointers and callable objects with type erasure",
+    "justification": "std::function is a type-erased wrapper allowing storage and invocation of any callable with matching signature.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "hard",
+    "question": "What is a lambda function in C++?",
+    "answers": {
+      "A1": "A function named lambda",
+      "A2": "An unnamed function defined inline",
+      "A3": "A mathematical lambda expression",
+      "A4": "A function in the lambda calculus library"
+    },
+    "key": "An unnamed function defined inline",
+    "justification": "Lambda functions are anonymous functions defined inline using [captures](parameters){body} syntax, useful for callbacks.",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "question": "What is lambda capture in C++?",
+    "answers": {
+      "A1": "Capturing lambda functions",
+      "A2": "Mechanism to access variables from enclosing scope in lambda",
+      "A3": "Capturing lambda errors",
+      "A4": "A type of exception"
+    },
+    "key": "Mechanism to access variables from enclosing scope in lambda",
+    "justification": "Lambda captures allow access to outer scope variables: [] (none), [=] (by value), [&] (by reference), [=, &x] (mixed).",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "hard",
+    "question": "What is move semantics in C++?",
+    "answers": {
+      "A1": "Moving objects between memory locations",
+      "A2": "Optimizing performance by transferring resources instead of copying",
+      "A3": "A type of function call",
+      "A4": "A programming language feature"
+    },
+    "key": "Optimizing performance by transferring resources instead of copying",
+    "justification": "Move semantics uses rvalue references to transfer ownership, avoiding expensive copies of temporary objects.",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "question": "What is an rvalue reference?",
+    "answers": {
+      "A1": "A reference to a value",
+      "A2": "A reference to a temporary (right-hand side) value using &&",
+      "A3": "A type of pointer",
+      "A4": "A constant reference"
+    },
+    "key": "A reference to a temporary (right-hand side) value using &&",
+    "justification": "Rvalue references (T&&) bind to temporaries and allow move semantics, enabling efficient resource transfer.",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "question": "What is std::move?",
+    "answers": {
+      "A1": "A function that moves objects",
+      "A2": "A function that casts lvalues to rvalues to enable move semantics",
+      "A3": "A function that transfers objects between containers",
+      "A4": "A memory management function"
+    },
+    "key": "A function that casts lvalues to rvalues to enable move semantics",
+    "justification": "std::move converts lvalues to rvalues, signaling that the object can be moved from.",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "question": "What is perfect forwarding in C++?",
+    "answers": {
+      "A1": "Forwarding function calls perfectly",
+      "A2": "Passing arguments to another function preserving their lvalue/rvalue nature",
+      "A3": "A type of function call",
+      "A4": "A network forwarding technique"
+    },
+    "key": "Passing arguments to another function preserving their lvalue/rvalue nature",
+    "justification": "Perfect forwarding uses template parameters and std::forward to preserve argument types through function calls.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "question": "What is a variadic template in C++?",
+    "answers": {
+      "A1": "A template with many types",
+      "A2": "A template that accepts variable number of template arguments",
+      "A3": "A template for variables",
+      "A4": "A type of generic template"
+    },
+    "key": "A template that accepts variable number of template arguments",
+    "justification": "Variadic templates use ... (parameter pack) to accept arbitrary number of template arguments.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "hard",
+    "question": "What is parameter pack expansion?",
+    "answers": {
+      "A1": "Expanding function parameters",
+      "A2": "Process of expanding variadic template arguments into individual arguments",
+      "A3": "Expanding template classes",
+      "A4": "A type of template specialization"
+    },
+    "key": "Process of expanding variadic template arguments into individual arguments",
+    "justification": "Parameter pack expansion uses ... to unpack variadic arguments, enabling processing of arbitrary argument counts.",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "hard",
+    "question": "What is Type Traits in C++?",
+    "answers": {
+      "A1": "Characteristics of a person",
+      "A2": "A template metaprogramming technique providing compile-time information about types",
+      "A3": "A type of variable",
+      "A4": "A trait system for OOP"
+    },
+    "key": "A template metaprogramming technique providing compile-time information about types",
+    "justification": "Type traits (std::is_integral, std::remove_const, etc.) provide compile-time type information and transformations.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "question": "What is SFINAE (Substitution Failure Is Not An Error)?",
+    "answers": {
+      "A1": "A compiler error",
+      "A2": "A template instantiation principle where failed substitutions don't cause errors",
+      "A3": "A type of exception",
+      "A4": "A memory allocation error"
+    },
+    "key": "A template instantiation principle where failed substitutions don't cause errors",
+    "justification": "SFINAE allows template overloading by disabling template specializations through failed type substitution.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "question": "What is constexpr in C++?",
+    "answers": {
+      "A1": "A type of expression",
+      "A2": "A keyword for compile-time evaluation of functions and variables",
+      "A3": "A constant expression syntax",
+      "A4": "A type of template"
+    },
+    "key": "A keyword for compile-time evaluation of functions and variables",
+    "justification": "constexpr allows functions and expressions to be evaluated at compile time when called with compile-time constants.",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "hard",
+    "question": "What is thread safety in OOP?",
+    "answers": {
+      "A1": "Threads are always safe",
+      "A2": "Property that data structures work correctly when accessed by multiple threads simultaneously",
+      "A3": "Making threads read-only",
+      "A4": "A type of encryption"
+    },
+    "key": "Property that data structures work correctly when accessed by multiple threads simultaneously",
+    "justification": "Thread safety ensures data consistency and correctness when multiple threads access shared resources.",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "question": "What is a race condition?",
+    "answers": {
+      "A1": "A competition between threads",
+      "A2": "Unpredictable behavior when multiple threads access shared data without synchronization",
+      "A3": "A type of threading error",
+      "A4": "A performance issue"
+    },
+    "key": "Unpredictable behavior when multiple threads access shared data without synchronization",
+    "justification": "Race conditions occur when multiple threads access shared resources concurrently without proper synchronization.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "question": "What is a mutex?",
+    "answers": {
+      "A1": "A type of variable",
+      "A2": "A synchronization primitive that ensures only one thread accesses resource at a time",
+      "A3": "A threading library",
+      "A4": "A type of lock"
+    },
+    "key": "A synchronization primitive that ensures only one thread accesses resource at a time",
+    "justification": "Mutex (mutual exclusion) prevents multiple threads from accessing shared resource simultaneously.",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "question": "What is deadlock in multithreading?",
+    "answers": {
+      "A1": "A thread that is dead",
+      "A2": "A situation where threads wait indefinitely for each other, preventing progress",
+      "A3": "A thread termination error",
+      "A4": "A type of exception"
+    },
+    "key": "A situation where threads wait indefinitely for each other, preventing progress",
+    "justification": "Deadlock occurs when circular wait conditions prevent threads from proceeding, requiring careful lock management.",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "question": "What is ABI (Application Binary Interface)?",
+    "answers": {
+      "A1": "An abstract interface",
+      "A2": "Low-level interface specifying how software components interact at binary level",
+      "A3": "An API for applications",
+      "A4": "A programming interface"
+    },
+    "key": "Low-level interface specifying how software components interact at binary level",
+    "justification": "ABI defines calling conventions, memory layout, and binary compatibility between compiled code and libraries.",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "question": "What is API (Application Programming Interface)?",
+    "answers": {
+      "A1": "A programming language",
+      "A2": "High-level interface defining how software components interact through functions/methods",
+      "A3": "An architecture pattern",
+      "A4": "A binary interface"
+    },
+    "key": "High-level interface defining how software components interact through functions/methods",
+    "justification": "API specifies how to request services from software libraries or operating systems using well-defined functions.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "question": "What is name mangling in C++?",
+    "answers": {
+      "A1": "Corrupting names",
+      "A2": "Encoding function/class names to support overloading and avoid conflicts",
+      "A3": "Renaming identifiers",
+      "A4": "A security technique"
+    },
+    "key": "Encoding function/class names to support overloading and avoid conflicts",
+    "justification": "Name mangling encodes function signatures into symbol names, enabling function overloading at binary level.",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "question": "What is extern 'C' in C++?",
+    "answers": {
+      "A1": "A C language declaration",
+      "A2": "A directive preventing name mangling for C interoperability",
+      "A3": "A C++ feature",
+      "A4": "An external variable declaration"
+    },
+    "key": "A directive preventing name mangling for C interoperability",
+    "justification": "extern 'C' tells compiler to use C calling conventions and prevent name mangling, enabling C/C++ interoperability.",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  }
+]
