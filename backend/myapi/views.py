@@ -9,6 +9,7 @@ backend_dir = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(backend_dir))
 
 from test_generator.service import TestGeneratorService
+from test_generator.config import TEST_COMPOSITIONS, CS_DISTRIBUTION
 
 # Create your views here.
 # Testing that our Django server is working fine or not
@@ -39,6 +40,41 @@ def homepage(request):
 # Login and Registration Page
 def authenticate_user(request):
     return render(request, "authentication_page.html")
+
+
+def get_question_type(expertise: str, question_number: int) -> str:
+    """
+    Determine the question type based on expertise and question number.
+    Uses TEST_COMPOSITIONS to determine which category a question belongs to.
+    """
+    if expertise not in TEST_COMPOSITIONS:
+        return "Test"
+    
+    composition = TEST_COMPOSITIONS[expertise]
+    current_pos = 1
+    
+    # Go through each category in order
+    for category, count in composition.items():
+        end_pos = current_pos + count - 1
+        
+        if current_pos <= question_number <= end_pos:
+            # If it's CS category, need to determine subcategory
+            if category == "cs":
+                cs_current_pos = current_pos
+                # Go through CS subcategories
+                for subcategory, sub_count in CS_DISTRIBUTION.items():
+                    cs_end_pos = cs_current_pos + sub_count - 1
+                    if cs_current_pos <= question_number <= cs_end_pos:
+                        return subcategory
+                    cs_current_pos = cs_end_pos + 1
+                return "CS"  # Fallback
+            else:
+                # Capitalize first letter for display
+                return category.capitalize()
+        
+        current_pos = end_pos + 1
+    
+    return "Test"  # Fallback
 
 
 # Test Generator API Endpoints
@@ -116,11 +152,15 @@ def generate_test(request):
             if not options:
                 options = ['Option A', 'Option B', 'Option C', 'Option D']
             
+            # Determine question type based on position
+            question_type = get_question_type(expertise, idx)
+            
             formatted_questions.append({
                 'id': idx,
                 'question': question_text,
                 'options': options,
-                'correctAnswer': correct_answer  # included for scoring on frontend
+                'correctAnswer': correct_answer,  # included for scoring on frontend
+                'questionType': question_type  # Category/subject for display
             })
         
         return Response({

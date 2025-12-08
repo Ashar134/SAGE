@@ -11,7 +11,7 @@
     "key": "Object-Oriented Programming",
     "justification": "OOP is a programming paradigm based on objects that contain data (fields) and code (methods). It's one of the most popular programming approaches.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 13
   },
   {
     "type": "easy",
@@ -25,7 +25,7 @@
     "key": "Alan Kay",
     "justification": "Alan Kay is credited with inventing OOP in the 1970s. His work on SmallTalk was groundbreaking in implementing OOP principles.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 17
   },
   {
     "type": "easy",
@@ -39,7 +39,7 @@
     "key": "SmallTalk",
     "justification": "SmallTalk was the first pure OOP language where everything is an object, including functions and primitives.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 12
   },
   {
     "type": "easy",
@@ -53,7 +53,7 @@
     "key": "An instance of a class with its own state and behavior",
     "justification": "An object is a concrete entity created from a class template containing specific data values and methods.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 10
   },
   {
     "type": "easy",
@@ -67,7 +67,7 @@
     "key": "A blueprint or template for creating objects",
     "justification": "A class defines the structure and behavior of objects. It specifies what data members and methods objects of that class will have.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 7
   },
   {
     "type": "easy",
@@ -81,7 +81,7 @@
     "key": "Combining data and functions into a single unit and hiding implementation details",
     "justification": "Encapsulation bundles data and methods together while hiding internal details from the outside world, protecting data integrity.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 17
   },
   {
     "type": "easy",
@@ -95,7 +95,7 @@
     "key": "Showing only essential features and hiding complex implementation details",
     "justification": "Abstraction simplifies complex reality by modeling classes appropriate to the problem, exposing only necessary details.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 14
   },
   {
     "type": "easy",
@@ -109,7 +109,7 @@
     "key": "A mechanism where a derived class inherits properties from a base class",
     "justification": "Inheritance allows new classes to be based on existing classes, promoting code reuse and establishing hierarchical relationships.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 16
   },
   {
     "type": "easy",
@@ -123,7 +123,7 @@
     "key": "The ability of an object or method to take on multiple forms",
     "justification": "Polymorphism allows methods with the same name to behave differently based on context or object type.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 13
   },
   {
     "type": "easy",
@@ -137,7 +137,7 @@
     "key": "Encapsulation, Abstraction, Inheritance, Polymorphism",
     "justification": "These four concepts form the foundation of OOP and guide object-oriented design principles.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 16
   },
   {
     "type": "easy",
@@ -151,7 +151,7 @@
     "key": "3",
     "justification": "C++ provides three access specifiers: public, private, and protected. These control the visibility of class members.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 15
   },
   {
     "type": "easy",
@@ -165,7 +165,7 @@
     "key": "Members are accessible from anywhere",
     "justification": "Public members have no access restrictions and can be accessed from anywhere in the program.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 20
   },
   {
     "type": "easy",
@@ -179,7 +179,7 @@
     "key": "Members are accessible only within the class",
     "justification": "Private members are only accessible within the class itself, not from outside or even from derived classes.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 7
   },
   {
     "type": "easy",
@@ -193,7 +193,7 @@
     "key": "Members are accessible within the class and derived classes",
     "justification": "Protected members are accessible within the class and in classes derived from it, but not from outside.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 7
   },
   {
     "type": "easy",
@@ -207,7 +207,7 @@
     "key": "A special method that initializes an object when it is created",
     "justification": "A constructor is automatically called when an object is instantiated, used to initialize member variables and set up initial state.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 10
   },
   {
     "type": "easy",
@@ -221,7 +221,7 @@
     "key": "A constructor with no parameters",
     "justification": "A default constructor takes no parameters. If not defined, the compiler generates a default one automatically.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 13
   },
   {
     "type": "easy",
@@ -235,7 +235,7 @@
     "key": "A constructor that takes one or more arguments",
     "justification": "A parameterized constructor accepts arguments that are used to initialize member variables with specific values.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 18
   },
   {
     "type": "easy",
@@ -249,7 +249,7 @@
     "key": "A method that is automatically called when an object is destroyed",
     "justification": "A destructor releases resources allocated by the constructor when an object goes out of scope or is explicitly deleted.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 10
   },
   {
     "type": "easy",
@@ -263,7 +263,7 @@
     "key": "A pointer to the current object",
     "justification": "The 'this' pointer always points to the current object, allowing access to its member variables and methods.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 8
   },
   {
     "type": "easy",
@@ -277,7 +277,7 @@
     "key": "new",
     "justification": "The 'new' keyword allocates memory on the heap and calls the constructor to initialize the new object.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 15
   },
   {
     "type": "easy",
@@ -291,7 +291,7 @@
     "key": "A concrete realization of a class",
     "justification": "An instance is an object created from a class. Each instance has its own data and can execute methods defined in the class.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 16
   },
   {
     "type": "easy",
@@ -305,7 +305,7 @@
     "key": "A function defined inside a class",
     "justification": "A member function (or method) is a function that belongs to a class and can access the class's member variables.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 9
   },
   {
     "type": "easy",
@@ -319,7 +319,7 @@
     "key": "A variable defined inside a class",
     "justification": "A member variable (or attribute) is a variable that belongs to a class and is present in every instance of that class.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 12
   },
   {
     "type": "easy",
@@ -333,7 +333,7 @@
     "key": "Classes have private members by default; structures have public members by default",
     "justification": "The main difference is the default access specifier: class members are private by default, while struct members are public by default.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 11
   },
   {
     "type": "easy",
@@ -347,7 +347,7 @@
     "key": "Makes the variable belong to the class, not instances",
     "justification": "Static member variables are shared by all instances of the class. There is only one copy regardless of how many objects are created.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 18
   },
   {
     "type": "easy",
@@ -361,7 +361,7 @@
     "key": "Makes a variable unchangeable (constant)",
     "justification": "const keyword declares a variable whose value cannot be changed after initialization.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 9
   },
   {
     "type": "easy",
@@ -375,7 +375,7 @@
     "key": "A function that cannot modify member variables",
     "justification": "A const member function promises not to modify any member variables of the object, ensuring data integrity.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 13
   },
   {
     "type": "easy",
@@ -389,7 +389,7 @@
     "key": "Having multiple methods with the same name but different parameters",
     "justification": "Method overloading allows a class to have multiple methods with the same name but different parameter lists (number, type, or order).",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 6
   },
   {
     "type": "easy",
@@ -403,7 +403,7 @@
     "key": "A derived class providing its own implementation of a base class method",
     "justification": "Method overriding occurs when a derived class redefines a method inherited from the base class with the same signature.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 17
   },
   {
     "type": "easy",
@@ -417,7 +417,7 @@
     "key": "Overloading: same class, different params; Overriding: inheritance, same signature",
     "justification": "Overloading is compile-time polymorphism in the same class with different parameters. Overriding is runtime polymorphism across inheritance hierarchy with same signature.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 13
   },
   {
     "type": "easy",
@@ -431,7 +431,7 @@
     "key": "A function declared in base class that can be overridden in derived classes",
     "justification": "Virtual functions enable runtime polymorphism, allowing the correct overridden method to be called based on actual object type.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 12
   },
   {
     "type": "easy",
@@ -445,7 +445,7 @@
     "key": "To access parent class methods and constructors",
     "justification": "The 'super' keyword allows a subclass to call methods or constructors defined in its parent class.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 11
   },
   {
     "type": "easy",
@@ -459,7 +459,7 @@
     "key": "A class inheriting from only one base class",
     "justification": "Single inheritance is when a derived class inherits from exactly one base class, the simplest form of inheritance.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -473,7 +473,7 @@
     "key": "A derived class inheriting from two or more base classes",
     "justification": "Multiple inheritance allows a class to derive properties and methods from multiple parent classes.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -487,7 +487,7 @@
     "key": "Multiple classes inheriting from a single base class",
     "justification": "Hierarchical inheritance occurs when multiple derived classes share a common base class.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -501,7 +501,7 @@
     "key": "A derived class becoming a base class for another class",
     "justification": "Multilevel inheritance creates a chain where a derived class becomes a base class for another class.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 15
   },
   {
     "type": "medium",
@@ -515,7 +515,7 @@
     "key": "A derived class inherits same base class through two paths",
     "justification": "The diamond problem occurs when a class inherits from two classes that both inherit from a common ancestor, creating ambiguity.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -529,7 +529,7 @@
     "key": "By using virtual inheritance",
     "justification": "Virtual inheritance ensures that only one instance of the base class exists in the inheritance hierarchy.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -543,7 +543,7 @@
     "key": "A constructor that initializes an object with values from another object of same class",
     "justification": "A copy constructor creates a new object as a replica of an existing object, essential when objects are passed by value.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -557,7 +557,7 @@
     "key": "Const reference",
     "justification": "Objects are passed by const reference to prevent infinite recursion and ensure the source object isn't modified.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -571,7 +571,7 @@
     "key": "To create an object by moving resources from a temporary object",
     "justification": "A move constructor efficiently transfers resources from a temporary (rvalue) object, improving performance by avoiding unnecessary copies.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -585,7 +585,7 @@
     "key": "Redefining how operators work with user-defined types",
     "justification": "Operator overloading allows you to give new meaning to operators like +, -, *, / etc. when applied to custom objects.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -599,7 +599,7 @@
     "key": "Scope resolution (::), member selection (.), pointer to member (.*), and ternary (?:) operators",
     "justification": "These operators have special meaning in the language and cannot be overloaded to maintain language integrity.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -613,7 +613,7 @@
     "key": "A function declared in a class that can access its private members",
     "justification": "A friend function is an exception to access rules, granted special permission to access a class's private and protected members.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 15
   },
   {
     "type": "medium",
@@ -627,7 +627,7 @@
     "key": "A class granted access to private members of another class",
     "justification": "A friend class can access the private and protected members of another class, breaking the normal encapsulation rules.",
     "justified_by": "Perplexity",
-    "frequency": 12
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -641,7 +641,7 @@
     "key": "A class that cannot be instantiated but serves as a blueprint for derived classes",
     "justification": "An abstract class contains at least one pure virtual function and defines an interface that derived classes must implement.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 13
   },
   {
     "type": "medium",
@@ -655,7 +655,7 @@
     "key": "A virtual function with no implementation, forcing derived classes to override it",
     "justification": "A pure virtual function (declared with = 0) has no implementation and must be overridden by any concrete derived class.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 17
   },
   {
     "type": "medium",
@@ -669,7 +669,7 @@
     "key": "A contract that defines what methods a class must implement",
     "justification": "An interface specifies a set of method signatures that implementing classes must provide, establishing a protocol.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -683,7 +683,7 @@
     "key": "Abstract class can have implementation; interface only defines contracts",
     "justification": "Abstract classes can have both implemented and abstract methods, while interfaces traditionally define only method signatures (contracts).",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 15
   },
   {
     "type": "medium",
@@ -697,7 +697,7 @@
     "key": "Polymorphism resolved at compile time through method overloading",
     "justification": "Static polymorphism (compile-time) is achieved through function and operator overloading where the correct function is determined before execution.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -711,7 +711,7 @@
     "key": "Polymorphism resolved at runtime through virtual functions and inheritance",
     "justification": "Dynamic polymorphism (runtime) uses virtual functions to determine which overridden method to call based on actual object type at execution time.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 19
   },
   {
     "type": "medium",
@@ -725,7 +725,7 @@
     "key": "A class containing instances of other classes (Has-A relationship)",
     "justification": "Composition represents a 'Has-A' relationship where a class contains objects of other classes as part of its structure.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 19
   },
   {
     "type": "medium",
@@ -739,7 +739,7 @@
     "key": "Composition is Has-A; Inheritance is Is-A relationship",
     "justification": "Inheritance represents 'Is-A' (Car Is-A Vehicle), while composition represents 'Has-A' (Car Has-A Engine).",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -753,7 +753,7 @@
     "key": "It's more flexible and avoids tight coupling",
     "justification": "Composition is often preferred because it provides greater flexibility, easier maintenance, and avoids problems like the diamond problem.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 15
   },
   {
     "type": "medium",
@@ -767,7 +767,7 @@
     "key": "Prevents a class from being inherited or a method from being overridden",
     "justification": "The 'final' keyword prevents modification of classes and methods, ensuring that their behavior cannot be changed by inheritance.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -781,7 +781,7 @@
     "key": "A function whose code is inserted at the call site instead of being called",
     "justification": "An inline function tells the compiler to insert the function's code directly where it's called, potentially improving performance.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -795,7 +795,7 @@
     "key": "To ensure a method doesn't modify member variables",
     "justification": "A const member function promises not to change any member variables, providing a contract for data immutability during execution.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -809,7 +809,7 @@
     "key": "A copy that only copies pointer values, not the data they point to",
     "justification": "A shallow copy copies pointers, not the actual data. This can lead to multiple objects pointing to the same memory.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -823,7 +823,7 @@
     "key": "A copy that duplicates all data including objects pointed to by pointers",
     "justification": "A deep copy creates new copies of all data, including objects referenced by pointers, preventing shared data issues.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -837,7 +837,7 @@
     "key": "Multiple objects can point to same memory, causing issues when one object is deleted",
     "justification": "Shallow copy leads to multiple objects sharing the same dynamically allocated memory, causing dangling pointers and double deletion errors.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -851,7 +851,7 @@
     "key": "Tying resource management to object lifetime - resources are acquired in constructor and released in destructor",
     "justification": "RAII is a C++ idiom where resource acquisition and release are tied to object lifetime, ensuring automatic cleanup and exception safety.",
     "justified_by": "Perplexity",
-    "frequency": 2
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -865,7 +865,7 @@
     "key": "A blueprint for creating functions or classes that work with any data type",
     "justification": "Templates enable generic programming by allowing functions and classes to operate on different data types with a single definition.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -879,7 +879,7 @@
     "key": "Providing a specific implementation of a template for particular types",
     "justification": "Template specialization allows you to provide custom implementations for specific data types or conditions.",
     "justified_by": "Perplexity",
-    "frequency": 2
+    "frequency": 12
   },
   {
     "type": "hard",
@@ -893,7 +893,7 @@
     "key": "Static binding determined at compile time; dynamic binding determined at runtime",
     "justification": "Static binding resolves function calls at compile time based on reference/pointer type. Dynamic binding uses virtual functions and resolves at runtime.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -907,7 +907,7 @@
     "key": "A mechanism that stores pointers to virtual functions for runtime polymorphism",
     "justification": "Each class with virtual functions has a vtable containing pointers to the virtual function implementations, enabling dynamic dispatch.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 12
   },
   {
     "type": "hard",
@@ -921,7 +921,7 @@
     "key": "To point to the object's vtable for resolving virtual function calls",
     "justification": "Every object of a class with virtual functions contains a vptr that points to the appropriate vtable at runtime.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -935,7 +935,7 @@
     "key": "It calls the base class version, not the derived one, because object isn't fully constructed",
     "justification": "During construction, the derived part hasn't been constructed yet, so virtual calls resolve to the base class version.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 11
   },
   {
     "type": "hard",
@@ -949,7 +949,7 @@
     "key": "A mechanism to handle runtime errors by throwing and catching exceptions",
     "justification": "Exception handling provides a structured way to deal with error conditions, using try-catch blocks to catch and handle exceptions.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -963,7 +963,7 @@
     "key": "To signal that an error has occurred by throwing an exception",
     "justification": "The 'throw' keyword is used to throw (raise) an exception when an error condition is detected.",
     "justified_by": "Perplexity",
-    "frequency": 12
+    "frequency": 20
   },
   {
     "type": "hard",
@@ -977,7 +977,7 @@
     "key": "To catch and handle thrown exceptions",
     "justification": "A catch block contains code that executes when a matching exception is thrown, allowing for error recovery.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -991,7 +991,7 @@
     "key": "It executes whether or not an exception occurs",
     "justification": "A finally block (or destructor cleanup in C++) always executes, ensuring resources are cleaned up regardless of exception occurrence.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 13
   },
   {
     "type": "hard",
@@ -1005,7 +1005,7 @@
     "key": "Assigning a derived object to a base class object, losing derived-specific information",
     "justification": "Object slicing occurs when a derived object is assigned to a base class object by value, losing derived-specific member data.",
     "justified_by": "Perplexity",
-    "frequency": 12
+    "frequency": 17
   },
   {
     "type": "hard",
@@ -1019,7 +1019,7 @@
     "key": "By using pointers or references to base class",
     "justification": "Using pointers or references prevents slicing because they maintain the full derived object type information.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 13
   },
   {
     "type": "hard",
@@ -1033,7 +1033,7 @@
     "key": "To prevent implicit type conversion through constructor calls",
     "justification": "The 'explicit' keyword prevents a single-parameter constructor from being used for implicit type conversion.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -1047,7 +1047,7 @@
     "key": "An object that acts like a pointer but manages memory automatically",
     "justification": "Smart pointers (unique_ptr, shared_ptr) wrap raw pointers and automatically manage memory, preventing leaks.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -1061,7 +1061,7 @@
     "key": "A smart pointer with exclusive ownership - only one unique_ptr can own an object",
     "justification": "unique_ptr provides exclusive ownership of dynamically allocated memory, automatically deleting when out of scope.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 17
   },
   {
     "type": "hard",
@@ -1075,7 +1075,7 @@
     "key": "A smart pointer that allows multiple pointers to share ownership of same object",
     "justification": "shared_ptr uses reference counting to manage shared ownership, deleting the object when the last pointer is destroyed.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -1089,7 +1089,7 @@
     "key": "A smart pointer that references an object owned by shared_ptr without increasing reference count",
     "justification": "weak_ptr observes shared_ptr objects without affecting their lifetime, useful for preventing circular references.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -1103,7 +1103,7 @@
     "key": "Five design principles: Single Responsibility, Open/Closed, Liskov, Interface Segregation, Dependency Inversion",
     "justification": "SOLID is a set of principles for writing maintainable, scalable, and flexible object-oriented software.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -1117,7 +1117,7 @@
     "key": "A class should have only one job or responsibility",
     "justification": "A class should have a single, well-defined reason to change, focusing on one aspect of functionality.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 18
   },
   {
     "type": "hard",
@@ -1131,7 +1131,7 @@
     "key": "Software entities should be open for extension but closed for modification",
     "justification": "Code should be designed to allow new functionality through extension (inheritance) without modifying existing code.",
     "justified_by": "Perplexity",
-    "frequency": 15
+    "frequency": 20
   },
   {
     "type": "hard",
@@ -1145,7 +1145,7 @@
     "key": "Derived classes should be substitutable for their base classes without breaking code",
     "justification": "An object of a derived class should be usable anywhere an object of the base class is expected.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -1159,7 +1159,7 @@
     "key": "Clients should not depend on interfaces they don't use",
     "justification": "Interfaces should be small and focused, with clients implementing only the methods they need.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -1173,7 +1173,7 @@
     "key": "High-level modules should not depend on low-level modules; both should depend on abstractions",
     "justification": "Code should depend on abstract interfaces, not concrete implementations, reducing coupling and improving flexibility.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -1187,7 +1187,7 @@
     "key": "A reusable solution to a common programming problem",
     "justification": "Design patterns are well-established techniques for solving recurring design problems in object-oriented programming.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -1201,7 +1201,7 @@
     "key": "A class that ensures only one instance exists and provides global access to it",
     "justification": "The Singleton pattern restricts instantiation to a single object and provides a way to access that instance globally.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -1215,7 +1215,7 @@
     "key": "A pattern that creates object instances without specifying exact classes",
     "justification": "The Factory pattern defines an interface for creating objects, letting subclasses decide which class to instantiate.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 17
   },
   {
     "type": "hard",
@@ -1229,6 +1229,6 @@
     "key": "A pattern where objects notify dependents about state changes",
     "justification": "The Observer pattern defines a one-to-many dependency where when one object changes state, all dependents are notified.",
     "justified_by": "Perplexity",
-    "frequency": 11
+    "frequency": 17
   }
 ]

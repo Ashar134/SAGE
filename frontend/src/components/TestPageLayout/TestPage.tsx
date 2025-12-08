@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useMemo } from "react";
 import "./TestPage.css";
 
 interface Question {
@@ -6,9 +6,134 @@ interface Question {
   question: string;
   options: string[];
   correctAnswer?: string; // used for scoring
+  questionType?: string; // Category/subject from backend (e.g., "Analytical", "English", "OOP", "Data Structures")
 }
 
 const API_BASE_URL = "http://localhost:8000"; // Django backend URL
+const TEST_DURATION_SECONDS = 7200; // 2 hours default
+
+// --- Small UI components ---
+const Toast = ({ message }: { message: string }) => (
+  <div className="toast-notification">{message}</div>
+);
+
+type InstructionDialogProps = {
+  agreed: boolean;
+  onAgreeChange: (value: boolean) => void;
+  onStart: () => void;
+  disabled: boolean;
+};
+
+const InstructionDialog = ({
+  agreed,
+  onAgreeChange,
+  onStart,
+  disabled,
+}: InstructionDialogProps) => (
+  <div className="instruction-overlay">
+    <div className="instruction-modal">
+      <h2>Test Instructions</h2>
+      <ul className="instruction-list">
+        <li>You have <strong>2 Hours</strong> to complete the assessment.</li>
+        <li>Three violations will auto-submit the test.</li>
+        <li>Tab switch, window resize, paste, and text selection are restricted.</li>
+        <li>Ensure a stable connection before you start.</li>
+      </ul>
+      <label className="agree-row">
+        <input
+          type="checkbox"
+          checked={agreed}
+          onChange={(e) => onAgreeChange(e.target.checked)}
+        />
+        <span>I agree to the test terms and will follow the instructions.</span>
+      </label>
+      <button
+        className={`btn start-btn ${disabled ? "btn-disabled" : ""}`}
+        onClick={onStart}
+        disabled={disabled}
+      >
+        Start Test
+      </button>
+    </div>
+  </div>
+);
+
+type QuestionPanelProps = {
+  question: Question;
+  questionNumber: number;
+  totalQuestions: number;
+  typeLabel: string | null;
+  selectedAnswer: string | null;
+  onSelect: (opt: string) => void;
+  onPrev: () => void;
+  onNext: () => void;
+  onSubmit: () => void;
+  isLast: boolean;
+  isFirst: boolean;
+};
+
+const QuestionPanel = ({
+  question,
+  questionNumber,
+  totalQuestions,
+  typeLabel,
+  selectedAnswer,
+  onSelect,
+  onPrev,
+  onNext,
+  onSubmit,
+  isLast,
+  isFirst,
+}: QuestionPanelProps) => (
+  <div className="question-section">
+    <h3>
+      Question {questionNumber} / {totalQuestions}
+    </h3>
+    {typeLabel && <span className="type-badge">{typeLabel}</span>}
+    <p className="question-text">{question.question}</p>
+
+    <div className="options-box">
+      {question.options.map((opt, index) => (
+        <label key={index} className="option-item">
+          <input
+            type="radio"
+            checked={selectedAnswer === opt}
+            onChange={() => onSelect(opt)}
+          />
+          {opt}
+        </label>
+      ))}
+    </div>
+
+    <div className="nav-buttons">
+      <button className="btn nav-btn" disabled={isFirst} onClick={onPrev}>
+        Previous
+      </button>
+
+      {isLast ? (
+        <button className="btn submit-btn" onClick={onSubmit}>
+          Submit
+        </button>
+      ) : (
+        <button className="btn nav-btn" onClick={onNext}>
+          Next
+        </button>
+      )}
+    </div>
+  </div>
+);
+
+const ResultPanel = ({ score, totalQuestions }: { score: number | null; totalQuestions: number }) => (
+  <div className="submit-box">
+    <h2>Test Submitted ✔</h2>
+    <p>Your answers have been recorded.</p>
+    {score !== null && (
+      <p>
+        Score: <strong>{score}</strong> / {totalQuestions}
+      </p>
+    )}
+  </div>
+);
 
 const TestPage = () => {
   const [questionsData, setQuestionsData] = useState<Question[]>([]);
@@ -17,7 +142,7 @@ const TestPage = () => {
   const [started, setStarted] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [score, setScore] = useState<number | null>(null);
-  const [timeLeft, setTimeLeft] = useState(7200);
+  const [timeLeft, setTimeLeft] = useState(TEST_DURATION_SECONDS);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const [answers, setAnswers] = useState<(string | null)[]>([]);
@@ -26,6 +151,7 @@ const TestPage = () => {
   // For each test the voilation then initialize to 0 to start fresh for each test
   const [, setViolations] = useState(0);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [agreed, setAgreed] = useState(false);
 
   // Fetch questions from API on component mount
   useEffect(() => {
@@ -207,6 +333,10 @@ const TestPage = () => {
 
   // CORE TEST LOGIC
   const startTest = () => {
+    if (!agreed) {
+      setToastMessage("Please agree to the terms to start the test.");
+      return;
+    }
     // reset violation count
     setViolations(0);
     setScore(null);
@@ -236,6 +366,15 @@ const TestPage = () => {
     const s = sec % 60;
     return `${m}:${s < 10 ? "0" + s : s}`;
   };
+
+  const timerLabel = useMemo(() => `⏱ ${formatTime(timeLeft)}`, [timeLeft]);
+
+  const currentType = useMemo(() => {
+    const q = questionsData[currentIndex];
+    if (!q) return null;
+    // Use questionType from backend (calculated based on test composition)
+    return q.questionType || null;
+  }, [questionsData, currentIndex]);
 
 
 
@@ -283,89 +422,55 @@ const TestPage = () => {
 
   return (
     <div className="test-wrapper">
-      {toastMessage && <div className="toast-notification">{toastMessage}</div>}
+      {toastMessage && <Toast message={toastMessage} />}
 
-      {/* ---------- TOP AREA ---------- */}
+      {/* Instructions overlay only before start */}
+      {!started && !submitted && (
+        <InstructionDialog
+          onStart={startTest}
+          disabled={!agreed}
+          agreed={agreed}
+          onAgreeChange={setAgreed}
+        />
+      )}
+
+      {/* Header & timer */}
       <div className="instruction-section">
         <div>
-          <h2>Test Instructions</h2>
-          <p>You have <strong>2 Hours</strong> to complete the assessment.</p>
-          <p>This test is continuously monitored to maintain exam integrity. Any detected violation will result in a warning.</p>
-          <p>If you receive three warnings, your test will be automatically submitted.</p>
-          <p>To ensure a fair testing environment, actions such as text selection, copying, pasting, and switching browser tabs are disabled during the exam.</p>
+          <h2>{currentType || "Test"}</h2>
+          <p>This assessment is monitored for integrity.</p>
         </div>
 
-
         <div className="timer-start-block">
-          {/* {started && !submitted && (
-            <div className="violation-badge">
-              ⚠ Violations: {violations}/3
-            </div>
-          )} */}
-          <div className="timer-display">⏱ {formatTime(timeLeft)}</div>
-
+          <div className="timer-display">{timerLabel}</div>
           {!started && !submitted && (
-            <button className="btn start-btn" onClick={startTest}>
+            <button className="btn start-btn" onClick={startTest} disabled={!agreed}>
               Start Test
             </button>
           )}
         </div>
       </div>
 
-
-      {/* ---------- QUESTION SECTION ---------- */}
+      {/* Question Panel */}
       {started && !submitted && questionsData.length > 0 && (
-        <div className="question-section">
-          <h3>Question {questionsData[currentIndex].id}</h3>
-          <p className="question-text">{questionsData[currentIndex].question}</p>
-
-          <div className="options-box">
-            {questionsData[currentIndex].options.map((opt, index) => (
-              <label key={index} className="option-item">
-                <input
-                  type="radio"
-                  checked={answers[currentIndex] === opt}
-                  onChange={() => handleSelect(opt)}
-                />
-                {opt}
-              </label>
-            ))}
-          </div>
-
-          <div className="nav-buttons">
-            <button
-              className="btn nav-btn"
-              disabled={currentIndex === 0}
-              onClick={prevQuestion}
-            >
-              Previous
-            </button>
-
-            {currentIndex === questionsData.length - 1 ? (
-              <button className="btn submit-btn" onClick={submitTest}>
-                Submit
-              </button>
-            ) : (
-              <button className="btn nav-btn" onClick={nextQuestion}>
-                Next
-              </button>
-            )}
-          </div>
-        </div>
+        <QuestionPanel
+          question={questionsData[currentIndex]}
+          questionNumber={currentIndex + 1}
+          totalQuestions={questionsData.length}
+          typeLabel={currentType}
+          selectedAnswer={answers[currentIndex]}
+          onSelect={handleSelect}
+          onPrev={prevQuestion}
+          onNext={nextQuestion}
+          onSubmit={submitTest}
+          isLast={currentIndex === questionsData.length - 1}
+          isFirst={currentIndex === 0}
+        />
       )}
 
-
-      {/* ---------- AFTER SUBMISSION ---------- */}
+      {/* Results */}
       {submitted && (
-        <div className="submit-box">
-          <h2>Test Submitted ✔</h2>
-          <p>Your answers have been recorded.</p>
-          {score !== null && (
-            <p>
-              Score: <strong>{score}</strong> / {questionsData.length}
-            </p>
-          )}
-        </div>
+        <ResultPanel score={score} totalQuestions={questionsData.length} />
       )}
     </div>
   );

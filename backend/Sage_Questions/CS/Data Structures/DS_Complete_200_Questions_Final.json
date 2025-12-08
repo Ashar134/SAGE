@@ -11,7 +11,7 @@
     },
     "key": "An organized way to store and manage data for efficient access",
     "justification": "Data structures organize data for efficient operations",
-    "frequency": 3
+    "frequency": 8
   },
   {
     "type": "easy",
@@ -25,7 +25,7 @@
     },
     "key": "Contiguous memory storing elements of the same type",
     "justification": "Arrays are fundamental sequential data structures",
-    "frequency": 17
+    "frequency": 26
   },
   {
     "type": "easy",
@@ -39,7 +39,7 @@
     },
     "key": "An ordered collection of elements",
     "justification": "Linear lists maintain sequential order",
-    "frequency": 11
+    "frequency": 20
   },
   {
     "type": "easy",
@@ -53,7 +53,7 @@
     },
     "key": "A data structure with nodes linked by pointers",
     "justification": "Linked lists use pointers for connections",
-    "frequency": 10
+    "frequency": 27
   },
   {
     "type": "easy",
@@ -67,7 +67,7 @@
     },
     "key": "A unit containing data and pointer(s)",
     "justification": "Nodes are the fundamental units of linked lists",
-    "frequency": 12
+    "frequency": 18
   },
   {
     "type": "easy",
@@ -81,7 +81,7 @@
     },
     "key": "LIFO (Last In First Out)",
     "justification": "Stacks follow the LIFO principle",
-    "frequency": 9
+    "frequency": 19
   },
   {
     "type": "easy",
@@ -95,7 +95,7 @@
     },
     "key": "FIFO (First In First Out)",
     "justification": "Queues follow the FIFO principle",
-    "frequency": 8
+    "frequency": 18
   },
   {
     "type": "easy",
@@ -109,7 +109,7 @@
     },
     "key": "A hierarchical structure with root and nodes",
     "justification": "Trees are hierarchical structures",
-    "frequency": 6
+    "frequency": 19
   },
   {
     "type": "easy",
@@ -123,7 +123,7 @@
     },
     "key": "Each node has at most two children",
     "justification": "Binary trees limit children to at most two",
-    "frequency": 11
+    "frequency": 20
   },
   {
     "type": "easy",
@@ -137,7 +137,7 @@
     },
     "key": "A non-linear structure with vertices and edges",
     "justification": "Graphs are fundamental non-linear structures",
-    "frequency": 9
+    "frequency": 17
   },
   {
     "type": "easy",
@@ -151,7 +151,7 @@
     },
     "key": "Key-value pairs using a hash function",
     "justification": "Hash tables provide fast access using keys",
-    "frequency": 4
+    "frequency": 15
   },
   {
     "type": "easy",
@@ -165,7 +165,7 @@
     },
     "key": "Tree-based structure satisfying heap property",
     "justification": "Heaps organize data in tree form with specific order",
-    "frequency": 10
+    "frequency": 14
   },
   {
     "type": "easy",
@@ -179,7 +179,7 @@
     },
     "key": "Elements are extracted based on priority",
     "justification": "Priority queues organize by priority",
-    "frequency": 7
+    "frequency": 11
   },
   {
     "type": "easy",
@@ -193,7 +193,7 @@
     },
     "key": "Study of algorithm performance and resource usage",
     "justification": "Complexity analysis measures efficiency",
-    "frequency": 8
+    "frequency": 13
   },
   {
     "type": "easy",
@@ -207,7 +207,7 @@
     },
     "key": "Asymptotic upper bound of algorithm complexity",
     "justification": "Big O describes worst-case complexity",
-    "frequency": 8
+    "frequency": 17
   },
   {
     "type": "easy",
@@ -221,7 +221,7 @@
     },
     "key": "Amount of memory used by algorithm",
     "justification": "Space complexity measures memory usage",
-    "frequency": 12
+    "frequency": 26
   },
   {
     "type": "easy",
@@ -235,7 +235,7 @@
     },
     "key": "Amount of time algorithm takes relative to input",
     "justification": "Time complexity measures execution duration",
-    "frequency": 9
+    "frequency": 17
   },
   {
     "type": "easy",
@@ -249,7 +249,7 @@
     },
     "key": "Add element to top of stack",
     "justification": "Push adds to stack top",
-    "frequency": 9
+    "frequency": 16
   },
   {
     "type": "easy",
@@ -263,7 +263,7 @@
     },
     "key": "Remove element from top of stack",
     "justification": "Pop removes from stack top",
-    "frequency": 9
+    "frequency": 20
   },
   {
     "type": "easy",
@@ -277,7 +277,7 @@
     },
     "key": "Add element to back of queue",
     "justification": "Enqueue adds to queue back",
-    "frequency": 5
+    "frequency": 12
   },
   {
     "type": "easy",
@@ -291,7 +291,7 @@
     },
     "key": "Remove element from front of queue",
     "justification": "Dequeue removes from queue front",
-    "frequency": 9
+    "frequency": 19
   },
   {
     "type": "easy",
@@ -305,7 +305,7 @@
     },
     "key": "The top node of the tree",
     "justification": "Root is the starting point of tree",
-    "frequency": 7
+    "frequency": 22
   },
   {
     "type": "easy",
@@ -319,7 +319,7 @@
     },
     "key": "It has no children",
     "justification": "Leaf nodes have no children",
-    "frequency": 10
+    "frequency": 15
   },
   {
     "type": "easy",
@@ -333,7 +333,7 @@
     },
     "key": "A node that has child nodes",
     "justification": "Parent nodes have children",
-    "frequency": 9
+    "frequency": 20
   },
   {
     "type": "easy",
@@ -347,7 +347,7 @@
     },
     "key": "A node below its parent in tree",
     "justification": "Child nodes descend from parent",
-    "frequency": 5
+    "frequency": 15
   },
   {
     "type": "easy",
@@ -361,7 +361,7 @@
     },
     "key": "Visiting all nodes in specific order",
     "justification": "Traversal systematically visits nodes",
-    "frequency": 5
+    "frequency": 15
   },
   {
     "type": "easy",
@@ -375,7 +375,7 @@
     },
     "key": "Left-Root-Right",
     "justification": "Inorder is left-root-right sequence",
-    "frequency": 7
+    "frequency": 19
   },
   {
     "type": "easy",
@@ -389,7 +389,7 @@
     },
     "key": "Root-Left-Right",
     "justification": "Preorder is root-left-right sequence",
-    "frequency": 11
+    "frequency": 22
   },
   {
     "type": "easy",
@@ -403,7 +403,7 @@
     },
     "key": "Left-Right-Root",
     "justification": "Postorder is left-right-root sequence",
-    "frequency": 7
+    "frequency": 18
   },
   {
     "type": "easy",
@@ -417,7 +417,7 @@
     },
     "key": "Left subtree has smaller elements",
     "justification": "BST maintains left-smaller property",
-    "frequency": 11
+    "frequency": 20
   },
   {
     "type": "easy",
@@ -431,7 +431,7 @@
     },
     "key": "Mapping a key to array index",
     "justification": "Hash functions enable fast lookup",
-    "frequency": 9
+    "frequency": 16
   },
   {
     "type": "easy",
@@ -445,7 +445,7 @@
     },
     "key": "When two keys hash to the same index",
     "justification": "Collisions occur in hash tables",
-    "frequency": 7
+    "frequency": 11
   },
   {
     "type": "easy",
@@ -459,7 +459,7 @@
     },
     "key": "Finding the next available slot sequentially",
     "justification": "Linear probing handles collisions sequentially",
-    "frequency": 8
+    "frequency": 18
   },
   {
     "type": "easy",
@@ -473,7 +473,7 @@
     },
     "key": "Using linked lists to handle collisions",
     "justification": "Chaining resolves hash collisions",
-    "frequency": 12
+    "frequency": 18
   },
   {
     "type": "easy",
@@ -487,7 +487,7 @@
     },
     "key": "Prefix-based search and retrieval",
     "justification": "Tries support prefix searching",
-    "frequency": 12
+    "frequency": 26
   },
   {
     "type": "easy",
@@ -501,7 +501,7 @@
     },
     "key": "Edges have specific direction",
     "justification": "Directed graphs have directed edges",
-    "frequency": 11
+    "frequency": 17
   },
   {
     "type": "easy",
@@ -515,7 +515,7 @@
     },
     "key": "Edges are bidirectional",
     "justification": "Undirected edges go both ways",
-    "frequency": 12
+    "frequency": 19
   },
   {
     "type": "easy",
@@ -529,7 +529,7 @@
     },
     "key": "A node in a graph",
     "justification": "Vertices are graph nodes",
-    "frequency": 11
+    "frequency": 17
   },
   {
     "type": "easy",
@@ -543,7 +543,7 @@
     },
     "key": "A connection between vertices",
     "justification": "Edges connect vertices",
-    "frequency": 8
+    "frequency": 18
   },
   {
     "type": "easy",
@@ -557,7 +557,7 @@
     },
     "key": "Stack structure",
     "justification": "DFS uses stack for traversal",
-    "frequency": 9
+    "frequency": 22
   },
   {
     "type": "easy",
@@ -571,7 +571,7 @@
     },
     "key": "Queue structure",
     "justification": "BFS uses queue for traversal",
-    "frequency": 7
+    "frequency": 15
   },
   {
     "type": "easy",
@@ -585,7 +585,7 @@
     },
     "key": "Arranging elements in order",
     "justification": "Sorting orders elements",
-    "frequency": 6
+    "frequency": 15
   },
   {
     "type": "easy",
@@ -599,7 +599,7 @@
     },
     "key": "Repeatedly swapping adjacent elements",
     "justification": "Bubble sort compares adjacent elements",
-    "frequency": 14
+    "frequency": 24
   },
   {
     "type": "easy",
@@ -613,7 +613,7 @@
     },
     "key": "Divide-and-conquer using partition",
     "justification": "Quick sort partitions data",
-    "frequency": 8
+    "frequency": 22
   },
   {
     "type": "easy",
@@ -627,7 +627,7 @@
     },
     "key": "Divide-and-conquer merging sublists",
     "justification": "Merge sort divides and merges",
-    "frequency": 7
+    "frequency": 14
   },
   {
     "type": "easy",
@@ -641,7 +641,7 @@
     },
     "key": "Sorting using heap structure",
     "justification": "Heap sort uses heap property",
-    "frequency": 10
+    "frequency": 21
   },
   {
     "type": "easy",
@@ -655,7 +655,7 @@
     },
     "key": "A 2D array of elements",
     "justification": "Matrices are 2D arrays",
-    "frequency": 6
+    "frequency": 13
   },
   {
     "type": "easy",
@@ -669,7 +669,7 @@
     },
     "key": "Matrix with mostly zero elements",
     "justification": "Sparse matrices are mostly empty",
-    "frequency": 11
+    "frequency": 19
   },
   {
     "type": "easy",
@@ -683,7 +683,7 @@
     },
     "key": "A variable storing memory address",
     "justification": "Pointers hold memory addresses",
-    "frequency": 8
+    "frequency": 18
   },
   {
     "type": "easy",
@@ -697,7 +697,7 @@
     },
     "key": "A pointer to no valid address",
     "justification": "NULL indicates no valid pointer",
-    "frequency": 11
+    "frequency": 20
   },
   {
     "type": "easy",
@@ -711,7 +711,7 @@
     },
     "key": "The position of an element in array",
     "justification": "Index represents element location",
-    "frequency": 8
+    "frequency": 23
   },
   {
     "type": "easy",
@@ -725,7 +725,7 @@
     },
     "key": "An individual item stored in structure",
     "justification": "Elements are data units",
-    "frequency": 5
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -739,7 +739,7 @@
     },
     "key": "Array uses contiguous memory, linked list uses pointers",
     "justification": "Fundamental structural difference",
-    "frequency": 8
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -753,7 +753,7 @@
     },
     "key": "O(1)",
     "justification": "Direct indexing is constant time",
-    "frequency": 11
+    "frequency": 20
   },
   {
     "type": "easy",
@@ -767,7 +767,7 @@
     },
     "key": "The maximum number of elements possible",
     "justification": "Capacity represents total slots",
-    "frequency": 6
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -781,7 +781,7 @@
     },
     "key": "O(n)",
     "justification": "Must traverse sequentially",
-    "frequency": 9
+    "frequency": 19
   },
   {
     "type": "medium",
@@ -795,7 +795,7 @@
     },
     "key": "log₂(n+1)",
     "justification": "Height is logarithmic",
-    "frequency": 8
+    "frequency": 17
   },
   {
     "type": "hard",
@@ -809,7 +809,7 @@
     },
     "key": "O(α(n)) where α is inverse Ackermann",
     "justification": "Inverse Ackermann function",
-    "frequency": 8
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -823,7 +823,7 @@
     },
     "key": "Preemptive splitting",
     "justification": "B-tree optimization technique",
-    "frequency": 10
+    "frequency": 15
   },
   {
     "type": "easy",
@@ -837,7 +837,7 @@
     },
     "key": "Adding a new element to the structure",
     "justification": "Insertion adds elements",
-    "frequency": 9
+    "frequency": 17
   },
   {
     "type": "medium",
@@ -851,7 +851,7 @@
     },
     "key": "O(1)",
     "justification": "Only pointer modification needed",
-    "frequency": 3
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -865,7 +865,7 @@
     },
     "key": "Height difference between left and right subtrees",
     "justification": "AVL balance factor definition",
-    "frequency": 8
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -879,7 +879,7 @@
     },
     "key": "ceil(m/2) - 1 (except root)",
     "justification": "B-tree property definition",
-    "frequency": 7
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -893,7 +893,7 @@
     },
     "key": "Hash table for O(n) solution",
     "justification": "Hash table enables O(n) solution",
-    "frequency": 4
+    "frequency": 21
   },
   {
     "type": "hard",
@@ -907,7 +907,7 @@
     },
     "key": "O(log n) logarithmic time",
     "justification": "Balanced BSTs maintain logarithmic search complexity",
-    "frequency": 9
+    "frequency": 19
   },
   {
     "type": "hard",
@@ -921,7 +921,7 @@
     },
     "key": "To maintain logarithmic height and search efficiency",
     "justification": "Balancing prevents degenerate tree structures",
-    "frequency": 7
+    "frequency": 20
   },
   {
     "type": "hard",
@@ -935,7 +935,7 @@
     },
     "key": "To rebalance tree after insertions/deletions",
     "justification": "Rotations maintain AVL tree balance property",
-    "frequency": 9
+    "frequency": 19
   },
   {
     "type": "hard",
@@ -949,7 +949,7 @@
     },
     "key": "O(n) linear space for call stack",
     "justification": "Recursion depth creates call stack overhead",
-    "frequency": 9
+    "frequency": 17
   },
   {
     "type": "hard",
@@ -963,7 +963,7 @@
     },
     "key": "Storing computed results to avoid recalculation",
     "justification": "Memoization optimizes recursive problems",
-    "frequency": 4
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -977,7 +977,7 @@
     },
     "key": "DP considers all possibilities; greedy makes locally optimal choices",
     "justification": "Fundamental algorithmic paradigm differences",
-    "frequency": 9
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -991,7 +991,7 @@
     },
     "key": "2D array showing edges between vertices",
     "justification": "Adjacency matrix represents graph connectivity",
-    "frequency": 5
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -1005,7 +1005,7 @@
     },
     "key": "Collection of lists showing edges for each vertex",
     "justification": "Adjacency list efficiently represents sparse graphs",
-    "frequency": 12
+    "frequency": 21
   },
   {
     "type": "hard",
@@ -1019,7 +1019,7 @@
     },
     "key": "Ordering vertices in directed acyclic graphs",
     "justification": "Topological sort resolves dependencies",
-    "frequency": 9
+    "frequency": 18
   },
   {
     "type": "hard",
@@ -1033,7 +1033,7 @@
     },
     "key": "Efficiently managing disjoint sets and connectivity",
     "justification": "Union-Find supports set operations optimally",
-    "frequency": 6
+    "frequency": 13
   },
   {
     "type": "hard",
@@ -1047,7 +1047,7 @@
     },
     "key": "Efficient range queries and updates",
     "justification": "Segment trees optimize interval operations",
-    "frequency": 4
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -1061,7 +1061,7 @@
     },
     "key": "Tree for efficient prefix sum queries",
     "justification": "Fenwick trees enable fast cumulative calculations",
-    "frequency": 7
+    "frequency": 22
   },
   {
     "type": "hard",
@@ -1075,7 +1075,7 @@
     },
     "key": "Probabilistic data structure for fast search",
     "justification": "Skip lists provide logarithmic search without balancing",
-    "frequency": 6
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -1089,7 +1089,7 @@
     },
     "key": "O(n log n) in average case; O(n²) worst case",
     "justification": "BST insertion depends on tree balance",
-    "frequency": 11
+    "frequency": 18
   },
   {
     "type": "hard",
@@ -1103,7 +1103,7 @@
     },
     "key": "Space-efficient membership testing",
     "justification": "Bloom filters enable fast probabilistic queries",
-    "frequency": 4
+    "frequency": 18
   },
   {
     "type": "hard",
@@ -1117,7 +1117,7 @@
     },
     "key": "Optimization flattening tree structure during find operations",
     "justification": "Path compression improves amortized performance",
-    "frequency": 7
+    "frequency": 19
   },
   {
     "type": "hard",
@@ -1131,7 +1131,7 @@
     },
     "key": "Allowing insertion and deletion at both ends",
     "justification": "Deques support flexible access patterns",
-    "frequency": 14
+    "frequency": 21
   },
   {
     "type": "hard",
@@ -1145,7 +1145,7 @@
     },
     "key": "Fixed-size buffer with wraparound",
     "justification": "Circular buffers enable efficient reuse of memory",
-    "frequency": 9
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -1159,7 +1159,7 @@
     },
     "key": "Distributing keys to minimize hash value collisions",
     "justification": "Good hashing reduces collision frequency",
-    "frequency": 9
+    "frequency": 17
   },
   {
     "type": "hard",
@@ -1173,7 +1173,7 @@
     },
     "key": "Using two hash functions to find alternative positions",
     "justification": "Double hashing reduces clustering in hash tables",
-    "frequency": 7
+    "frequency": 13
   },
   {
     "type": "hard",
@@ -1187,7 +1187,7 @@
     },
     "key": "Using quadratic intervals to find next available slot",
     "justification": "Quadratic probing reduces primary clustering",
-    "frequency": 10
+    "frequency": 25
   },
   {
     "type": "hard",
@@ -1201,7 +1201,7 @@
     },
     "key": "Ratio of filled slots to table size",
     "justification": "Load factor indicates hash table utilization",
-    "frequency": 12
+    "frequency": 19
   },
   {
     "type": "hard",
@@ -1215,7 +1215,7 @@
     },
     "key": "Rebuilding table with larger size and rehashing all entries",
     "justification": "Rehashing maintains hash table performance",
-    "frequency": 9
+    "frequency": 20
   },
   {
     "type": "hard",
@@ -1229,7 +1229,7 @@
     },
     "key": "Efficient pattern matching using prefix tree structure",
     "justification": "Tries enable fast string operations",
-    "frequency": 6
+    "frequency": 13
   },
   {
     "type": "hard",
@@ -1243,7 +1243,7 @@
     },
     "key": "Structure enabling fast substring searches",
     "justification": "Suffix trees optimize string processing",
-    "frequency": 7
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -1257,7 +1257,7 @@
     },
     "key": "Pattern matching using rolling hash function",
     "justification": "Karp-Rabin enables efficient multi-pattern search",
-    "frequency": 6
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -1271,7 +1271,7 @@
     },
     "key": "1.44 * log₂(n+1) approximately",
     "justification": "AVL height is logarithmic with constant factor",
-    "frequency": 8
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -1285,7 +1285,7 @@
     },
     "key": "Maintaining height balance with color properties",
     "justification": "Red-black properties ensure logarithmic height",
-    "frequency": 9
+    "frequency": 19
   },
   {
     "type": "hard",
@@ -1299,7 +1299,7 @@
     },
     "key": "O(n) linear time using heapify",
     "justification": "Bottom-up heapify runs in linear time",
-    "frequency": 5
+    "frequency": 17
   },
   {
     "type": "hard",
@@ -1313,7 +1313,7 @@
     },
     "key": "Finding shortest path from source to vertices",
     "justification": "Dijkstra's solves single-source shortest path",
-    "frequency": 9
+    "frequency": 20
   },
   {
     "type": "hard",
@@ -1327,7 +1327,7 @@
     },
     "key": "Handles negative edge weights",
     "justification": "Bellman-Ford works with negative weights",
-    "frequency": 9
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -1341,7 +1341,7 @@
     },
     "key": "Finding all-pairs shortest paths",
     "justification": "Floyd-Warshall computes distance between all pairs",
-    "frequency": 11
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -1355,7 +1355,7 @@
     },
     "key": "Selecting minimum weight edges avoiding cycles",
     "justification": "Kruskal's uses greedy edge selection",
-    "frequency": 9
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -1369,6 +1369,6 @@
     },
     "key": "Growing tree from initial vertex",
     "justification": "Prim's builds MST incrementally",
-    "frequency": 8
+    "frequency": 14
   }
 ]

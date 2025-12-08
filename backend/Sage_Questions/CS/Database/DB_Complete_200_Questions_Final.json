@@ -11,7 +11,7 @@
     },
     "key": "A system for storing, managing, and retrieving data",
     "justification": "DBMS is fundamental database technology",
-    "frequency": 8
+    "frequency": 17
   },
   {
     "type": "easy",
@@ -25,7 +25,7 @@
     },
     "key": "A table with columns and rows",
     "justification": "Relation is equivalent to table in RDBMS",
-    "frequency": 7
+    "frequency": 11
   },
   {
     "type": "easy",
@@ -39,7 +39,7 @@
     },
     "key": "A named column of a relation",
     "justification": "Attributes are table columns",
-    "frequency": 12
+    "frequency": 20
   },
   {
     "type": "easy",
@@ -53,7 +53,7 @@
     },
     "key": "A row of a relation",
     "justification": "Tuple is equivalent to row in table",
-    "frequency": 6
+    "frequency": 10
   },
   {
     "type": "easy",
@@ -67,7 +67,7 @@
     },
     "key": "A unique identifier for each row",
     "justification": "Primary key uniquely identifies rows",
-    "frequency": 9
+    "frequency": 18
   },
   {
     "type": "easy",
@@ -81,7 +81,7 @@
     },
     "key": "A key that links data in two relations",
     "justification": "Foreign keys maintain referential integrity",
-    "frequency": 11
+    "frequency": 22
   },
   {
     "type": "easy",
@@ -95,7 +95,7 @@
     },
     "key": "Organizing data to minimize redundancy",
     "justification": "Normalization reduces data redundancy",
-    "frequency": 6
+    "frequency": 16
   },
   {
     "type": "easy",
@@ -109,7 +109,7 @@
     },
     "key": "All attributes contain atomic values only",
     "justification": "1NF requires atomic values",
-    "frequency": 8
+    "frequency": 17
   },
   {
     "type": "easy",
@@ -123,7 +123,7 @@
     },
     "key": "In 1NF and every non-key attribute fully dependent on primary key",
     "justification": "2NF removes partial dependencies",
-    "frequency": 7
+    "frequency": 21
   },
   {
     "type": "easy",
@@ -137,7 +137,7 @@
     },
     "key": "In 2NF and every non-key attribute non-transitively dependent on primary key",
     "justification": "3NF removes transitive dependencies",
-    "frequency": 9
+    "frequency": 17
   },
   {
     "type": "easy",
@@ -151,7 +151,7 @@
     },
     "key": "An attribute uniquely identifying a row without being part of another candidate key",
     "justification": "Candidate keys are alternative keys",
-    "frequency": 7
+    "frequency": 12
   },
   {
     "type": "easy",
@@ -165,7 +165,7 @@
     },
     "key": "Missing or unknown data",
     "justification": "NULL represents unknown values",
-    "frequency": 8
+    "frequency": 15
   },
   {
     "type": "easy",
@@ -179,7 +179,7 @@
     },
     "key": "Foreign key value matches candidate key or is NULL",
     "justification": "Referential integrity maintains FK constraints",
-    "frequency": 7
+    "frequency": 13
   },
   {
     "type": "easy",
@@ -193,7 +193,7 @@
     },
     "key": "A virtual table created from base relations",
     "justification": "Views are virtual tables",
-    "frequency": 13
+    "frequency": 19
   },
   {
     "type": "easy",
@@ -207,7 +207,7 @@
     },
     "key": "A structure for fast data retrieval",
     "justification": "Indexes speed up queries",
-    "frequency": 7
+    "frequency": 14
   },
   {
     "type": "easy",
@@ -221,7 +221,7 @@
     },
     "key": "Structured Query Language",
     "justification": "SQL is standard database query language",
-    "frequency": 7
+    "frequency": 20
   },
   {
     "type": "easy",
@@ -235,7 +235,7 @@
     },
     "key": "Retrieving data from database",
     "justification": "SELECT retrieves data",
-    "frequency": 10
+    "frequency": 21
   },
   {
     "type": "easy",
@@ -249,7 +249,7 @@
     },
     "key": "Adding new records to table",
     "justification": "INSERT adds new rows",
-    "frequency": 7
+    "frequency": 16
   },
   {
     "type": "easy",
@@ -263,7 +263,7 @@
     },
     "key": "Modifying existing data",
     "justification": "UPDATE modifies existing rows",
-    "frequency": 13
+    "frequency": 16
   },
   {
     "type": "easy",
@@ -277,7 +277,7 @@
     },
     "key": "Removing records from table",
     "justification": "DELETE removes rows",
-    "frequency": 3
+    "frequency": 9
   },
   {
     "type": "easy",
@@ -291,7 +291,7 @@
     },
     "key": "Combining rows from multiple tables",
     "justification": "JOIN combines related tables",
-    "frequency": 4
+    "frequency": 13
   },
   {
     "type": "easy",
@@ -305,7 +305,7 @@
     },
     "key": "Returns rows with matches in both tables",
     "justification": "INNER JOIN returns matching records",
-    "frequency": 5
+    "frequency": 15
   },
   {
     "type": "easy",
@@ -319,7 +319,7 @@
     },
     "key": "Returns all rows from left table and matching from right",
     "justification": "LEFT JOIN preserves left table rows",
-    "frequency": 4
+    "frequency": 11
   },
   {
     "type": "easy",
@@ -333,7 +333,7 @@
     },
     "key": "A sequence of database operations",
     "justification": "Transaction is logical unit of work",
-    "frequency": 5
+    "frequency": 15
   },
   {
     "type": "easy",
@@ -347,7 +347,7 @@
     },
     "key": "Atomicity, Consistency, Isolation, Durability",
     "justification": "ACID ensures transaction reliability",
-    "frequency": 12
+    "frequency": 22
   },
   {
     "type": "easy",
@@ -361,7 +361,7 @@
     },
     "key": "Transaction is all or nothing",
     "justification": "Atomicity ensures complete transactions",
-    "frequency": 2
+    "frequency": 13
   },
   {
     "type": "easy",
@@ -375,7 +375,7 @@
     },
     "key": "Database moves from valid state to valid state",
     "justification": "Consistency maintains data integrity",
-    "frequency": 5
+    "frequency": 15
   },
   {
     "type": "easy",
@@ -389,7 +389,7 @@
     },
     "key": "Transactions don't interfere with each other",
     "justification": "Isolation prevents transaction conflicts",
-    "frequency": 13
+    "frequency": 17
   },
   {
     "type": "easy",
@@ -403,7 +403,7 @@
     },
     "key": "Committed data persists despite failures",
     "justification": "Durability ensures data persistence",
-    "frequency": 10
+    "frequency": 18
   },
   {
     "type": "easy",
@@ -417,7 +417,7 @@
     },
     "key": "A set of table definitions",
     "justification": "Schema defines database structure",
-    "frequency": 9
+    "frequency": 22
   },
   {
     "type": "easy",
@@ -431,7 +431,7 @@
     },
     "key": "Unnecessary duplication of data",
     "justification": "Redundancy wastes storage",
-    "frequency": 8
+    "frequency": 19
   },
   {
     "type": "easy",
@@ -445,7 +445,7 @@
     },
     "key": "Unable to insert data without violating constraints",
     "justification": "Insertion anomaly in poorly normalized data",
-    "frequency": 9
+    "frequency": 21
   },
   {
     "type": "easy",
@@ -459,7 +459,7 @@
     },
     "key": "Unintended loss of data when deleting records",
     "justification": "Deletion anomaly causes data loss",
-    "frequency": 5
+    "frequency": 9
   },
   {
     "type": "easy",
@@ -473,7 +473,7 @@
     },
     "key": "Inconsistency from updating redundant data",
     "justification": "Modification anomaly creates inconsistency",
-    "frequency": 12
+    "frequency": 21
   },
   {
     "type": "easy",
@@ -487,7 +487,7 @@
     },
     "key": "One attribute determining another attribute value",
     "justification": "Functional dependency is important for normalization",
-    "frequency": 7
+    "frequency": 14
   },
   {
     "type": "easy",
@@ -501,7 +501,7 @@
     },
     "key": "Non-key depends on part of composite key",
     "justification": "Partial dependency removed in 2NF",
-    "frequency": 12
+    "frequency": 19
   },
   {
     "type": "easy",
@@ -515,7 +515,7 @@
     },
     "key": "Non-key attribute depends on another non-key",
     "justification": "Transitive dependency removed in 3NF",
-    "frequency": 13
+    "frequency": 21
   },
   {
     "type": "easy",
@@ -529,7 +529,7 @@
     },
     "key": "A visual representation of database structure",
     "justification": "ER model is fundamental design tool",
-    "frequency": 10
+    "frequency": 22
   },
   {
     "type": "easy",
@@ -543,7 +543,7 @@
     },
     "key": "The number of occurrences in relationship",
     "justification": "Cardinality defines relationship multiplicity",
-    "frequency": 6
+    "frequency": 14
   },
   {
     "type": "easy",
@@ -557,7 +557,7 @@
     },
     "key": "One entity instance related to many in other",
     "justification": "One-to-many is common relationship type",
-    "frequency": 7
+    "frequency": 12
   },
   {
     "type": "easy",
@@ -571,7 +571,7 @@
     },
     "key": "Entities on both sides related to many",
     "justification": "Many-to-many requires junction table",
-    "frequency": 5
+    "frequency": 13
   },
   {
     "type": "easy",
@@ -585,7 +585,7 @@
     },
     "key": "Index using bit-vectors for values",
     "justification": "Bitmap indexes optimize certain queries",
-    "frequency": 7
+    "frequency": 18
   },
   {
     "type": "easy",
@@ -599,7 +599,7 @@
     },
     "key": "Balanced tree structure for indexing",
     "justification": "B-trees used in database indexing",
-    "frequency": 5
+    "frequency": 18
   },
   {
     "type": "medium",
@@ -613,7 +613,7 @@
     },
     "key": "Primary key is one chosen from candidate keys",
     "justification": "Primary key chosen from candidates",
-    "frequency": 8
+    "frequency": 18
   },
   {
     "type": "medium",
@@ -627,7 +627,7 @@
     },
     "key": "Reduces redundancy and anomalies",
     "justification": "Normalization addresses design issues",
-    "frequency": 6
+    "frequency": 13
   },
   {
     "type": "medium",
@@ -641,7 +641,7 @@
     },
     "key": "Stop actions violating integrity",
     "justification": "RESTRICT prevents integrity violations",
-    "frequency": 4
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -655,7 +655,7 @@
     },
     "key": "Allows changes to flow through relations",
     "justification": "CASCADE propagates changes",
-    "frequency": 6
+    "frequency": 17
   },
   {
     "type": "medium",
@@ -669,7 +669,7 @@
     },
     "key": "Sets problem values to NULL",
     "justification": "NULLIFY handles referential issues",
-    "frequency": 1
+    "frequency": 8
   },
   {
     "type": "easy",
@@ -683,7 +683,7 @@
     },
     "key": "The number of attributes in a relation",
     "justification": "Degree is the attribute count",
-    "frequency": 10
+    "frequency": 19
   },
   {
     "type": "easy",
@@ -697,7 +697,7 @@
     },
     "key": "The number of tuples in a relation",
     "justification": "Cardinality is the tuple count",
-    "frequency": 4
+    "frequency": 10
   },
   {
     "type": "easy",
@@ -711,7 +711,7 @@
     },
     "key": "The set of allowable values for attribute",
     "justification": "Domain constrains attribute values",
-    "frequency": 12
+    "frequency": 19
   },
   {
     "type": "medium",
@@ -725,7 +725,7 @@
     },
     "key": "Base is physical, view is virtual based on relations",
     "justification": "Views are derived from base relations",
-    "frequency": 4
+    "frequency": 15
   },
   {
     "type": "medium",
@@ -739,7 +739,7 @@
     },
     "key": "Immunity of external schemas to conceptual schema changes",
     "justification": "Logical independence protects applications",
-    "frequency": 2
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -753,7 +753,7 @@
     },
     "key": "Immunity of conceptual schema to internal schema changes",
     "justification": "Physical independence protects design",
-    "frequency": 8
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -767,7 +767,7 @@
     },
     "key": "Three-level database architecture",
     "justification": "ANSI-SPARC defines external, conceptual, internal",
-    "frequency": 11
+    "frequency": 20
   },
   {
     "type": "medium",
@@ -781,7 +781,7 @@
     },
     "key": "Unnecessary duplication of data",
     "justification": "Redundancy is eliminated by normalization",
-    "frequency": 10
+    "frequency": 22
   },
   {
     "type": "hard",
@@ -795,7 +795,7 @@
     },
     "key": "Normalization removes partial and transitive dependencies",
     "justification": "Normalization addresses functional dependencies",
-    "frequency": 7
+    "frequency": 20
   },
   {
     "type": "hard",
@@ -809,7 +809,7 @@
     },
     "key": "Every determinant is a candidate key",
     "justification": "BCNF is stricter than 3NF",
-    "frequency": 10
+    "frequency": 18
   },
   {
     "type": "hard",
@@ -823,7 +823,7 @@
     },
     "key": "In BCNF without non-trivial multivalued dependencies",
     "justification": "4NF handles multivalued dependencies",
-    "frequency": 4
+    "frequency": 13
   },
   {
     "type": "hard",
@@ -837,7 +837,7 @@
     },
     "key": "Index entry for every search-key value",
     "justification": "Dense index has entry per value",
-    "frequency": 9
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -851,7 +851,7 @@
     },
     "key": "Index entry for some search-key values",
     "justification": "Sparse index has entry per block",
-    "frequency": 6
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -865,7 +865,7 @@
     },
     "key": "Index on non-key attribute",
     "justification": "Secondary indexes speed non-key searches",
-    "frequency": 9
+    "frequency": 22
   },
   {
     "type": "hard",
@@ -879,7 +879,7 @@
     },
     "key": "Selecting most efficient query execution plan",
     "justification": "Optimizer chooses best execution path",
-    "frequency": 5
+    "frequency": 11
   },
   {
     "type": "hard",
@@ -893,7 +893,7 @@
     },
     "key": "Sequence of operations for executing query",
     "justification": "Execution plan determines performance",
-    "frequency": 8
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -907,7 +907,7 @@
     },
     "key": "Intentionally adding redundancy for performance",
     "justification": "Denormalization trades consistency for speed",
-    "frequency": 11
+    "frequency": 18
   },
   {
     "type": "medium",
@@ -921,7 +921,7 @@
     },
     "key": "WHERE filters rows before grouping; HAVING filters groups after aggregation",
     "justification": "WHERE and HAVING operate at different stages",
-    "frequency": 7
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -935,7 +935,7 @@
     },
     "key": "Grouping rows by column values for aggregate functions",
     "justification": "GROUP BY creates row groups for aggregation",
-    "frequency": 5
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -949,7 +949,7 @@
     },
     "key": "Functions that perform calculations on multiple values",
     "justification": "Aggregate functions like SUM, AVG work on row sets",
-    "frequency": 7
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -963,7 +963,7 @@
     },
     "key": "Sorting result rows based on specified columns",
     "justification": "ORDER BY sorts results ascending or descending",
-    "frequency": 11
+    "frequency": 19
   },
   {
     "type": "medium",
@@ -977,7 +977,7 @@
     },
     "key": "Removing duplicate rows from results",
     "justification": "DISTINCT eliminates duplicates in query output",
-    "frequency": 8
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -991,7 +991,7 @@
     },
     "key": "Pattern matching on string values with wildcards",
     "justification": "LIKE searches patterns using % and _ wildcards",
-    "frequency": 8
+    "frequency": 18
   },
   {
     "type": "medium",
@@ -1005,7 +1005,7 @@
     },
     "key": "Selecting values within an inclusive range",
     "justification": "BETWEEN selects values in specified range",
-    "frequency": 1
+    "frequency": 7
   },
   {
     "type": "medium",
@@ -1019,7 +1019,7 @@
     },
     "key": "Testing if value matches any in a list",
     "justification": "IN checks if value exists in specified list",
-    "frequency": 7
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -1033,7 +1033,7 @@
     },
     "key": "Returns all rows from right table and matching from left",
     "justification": "RIGHT JOIN preserves all right table rows",
-    "frequency": 5
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -1047,7 +1047,7 @@
     },
     "key": "Returns all rows from both tables matching or not",
     "justification": "FULL OUTER JOIN includes unmatched rows",
-    "frequency": 2
+    "frequency": 13
   },
   {
     "type": "medium",
@@ -1061,7 +1061,7 @@
     },
     "key": "Cartesian product of all rows from both tables",
     "justification": "CROSS JOIN produces all combinations",
-    "frequency": 13
+    "frequency": 22
   },
   {
     "type": "hard",
@@ -1075,7 +1075,7 @@
     },
     "key": "Query nested within another query",
     "justification": "Subqueries provide intermediate result sets",
-    "frequency": 13
+    "frequency": 18
   },
   {
     "type": "hard",
@@ -1089,7 +1089,7 @@
     },
     "key": "Subquery referencing columns from outer query",
     "justification": "Correlated subqueries execute per row",
-    "frequency": 6
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -1103,7 +1103,7 @@
     },
     "key": "UNION removes duplicates; UNION ALL keeps all rows",
     "justification": "UNION performs duplicate elimination via sort",
-    "frequency": 4
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -1117,7 +1117,7 @@
     },
     "key": "Returning rows common to both query results",
     "justification": "INTERSECT finds common rows",
-    "frequency": 10
+    "frequency": 17
   },
   {
     "type": "hard",
@@ -1131,7 +1131,7 @@
     },
     "key": "Rows in first query but not in second",
     "justification": "EXCEPT returns difference between sets",
-    "frequency": 10
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -1145,7 +1145,7 @@
     },
     "key": "Function operating on row set within result window",
     "justification": "Window functions work over partitions",
-    "frequency": 8
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -1159,7 +1159,7 @@
     },
     "key": "Named temporary result sets defined in query",
     "justification": "CTEs improve readability using WITH clause",
-    "frequency": 9
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -1173,7 +1173,7 @@
     },
     "key": "Maintaining copies of database across systems",
     "justification": "Replication ensures availability",
-    "frequency": 7
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -1187,7 +1187,7 @@
     },
     "key": "Distributing data across multiple servers",
     "justification": "Sharding improves scalability",
-    "frequency": 6
+    "frequency": 11
   },
   {
     "type": "hard",
@@ -1201,7 +1201,7 @@
     },
     "key": "Planning which columns to index for performance",
     "justification": "Index strategy affects query performance",
-    "frequency": 17
+    "frequency": 27
   },
   {
     "type": "hard",
@@ -1215,7 +1215,7 @@
     },
     "key": "Showing query execution plan and statistics",
     "justification": "EXPLAIN helps optimize queries",
-    "frequency": 6
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -1229,7 +1229,7 @@
     },
     "key": "Pre-compiled SQL with placeholders for security",
     "justification": "Prepared statements prevent SQL injection",
-    "frequency": 6
+    "frequency": 12
   },
   {
     "type": "hard",
@@ -1243,7 +1243,7 @@
     },
     "key": "Security vulnerability where malicious SQL is inserted",
     "justification": "SQL injection is critical security threat",
-    "frequency": 5
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -1257,7 +1257,7 @@
     },
     "key": "Splitting large table into smaller logical parts",
     "justification": "Partitioning improves performance",
-    "frequency": 6
+    "frequency": 19
   },
   {
     "type": "hard",
@@ -1271,7 +1271,7 @@
     },
     "key": "Moving old data to separate storage for retention",
     "justification": "Archiving manages old data",
-    "frequency": 4
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -1285,7 +1285,7 @@
     },
     "key": "Permanently deleting old or unwanted data",
     "justification": "Purging removes obsolete data",
-    "frequency": 6
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -1299,6 +1299,6 @@
     },
     "key": "Consistency, Availability, Partition tolerance tradeoff",
     "justification": "CAP theorem limits distributed system design",
-    "frequency": 6
+    "frequency": 11
   }
 ]

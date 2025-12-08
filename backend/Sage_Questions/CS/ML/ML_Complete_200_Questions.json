@@ -11,7 +11,7 @@
     },
     "key": "Cleaning, transforming data to prepare for ML models",
     "justification": "Preprocessing is critical for model performance",
-    "frequency": 4
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -25,7 +25,7 @@
     },
     "key": "Supervised uses labeled data; unsupervised uses unlabeled data",
     "justification": "Key distinction in ML paradigms",
-    "frequency": 7
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -39,7 +39,7 @@
     },
     "key": "The rate of change in output for unit change in input",
     "justification": "Slope indicates variable relationship strength",
-    "frequency": 2
+    "frequency": 3
   },
   {
     "type": "medium",
@@ -53,7 +53,7 @@
     },
     "key": "Regression with multiple input features and one output",
     "justification": "Multivariate regression handles multiple predictors",
-    "frequency": 4
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -67,7 +67,7 @@
     },
     "key": "Logistic regression outputs probabilities between 0 and 1",
     "justification": "Sigmoid ensures valid probability outputs",
-    "frequency": 4
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -81,7 +81,7 @@
     },
     "key": "Reduction in entropy after a split",
     "justification": "Information gain guides splitting decisions",
-    "frequency": 10
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -109,7 +109,7 @@
     },
     "key": "Majority vote or average of k nearest points' labels",
     "justification": "kNN uses simple neighbor voting mechanism",
-    "frequency": 3
+    "frequency": 5
   },
   {
     "type": "medium",
@@ -123,7 +123,7 @@
     },
     "key": "O(n) - must compute distance to all training points",
     "justification": "kNN has lazy learning property",
-    "frequency": 1
+    "frequency": 2
   },
   {
     "type": "medium",
@@ -137,7 +137,7 @@
     },
     "key": "Uses kernel trick to map data to higher dimension",
     "justification": "Kernel trick enables SVM for non-linear problems",
-    "frequency": 5
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -151,7 +151,7 @@
     },
     "key": "Computing similarity in high-dimension space without explicit transformation",
     "justification": "Kernel trick makes SVM computationally efficient",
-    "frequency": 3
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -165,7 +165,7 @@
     },
     "key": "Averaging predictions of multiple trees with random features",
     "justification": "Ensemble averaging reduces individual tree overfitting",
-    "frequency": 4
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -179,7 +179,7 @@
     },
     "key": "Finding optimal k by plotting variance and looking for 'elbow' point",
     "justification": "Elbow method helps select K in K-means",
-    "frequency": 3
+    "frequency": 7
   },
   {
     "type": "medium",
@@ -193,7 +193,7 @@
     },
     "key": "Metric evaluating cluster cohesion and separation",
     "justification": "Silhouette score measures clustering quality",
-    "frequency": 2
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -207,7 +207,7 @@
     },
     "key": "Enables nonlinear mapping, allowing networks to learn complex functions",
     "justification": "Without nonlinearity, deep networks become linear",
-    "frequency": 6
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -221,7 +221,7 @@
     },
     "key": "Gradients become very small in deep networks, hindering learning",
     "justification": "Vanishing gradient prevents learning in early layers",
-    "frequency": 5
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -235,7 +235,7 @@
     },
     "key": "Gradients become very large, causing instability",
     "justification": "Exploding gradient causes training instability",
-    "frequency": 3
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -249,7 +249,7 @@
     },
     "key": "Randomly deactivating neurons during training to prevent overfitting",
     "justification": "Dropout is regularization technique",
-    "frequency": 5
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -263,7 +263,7 @@
     },
     "key": "Standardizing layer inputs during training for faster convergence",
     "justification": "Batch norm stabilizes and accelerates training",
-    "frequency": 4
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -277,7 +277,7 @@
     },
     "key": "Downsampling operation reducing spatial dimensions",
     "justification": "Pooling reduces computation and extracts important features",
-    "frequency": 2
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -291,7 +291,7 @@
     },
     "key": "Taking maximum value from pooling window",
     "justification": "Max pooling preserves prominent features",
-    "frequency": 9
+    "frequency": 13
   },
   {
     "type": "medium",
@@ -305,7 +305,7 @@
     },
     "key": "Creating new features from raw data to improve model",
     "justification": "Feature engineering is crucial for model performance",
-    "frequency": 8
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -319,7 +319,7 @@
     },
     "key": "Technique reducing number of features while preserving information",
     "justification": "Dimensionality reduction improves efficiency",
-    "frequency": 4
+    "frequency": 7
   },
   {
     "type": "medium",
@@ -333,7 +333,7 @@
     },
     "key": "Unsupervised technique finding principal components of variance",
     "justification": "PCA is standard dimensionality reduction method",
-    "frequency": 5
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -347,7 +347,7 @@
     },
     "key": "Balance between model underfitting (high bias) and overfitting (high variance)",
     "justification": "Bias-variance tradeoff is fundamental ML concept",
-    "frequency": 4
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -361,7 +361,7 @@
     },
     "key": "Ensemble technique combining weak learners sequentially",
     "justification": "Boosting reduces bias iteratively",
-    "frequency": 5
+    "frequency": 7
   },
   {
     "type": "medium",
@@ -375,7 +375,7 @@
     },
     "key": "Bootstrap aggregating - creating multiple datasets by sampling with replacement",
     "justification": "Bagging reduces variance through averaging",
-    "frequency": 6
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -389,7 +389,7 @@
     },
     "key": "Boosting algorithm focusing on misclassified samples iteratively",
     "justification": "AdaBoost adapts to difficult samples",
-    "frequency": 2
+    "frequency": 3
   },
   {
     "type": "medium",
@@ -403,7 +403,7 @@
     },
     "key": "Ensemble method building trees sequentially using gradient descent",
     "justification": "Gradient boosting is highly effective ensemble method",
-    "frequency": 9
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -417,7 +417,7 @@
     },
     "key": "Halting training when validation performance stops improving",
     "justification": "Early stopping prevents overfitting",
-    "frequency": 5
+    "frequency": 7
   },
   {
     "type": "medium",
@@ -431,7 +431,7 @@
     },
     "key": "Adding penalty proportional to absolute weight values",
     "justification": "L1 (Lasso) encourages sparsity",
-    "frequency": 2
+    "frequency": 4
   },
   {
     "type": "medium",
@@ -445,7 +445,7 @@
     },
     "key": "Adding penalty proportional to squared weight values",
     "justification": "L2 (Ridge) reduces large weights",
-    "frequency": 2
+    "frequency": 3
   },
   {
     "type": "medium",
@@ -459,7 +459,7 @@
     },
     "key": "Combining L1 and L2 regularization",
     "justification": "Elastic net combines benefits of Lasso and Ridge",
-    "frequency": 2
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -473,7 +473,7 @@
     },
     "key": "Using pre-trained model on new task to improve learning",
     "justification": "Transfer learning saves training time",
-    "frequency": 3
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -487,7 +487,7 @@
     },
     "key": "Continuing training of pre-trained model on new data",
     "justification": "Fine-tuning adapts models to new domains",
-    "frequency": 2
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -501,7 +501,7 @@
     },
     "key": "Converting categorical variables to binary vectors",
     "justification": "One-hot encoding handles categorical features",
-    "frequency": 4
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -515,7 +515,7 @@
     },
     "key": "Assigning integer values to categorical variables",
     "justification": "Label encoding for ordinal categories",
-    "frequency": 5
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -529,7 +529,7 @@
     },
     "key": "Training data with unequal class distribution",
     "justification": "Imbalanced data requires special techniques",
-    "frequency": 2
+    "frequency": 3
   },
   {
     "type": "medium",
@@ -543,7 +543,7 @@
     },
     "key": "Technique creating synthetic samples for minority class",
     "justification": "SMOTE addresses class imbalance",
-    "frequency": 3
+    "frequency": 5
   },
   {
     "type": "medium",
@@ -557,7 +557,7 @@
     },
     "key": "Evaluating cluster quality using silhouette coefficients",
     "justification": "Silhouette analysis validates clustering",
-    "frequency": 3
+    "frequency": 7
   },
   {
     "type": "medium",
@@ -571,7 +571,7 @@
     },
     "key": "Density-based clustering separating dense regions",
     "justification": "DBSCAN finds arbitrary cluster shapes",
-    "frequency": 6
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -585,7 +585,7 @@
     },
     "key": "Identifying outliers or unusual patterns in data",
     "justification": "Anomaly detection finds data abnormalities",
-    "frequency": 3
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -599,7 +599,7 @@
     },
     "key": "Understanding classification errors (TP, TN, FP, FN)",
     "justification": "Confusion matrix details all prediction types",
-    "frequency": 4
+    "frequency": 7
   },
   {
     "type": "medium",
@@ -613,7 +613,7 @@
     },
     "key": "Sensitivity - ratio of correct positives to all actual positives",
     "justification": "TPR measures recall or sensitivity",
-    "frequency": 6
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -627,7 +627,7 @@
     },
     "key": "Ratio of incorrect positives to all actual negatives",
     "justification": "FPR measures false positive rate",
-    "frequency": 1
+    "frequency": 4
   },
   {
     "type": "medium",
@@ -641,7 +641,7 @@
     },
     "key": "One complete pass through entire training dataset",
     "justification": "Epochs control total training time",
-    "frequency": 2
+    "frequency": 3
   },
   {
     "type": "medium",
@@ -655,7 +655,7 @@
     },
     "key": "Number of samples processed before weight update",
     "justification": "Batch size affects memory and convergence",
-    "frequency": 3
+    "frequency": 4
   },
   {
     "type": "medium",
@@ -669,7 +669,7 @@
     },
     "key": "Controls step size in gradient descent updates",
     "justification": "Learning rate is critical hyperparameter",
-    "frequency": 3
+    "frequency": 5
   },
   {
     "type": "medium",
@@ -683,7 +683,7 @@
     },
     "key": "Output of convolution filter representing detected features",
     "justification": "Feature maps detect image patterns",
-    "frequency": 5
+    "frequency": 13
   },
   {
     "type": "medium",
@@ -697,7 +697,7 @@
     },
     "key": "Number of pixels filter moves each step",
     "justification": "Stride affects output size",
-    "frequency": 1
+    "frequency": 2
   },
   {
     "type": "medium",
@@ -711,7 +711,7 @@
     },
     "key": "Adding zeros around image borders for convolution",
     "justification": "Padding preserves spatial dimensions",
-    "frequency": 3
+    "frequency": 7
   },
   {
     "type": "hard",
@@ -725,7 +725,7 @@
     },
     "key": "Performance degrades with increasing dimensions due to sparse data",
     "justification": "Curse of dimensionality affects all ML algorithms",
-    "frequency": 6
+    "frequency": 11
   },
   {
     "type": "hard",
@@ -739,7 +739,7 @@
     },
     "key": "Learning low-dimensional representation of high-dimensional data",
     "justification": "Manifold learning finds intrinsic structure",
-    "frequency": 2
+    "frequency": 7
   },
   {
     "type": "hard",
@@ -753,7 +753,7 @@
     },
     "key": "Technique for visualizing high-dimensional data using probabilistic similarities",
     "justification": "t-SNE preserves local structure in visualization",
-    "frequency": 2
+    "frequency": 4
   },
   {
     "type": "hard",
@@ -767,7 +767,7 @@
     },
     "key": "Allowing some misclassifications to find better generalization",
     "justification": "Soft margin enables handling noisy data",
-    "frequency": 4
+    "frequency": 7
   },
   {
     "type": "hard",
@@ -781,7 +781,7 @@
     },
     "key": "Data points closest to decision boundary that define hyperplane",
     "justification": "Support vectors determine the classifier",
-    "frequency": 6
+    "frequency": 13
   },
   {
     "type": "hard",
@@ -795,7 +795,7 @@
     },
     "key": "Deeper trees can memorize training data, increasing overfitting",
     "justification": "Tree depth controls complexity",
-    "frequency": 3
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -809,7 +809,7 @@
     },
     "key": "Learning useful feature representations automatically from raw data",
     "justification": "Deep learning is essentially representation learning",
-    "frequency": 6
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -823,7 +823,7 @@
     },
     "key": "Allowing gradients to bypass layers, enabling very deep networks",
     "justification": "Skip connections solve vanishing gradient",
-    "frequency": 4
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -837,7 +837,7 @@
     },
     "key": "Network with connections to previous outputs for sequential data",
     "justification": "RNNs process sequences",
-    "frequency": 5
+    "frequency": 7
   },
   {
     "type": "hard",
@@ -851,7 +851,7 @@
     },
     "key": "RNN variant with gates to remember/forget information",
     "justification": "LSTM solves RNN gradient problems",
-    "frequency": 7
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -865,7 +865,7 @@
     },
     "key": "Computing weighted sum over all inputs based on relevance",
     "justification": "Attention improves model interpretability",
-    "frequency": 3
+    "frequency": 7
   },
   {
     "type": "hard",
@@ -879,7 +879,7 @@
     },
     "key": "Architecture using only attention without recurrence for sequences",
     "justification": "Transformers enable parallel processing",
-    "frequency": 5
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -893,7 +893,7 @@
     },
     "key": "Convolutions with gaps in filter to increase receptive field",
     "justification": "Dilated convolutions capture larger context",
-    "frequency": 3
+    "frequency": 11
   },
   {
     "type": "hard",
@@ -907,7 +907,7 @@
     },
     "key": "Probabilistic model assuming data from mixture of Gaussians",
     "justification": "GMM provides soft clustering",
-    "frequency": 2
+    "frequency": 4
   },
   {
     "type": "hard",
@@ -921,7 +921,7 @@
     },
     "key": "Iterative algorithm for maximum likelihood estimation with hidden variables",
     "justification": "EM is fundamental in probabilistic learning",
-    "frequency": 1
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -935,7 +935,7 @@
     },
     "key": "Finding parameters that maximize probability of observed data",
     "justification": "MLE is fundamental statistical principle",
-    "frequency": 2
+    "frequency": 7
   },
   {
     "type": "hard",
@@ -949,7 +949,7 @@
     },
     "key": "Using Bayes theorem to update beliefs with observed data",
     "justification": "Bayesian inference provides uncertainty",
-    "frequency": 6
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -963,7 +963,7 @@
     },
     "key": "Approximate Bayesian inference using optimization",
     "justification": "Variational inference scales to large data",
-    "frequency": 2
+    "frequency": 4
   },
   {
     "type": "hard",
@@ -977,7 +977,7 @@
     },
     "key": "Model learning joint distribution P(X,Y) to generate samples",
     "justification": "Generative models can create new data",
-    "frequency": 3
+    "frequency": 4
   },
   {
     "type": "hard",
@@ -991,7 +991,7 @@
     },
     "key": "Model learning P(Y|X) to make predictions",
     "justification": "Discriminative models focus on decision boundary",
-    "frequency": 1
+    "frequency": 3
   },
   {
     "type": "hard",
@@ -1005,7 +1005,7 @@
     },
     "key": "Training model with adversarial examples for robustness",
     "justification": "Adversarial training improves model robustness",
-    "frequency": 4
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -1019,7 +1019,7 @@
     },
     "key": "Carefully perturbed inputs causing model misclassification",
     "justification": "Adversarial examples reveal model vulnerabilities",
-    "frequency": 5
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -1033,7 +1033,7 @@
     },
     "key": "Learning how to learn, quickly adapting to new tasks",
     "justification": "Meta-learning enables few-shot learning",
-    "frequency": 3
+    "frequency": 7
   },
   {
     "type": "hard",
@@ -1047,7 +1047,7 @@
     },
     "key": "Learning new tasks from very limited labeled examples",
     "justification": "Few-shot learning mimics human learning",
-    "frequency": 4
+    "frequency": 7
   },
   {
     "type": "hard",
@@ -1061,7 +1061,7 @@
     },
     "key": "Recognizing unseen classes using semantic information",
     "justification": "Zero-shot learning requires external knowledge",
-    "frequency": 2
+    "frequency": 7
   },
   {
     "type": "hard",
@@ -1075,7 +1075,7 @@
     },
     "key": "Transferring model from source domain to target domain",
     "justification": "Domain adaptation handles distribution shift",
-    "frequency": 1
+    "frequency": 5
   },
   {
     "type": "hard",
@@ -1089,7 +1089,7 @@
     },
     "key": "Training on decentralized data without centralizing it",
     "justification": "Federated learning preserves privacy",
-    "frequency": 3
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -1117,7 +1117,7 @@
     },
     "key": "Reinforcement learning estimating action-value function",
     "justification": "Q-learning is model-free RL algorithm",
-    "frequency": 3
+    "frequency": 4
   },
   {
     "type": "hard",
@@ -1131,7 +1131,7 @@
     },
     "key": "RL approach directly learning policy using gradient",
     "justification": "Policy gradient methods are flexible RL approach",
-    "frequency": 5
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -1145,7 +1145,7 @@
     },
     "key": "Selecting most informative samples for labeling",
     "justification": "Active learning reduces labeling cost",
-    "frequency": 3
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -1159,7 +1159,7 @@
     },
     "key": "Training on gradually harder tasks",
     "justification": "Curriculum learning mimics human education",
-    "frequency": 3
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -1173,7 +1173,7 @@
     },
     "key": "Learning from unlabeled data using self-generated labels",
     "justification": "Self-supervised learning leverages unlabeled data",
-    "frequency": 5
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -1201,7 +1201,7 @@
     },
     "key": "Learning distance metrics for comparing data",
     "justification": "Metric learning improves similarity tasks",
-    "frequency": 3
+    "frequency": 7
   },
   {
     "type": "hard",
@@ -1215,7 +1215,7 @@
     },
     "key": "Learning representations by contrasting similar/dissimilar pairs",
     "justification": "Contrastive learning is powerful pretraining method",
-    "frequency": 5
+    "frequency": 7
   },
   {
     "type": "hard",
@@ -1229,7 +1229,7 @@
     },
     "key": "Training small model to mimic large model",
     "justification": "Knowledge distillation enables model compression",
-    "frequency": 1
+    "frequency": 3
   },
   {
     "type": "hard",
@@ -1243,7 +1243,7 @@
     },
     "key": "Making ML models interpretable and understandable",
     "justification": "XAI is important for trustworthy AI",
-    "frequency": 2
+    "frequency": 6
   },
   {
     "type": "hard",
@@ -1257,7 +1257,7 @@
     },
     "key": "Local Interpretable Model-agnostic Explanations",
     "justification": "LIME explains individual predictions",
-    "frequency": 4
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -1271,7 +1271,7 @@
     },
     "key": "SHapley Additive exPlanations for interpretability",
     "justification": "SHAP provides game-theory based explanations",
-    "frequency": 2
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -1285,7 +1285,7 @@
     },
     "key": "Ensuring models don't discriminate against groups",
     "justification": "Fairness is critical for ethical AI",
-    "frequency": 4
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -1299,7 +1299,7 @@
     },
     "key": "Change in data distribution over time",
     "justification": "Concept drift challenges online learning",
-    "frequency": 5
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -1313,7 +1313,7 @@
     },
     "key": "Learning incrementally from streaming data",
     "justification": "Online learning handles continuous data streams",
-    "frequency": 1
+    "frequency": 4
   },
   {
     "type": "hard",
@@ -1327,7 +1327,7 @@
     },
     "key": "Creating variations of text to improve robustness",
     "justification": "Text augmentation improves generalization",
-    "frequency": 2
+    "frequency": 7
   },
   {
     "type": "hard",
@@ -1341,7 +1341,7 @@
     },
     "key": "Representing words as dense vectors in semantic space",
     "justification": "Word embeddings capture semantic meaning",
-    "frequency": 4
+    "frequency": 7
   },
   {
     "type": "hard",
@@ -1355,7 +1355,7 @@
     },
     "key": "Neural network model learning word embeddings",
     "justification": "Word2Vec is foundational embedding method",
-    "frequency": 4
+    "frequency": 11
   },
   {
     "type": "hard",
@@ -1369,7 +1369,7 @@
     },
     "key": "Systematic differences across image batches/devices",
     "justification": "Batch effects confound training",
-    "frequency": 2
+    "frequency": 6
   },
   {
     "type": "hard",
@@ -1383,7 +1383,7 @@
     },
     "key": "Automating design of neural network architectures",
     "justification": "NAS discovers optimal architectures",
-    "frequency": 4
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -1397,7 +1397,7 @@
     },
     "key": "Finding best hyperparameters via grid/random/Bayesian search",
     "justification": "Hyperparameter optimization improves performance",
-    "frequency": 4
+    "frequency": 6
   },
   {
     "type": "hard",
@@ -1411,6 +1411,6 @@
     },
     "key": "Diversity of ensemble members improves ensemble performance",
     "justification": "Diversity is key to ensemble success",
-    "frequency": 5
+    "frequency": 7
   }
 ]

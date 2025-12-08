@@ -11,7 +11,7 @@
     "key": "Pre-built classes for storing collections of data",
     "justification": "STL (Standard Template Library) containers are template classes that provide efficient data structures like vector, list, map, set, etc.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -25,7 +25,7 @@
     "key": "Vector uses contiguous memory (array-based); list uses linked nodes",
     "justification": "Vector provides O(1) random access but O(n) insertion/deletion. List provides O(n) access but O(1) insertion/deletion at known position.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -39,7 +39,7 @@
     "key": "O(1)",
     "justification": "Vector provides constant-time random access since it uses contiguous memory like arrays.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 15
   },
   {
     "type": "medium",
@@ -53,7 +53,7 @@
     "key": "O(n)",
     "justification": "Insertion at the beginning requires shifting all elements, resulting in linear time complexity.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -67,7 +67,7 @@
     "key": "An associative container storing key-value pairs in sorted order",
     "justification": "Map stores elements as key-value pairs, maintains sorted order by key, and provides O(log n) search/insert/delete.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 15
   },
   {
     "type": "medium",
@@ -81,7 +81,7 @@
     "key": "Map maintains sorted order (O(log n)); unordered_map uses hash (average O(1))",
     "justification": "Map uses balanced tree for ordered access, unordered_map uses hash table for faster average-case access.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 13
   },
   {
     "type": "medium",
@@ -95,7 +95,7 @@
     "key": "An ordered container of unique elements",
     "justification": "Set stores unique elements in sorted order and automatically rejects duplicates.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -109,7 +109,7 @@
     "key": "Set stores unique elements; multiset allows duplicates",
     "justification": "Both maintain sorted order, but set rejects duplicates while multiset allows multiple copies of the same value.",
     "justified_by": "Perplexity",
-    "frequency": 11
+    "frequency": 17
   },
   {
     "type": "medium",
@@ -123,7 +123,7 @@
     "key": "A FIFO (First-In-First-Out) container",
     "justification": "Queue implements FIFO where elements are added at the back and removed from the front.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -137,7 +137,7 @@
     "key": "A LIFO (Last-In-First-Out) container",
     "justification": "Stack implements LIFO where elements are added and removed from the top (back).",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -151,7 +151,7 @@
     "key": "A pointer-like object that allows traversing container elements",
     "justification": "Iterators work like pointers to elements in a container, enabling traversal and manipulation of container elements.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 13
   },
   {
     "type": "medium",
@@ -165,7 +165,7 @@
     "key": "Input, Output, Forward, Bidirectional, Random Access",
     "justification": "Five categories of iterators with different capabilities, from basic input/output to full random access.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 13
   },
   {
     "type": "medium",
@@ -179,7 +179,7 @@
     "key": "Vector is dynamic; array is fixed size",
     "justification": "Arrays have fixed size determined at compile time, while vectors are dynamic and can grow/shrink at runtime.",
     "justified_by": "Perplexity",
-    "frequency": 1
+    "frequency": 7
   },
   {
     "type": "medium",
@@ -193,7 +193,7 @@
     "key": "A variable that stores a memory address",
     "justification": "Pointers store the memory address of another variable, allowing indirect access and dynamic memory allocation.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -207,7 +207,7 @@
     "key": "Pointer can be null and reassigned; reference cannot be null and is fixed",
     "justification": "References are safer alternatives to pointers - they cannot be null or reassigned after initialization.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -221,7 +221,7 @@
     "key": "To allocate memory dynamically on the heap and return a pointer",
     "justification": "The 'new' operator allocates memory during runtime and returns a pointer to the allocated memory.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -235,7 +235,7 @@
     "key": "To deallocate memory that was allocated with 'new'",
     "justification": "The 'delete' operator frees memory allocated on the heap, preventing memory leaks.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -249,7 +249,7 @@
     "key": "Memory allocated but never deallocated, becoming inaccessible",
     "justification": "Memory leaks occur when dynamically allocated memory is not freed, wasting resources and potentially causing program failure.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -263,7 +263,7 @@
     "key": "Use smart pointers (unique_ptr, shared_ptr) or follow RAII principles",
     "justification": "Smart pointers automatically manage memory, ensuring resources are freed when objects go out of scope.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -277,7 +277,7 @@
     "key": "Stack is automatic, limited, fast; Heap is manual, large, slower",
     "justification": "Stack memory is automatically managed for local variables, heap requires manual management for dynamic allocation.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 17
   },
   {
     "type": "medium",
@@ -291,7 +291,7 @@
     "key": "Defining custom behavior for operators when applied to user-defined types",
     "justification": "Operator overloading allows operators like +, -, * to work with custom classes by providing specific implementations.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -305,7 +305,7 @@
     "key": "By defining operator+() method or friend function",
     "justification": "The + operator is overloaded by implementing operator+() either as a member function or friend function.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -319,7 +319,7 @@
     "key": "Prefix returns reference (faster); postfix returns temporary (slower)",
     "justification": "Prefix (++i) increments and returns reference; postfix (i++) creates a temporary, increments, returns temporary (less efficient).",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -333,7 +333,7 @@
     "key": "By defining operator[]() method",
     "justification": "The subscript operator [] is overloaded through operator[]() method, often used for custom array-like access.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 17
   },
   {
     "type": "medium",
@@ -347,7 +347,7 @@
     "key": "To define equality comparison between objects",
     "justification": "Overloading == allows custom comparison logic for user-defined types instead of default pointer comparison.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 22
   },
   {
     "type": "medium",
@@ -361,7 +361,7 @@
     "key": "Yes, by defining operator=() method",
     "justification": "Assignment operator can be overloaded to provide deep copy or custom assignment behavior for objects.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 15
   },
   {
     "type": "medium",
@@ -375,7 +375,7 @@
     "key": "To make an object callable like a function (Functor/Function object)",
     "justification": "Overloading () creates function objects (functors) that can be invoked with function call syntax.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 17
   },
   {
     "type": "medium",
@@ -389,7 +389,7 @@
     "key": "An event that disrupts normal program flow, handled through try-catch blocks",
     "justification": "Exceptions are runtime errors that can be thrown and caught, allowing structured error handling.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -403,7 +403,7 @@
     "key": "To enclose code that might throw exceptions",
     "justification": "A try block contains code that may throw exceptions, allowing catch blocks to handle them.",
     "justified_by": "Perplexity",
-    "frequency": 2
+    "frequency": 4
   },
   {
     "type": "medium",
@@ -417,7 +417,7 @@
     "key": "To handle specific exceptions thrown from try block",
     "justification": "A catch block specifies what to do when a particular exception is caught from the try block.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -431,7 +431,7 @@
     "key": "Yes, multiple catch blocks can handle different exception types",
     "justification": "Multiple catch blocks allow handling different exception types with specific recovery logic for each.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -445,7 +445,7 @@
     "key": "To catch all exceptions as a last resort",
     "justification": "catch(...) is a catch-all handler that catches any exception type not caught by specific catch blocks.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -459,7 +459,7 @@
     "key": "Inheriting exception classes to create custom exceptions",
     "justification": "Custom exceptions are created by inheriting from std::exception, allowing specialized error handling.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -473,7 +473,7 @@
     "key": "throw creates new exception; rethrow propagates caught exception up the call stack",
     "justification": "throw creates and throws a new exception; rethrow (bare throw in catch) propagates the caught exception.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -487,7 +487,7 @@
     "key": "A programming practice of using const to prevent unintended modifications",
     "justification": "Const correctness means using const strategically to enforce compile-time contracts about object mutability.",
     "justified_by": "Perplexity",
-    "frequency": 11
+    "frequency": 18
   },
   {
     "type": "medium",
@@ -501,7 +501,7 @@
     "key": "A cast that adds or removes const qualifier",
     "justification": "const_cast allows explicit conversion between const and non-const types, should be used carefully.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -515,7 +515,7 @@
     "key": "A compile-time type conversion with type checking",
     "justification": "static_cast performs type conversion at compile time with some type checking, used for safe conversions.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -529,7 +529,7 @@
     "key": "A runtime type conversion used for polymorphic types (requires RTTI)",
     "justification": "dynamic_cast safely casts pointers/references in inheritance hierarchies, returning null if conversion fails.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 17
   },
   {
     "type": "medium",
@@ -543,7 +543,7 @@
     "key": "A low-level cast that reinterprets bit patterns without conversion",
     "justification": "reinterpret_cast performs unsafe conversions by treating objects' bit patterns as different types, use carefully.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -557,7 +557,7 @@
     "key": "A pattern that defines a family of algorithms and makes them interchangeable",
     "justification": "Strategy pattern encapsulates algorithms in separate classes, allowing runtime selection of algorithm implementations.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 13
   },
   {
     "type": "medium",
@@ -571,7 +571,7 @@
     "key": "A pattern that dynamically adds behavior to objects",
     "justification": "Decorator pattern wraps objects with decorator classes that add new functionality while preserving original behavior.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -585,7 +585,7 @@
     "key": "A pattern that converts interface of one class to expected interface",
     "justification": "Adapter pattern bridges incompatible interfaces, allowing objects with different interfaces to collaborate.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 13
   },
   {
     "type": "medium",
@@ -599,7 +599,7 @@
     "key": "A pattern that defines algorithm skeleton in base class, letting derived classes override steps",
     "justification": "Template Method pattern defines algorithm structure in base class, allowing subclasses to customize specific steps.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -613,7 +613,7 @@
     "key": "A pattern that separates object construction from representation",
     "justification": "Builder pattern constructs complex objects step-by-step, separating construction logic from representation.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -627,7 +627,7 @@
     "key": "Runtime resolution based on types of multiple objects",
     "justification": "Multiple dispatch selects function implementation based on runtime types of multiple arguments, more powerful than single dispatch.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -641,7 +641,7 @@
     "key": "A pattern that represents operations to be performed on object structures",
     "justification": "Visitor pattern defines new operations without changing element classes, separating algorithm from object structure.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -655,7 +655,7 @@
     "key": "A pattern that passes requests along a chain of handlers",
     "justification": "Chain of Responsibility passes request through chain of handlers until one processes it, decoupling sender from receiver.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 17
   },
   {
     "type": "hard",
@@ -669,7 +669,7 @@
     "key": "A pattern that encapsulates object behavior based on internal state",
     "justification": "State pattern allows object to change behavior when internal state changes, appearing to change its class.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -683,7 +683,7 @@
     "key": "A pattern that provides surrogate/placeholder for another object",
     "justification": "Proxy pattern controls access to another object through a proxy object, useful for lazy loading and access control.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -697,7 +697,7 @@
     "key": "A pattern that provides unified interface to subsystem",
     "justification": "Facade pattern hides complexity of subsystems behind simple interface, improving usability.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 12
   },
   {
     "type": "hard",
@@ -711,7 +711,7 @@
     "key": "A pattern that decouples abstraction from implementation",
     "justification": "Bridge pattern separates abstraction from implementation, allowing them to vary independently.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 13
   },
   {
     "type": "hard",
@@ -725,7 +725,7 @@
     "key": "A pattern that composes objects into tree structures to represent hierarchies",
     "justification": "Composite pattern treats individual objects and compositions uniformly, building tree hierarchies.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 12
   },
   {
     "type": "hard",
@@ -739,7 +739,7 @@
     "key": "A pattern that creates objects by cloning prototype",
     "justification": "Prototype pattern creates new objects by copying prototype object, avoiding expensive creation costs.",
     "justified_by": "Perplexity",
-    "frequency": 11
+    "frequency": 23
   },
   {
     "type": "hard",
@@ -753,7 +753,7 @@
     "key": "A pattern providing interface for creating families of related objects",
     "justification": "Abstract Factory pattern creates families of related objects without specifying concrete classes.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 11
   },
   {
     "type": "hard",
@@ -767,7 +767,7 @@
     "key": "A mechanism to obtain and use type information at runtime",
     "justification": "RTTI allows runtime type identification and safe casting, essential for polymorphic operations.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 17
   },
   {
     "type": "hard",
@@ -781,7 +781,7 @@
     "key": "An operator that returns type information of an object at runtime",
     "justification": "typeid() returns a type_info object containing runtime type information, useful for type checking.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -795,7 +795,7 @@
     "key": "A class providing information about types (name, equality, ordering)",
     "justification": "type_info provides runtime information about types including names and comparison capabilities.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 18
   },
   {
     "type": "hard",
@@ -809,7 +809,7 @@
     "key": "A template pattern where class inherits from template of itself",
     "justification": "CRTP enables compile-time polymorphism without virtual functions, improving performance.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 12
   },
   {
     "type": "hard",
@@ -823,7 +823,7 @@
     "key": "Writing programs that manipulate types at compile time",
     "justification": "Template metaprogramming uses templates to perform computations at compile time, enabling zero-runtime-overhead abstractions.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 18
   },
   {
     "type": "hard",
@@ -837,7 +837,7 @@
     "key": "A template technique building expression trees at compile time for optimization",
     "justification": "Expression templates defer evaluation and create optimized code, commonly used in numeric libraries.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 12
   },
   {
     "type": "hard",
@@ -851,7 +851,7 @@
     "key": "A type representing pointer to function or callable object",
     "justification": "Function types represent signatures of functions, used in function pointers and std::function.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -865,7 +865,7 @@
     "key": "A wrapper class for function pointers and callable objects with type erasure",
     "justification": "std::function is a type-erased wrapper allowing storage and invocation of any callable with matching signature.",
     "justified_by": "Perplexity",
-    "frequency": 2
+    "frequency": 7
   },
   {
     "type": "hard",
@@ -879,7 +879,7 @@
     "key": "An unnamed function defined inline",
     "justification": "Lambda functions are anonymous functions defined inline using [captures](parameters){body} syntax, useful for callbacks.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -893,7 +893,7 @@
     "key": "Mechanism to access variables from enclosing scope in lambda",
     "justification": "Lambda captures allow access to outer scope variables: [] (none), [=] (by value), [&] (by reference), [=, &x] (mixed).",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -907,7 +907,7 @@
     "key": "Optimizing performance by transferring resources instead of copying",
     "justification": "Move semantics uses rvalue references to transfer ownership, avoiding expensive copies of temporary objects.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 11
   },
   {
     "type": "hard",
@@ -921,7 +921,7 @@
     "key": "A reference to a temporary (right-hand side) value using &&",
     "justification": "Rvalue references (T&&) bind to temporaries and allow move semantics, enabling efficient resource transfer.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -935,7 +935,7 @@
     "key": "A function that casts lvalues to rvalues to enable move semantics",
     "justification": "std::move converts lvalues to rvalues, signaling that the object can be moved from.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -949,7 +949,7 @@
     "key": "Passing arguments to another function preserving their lvalue/rvalue nature",
     "justification": "Perfect forwarding uses template parameters and std::forward to preserve argument types through function calls.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -963,7 +963,7 @@
     "key": "A template that accepts variable number of template arguments",
     "justification": "Variadic templates use ... (parameter pack) to accept arbitrary number of template arguments.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 12
   },
   {
     "type": "hard",
@@ -977,7 +977,7 @@
     "key": "Process of expanding variadic template arguments into individual arguments",
     "justification": "Parameter pack expansion uses ... to unpack variadic arguments, enabling processing of arbitrary argument counts.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 19
   },
   {
     "type": "hard",
@@ -991,7 +991,7 @@
     "key": "A template metaprogramming technique providing compile-time information about types",
     "justification": "Type traits (std::is_integral, std::remove_const, etc.) provide compile-time type information and transformations.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -1005,7 +1005,7 @@
     "key": "A template instantiation principle where failed substitutions don't cause errors",
     "justification": "SFINAE allows template overloading by disabling template specializations through failed type substitution.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 13
   },
   {
     "type": "hard",
@@ -1019,7 +1019,7 @@
     "key": "A keyword for compile-time evaluation of functions and variables",
     "justification": "constexpr allows functions and expressions to be evaluated at compile time when called with compile-time constants.",
     "justified_by": "Perplexity",
-    "frequency": 2
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -1033,7 +1033,7 @@
     "key": "Property that data structures work correctly when accessed by multiple threads simultaneously",
     "justification": "Thread safety ensures data consistency and correctness when multiple threads access shared resources.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -1047,7 +1047,7 @@
     "key": "Unpredictable behavior when multiple threads access shared data without synchronization",
     "justification": "Race conditions occur when multiple threads access shared resources concurrently without proper synchronization.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -1061,7 +1061,7 @@
     "key": "A synchronization primitive that ensures only one thread accesses resource at a time",
     "justification": "Mutex (mutual exclusion) prevents multiple threads from accessing shared resource simultaneously.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 13
   },
   {
     "type": "hard",
@@ -1075,7 +1075,7 @@
     "key": "A situation where threads wait indefinitely for each other, preventing progress",
     "justification": "Deadlock occurs when circular wait conditions prevent threads from proceeding, requiring careful lock management.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 18
   },
   {
     "type": "hard",
@@ -1089,7 +1089,7 @@
     "key": "Low-level interface specifying how software components interact at binary level",
     "justification": "ABI defines calling conventions, memory layout, and binary compatibility between compiled code and libraries.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -1103,7 +1103,7 @@
     "key": "High-level interface defining how software components interact through functions/methods",
     "justification": "API specifies how to request services from software libraries or operating systems using well-defined functions.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -1117,7 +1117,7 @@
     "key": "Encoding function/class names to support overloading and avoid conflicts",
     "justification": "Name mangling encodes function signatures into symbol names, enabling function overloading at binary level.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 12
   },
   {
     "type": "hard",
@@ -1131,6 +1131,6 @@
     "key": "A directive preventing name mangling for C interoperability",
     "justification": "extern 'C' tells compiler to use C calling conventions and prevent name mangling, enabling C/C++ interoperability.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 13
   }
 ]

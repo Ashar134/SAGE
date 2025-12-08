@@ -12,7 +12,7 @@
     "key": "The browser uses the next font in the list (sans-serif)",
     "justification": "Browsers try fonts in order. If Arial isn't available, they move to the next option. 'sans-serif' is a generic fallback font.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -27,7 +27,7 @@
     "key": "32 pixels (2 × 16px)",
     "justification": "'em' is relative to the element's font-size. If parent is 16px, then 2em = 2 × 16 = 32px.",
     "justified_by": "Perplexity",
-    "frequency": 2
+    "frequency": 13
   },
   {
     "type": "medium",
@@ -42,7 +42,7 @@
     "key": "700",
     "justification": "Font-weight values: 400 = normal, 700 = bold, 900 = black.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -57,7 +57,7 @@
     "key": "Italic is a separate font face; oblique simulates slanting",
     "justification": "Italic is designed as a distinct font face, while oblique is mathematically skewed.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 13
   },
   {
     "type": "hard",
@@ -72,7 +72,7 @@
     "key": "Sets the distance between lines to 1.5 times the font size",
     "justification": "line-height controls vertical spacing between lines of text. 1.5 means 1.5 × current font-size.",
     "justified_by": "Perplexity",
-    "frequency": 2
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -87,7 +87,7 @@
     "key": "text-decoration: underline line-through;",
     "justification": "Multiple text-decoration values can be combined with spaces.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -102,7 +102,7 @@
     "key": "Converts the first letter of each word to uppercase",
     "justification": "capitalize transforms the first character of each word to uppercase.",
     "justified_by": "Perplexity",
-    "frequency": 2
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -117,7 +117,7 @@
     "key": "Adds 2 pixels between individual letters",
     "justification": "letter-spacing adjusts the space between characters, not words.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -132,7 +132,7 @@
     "key": "a:visited",
     "justification": "The :visited pseudo-class styles links that have been clicked/visited before.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 11
   },
   {
     "type": "hard",
@@ -147,7 +147,7 @@
     "key": "Indents only the first line of the paragraph by 30px",
     "justification": "text-indent affects only the first line of a text block.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -162,7 +162,7 @@
     "key": "Shows the background image only once",
     "justification": "no-repeat prevents the background image from tiling.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 7
   },
   {
     "type": "medium",
@@ -177,7 +177,7 @@
     "key": "Positions the background image at the center of the container",
     "justification": "background-position specifies where the background image starts.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 11
   },
   {
     "type": "hard",
@@ -192,7 +192,7 @@
     "key": "cover fills container and clips content; contain fits without clipping",
     "justification": "cover may clip; contain ensures full visibility with possible empty space.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -207,7 +207,7 @@
     "key": "Prevents the background from scrolling",
     "justification": "fixed creates a parallax effect where the background stays in place while content scrolls.",
     "justified_by": "Perplexity",
-    "frequency": 0
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -222,7 +222,7 @@
     "key": "Top 10px, Right 15px, Bottom 20px, Left 25px",
     "justification": "Four values represent: top, right, bottom, left (clockwise order).",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -237,7 +237,7 @@
     "key": "Both properties together create a rounded rectangle border",
     "justification": "border defines edge, border-radius defines corner curvature.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -252,7 +252,7 @@
     "key": "groove",
     "justification": "groove creates an inset/beveled effect; ridge is its opposite.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -267,7 +267,7 @@
     "key": "Writing nested selectors directly in CSS to improve readability",
     "justification": "CSS nesting reduces repetition and improves code organization.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 11
   },
   {
     "type": "hard",
@@ -282,7 +282,7 @@
     "key": "The parent selector",
     "justification": "&' refers back to the outer selector in nested rules.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -297,7 +297,7 @@
     "key": "Covers the container while preserving aspect ratio, clipping if necessary",
     "justification": "cover fills the container; may clip content to maintain aspect ratio.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -312,7 +312,7 @@
     "key": "Fits entire image in container with empty space if needed",
     "justification": "contain preserves aspect ratio and shows entire image.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -327,7 +327,7 @@
     "key": "fill",
     "justification": "fill stretches content to fill container, ignoring aspect ratio.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -342,7 +342,7 @@
     "key": "Reduces image to smallest size that fits container while preserving aspect ratio",
     "justification": "scale-down shows the smallest version of 'none' or 'contain'.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -357,7 +357,7 @@
     "key": "Controls how the page renders on different devices",
     "justification": "The viewport meta tag optimizes display for mobile and responsive design.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -387,7 +387,7 @@
     "key": "Sets initial zoom level to 100%",
     "justification": "initial-scale controls the zoom when the page first loads.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 11
   },
   {
     "type": "hard",
@@ -402,7 +402,7 @@
     "key": "Scaled down the entire page to fit the screen",
     "justification": "Browsers would zoom out fixed pages to fit mobile screens, making text too small.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 15
   },
   {
     "type": "medium",
@@ -417,7 +417,7 @@
     "key": "@media type and/or (feature) { CSS rules }",
     "justification": "Media queries use @media with optional type and required feature conditions.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -432,7 +432,7 @@
     "key": "Applies styles for devices with a screen",
     "justification": "screen media type targets devices with displays.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 15
   },
   {
     "type": "medium",
@@ -447,7 +447,7 @@
     "key": "Applies styles when printing or in print preview",
     "justification": "print media type targets printed documents.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 7
   },
   {
     "type": "medium",
@@ -462,7 +462,7 @@
     "key": "Applies styles for screen readers and audio browsers",
     "justification": "speech media type targets devices that read content aloud.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -477,7 +477,7 @@
     "key": "Checks if viewport width matches a condition (can use min-width, max-width)",
     "justification": "width feature allows responsive breakpoints based on viewport dimensions.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -492,7 +492,7 @@
     "key": "Applies styles when viewport is at least 600px wide",
     "justification": "min-width sets a lower breakpoint threshold.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 7
   },
   {
     "type": "medium",
@@ -507,7 +507,7 @@
     "key": "Applies styles when viewport is at most 768px wide",
     "justification": "max-width sets an upper breakpoint threshold.",
     "justified_by": "Perplexity",
-    "frequency": 0
+    "frequency": 5
   },
   {
     "type": "hard",
@@ -522,7 +522,7 @@
     "key": "If the viewport width is greater than height",
     "justification": "landscape orientation means width > height (opposite of portrait).",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -537,7 +537,7 @@
     "key": "Combines multiple conditions that must ALL be true",
     "justification": "'and' requires all conditions to be satisfied.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -552,7 +552,7 @@
     "key": "Provides alternative conditions (OR logic)",
     "justification": "Comma acts as OR; if ANY condition is true, styles apply.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 13
   },
   {
     "type": "hard",
@@ -567,7 +567,7 @@
     "key": "Applies styles when width is greater than 600px",
     "justification": "'not' negates the condition.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -582,7 +582,7 @@
     "key": "LiveScript",
     "justification": "JavaScript was renamed to capitalize on Java's popularity at the time.",
     "justified_by": "Perplexity",
-    "frequency": 11
+    "frequency": 18
   },
   {
     "type": "medium",
@@ -597,7 +597,7 @@
     "key": "A program that executes JavaScript code",
     "justification": "Engines like V8 (Chrome), SpiderMonkey (Firefox) parse and execute JS.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -612,7 +612,7 @@
     "key": "V8",
     "justification": "V8 is Google's engine used in Chrome and Node.js.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -627,7 +627,7 @@
     "key": "SpiderMonkey",
     "justification": "SpiderMonkey is Mozilla's JavaScript engine.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 12
   },
   {
     "type": "hard",
@@ -642,7 +642,7 @@
     "key": "let is block-scoped; var is function-scoped",
     "justification": "let respects block scope ({}) while var leaks out of blocks.",
     "justified_by": "Perplexity",
-    "frequency": 2
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -657,7 +657,7 @@
     "key": "Yes, in different blocks",
     "justification": "let allows redeclaration in different scopes, but not in the same scope.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -672,7 +672,7 @@
     "key": "Declares a constant variable that cannot be reassigned",
     "justification": "const prevents reassignment but doesn't prevent mutation of objects.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 12
   },
   {
     "type": "hard",
@@ -687,7 +687,7 @@
     "key": "Yes, 'apple' and 'Apple' are different variables",
     "justification": "JavaScript is case-sensitive for all identifiers.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -702,7 +702,7 @@
     "key": "Displays a popup dialog box with a message",
     "justification": "alert() is a browser interaction function.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -717,7 +717,7 @@
     "key": "null",
     "justification": "prompt() returns null when the user cancels.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -732,7 +732,7 @@
     "key": "true",
     "justification": "confirm() returns boolean: true for OK, false for Cancel.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -747,7 +747,7 @@
     "key": "Both B and C are correct",
     "justification": "Both comma-separated and individual declarations are valid.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 13
   },
   {
     "type": "medium",
@@ -762,7 +762,7 @@
     "key": "Yes, with Node.js",
     "justification": "Node.js allows JavaScript execution outside the browser.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -777,7 +777,7 @@
     "key": "Manipulate HTML/CSS, respond to user actions, make network requests, manage cookies",
     "justification": "In-browser JS can do most web operations except access system files.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -792,7 +792,7 @@
     "key": "An object representation of HTML/XML document structure",
     "justification": "DOM represents the page as a tree of objects.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -807,7 +807,7 @@
     "key": "An object representing a part of the document (element, text, comment)",
     "justification": "Nodes are the building blocks of the DOM tree.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -822,7 +822,7 @@
     "key": "Selects the first element with a given id",
     "justification": "getElementById() returns a single element (ids are unique).",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 5
   },
   {
     "type": "medium",
@@ -837,7 +837,7 @@
     "key": "A live HTMLCollection of all elements with the class",
     "justification": "getElementsByClassName() returns a collection, not a single element.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -852,7 +852,7 @@
     "key": "Selects the first element matching a CSS selector",
     "justification": "querySelector() uses CSS selectors and returns first match.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -867,7 +867,7 @@
     "key": "A NodeList of all matching elements",
     "justification": "querySelectorAll() returns a static NodeList of all matches.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -882,7 +882,7 @@
     "key": "Gets/sets HTML content including tags",
     "justification": "innerHTML can contain HTML tags; innerText is text-only.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -897,7 +897,7 @@
     "key": "innerHTML includes HTML; innerText is text-only",
     "justification": "innerHTML parses HTML; innerText treats content as plain text.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -912,7 +912,7 @@
     "key": "element.style.property = 'value'",
     "justification": "The style property gives access to inline CSS.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -927,7 +927,7 @@
     "key": "Replaces all classes with 'myclass'",
     "justification": "className replaces all existing classes.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -942,7 +942,7 @@
     "key": "Adds 'newclass' without removing others",
     "justification": "classList.add() appends a class without affecting others.",
     "justified_by": "Perplexity",
-    "frequency": 1
+    "frequency": 7
   },
   {
     "type": "medium",
@@ -957,7 +957,7 @@
     "key": "Creates a new DOM element",
     "justification": "createElement() creates a new element but doesn't add it to the page.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 13
   },
   {
     "type": "medium",
@@ -972,7 +972,7 @@
     "key": "Adds newElement as a child at the end",
     "justification": "appendChild() inserts as the last child.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -987,7 +987,7 @@
     "key": "The parent element of the current element",
     "justification": "parentNode navigates up the DOM tree.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -1002,7 +1002,7 @@
     "key": "The first child node (including text/comments)",
     "justification": "firstChild includes all node types, not just elements.",
     "justified_by": "Perplexity",
-    "frequency": 2
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -1017,7 +1017,7 @@
     "key": "The next sibling node",
     "justification": "nextSibling navigates horizontally in the tree.",
     "justified_by": "Perplexity",
-    "frequency": 13
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -1032,7 +1032,7 @@
     "key": "A function that waits for a specific event to occur on an element",
     "justification": "Event listeners trigger functions in response to user or system events.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 15
   },
   {
     "type": "medium",
@@ -1047,7 +1047,7 @@
     "key": "element.addEventListener('click', function() {})",
     "justification": "addEventListener() is the standard method for attaching event listeners.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -1062,7 +1062,7 @@
     "key": "Handler is the function; listener is the mechanism that detects the event",
     "justification": "An event listener waits for events; event handler is the function called.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -1077,7 +1077,7 @@
     "key": "Triggers when an element is clicked",
     "justification": "click event fires on mouse button click.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -1092,7 +1092,7 @@
     "key": "Triggers when the mouse moves over the element",
     "justification": "mouseover fires when mouse enters the element area.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -1107,7 +1107,7 @@
     "key": "Triggers when the mouse leaves the element",
     "justification": "mouseout fires when mouse exits the element area.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -1122,7 +1122,7 @@
     "key": "Triggers when a key is pressed and released",
     "justification": "keypress fires for printable character keys.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -1137,7 +1137,7 @@
     "key": "Triggers when the input loses focus and its value changed",
     "justification": "change fires when value is modified and focus is lost.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -1152,7 +1152,7 @@
     "key": "Triggers when the element gains focus",
     "justification": "focus fires when an element becomes the active element.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -1167,7 +1167,7 @@
     "key": "Triggers when the element loses focus",
     "justification": "blur is the opposite of focus; fires when element loses focus.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -1182,7 +1182,7 @@
     "key": "Triggers when a form is submitted",
     "justification": "submit fires when a form is submitted via button click or Enter.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -1197,7 +1197,7 @@
     "key": "Triggers when the entire page and resources finish loading",
     "justification": "load fires after all resources (images, styles, scripts) are loaded.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -1212,7 +1212,7 @@
     "key": "Triggers when the user leaves the page",
     "justification": "unload fires when the page is being unloaded (navigation away).",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -1227,7 +1227,7 @@
     "key": "Triggers when the browser window is resized",
     "justification": "resize fires whenever the viewport dimensions change.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -1242,7 +1242,7 @@
     "key": "Triggers when the page scrolls",
     "justification": "scroll fires whenever the user scrolls the page.",
     "justified_by": "Perplexity",
-    "frequency": 1
+    "frequency": 4
   },
   {
     "type": "hard",
@@ -1257,7 +1257,7 @@
     "key": "Shows a confirmation dialog before user leaves",
     "justification": "beforeunload can display a prompt asking user to confirm leaving.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -1272,7 +1272,7 @@
     "key": "The actual character/key pressed",
     "justification": "event.key returns the string representation of the key.",
     "justified_by": "Perplexity",
-    "frequency": 2
+    "frequency": 5
   },
   {
     "type": "hard",
@@ -1287,7 +1287,7 @@
     "key": "Yes, multiple listeners can be attached",
     "justification": "Multiple addEventListener() calls stack up.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -1302,7 +1302,7 @@
     "key": "Triggers when an element is double-clicked",
     "justification": "dblclick fires on two rapid clicks.",
     "justified_by": "Perplexity",
-    "frequency": 2
+    "frequency": 7
   },
   {
     "type": "hard",
@@ -1317,7 +1317,7 @@
     "key": "Removes a specific event listener from an element",
     "justification": "removeEventListener() detaches a listener using same handler reference.",
     "justified_by": "Perplexity",
-    "frequency": 1
+    "frequency": 5
   },
   {
     "type": "medium",
@@ -1332,7 +1332,7 @@
     "key": "The global object in a browser environment",
     "justification": "The window object is the top-level global object in browsers.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -1347,7 +1347,7 @@
     "key": "The width of the viewport",
     "justification": "innerWidth is the browser's visible content area width.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -1362,7 +1362,7 @@
     "key": "The height of the viewport",
     "justification": "innerHeight is the browser's visible content area height.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -1377,7 +1377,7 @@
     "key": "Opens a new browser window/tab",
     "justification": "window.open(url, target, specs) opens a new window.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -1392,7 +1392,7 @@
     "key": "Closes the current window",
     "justification": "window.close() closes the browser window (may not work in all contexts).",
     "justified_by": "Perplexity",
-    "frequency": 1
+    "frequency": 7
   },
   {
     "type": "medium",
@@ -1407,7 +1407,7 @@
     "key": "Opens the print dialog",
     "justification": "window.print() opens the print preview dialog.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 12
   },
   {
     "type": "hard",
@@ -1422,7 +1422,7 @@
     "key": "Shows a popup dialog with a message",
     "justification": "alert() displays a blocking modal dialog.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -1437,7 +1437,7 @@
     "key": "A yes/no confirmation dialog",
     "justification": "confirm() shows OK and Cancel buttons.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -1452,7 +1452,7 @@
     "key": "Requests text input from the user",
     "justification": "prompt() displays an input field for user response.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -1467,7 +1467,7 @@
     "key": "Getting/setting the URL of the current page",
     "justification": "window.location contains the URL and navigation methods.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -1482,7 +1482,7 @@
     "key": "The full URL of the current page",
     "justification": "href contains the complete URL.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -1497,7 +1497,7 @@
     "key": "A concise syntax for writing functions in ES6+",
     "justification": "Arrow functions (=>) provide shorter function syntax.",
     "justified_by": "Perplexity",
-    "frequency": 11
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -1512,7 +1512,7 @@
     "key": "(parameters) => { body }",
     "justification": "Arrow functions use => syntax.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -1527,7 +1527,7 @@
     "key": "Both A and B are correct",
     "justification": "Parentheses are optional for single parameters.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -1542,7 +1542,7 @@
     "key": "(x, y) => x + y",
     "justification": "Multiple parameters require parentheses.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -1557,7 +1557,7 @@
     "key": "Creates a function that adds two numbers",
     "justification": "This arrow function is stored in the const variable 'add'.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -1572,7 +1572,7 @@
     "key": "No, they cannot be used with the 'new' keyword",
     "justification": "Arrow functions don't have their own 'this' and can't be constructors.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -1587,7 +1587,7 @@
     "key": "Arrow functions use parent's 'this'; regular functions get their own 'this'",
     "justification": "Arrow functions inherit 'this' from enclosing scope.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -1602,7 +1602,7 @@
     "key": "Single expression is implicitly returned",
     "justification": "const double = x => x * 2; returns x * 2 automatically.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -1617,7 +1617,7 @@
     "key": "Checking that form data is correct before submission",
     "justification": "Validation ensures data meets requirements.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -1632,7 +1632,7 @@
     "key": "Yes, with event.preventDefault()",
     "justification": "preventDefault() stops default form submission.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -1647,7 +1647,7 @@
     "key": "Validation in the browser before sending",
     "justification": "Client-side validation happens on user's computer.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -1662,7 +1662,7 @@
     "key": "It ensures data security; client validation can be bypassed",
     "justification": "Server validation protects against malicious input.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -1677,7 +1677,7 @@
     "key": "The current value entered by the user",
     "justification": "value property contains what user typed.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -1692,7 +1692,7 @@
     "key": "Both B and D are valid",
     "justification": "Both ways check if value is empty string or falsy.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 7
   },
   {
     "type": "medium",
@@ -1707,7 +1707,7 @@
     "key": "Storing files locally so they don't need to be re-downloaded",
     "justification": "Caching improves performance by reducing HTTP requests.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -1722,7 +1722,7 @@
     "key": "They can be cached and reused across pages",
     "justification": "External files are cached per domain, reducing redundant downloads.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 6
   },
   {
     "type": "hard",
@@ -1737,7 +1737,7 @@
     "key": "Adding version numbers to files to force re-download",
     "justification": "Cache busting (e.g., file.css?v=2) forces browsers to fetch updates.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 5
   },
   {
     "type": "medium",
@@ -1752,7 +1752,7 @@
     "key": "Specifies how long files should be cached",
     "justification": "Cache-Control headers tell browsers cache expiration times.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -1767,7 +1767,7 @@
     "key": "Converting code in one language to another language",
     "justification": "Transpilers convert newer/other languages to JavaScript.",
     "justified_by": "Perplexity",
-    "frequency": 2
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -1782,7 +1782,7 @@
     "key": "A superset of JavaScript with strict typing",
     "justification": "TypeScript adds static type checking to JavaScript.",
     "justified_by": "Perplexity",
-    "frequency": 0
+    "frequency": 2
   },
   {
     "type": "medium",
@@ -1797,7 +1797,7 @@
     "key": "Syntactic sugar for cleaner JavaScript syntax",
     "justification": "CoffeeScript offers simplified syntax.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 12
   },
   {
     "type": "hard",
@@ -1812,7 +1812,7 @@
     "key": "Running Python in the browser by converting to JavaScript",
     "justification": "Brython transpiles Python code to JavaScript.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -1827,7 +1827,7 @@
     "key": "Relative to root element's font size",
     "justification": "rem always uses root element's font-size, unlike em.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 6
   },
   {
     "type": "hard",
@@ -1842,7 +1842,7 @@
     "key": "Detects user's system color preference (dark/light)",
     "justification": "prefers-color-scheme is a media feature for dark mode support.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -1857,7 +1857,7 @@
     "key": "The ratio of width to height of the viewport",
     "justification": "aspect-ratio checks viewport proportions.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 7
   },
   {
     "type": "medium",
@@ -1872,7 +1872,7 @@
     "key": "A server-side scripting language for web development",
     "justification": "PHP executes on the server and generates HTML sent to browsers.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -1887,7 +1887,7 @@
     "key": "mysqli_connect() or PDO",
     "justification": "PHP uses mysqli or PDO for database connections.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -1902,7 +1902,7 @@
     "key": "Accesses form data sent via POST method",
     "justification": "$_POST is a superglobal containing POST request data.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -1917,7 +1917,7 @@
     "key": "GET sends data in URL; POST sends in request body",
     "justification": "GET parameters are visible in URL; POST is hidden.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 12
   },
   {
     "type": "hard",
@@ -1932,7 +1932,7 @@
     "key": "A security vulnerability where malicious SQL is injected into queries",
     "justification": "SQL injection attacks exploit unsanitized inputs.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -1947,7 +1947,7 @@
     "key": "A parameterized query that prevents SQL injection",
     "justification": "Prepared statements use placeholders for safe queries.",
     "justified_by": "Perplexity",
-    "frequency": 2
+    "frequency": 4
   },
   {
     "type": "medium",
@@ -1962,7 +1962,7 @@
     "key": "A connection object or false on failure",
     "justification": "mysqli_connect() returns a connection resource or null.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -1977,7 +1977,7 @@
     "key": "Retrieves the next row from a query result",
     "justification": "fetch() returns one row at a time from results.",
     "justified_by": "Perplexity",
-    "frequency": 11
+    "frequency": 20
   },
   {
     "type": "medium",
@@ -1992,7 +1992,7 @@
     "key": "Persistent data stored server-side for a user",
     "justification": "Sessions maintain user state across requests.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -2007,7 +2007,7 @@
     "key": "session_start()",
     "justification": "session_start() initializes the session.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -2022,7 +2022,7 @@
     "key": "A global array storing session data",
     "justification": "$_SESSION stores user-specific persistent data.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 13
   },
   {
     "type": "medium",
@@ -2037,7 +2037,7 @@
     "key": "$_SESSION['username']",
     "justification": "Session variables accessed via $_SESSION superglobal.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 5
   },
   {
     "type": "medium",
@@ -2052,7 +2052,7 @@
     "key": "HTML that uses meaningful tags describing content",
     "justification": "Semantic tags like <article>, <nav> describe purpose.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -2067,7 +2067,7 @@
     "key": "Introductory content or navigation for section",
     "justification": "<header> contains introductory content.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -2082,7 +2082,7 @@
     "key": "Page navigation section",
     "justification": "<nav> contains navigation links.",
     "justified_by": "Perplexity",
-    "frequency": 11
+    "frequency": 19
   },
   {
     "type": "medium",
@@ -2112,7 +2112,7 @@
     "key": "Generic grouping of related content",
     "justification": "<section> groups thematically related content.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -2127,7 +2127,7 @@
     "key": "Closing content, copyright, links",
     "justification": "<footer> contains ending content.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 13
   },
   {
     "type": "medium",
@@ -2142,7 +2142,7 @@
     "key": "Content tangentially related to main content",
     "justification": "<aside> holds supplementary information.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 11
   },
   {
     "type": "hard",
@@ -2157,7 +2157,7 @@
     "key": "Making websites usable for people with disabilities",
     "justification": "Accessibility ensures all users can access content.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -2172,7 +2172,7 @@
     "key": "Describing image for accessibility and SEO",
     "justification": "Alt text helps screen readers and appears if images don't load.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -2187,7 +2187,7 @@
     "key": "Designs that adapt to different screen sizes",
     "justification": "Responsive design works on all devices.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 6
   },
   {
     "type": "hard",
@@ -2202,7 +2202,7 @@
     "key": "Techniques to improve search engine rankings",
     "justification": "SEO helps websites rank higher in search results.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 15
   },
   {
     "type": "medium",
@@ -2217,6 +2217,6 @@
     "key": "Mobile responsiveness",
     "justification": "Viewport meta tag enables proper mobile rendering.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 6
   }
 ]
