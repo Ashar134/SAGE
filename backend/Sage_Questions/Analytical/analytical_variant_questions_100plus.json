@@ -14,7 +14,7 @@
       "key": "$484",
       "justification": "Ratio 4:7 means total parts = 11. Bob's share = 7/11. If 7/11 = $280, then total = $280 × 11/7 = $440. Wait, let me recalculate: 7 parts = $280, so 1 part = $40. Total 11 parts = $440.",
       "justified_by": "Perplexity",
-      "frequency": 15
+      "frequency": 16
     },
     {
       "type": "easy",
@@ -56,7 +56,7 @@
       "key": "11:00 AM",
       "justification": "Started at 8 AM correct. Lost 12 min/hour for some time, then stopped 3 hours ago. Current watch shows 10:15 AM. In 3 actual hours, watch loses 3×12 = 36 mins. So actual time = 10:15 + 36 mins + correction = approximately 11:00 AM.",
       "justified_by": "Perplexity",
-      "frequency": 12
+      "frequency": 13
     },
     {
       "type": "medium",
@@ -98,7 +98,7 @@
       "key": "6 mph",
       "justification": "Average = 2×12×4/(12+4) = 96/16 = 6 mph.",
       "justified_by": "Perplexity",
-      "frequency": 12
+      "frequency": 13
     },
     {
       "type": "medium",
@@ -210,7 +210,7 @@
       "key": "S",
       "justification": "Pattern: B(2), E(5), I(9), L(12), P(16), S(19). Differences: +3, +4, +3, +4, +3... so next adds 3: 16+3=19=S.",
       "justified_by": "Perplexity",
-      "frequency": 21
+      "frequency": 22
     },
     {
       "type": "medium",
@@ -266,7 +266,7 @@
       "key": "104",
       "justification": "Each cousin ages 11 years, so total increases by 4×11=44. In 7 years, total increases by 4×7=28. In 11 years = 120, so current = 120-44=76. In 7 years = 76+28=104.",
       "justified_by": "Perplexity",
-      "frequency": 22
+      "frequency": 23
     },
     {
       "type": "hard",
@@ -280,7 +280,7 @@
       "key": "129",
       "justification": "In 15 years: +3×15=45 to total. In 6 years: +3×6=18. Current total = 150-45=105. In 6 years = 105+18=123.",
       "justified_by": "Perplexity",
-      "frequency": 17
+      "frequency": 18
     },
     {
       "type": "hard",
@@ -350,7 +350,7 @@
       "key": "1944",
       "justification": "Highest even = 72. Lowest odd = 19. 72 × 19 = 1368. Wait, let me recheck: Even numbers: 28,52,64,72,38,24,56. Highest=72. Odd: 45,37,41,19,81. Lowest=19. 72×19=1368... That's not in options. Let me recalculate: Highest even might be 81? No, 81 is odd. Rechecking grid: highest even could be 64 or 72. If 72, and lowest odd 19: 1368. Not matching. Let me try different interpretation.",
       "justified_by": "Perplexity",
-      "frequency": 15
+      "frequency": 16
     },
     {
       "type": "easy",
@@ -364,7 +364,7 @@
       "key": "1325",
       "justification": "Highest odd = 83. Lowest even = 32. But wait, 15 is lower. Lowest even = 15? No, 15 is odd. Evens: 32,68,54,62. Lowest = 32. Odds: 47,71,83,15,29. Highest = 83. 83 × 32 = 2656. Not in options.",
       "justified_by": "Perplexity",
-      "frequency": 24
+      "frequency": 25
     },
     {
       "type": "hard",
@@ -378,7 +378,7 @@
       "key": "$480",
       "justification": "Rachel gets 3/8 = 0.375. Sam gets 0.45. Together = 0.825. Tom = 0.175 of total. 0.175 × Total = 54. Total = 54/0.175 ≈ $308.57. Doesn't match. Let me reconsider: 3/8 + 0.45 = 0.375 + 0.45 = 0.825. Remaining = 0.175. Tom's share = 0.175 × total = 54. Total = 54/0.175 = 308.57. Still doesn't match options. Recalculating with different numbers...",
       "justified_by": "Perplexity",
-      "frequency": 35
+      "frequency": 36
     },
     {
       "type": "hard",
@@ -406,7 +406,7 @@
       "key": "4 kg",
       "justification": "Let x = weight. x = 2 + x/2. x - x/2 = 2. x/2 = 2. x = 4 kg.",
       "justified_by": "Perplexity",
-      "frequency": 21
+      "frequency": 22
     },
     {
       "type": "easy",
@@ -504,7 +504,7 @@
       "key": "5",
       "justification": "Pattern: first ÷ second = third? 9/4=2.25, 12/6=2, 20/4=5. Yes! Pattern checks: 9÷4≈2.25(doesn't match 3), so maybe first - second*? Let me verify: if 20/4=5, then pattern might be first ÷ second = third in some cases.",
       "justified_by": "Perplexity",
-      "frequency": 17
+      "frequency": 18
     },
     {
       "type": "easy",
@@ -518,7 +518,7 @@
       "key": "Four Corners to a Table",
       "justification": "Following the pattern: number = letter to object meaning.",
       "justified_by": "Perplexity",
-      "frequency": 19
+      "frequency": 20
     },
     {
       "type": "medium",
@@ -560,7 +560,7 @@
       "key": "25",
       "justification": "Differences: +2, +2, +3, +3, +4, +4, +5. Next should +5: 20+5=25.",
       "justified_by": "Perplexity",
-      "frequency": 29
+      "frequency": 30
     },
     {
       "type": "easy",
@@ -658,7 +658,7 @@
       "key": "Rs. 100",
       "justification": "Total parts=10. First gets 2/10 of 500 = Rs. 100.",
       "justified_by": "Perplexity",
-      "frequency": 21
+      "frequency": 22
     },
     {
       "type": "hard",
@@ -700,7 +700,7 @@
       "key": "500",
       "justification": "0.05 × x = 25. x = 25/0.05 = 500.",
       "justified_by": "Perplexity",
-      "frequency": 13
+      "frequency": 14
     },
     {
       "type": "easy",
@@ -817,7 +817,7 @@
       },
       "key": "200ms",
       "justification": "Sum = 1000ms. Average = 1000 / 5 = 200ms.",
-      "frequency": 17
+      "frequency": 18
     },
     {
       "type": "medium",
@@ -843,7 +843,7 @@
       },
       "key": "49%",
       "justification": "Average = (45+52+48+60+40) / 5 = 245 / 5 = 49%.",
-      "frequency": 23
+      "frequency": 24
     },
     {
       "type": "easy",
@@ -869,7 +869,7 @@
       },
       "key": "$120,000",
       "justification": "Total hours = 5 * 200 = 1000 hours. Cost = 1000 * $120 = $120,000.",
-      "frequency": 15
+      "frequency": 16
     },
     {
       "type": "hard",
@@ -882,7 +882,7 @@
       },
       "key": "$60,000",
       "justification": "Choose A ($50K). With 20% increase: $50,000 * 1.20 = $60,000.",
-      "frequency": 17
+      "frequency": 18
     },
     {
       "type": "easy",
@@ -921,7 +921,7 @@
       },
       "key": "92%",
       "justification": "Success rate = (92 / 100) * 100 = 92%.",
-      "frequency": 14
+      "frequency": 15
     },
     {
       "type": "medium",
@@ -947,7 +947,7 @@
       },
       "key": "35%",
       "justification": "Remaining = 1000 - 650 = 350. Percentage = (350 / 1000) * 100 = 35%.",
-      "frequency": 18
+      "frequency": 19
     },
     {
       "type": "medium",
@@ -973,7 +973,7 @@
       },
       "key": "$10,000",
       "justification": "Risk value = Probability * Impact = 0.20 * $50,000 = $10,000.",
-      "frequency": 13
+      "frequency": 14
     },
     {
       "type": "medium",
@@ -986,7 +986,7 @@
       },
       "key": "R1 ($5K)",
       "justification": "R1: 0.05*100K=5K. R2: 0.10*50K=5K. R3: 0.15*30K=4.5K. R1 and R2 highest.",
-      "frequency": 18
+      "frequency": 19
     },
     {
       "type": "easy",
@@ -999,7 +999,7 @@
       },
       "key": "1040",
       "justification": "Sprints per year = 52 / 2 = 26. Story points = 26 * 40 = 1040.",
-      "frequency": 20
+      "frequency": 21
     },
     {
       "type": "medium",
@@ -1012,7 +1012,7 @@
       },
       "key": "70 days",
       "justification": "Frontend (30) + Backend (25) + Testing (15) = 70 days sequentially.",
-      "frequency": 20
+      "frequency": 21
     },
     {
       "type": "easy",
@@ -1025,7 +1025,7 @@
       },
       "key": "370",
       "justification": "Total = 50 + 120 + 200 = 370 defects.",
-      "frequency": 14
+      "frequency": 15
     },
     {
       "type": "medium",
@@ -1051,7 +1051,7 @@
       },
       "key": "85%",
       "justification": "Utilization = (340 / 400) * 100 = 85%.",
-      "frequency": 15
+      "frequency": 16
     },
     {
       "type": "medium",

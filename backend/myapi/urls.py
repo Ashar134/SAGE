@@ -12,10 +12,10 @@ urlpatterns = [
     
     # Test Generator API
     path("api/generate-test/", views.generate_test, name="generate_test"),
+    path("api/parse-cv/", views.parse_cv, name="parse_cv"),
 
 
 ]
-
 
 
 

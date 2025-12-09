@@ -72,7 +72,7 @@
     "key": "The input the agent receives from its sensors",
     "justification": "Percepts are sensory inputs from the environment.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "easy",
@@ -117,7 +117,7 @@
     "key": "An environment where sensors have limited information",
     "justification": "In partially observable environments, agents need internal state to track hidden aspects.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 11
   },
   {
     "type": "easy",
@@ -162,7 +162,7 @@
     "key": "All possible configurations of the environment",
     "justification": "The state space is the set of all reachable configurations.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "easy",
@@ -297,7 +297,7 @@
     "key": "Classification predicts categories; regression predicts continuous values",
     "justification": "Classification produces discrete labels; regression produces real numbers.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 5
   },
   {
     "type": "easy",
@@ -522,7 +522,7 @@
     "key": "An environment that doesn't change unless the agent acts",
     "justification": "Static environments simplify agent design.",
     "justified_by": "Perplexity",
-    "frequency": 3
+    "frequency": 4
   },
   {
     "type": "medium",
@@ -987,7 +987,7 @@
     "key": "h(n) <= cost(n,n') + h(n') for all arcs",
     "justification": "Consistent heuristics are admissible and allow A* pruning.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 6
   },
   {
     "type": "hard",
@@ -1077,7 +1077,7 @@
     "key": "Combining multiple models to improve predictions",
     "justification": "Ensemble methods like random forests often outperform single models.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 11
   },
   {
     "type": "hard",
@@ -1242,7 +1242,7 @@
     "key": "DFS with increasing depth limits combining BFS efficiency with DFS memory",
     "justification": "IDDFS combines advantages of BFS and DFS.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 5
   },
   {
     "type": "medium",
@@ -1407,7 +1407,7 @@
     "key": "To maximize its performance measure",
     "justification": "Agents are designed to optimize performance.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 6
   },
   {
     "type": "easy",
@@ -1512,7 +1512,7 @@
     "key": "A tree representing all possible game states and moves",
     "justification": "Game trees are used for game-playing agents.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 7
   },
   {
     "type": "easy",
@@ -1857,7 +1857,7 @@
     "key": "Checking future constraints to detect conflicts early",
     "justification": "Forward checking improves CSP solving efficiency.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 7
   },
   {
     "type": "easy",
@@ -1932,7 +1932,7 @@
     "key": "System using IF-THEN rules for decision making",
     "justification": "Rule-based systems use knowledge encoded as rules.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 7
   },
   {
     "type": "easy",
@@ -2187,7 +2187,7 @@
     "key": "Simpler explanations are preferable to complex ones",
     "justification": "Occam's Razor supports models with fewer parameters.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -2232,7 +2232,7 @@
     "key": "Visualization of how loss changes with parameters",
     "justification": "Loss landscape affects optimization difficulty.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -2502,7 +2502,7 @@
     "key": "Loss function for classification measuring probability difference",
     "justification": "Cross-entropy is standard for classification.",
     "justified_by": "Perplexity",
-    "frequency": 11
+    "frequency": 12
   },
   {
     "type": "easy",

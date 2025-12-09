@@ -61,7 +61,7 @@
     "key": "Carpenter : Hammer",
     "justification": "Professional and their primary tool",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 6
   },
   {
     "type": "hard",
@@ -77,7 +77,7 @@
     "key": "Drought : Water",
     "justification": "Extreme scarcity relationship",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 11
   },
   {
     "type": "hard",
@@ -349,7 +349,7 @@
     "key": "Prudence : Caution",
     "justification": "Quality demonstrating specific trait",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -525,7 +525,7 @@
     "key": "Obtuse : Comprehension",
     "justification": "Lacking mental clarity",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -589,7 +589,7 @@
     "key": "Obscure : Confusion",
     "justification": "Opposite quality producing opposite effect",
     "justified_by": "Perplexity",
-    "frequency": 11
+    "frequency": 12
   },
   {
     "type": "hard",
@@ -650,7 +650,7 @@
     "key": "Clear",
     "justification": "Lucid means clear and transparent",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -695,7 +695,7 @@
     "key": "Abundant",
     "justification": "Copious means plentiful in quantity",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -1220,7 +1220,7 @@
     "key": "Sparse",
     "justification": "Opposite of thick and compact",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -1400,7 +1400,7 @@
     "key": "Condemn",
     "justification": "Opposite of forgiving",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -1460,7 +1460,7 @@
     "key": "Confident",
     "justification": "Opposite of lacking confidence",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -1550,7 +1550,7 @@
     "key": "was",
     "justification": "Verb agrees with nearer subject",
     "justified_by": "Perplexity",
-    "frequency": 13
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -1700,7 +1700,7 @@
     "key": "would have helped",
     "justification": "Third conditional structure",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 6
   },
   {
     "type": "hard",
@@ -2000,7 +2000,7 @@
     "key": "had...fallen",
     "justification": "No sooner...than sequence",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 6
   },
   {
     "type": "hard",
@@ -2285,7 +2285,7 @@
     "key": "zealous",
     "justification": "Impressive attitude is zealous",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 6
   },
   {
     "type": "hard",
@@ -2345,7 +2345,7 @@
     "key": "judicious",
     "justification": "Wise decisions are judicious",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 6
   },
   {
     "type": "hard",
@@ -2495,7 +2495,7 @@
     "key": "exponential",
     "justification": "Rapid growth is exponential",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -2705,7 +2705,7 @@
     "key": "had...when",
     "justification": "Hardly...when construction",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 6
   },
   {
     "type": "hard",
@@ -2720,7 +2720,7 @@
     "key": "shows...has",
     "justification": "Data singular with has been",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -2735,7 +2735,7 @@
     "key": "is...requires",
     "justification": "Economics singular, requires singular verb",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -2855,7 +2855,7 @@
     "key": "Carefree",
     "justification": "Insouciant means without care",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "medium",

@@ -7,7 +7,7 @@ function Navigation() {
       <nav className="nav-links">
 
         <NavLink
-          to="/"
+          to="/app"
           end
           className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
         >
@@ -21,7 +21,7 @@ function Navigation() {
         </NavLink>
 
         <NavLink
-          to="/jobs"
+          to="/app/jobs"
           className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
         >
           <div className="nav-item">
@@ -33,7 +33,7 @@ function Navigation() {
           </div>
         </NavLink>
         <NavLink
-          to="/application"
+          to="/app/application"
           className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
         >
           <div className="nav-item">
@@ -48,7 +48,7 @@ function Navigation() {
           </div>
         </NavLink>
         <NavLink
-          to="/profile"
+          to="/app/profile"
           className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
         >
           <div className="nav-item">

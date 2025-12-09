@@ -57,7 +57,7 @@
     "key": "Italic is a separate font face; oblique simulates slanting",
     "justification": "Italic is designed as a distinct font face, while oblique is mathematically skewed.",
     "justified_by": "Perplexity",
-    "frequency": 13
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -87,7 +87,7 @@
     "key": "text-decoration: underline line-through;",
     "justification": "Multiple text-decoration values can be combined with spaces.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -177,7 +177,7 @@
     "key": "Positions the background image at the center of the container",
     "justification": "background-position specifies where the background image starts.",
     "justified_by": "Perplexity",
-    "frequency": 11
+    "frequency": 12
   },
   {
     "type": "hard",
@@ -312,7 +312,7 @@
     "key": "Fits entire image in container with empty space if needed",
     "justification": "contain preserves aspect ratio and shows entire image.",
     "justified_by": "Perplexity",
-    "frequency": 14
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -612,7 +612,7 @@
     "key": "V8",
     "justification": "V8 is Google's engine used in Chrome and Node.js.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -672,7 +672,7 @@
     "key": "Declares a constant variable that cannot be reassigned",
     "justification": "const prevents reassignment but doesn't prevent mutation of objects.",
     "justified_by": "Perplexity",
-    "frequency": 12
+    "frequency": 13
   },
   {
     "type": "hard",
@@ -822,7 +822,7 @@
     "key": "Selects the first element with a given id",
     "justification": "getElementById() returns a single element (ids are unique).",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -957,7 +957,7 @@
     "key": "Creates a new DOM element",
     "justification": "createElement() creates a new element but doesn't add it to the page.",
     "justified_by": "Perplexity",
-    "frequency": 13
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -1062,7 +1062,7 @@
     "key": "Handler is the function; listener is the mechanism that detects the event",
     "justification": "An event listener waits for events; event handler is the function called.",
     "justified_by": "Perplexity",
-    "frequency": 11
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -1107,7 +1107,7 @@
     "key": "Triggers when the mouse leaves the element",
     "justification": "mouseout fires when mouse exits the element area.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -1272,7 +1272,7 @@
     "key": "The actual character/key pressed",
     "justification": "event.key returns the string representation of the key.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 6
   },
   {
     "type": "hard",
@@ -1377,7 +1377,7 @@
     "key": "Opens a new browser window/tab",
     "justification": "window.open(url, target, specs) opens a new window.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -1587,7 +1587,7 @@
     "key": "Arrow functions use parent's 'this'; regular functions get their own 'this'",
     "justification": "Arrow functions inherit 'this' from enclosing scope.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -1647,7 +1647,7 @@
     "key": "Validation in the browser before sending",
     "justification": "Client-side validation happens on user's computer.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -1872,7 +1872,7 @@
     "key": "A server-side scripting language for web development",
     "justification": "PHP executes on the server and generates HTML sent to browsers.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 7
   },
   {
     "type": "medium",
@@ -1887,7 +1887,7 @@
     "key": "mysqli_connect() or PDO",
     "justification": "PHP uses mysqli or PDO for database connections.",
     "justified_by": "Perplexity",
-    "frequency": 14
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -2037,7 +2037,7 @@
     "key": "$_SESSION['username']",
     "justification": "Session variables accessed via $_SESSION superglobal.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -2127,7 +2127,7 @@
     "key": "Closing content, copyright, links",
     "justification": "<footer> contains ending content.",
     "justified_by": "Perplexity",
-    "frequency": 13
+    "frequency": 14
   },
   {
     "type": "medium",

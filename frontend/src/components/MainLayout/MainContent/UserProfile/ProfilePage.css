@@ -350,6 +350,62 @@
   transform: translateX(2px);
 }
 
+.info-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  font-size: 15px;
+  color: #1f2937;
+  font-family: inherit;
+  resize: vertical;
+  background: #fff;
+}
+
+.info-textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.info-paragraph {
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.three-column {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.subheading {
+  margin: 0 0 10px 0;
+  color: #1f2937;
+}
+
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-chip {
+  background: #eef2ff;
+  color: #4c51bf;
+  padding: 8px 12px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.education-list p {
+  margin: 0 0 8px 0;
+  color: #475569;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -444,4 +500,3 @@
     font-size: 12px;
   }
 }
-

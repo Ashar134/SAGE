@@ -171,10 +171,10 @@ function ApplicationPage() {
     return <span className={`status-badge ${config.className}`}>{config.label}</span>;
   };
 
-  const handleGiveTest = (applicationId: string) => {
+  const handleGiveTest = (_applicationId: string) => {
     // Navigate to test page with application ID
     // The test page is already implemented at /test route
-    navigate('/test');
+    navigate('/app/test');
     // TODO: Pass application ID as query parameter or state when backend is integrated
     // Example: navigate(`/test?applicationId=${applicationId}`);
   };

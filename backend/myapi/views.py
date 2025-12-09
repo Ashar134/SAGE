@@ -1,15 +1,23 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 import sys
 from pathlib import Path
+from django.views.decorators.csrf import csrf_exempt
+from tempfile import NamedTemporaryFile
+import os
 
 # Add backend directory to path to import test_generator
 backend_dir = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(backend_dir))
 
+cv_parser_dir = backend_dir / "CV-Parser"
+if cv_parser_dir.exists():
+    sys.path.insert(0, str(cv_parser_dir))
+
 from test_generator.service import TestGeneratorService
 from test_generator.config import TEST_COMPOSITIONS, CS_DISTRIBUTION
+from resume_parser import parse_resume
 
 # Create your views here.
 # Testing that our Django server is working fine or not
@@ -38,8 +46,38 @@ def homepage(request):
 
 
 # Login and Registration Page
+@csrf_exempt  # Demo-only: bypass CSRF so form can post without setup
 def authenticate_user(request):
+    # Demo flow: any POST redirects to frontend app shell
+    if request.method == "POST":
+        return redirect("http://localhost:5173/app/onboarding")
     return render(request, "authentication_page.html")
+
+
+@csrf_exempt
+@api_view(['POST'])
+def parse_cv(request):
+    """
+    Accept a PDF upload, run the CV parser, and return structured data.
+    """
+    uploaded = request.FILES.get("file")
+    if not uploaded:
+        return Response({"success": False, "error": "No file provided"}, status=400)
+
+    # Persist to a temp file so pdftotext can read it
+    with NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
+        for chunk in uploaded.chunks():
+            tmp.write(chunk)
+        temp_path = tmp.name
+
+    try:
+        parsed = parse_resume(temp_path)
+        return Response({"success": True, "data": parsed})
+    except Exception as exc:
+        return Response({"success": False, "error": str(exc)}, status=500)
+    finally:
+        if os.path.exists(temp_path):
+            os.remove(temp_path)
 
 
 def get_question_type(expertise: str, question_number: int) -> str:

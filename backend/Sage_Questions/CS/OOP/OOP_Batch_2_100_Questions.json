@@ -11,7 +11,7 @@
     "key": "Pre-built classes for storing collections of data",
     "justification": "STL (Standard Template Library) containers are template classes that provide efficient data structures like vector, list, map, set, etc.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -39,7 +39,7 @@
     "key": "O(1)",
     "justification": "Vector provides constant-time random access since it uses contiguous memory like arrays.",
     "justified_by": "Perplexity",
-    "frequency": 15
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -207,7 +207,7 @@
     "key": "Pointer can be null and reassigned; reference cannot be null and is fixed",
     "justification": "References are safer alternatives to pointers - they cannot be null or reassigned after initialization.",
     "justified_by": "Perplexity",
-    "frequency": 16
+    "frequency": 17
   },
   {
     "type": "medium",
@@ -333,7 +333,7 @@
     "key": "By defining operator[]() method",
     "justification": "The subscript operator [] is overloaded through operator[]() method, often used for custom array-like access.",
     "justified_by": "Perplexity",
-    "frequency": 17
+    "frequency": 18
   },
   {
     "type": "medium",
@@ -361,7 +361,7 @@
     "key": "Yes, by defining operator=() method",
     "justification": "Assignment operator can be overloaded to provide deep copy or custom assignment behavior for objects.",
     "justified_by": "Perplexity",
-    "frequency": 15
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -375,7 +375,7 @@
     "key": "To make an object callable like a function (Functor/Function object)",
     "justification": "Overloading () creates function objects (functors) that can be invoked with function call syntax.",
     "justified_by": "Perplexity",
-    "frequency": 17
+    "frequency": 18
   },
   {
     "type": "medium",
@@ -403,7 +403,7 @@
     "key": "To enclose code that might throw exceptions",
     "justification": "A try block contains code that may throw exceptions, allowing catch blocks to handle them.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 5
   },
   {
     "type": "medium",
@@ -431,7 +431,7 @@
     "key": "Yes, multiple catch blocks can handle different exception types",
     "justification": "Multiple catch blocks allow handling different exception types with specific recovery logic for each.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -669,7 +669,7 @@
     "key": "A pattern that encapsulates object behavior based on internal state",
     "justification": "State pattern allows object to change behavior when internal state changes, appearing to change its class.",
     "justified_by": "Perplexity",
-    "frequency": 15
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -781,7 +781,7 @@
     "key": "An operator that returns type information of an object at runtime",
     "justification": "typeid() returns a type_info object containing runtime type information, useful for type checking.",
     "justified_by": "Perplexity",
-    "frequency": 14
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -809,7 +809,7 @@
     "key": "A template pattern where class inherits from template of itself",
     "justification": "CRTP enables compile-time polymorphism without virtual functions, improving performance.",
     "justified_by": "Perplexity",
-    "frequency": 12
+    "frequency": 13
   },
   {
     "type": "hard",
@@ -1019,7 +1019,7 @@
     "key": "A keyword for compile-time evaluation of functions and variables",
     "justification": "constexpr allows functions and expressions to be evaluated at compile time when called with compile-time constants.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -1075,7 +1075,7 @@
     "key": "A situation where threads wait indefinitely for each other, preventing progress",
     "justification": "Deadlock occurs when circular wait conditions prevent threads from proceeding, requiring careful lock management.",
     "justified_by": "Perplexity",
-    "frequency": 18
+    "frequency": 19
   },
   {
     "type": "hard",

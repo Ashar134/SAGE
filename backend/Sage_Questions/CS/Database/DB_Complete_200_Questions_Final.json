@@ -165,7 +165,7 @@
     },
     "key": "Missing or unknown data",
     "justification": "NULL represents unknown values",
-    "frequency": 15
+    "frequency": 17
   },
   {
     "type": "easy",
@@ -193,7 +193,7 @@
     },
     "key": "A virtual table created from base relations",
     "justification": "Views are virtual tables",
-    "frequency": 19
+    "frequency": 21
   },
   {
     "type": "easy",
@@ -319,7 +319,7 @@
     },
     "key": "Returns all rows from left table and matching from right",
     "justification": "LEFT JOIN preserves left table rows",
-    "frequency": 11
+    "frequency": 12
   },
   {
     "type": "easy",
@@ -347,7 +347,7 @@
     },
     "key": "Atomicity, Consistency, Isolation, Durability",
     "justification": "ACID ensures transaction reliability",
-    "frequency": 22
+    "frequency": 23
   },
   {
     "type": "easy",
@@ -431,7 +431,7 @@
     },
     "key": "Unnecessary duplication of data",
     "justification": "Redundancy wastes storage",
-    "frequency": 19
+    "frequency": 21
   },
   {
     "type": "easy",
@@ -459,7 +459,7 @@
     },
     "key": "Unintended loss of data when deleting records",
     "justification": "Deletion anomaly causes data loss",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "easy",
@@ -487,7 +487,7 @@
     },
     "key": "One attribute determining another attribute value",
     "justification": "Functional dependency is important for normalization",
-    "frequency": 14
+    "frequency": 15
   },
   {
     "type": "easy",
@@ -557,7 +557,7 @@
     },
     "key": "One entity instance related to many in other",
     "justification": "One-to-many is common relationship type",
-    "frequency": 12
+    "frequency": 13
   },
   {
     "type": "easy",
@@ -585,7 +585,7 @@
     },
     "key": "Index using bit-vectors for values",
     "justification": "Bitmap indexes optimize certain queries",
-    "frequency": 18
+    "frequency": 19
   },
   {
     "type": "easy",
@@ -613,7 +613,7 @@
     },
     "key": "Primary key is one chosen from candidate keys",
     "justification": "Primary key chosen from candidates",
-    "frequency": 18
+    "frequency": 19
   },
   {
     "type": "medium",
@@ -627,7 +627,7 @@
     },
     "key": "Reduces redundancy and anomalies",
     "justification": "Normalization addresses design issues",
-    "frequency": 13
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -725,7 +725,7 @@
     },
     "key": "Base is physical, view is virtual based on relations",
     "justification": "Views are derived from base relations",
-    "frequency": 15
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -963,7 +963,7 @@
     },
     "key": "Sorting result rows based on specified columns",
     "justification": "ORDER BY sorts results ascending or descending",
-    "frequency": 19
+    "frequency": 20
   },
   {
     "type": "medium",
@@ -1089,7 +1089,7 @@
     },
     "key": "Subquery referencing columns from outer query",
     "justification": "Correlated subqueries execute per row",
-    "frequency": 15
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -1117,7 +1117,7 @@
     },
     "key": "Returning rows common to both query results",
     "justification": "INTERSECT finds common rows",
-    "frequency": 17
+    "frequency": 18
   },
   {
     "type": "hard",
@@ -1215,7 +1215,7 @@
     },
     "key": "Showing query execution plan and statistics",
     "justification": "EXPLAIN helps optimize queries",
-    "frequency": 16
+    "frequency": 17
   },
   {
     "type": "hard",
@@ -1229,7 +1229,7 @@
     },
     "key": "Pre-compiled SQL with placeholders for security",
     "justification": "Prepared statements prevent SQL injection",
-    "frequency": 12
+    "frequency": 13
   },
   {
     "type": "hard",

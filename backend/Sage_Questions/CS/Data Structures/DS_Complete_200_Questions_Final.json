@@ -25,7 +25,7 @@
     },
     "key": "Contiguous memory storing elements of the same type",
     "justification": "Arrays are fundamental sequential data structures",
-    "frequency": 26
+    "frequency": 27
   },
   {
     "type": "easy",
@@ -67,7 +67,7 @@
     },
     "key": "A unit containing data and pointer(s)",
     "justification": "Nodes are the fundamental units of linked lists",
-    "frequency": 18
+    "frequency": 19
   },
   {
     "type": "easy",
@@ -109,7 +109,7 @@
     },
     "key": "A hierarchical structure with root and nodes",
     "justification": "Trees are hierarchical structures",
-    "frequency": 19
+    "frequency": 20
   },
   {
     "type": "easy",
@@ -123,7 +123,7 @@
     },
     "key": "Each node has at most two children",
     "justification": "Binary trees limit children to at most two",
-    "frequency": 20
+    "frequency": 22
   },
   {
     "type": "easy",
@@ -151,7 +151,7 @@
     },
     "key": "Key-value pairs using a hash function",
     "justification": "Hash tables provide fast access using keys",
-    "frequency": 15
+    "frequency": 16
   },
   {
     "type": "easy",
@@ -277,7 +277,7 @@
     },
     "key": "Add element to back of queue",
     "justification": "Enqueue adds to queue back",
-    "frequency": 12
+    "frequency": 13
   },
   {
     "type": "easy",
@@ -347,7 +347,7 @@
     },
     "key": "A node below its parent in tree",
     "justification": "Child nodes descend from parent",
-    "frequency": 15
+    "frequency": 16
   },
   {
     "type": "easy",
@@ -361,7 +361,7 @@
     },
     "key": "Visiting all nodes in specific order",
     "justification": "Traversal systematically visits nodes",
-    "frequency": 15
+    "frequency": 16
   },
   {
     "type": "easy",
@@ -403,7 +403,7 @@
     },
     "key": "Left-Right-Root",
     "justification": "Postorder is left-right-root sequence",
-    "frequency": 18
+    "frequency": 19
   },
   {
     "type": "easy",
@@ -431,7 +431,7 @@
     },
     "key": "Mapping a key to array index",
     "justification": "Hash functions enable fast lookup",
-    "frequency": 16
+    "frequency": 17
   },
   {
     "type": "easy",
@@ -613,7 +613,7 @@
     },
     "key": "Divide-and-conquer using partition",
     "justification": "Quick sort partitions data",
-    "frequency": 22
+    "frequency": 23
   },
   {
     "type": "easy",
@@ -949,7 +949,7 @@
     },
     "key": "O(n) linear space for call stack",
     "justification": "Recursion depth creates call stack overhead",
-    "frequency": 17
+    "frequency": 18
   },
   {
     "type": "hard",
@@ -991,7 +991,7 @@
     },
     "key": "2D array showing edges between vertices",
     "justification": "Adjacency matrix represents graph connectivity",
-    "frequency": 16
+    "frequency": 17
   },
   {
     "type": "hard",
@@ -1005,7 +1005,7 @@
     },
     "key": "Collection of lists showing edges for each vertex",
     "justification": "Adjacency list efficiently represents sparse graphs",
-    "frequency": 21
+    "frequency": 22
   },
   {
     "type": "hard",
@@ -1047,7 +1047,7 @@
     },
     "key": "Efficient range queries and updates",
     "justification": "Segment trees optimize interval operations",
-    "frequency": 14
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -1089,7 +1089,7 @@
     },
     "key": "O(n log n) in average case; O(n²) worst case",
     "justification": "BST insertion depends on tree balance",
-    "frequency": 18
+    "frequency": 20
   },
   {
     "type": "hard",
@@ -1117,7 +1117,7 @@
     },
     "key": "Optimization flattening tree structure during find operations",
     "justification": "Path compression improves amortized performance",
-    "frequency": 19
+    "frequency": 20
   },
   {
     "type": "hard",
@@ -1159,7 +1159,7 @@
     },
     "key": "Distributing keys to minimize hash value collisions",
     "justification": "Good hashing reduces collision frequency",
-    "frequency": 17
+    "frequency": 18
   },
   {
     "type": "hard",
@@ -1201,7 +1201,7 @@
     },
     "key": "Ratio of filled slots to table size",
     "justification": "Load factor indicates hash table utilization",
-    "frequency": 19
+    "frequency": 20
   },
   {
     "type": "hard",
@@ -1355,7 +1355,7 @@
     },
     "key": "Selecting minimum weight edges avoiding cycles",
     "justification": "Kruskal's uses greedy edge selection",
-    "frequency": 15
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -1369,6 +1369,6 @@
     },
     "key": "Growing tree from initial vertex",
     "justification": "Prim's builds MST incrementally",
-    "frequency": 14
+    "frequency": 15
   }
 ]

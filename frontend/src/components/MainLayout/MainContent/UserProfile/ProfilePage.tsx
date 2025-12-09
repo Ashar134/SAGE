@@ -6,28 +6,46 @@ interface UserProfile {
   email: string;
   phone: string;
   location: string;
-  domain?: string; // Field of expertise (e.g., Computer Science, Software Engineering)
+  domain?: string;
   linkedin?: string;
   github?: string;
+  summary?: string;
+  skillsText?: string;
+  experienceText?: string;
+  educationText?: string;
 }
 
-// Dummy data - will be replaced with actual CV extraction data later
-const dummyProfile: UserProfile = {
-  fullName: "Dilawar Khan",
-  email: "dilawar@gmail.com",
-  phone: "+92 300 1234567",
-  location: "Peshawar, Pakistan",
-  domain: "Computer Science",
-  linkedin: "linkedin.com/in/dilawar123456",
-  github: "github.com/dilawarkhan"
+const emptyProfile: UserProfile = {
+  fullName: "",
+  email: "",
+  phone: "",
+  location: "",
+  domain: "",
+  linkedin: "",
+  github: "",
+  summary: "",
+  skillsText: "",
+  experienceText: "",
+  educationText: ""
 };
 
 function ProfilePage() {
-  const [profile, setProfile] = useState<UserProfile>(dummyProfile);
+  const [profile, setProfile] = useState<UserProfile>(() => {
+    const saved = localStorage.getItem("profileData");
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved) as Partial<UserProfile>;
+        return { ...emptyProfile, ...parsed };
+      } catch {
+        return emptyProfile;
+      }
+    }
+    return emptyProfile;
+  });
   const [isEditing, setIsEditing] = useState(false);
   const [cvFile, setCvFile] = useState<File | null>(null);
   const [uploadStatus, setUploadStatus] = useState<string>('');
-  const [profilePicture, setProfilePicture] = useState<File | null>(null);
+  const [, setProfilePicture] = useState<File | null>(null); // kept for future upload integration
   const [profilePicturePreview, setProfilePicturePreview] = useState<string | null>(null);
 
   const handleProfilePictureChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -82,6 +100,7 @@ function ProfilePage() {
     // Reset CV upload state when saving/exiting edit mode
     setCvFile(null);
     setUploadStatus('');
+    localStorage.setItem("profileData", JSON.stringify(profile));
     // TODO: Save changes to backend including profile picture
     // TODO: Upload profilePicture to server if it exists
   };
@@ -289,6 +308,86 @@ function ProfilePage() {
                 )}
               </div>
             )}
+          </div>
+        </div>
+
+        {/* Professional Summary */}
+        <div className="profile-section">
+          <h2 className="section-title">Professional Summary</h2>
+          {isEditing ? (
+            <textarea
+              className="info-textarea"
+              rows={4}
+              value={profile.summary || ''}
+              onChange={(e) => setProfile({ ...profile, summary: e.target.value })}
+              placeholder="Tell us about your experience and focus areas."
+            />
+          ) : (
+            <p className="info-paragraph">{profile.summary || 'No summary added yet.'}</p>
+          )}
+        </div>
+
+        {/* Experience, Skills & Education */}
+        <div className="profile-section">
+          <h2 className="section-title">Experience, Skills & Education</h2>
+          <div className="three-column">
+            <div className="column">
+              <h3 className="subheading">Experience</h3>
+              {isEditing ? (
+                <textarea
+                  className="info-textarea"
+                  rows={4}
+                  value={profile.experienceText || ''}
+                  onChange={(e) => setProfile({ ...profile, experienceText: e.target.value })}
+                  placeholder={"List roles, one per line\nExample: Web Developer Intern · XYZ · Jun 2025 – Aug 2025"}
+                />
+              ) : (
+                <div className="education-list">
+                  {(profile.experienceText ? profile.experienceText.split('\n') : []).filter(Boolean).map((line, idx) => (
+                    <p key={idx} className="info-paragraph">{line}</p>
+                  ))}
+                  {!profile.experienceText && <p className="info-paragraph">No experience added.</p>}
+                </div>
+              )}
+            </div>
+            <div className="column">
+              <h3 className="subheading">Skills</h3>
+              {isEditing ? (
+                <textarea
+                  className="info-textarea"
+                  rows={4}
+                  value={profile.skillsText || ''}
+                  onChange={(e) => setProfile({ ...profile, skillsText: e.target.value })}
+                  placeholder="Comma-separated skills (e.g., react, python, sql)"
+                />
+              ) : (
+                <div className="chip-group">
+                  {(profile.skillsText ? profile.skillsText.split(',') : []).filter(Boolean).map((skill) => (
+                    <span key={skill.trim()} className="skill-chip">{skill.trim()}</span>
+                  ))}
+                  {!profile.skillsText && <p className="info-paragraph">No skills added.</p>}
+                </div>
+              )}
+            </div>
+            <div className="column">
+              <h3 className="subheading">Education</h3>
+              {isEditing ? (
+                <textarea
+                  className="info-textarea"
+                  rows={4}
+                  value={profile.educationText || ''}
+                  onChange={(e) => setProfile({ ...profile, educationText: e.target.value })}
+                  placeholder={"List your education, one per line\nExample: BS Computer Science · ABC University · 2019"}
+                />
+              ) : (
+                <div className="education-list">
+                  {(profile.educationText ? profile.educationText.split('\n') : []).filter(Boolean).map((line, idx) => (
+                    <p key={idx} className="info-paragraph">{line}</p>
+                  ))}
+                  {!profile.educationText && <p className="info-paragraph">No education details added.</p>}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

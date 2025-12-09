@@ -361,7 +361,7 @@
     },
     "key": "Ensemble technique combining weak learners sequentially",
     "justification": "Boosting reduces bias iteratively",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -389,7 +389,7 @@
     },
     "key": "Boosting algorithm focusing on misclassified samples iteratively",
     "justification": "AdaBoost adapts to difficult samples",
-    "frequency": 3
+    "frequency": 4
   },
   {
     "type": "medium",
@@ -823,7 +823,7 @@
     },
     "key": "Allowing gradients to bypass layers, enabling very deep networks",
     "justification": "Skip connections solve vanishing gradient",
-    "frequency": 14
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -935,7 +935,7 @@
     },
     "key": "Finding parameters that maximize probability of observed data",
     "justification": "MLE is fundamental statistical principle",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -1005,7 +1005,7 @@
     },
     "key": "Training model with adversarial examples for robustness",
     "justification": "Adversarial training improves model robustness",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -1047,7 +1047,7 @@
     },
     "key": "Learning new tasks from very limited labeled examples",
     "justification": "Few-shot learning mimics human learning",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -1061,7 +1061,7 @@
     },
     "key": "Recognizing unseen classes using semantic information",
     "justification": "Zero-shot learning requires external knowledge",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -1075,7 +1075,7 @@
     },
     "key": "Transferring model from source domain to target domain",
     "justification": "Domain adaptation handles distribution shift",
-    "frequency": 5
+    "frequency": 6
   },
   {
     "type": "hard",
@@ -1089,7 +1089,7 @@
     },
     "key": "Training on decentralized data without centralizing it",
     "justification": "Federated learning preserves privacy",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -1355,7 +1355,7 @@
     },
     "key": "Neural network model learning word embeddings",
     "justification": "Word2Vec is foundational embedding method",
-    "frequency": 11
+    "frequency": 12
   },
   {
     "type": "hard",

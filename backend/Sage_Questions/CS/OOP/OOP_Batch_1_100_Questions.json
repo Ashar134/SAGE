@@ -81,7 +81,7 @@
     "key": "Combining data and functions into a single unit and hiding implementation details",
     "justification": "Encapsulation bundles data and methods together while hiding internal details from the outside world, protecting data integrity.",
     "justified_by": "Perplexity",
-    "frequency": 17
+    "frequency": 18
   },
   {
     "type": "easy",
@@ -137,7 +137,7 @@
     "key": "Encapsulation, Abstraction, Inheritance, Polymorphism",
     "justification": "These four concepts form the foundation of OOP and guide object-oriented design principles.",
     "justified_by": "Perplexity",
-    "frequency": 16
+    "frequency": 17
   },
   {
     "type": "easy",
@@ -193,7 +193,7 @@
     "key": "Members are accessible within the class and derived classes",
     "justification": "Protected members are accessible within the class and in classes derived from it, but not from outside.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "easy",
@@ -291,7 +291,7 @@
     "key": "A concrete realization of a class",
     "justification": "An instance is an object created from a class. Each instance has its own data and can execute methods defined in the class.",
     "justified_by": "Perplexity",
-    "frequency": 16
+    "frequency": 17
   },
   {
     "type": "easy",
@@ -389,7 +389,7 @@
     "key": "Having multiple methods with the same name but different parameters",
     "justification": "Method overloading allows a class to have multiple methods with the same name but different parameter lists (number, type, or order).",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 8
   },
   {
     "type": "easy",
@@ -431,7 +431,7 @@
     "key": "A function declared in base class that can be overridden in derived classes",
     "justification": "Virtual functions enable runtime polymorphism, allowing the correct overridden method to be called based on actual object type.",
     "justified_by": "Perplexity",
-    "frequency": 12
+    "frequency": 13
   },
   {
     "type": "easy",
@@ -557,7 +557,7 @@
     "key": "Const reference",
     "justification": "Objects are passed by const reference to prevent infinite recursion and ensure the source object isn't modified.",
     "justified_by": "Perplexity",
-    "frequency": 14
+    "frequency": 15
   },
   {
     "type": "medium",
@@ -683,7 +683,7 @@
     "key": "Abstract class can have implementation; interface only defines contracts",
     "justification": "Abstract classes can have both implemented and abstract methods, while interfaces traditionally define only method signatures (contracts).",
     "justified_by": "Perplexity",
-    "frequency": 15
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -697,7 +697,7 @@
     "key": "Polymorphism resolved at compile time through method overloading",
     "justification": "Static polymorphism (compile-time) is achieved through function and operator overloading where the correct function is determined before execution.",
     "justified_by": "Perplexity",
-    "frequency": 11
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -711,7 +711,7 @@
     "key": "Polymorphism resolved at runtime through virtual functions and inheritance",
     "justification": "Dynamic polymorphism (runtime) uses virtual functions to determine which overridden method to call based on actual object type at execution time.",
     "justified_by": "Perplexity",
-    "frequency": 19
+    "frequency": 21
   },
   {
     "type": "medium",
@@ -725,7 +725,7 @@
     "key": "A class containing instances of other classes (Has-A relationship)",
     "justification": "Composition represents a 'Has-A' relationship where a class contains objects of other classes as part of its structure.",
     "justified_by": "Perplexity",
-    "frequency": 19
+    "frequency": 21
   },
   {
     "type": "medium",
@@ -739,7 +739,7 @@
     "key": "Composition is Has-A; Inheritance is Is-A relationship",
     "justification": "Inheritance represents 'Is-A' (Car Is-A Vehicle), while composition represents 'Has-A' (Car Has-A Engine).",
     "justified_by": "Perplexity",
-    "frequency": 11
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -949,7 +949,7 @@
     "key": "A mechanism to handle runtime errors by throwing and catching exceptions",
     "justification": "Exception handling provides a structured way to deal with error conditions, using try-catch blocks to catch and handle exceptions.",
     "justified_by": "Perplexity",
-    "frequency": 14
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -1047,7 +1047,7 @@
     "key": "An object that acts like a pointer but manages memory automatically",
     "justification": "Smart pointers (unique_ptr, shared_ptr) wrap raw pointers and automatically manage memory, preventing leaks.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "hard",
