@@ -1,0 +1,754 @@
+[
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Real Analysis",
+    "question": "A sequence {xₙ} is Cauchy if for every ε>0 there exists N such that:",
+    "answers": {
+      "A1": "|xₙ|<ε for all n>N",
+      "A2": "|xₘ-xₙ|<ε for all m,n>N",
+      "A3": "xₙ<ε for all n>N",
+      "A4": "|xₙ-x|<ε for some fixed x"
+    },
+    "key": "|xₘ-xₙ|<ε for all m,n>N",
+    "justification": "Cauchy sequence: members become arbitrarily close to each other",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Real Analysis",
+    "question": "A function f:[a,b]→ℝ is uniformly continuous if:",
+    "answers": {
+      "A1": "For each x∈[a,b], ∀ε>0 ∃δ>0 such that |f(x)-f(y)|<ε when |x-y|<δ",
+      "A2": "∀ε>0 ∃δ>0 such that |f(x)-f(y)|<ε whenever |x-y|<δ for ALL x,y∈[a,b]",
+      "A3": "f is continuous at exactly one point",
+      "A4": "f(x)=f(y) for all x≠y"
+    },
+    "key": "∀ε>0 ∃δ>0 such that |f(x)-f(y)|<ε whenever |x-y|<δ for ALL x,y∈[a,b]",
+    "justification": "Uniform continuity: δ depends on ε alone, not on the point",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Real Analysis",
+    "question": "The Heine-Borel Theorem states that a subset of ℝⁿ is compact if and only if:",
+    "answers": {
+      "A1": "It is open and connected",
+      "A2": "It is closed and bounded",
+      "A3": "It is dense and nowhere dense",
+      "A4": "It is convex and symmetric"
+    },
+    "key": "It is closed and bounded",
+    "justification": "Compactness in Euclidean spaces characterized by closure and boundedness",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Real Analysis",
+    "question": "The Bolzano-Weierstrass Theorem guarantees that every bounded sequence in ℝⁿ:",
+    "answers": {
+      "A1": "Converges to a limit point",
+      "A2": "Has a convergent subsequence",
+      "A3": "Is monotonic",
+      "A4": "Has a maximum element"
+    },
+    "key": "Has a convergent subsequence",
+    "justification": "BW Theorem: boundedness implies existence of convergent subsequence",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Real Analysis",
+    "question": "The Mean Value Theorem: if f is continuous on [a,b] and differentiable on (a,b), then:",
+    "answers": {
+      "A1": "f'(x)=0 for some x∈(a,b)",
+      "A2": "∃c∈(a,b): f'(c)=(f(b)-f(a))/(b-a)",
+      "A3": "f is monotonic on [a,b]",
+      "A4": "f(a)=f(b)"
+    },
+    "key": "∃c∈(a,b): f'(c)=(f(b)-f(a))/(b-a)",
+    "justification": "MVT: slope of secant equals some tangent slope",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Real Analysis",
+    "question": "Rolle's Theorem does NOT require:",
+    "answers": {
+      "A1": "f is continuous on [a,b]",
+      "A2": "f is differentiable on (a,b)",
+      "A3": "f(a)=f(b)",
+      "A4": "f is strictly increasing"
+    },
+    "key": "f is strictly increasing",
+    "justification": "Rolle's Theorem requires continuity, differentiability, and equal endpoints only",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Real Analysis",
+    "question": "The Lebesgue Dominated Convergence Theorem: if fₙ→f pointwise and |fₙ|≤g (g integrable), then:",
+    "answers": {
+      "A1": "fₙ converges uniformly to f",
+      "A2": "lim∫fₙ=∫f",
+      "A3": "Each fₙ must be continuous",
+      "A4": "The sequence must be monotonic"
+    },
+    "key": "lim∫fₙ=∫f",
+    "justification": "DCT: justifies interchange of limit and integral under domination",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Real Analysis",
+    "question": "The Intermediate Value Theorem: if f:[a,b]→ℝ is continuous and k is between f(a) and f(b), then:",
+    "answers": {
+      "A1": "k is unique",
+      "A2": "∃c∈[a,b]: f(c)=k",
+      "A3": "f is strictly monotonic",
+      "A4": "f'(c)=0 for some c"
+    },
+    "key": "∃c∈[a,b]: f(c)=k",
+    "justification": "IVT: continuous functions attain all intermediate values",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Real Analysis",
+    "question": "A set A is nowhere dense if:",
+    "answers": {
+      "A1": "A is empty",
+      "A2": "A has no interior points",
+      "A3": "A is countable",
+      "A4": "The closure of A has empty interior"
+    },
+    "key": "The closure of A has empty interior",
+    "justification": "Nowhere dense: closure has empty interior",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Real Analysis",
+    "question": "The Extreme Value Theorem: if f is continuous on compact [a,b], then:",
+    "answers": {
+      "A1": "f is differentiable",
+      "A2": "f attains maximum and minimum values",
+      "A3": "f is monotonic",
+      "A4": "f is one-to-one"
+    },
+    "key": "f attains maximum and minimum values",
+    "justification": "EVT: continuous on compact implies attainment of extrema",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Functional Analysis",
+    "question": "A Banach space is:",
+    "answers": {
+      "A1": "A vector space with inner product",
+      "A2": "A complete normed vector space over ℝ or ℂ",
+      "A3": "A finite-dimensional space",
+      "A4": "A space where only linear functionals exist"
+    },
+    "key": "A complete normed vector space over ℝ or ℂ",
+    "justification": "Banach space: completeness w.r.t. norm-induced metric",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Functional Analysis",
+    "question": "A Hilbert space H is:",
+    "answers": {
+      "A1": "A Banach space with no inner product",
+      "A2": "A complete inner product space where ‖x‖=√⟨x,x⟩",
+      "A3": "A finite-dimensional space",
+      "A4": "Only holomorphic functions"
+    },
+    "key": "A complete inner product space where ‖x‖=√⟨x,x⟩",
+    "justification": "Hilbert: inner product induces norm; completeness required",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Functional Analysis",
+    "question": "The Hahn-Banach Theorem guarantees:",
+    "answers": {
+      "A1": "Every finite-dimensional space is reflexive",
+      "A2": "Bounded linear functional on subspace M extends to X preserving norm",
+      "A3": "Every linear operator is continuous",
+      "A4": "All Banach spaces are separable"
+    },
+    "key": "Bounded linear functional on subspace M extends to X preserving norm",
+    "justification": "HB: foundational existence and extension theorem",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Functional Analysis",
+    "question": "The lᵖ space (1≤p<∞) consists of sequences {xₙ} with:",
+    "answers": {
+      "A1": "Σ|xₙ|<∞",
+      "A2": "Σ|xₙ|ᵖ<∞",
+      "A3": "max|xₙ|<∞",
+      "A4": "All converge to 0"
+    },
+    "key": "Σ|xₙ|ᵖ<∞",
+    "justification": "lᵖ spaces: p-summable sequences",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Functional Analysis",
+    "question": "The Open Mapping Theorem (Banach): if T is surjective bounded linear operator between Banach spaces, then:",
+    "answers": {
+      "A1": "T⁻¹ may not exist",
+      "A2": "T⁻¹ is continuous (T maps open sets to open sets)",
+      "A3": "T is never surjective",
+      "A4": "Banach spaces cannot exist"
+    },
+    "key": "T⁻¹ is continuous (T maps open sets to open sets)",
+    "justification": "OMT: surjective operators are open maps",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Functional Analysis",
+    "question": "A linear operator T:X→Y is bounded if:",
+    "answers": {
+      "A1": "Range(T) is bounded",
+      "A2": "‖Tx‖≤M‖x‖ for all x and some constant M",
+      "A3": "T is continuous at origin only",
+      "A4": "Domain(T) is finite-dimensional"
+    },
+    "key": "‖Tx‖≤M‖x‖ for all x and some constant M",
+    "justification": "Bounded operator: finite operator norm; equivalence with continuity",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Functional Analysis",
+    "question": "The Riesz Representation Theorem for Hilbert space H states:",
+    "answers": {
+      "A1": "Every vector is sum of basis elements",
+      "A2": "Every bounded linear functional f has form f(x)=⟨x,y⟩ for unique y∈H",
+      "A3": "H is always finite-dimensional",
+      "A4": "No representation exists"
+    },
+    "key": "Every bounded linear functional f has form f(x)=⟨x,y⟩ for unique y∈H",
+    "justification": "Riesz: bijection between H and H*",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Functional Analysis",
+    "question": "The Closed Graph Theorem: if T:X→Y is linear between Banach spaces and graph is closed in X×Y, then:",
+    "answers": {
+      "A1": "T is not defined everywhere",
+      "A2": "T is bounded (continuous)",
+      "A3": "T is only continuous at 0",
+      "A4": "T cannot be injective"
+    },
+    "key": "T is bounded (continuous)",
+    "justification": "CGT: closed graph implies continuity for Banach spaces",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Functional Analysis",
+    "question": "A compact operator T on Banach space X is:",
+    "answers": {
+      "A1": "Any continuous operator",
+      "A2": "An operator mapping bounded sets to relatively compact sets",
+      "A3": "An operator with finite-dimensional range",
+      "A4": "An operator with only point spectrum"
+    },
+    "key": "An operator mapping bounded sets to relatively compact sets",
+    "justification": "Compact operator: closure of image of unit ball is compact",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Complex Analysis",
+    "question": "A function f(z) is holomorphic at z₀ if:",
+    "answers": {
+      "A1": "It is continuous at z₀",
+      "A2": "The limit f'(z₀)=lim(z→z₀)[f(z)-f(z₀)]/(z-z₀) exists",
+      "A3": "It is real-differentiable at z₀",
+      "A4": "Its real and imaginary parts are positive"
+    },
+    "key": "The limit f'(z₀)=lim(z→z₀)[f(z)-f(z₀)]/(z-z₀) exists",
+    "justification": "Holomorphic: complex differentiable",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Complex Analysis",
+    "question": "The Cauchy-Riemann equations for f(z)=u(x,y)+iv(x,y) state:",
+    "answers": {
+      "A1": "∂u/∂x=∂v/∂x and ∂u/∂y=∂v/∂y",
+      "A2": "∂u/∂x=∂v/∂y and ∂u/∂y=-∂v/∂x",
+      "A3": "∂u/∂x=∂u/∂y and ∂v/∂x=∂v/∂y",
+      "A4": "∇u=∇v everywhere"
+    },
+    "key": "∂u/∂x=∂v/∂y and ∂u/∂y=-∂v/∂x",
+    "justification": "CR equations: necessary for holomorphicity; sufficient with continuity",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Complex Analysis",
+    "question": "Cauchy's Integral Theorem: if f is holomorphic in simply connected D and C is closed contour in D, then:",
+    "answers": {
+      "A1": "∮_C f(z)dz = f(z₀) for some z₀ on C",
+      "A2": "∮_C f(z)dz = 0",
+      "A3": "∮_C f(z)dz = 2πi·Res(f)",
+      "A4": "∮_C f(z)dz = f(a)-f(b)"
+    },
+    "key": "∮_C f(z)dz = 0",
+    "justification": "Cauchy: fundamental theorem enabling residue calculus",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Complex Analysis",
+    "question": "Cauchy's Integral Formula: if f holomorphic inside/on C enclosing a, then:",
+    "answers": {
+      "A1": "f(a) = (1/2πi)∮_C f(z)/(z-a) dz",
+      "A2": "f'(a) = (1/2πi)∮_C f(z)/(z-a)² dz",
+      "A3": "f(a) = ∮_C f(z) dz",
+      "A4": "Both A and B correct"
+    },
+    "key": "Both A and B correct",
+    "justification": "CIF: expresses values/derivatives via boundary integral",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Complex Analysis",
+    "question": "The residue of f at simple pole z₀ is:",
+    "answers": {
+      "A1": "The value f(z₀)",
+      "A2": "Coefficient of (z-z₀)⁻¹ in Laurent expansion",
+      "A3": "Res(f,z₀) = lim(z→z₀)(z-z₀)f(z)",
+      "A4": "Both B and C equivalent"
+    },
+    "key": "Both B and C equivalent",
+    "justification": "Residue: Laurent coefficient or limit formula",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Complex Analysis",
+    "question": "The Residue Theorem: if f meromorphic with residues at z₁,...,zₙ inside C, then:",
+    "answers": {
+      "A1": "∮_C f(z)dz = πi·Σ Res(f,zⱼ)",
+      "A2": "∮_C f(z)dz = 2πi·Σ Res(f,zⱼ)",
+      "A3": "∮_C f(z)dz = 0",
+      "A4": "∮_C f(z)dz = Σf(zⱼ)"
+    },
+    "key": "∮_C f(z)dz = 2πi·Σ Res(f,zⱼ)",
+    "justification": "Residue Theorem: evaluates integrals via residues",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Complex Analysis",
+    "question": "An entire function is:",
+    "answers": {
+      "A1": "Holomorphic everywhere except finitely many poles",
+      "A2": "Holomorphic everywhere on ℂ",
+      "A3": "Only polynomials",
+      "A4": "Only exponentials"
+    },
+    "key": "Holomorphic everywhere on ℂ",
+    "justification": "Entire function: holomorphic on all complex plane",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Complex Analysis",
+    "question": "Liouville's Theorem: every bounded entire function must be:",
+    "answers": {
+      "A1": "Polynomial of degree ≤1",
+      "A2": "Constant",
+      "A3": "Zero everywhere",
+      "A4": "Unbounded near ∞"
+    },
+    "key": "Constant",
+    "justification": "Liouville: bounded entire functions are constant",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Complex Analysis",
+    "question": "The Maximum Modulus Principle: if f holomorphic and non-constant in D, then:",
+    "answers": {
+      "A1": "|f| attains maximum at interior point",
+      "A2": "|f| attains maximum on boundary of D",
+      "A3": "|f| is constant in D",
+      "A4": "|f| attains minimum in interior"
+    },
+    "key": "|f| attains maximum on boundary of D",
+    "justification": "MMP: |f| has no interior maximum unless constant",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Measure Theory",
+    "question": "A σ-algebra F on set Ω must satisfy:",
+    "answers": {
+      "A1": "∅∈F, finite complements, finite unions in F",
+      "A2": "∅∈Ω, if A∈F then Aᶜ∈F, countable unions in F",
+      "A3": "All subsets of Ω in F",
+      "A4": "Only finite subsets in F"
+    },
+    "key": "∅∈Ω, if A∈F then Aᶜ∈F, countable unions in F",
+    "justification": "σ-algebra: closed under complements and countable unions",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Measure Theory",
+    "question": "Lebesgue outer measure m*(E) is:",
+    "answers": {
+      "A1": "Max length of interval in E",
+      "A2": "Infimum of Σ|Iᵢ| over countable interval covers of E",
+      "A3": "Length of E if interval, 0 else",
+      "A4": "Cardinality of E"
+    },
+    "key": "Infimum of Σ|Iᵢ| over countable interval covers of E",
+    "justification": "Outer measure: infimum of covering measures",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Measure Theory",
+    "question": "The Cantor set C has property:",
+    "answers": {
+      "A1": "Countable with measure 0",
+      "A2": "Uncountable with measure 0",
+      "A3": "Countable with positive measure",
+      "A4": "Uncountable and dense"
+    },
+    "key": "Uncountable with measure 0",
+    "justification": "Cantor: uncountable but measure zero",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Measure Theory",
+    "question": "Countable additivity of measure μ means:",
+    "answers": {
+      "A1": "μ(A∪B)=μ(A)+μ(B) for all A,B",
+      "A2": "μ(⋃ᵢ₌₁ⁿ Aᵢ)=Σμ(Aᵢ) for finite unions",
+      "A3": "For disjoint {Aᵢ}ᵢ₌₁^∞: μ(⋃ᵢ₌₁^∞ Aᵢ)=Σᵢ₌₁^∞ μ(Aᵢ)",
+      "A4": "Union measure always < sum"
+    },
+    "key": "For disjoint {Aᵢ}ᵢ₌₁^∞: μ(⋃ᵢ₌₁^∞ Aᵢ)=Σᵢ₌₁^∞ μ(Aᵢ)",
+    "justification": "σ-additivity: fundamental measure property",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Measure Theory",
+    "question": "A measurable function f is:",
+    "answers": {
+      "A1": "Any continuous function",
+      "A2": "f such that f⁻¹(B)∈F for Borel B",
+      "A3": "Maps measure-zero to measure-zero",
+      "A4": "Has continuous extension"
+    },
+    "key": "f such that f⁻¹(B)∈F for Borel B",
+    "justification": "Measurable function: preimage of measurable is measurable",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Abstract Algebra",
+    "question": "A group (G,∘) requires:",
+    "answers": {
+      "A1": "Closure and associativity",
+      "A2": "Closure, associativity, identity, inverses",
+      "A3": "Commutativity for all",
+      "A4": "Finitude"
+    },
+    "key": "Closure, associativity, identity, inverses",
+    "justification": "Group axioms: four essential properties",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Abstract Algebra",
+    "question": "The order of element g in group G is:",
+    "answers": {
+      "A1": "|G|",
+      "A2": "Smallest positive n with gⁿ=e",
+      "A3": "Number g generates",
+      "A4": "Divides |G|"
+    },
+    "key": "Smallest positive n with gⁿ=e",
+    "justification": "Order: period in group operation",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Abstract Algebra",
+    "question": "Lagrange's Theorem: if H≤G finite, then:",
+    "answers": {
+      "A1": "|H|=|G|",
+      "A2": "|H| divides |G|",
+      "A3": "|G| divides |H|",
+      "A4": "|H| and |G| coprime"
+    },
+    "key": "|H| divides |G|",
+    "justification": "Lagrange: order of subgroup divides group order",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Abstract Algebra",
+    "question": "Normal subgroup N⊲G means:",
+    "answers": {
+      "A1": "N=G",
+      "A2": "|N|=|G|/2",
+      "A3": "gNg⁻¹=N for all g∈G",
+      "A4": "N abelian"
+    },
+    "key": "gNg⁻¹=N for all g∈G",
+    "justification": "Normal: invariant under conjugation",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Abstract Algebra",
+    "question": "First Isomorphism Theorem: if φ:G→H homomorphism, then:",
+    "answers": {
+      "A1": "φ injective",
+      "A2": "G/ker(φ) ≅ im(φ)",
+      "A3": "G≅H",
+      "A4": "ker(φ)=G"
+    },
+    "key": "G/ker(φ) ≅ im(φ)",
+    "justification": "FIT: quotient isomorphic to image",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Topology",
+    "question": "Hausdorff space T₂ requires:",
+    "answers": {
+      "A1": "Any two points separated by disjoint open sets",
+      "A2": "For x≠y: ∃U,V open with x∈U, y∈V, U∩V=∅",
+      "A3": "Separating property",
+      "A4": "All above equivalent"
+    },
+    "key": "All above equivalent",
+    "justification": "Hausdorff: all formulations of separating nearby points",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Topology",
+    "question": "Compact subset A of topological X if:",
+    "answers": {
+      "A1": "Closed and bounded",
+      "A2": "Every open cover has finite subcover",
+      "A3": "Finite",
+      "A4": "Contains all limit points"
+    },
+    "key": "Every open cover has finite subcover",
+    "justification": "Compactness: topological definition",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Topology",
+    "question": "Connected space cannot be:",
+    "answers": {
+      "A1": "Path-connected",
+      "A2": "Written as disjoint union of non-empty open sets",
+      "A3": "Empty",
+      "A4": "Compact"
+    },
+    "key": "Written as disjoint union of non-empty open sets",
+    "justification": "Connected: cannot separate into non-empty open sets",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Differential Equations",
+    "question": "ODE ẏ=f(t,y) has unique solution by Picard-Lindelöf if:",
+    "answers": {
+      "A1": "f continuous",
+      "A2": "f continuous and ∂f/∂y exists and bounded",
+      "A3": "f measurable",
+      "A4": "f has no singularities"
+    },
+    "key": "f continuous and ∂f/∂y exists and bounded",
+    "justification": "PL: Lipschitz continuity ensures uniqueness",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Differential Equations",
+    "question": "Well-posed PDE requires:",
+    "answers": {
+      "A1": "Only existence",
+      "A2": "Existence, uniqueness, continuous dependence",
+      "A3": "Solution smoothness",
+      "A4": "No singularities"
+    },
+    "key": "Existence, uniqueness, continuous dependence",
+    "justification": "Hadamard well-posedness definition",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Approximation Theory",
+    "question": "Weierstrass Approximation Theorem:",
+    "answers": {
+      "A1": "All functions continuous",
+      "A2": "Polynomials dense in C[a,b]",
+      "A3": "Special functions only",
+      "A4": "Irrationals cannot approximate"
+    },
+    "key": "Polynomials dense in C[a,b]",
+    "justification": "WAT: uniform polynomial approximation",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Harmonic Analysis",
+    "question": "Fourier coefficient f̂(n) of periodic f:",
+    "answers": {
+      "A1": "f(n)",
+      "A2": "(1/2π)∫₀²π f(t)e^(-int) dt",
+      "A3": "f(e^(in))",
+      "A4": "Max |f| near n"
+    },
+    "key": "(1/2π)∫₀²π f(t)e^(-int) dt",
+    "justification": "Fourier: inner product with exponential",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Operator Theory",
+    "question": "Self-adjoint operator T satisfies:",
+    "answers": {
+      "A1": "T≠T*",
+      "A2": "T=T* with equal domains",
+      "A3": "⟨Tx,y⟩=⟨x,Ty⟩ for all x,y",
+      "A4": "B and C equivalent"
+    },
+    "key": "B and C equivalent",
+    "justification": "Self-adjoint: symmetric with equal domains",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Advanced Mathematics",
+    "section": "Operator Theory",
+    "question": "Spectrum σ(T) consists of:",
+    "answers": {
+      "A1": "Only eigenvalues",
+      "A2": "λ where (T-λI) not invertible",
+      "A3": "Points where (T-λI) lacks bounded inverse",
+      "A4": "Point, continuous, residual spectrum"
+    },
+    "key": "Point, continuous, residual spectrum",
+    "justification": "Spectrum: three types of singular values",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  }
+]

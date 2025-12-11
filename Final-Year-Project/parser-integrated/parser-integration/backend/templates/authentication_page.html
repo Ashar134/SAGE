@@ -1,0 +1,351 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup/Signin Form</title>
+  <link rel="stylesheet" href="{% static 'css/authentication_page_style.css' %}">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="icon" type="image/png" href="/static/images/sage-logo.png">
+
+
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="form-box login">
+      <form action="#" method="POST">
+        <h1>Login</h1>
+        <div class="input-box">
+          <input type="email" name="email" placeholder="Email" required>
+          <i class='bx bxs-user'></i>
+        </div>
+        <div class="input-box">
+          <input type="password" name="password" placeholder="Password" required>
+          <i class='bx bxs-lock-alt'></i>
+        </div>
+        <!-- <div class="input-box">
+          <select class="user-type" name="role-login" required>
+            <option value="" disabled selected>Select User Type</option>
+            <option value="Client">Client</option>
+            <option value="Builder">Builder</option>
+          </select>
+        </div> -->
+  
+        <button type="submit" class="btn">Login</button>
+      </form>
+    </div>
+
+    <div class="form-box register">
+      <form action="#" method="POST">
+        <h1>Registration</h1>
+        <div class="input-box">
+          <input type="text" name="username" placeholder="Username" required>
+          <i class='bx bxs-user'></i>
+        </div>
+        <div class="input-box">
+          <input type="email" name="email" placeholder="Email" required>
+          <i class='bx bxs-envelope'></i>
+        </div>
+        <div class="input-box">
+          <input type="password" name="password" placeholder="Password" required>
+          <i class='bx bxs-lock-alt'></i>
+        </div>
+        <div class="input-box">
+          <input type="tel" name="phone" placeholder="Phone Number" required>
+          <i class='bx bxs-phone'></i>
+        </div>
+        <!-- <div class="input-box">
+          <select class="user-type" name="role-register" required>
+            <option value="" disabled selected>Select User Type</option>
+            <option value="Client">Client</option>
+            <option value="Builder">Builder</option>
+          </select>
+        </div> -->
+        <button type="submit" class="btn">Register</button>
+      </form>
+    </div>
+
+    <div class="toggle-box">
+      <div class="toggle-panel toggle-left">
+        <h1>Hello, Welcome!</h1>
+        <p>Don't have an account?</p>
+        <button class="btn register-btn">Register</button>
+      </div>
+
+      <div class="toggle-panel toggle-right">
+        <h1>Welcome Back!</h1>
+        <p>Already have an account?</p>
+        <button class="btn login-btn">Login</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const FRONTEND_APP_URL = "http://localhost:5173/app";
+      const container = document.querySelector('.container');
+      const registerBtn = document.querySelector('.register-btn');
+      const loginBtn = document.querySelector('.login-btn');
+      
+      // Toggle between forms
+      registerBtn.addEventListener('click', () => container.classList.add('active'));
+      loginBtn.addEventListener('click', () => container.classList.remove('active'));
+
+      // Error display function
+      function showError(input, message) {
+        const formControl = input.parentElement;
+        const errorDisplay = formControl.querySelector('.error-message') || document.createElement('small');
+        errorDisplay.className = 'error-message';
+        errorDisplay.textContent = message;
+        if (!formControl.querySelector('.error-message')) {
+          formControl.appendChild(errorDisplay);
+        }
+        input.classList.add('error');
+        input.classList.remove('success');
+        const icon = formControl.querySelector('i');
+        if (icon) icon.classList.add('error');
+      }
+
+      // Success state
+      function showSuccess(input) {
+        const formControl = input.parentElement;
+        const errorDisplay = formControl.querySelector('.error-message');
+        if (errorDisplay) {
+          errorDisplay.remove();
+        }
+        input.classList.remove('error');
+        input.classList.add('success');
+        const icon = formControl.querySelector('i');
+        if (icon) icon.classList.add('success');
+      }
+
+      // Clear validation
+      function clearValidation(input) {
+        const formControl = input.parentElement;
+        const errorDisplay = formControl.querySelector('.error-message');
+        if (errorDisplay) {
+          errorDisplay.remove();
+        }
+        input.classList.remove('error');
+        input.classList.remove('success');
+        const icon = formControl.querySelector('i');
+        if (icon) {
+          icon.classList.remove('error');
+          icon.classList.remove('success');
+        }
+      }
+
+      // Real-time validation for registration form
+      const registerForm = document.querySelector('.register form');
+      if (registerForm) {
+        const username = registerForm.querySelector('input[name="username"]');
+        const email = registerForm.querySelector('input[name="email"]');
+        const password = registerForm.querySelector('input[name="password"]');
+        const phone = registerForm.querySelector('input[name="phone"]');
+        const role = registerForm.querySelector('select[name="role-register"]');
+
+        // Username validation on input
+        username.addEventListener('input', function() {
+          if (!this.value.trim()) {
+            showError(this, 'Username is required');
+          } else if (this.value.length < 3) {
+            showError(this, 'Username must be at least 3 characters');
+          } else {
+            showSuccess(this);
+          }
+        });
+
+        // Email validation on input
+        email.addEventListener('input', function() {
+          if (!this.value.trim()) {
+            showError(this, 'Email is required');
+          } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.value)) {
+            showError(this, 'Please enter a valid email');
+          } else {
+            showSuccess(this);
+          }
+        });
+
+        // Password validation on input
+        password.addEventListener('input', function() {
+          if (!this.value.trim()) {
+            showError(this, 'Password is required');
+          } else if (this.value.length < 8) {
+            showError(this, 'Password must be at least 8 characters');
+          } else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])/.test(this.value)) {
+            showError(this, 'Must include uppercase, lowercase, number and special character');
+          } else {
+            showSuccess(this);
+          }
+        });
+
+        // Phone validation on input
+        phone.addEventListener('input', function() {
+          if (!this.value.trim()) {
+            showError(this, 'Phone number is required');
+          } else if (!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(this.value)) {
+            showError(this, 'Please enter a valid phone number');
+          } else {
+            showSuccess(this);
+          }
+        });
+
+        // Role validation on change
+        role.addEventListener('change', function() {
+          if (!this.value) {
+            showError(this, 'Please select your role');
+          } else {
+            showSuccess(this);
+          }
+        });
+
+        // Form submission validation
+        registerForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          let isValid = true;
+          
+          // Clear all validations first
+          [username, email, password, phone, role].filter(Boolean).forEach(clearValidation);
+
+          // Username validation
+          if (!username.value.trim()) {
+            showError(username, 'Username is required');
+            isValid = false;
+          } else if (username.value.length < 3) {
+            showError(username, 'Username must be at least 3 characters');
+            isValid = false;
+          }
+
+          // Email validation
+          if (!email.value.trim()) {
+            showError(email, 'Email is required');
+            isValid = false;
+          } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+            showError(email, 'Please enter a valid email');
+            isValid = false;
+          }
+
+          // Password validation
+          if (!password.value.trim()) {
+            showError(password, 'Password is required');
+            isValid = false;
+          } else if (password.value.length < 8) {
+            showError(password, 'Password must be at least 8 characters');
+            isValid = false;
+          } else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])/.test(password.value)) {
+            showError(password, 'Must include uppercase, lowercase, number and special character');
+            isValid = false;
+          }
+
+          // Phone validation
+          if (!phone.value.trim()) {
+            showError(phone, 'Phone number is required');
+            isValid = false;
+          } else if (!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(phone.value)) {
+            showError(phone, 'Please enter a valid phone number');
+            isValid = false;
+          }
+
+          // Role validation
+          if (!role.value) {
+            showError(role, 'Please select your role');
+            isValid = false;
+          }
+
+          // If valid, submit the form
+          if (isValid) {
+            this.submit();
+          }
+        });
+      }
+
+      // Login Form Validation
+      const loginForm = document.querySelector('.login form');
+      if (loginForm) {
+        const email = loginForm.querySelector('input[name="email"]');
+        const password = loginForm.querySelector('input[name="password"]');
+        const role = loginForm.querySelector('select[name="role-login"]');
+
+        // Email validation on input
+        email.addEventListener('input', function() {
+          if (!this.value.trim()) {
+            showError(this, 'Email is required');
+          } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.value)) {
+            showError(this, 'Please enter a valid email');
+          } else {
+            showSuccess(this);
+          }
+        });
+
+        // Password validation on input
+        password.addEventListener('input', function() {
+          if (!this.value.trim()) {
+            showError(this, 'Password is required');
+          } else if (this.value.length < 8) {
+            showError(this, 'Password must be at least 8 characters');
+          } else {
+            showSuccess(this);
+          }
+        });
+
+        // Role validation on change (if role selector exists)
+        if (role) {
+          role.addEventListener('change', function() {
+            if (!this.value) {
+              showError(this, 'Please select your role');
+            } else {
+              showSuccess(this);
+            }
+          });
+        }
+
+        // Form submission validation
+        loginForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          let isValid = true;
+          
+          // Clear all validations first
+          [email, password, role].filter(Boolean).forEach(clearValidation);
+
+          // Email validation
+          if (!email.value.trim()) {
+            showError(email, 'Email is required');
+            isValid = false;
+          } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+            showError(email, 'Please enter a valid email');
+            isValid = false;
+          }
+
+          // Password validation
+          if (!password.value.trim()) {
+            showError(password, 'Password is required');
+            isValid = false;
+          } else if (password.value.length < 8) {
+            showError(password, 'Password must be at least 8 characters');
+            isValid = false;
+          }
+
+          // Role validation
+          if (role) {
+            if (!role.value) {
+              showError(role, 'Please select your role');
+              isValid = false;
+            }
+          }
+
+          // If valid, submit the form
+          if (isValid) {
+            window.location.href = FRONTEND_APP_URL;
+          }
+        });
+      }
+    });
+  </script>  
+</body>
+</html>

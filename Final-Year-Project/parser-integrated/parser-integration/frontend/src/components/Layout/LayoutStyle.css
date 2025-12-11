@@ -1,0 +1,14 @@
+/* LayoutStyle.css */
+.layout-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  padding-bottom: 80px;
+  padding-top: 70px;
+}
