@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f6f7f9;
+}
+
+/* NAVBAR */
+.navbar {
+  background: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #16a34a;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  color: #555;
+  cursor: pointer;
+}
+
+.nav-links .active {
+  color: #16a34a;
+  border-bottom: 2px solid #16a34a;
+  padding-bottom: 5px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  background: #ddd;
+  border-radius: 50%;
+}
+
+/* HERO */
+.hero {
+  background: white;
+  padding: 40px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #666;
+}
+
+/* SEARCH */
+.search-bar {
+  background: white;
+  padding: 20px 40px;
+  display: flex;
+  gap: 15px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.search-bar button {
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* CONTENT */
+.content {
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+}
+
+/* FILTER */
+.filter {
+  width: 25%;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filter-header span {
+  color: #ef4444;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filter label,
+.filter h4 {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.filter select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.checkbox-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+/* JOBS */
+.jobs {
+  flex: 1;
+}
+
+.results {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* JOB CARD */
+.job-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.job-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.job-header h3 {
+  margin-bottom: 5px;
+}
+
+.job-header p {
+  color: #666;
+  font-size: 14px;
+}
+
+.job-meta {
+  text-align: right;
+  color: #888;
+  font-size: 13px;
+}
+
+.job-card ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.job-card li {
+  margin-bottom: 6px;
+  color: #555;
+}

@@ -1,0 +1,240 @@
+/* ---------- MAIN WRAPPER ---------- */
+.test-wrapper {
+  padding: 30px;
+  background: #f0f4f8; 
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ---------- INSTRUCTIONS SECTION ---------- */
+.instruction-section {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.instruction-section h2 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #1f2937;
+}
+
+.instruction-section p {
+  margin: 5px 0;
+  color: #4b5563; 
+  line-height: 1.6;
+}
+
+/* Timer & Start Button */
+.timer-start-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.timer-display {
+  background: #e0f2fe;
+  color: #0369a1; 
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ---------- QUESTION SECTION ---------- */
+.question-section {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.question-section h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #1f2937;
+}
+
+.question-text {
+  font-size: 18px;
+  margin: 15px 0 20px;
+  color: #374151;
+}
+
+/* Options */
+.options-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-item {
+  background: #f9fafb;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db; 
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.option-item:hover {
+  background: #eff6ff; 
+  border-color: #3b82f6;
+}
+
+/* Radio Button Styling */
+.option-item input[type="radio"] {
+  accent-color: #3b82f6; 
+  cursor: pointer;
+}
+
+/* ---------- NAVIGATION BUTTONS ---------- */
+.nav-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Specific Button Colors */
+.nav-btn {
+  background: #60a5fa; 
+  color: #1e293b;
+}
+
+.nav-btn:hover {
+  background: #3b82f6; 
+}
+
+.start-btn {
+  background: #6366f1; 
+  color: #ffffff;
+}
+
+.start-btn:hover {
+  background: #4f46e5; 
+}
+
+.submit-btn {
+  background: #34d399; 
+  color: #ffffff;
+}
+
+.submit-btn:hover {
+  background: #10b981; 
+}
+
+/* ---------- SUBMISSION BOX ---------- */
+.submit-box {
+  background: #dcfce7; 
+  padding: 30px 35px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.submit-box h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #059669; 
+}
+
+.submit-box p {
+  font-size: 16px;
+  color: #065f46; 
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .instruction-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .timer-start-block {
+    align-items: flex-start;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* ---------- DISABLE TEXT SELECTION ---------- */
+/* .test-wrapper {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+} */
+
+/* ---------- VIOLATION BADGE ---------- */
+.violation-badge {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #fecaca;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ---------- TOAST NOTIFICATION ---------- */
+.toast-notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ef4444;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+    z-index: 1000;
+    animation: slideDown 0.3s ease-out;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translate(-50%, -100%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}

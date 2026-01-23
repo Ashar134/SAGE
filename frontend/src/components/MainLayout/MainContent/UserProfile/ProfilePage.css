@@ -1,0 +1,1181 @@
+.profile-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #fafafa;
+    padding-bottom: 100px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 0;
+    padding: 40px 5%;
+    padding-bottom: 60px;
+    background: linear-gradient(135deg, #F0F2F0 0%, #000C40 100%);
+    min-height: 170px;
+}
+
+.profile-header-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+.profile-header-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.profile-header-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 4px 0;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.profile-header-title {
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 6px 0;
+    font-weight: 500;
+}
+
+.profile-header-location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+.profile-header-location svg {
+    stroke: rgba(255, 255, 255, 0.8);
+    flex-shrink: 0;
+}
+
+/* Tabs */
+.profile-tabs {
+    display: flex;
+    gap: 8px;
+    padding: 0 5%;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.profile-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 20px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #666;
+    transition: all 0.2s;
+}
+
+.profile-tab:hover {
+    color: #009bb0;
+    background: rgba(0, 155, 176, 0.05);
+}
+
+.profile-tab.active {
+    color: #009bb0;
+    border-bottom-color: #009bb0;
+}
+
+.profile-tab svg {
+    stroke: currentColor;
+}
+
+/* Content */
+.profile-content {
+    max-width: 100%;
+    padding: 32px 5%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ============================================================================
+   Profile Summary Card - Overview Tab
+   ============================================================================ */
+
+/* Main Profile Card */
+.overview-main-card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    overflow: hidden;
+}
+
+.overview-body {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.overview-section {
+    padding-bottom: 28px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.overview-section:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.overview-section-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #666;
+    margin: 0 0 14px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.overview-bio {
+    font-size: 0.9375rem;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.overview-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.overview-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: #fafafa;
+    border-radius: 8px;
+    border: 1px solid #f0f0f0;
+    font-size: 0.875rem;
+    color: #1a1a1a;
+}
+
+.overview-contact-item svg {
+    stroke: #009bb0;
+    flex-shrink: 0;
+}
+
+.overview-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+}
+
+.overview-skill-tag {
+    padding: 8px 14px;
+    background: rgba(0, 155, 176, 0.08);
+    border-radius: 6px;
+    border: 1px solid rgba(0, 155, 176, 0.2);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #009bb0;
+    text-align: center;
+}
+
+/* Experience & Education Cards Grid */
+.overview-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.overview-info-card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    overflow: hidden;
+}
+
+.info-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 24px;
+    background: #fafafa;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.info-card-header svg {
+    stroke: #009bb0;
+}
+
+.info-card-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.info-card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card-item {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.info-card-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.item-title {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 6px 0;
+}
+
+.item-subtitle {
+    font-size: 0.875rem;
+    color: #666;
+    margin: 0 0 4px 0;
+}
+
+.item-date {
+    font-size: 0.8125rem;
+    color: #999;
+    margin: 0;
+    font-family: 'Courier New', monospace;
+}
+
+/* ============================================================================
+   Horizontal ID Badge Card
+   ============================================================================ */
+
+.id-badge-card {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    border: 3px solid #1a1a1a;
+}
+
+/* Badge Header */
+.id-badge-header {
+    padding: 16px 24px;
+    background: #ffffff;
+    border-bottom: 2px solid #e8e8e8;
+}
+
+.badge-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.badge-brand-name {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    letter-spacing: 0.08em;
+    margin: 0;
+}
+
+/* Badge Body - Horizontal Layout */
+.id-badge-body {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+/* Left Side - Avatar Section */
+.badge-avatar-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.badge-avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #009bb0 0%, #007a8a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 16px rgba(0, 155, 176, 0.2);
+    border: 4px solid #e8e8e8;
+}
+
+/* Right Side - Info Section */
+.badge-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.badge-info-line {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #f5f5f5;
+}
+
+.badge-info-line:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.badge-info-line.name-line .info-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.info-label {
+    font-size: 0.75rem;
+    color: #999;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.info-value {
+    font-size: 1.125rem;
+    color: #1a1a1a;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Info Section */
+.info-section {
+    background: #fff;
+    padding: 32px;
+    border-radius: 8px;
+    /* Matched to commonly used radius */
+    border: 1px solid #f0f0f0;
+    /* Softer border */
+    transition: all 0.2s;
+}
+
+.info-section:hover {
+    border-color: #e5e5e5;
+    background: #ffffff;
+    /* No background change, just keep it clean */
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    /* Softer divider */
+}
+
+.section-header h3 {
+    font-size: 1.125rem;
+    /* Slightly smaller, more refined */
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.edit-section-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: transparent;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.edit-section-btn:hover {
+    background: #f9f9f9;
+    color: #333;
+    border-color: #d4d4d4;
+}
+
+.edit-section-btn.active {
+    background: #009bb0;
+    border-color: #009bb0;
+    color: #fff;
+}
+
+.edit-section-btn.active:hover {
+    background: #008a9c;
+    border-color: #008a9c;
+}
+
+.edit-section-btn svg {
+    stroke: currentColor;
+    width: 14px;
+    height: 14px;
+}
+
+/* Info Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 32px;
+    /* More horizontal spacing */
+}
+
+.info-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.info-field.full-width {
+    grid-column: 1 / -1;
+}
+
+.info-field label {
+    font-size: 0.8125rem;
+    color: #888;
+    /* Softer label color */
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+.field-value {
+    font-size: 0.9375rem;
+    color: #1a1a1a;
+    font-weight: 500;
+    padding: 4px 0;
+    min-height: 24px;
+    /* Maintain height when empty/editing transition */
+}
+
+.edit-input {
+    font-family: inherit;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    padding: 8px 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.edit-input:focus {
+    border-color: #009bb0;
+    box-shadow: 0 0 0 3px rgba(0, 155, 176, 0.1);
+}
+
+.edit-input.textarea {
+    resize: vertical;
+    min-height: 80px;
+    line-height: 1.5;
+}
+
+/* Timeline List */
+.timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    padding-left: 0;
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.timeline-content {
+    flex: 1;
+}
+
+.timeline-content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 4px 0;
+}
+
+.timeline-subtitle {
+    font-size: 0.875rem;
+    color: #444;
+    /* Darker than before, not colored */
+    font-weight: 500;
+    margin: 0 0 2px 0;
+}
+
+.timeline-date {
+    font-size: 0.8125rem;
+    color: #999;
+    font-weight: 400;
+    margin: 0 0 8px 0;
+    font-family: 'Courier New', monospace;
+    /* Monospace for numbers looks decent */
+}
+
+.timeline-description {
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Skills Container */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill-category h5 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #444;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    background: #f9f9f9;
+    border: 1px solid #f0f0f0;
+    border-radius: 6px;
+    /* Smaller radius, less round */
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #555;
+    transition: all 0.2s;
+    cursor: default;
+}
+
+.skill-tag:hover {
+    background: #fff;
+    border-color: #009bb0;
+    /* Subtle accent on border only */
+    color: #009bb0;
+    transform: none;
+    /* No movement */
+    box-shadow: none;
+    /* No shadow */
+}
+
+/* Card Actions */
+.card-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 24px;
+}
+
+.download-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: #009bb0;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.download-btn:hover {
+    background: #007a8a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 155, 176, 0.3);
+}
+
+.download-btn svg {
+    stroke: currentColor;
+}
+
+/* ID Card Container */
+.id-card-container {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+/* Racing Card Wrapper */
+.racing-card-wrapper {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    background: linear-gradient(135deg, #f5f0e8 0%, #ebe4d8 100%);
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Checkered Border Pattern */
+.checkered-border-top,
+.checkered-border-bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background-image:
+        repeating-linear-gradient(90deg,
+            #8B7355 0px,
+            #8B7355 30px,
+            #F5DEB3 30px,
+            #F5DEB3 60px);
+    z-index: 1;
+}
+
+.checkered-border-top {
+    top: 0;
+    border-radius: 24px 24px 0 0;
+}
+
+.checkered-border-bottom {
+    bottom: 0;
+    border-radius: 0 0 24px 24px;
+}
+
+/* Racing Card */
+.racing-card {
+    position: relative;
+    background: linear-gradient(135deg, #faf7f2 0%, #f0ebe3 100%);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 3px solid #d4c4a8;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Racing Header */
+.racing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 40px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f5f0 100%);
+    border-bottom: 2px solid #d4c4a8;
+}
+
+.racing-logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.racing-logo svg {
+    flex-shrink: 0;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.logo-main {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    letter-spacing: 0.15em;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.logo-sub {
+    font-size: 0.75rem;
+    color: #666;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+.credential-title {
+    text-align: right;
+}
+
+.title-main {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #d4764e;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+}
+
+.title-sub {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #d4764e;
+    letter-spacing: 0.15em;
+    font-style: italic;
+}
+
+/* Racing Body */
+.racing-body {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    padding: 40px;
+    background: linear-gradient(135deg, #faf7f2 0%, #f5f0e8 100%);
+}
+
+/* Photo Container */
+.photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo-box {
+    width: 240px;
+    height: 280px;
+    border: 4px solid #8B7355;
+    border-radius: 8px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #e8e0d5 0%, #d4c4a8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.photo-box::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.1) 100%);
+    pointer-events: none;
+}
+
+.user-avatar {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #8B7355;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+/* Credentials Container */
+.credentials-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Credential Row Dual (for side-by-side items) */
+.credential-row-dual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.credential-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.credential-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    font-family: 'Courier New', monospace;
+}
+
+/* Credential Row */
+.credential-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #d4764e;
+}
+
+.credential-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: 0.02em;
+    font-family: 'Georgia', serif;
+}
+
+.credential-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    letter-spacing: 0.02em;
+}
+
+.credential-label {
+    font-size: 0.75rem;
+    color: #d4764e;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.credential-label-dual {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #d4764e;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+/* Signature Section */
+.signature-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 0;
+}
+
+.signature-box {
+    width: 100%;
+    height: 60px;
+    border: 2px solid #d4764e;
+    border-radius: 4px;
+    background: #ffffff;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+}
+
+.signature-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.signature-label {
+    font-size: 0.7rem;
+    color: #666;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* Card Number */
+.card-number {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.fia-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-id {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #666;
+    letter-spacing: 0.1em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    /* Profile Header Responsive */
+    .profile-header {
+        padding: 24px 4%;
+        gap: 16px;
+    }
+
+    .profile-header-avatar {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .profile-header-name {
+        font-size: 1.25rem;
+    }
+
+    .profile-header-title {
+        font-size: 0.875rem;
+    }
+
+    .profile-header-location {
+        font-size: 0.75rem;
+    }
+
+    /* Tabs Responsive */
+    .profile-tabs {
+        padding: 0 4%;
+        overflow-x: auto;
+    }
+
+    .profile-tab {
+        white-space: nowrap;
+        padding: 12px 16px;
+    }
+
+    /* Content Responsive */
+    .profile-content {
+        padding: 24px 4%;
+    }
+
+    /* Overview Tab Responsive Styles */
+    .overview-body {
+        padding: 24px;
+        gap: 24px;
+    }
+
+    .overview-contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .overview-skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .overview-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ID Badge Card Responsive Styles */
+    .id-badge-card {
+        border-radius: 8px;
+        max-width: 100%;
+        border-width: 2px;
+    }
+
+    .id-badge-header {
+        padding: 14px 20px;
+    }
+
+    .badge-brand svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .badge-brand-name {
+        font-size: 1.125rem;
+    }
+
+    .id-badge-body {
+        padding: 32px 24px;
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .badge-avatar {
+        width: 120px;
+        height: 120px;
+        font-size: 2.75rem;
+        border-width: 3px;
+    }
+
+    .badge-info-line.name-line .info-value {
+        font-size: 1.25rem;
+    }
+
+    .info-value {
+        font-size: 1rem;
+    }
+
+    .racing-card-wrapper {
+        max-width: 100%;
+        padding: 12px;
+    }
+
+    .checkered-border-top,
+    .checkered-border-bottom {
+        height: 16px;
+        background-image:
+            repeating-linear-gradient(90deg,
+                #8B7355 0px,
+                #8B7355 20px,
+                #F5DEB3 20px,
+                #F5DEB3 40px);
+    }
+
+    .racing-header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px 24px;
+        align-items: flex-start;
+    }
+
+    .racing-logo {
+        gap: 12px;
+    }
+
+    .racing-logo svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-main {
+        font-size: 1.5rem;
+    }
+
+    .credential-title {
+        text-align: left;
+    }
+
+    .title-main {
+        font-size: 1rem;
+    }
+
+    .title-sub {
+        font-size: 0.8rem;
+    }
+
+    .racing-body {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 24px;
+    }
+
+    .photo-box {
+        width: 200px;
+        height: 240px;
+    }
+
+    .user-avatar {
+        font-size: 3.5rem;
+    }
+
+    .credential-row-dual {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .credential-number {
+        font-size: 2rem;
+    }
+
+    .credential-name {
+        font-size: 1.75rem;
+    }
+
+    .credential-value {
+        font-size: 1.125rem;
+    }
+
+    .profile-tabs {
+        overflow-x: auto;
+    }
+
+    .profile-tab {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .racing-card-wrapper {
+        padding: 8px;
+    }
+
+    .racing-header {
+        padding: 16px;
+    }
+
+    .logo-main {
+        font-size: 1.25rem;
+    }
+
+    .title-main {
+        font-size: 0.875rem;
+    }
+
+    .title-sub {
+        font-size: 0.75rem;
+    }
+
+    .racing-body {
+        padding: 16px;
+        gap: 20px;
+    }
+
+    .photo-box {
+        width: 160px;
+        height: 200px;
+    }
+
+    .user-avatar {
+        font-size: 3rem;
+    }
+
+    .credential-number {
+        font-size: 1.75rem;
+    }
+
+    .credential-name {
+        font-size: 1.5rem;
+    }
+
+    .credential-value {
+        font-size: 1rem;
+    }
+
+    .signature-box {
+        height: 50px;
+    }
+}

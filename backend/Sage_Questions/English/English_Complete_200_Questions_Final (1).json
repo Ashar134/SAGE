@@ -1,0 +1,3043 @@
+[
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "HEIGHT : MOUNTAIN",
+    "answers": {
+      "A1": "Depth : Trench",
+      "A2": "Shade : Leaf",
+      "A3": "Weight : Rock",
+      "A4": "Speed : Car",
+      "A5": "Color : Rainbow"
+    },
+    "key": "Depth : Trench",
+    "justification": "Height measures mountain; depth measures trench",
+    "justified_by": "Perplexity",
+    "frequency": 4
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "OBLIVIOUS : AWARENESS",
+    "answers": {
+      "A1": "Comatose : Consciousness",
+      "A2": "Happy : Joy",
+      "A3": "Fast : Speed",
+      "A4": "Cold : Temperature",
+      "A5": "Bright : Color"
+    },
+    "key": "Comatose : Consciousness",
+    "justification": "Both lack mental states",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "ACT : ACTION",
+    "answers": {
+      "A1": "Image : Imagine",
+      "A2": "Book : Read",
+      "A3": "Tree : Wood",
+      "A4": "Water : Swim",
+      "A5": "Pen : Write"
+    },
+    "key": "Image : Imagine",
+    "justification": "Verb becomes noun; noun becomes verb",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "SURGEON : SCALPEL",
+    "answers": {
+      "A1": "Teacher : Desk",
+      "A2": "Carpenter : Hammer",
+      "A3": "Chef : Plate",
+      "A4": "Driver : Road",
+      "A5": "Painter : Canvas"
+    },
+    "key": "Carpenter : Hammer",
+    "justification": "Professional and their primary tool",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "FAMINE : FOOD",
+    "answers": {
+      "A1": "War : Soldiers",
+      "A2": "Drought : Water",
+      "A3": "Epidemic : Disease",
+      "A4": "Poverty : Money",
+      "A5": "Storm : Wind"
+    },
+    "key": "Drought : Water",
+    "justification": "Extreme scarcity relationship",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "CACOPHONY : SOUND",
+    "answers": {
+      "A1": "Peace : Noise",
+      "A2": "Stench : Smell",
+      "A3": "Symphony : Music",
+      "A4": "Beauty : Ugliness",
+      "A5": "Light : Dark"
+    },
+    "key": "Stench : Smell",
+    "justification": "Unpleasant sensory experience",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "VERBOSE : WORDS",
+    "answers": {
+      "A1": "Silent : Speech",
+      "A2": "Profuse : Details",
+      "A3": "Terse : Brevity",
+      "A4": "Quiet : Noise",
+      "A5": "Simple : Complexity"
+    },
+    "key": "Profuse : Details",
+    "justification": "Excessive characteristic relationship",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "GREGARIOUS : SOLITUDE",
+    "answers": {
+      "A1": "Happy : Sadness",
+      "A2": "Timid : Courage",
+      "A3": "Intelligent : Knowledge",
+      "A4": "Active : Rest",
+      "A5": "Young : Age"
+    },
+    "key": "Timid : Courage",
+    "justification": "Opposite personality traits",
+    "justified_by": "Perplexity",
+    "frequency": 14
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "BIBLIOPHILE : BOOKS",
+    "answers": {
+      "A1": "Chef : Cooking",
+      "A2": "Audiophile : Sound",
+      "A3": "Teacher : Students",
+      "A4": "Artist : Painting",
+      "A5": "Writer : Stories"
+    },
+    "key": "Audiophile : Sound",
+    "justification": "Lover of specific domain",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "EMACIATED : THIN",
+    "answers": {
+      "A1": "Happy : Sad",
+      "A2": "Livid : Angry",
+      "A3": "Beautiful : Ugly",
+      "A4": "Tall : Short",
+      "A5": "Hot : Cold"
+    },
+    "key": "Livid : Angry",
+    "justification": "Extreme form of quality",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "ARBOREAL : TREES",
+    "answers": {
+      "A1": "Industrial : Factories",
+      "A2": "Aquatic : Water",
+      "A3": "Rural : Farms",
+      "A4": "Urban : Cities",
+      "A5": "Desert : Sand"
+    },
+    "key": "Aquatic : Water",
+    "justification": "Adjective describes environment",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "PALLIATE : PAIN",
+    "answers": {
+      "A1": "Solve : Problem",
+      "A2": "Mitigate : Damage",
+      "A3": "Cure : Disease",
+      "A4": "Remove : Obstacle",
+      "A5": "Heal : Wound"
+    },
+    "key": "Mitigate : Damage",
+    "justification": "To reduce severity of something",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "NOMAD : SEDENTARY",
+    "answers": {
+      "A1": "Leader : Follower",
+      "A2": "Recluse : Social",
+      "A3": "Expert : Novice",
+      "A4": "Rich : Poor",
+      "A5": "Young : Old"
+    },
+    "key": "Recluse : Social",
+    "justification": "Opposite lifestyle types",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "INCANDESCENT : LIGHT",
+    "answers": {
+      "A1": "Silent : Noise",
+      "A2": "Resonant : Sound",
+      "A3": "Invisible : Sight",
+      "A4": "Fragrant : Perfume",
+      "A5": "Transparent : Color"
+    },
+    "key": "Resonant : Sound",
+    "justification": "Property that produces sensory effect",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "PANACEA : CURE",
+    "answers": {
+      "A1": "Poison : Health",
+      "A2": "Vaccine : Prevention",
+      "A3": "Elixir : Health",
+      "A4": "Diagnosis : Disease",
+      "A5": "Medicine : Symptom"
+    },
+    "key": "Elixir : Health",
+    "justification": "Universal remedy or solution",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "EPHEMERAL : DURATION",
+    "answers": {
+      "A1": "Infinite : Space",
+      "A2": "Massive : Weight",
+      "A3": "Minuscule : Size",
+      "A4": "Rapid : Speed",
+      "A5": "Ancient : Time"
+    },
+    "key": "Minuscule : Size",
+    "justification": "Adjective describing measurement",
+    "justified_by": "Perplexity",
+    "frequency": 14
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "PEDAGOGUE : TEACHING",
+    "answers": {
+      "A1": "Actor : Movie",
+      "A2": "Demagogue : Manipulation",
+      "A3": "Doctor : Hospital",
+      "A4": "Scholar : Library",
+      "A5": "Musician : Instrument"
+    },
+    "key": "Demagogue : Manipulation",
+    "justification": "Professional engaging in specific activity",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "SYCOPHANT : FLATTERY",
+    "answers": {
+      "A1": "Friend : Loyalty",
+      "A2": "Tyrant : Oppression",
+      "A3": "Mentor : Guidance",
+      "A4": "Critic : Praise",
+      "A5": "Enemy : Love"
+    },
+    "key": "Tyrant : Oppression",
+    "justification": "Person characterized by specific behavior",
+    "justified_by": "Perplexity",
+    "frequency": 14
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "CLANDESTINE : SECRECY",
+    "answers": {
+      "A1": "Open : Concealment",
+      "A2": "Candid : Honesty",
+      "A3": "Public : Privacy",
+      "A4": "Obvious : Clarity",
+      "A5": "Hidden : Revelation"
+    },
+    "key": "Candid : Honesty",
+    "justification": "Quality requiring specific condition",
+    "justified_by": "Perplexity",
+    "frequency": 14
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "LETHARGIC : ENERGY",
+    "answers": {
+      "A1": "Poor : Wealth",
+      "A2": "Apathetic : Concern",
+      "A3": "Tired : Sleep",
+      "A4": "Hungry : Food",
+      "A5": "Sad : Happiness"
+    },
+    "key": "Apathetic : Concern",
+    "justification": "Lacking specific quality",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "PRISTINE : CONTAMINATION",
+    "answers": {
+      "A1": "Old : Time",
+      "A2": "Immaculate : Dirt",
+      "A3": "Modern : Technology",
+      "A4": "Pure : Mixture",
+      "A5": "Perfect : Flaws"
+    },
+    "key": "Immaculate : Dirt",
+    "justification": "Condition free from specific problem",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "ACUMEN : INSIGHT",
+    "answers": {
+      "A1": "Stupidity : Intelligence",
+      "A2": "Folly : Judgment",
+      "A3": "Prudence : Caution",
+      "A4": "Ignorance : Knowledge",
+      "A5": "Madness : Reason"
+    },
+    "key": "Prudence : Caution",
+    "justification": "Quality demonstrating specific trait",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "MENDACIOUS : TRUTH",
+    "answers": {
+      "A1": "Loyal : Betrayal",
+      "A2": "Duplicitous : Sincerity",
+      "A3": "Authentic : Fakeness",
+      "A4": "Reliable : Deception",
+      "A5": "Faithful : Disloyalty"
+    },
+    "key": "Duplicitous : Sincerity",
+    "justification": "Lacking specific quality",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "SOPORIFIC : SLEEP",
+    "answers": {
+      "A1": "Hallucinogenic : Reality",
+      "A2": "Stimulant : Alertness",
+      "A3": "Analgesic : Pain",
+      "A4": "Narcotic : Addiction",
+      "A5": "Sedative : Calm"
+    },
+    "key": "Stimulant : Alertness",
+    "justification": "Substance inducing opposite effect",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "PUERILE : MATURITY",
+    "answers": {
+      "A1": "Rough : Smoothness",
+      "A2": "Senile : Youth",
+      "A3": "Ancient : Newness",
+      "A4": "Strong : Weakness",
+      "A5": "Beautiful : Ugliness"
+    },
+    "key": "Senile : Youth",
+    "justification": "Lacking appropriate life stage quality",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "PARSIMONIOUS : SPENDING",
+    "answers": {
+      "A1": "Lazy : Work",
+      "A2": "Prodigal : Saving",
+      "A3": "Lavish : Restraint",
+      "A4": "Generous : Giving",
+      "A5": "Thrifty : Economy"
+    },
+    "key": "Lavish : Restraint",
+    "justification": "Avoiding specific financial behavior",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "QUIXOTIC : PRACTICALITY",
+    "answers": {
+      "A1": "Logical : Reason",
+      "A2": "Pragmatic : Idealism",
+      "A3": "Realistic : Fantasy",
+      "A4": "Sensible : Nonsense",
+      "A5": "Rational : Logic"
+    },
+    "key": "Pragmatic : Idealism",
+    "justification": "Opposite approach to problem-solving",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "NASCENT : DEVELOPMENT",
+    "answers": {
+      "A1": "Ancient : Decay",
+      "A2": "Mature : Growth",
+      "A3": "Moribund : Decline",
+      "A4": "Thriving : Success",
+      "A5": "Young : Age"
+    },
+    "key": "Moribund : Decline",
+    "justification": "Stage of lifecycle process",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "PERFIDIOUS : LOYALTY",
+    "answers": {
+      "A1": "Steadfast : Commitment",
+      "A2": "Faithful : Devotion",
+      "A3": "Treacherous : Trust",
+      "A4": "Honorable : Integrity",
+      "A5": "Reliable : Dependability"
+    },
+    "key": "Treacherous : Trust",
+    "justification": "Betraying relationship foundation",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "LACONIC : SPEECH",
+    "answers": {
+      "A1": "Chatty : Silence",
+      "A2": "Verbose : Words",
+      "A3": "Succinct : Expression",
+      "A4": "Talkative : Listening",
+      "A5": "Loud : Volume"
+    },
+    "key": "Succinct : Expression",
+    "justification": "Using minimal communication style",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "INTREPID : FEAR",
+    "answers": {
+      "A1": "Dauntless : Courage",
+      "A2": "Courageous : Valor",
+      "A3": "Timorous : Boldness",
+      "A4": "Brave : Bravery",
+      "A5": "Valiant : Heroism"
+    },
+    "key": "Timorous : Boldness",
+    "justification": "Lacking courageous quality",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "IMPECUNIOUS : MONEY",
+    "answers": {
+      "A1": "Opulent : Wealth",
+      "A2": "Affluent : Riches",
+      "A3": "Prosperous : Fortune",
+      "A4": "Indigent : Resources",
+      "A5": "Rich : Assets"
+    },
+    "key": "Indigent : Resources",
+    "justification": "Lacking financial means",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "PERSPICACIOUS : UNDERSTANDING",
+    "answers": {
+      "A1": "Smart : Intelligence",
+      "A2": "Wise : Wisdom",
+      "A3": "Obtuse : Comprehension",
+      "A4": "Sharp : Wit",
+      "A5": "Keen : Awareness"
+    },
+    "key": "Obtuse : Comprehension",
+    "justification": "Lacking mental clarity",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "EBULLIENT : ENTHUSIASM",
+    "answers": {
+      "A1": "Morose : Gloom",
+      "A2": "Animated : Vigor",
+      "A3": "Lively : Energy",
+      "A4": "Exuberant : Energy",
+      "A5": "Vivacious : Liveliness"
+    },
+    "key": "Exuberant : Energy",
+    "justification": "Displaying bubbling emotional quality",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "EPITOME : PERFECTION",
+    "answers": {
+      "A1": "Summary : Length",
+      "A2": "Model : Mediocrity",
+      "A3": "Prototype : Excellence",
+      "A4": "Icon : Ordinariness",
+      "A5": "Paragon : Inferiority"
+    },
+    "key": "Prototype : Excellence",
+    "justification": "Representing ideal standard",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "DILETTANTE : SUPERFICIALITY",
+    "answers": {
+      "A1": "Expert : Mastery",
+      "A2": "Scholar : Depth",
+      "A3": "Dabbler : Commitment",
+      "A4": "Professional : Expertise",
+      "A5": "Specialist : Knowledge"
+    },
+    "key": "Dabbler : Commitment",
+    "justification": "Engaged in surface-level practice",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "PERSPICUOUS : CLARITY",
+    "answers": {
+      "A1": "Complex : Simplicity",
+      "A2": "Obscure : Confusion",
+      "A3": "Vague : Ambiguity",
+      "A4": "Murky : Light",
+      "A5": "Opaque : Transparency"
+    },
+    "key": "Obscure : Confusion",
+    "justification": "Opposite quality producing opposite effect",
+    "justified_by": "Perplexity",
+    "frequency": 14
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "PRUDENCE : CAUTION",
+    "answers": {
+      "A1": "Recklessness : Care",
+      "A2": "Wisdom : Reflection",
+      "A3": "Folly : Judgment",
+      "A4": "Haste : Speed",
+      "A5": "Bravery : Fear"
+    },
+    "key": "Wisdom : Reflection",
+    "justification": "Quality showing thoughtful behavior",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to CAUSTIC:",
+    "answers": {
+      "A1": "Mild",
+      "A2": "Bitter",
+      "A3": "Subtle",
+      "A4": "Confused"
+    },
+    "key": "Bitter",
+    "justification": "Caustic means bitterly sarcastic",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to CURSORY:",
+    "answers": {
+      "A1": "Detailed",
+      "A2": "Superficial",
+      "A3": "Suspicious",
+      "A4": "Lengthy"
+    },
+    "key": "Superficial",
+    "justification": "Cursory means hasty and superficial",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to LUCID:",
+    "answers": {
+      "A1": "Complicated",
+      "A2": "Clear",
+      "A3": "Boring",
+      "A4": "Brief"
+    },
+    "key": "Clear",
+    "justification": "Lucid means clear and transparent",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to UNTENABLE:",
+    "answers": {
+      "A1": "Indefensible",
+      "A2": "Unpleasant",
+      "A3": "Unexpected",
+      "A4": "Unnecessary"
+    },
+    "key": "Indefensible",
+    "justification": "Untenable means impossible to defend",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to PENCHANT:",
+    "answers": {
+      "A1": "Dislike",
+      "A2": "Habit",
+      "A3": "Strong liking",
+      "A4": "Casual interest"
+    },
+    "key": "Strong liking",
+    "justification": "Penchant means inclination or preference",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to COPIOUS:",
+    "answers": {
+      "A1": "Scarce",
+      "A2": "Abundant",
+      "A3": "Limited",
+      "A4": "Moderate"
+    },
+    "key": "Abundant",
+    "justification": "Copious means plentiful in quantity",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to ARDUOUS:",
+    "answers": {
+      "A1": "Simple",
+      "A2": "Difficult",
+      "A3": "Quick",
+      "A4": "Pleasant"
+    },
+    "key": "Difficult",
+    "justification": "Arduous means requiring great effort",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to CANDID:",
+    "answers": {
+      "A1": "Secretive",
+      "A2": "Frank",
+      "A3": "Cautious",
+      "A4": "Reserved"
+    },
+    "key": "Frank",
+    "justification": "Candid means honest and straightforward",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to UBIQUITOUS:",
+    "answers": {
+      "A1": "Rare",
+      "A2": "Omnipresent",
+      "A3": "Unique",
+      "A4": "Occasional"
+    },
+    "key": "Omnipresent",
+    "justification": "Ubiquitous means present everywhere",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to VINDICATE:",
+    "answers": {
+      "A1": "Accuse",
+      "A2": "Justify",
+      "A3": "Condemn",
+      "A4": "Punish"
+    },
+    "key": "Justify",
+    "justification": "Vindicate means to clear of blame",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to PRAGMATIC:",
+    "answers": {
+      "A1": "Idealistic",
+      "A2": "Practical",
+      "A3": "Theoretical",
+      "A4": "Romantic"
+    },
+    "key": "Practical",
+    "justification": "Pragmatic means dealing realistically",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to CLANDESTINE:",
+    "answers": {
+      "A1": "Public",
+      "A2": "Secret",
+      "A3": "Official",
+      "A4": "Legal"
+    },
+    "key": "Secret",
+    "justification": "Clandestine means kept secret",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to TENACIOUS:",
+    "answers": {
+      "A1": "Weak",
+      "A2": "Persistent",
+      "A3": "Flexible",
+      "A4": "Yielding"
+    },
+    "key": "Persistent",
+    "justification": "Tenacious means holding firmly",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to AMELIORATE:",
+    "answers": {
+      "A1": "Worsen",
+      "A2": "Improve",
+      "A3": "Maintain",
+      "A4": "Destroy"
+    },
+    "key": "Improve",
+    "justification": "Ameliorate means to make better",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to RETICENT:",
+    "answers": {
+      "A1": "Talkative",
+      "A2": "Reserved",
+      "A3": "Expressive",
+      "A4": "Outgoing"
+    },
+    "key": "Reserved",
+    "justification": "Reticent means not readily forthcoming",
+    "justified_by": "Perplexity",
+    "frequency": 14
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to INCESSANT:",
+    "answers": {
+      "A1": "Intermittent",
+      "A2": "Continuous",
+      "A3": "Occasional",
+      "A4": "Sporadic"
+    },
+    "key": "Continuous",
+    "justification": "Incessant means continuing without pause",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to ASTUTE:",
+    "answers": {
+      "A1": "Naive",
+      "A2": "Shrewd",
+      "A3": "Ignorant",
+      "A4": "Foolish"
+    },
+    "key": "Shrewd",
+    "justification": "Astute means having sharp judgment",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to EQUIVOCAL:",
+    "answers": {
+      "A1": "Clear",
+      "A2": "Ambiguous",
+      "A3": "Definite",
+      "A4": "Certain"
+    },
+    "key": "Ambiguous",
+    "justification": "Equivocal means open to interpretation",
+    "justified_by": "Perplexity",
+    "frequency": 14
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to EXACERBATE:",
+    "answers": {
+      "A1": "Soothe",
+      "A2": "Worsen",
+      "A3": "Heal",
+      "A4": "Calm"
+    },
+    "key": "Worsen",
+    "justification": "Exacerbate means to make worse",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to FORTUITOUS:",
+    "answers": {
+      "A1": "Planned",
+      "A2": "Accidental",
+      "A3": "Expected",
+      "A4": "Intentional"
+    },
+    "key": "Accidental",
+    "justification": "Fortuitous means occurring by chance",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to INNATE:",
+    "answers": {
+      "A1": "Acquired",
+      "A2": "Inborn",
+      "A3": "Learned",
+      "A4": "External"
+    },
+    "key": "Inborn",
+    "justification": "Innate means present from birth",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to ALLEVIATE:",
+    "answers": {
+      "A1": "Intensify",
+      "A2": "Relieve",
+      "A3": "Increase",
+      "A4": "Aggravate"
+    },
+    "key": "Relieve",
+    "justification": "Alleviate means to make less severe",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to PRUDENT:",
+    "answers": {
+      "A1": "Reckless",
+      "A2": "Cautious",
+      "A3": "Careless",
+      "A4": "Impulsive"
+    },
+    "key": "Cautious",
+    "justification": "Prudent means acting with care",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to BENEVOLENT:",
+    "answers": {
+      "A1": "Malicious",
+      "A2": "Kind-hearted",
+      "A3": "Cruel",
+      "A4": "Selfish"
+    },
+    "key": "Kind-hearted",
+    "justification": "Benevolent means well-meaning",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to OBSOLETE:",
+    "answers": {
+      "A1": "Modern",
+      "A2": "Outdated",
+      "A3": "Current",
+      "A4": "Trendy"
+    },
+    "key": "Outdated",
+    "justification": "Obsolete means no longer used",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to SCRUTINIZE:",
+    "answers": {
+      "A1": "Ignore",
+      "A2": "Examine",
+      "A3": "Overlook",
+      "A4": "Neglect"
+    },
+    "key": "Examine",
+    "justification": "Scrutinize means to examine closely",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to ELUSIVE:",
+    "answers": {
+      "A1": "Obvious",
+      "A2": "Hard to find",
+      "A3": "Apparent",
+      "A4": "Clear"
+    },
+    "key": "Hard to find",
+    "justification": "Elusive means difficult to catch",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to AMIABLE:",
+    "answers": {
+      "A1": "Hostile",
+      "A2": "Friendly",
+      "A3": "Aggressive",
+      "A4": "Cold"
+    },
+    "key": "Friendly",
+    "justification": "Amiable means friendly and pleasant",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to CONVOLUTED:",
+    "answers": {
+      "A1": "Simple",
+      "A2": "Complex",
+      "A3": "Straightforward",
+      "A4": "Clear"
+    },
+    "key": "Complex",
+    "justification": "Convoluted means extremely complex",
+    "justified_by": "Perplexity",
+    "frequency": 17
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to DILIGENT:",
+    "answers": {
+      "A1": "Lazy",
+      "A2": "Hardworking",
+      "A3": "Careless",
+      "A4": "Negligent"
+    },
+    "key": "Hardworking",
+    "justification": "Diligent means showing careful work",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of IMPARTIAL:",
+    "answers": {
+      "A1": "Fair",
+      "A2": "Biased",
+      "A3": "Humane",
+      "A4": "Strict"
+    },
+    "key": "Biased",
+    "justification": "Opposite of fair and unbiased",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of CONCISE:",
+    "answers": {
+      "A1": "Vague",
+      "A2": "Lengthy",
+      "A3": "Polite",
+      "A4": "Harsh"
+    },
+    "key": "Lengthy",
+    "justification": "Opposite of brief and concise",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of EPHEMERAL:",
+    "answers": {
+      "A1": "Temporary",
+      "A2": "Permanent",
+      "A3": "Brief",
+      "A4": "Short"
+    },
+    "key": "Permanent",
+    "justification": "Opposite of short-lived",
+    "justified_by": "Perplexity",
+    "frequency": 14
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of BENEVOLENT:",
+    "answers": {
+      "A1": "Kind",
+      "A2": "Malevolent",
+      "A3": "Generous",
+      "A4": "Charitable"
+    },
+    "key": "Malevolent",
+    "justification": "Opposite of kind and generous",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of AFFLUENT:",
+    "answers": {
+      "A1": "Wealthy",
+      "A2": "Impoverished",
+      "A3": "Rich",
+      "A4": "Prosperous"
+    },
+    "key": "Impoverished",
+    "justification": "Opposite of wealthy",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of TRANQUIL:",
+    "answers": {
+      "A1": "Peaceful",
+      "A2": "Turbulent",
+      "A3": "Calm",
+      "A4": "Serene"
+    },
+    "key": "Turbulent",
+    "justification": "Opposite of calm and peaceful",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of METICULOUS:",
+    "answers": {
+      "A1": "Careful",
+      "A2": "Careless",
+      "A3": "Thorough",
+      "A4": "Precise"
+    },
+    "key": "Careless",
+    "justification": "Opposite of careful and precise",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of AUSTERE:",
+    "answers": {
+      "A1": "Strict",
+      "A2": "Luxurious",
+      "A3": "Severe",
+      "A4": "Plain"
+    },
+    "key": "Luxurious",
+    "justification": "Opposite of plain and severe",
+    "justified_by": "Perplexity",
+    "frequency": 14
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of FRAGILE:",
+    "answers": {
+      "A1": "Weak",
+      "A2": "Strong",
+      "A3": "Delicate",
+      "A4": "Tender"
+    },
+    "key": "Strong",
+    "justification": "Opposite of delicate",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of ASCEND:",
+    "answers": {
+      "A1": "Climb",
+      "A2": "Rise",
+      "A3": "Descend",
+      "A4": "Elevate"
+    },
+    "key": "Descend",
+    "justification": "Opposite of climb and rise",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of DENSE:",
+    "answers": {
+      "A1": "Thick",
+      "A2": "Packed",
+      "A3": "Sparse",
+      "A4": "Compact"
+    },
+    "key": "Sparse",
+    "justification": "Opposite of thick and compact",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of AMPLIFY:",
+    "answers": {
+      "A1": "Increase",
+      "A2": "Diminish",
+      "A3": "Expand",
+      "A4": "Enlarge"
+    },
+    "key": "Diminish",
+    "justification": "Opposite of increase and amplify",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of TURBULENT:",
+    "answers": {
+      "A1": "Stormy",
+      "A2": "Chaotic",
+      "A3": "Calm",
+      "A4": "Rough"
+    },
+    "key": "Calm",
+    "justification": "Opposite of stormy and rough",
+    "justified_by": "Perplexity",
+    "frequency": 14
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of PROLIFIC:",
+    "answers": {
+      "A1": "Productive",
+      "A2": "Fertile",
+      "A3": "Unproductive",
+      "A4": "Creative"
+    },
+    "key": "Unproductive",
+    "justification": "Opposite of productive",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of EQUANIMITY:",
+    "answers": {
+      "A1": "Calm",
+      "A2": "Peace",
+      "A3": "Disturbance",
+      "A4": "Tranquility"
+    },
+    "key": "Disturbance",
+    "justification": "Opposite of calmness",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of OBLIGE:",
+    "answers": {
+      "A1": "Help",
+      "A2": "Assist",
+      "A3": "Hinder",
+      "A4": "Support"
+    },
+    "key": "Hinder",
+    "justification": "Opposite of help and assist",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of COHERENT:",
+    "answers": {
+      "A1": "Clear",
+      "A2": "Logical",
+      "A3": "Incoherent",
+      "A4": "Organized"
+    },
+    "key": "Incoherent",
+    "justification": "Opposite of logical and clear",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of EXONERATE:",
+    "answers": {
+      "A1": "Excuse",
+      "A2": "Pardon",
+      "A3": "Incriminate",
+      "A4": "Release"
+    },
+    "key": "Incriminate",
+    "justification": "Opposite of clearing from blame",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of FORTUITOUS:",
+    "answers": {
+      "A1": "Accidental",
+      "A2": "Lucky",
+      "A3": "Planned",
+      "A4": "Fortunate"
+    },
+    "key": "Planned",
+    "justification": "Opposite of accidental",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of ALLEVIATE:",
+    "answers": {
+      "A1": "Relieve",
+      "A2": "Ease",
+      "A3": "Exacerbate",
+      "A4": "Comfort"
+    },
+    "key": "Exacerbate",
+    "justification": "Opposite of relief",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of OSTENTATIOUS:",
+    "answers": {
+      "A1": "Showy",
+      "A2": "Flashy",
+      "A3": "Modest",
+      "A4": "Pretentious"
+    },
+    "key": "Modest",
+    "justification": "Opposite of showy",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of SOLICIT:",
+    "answers": {
+      "A1": "Ask",
+      "A2": "Request",
+      "A3": "Decline",
+      "A4": "Beg"
+    },
+    "key": "Decline",
+    "justification": "Opposite of asking for",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of CONDONE:",
+    "answers": {
+      "A1": "Forgive",
+      "A2": "Overlook",
+      "A3": "Condemn",
+      "A4": "Accept"
+    },
+    "key": "Condemn",
+    "justification": "Opposite of forgiving",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of LANGUID:",
+    "answers": {
+      "A1": "Slow",
+      "A2": "Lazy",
+      "A3": "Vigorous",
+      "A4": "Lethargic"
+    },
+    "key": "Vigorous",
+    "justification": "Opposite of sluggish",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of CREDULOUS:",
+    "answers": {
+      "A1": "Gullible",
+      "A2": "Naive",
+      "A3": "Skeptical",
+      "A4": "Trusting"
+    },
+    "key": "Skeptical",
+    "justification": "Opposite of believing easily",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of AUSPICIOUS:",
+    "answers": {
+      "A1": "Favorable",
+      "A2": "Promising",
+      "A3": "Inauspicious",
+      "A4": "Fortunate"
+    },
+    "key": "Inauspicious",
+    "justification": "Opposite of favorable",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of DIFFIDENT:",
+    "answers": {
+      "A1": "Shy",
+      "A2": "Timid",
+      "A3": "Confident",
+      "A4": "Nervous"
+    },
+    "key": "Confident",
+    "justification": "Opposite of lacking confidence",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of CIRCUMSPECT:",
+    "answers": {
+      "A1": "Careful",
+      "A2": "Cautious",
+      "A3": "Reckless",
+      "A4": "Prudent"
+    },
+    "key": "Reckless",
+    "justification": "Opposite of careful and cautious",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of TIMID:",
+    "answers": {
+      "A1": "Shy",
+      "A2": "Bold",
+      "A3": "Fearful",
+      "A4": "Hesitant"
+    },
+    "key": "Bold",
+    "justification": "Opposite of fearful and shy",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Opposite of VERBOSE:",
+    "answers": {
+      "A1": "Wordy",
+      "A2": "Concise",
+      "A3": "Long-winded",
+      "A4": "Rambling"
+    },
+    "key": "Concise",
+    "justification": "Opposite of using many words",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'If I ___ his number, I would call him.'",
+    "answers": {
+      "A1": "know",
+      "A2": "knew",
+      "A3": "had known",
+      "A4": "will know"
+    },
+    "key": "knew",
+    "justification": "Second conditional requires past tense",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'She insisted ___ paying for the meal.'",
+    "answers": {
+      "A1": "to pay",
+      "A2": "on paying",
+      "A3": "for paying",
+      "A4": "that she pays"
+    },
+    "key": "on paying",
+    "justification": "Insist + on + gerund construction",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'Neither the students nor the teacher ___ happy.'",
+    "answers": {
+      "A1": "were",
+      "A2": "was",
+      "A3": "have been",
+      "A4": "are"
+    },
+    "key": "was",
+    "justification": "Verb agrees with nearer subject",
+    "justified_by": "Perplexity",
+    "frequency": 17
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'By the time we arrived, the movie ___.'",
+    "answers": {
+      "A1": "has started",
+      "A2": "had started",
+      "A3": "started",
+      "A4": "was starting"
+    },
+    "key": "had started",
+    "justification": "Past perfect for prior past action",
+    "justified_by": "Perplexity",
+    "frequency": 14
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'He suggested that she ___ to the doctor.'",
+    "answers": {
+      "A1": "goes",
+      "A2": "will go",
+      "A3": "go",
+      "A4": "should goes"
+    },
+    "key": "go",
+    "justification": "Subjunctive mood after suggest",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'I wish I ___ taller.'",
+    "answers": {
+      "A1": "am",
+      "A2": "was",
+      "A3": "were",
+      "A4": "would be"
+    },
+    "key": "were",
+    "justification": "Subjunctive after wish",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'Not only ___ the exam, but she also topped the class.'",
+    "answers": {
+      "A1": "she passed",
+      "A2": "did she pass",
+      "A3": "she did pass",
+      "A4": "passed she"
+    },
+    "key": "did she pass",
+    "justification": "Inversion after Not only",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'I ___ here since 2010.'",
+    "answers": {
+      "A1": "am working",
+      "A2": "have been working",
+      "A3": "was working",
+      "A4": "worked"
+    },
+    "key": "have been working",
+    "justification": "Present perfect continuous",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'This time tomorrow, we ___ our exam.'",
+    "answers": {
+      "A1": "will take",
+      "A2": "will be taking",
+      "A3": "are taking",
+      "A4": "have taken"
+    },
+    "key": "will be taking",
+    "justification": "Future continuous for action in progress",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'By next year, I ___ here for five years.'",
+    "answers": {
+      "A1": "will work",
+      "A2": "will have been working",
+      "A3": "am working",
+      "A4": "have worked"
+    },
+    "key": "will have been working",
+    "justification": "Future perfect continuous",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'She ___ three books this year.'",
+    "answers": {
+      "A1": "wrote",
+      "A2": "has written",
+      "A3": "had written",
+      "A4": "writes"
+    },
+    "key": "has written",
+    "justification": "Present perfect with time marker",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'While I ___, the phone rang.'",
+    "answers": {
+      "A1": "studied",
+      "A2": "was studying",
+      "A3": "had studied",
+      "A4": "have studied"
+    },
+    "key": "was studying",
+    "justification": "Past continuous for interrupted action",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'Had I known, I ___ him.'",
+    "answers": {
+      "A1": "would help",
+      "A2": "would have helped",
+      "A3": "had helped",
+      "A4": "help"
+    },
+    "key": "would have helped",
+    "justification": "Third conditional structure",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'Scarcely ___ we arrived when it rained.'",
+    "answers": {
+      "A1": "had",
+      "A2": "have",
+      "A3": "did",
+      "A4": "were"
+    },
+    "key": "had",
+    "justification": "Scarcely...when inversion",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'No sooner ___ he left than the phone rang.'",
+    "answers": {
+      "A1": "did",
+      "A2": "had",
+      "A3": "does",
+      "A4": "was"
+    },
+    "key": "had",
+    "justification": "No sooner...than construction",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'Either John or his brothers ___ coming.'",
+    "answers": {
+      "A1": "is",
+      "A2": "are",
+      "A3": "was",
+      "A4": "has"
+    },
+    "key": "are",
+    "justification": "Verb agrees with nearer subject",
+    "justified_by": "Perplexity",
+    "frequency": 14
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'She said she ___ the report by evening.'",
+    "answers": {
+      "A1": "finishes",
+      "A2": "would finish",
+      "A3": "will finish",
+      "A4": "is finishing"
+    },
+    "key": "would finish",
+    "justification": "Reported speech backshift",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'The committee ___ decided to postpone.'",
+    "answers": {
+      "A1": "have",
+      "A2": "has",
+      "A3": "were",
+      "A4": "was"
+    },
+    "key": "have",
+    "justification": "British English plural with collective",
+    "justified_by": "Perplexity",
+    "frequency": 14
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'I would rather you ___ tomorrow.'",
+    "answers": {
+      "A1": "come",
+      "A2": "came",
+      "A3": "will come",
+      "A4": "coming"
+    },
+    "key": "came",
+    "justification": "Would rather + past tense",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'It's time you ___ home.'",
+    "answers": {
+      "A1": "go",
+      "A2": "went",
+      "A3": "will go",
+      "A4": "going"
+    },
+    "key": "went",
+    "justification": "It's time + past tense",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'She is looking forward to ___ you.'",
+    "answers": {
+      "A1": "meet",
+      "A2": "meeting",
+      "A3": "have met",
+      "A4": "be meeting"
+    },
+    "key": "meeting",
+    "justification": "Look forward to + gerund",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'He denied ___ the money.'",
+    "answers": {
+      "A1": "to have stolen",
+      "A2": "having stolen",
+      "A3": "to steal",
+      "A4": "steal"
+    },
+    "key": "having stolen",
+    "justification": "Deny + gerund construction",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'They ___ married for twenty years next June.'",
+    "answers": {
+      "A1": "are",
+      "A2": "will be",
+      "A3": "will have been",
+      "A4": "have been"
+    },
+    "key": "will have been",
+    "justification": "Future perfect for state",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'I ___ never ___ such beauty.'",
+    "answers": {
+      "A1": "have...seen",
+      "A2": "had...seen",
+      "A3": "was...seeing",
+      "A4": "did...see"
+    },
+    "key": "have...seen",
+    "justification": "Present perfect with never",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'Hardly ___ I ___ the door.'",
+    "answers": {
+      "A1": "have...closed",
+      "A2": "had...closed",
+      "A3": "did...close",
+      "A4": "was...closing"
+    },
+    "key": "had...closed",
+    "justification": "Hardly...when inversion",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'The concert ___ by the time we arrived.'",
+    "answers": {
+      "A1": "started",
+      "A2": "had started",
+      "A3": "has started",
+      "A4": "was starting"
+    },
+    "key": "had started",
+    "justification": "Past perfect for prior event",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'She ___ in London for three years now.'",
+    "answers": {
+      "A1": "lived",
+      "A2": "has been living",
+      "A3": "was living",
+      "A4": "had lived"
+    },
+    "key": "has been living",
+    "justification": "Present perfect continuous",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'If I ___ you were coming, I would prepare.'",
+    "answers": {
+      "A1": "knew",
+      "A2": "had known",
+      "A3": "have known",
+      "A4": "would know"
+    },
+    "key": "knew",
+    "justification": "Second conditional",
+    "justified_by": "Perplexity",
+    "frequency": 5
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'She told me she ___ to Paris the year before.'",
+    "answers": {
+      "A1": "went",
+      "A2": "had gone",
+      "A3": "has gone",
+      "A4": "goes"
+    },
+    "key": "had gone",
+    "justification": "Reported speech with backshift",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'The scientists ___ on this since 2015.'",
+    "answers": {
+      "A1": "worked",
+      "A2": "have been working",
+      "A3": "had worked",
+      "A4": "are working"
+    },
+    "key": "have been working",
+    "justification": "Present perfect continuous",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'By the end of the year, I ___ my degree.'",
+    "answers": {
+      "A1": "complete",
+      "A2": "will complete",
+      "A3": "will have completed",
+      "A4": "am completing"
+    },
+    "key": "will have completed",
+    "justification": "Future perfect",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'I ___ him since we were in college.'",
+    "answers": {
+      "A1": "knew",
+      "A2": "have known",
+      "A3": "had known",
+      "A4": "was knowing"
+    },
+    "key": "have known",
+    "justification": "Present perfect for duration",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'No sooner ___ I ___ asleep.'",
+    "answers": {
+      "A1": "have...fallen",
+      "A2": "had...fallen",
+      "A3": "did...fall",
+      "A4": "was...falling"
+    },
+    "key": "had...fallen",
+    "justification": "No sooner...than sequence",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'At this time next week, we ___ on beach.'",
+    "answers": {
+      "A1": "will relax",
+      "A2": "will be relaxing",
+      "A3": "are relaxing",
+      "A4": "relax"
+    },
+    "key": "will be relaxing",
+    "justification": "Future continuous",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'She ___ for the bus when it rained.'",
+    "answers": {
+      "A1": "waited",
+      "A2": "was waiting",
+      "A3": "had waited",
+      "A4": "has been waiting"
+    },
+    "key": "was waiting",
+    "justification": "Past continuous for background",
+    "justified_by": "Perplexity",
+    "frequency": 14
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'I wish I ___ harder when younger.'",
+    "answers": {
+      "A1": "studied",
+      "A2": "had studied",
+      "A3": "have studied",
+      "A4": "would study"
+    },
+    "key": "had studied",
+    "justification": "Past perfect after wish",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'The company ___ 500 employees by quarter end.'",
+    "answers": {
+      "A1": "hired",
+      "A2": "will have hired",
+      "A3": "hires",
+      "A4": "is hiring"
+    },
+    "key": "will have hired",
+    "justification": "Future perfect",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'He ___ the violin for ten years before concert.'",
+    "answers": {
+      "A1": "played",
+      "A2": "had been playing",
+      "A3": "was playing",
+      "A4": "has played"
+    },
+    "key": "had been playing",
+    "justification": "Past perfect continuous",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'It's the first time I ___ such view.'",
+    "answers": {
+      "A1": "saw",
+      "A2": "have seen",
+      "A3": "had seen",
+      "A4": "see"
+    },
+    "key": "have seen",
+    "justification": "Present perfect with first time",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "The CEO's ___ explanation confused rather than clarified the situation.",
+    "answers": {
+      "A1": "clear",
+      "A2": "convoluted",
+      "A3": "simple",
+      "A4": "direct"
+    },
+    "key": "convoluted",
+    "justification": "Complex explanation causes confusion",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "His ___ remarks at the meeting offended several colleagues present.",
+    "answers": {
+      "A1": "tactful",
+      "A2": "caustic",
+      "A3": "diplomatic",
+      "A4": "considerate"
+    },
+    "key": "caustic",
+    "justification": "Offending remarks are caustic",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "The scientist's ___ approach to research ensured completely accurate results.",
+    "answers": {
+      "A1": "haphazard",
+      "A2": "methodical",
+      "A3": "arbitrary",
+      "A4": "cursory"
+    },
+    "key": "methodical",
+    "justification": "Accurate results require systematic work",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Her ___ attitude towards charity work revealed deep personal compassion.",
+    "answers": {
+      "A1": "disdainful",
+      "A2": "empathetic",
+      "A3": "cynical",
+      "A4": "selfish"
+    },
+    "key": "empathetic",
+    "justification": "Compassion reflects empathy",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "The peace treaty was designed to ___ rising tensions between warring nations.",
+    "answers": {
+      "A1": "exacerbate",
+      "A2": "alleviate",
+      "A3": "intensify",
+      "A4": "aggravate"
+    },
+    "key": "alleviate",
+    "justification": "Treaties reduce tensions",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "The student provided a ___ account of the complex experiment conducted.",
+    "answers": {
+      "A1": "vague",
+      "A2": "comprehensive",
+      "A3": "fragmentary",
+      "A4": "sketchy"
+    },
+    "key": "comprehensive",
+    "justification": "Complete account is comprehensive",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Her ___ performance at the concert impressed the entire critical audience.",
+    "answers": {
+      "A1": "mediocre",
+      "A2": "stellar",
+      "A3": "average",
+      "A4": "ordinary"
+    },
+    "key": "stellar",
+    "justification": "Impressive performance is stellar",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "The professor's remarks were known for their ___ wit and brilliant insight.",
+    "answers": {
+      "A1": "dull",
+      "A2": "trenchant",
+      "A3": "bland",
+      "A4": "insipid"
+    },
+    "key": "trenchant",
+    "justification": "Sharp remarks are trenchant",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "The Olympic athlete's ___ training regimen prepared him for international competition.",
+    "answers": {
+      "A1": "lax",
+      "A2": "rigorous",
+      "A3": "casual",
+      "A4": "relaxed"
+    },
+    "key": "rigorous",
+    "justification": "Olympic training is rigorous",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "The technical report was ___ with computational errors making analysis unreliable.",
+    "answers": {
+      "A1": "devoid",
+      "A2": "replete",
+      "A3": "lacking",
+      "A4": "free"
+    },
+    "key": "replete",
+    "justification": "Full of errors means replete",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "The company's ___ expansion into foreign markets exceeded analyst expectations significantly.",
+    "answers": {
+      "A1": "sluggish",
+      "A2": "exponential",
+      "A3": "stagnant",
+      "A4": "negligible"
+    },
+    "key": "exponential",
+    "justification": "Exceeding expectations is exponential",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "The medieval scholar's ___ knowledge of ancient philosophy impressed all university faculty.",
+    "answers": {
+      "A1": "superficial",
+      "A2": "erudite",
+      "A3": "shallow",
+      "A4": "cursory"
+    },
+    "key": "erudite",
+    "justification": "Deep knowledge is erudite",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "The new employee's ___ attitude and dedication impressed the management team.",
+    "answers": {
+      "A1": "apathetic",
+      "A2": "zealous",
+      "A3": "indifferent",
+      "A4": "lethargic"
+    },
+    "key": "zealous",
+    "justification": "Impressive attitude is zealous",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "The accomplished orator's ___ speech moved the audience to spontaneous tears.",
+    "answers": {
+      "A1": "prosaic",
+      "A2": "eloquent",
+      "A3": "pedestrian",
+      "A4": "mundane"
+    },
+    "key": "eloquent",
+    "justification": "Moving speech is eloquent",
+    "justified_by": "Perplexity",
+    "frequency": 18
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "The investigation revealed a ___ network of corruption spanning multiple agencies.",
+    "answers": {
+      "A1": "simple",
+      "A2": "labyrinthine",
+      "A3": "straightforward",
+      "A4": "transparent"
+    },
+    "key": "labyrinthine",
+    "justification": "Complex network is labyrinthine",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "The philosopher's ___ arguments were extremely difficult for students to comprehend.",
+    "answers": {
+      "A1": "lucid",
+      "A2": "abstruse",
+      "A3": "clear",
+      "A4": "simple"
+    },
+    "key": "abstruse",
+    "justification": "Difficult arguments are abstruse",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "The leader's ___ decision to resign from politics shocked the board members.",
+    "answers": {
+      "A1": "rash",
+      "A2": "judicious",
+      "A3": "impetuous",
+      "A4": "hasty"
+    },
+    "key": "judicious",
+    "justification": "Wise decisions are judicious",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "The artist's unconventional work was considered ___ because it fundamentally challenged traditional norms.",
+    "answers": {
+      "A1": "conventional",
+      "A2": "avant-garde",
+      "A3": "orthodox",
+      "A4": "traditional"
+    },
+    "key": "avant-garde",
+    "justification": "Challenging norms is avant-garde",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "The lawyer's ___ line of questioning confused and frustrated the witness.",
+    "answers": {
+      "A1": "straightforward",
+      "A2": "circuitous",
+      "A3": "direct",
+      "A4": "simple"
+    },
+    "key": "circuitous",
+    "justification": "Confusing questioning is circuitous",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "The military general's ___ strategy led decisively to an overwhelming victory.",
+    "answers": {
+      "A1": "flawed",
+      "A2": "astute",
+      "A3": "misguided",
+      "A4": "reckless"
+    },
+    "key": "astute",
+    "justification": "Winning strategy is astute",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "The speaker maintained a ___ delivery throughout keeping audience engaged constantly.",
+    "answers": {
+      "A1": "monotonous",
+      "A2": "dynamic",
+      "A3": "dull",
+      "A4": "lifeless"
+    },
+    "key": "dynamic",
+    "justification": "Engaging delivery is dynamic",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "The evidence presented was ___ and could reasonably support either side's position.",
+    "answers": {
+      "A1": "conclusive",
+      "A2": "equivocal",
+      "A3": "definitive",
+      "A4": "decisive"
+    },
+    "key": "equivocal",
+    "justification": "Ambiguous evidence is equivocal",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "The museum's ___ collection attracted scholarly visitors and tourists worldwide.",
+    "answers": {
+      "A1": "meager",
+      "A2": "eclectic",
+      "A3": "limited",
+      "A4": "sparse"
+    },
+    "key": "eclectic",
+    "justification": "Diverse collection is eclectic",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "The philosophy professor's lectures were renowned for their ___ wit and penetrating observations.",
+    "answers": {
+      "A1": "dull",
+      "A2": "trenchant",
+      "A3": "bland",
+      "A4": "insipid"
+    },
+    "key": "trenchant",
+    "justification": "Sharp wit is trenchant",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "The athlete's ___ training regimen consistently prepared him for Olympic competition.",
+    "answers": {
+      "A1": "lax",
+      "A2": "rigorous",
+      "A3": "casual",
+      "A4": "relaxed"
+    },
+    "key": "rigorous",
+    "justification": "Olympic training requires rigor",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "The proposal was ___ with logical inconsistencies making it completely unworkable.",
+    "answers": {
+      "A1": "devoid",
+      "A2": "replete",
+      "A3": "lacking",
+      "A4": "free"
+    },
+    "key": "replete",
+    "justification": "Full of inconsistencies means replete",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "The business's ___ expansion strategy exceeded even the most optimistic forecasts.",
+    "answers": {
+      "A1": "sluggish",
+      "A2": "exponential",
+      "A3": "stagnant",
+      "A4": "negligible"
+    },
+    "key": "exponential",
+    "justification": "Rapid growth is exponential",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "The linguistics professor's ___ understanding of ancient languages impressed colleagues internationally.",
+    "answers": {
+      "A1": "superficial",
+      "A2": "erudite",
+      "A3": "shallow",
+      "A4": "cursory"
+    },
+    "key": "erudite",
+    "justification": "Extensive knowledge is erudite",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "The candidate's ___ approach to problem-solving impressed all selection committee members.",
+    "answers": {
+      "A1": "apathetic",
+      "A2": "zealous",
+      "A3": "indifferent",
+      "A4": "lethargic"
+    },
+    "key": "zealous",
+    "justification": "Passionate approach is zealous",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "The poet's ___ verses deeply moved listeners causing spontaneous emotional reactions.",
+    "answers": {
+      "A1": "prosaic",
+      "A2": "eloquent",
+      "A3": "pedestrian",
+      "A4": "mundane"
+    },
+    "key": "eloquent",
+    "justification": "Moving poetry is eloquent",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "The film critic's ___ review condemned the director's entire body of work.",
+    "answers": {
+      "A1": "mild",
+      "A2": "scathing",
+      "A3": "favorable",
+      "A4": "neutral"
+    },
+    "key": "scathing",
+    "justification": "Harsh criticism is scathing",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "The diplomat's ___ language managed to offend both parties in the negotiation.",
+    "answers": {
+      "A1": "diplomatic",
+      "A2": "tactful",
+      "A3": "incendiary",
+      "A4": "measured"
+    },
+    "key": "incendiary",
+    "justification": "Offensive language is incendiary",
+    "justified_by": "Perplexity",
+    "frequency": 14
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "The prisoner's story proved to be ___ when investigators reviewed the evidence.",
+    "answers": {
+      "A1": "convincing",
+      "A2": "spurious",
+      "A3": "credible",
+      "A4": "reliable"
+    },
+    "key": "spurious",
+    "justification": "False story is spurious",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "The political movement's ___ growth surprised even the most optimistic supporters.",
+    "answers": {
+      "A1": "gradual",
+      "A2": "meteoric",
+      "A3": "steady",
+      "A4": "modest"
+    },
+    "key": "meteoric",
+    "justification": "Rapid rise is meteoric",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "His ___ manner made it clear he had little respect for authority figures.",
+    "answers": {
+      "A1": "respectful",
+      "A2": "contrite",
+      "A3": "insolent",
+      "A4": "humble"
+    },
+    "key": "insolent",
+    "justification": "Disrespectful manner is insolent",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "The artist's work was noted for its ___ symbolism that critics struggled to interpret.",
+    "answers": {
+      "A1": "obvious",
+      "A2": "abstract",
+      "A3": "cryptic",
+      "A4": "straightforward"
+    },
+    "key": "cryptic",
+    "justification": "Mysterious symbolism is cryptic",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "The treaty's provisions were intentionally ___ to allow for future interpretations.",
+    "answers": {
+      "A1": "specific",
+      "A2": "vague",
+      "A3": "explicit",
+      "A4": "detailed"
+    },
+    "key": "vague",
+    "justification": "Unclear language is vague",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "The author's ___ style made reading his dense novel exhausting and challenging.",
+    "answers": {
+      "A1": "lucid",
+      "A2": "pellucid",
+      "A3": "baroque",
+      "A4": "elegant"
+    },
+    "key": "baroque",
+    "justification": "Ornate style is baroque",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "The company's ___ response to customer complaints damaged their public reputation.",
+    "answers": {
+      "A1": "compassionate",
+      "A2": "concerned",
+      "A3": "callous",
+      "A4": "sincere"
+    },
+    "key": "callous",
+    "justification": "Uncaring response is callous",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "The scientist's groundbreaking research ___ earlier theories about atomic structure.",
+    "answers": {
+      "A1": "confirmed",
+      "A2": "corroborated",
+      "A3": "refuted",
+      "A4": "supported"
+    },
+    "key": "refuted",
+    "justification": "Disproving theories means refuting",
+    "justified_by": "Perplexity",
+    "frequency": 15
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'Hardly ___ the guests arrived ___ the party began.'",
+    "answers": {
+      "A1": "had...when",
+      "A2": "have...then",
+      "A3": "did...than",
+      "A4": "would...if"
+    },
+    "key": "had...when",
+    "justification": "Hardly...when construction",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'The data ___ that significant progress ___ made.'",
+    "answers": {
+      "A1": "show...has",
+      "A2": "shows...have",
+      "A3": "shows...has",
+      "A4": "show...have"
+    },
+    "key": "shows...has",
+    "justification": "Data singular with has been",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'Economics ___ a subject that ___ much study required.'",
+    "answers": {
+      "A1": "is...requires",
+      "A2": "are...require",
+      "A3": "is...require",
+      "A4": "are...requires"
+    },
+    "key": "is...requires",
+    "justification": "Economics singular, requires singular verb",
+    "justified_by": "Perplexity",
+    "frequency": 15
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'The jury ___ reached ___ verdict after deliberation.'",
+    "answers": {
+      "A1": "have...their",
+      "A2": "has...its",
+      "A3": "have...its",
+      "A4": "has...their"
+    },
+    "key": "have...their",
+    "justification": "British English jury plural, their",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'Physics ___ a fascinating subject, but many students ___ it difficult.'",
+    "answers": {
+      "A1": "is...find",
+      "A2": "are...finds",
+      "A3": "is...finds",
+      "A4": "are...find"
+    },
+    "key": "is...find",
+    "justification": "Physics singular; students plural",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'The audience ___ their seats ___ the performance started.'",
+    "answers": {
+      "A1": "took...than",
+      "A2": "takes...before",
+      "A3": "took...before",
+      "A4": "take...than"
+    },
+    "key": "took...before",
+    "justification": "Audience took seats before began",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'If the weather ___ better tomorrow, we ___ the picnic.'",
+    "answers": {
+      "A1": "will be...will have",
+      "A2": "is...will have",
+      "A3": "will be...have",
+      "A4": "is...have"
+    },
+    "key": "is...have",
+    "justification": "Future with if clause uses present",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'She ___ to the meeting yesterday but ___ on time.'",
+    "answers": {
+      "A1": "goes...didn't arrive",
+      "A2": "went...didn't arrive",
+      "A3": "goes...hasn't arrived",
+      "A4": "went...hasn't arrived"
+    },
+    "key": "went...didn't arrive",
+    "justification": "Past tense throughout",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "Correct: 'By next month, he ___ at this company for exactly ten years.'",
+    "answers": {
+      "A1": "will work",
+      "A2": "will have worked",
+      "A3": "works",
+      "A4": "has worked"
+    },
+    "key": "will have worked",
+    "justification": "Future perfect for duration",
+    "justified_by": "Perplexity",
+    "frequency": 6
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to NONCHALANT:",
+    "answers": {
+      "A1": "Concerned",
+      "A2": "Casual",
+      "A3": "Worried",
+      "A4": "Anxious"
+    },
+    "key": "Casual",
+    "justification": "Nonchalant means unconcerned",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to INSOUCIANT:",
+    "answers": {
+      "A1": "Serious",
+      "A2": "Carefree",
+      "A3": "Formal",
+      "A4": "Rigid"
+    },
+    "key": "Carefree",
+    "justification": "Insouciant means without care",
+    "justified_by": "Perplexity",
+    "frequency": 14
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose opposite of VERBOSE:",
+    "answers": {
+      "A1": "Talkative",
+      "A2": "Chatty",
+      "A3": "Terse",
+      "A4": "Eloquent"
+    },
+    "key": "Terse",
+    "justification": "Opposite of wordy",
+    "justified_by": "Perplexity",
+    "frequency": 7
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose opposite of OBSEQUIOUS:",
+    "answers": {
+      "A1": "Submissive",
+      "A2": "Assertive",
+      "A3": "Humble",
+      "A4": "Deferential"
+    },
+    "key": "Assertive",
+    "justification": "Opposite of servile",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to PLACATE:",
+    "answers": {
+      "A1": "Anger",
+      "A2": "Appease",
+      "A3": "Provoke",
+      "A4": "Annoy"
+    },
+    "key": "Appease",
+    "justification": "Placate means to calm down",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to NASCENT:",
+    "answers": {
+      "A1": "Mature",
+      "A2": "Emerging",
+      "A3": "Established",
+      "A4": "Complete"
+    },
+    "key": "Emerging",
+    "justification": "Nascent means beginning",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose opposite of LACONIC:",
+    "answers": {
+      "A1": "Quiet",
+      "A2": "Silent",
+      "A3": "Loquacious",
+      "A4": "Reserved"
+    },
+    "key": "Loquacious",
+    "justification": "Opposite of concise",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to SOMNOLENT:",
+    "answers": {
+      "A1": "Energetic",
+      "A2": "Drowsy",
+      "A3": "Active",
+      "A4": "Alert"
+    },
+    "key": "Drowsy",
+    "justification": "Somnolent means sleepy",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "CATALYST : CHANGE",
+    "answers": {
+      "A1": "Catalyst : Reaction",
+      "A2": "Storm : Weather",
+      "A3": "Impediment : Progress",
+      "A4": "Bystander : Event",
+      "A5": "Teacher : Learning"
+    },
+    "key": "Impediment : Progress",
+    "justification": "Catalyst causes change; impediment blocks progress",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "OBFUSCATE : CLARITY",
+    "answers": {
+      "A1": "Illuminate : Light",
+      "A2": "Reveal : Truth",
+      "A3": "Simplify : Complexity",
+      "A4": "Clarify : Understanding",
+      "A5": "Confuse : Confusion"
+    },
+    "key": "Confuse : Confusion",
+    "justification": "Obfuscate removes clarity; confuse removes understanding",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "category": "English",
+    "question": "PEDANTIC : KNOWLEDGE",
+    "answers": {
+      "A1": "Expert : Authority",
+      "A2": "Novice : Experience",
+      "A3": "Scholar : Wisdom",
+      "A4": "Pedant : Understanding",
+      "A5": "Sage : Insight"
+    },
+    "key": "Pedant : Understanding",
+    "justification": "Pedantic obsesses over knowledge details",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to LUCRATIVE:",
+    "answers": {
+      "A1": "Honest",
+      "A2": "Profitable",
+      "A3": "Legal",
+      "A4": "Simple"
+    },
+    "key": "Profitable",
+    "justification": "Lucrative means producing profit",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose opposite of DELUGE:",
+    "answers": {
+      "A1": "Flood",
+      "A2": "Overflow",
+      "A3": "Drought",
+      "A4": "Torrent"
+    },
+    "key": "Drought",
+    "justification": "Opposite of overwhelming flood",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "medium",
+    "category": "English",
+    "question": "Choose similar meaning to EPHEMERAL:",
+    "answers": {
+      "A1": "Permanent",
+      "A2": "Transient",
+      "A3": "Eternal",
+      "A4": "Forever"
+    },
+    "key": "Transient",
+    "justification": "Ephemeral means short-lived or transient",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  }
+]

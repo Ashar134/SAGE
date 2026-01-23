@@ -1,0 +1,1234 @@
+[
+  {
+    "type": "easy",
+    "question": "What does OOP stand for?",
+    "answers": {
+      "A1": "Object-Oriented Programming",
+      "A2": "Objective Operation Procedure",
+      "A3": "Oriented Object Programming",
+      "A4": "Operational Object Programming"
+    },
+    "key": "Object-Oriented Programming",
+    "justification": "OOP is a programming paradigm based on objects that contain data (fields) and code (methods). It's one of the most popular programming approaches.",
+    "justified_by": "Perplexity",
+    "frequency": 17
+  },
+  {
+    "type": "easy",
+    "question": "Who invented Object-Oriented Programming?",
+    "answers": {
+      "A1": "Alan Kay",
+      "A2": "Dennis Ritchie",
+      "A3": "Bjarne Stroustrup",
+      "A4": "Guido van Rossum"
+    },
+    "key": "Alan Kay",
+    "justification": "Alan Kay is credited with inventing OOP in the 1970s. His work on SmallTalk was groundbreaking in implementing OOP principles.",
+    "justified_by": "Perplexity",
+    "frequency": 22
+  },
+  {
+    "type": "easy",
+    "question": "Which was the first purely object-oriented programming language?",
+    "answers": {
+      "A1": "Java",
+      "A2": "C++",
+      "A3": "SmallTalk",
+      "A4": "Python"
+    },
+    "key": "SmallTalk",
+    "justification": "SmallTalk was the first pure OOP language where everything is an object, including functions and primitives.",
+    "justified_by": "Perplexity",
+    "frequency": 16
+  },
+  {
+    "type": "easy",
+    "question": "What is an object in OOP?",
+    "answers": {
+      "A1": "A blueprint for creating instances",
+      "A2": "An instance of a class with its own state and behavior",
+      "A3": "A type of function",
+      "A4": "A programming language keyword"
+    },
+    "key": "An instance of a class with its own state and behavior",
+    "justification": "An object is a concrete entity created from a class template containing specific data values and methods.",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "easy",
+    "question": "What is a class in OOP?",
+    "answers": {
+      "A1": "A type of data structure",
+      "A2": "A blueprint or template for creating objects",
+      "A3": "An instance of an object",
+      "A4": "A function in a program"
+    },
+    "key": "A blueprint or template for creating objects",
+    "justification": "A class defines the structure and behavior of objects. It specifies what data members and methods objects of that class will have.",
+    "justified_by": "Perplexity",
+    "frequency": 15
+  },
+  {
+    "type": "easy",
+    "question": "What is encapsulation?",
+    "answers": {
+      "A1": "Inheriting properties from a parent class",
+      "A2": "Combining data and functions into a single unit and hiding implementation details",
+      "A3": "Creating multiple objects from one class",
+      "A4": "Making variables public"
+    },
+    "key": "Combining data and functions into a single unit and hiding implementation details",
+    "justification": "Encapsulation bundles data and methods together while hiding internal details from the outside world, protecting data integrity.",
+    "justified_by": "Perplexity",
+    "frequency": 20
+  },
+  {
+    "type": "easy",
+    "question": "What is abstraction in OOP?",
+    "answers": {
+      "A1": "Creating multiple levels of classes",
+      "A2": "Showing only essential features and hiding complex implementation details",
+      "A3": "Making all variables private",
+      "A4": "Creating abstract methods"
+    },
+    "key": "Showing only essential features and hiding complex implementation details",
+    "justification": "Abstraction simplifies complex reality by modeling classes appropriate to the problem, exposing only necessary details.",
+    "justified_by": "Perplexity",
+    "frequency": 17
+  },
+  {
+    "type": "easy",
+    "question": "What is inheritance in OOP?",
+    "answers": {
+      "A1": "Creating a copy of a class",
+      "A2": "A mechanism where a derived class inherits properties from a base class",
+      "A3": "Making a class static",
+      "A4": "Combining multiple classes"
+    },
+    "key": "A mechanism where a derived class inherits properties from a base class",
+    "justification": "Inheritance allows new classes to be based on existing classes, promoting code reuse and establishing hierarchical relationships.",
+    "justified_by": "Perplexity",
+    "frequency": 20
+  },
+  {
+    "type": "easy",
+    "question": "What is polymorphism in OOP?",
+    "answers": {
+      "A1": "The ability to create multiple objects",
+      "A2": "The ability of an object or method to take on multiple forms",
+      "A3": "The process of creating a new class",
+      "A4": "Making a function inline"
+    },
+    "key": "The ability of an object or method to take on multiple forms",
+    "justification": "Polymorphism allows methods with the same name to behave differently based on context or object type.",
+    "justified_by": "Perplexity",
+    "frequency": 18
+  },
+  {
+    "type": "easy",
+    "question": "What are the four main pillars of OOP?",
+    "answers": {
+      "A1": "Classes, Objects, Methods, Variables",
+      "A2": "Encapsulation, Abstraction, Inheritance, Polymorphism",
+      "A3": "Public, Private, Protected, Default",
+      "A4": "Constructor, Destructor, Static, Virtual"
+    },
+    "key": "Encapsulation, Abstraction, Inheritance, Polymorphism",
+    "justification": "These four concepts form the foundation of OOP and guide object-oriented design principles.",
+    "justified_by": "Perplexity",
+    "frequency": 21
+  },
+  {
+    "type": "easy",
+    "question": "How many types of access specifiers are provided in C++?",
+    "answers": {
+      "A1": "2",
+      "A2": "3",
+      "A3": "4",
+      "A4": "5"
+    },
+    "key": "3",
+    "justification": "C++ provides three access specifiers: public, private, and protected. These control the visibility of class members.",
+    "justified_by": "Perplexity",
+    "frequency": 18
+  },
+  {
+    "type": "easy",
+    "question": "What does the 'public' access specifier mean?",
+    "answers": {
+      "A1": "Members are accessible only within the class",
+      "A2": "Members are accessible from anywhere",
+      "A3": "Members are accessible only in derived classes",
+      "A4": "Members cannot be accessed"
+    },
+    "key": "Members are accessible from anywhere",
+    "justification": "Public members have no access restrictions and can be accessed from anywhere in the program.",
+    "justified_by": "Perplexity",
+    "frequency": 25
+  },
+  {
+    "type": "easy",
+    "question": "What does the 'private' access specifier mean?",
+    "answers": {
+      "A1": "Members are accessible only within the class",
+      "A2": "Members are accessible everywhere",
+      "A3": "Members are accessible only to derived classes",
+      "A4": "Members cannot be inherited"
+    },
+    "key": "Members are accessible only within the class",
+    "justification": "Private members are only accessible within the class itself, not from outside or even from derived classes.",
+    "justified_by": "Perplexity",
+    "frequency": 8
+  },
+  {
+    "type": "easy",
+    "question": "What does the 'protected' access specifier mean?",
+    "answers": {
+      "A1": "Members are accessible only within the class",
+      "A2": "Members are accessible everywhere",
+      "A3": "Members are accessible within the class and derived classes",
+      "A4": "Members cannot be modified"
+    },
+    "key": "Members are accessible within the class and derived classes",
+    "justification": "Protected members are accessible within the class and in classes derived from it, but not from outside.",
+    "justified_by": "Perplexity",
+    "frequency": 15
+  },
+  {
+    "type": "easy",
+    "question": "What is a constructor in OOP?",
+    "answers": {
+      "A1": "A method that destroys an object",
+      "A2": "A special method that initializes an object when it is created",
+      "A3": "A method that copies an object",
+      "A4": "A method that makes a class abstract"
+    },
+    "key": "A special method that initializes an object when it is created",
+    "justification": "A constructor is automatically called when an object is instantiated, used to initialize member variables and set up initial state.",
+    "justified_by": "Perplexity",
+    "frequency": 15
+  },
+  {
+    "type": "easy",
+    "question": "What is a default constructor?",
+    "answers": {
+      "A1": "A constructor with parameters",
+      "A2": "A constructor with no parameters",
+      "A3": "A constructor that copies objects",
+      "A4": "A constructor provided by the compiler"
+    },
+    "key": "A constructor with no parameters",
+    "justification": "A default constructor takes no parameters. If not defined, the compiler generates a default one automatically.",
+    "justified_by": "Perplexity",
+    "frequency": 16
+  },
+  {
+    "type": "easy",
+    "question": "What is a parameterized constructor?",
+    "answers": {
+      "A1": "A constructor that takes no arguments",
+      "A2": "A constructor that takes one or more arguments",
+      "A3": "A constructor that cannot be overloaded",
+      "A4": "A constructor provided by default"
+    },
+    "key": "A constructor that takes one or more arguments",
+    "justification": "A parameterized constructor accepts arguments that are used to initialize member variables with specific values.",
+    "justified_by": "Perplexity",
+    "frequency": 20
+  },
+  {
+    "type": "easy",
+    "question": "What is a destructor in OOP?",
+    "answers": {
+      "A1": "A method that creates an object",
+      "A2": "A method that initializes an object",
+      "A3": "A method that is automatically called when an object is destroyed",
+      "A4": "A method that copies an object"
+    },
+    "key": "A method that is automatically called when an object is destroyed",
+    "justification": "A destructor releases resources allocated by the constructor when an object goes out of scope or is explicitly deleted.",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "easy",
+    "question": "What is 'this' pointer in C++ OOP?",
+    "answers": {
+      "A1": "A pointer to the parent class",
+      "A2": "A pointer to the current object",
+      "A3": "A pointer to a global variable",
+      "A4": "A pointer to the heap"
+    },
+    "key": "A pointer to the current object",
+    "justification": "The 'this' pointer always points to the current object, allowing access to its member variables and methods.",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "easy",
+    "question": "What keyword is used to create an object in Java?",
+    "answers": {
+      "A1": "create",
+      "A2": "new",
+      "A3": "init",
+      "A4": "object"
+    },
+    "key": "new",
+    "justification": "The 'new' keyword allocates memory on the heap and calls the constructor to initialize the new object.",
+    "justified_by": "Perplexity",
+    "frequency": 19
+  },
+  {
+    "type": "easy",
+    "question": "What is an instance in OOP?",
+    "answers": {
+      "A1": "A class definition",
+      "A2": "A concrete realization of a class",
+      "A3": "A function within a class",
+      "A4": "A type of variable"
+    },
+    "key": "A concrete realization of a class",
+    "justification": "An instance is an object created from a class. Each instance has its own data and can execute methods defined in the class.",
+    "justified_by": "Perplexity",
+    "frequency": 20
+  },
+  {
+    "type": "easy",
+    "question": "What is a member function in OOP?",
+    "answers": {
+      "A1": "A global function",
+      "A2": "A function defined inside a class",
+      "A3": "A static function",
+      "A4": "A function outside all classes"
+    },
+    "key": "A function defined inside a class",
+    "justification": "A member function (or method) is a function that belongs to a class and can access the class's member variables.",
+    "justified_by": "Perplexity",
+    "frequency": 15
+  },
+  {
+    "type": "easy",
+    "question": "What is a member variable in OOP?",
+    "answers": {
+      "A1": "A global variable",
+      "A2": "A local variable inside a function",
+      "A3": "A variable defined inside a class",
+      "A4": "A constant variable"
+    },
+    "key": "A variable defined inside a class",
+    "justification": "A member variable (or attribute) is a variable that belongs to a class and is present in every instance of that class.",
+    "justified_by": "Perplexity",
+    "frequency": 16
+  },
+  {
+    "type": "easy",
+    "question": "What is the difference between a class and a structure in C++?",
+    "answers": {
+      "A1": "Classes are faster than structures",
+      "A2": "Structures cannot have methods",
+      "A3": "Classes have private members by default; structures have public members by default",
+      "A4": "There is no difference"
+    },
+    "key": "Classes have private members by default; structures have public members by default",
+    "justification": "The main difference is the default access specifier: class members are private by default, while struct members are public by default.",
+    "justified_by": "Perplexity",
+    "frequency": 14
+  },
+  {
+    "type": "easy",
+    "question": "What does 'static' keyword do for member variables?",
+    "answers": {
+      "A1": "Makes the variable immutable",
+      "A2": "Makes the variable belong to the class, not instances",
+      "A3": "Prevents the variable from being used",
+      "A4": "Makes the variable public"
+    },
+    "key": "Makes the variable belong to the class, not instances",
+    "justification": "Static member variables are shared by all instances of the class. There is only one copy regardless of how many objects are created.",
+    "justified_by": "Perplexity",
+    "frequency": 20
+  },
+  {
+    "type": "easy",
+    "question": "What does 'const' keyword do in OOP?",
+    "answers": {
+      "A1": "Makes a variable static",
+      "A2": "Makes a variable unchangeable (constant)",
+      "A3": "Makes a variable public",
+      "A4": "Makes a variable temporary"
+    },
+    "key": "Makes a variable unchangeable (constant)",
+    "justification": "const keyword declares a variable whose value cannot be changed after initialization.",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "easy",
+    "question": "What is a const member function?",
+    "answers": {
+      "A1": "A function that cannot be called",
+      "A2": "A function that cannot modify member variables",
+      "A3": "A function that is static",
+      "A4": "A function that must be inlined"
+    },
+    "key": "A function that cannot modify member variables",
+    "justification": "A const member function promises not to modify any member variables of the object, ensuring data integrity.",
+    "justified_by": "Perplexity",
+    "frequency": 17
+  },
+  {
+    "type": "easy",
+    "question": "What is method overloading?",
+    "answers": {
+      "A1": "Calling a method multiple times",
+      "A2": "Having multiple methods with the same name but different parameters",
+      "A3": "Making a method static",
+      "A4": "Inheriting a method from parent class"
+    },
+    "key": "Having multiple methods with the same name but different parameters",
+    "justification": "Method overloading allows a class to have multiple methods with the same name but different parameter lists (number, type, or order).",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "easy",
+    "question": "What is method overriding?",
+    "answers": {
+      "A1": "Calling a method multiple times",
+      "A2": "A derived class providing its own implementation of a base class method",
+      "A3": "Making a method private",
+      "A4": "Creating multiple classes"
+    },
+    "key": "A derived class providing its own implementation of a base class method",
+    "justification": "Method overriding occurs when a derived class redefines a method inherited from the base class with the same signature.",
+    "justified_by": "Perplexity",
+    "frequency": 22
+  },
+  {
+    "type": "easy",
+    "question": "What is the difference between method overloading and method overriding?",
+    "answers": {
+      "A1": "They are the same concept",
+      "A2": "Overloading: same class, different params; Overriding: inheritance, same signature",
+      "A3": "Overriding: same class, different params; Overloading: inheritance, same signature",
+      "A4": "Overloading uses virtual functions; Overriding doesn't"
+    },
+    "key": "Overloading: same class, different params; Overriding: inheritance, same signature",
+    "justification": "Overloading is compile-time polymorphism in the same class with different parameters. Overriding is runtime polymorphism across inheritance hierarchy with same signature.",
+    "justified_by": "Perplexity",
+    "frequency": 19
+  },
+  {
+    "type": "easy",
+    "question": "What is a virtual function?",
+    "answers": {
+      "A1": "A function that doesn't really exist",
+      "A2": "A function declared in base class that can be overridden in derived classes",
+      "A3": "A function that is always static",
+      "A4": "A function that cannot be called"
+    },
+    "key": "A function declared in base class that can be overridden in derived classes",
+    "justification": "Virtual functions enable runtime polymorphism, allowing the correct overridden method to be called based on actual object type.",
+    "justified_by": "Perplexity",
+    "frequency": 14
+  },
+  {
+    "type": "easy",
+    "question": "What is the purpose of the 'super' keyword in OOP?",
+    "answers": {
+      "A1": "To create a new object",
+      "A2": "To access parent class methods and constructors",
+      "A3": "To make a method faster",
+      "A4": "To declare a final variable"
+    },
+    "key": "To access parent class methods and constructors",
+    "justification": "The 'super' keyword allows a subclass to call methods or constructors defined in its parent class.",
+    "justified_by": "Perplexity",
+    "frequency": 15
+  },
+  {
+    "type": "easy",
+    "question": "What is single inheritance?",
+    "answers": {
+      "A1": "A class inheriting from multiple classes",
+      "A2": "A class inheriting from only one base class",
+      "A3": "A class not inheriting from anything",
+      "A4": "Multiple classes inheriting from one class"
+    },
+    "key": "A class inheriting from only one base class",
+    "justification": "Single inheritance is when a derived class inherits from exactly one base class, the simplest form of inheritance.",
+    "justified_by": "Perplexity",
+    "frequency": 16
+  },
+  {
+    "type": "medium",
+    "question": "What is multiple inheritance?",
+    "answers": {
+      "A1": "A class inheriting from only one base class",
+      "A2": "A derived class inheriting from two or more base classes",
+      "A3": "Multiple classes inheriting from one base class",
+      "A4": "A class inheriting at multiple levels"
+    },
+    "key": "A derived class inheriting from two or more base classes",
+    "justification": "Multiple inheritance allows a class to derive properties and methods from multiple parent classes.",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "medium",
+    "question": "What is hierarchical inheritance?",
+    "answers": {
+      "A1": "A class inheriting from multiple base classes",
+      "A2": "Multiple classes inheriting from a single base class",
+      "A3": "A class inheriting through multiple levels",
+      "A4": "A derived class being a base for another class"
+    },
+    "key": "Multiple classes inheriting from a single base class",
+    "justification": "Hierarchical inheritance occurs when multiple derived classes share a common base class.",
+    "justified_by": "Perplexity",
+    "frequency": 15
+  },
+  {
+    "type": "medium",
+    "question": "What is multilevel inheritance?",
+    "answers": {
+      "A1": "Multiple classes inheriting from one base class",
+      "A2": "A class inheriting from multiple base classes",
+      "A3": "A derived class becoming a base class for another class",
+      "A4": "A class inheriting at the same level"
+    },
+    "key": "A derived class becoming a base class for another class",
+    "justification": "Multilevel inheritance creates a chain where a derived class becomes a base class for another class.",
+    "justified_by": "Perplexity",
+    "frequency": 20
+  },
+  {
+    "type": "medium",
+    "question": "What is the diamond problem in multiple inheritance?",
+    "answers": {
+      "A1": "A derived class inherits same base class through two paths",
+      "A2": "A class cannot inherit from multiple classes",
+      "A3": "Virtual functions cannot work in multiple inheritance",
+      "A4": "A derived class has too many base classes"
+    },
+    "key": "A derived class inherits same base class through two paths",
+    "justification": "The diamond problem occurs when a class inherits from two classes that both inherit from a common ancestor, creating ambiguity.",
+    "justified_by": "Perplexity",
+    "frequency": 18
+  },
+  {
+    "type": "medium",
+    "question": "How is the diamond problem solved in C++?",
+    "answers": {
+      "A1": "By avoiding multiple inheritance",
+      "A2": "By using virtual inheritance",
+      "A3": "By using private inheritance",
+      "A4": "By making all methods virtual"
+    },
+    "key": "By using virtual inheritance",
+    "justification": "Virtual inheritance ensures that only one instance of the base class exists in the inheritance hierarchy.",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "medium",
+    "question": "What is a copy constructor?",
+    "answers": {
+      "A1": "A constructor that creates a new class",
+      "A2": "A constructor that initializes an object with values from another object of same class",
+      "A3": "A constructor that copies the entire program",
+      "A4": "A constructor that cannot have parameters"
+    },
+    "key": "A constructor that initializes an object with values from another object of same class",
+    "justification": "A copy constructor creates a new object as a replica of an existing object, essential when objects are passed by value.",
+    "justified_by": "Perplexity",
+    "frequency": 14
+  },
+  {
+    "type": "medium",
+    "question": "In a copy constructor, objects must be passed by ______",
+    "answers": {
+      "A1": "Value",
+      "A2": "Pointer",
+      "A3": "Reference",
+      "A4": "Const reference"
+    },
+    "key": "Const reference",
+    "justification": "Objects are passed by const reference to prevent infinite recursion and ensure the source object isn't modified.",
+    "justified_by": "Perplexity",
+    "frequency": 16
+  },
+  {
+    "type": "medium",
+    "question": "What is the purpose of a move constructor?",
+    "answers": {
+      "A1": "To move an object to a different location in memory",
+      "A2": "To create an object by moving resources from a temporary object",
+      "A3": "To change the position of member variables",
+      "A4": "To merge two objects"
+    },
+    "key": "To create an object by moving resources from a temporary object",
+    "justification": "A move constructor efficiently transfers resources from a temporary (rvalue) object, improving performance by avoiding unnecessary copies.",
+    "justified_by": "Perplexity",
+    "frequency": 16
+  },
+  {
+    "type": "medium",
+    "question": "What is operator overloading?",
+    "answers": {
+      "A1": "Using operators multiple times",
+      "A2": "Redefining how operators work with user-defined types",
+      "A3": "Creating new operators",
+      "A4": "Making operators faster"
+    },
+    "key": "Redefining how operators work with user-defined types",
+    "justification": "Operator overloading allows you to give new meaning to operators like +, -, *, / etc. when applied to custom objects.",
+    "justified_by": "Perplexity",
+    "frequency": 18
+  },
+  {
+    "type": "medium",
+    "question": "Which operators cannot be overloaded in C++?",
+    "answers": {
+      "A1": "All operators can be overloaded",
+      "A2": "Scope resolution (::), member selection (.), pointer to member (.*), and ternary (?:) operators",
+      "A3": "Only arithmetic operators",
+      "A4": "Only comparison operators"
+    },
+    "key": "Scope resolution (::), member selection (.), pointer to member (.*), and ternary (?:) operators",
+    "justification": "These operators have special meaning in the language and cannot be overloaded to maintain language integrity.",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "medium",
+    "question": "What is a friend function in C++?",
+    "answers": {
+      "A1": "A function that always returns true",
+      "A2": "A function declared in a class that can access its private members",
+      "A3": "A function defined outside all classes",
+      "A4": "A static function in a class"
+    },
+    "key": "A function declared in a class that can access its private members",
+    "justification": "A friend function is an exception to access rules, granted special permission to access a class's private and protected members.",
+    "justified_by": "Perplexity",
+    "frequency": 16
+  },
+  {
+    "type": "medium",
+    "question": "What is a friend class in C++?",
+    "answers": {
+      "A1": "A class that inherits from another class",
+      "A2": "A class granted access to private members of another class",
+      "A3": "A class defined inside another class",
+      "A4": "A class that cannot be inherited"
+    },
+    "key": "A class granted access to private members of another class",
+    "justification": "A friend class can access the private and protected members of another class, breaking the normal encapsulation rules.",
+    "justified_by": "Perplexity",
+    "frequency": 17
+  },
+  {
+    "type": "medium",
+    "question": "What is an abstract class?",
+    "answers": {
+      "A1": "A class that only contains variables",
+      "A2": "A class that cannot be instantiated but serves as a blueprint for derived classes",
+      "A3": "A class with no methods",
+      "A4": "A class that is always static"
+    },
+    "key": "A class that cannot be instantiated but serves as a blueprint for derived classes",
+    "justification": "An abstract class contains at least one pure virtual function and defines an interface that derived classes must implement.",
+    "justified_by": "Perplexity",
+    "frequency": 17
+  },
+  {
+    "type": "medium",
+    "question": "What is a pure virtual function?",
+    "answers": {
+      "A1": "A function that doesn't have a body",
+      "A2": "A virtual function with no implementation, forcing derived classes to override it",
+      "A3": "A function that is always public",
+      "A4": "A function that cannot be called"
+    },
+    "key": "A virtual function with no implementation, forcing derived classes to override it",
+    "justification": "A pure virtual function (declared with = 0) has no implementation and must be overridden by any concrete derived class.",
+    "justified_by": "Perplexity",
+    "frequency": 23
+  },
+  {
+    "type": "medium",
+    "question": "What is an interface in OOP?",
+    "answers": {
+      "A1": "A visual display",
+      "A2": "A contract that defines what methods a class must implement",
+      "A3": "A method that interacts with users",
+      "A4": "A type of variable"
+    },
+    "key": "A contract that defines what methods a class must implement",
+    "justification": "An interface specifies a set of method signatures that implementing classes must provide, establishing a protocol.",
+    "justified_by": "Perplexity",
+    "frequency": 18
+  },
+  {
+    "type": "medium",
+    "question": "What is the difference between an abstract class and an interface?",
+    "answers": {
+      "A1": "They are identical",
+      "A2": "Abstract class can have implementation; interface only defines contracts",
+      "A3": "Interface can have implementation; abstract class cannot",
+      "A4": "Abstract class is for Java; interface is for C++"
+    },
+    "key": "Abstract class can have implementation; interface only defines contracts",
+    "justification": "Abstract classes can have both implemented and abstract methods, while interfaces traditionally define only method signatures (contracts).",
+    "justified_by": "Perplexity",
+    "frequency": 20
+  },
+  {
+    "type": "medium",
+    "question": "What is static polymorphism?",
+    "answers": {
+      "A1": "Polymorphism resolved at runtime",
+      "A2": "Polymorphism resolved at compile time through method overloading",
+      "A3": "Polymorphism using virtual functions",
+      "A4": "Polymorphism through inheritance"
+    },
+    "key": "Polymorphism resolved at compile time through method overloading",
+    "justification": "Static polymorphism (compile-time) is achieved through function and operator overloading where the correct function is determined before execution.",
+    "justified_by": "Perplexity",
+    "frequency": 17
+  },
+  {
+    "type": "medium",
+    "question": "What is dynamic polymorphism?",
+    "answers": {
+      "A1": "Using operator overloading",
+      "A2": "Polymorphism resolved at runtime through virtual functions and inheritance",
+      "A3": "Creating multiple objects dynamically",
+      "A4": "Using pointers and references"
+    },
+    "key": "Polymorphism resolved at runtime through virtual functions and inheritance",
+    "justification": "Dynamic polymorphism (runtime) uses virtual functions to determine which overridden method to call based on actual object type at execution time.",
+    "justified_by": "Perplexity",
+    "frequency": 22
+  },
+  {
+    "type": "medium",
+    "question": "What is composition in OOP?",
+    "answers": {
+      "A1": "Inheriting from multiple classes",
+      "A2": "A class containing instances of other classes (Has-A relationship)",
+      "A3": "Creating abstract methods",
+      "A4": "Making all methods virtual"
+    },
+    "key": "A class containing instances of other classes (Has-A relationship)",
+    "justification": "Composition represents a 'Has-A' relationship where a class contains objects of other classes as part of its structure.",
+    "justified_by": "Perplexity",
+    "frequency": 25
+  },
+  {
+    "type": "medium",
+    "question": "What is the difference between composition and inheritance?",
+    "answers": {
+      "A1": "They are the same",
+      "A2": "Composition is Has-A; Inheritance is Is-A relationship",
+      "A3": "Inheritance is Has-A; Composition is Is-A relationship",
+      "A4": "Composition is faster than inheritance"
+    },
+    "key": "Composition is Has-A; Inheritance is Is-A relationship",
+    "justification": "Inheritance represents 'Is-A' (Car Is-A Vehicle), while composition represents 'Has-A' (Car Has-A Engine).",
+    "justified_by": "Perplexity",
+    "frequency": 17
+  },
+  {
+    "type": "medium",
+    "question": "Why is composition sometimes preferred over inheritance?",
+    "answers": {
+      "A1": "It's always faster",
+      "A2": "It's more flexible and avoids tight coupling",
+      "A3": "It requires less code",
+      "A4": "It automatically prevents the diamond problem"
+    },
+    "key": "It's more flexible and avoids tight coupling",
+    "justification": "Composition is often preferred because it provides greater flexibility, easier maintenance, and avoids problems like the diamond problem.",
+    "justified_by": "Perplexity",
+    "frequency": 21
+  },
+  {
+    "type": "medium",
+    "question": "What does 'final' keyword do in Java?",
+    "answers": {
+      "A1": "Makes a variable mutable",
+      "A2": "Prevents a class from being inherited or a method from being overridden",
+      "A3": "Makes a method private",
+      "A4": "Declares an abstract method"
+    },
+    "key": "Prevents a class from being inherited or a method from being overridden",
+    "justification": "The 'final' keyword prevents modification of classes and methods, ensuring that their behavior cannot be changed by inheritance.",
+    "justified_by": "Perplexity",
+    "frequency": 18
+  },
+  {
+    "type": "medium",
+    "question": "What is an inline function?",
+    "answers": {
+      "A1": "A function that can only be called once",
+      "A2": "A function whose code is inserted at the call site instead of being called",
+      "A3": "A function that must be defined in the header file",
+      "A4": "A function that has no return type"
+    },
+    "key": "A function whose code is inserted at the call site instead of being called",
+    "justification": "An inline function tells the compiler to insert the function's code directly where it's called, potentially improving performance.",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "medium",
+    "question": "What is a const member function used for?",
+    "answers": {
+      "A1": "To make a method static",
+      "A2": "To ensure a method doesn't modify member variables",
+      "A3": "To prevent method overriding",
+      "A4": "To make a method private"
+    },
+    "key": "To ensure a method doesn't modify member variables",
+    "justification": "A const member function promises not to change any member variables, providing a contract for data immutability during execution.",
+    "justified_by": "Perplexity",
+    "frequency": 16
+  },
+  {
+    "type": "medium",
+    "question": "What is shallow copy?",
+    "answers": {
+      "A1": "A copy that duplicates all data deeply",
+      "A2": "A copy that only copies pointer values, not the data they point to",
+      "A3": "A copy that uses the copy constructor",
+      "A4": "A copy that is always safe"
+    },
+    "key": "A copy that only copies pointer values, not the data they point to",
+    "justification": "A shallow copy copies pointers, not the actual data. This can lead to multiple objects pointing to the same memory.",
+    "justified_by": "Perplexity",
+    "frequency": 17
+  },
+  {
+    "type": "medium",
+    "question": "What is deep copy?",
+    "answers": {
+      "A1": "A copy that only copies pointer values",
+      "A2": "A copy that duplicates all data including objects pointed to by pointers",
+      "A3": "A copy that is faster than shallow copy",
+      "A4": "A copy that doesn't use memory"
+    },
+    "key": "A copy that duplicates all data including objects pointed to by pointers",
+    "justification": "A deep copy creates new copies of all data, including objects referenced by pointers, preventing shared data issues.",
+    "justified_by": "Perplexity",
+    "frequency": 19
+  },
+  {
+    "type": "medium",
+    "question": "What is the problem with shallow copy?",
+    "answers": {
+      "A1": "It copies too much data",
+      "A2": "Multiple objects can point to same memory, causing issues when one object is deleted",
+      "A3": "It's always slower",
+      "A4": "It requires more memory"
+    },
+    "key": "Multiple objects can point to same memory, causing issues when one object is deleted",
+    "justification": "Shallow copy leads to multiple objects sharing the same dynamically allocated memory, causing dangling pointers and double deletion errors.",
+    "justified_by": "Perplexity",
+    "frequency": 21
+  },
+  {
+    "type": "hard",
+    "question": "What is RAII (Resource Acquisition Is Initialization) principle?",
+    "answers": {
+      "A1": "Resources should be acquired in main function",
+      "A2": "Tying resource management to object lifetime - resources are acquired in constructor and released in destructor",
+      "A3": "Resources should never be dynamically allocated",
+      "A4": "All initialization should happen in static methods"
+    },
+    "key": "Tying resource management to object lifetime - resources are acquired in constructor and released in destructor",
+    "justification": "RAII is a C++ idiom where resource acquisition and release are tied to object lifetime, ensuring automatic cleanup and exception safety.",
+    "justified_by": "Perplexity",
+    "frequency": 14
+  },
+  {
+    "type": "hard",
+    "question": "What is a template in C++?",
+    "answers": {
+      "A1": "A blueprint for creating functions or classes that work with any data type",
+      "A2": "A copy of an existing class",
+      "A3": "A method with no return type",
+      "A4": "A static member of a class"
+    },
+    "key": "A blueprint for creating functions or classes that work with any data type",
+    "justification": "Templates enable generic programming by allowing functions and classes to operate on different data types with a single definition.",
+    "justified_by": "Perplexity",
+    "frequency": 20
+  },
+  {
+    "type": "hard",
+    "question": "What is a template specialization?",
+    "answers": {
+      "A1": "Creating multiple copies of a template",
+      "A2": "Providing a specific implementation of a template for particular types",
+      "A3": "Making a template into a class",
+      "A4": "Using a template inside another template"
+    },
+    "key": "Providing a specific implementation of a template for particular types",
+    "justification": "Template specialization allows you to provide custom implementations for specific data types or conditions.",
+    "justified_by": "Perplexity",
+    "frequency": 17
+  },
+  {
+    "type": "hard",
+    "question": "What is the difference between static and dynamic binding?",
+    "answers": {
+      "A1": "Static binding is faster; dynamic binding is more flexible",
+      "A2": "Static binding determined at compile time; dynamic binding determined at runtime",
+      "A3": "They are the same concept",
+      "A4": "Dynamic binding always uses virtual functions; static never does"
+    },
+    "key": "Static binding determined at compile time; dynamic binding determined at runtime",
+    "justification": "Static binding resolves function calls at compile time based on reference/pointer type. Dynamic binding uses virtual functions and resolves at runtime.",
+    "justified_by": "Perplexity",
+    "frequency": 12
+  },
+  {
+    "type": "hard",
+    "question": "What is the vtable (virtual table) in C++?",
+    "answers": {
+      "A1": "A table of all class variables",
+      "A2": "A mechanism that stores pointers to virtual functions for runtime polymorphism",
+      "A3": "A table of template specializations",
+      "A4": "A table of operator overloads"
+    },
+    "key": "A mechanism that stores pointers to virtual functions for runtime polymorphism",
+    "justification": "Each class with virtual functions has a vtable containing pointers to the virtual function implementations, enabling dynamic dispatch.",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "hard",
+    "question": "What is the purpose of the vptr (virtual pointer)?",
+    "answers": {
+      "A1": "To store the class name",
+      "A2": "To point to the object's vtable for resolving virtual function calls",
+      "A3": "To store all member variables",
+      "A4": "To prevent inheritance"
+    },
+    "key": "To point to the object's vtable for resolving virtual function calls",
+    "justification": "Every object of a class with virtual functions contains a vptr that points to the appropriate vtable at runtime.",
+    "justified_by": "Perplexity",
+    "frequency": 17
+  },
+  {
+    "type": "hard",
+    "question": "What happens if you call a virtual function from a constructor?",
+    "answers": {
+      "A1": "It calls the derived class version",
+      "A2": "It calls the base class version, not the derived one, because object isn't fully constructed",
+      "A3": "It causes a runtime error",
+      "A4": "It calls both versions"
+    },
+    "key": "It calls the base class version, not the derived one, because object isn't fully constructed",
+    "justification": "During construction, the derived part hasn't been constructed yet, so virtual calls resolve to the base class version.",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "hard",
+    "question": "What is exception handling in OOP?",
+    "answers": {
+      "A1": "Ignoring errors in the program",
+      "A2": "A mechanism to handle runtime errors by throwing and catching exceptions",
+      "A3": "Making all functions return error codes",
+      "A4": "Preventing all errors from occurring"
+    },
+    "key": "A mechanism to handle runtime errors by throwing and catching exceptions",
+    "justification": "Exception handling provides a structured way to deal with error conditions, using try-catch blocks to catch and handle exceptions.",
+    "justified_by": "Perplexity",
+    "frequency": 19
+  },
+  {
+    "type": "hard",
+    "question": "What is the purpose of 'throw' keyword in OOP?",
+    "answers": {
+      "A1": "To discard an object",
+      "A2": "To signal that an error has occurred by throwing an exception",
+      "A3": "To delete memory",
+      "A4": "To end a function"
+    },
+    "key": "To signal that an error has occurred by throwing an exception",
+    "justification": "The 'throw' keyword is used to throw (raise) an exception when an error condition is detected.",
+    "justified_by": "Perplexity",
+    "frequency": 24
+  },
+  {
+    "type": "hard",
+    "question": "What is the purpose of 'catch' block in exception handling?",
+    "answers": {
+      "A1": "To execute code before throwing an exception",
+      "A2": "To catch and handle thrown exceptions",
+      "A3": "To prevent exceptions",
+      "A4": "To log all errors"
+    },
+    "key": "To catch and handle thrown exceptions",
+    "justification": "A catch block contains code that executes when a matching exception is thrown, allowing for error recovery.",
+    "justified_by": "Perplexity",
+    "frequency": 9
+  },
+  {
+    "type": "hard",
+    "question": "What is the purpose of 'finally' block in exception handling?",
+    "answers": {
+      "A1": "It only executes if an exception occurs",
+      "A2": "It executes whether or not an exception occurs",
+      "A3": "It prevents exceptions",
+      "A4": "It must always throw an exception"
+    },
+    "key": "It executes whether or not an exception occurs",
+    "justification": "A finally block (or destructor cleanup in C++) always executes, ensuring resources are cleaned up regardless of exception occurrence.",
+    "justified_by": "Perplexity",
+    "frequency": 14
+  },
+  {
+    "type": "hard",
+    "question": "What is object slicing in C++ inheritance?",
+    "answers": {
+      "A1": "Dividing an object into parts",
+      "A2": "Assigning a derived object to a base class object, losing derived-specific information",
+      "A3": "Copying object pointers",
+      "A4": "Creating shallow copies"
+    },
+    "key": "Assigning a derived object to a base class object, losing derived-specific information",
+    "justification": "Object slicing occurs when a derived object is assigned to a base class object by value, losing derived-specific member data.",
+    "justified_by": "Perplexity",
+    "frequency": 21
+  },
+  {
+    "type": "hard",
+    "question": "How to prevent object slicing?",
+    "answers": {
+      "A1": "By using pointers or references to base class",
+      "A2": "By making constructor private",
+      "A3": "By using only virtual functions",
+      "A4": "By making all members static"
+    },
+    "key": "By using pointers or references to base class",
+    "justification": "Using pointers or references prevents slicing because they maintain the full derived object type information.",
+    "justified_by": "Perplexity",
+    "frequency": 17
+  },
+  {
+    "type": "hard",
+    "question": "What is the purpose of 'explicit' keyword in constructors?",
+    "answers": {
+      "A1": "To make a constructor public",
+      "A2": "To prevent implicit type conversion through constructor calls",
+      "A3": "To make a constructor virtual",
+      "A4": "To declare a static constructor"
+    },
+    "key": "To prevent implicit type conversion through constructor calls",
+    "justification": "The 'explicit' keyword prevents a single-parameter constructor from being used for implicit type conversion.",
+    "justified_by": "Perplexity",
+    "frequency": 15
+  },
+  {
+    "type": "hard",
+    "question": "What is a smart pointer?",
+    "answers": {
+      "A1": "A pointer with high intelligence",
+      "A2": "An object that acts like a pointer but manages memory automatically",
+      "A3": "A global pointer variable",
+      "A4": "A pointer that cannot be null"
+    },
+    "key": "An object that acts like a pointer but manages memory automatically",
+    "justification": "Smart pointers (unique_ptr, shared_ptr) wrap raw pointers and automatically manage memory, preventing leaks.",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "hard",
+    "question": "What is unique_ptr in C++?",
+    "answers": {
+      "A1": "A pointer that points to unique objects only",
+      "A2": "A smart pointer with exclusive ownership - only one unique_ptr can own an object",
+      "A3": "A pointer that is always the same",
+      "A4": "A shared pointer with limited access"
+    },
+    "key": "A smart pointer with exclusive ownership - only one unique_ptr can own an object",
+    "justification": "unique_ptr provides exclusive ownership of dynamically allocated memory, automatically deleting when out of scope.",
+    "justified_by": "Perplexity",
+    "frequency": 21
+  },
+  {
+    "type": "hard",
+    "question": "What is shared_ptr in C++?",
+    "answers": {
+      "A1": "A pointer that is always shared between functions",
+      "A2": "A smart pointer that allows multiple pointers to share ownership of same object",
+      "A3": "A pointer that cannot be copied",
+      "A4": "A pointer used only in shared libraries"
+    },
+    "key": "A smart pointer that allows multiple pointers to share ownership of same object",
+    "justification": "shared_ptr uses reference counting to manage shared ownership, deleting the object when the last pointer is destroyed.",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "hard",
+    "question": "What is weak_ptr in C++?",
+    "answers": {
+      "A1": "A pointer that is always weak",
+      "A2": "A smart pointer that references an object owned by shared_ptr without increasing reference count",
+      "A3": "A pointer that cannot access the object",
+      "A4": "A pointer used for debugging"
+    },
+    "key": "A smart pointer that references an object owned by shared_ptr without increasing reference count",
+    "justification": "weak_ptr observes shared_ptr objects without affecting their lifetime, useful for preventing circular references.",
+    "justified_by": "Perplexity",
+    "frequency": 19
+  },
+  {
+    "type": "hard",
+    "question": "What is SOLID principles in OOP?",
+    "answers": {
+      "A1": "Principles for solid code only",
+      "A2": "Five design principles: Single Responsibility, Open/Closed, Liskov, Interface Segregation, Dependency Inversion",
+      "A3": "Principles for making objects solid",
+      "A4": "Principles for memory management"
+    },
+    "key": "Five design principles: Single Responsibility, Open/Closed, Liskov, Interface Segregation, Dependency Inversion",
+    "justification": "SOLID is a set of principles for writing maintainable, scalable, and flexible object-oriented software.",
+    "justified_by": "Perplexity",
+    "frequency": 19
+  },
+  {
+    "type": "hard",
+    "question": "What is the Single Responsibility Principle?",
+    "answers": {
+      "A1": "A class should have only one job or responsibility",
+      "A2": "A class should handle all responsibilities",
+      "A3": "Classes should only have single methods",
+      "A4": "A program should have single thread"
+    },
+    "key": "A class should have only one job or responsibility",
+    "justification": "A class should have a single, well-defined reason to change, focusing on one aspect of functionality.",
+    "justified_by": "Perplexity",
+    "frequency": 19
+  },
+  {
+    "type": "hard",
+    "question": "What is the Open/Closed Principle?",
+    "answers": {
+      "A1": "Classes should always be open for modification",
+      "A2": "Software entities should be open for extension but closed for modification",
+      "A3": "Classes should never be extended",
+      "A4": "Classes should be private"
+    },
+    "key": "Software entities should be open for extension but closed for modification",
+    "justification": "Code should be designed to allow new functionality through extension (inheritance) without modifying existing code.",
+    "justified_by": "Perplexity",
+    "frequency": 21
+  },
+  {
+    "type": "hard",
+    "question": "What is the Liskov Substitution Principle?",
+    "answers": {
+      "A1": "Derived classes can be anything",
+      "A2": "Derived classes should be substitutable for their base classes without breaking code",
+      "A3": "Base classes should inherit from derived classes",
+      "A4": "All classes should be identical"
+    },
+    "key": "Derived classes should be substitutable for their base classes without breaking code",
+    "justification": "An object of a derived class should be usable anywhere an object of the base class is expected.",
+    "justified_by": "Perplexity",
+    "frequency": 11
+  },
+  {
+    "type": "hard",
+    "question": "What is the Interface Segregation Principle?",
+    "answers": {
+      "A1": "Interfaces should have many methods",
+      "A2": "Clients should not depend on interfaces they don't use",
+      "A3": "Classes must implement all interface methods",
+      "A4": "Interfaces should be as large as possible"
+    },
+    "key": "Clients should not depend on interfaces they don't use",
+    "justification": "Interfaces should be small and focused, with clients implementing only the methods they need.",
+    "justified_by": "Perplexity",
+    "frequency": 15
+  },
+  {
+    "type": "hard",
+    "question": "What is the Dependency Inversion Principle?",
+    "answers": {
+      "A1": "Depend on concrete classes directly",
+      "A2": "High-level modules should not depend on low-level modules; both should depend on abstractions",
+      "A3": "Dependencies should always be inverted",
+      "A4": "All dependencies should be static"
+    },
+    "key": "High-level modules should not depend on low-level modules; both should depend on abstractions",
+    "justification": "Code should depend on abstract interfaces, not concrete implementations, reducing coupling and improving flexibility.",
+    "justified_by": "Perplexity",
+    "frequency": 10
+  },
+  {
+    "type": "hard",
+    "question": "What is a design pattern in OOP?",
+    "answers": {
+      "A1": "A way to design user interfaces",
+      "A2": "A reusable solution to a common programming problem",
+      "A3": "A pattern for naming classes",
+      "A4": "A style of writing code"
+    },
+    "key": "A reusable solution to a common programming problem",
+    "justification": "Design patterns are well-established techniques for solving recurring design problems in object-oriented programming.",
+    "justified_by": "Perplexity",
+    "frequency": 13
+  },
+  {
+    "type": "hard",
+    "question": "What is the Singleton pattern?",
+    "answers": {
+      "A1": "A class that can only have single objects",
+      "A2": "A class that ensures only one instance exists and provides global access to it",
+      "A3": "A class with single method",
+      "A4": "A class that cannot be inherited"
+    },
+    "key": "A class that ensures only one instance exists and provides global access to it",
+    "justification": "The Singleton pattern restricts instantiation to a single object and provides a way to access that instance globally.",
+    "justified_by": "Perplexity",
+    "frequency": 19
+  },
+  {
+    "type": "hard",
+    "question": "What is the Factory pattern?",
+    "answers": {
+      "A1": "A class that creates objects of different types",
+      "A2": "A pattern that creates object instances without specifying exact classes",
+      "A3": "A factory building method",
+      "A4": "A pattern for parallel processing"
+    },
+    "key": "A pattern that creates object instances without specifying exact classes",
+    "justification": "The Factory pattern defines an interface for creating objects, letting subclasses decide which class to instantiate.",
+    "justified_by": "Perplexity",
+    "frequency": 25
+  },
+  {
+    "type": "hard",
+    "question": "What is the Observer pattern?",
+    "answers": {
+      "A1": "A pattern for watching programs",
+      "A2": "A pattern where objects notify dependents about state changes",
+      "A3": "A pattern for creating observers",
+      "A4": "A pattern for debugging"
+    },
+    "key": "A pattern where objects notify dependents about state changes",
+    "justification": "The Observer pattern defines a one-to-many dependency where when one object changes state, all dependents are notified.",
+    "justified_by": "Perplexity",
+    "frequency": 19
+  }
+]
