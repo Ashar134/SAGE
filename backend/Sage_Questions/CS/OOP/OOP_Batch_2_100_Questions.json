@@ -25,7 +25,7 @@
     "key": "Vector uses contiguous memory (array-based); list uses linked nodes",
     "justification": "Vector provides O(1) random access but O(n) insertion/deletion. List provides O(n) access but O(1) insertion/deletion at known position.",
     "justified_by": "Perplexity",
-    "frequency": 15
+    "frequency": 17
   },
   {
     "type": "medium",
@@ -53,7 +53,7 @@
     "key": "O(n)",
     "justification": "Insertion at the beginning requires shifting all elements, resulting in linear time complexity.",
     "justified_by": "Perplexity",
-    "frequency": 14
+    "frequency": 15
   },
   {
     "type": "medium",
@@ -67,7 +67,7 @@
     "key": "An associative container storing key-value pairs in sorted order",
     "justification": "Map stores elements as key-value pairs, maintains sorted order by key, and provides O(log n) search/insert/delete.",
     "justified_by": "Perplexity",
-    "frequency": 19
+    "frequency": 20
   },
   {
     "type": "medium",
@@ -165,7 +165,7 @@
     "key": "Input, Output, Forward, Bidirectional, Random Access",
     "justification": "Five categories of iterators with different capabilities, from basic input/output to full random access.",
     "justified_by": "Perplexity",
-    "frequency": 18
+    "frequency": 19
   },
   {
     "type": "medium",
@@ -179,7 +179,7 @@
     "key": "Vector is dynamic; array is fixed size",
     "justification": "Arrays have fixed size determined at compile time, while vectors are dynamic and can grow/shrink at runtime.",
     "justified_by": "Perplexity",
-    "frequency": 14
+    "frequency": 15
   },
   {
     "type": "medium",
@@ -249,7 +249,7 @@
     "key": "Memory allocated but never deallocated, becoming inaccessible",
     "justification": "Memory leaks occur when dynamically allocated memory is not freed, wasting resources and potentially causing program failure.",
     "justified_by": "Perplexity",
-    "frequency": 16
+    "frequency": 17
   },
   {
     "type": "medium",
@@ -263,7 +263,7 @@
     "key": "Use smart pointers (unique_ptr, shared_ptr) or follow RAII principles",
     "justification": "Smart pointers automatically manage memory, ensuring resources are freed when objects go out of scope.",
     "justified_by": "Perplexity",
-    "frequency": 20
+    "frequency": 21
   },
   {
     "type": "medium",
@@ -291,7 +291,7 @@
     "key": "Defining custom behavior for operators when applied to user-defined types",
     "justification": "Operator overloading allows operators like +, -, * to work with custom classes by providing specific implementations.",
     "justified_by": "Perplexity",
-    "frequency": 15
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -319,7 +319,7 @@
     "key": "Prefix returns reference (faster); postfix returns temporary (slower)",
     "justification": "Prefix (++i) increments and returns reference; postfix (i++) creates a temporary, increments, returns temporary (less efficient).",
     "justified_by": "Perplexity",
-    "frequency": 16
+    "frequency": 17
   },
   {
     "type": "medium",
@@ -445,7 +445,7 @@
     "key": "To catch all exceptions as a last resort",
     "justification": "catch(...) is a catch-all handler that catches any exception type not caught by specific catch blocks.",
     "justified_by": "Perplexity",
-    "frequency": 13
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -599,7 +599,7 @@
     "key": "A pattern that defines algorithm skeleton in base class, letting derived classes override steps",
     "justification": "Template Method pattern defines algorithm structure in base class, allowing subclasses to customize specific steps.",
     "justified_by": "Perplexity",
-    "frequency": 12
+    "frequency": 13
   },
   {
     "type": "medium",
@@ -627,7 +627,7 @@
     "key": "Runtime resolution based on types of multiple objects",
     "justification": "Multiple dispatch selects function implementation based on runtime types of multiple arguments, more powerful than single dispatch.",
     "justified_by": "Perplexity",
-    "frequency": 14
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -669,7 +669,7 @@
     "key": "A pattern that encapsulates object behavior based on internal state",
     "justification": "State pattern allows object to change behavior when internal state changes, appearing to change its class.",
     "justified_by": "Perplexity",
-    "frequency": 20
+    "frequency": 21
   },
   {
     "type": "hard",
@@ -711,7 +711,7 @@
     "key": "A pattern that decouples abstraction from implementation",
     "justification": "Bridge pattern separates abstraction from implementation, allowing them to vary independently.",
     "justified_by": "Perplexity",
-    "frequency": 14
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -725,7 +725,7 @@
     "key": "A pattern that composes objects into tree structures to represent hierarchies",
     "justification": "Composite pattern treats individual objects and compositions uniformly, building tree hierarchies.",
     "justified_by": "Perplexity",
-    "frequency": 19
+    "frequency": 20
   },
   {
     "type": "hard",
@@ -893,7 +893,7 @@
     "key": "Mechanism to access variables from enclosing scope in lambda",
     "justification": "Lambda captures allow access to outer scope variables: [] (none), [=] (by value), [&] (by reference), [=, &x] (mixed).",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 12
   },
   {
     "type": "hard",
@@ -907,7 +907,7 @@
     "key": "Optimizing performance by transferring resources instead of copying",
     "justification": "Move semantics uses rvalue references to transfer ownership, avoiding expensive copies of temporary objects.",
     "justified_by": "Perplexity",
-    "frequency": 15
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -949,7 +949,7 @@
     "key": "Passing arguments to another function preserving their lvalue/rvalue nature",
     "justification": "Perfect forwarding uses template parameters and std::forward to preserve argument types through function calls.",
     "justified_by": "Perplexity",
-    "frequency": 15
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -963,7 +963,7 @@
     "key": "A template that accepts variable number of template arguments",
     "justification": "Variadic templates use ... (parameter pack) to accept arbitrary number of template arguments.",
     "justified_by": "Perplexity",
-    "frequency": 18
+    "frequency": 19
   },
   {
     "type": "hard",
@@ -977,7 +977,7 @@
     "key": "Process of expanding variadic template arguments into individual arguments",
     "justification": "Parameter pack expansion uses ... to unpack variadic arguments, enabling processing of arbitrary argument counts.",
     "justified_by": "Perplexity",
-    "frequency": 22
+    "frequency": 24
   },
   {
     "type": "hard",
@@ -991,7 +991,7 @@
     "key": "A template metaprogramming technique providing compile-time information about types",
     "justification": "Type traits (std::is_integral, std::remove_const, etc.) provide compile-time type information and transformations.",
     "justified_by": "Perplexity",
-    "frequency": 20
+    "frequency": 21
   },
   {
     "type": "hard",
@@ -1019,7 +1019,7 @@
     "key": "A keyword for compile-time evaluation of functions and variables",
     "justification": "constexpr allows functions and expressions to be evaluated at compile time when called with compile-time constants.",
     "justified_by": "Perplexity",
-    "frequency": 11
+    "frequency": 12
   },
   {
     "type": "hard",
@@ -1047,7 +1047,7 @@
     "key": "Unpredictable behavior when multiple threads access shared data without synchronization",
     "justification": "Race conditions occur when multiple threads access shared resources concurrently without proper synchronization.",
     "justified_by": "Perplexity",
-    "frequency": 11
+    "frequency": 12
   },
   {
     "type": "hard",

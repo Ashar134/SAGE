@@ -12,7 +12,7 @@
     "key": "The browser uses the next font in the list (sans-serif)",
     "justification": "Browsers try fonts in order. If Arial isn't available, they move to the next option. 'sans-serif' is a generic fallback font.",
     "justified_by": "Perplexity",
-    "frequency": 11
+    "frequency": 12
   },
   {
     "type": "hard",
@@ -117,7 +117,7 @@
     "key": "Adds 2 pixels between individual letters",
     "justification": "letter-spacing adjusts the space between characters, not words.",
     "justified_by": "Perplexity",
-    "frequency": 17
+    "frequency": 18
   },
   {
     "type": "medium",
@@ -132,7 +132,7 @@
     "key": "a:visited",
     "justification": "The :visited pseudo-class styles links that have been clicked/visited before.",
     "justified_by": "Perplexity",
-    "frequency": 15
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -147,7 +147,7 @@
     "key": "Indents only the first line of the paragraph by 30px",
     "justification": "text-indent affects only the first line of a text block.",
     "justified_by": "Perplexity",
-    "frequency": 13
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -177,7 +177,7 @@
     "key": "Positions the background image at the center of the container",
     "justification": "background-position specifies where the background image starts.",
     "justified_by": "Perplexity",
-    "frequency": 14
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -342,7 +342,7 @@
     "key": "Reduces image to smallest size that fits container while preserving aspect ratio",
     "justification": "scale-down shows the smallest version of 'none' or 'contain'.",
     "justified_by": "Perplexity",
-    "frequency": 15
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -777,7 +777,7 @@
     "key": "Manipulate HTML/CSS, respond to user actions, make network requests, manage cookies",
     "justification": "In-browser JS can do most web operations except access system files.",
     "justified_by": "Perplexity",
-    "frequency": 17
+    "frequency": 19
   },
   {
     "type": "medium",
@@ -942,7 +942,7 @@
     "key": "Adds 'newclass' without removing others",
     "justification": "classList.add() appends a class without affecting others.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -957,7 +957,7 @@
     "key": "Creates a new DOM element",
     "justification": "createElement() creates a new element but doesn't add it to the page.",
     "justified_by": "Perplexity",
-    "frequency": 15
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -972,7 +972,7 @@
     "key": "Adds newElement as a child at the end",
     "justification": "appendChild() inserts as the last child.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -1032,7 +1032,7 @@
     "key": "A function that waits for a specific event to occur on an element",
     "justification": "Event listeners trigger functions in response to user or system events.",
     "justified_by": "Perplexity",
-    "frequency": 19
+    "frequency": 20
   },
   {
     "type": "medium",
@@ -1092,7 +1092,7 @@
     "key": "Triggers when the mouse moves over the element",
     "justification": "mouseover fires when mouse enters the element area.",
     "justified_by": "Perplexity",
-    "frequency": 14
+    "frequency": 15
   },
   {
     "type": "medium",
@@ -1227,7 +1227,7 @@
     "key": "Triggers when the browser window is resized",
     "justification": "resize fires whenever the viewport dimensions change.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -1302,7 +1302,7 @@
     "key": "Triggers when an element is double-clicked",
     "justification": "dblclick fires on two rapid clicks.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -1332,7 +1332,7 @@
     "key": "The global object in a browser environment",
     "justification": "The window object is the top-level global object in browsers.",
     "justified_by": "Perplexity",
-    "frequency": 12
+    "frequency": 13
   },
   {
     "type": "medium",
@@ -1392,7 +1392,7 @@
     "key": "Closes the current window",
     "justification": "window.close() closes the browser window (may not work in all contexts).",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -1437,7 +1437,7 @@
     "key": "A yes/no confirmation dialog",
     "justification": "confirm() shows OK and Cancel buttons.",
     "justified_by": "Perplexity",
-    "frequency": 19
+    "frequency": 20
   },
   {
     "type": "medium",
@@ -1452,7 +1452,7 @@
     "key": "Requests text input from the user",
     "justification": "prompt() displays an input field for user response.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 11
   },
   {
     "type": "hard",
@@ -1467,7 +1467,7 @@
     "key": "Getting/setting the URL of the current page",
     "justification": "window.location contains the URL and navigation methods.",
     "justified_by": "Perplexity",
-    "frequency": 12
+    "frequency": 13
   },
   {
     "type": "medium",
@@ -1482,7 +1482,7 @@
     "key": "The full URL of the current page",
     "justification": "href contains the complete URL.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -1527,7 +1527,7 @@
     "key": "Both A and B are correct",
     "justification": "Parentheses are optional for single parameters.",
     "justified_by": "Perplexity",
-    "frequency": 18
+    "frequency": 19
   },
   {
     "type": "medium",
@@ -1572,7 +1572,7 @@
     "key": "No, they cannot be used with the 'new' keyword",
     "justification": "Arrow functions don't have their own 'this' and can't be constructors.",
     "justified_by": "Perplexity",
-    "frequency": 15
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -1647,7 +1647,7 @@
     "key": "Validation in the browser before sending",
     "justification": "Client-side validation happens on user's computer.",
     "justified_by": "Perplexity",
-    "frequency": 12
+    "frequency": 13
   },
   {
     "type": "hard",
@@ -1707,7 +1707,7 @@
     "key": "Storing files locally so they don't need to be re-downloaded",
     "justification": "Caching improves performance by reducing HTTP requests.",
     "justified_by": "Perplexity",
-    "frequency": 13
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -1767,7 +1767,7 @@
     "key": "Converting code in one language to another language",
     "justification": "Transpilers convert newer/other languages to JavaScript.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -1842,7 +1842,7 @@
     "key": "Detects user's system color preference (dark/light)",
     "justification": "prefers-color-scheme is a media feature for dark mode support.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 12
   },
   {
     "type": "medium",
@@ -1917,7 +1917,7 @@
     "key": "GET sends data in URL; POST sends in request body",
     "justification": "GET parameters are visible in URL; POST is hidden.",
     "justified_by": "Perplexity",
-    "frequency": 14
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -1962,7 +1962,7 @@
     "key": "A connection object or false on failure",
     "justification": "mysqli_connect() returns a connection resource or null.",
     "justified_by": "Perplexity",
-    "frequency": 12
+    "frequency": 13
   },
   {
     "type": "hard",
@@ -1977,7 +1977,7 @@
     "key": "Retrieves the next row from a query result",
     "justification": "fetch() returns one row at a time from results.",
     "justified_by": "Perplexity",
-    "frequency": 21
+    "frequency": 22
   },
   {
     "type": "medium",
@@ -2007,7 +2007,7 @@
     "key": "session_start()",
     "justification": "session_start() initializes the session.",
     "justified_by": "Perplexity",
-    "frequency": 14
+    "frequency": 15
   },
   {
     "type": "medium",
@@ -2022,7 +2022,7 @@
     "key": "A global array storing session data",
     "justification": "$_SESSION stores user-specific persistent data.",
     "justified_by": "Perplexity",
-    "frequency": 15
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -2037,7 +2037,7 @@
     "key": "$_SESSION['username']",
     "justification": "Session variables accessed via $_SESSION superglobal.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -2082,7 +2082,7 @@
     "key": "Page navigation section",
     "justification": "<nav> contains navigation links.",
     "justified_by": "Perplexity",
-    "frequency": 22
+    "frequency": 23
   },
   {
     "type": "medium",
@@ -2127,7 +2127,7 @@
     "key": "Closing content, copyright, links",
     "justification": "<footer> contains ending content.",
     "justified_by": "Perplexity",
-    "frequency": 17
+    "frequency": 18
   },
   {
     "type": "medium",
@@ -2202,7 +2202,7 @@
     "key": "Techniques to improve search engine rankings",
     "justification": "SEO helps websites rank higher in search results.",
     "justified_by": "Perplexity",
-    "frequency": 18
+    "frequency": 19
   },
   {
     "type": "medium",
@@ -2217,6 +2217,6 @@
     "key": "Mobile responsiveness",
     "justification": "Viewport meta tag enables proper mobile rendering.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 10
   }
 ]

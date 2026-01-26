@@ -27,7 +27,7 @@
     "key": "By its ability to fool a human into thinking it's human",
     "justification": "The Turing Test is a measure of machine intelligence through conversation.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 6
   },
   {
     "type": "easy",
@@ -192,7 +192,7 @@
     "key": "A search that explores nodes layer by layer",
     "justification": "BFS explores all nodes at depth d before exploring depth d+1.",
     "justified_by": "Perplexity",
-    "frequency": 11
+    "frequency": 12
   },
   {
     "type": "easy",
@@ -252,7 +252,7 @@
     "key": "Computer programs that automatically improve performance from experience",
     "justification": "ML enables systems to learn from data without explicit programming.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 9
   },
   {
     "type": "easy",
@@ -342,7 +342,7 @@
     "key": "A computational unit that processes inputs and produces output",
     "justification": "Artificial neurons compute weighted sums and apply activation functions.",
     "justified_by": "Perplexity",
-    "frequency": 11
+    "frequency": 12
   },
   {
     "type": "easy",
@@ -447,7 +447,7 @@
     "key": "Data-driven inference that starts with facts and applies rules",
     "justification": "Forward chaining moves from facts to conclusions.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 5
   },
   {
     "type": "easy",
@@ -552,7 +552,7 @@
     "key": "An environment with finite distinct states",
     "justification": "Discrete environments have distinct, countable states.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -582,7 +582,7 @@
     "key": "Graph represents problem; tree represents search process",
     "justification": "State graph is mathematical model; search tree is dynamic construction.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -702,7 +702,7 @@
     "key": "A technique to eliminate branches that won't affect the final decision",
     "justification": "Alpha-beta pruning reduces computation in minimax.",
     "justified_by": "Perplexity",
-    "frequency": 12
+    "frequency": 13
   },
   {
     "type": "medium",
@@ -807,7 +807,7 @@
     "key": "A Bayesian classifier assuming independence",
     "justification": "Naive Bayes assumes features are conditionally independent.",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -822,7 +822,7 @@
     "key": "An unsupervised algorithm that partitions data into K clusters",
     "justification": "K-means iteratively assigns points to nearest centroid.",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 5
   },
   {
     "type": "medium",
@@ -882,7 +882,7 @@
     "key": "Gradients become very small during backpropagation, hindering learning",
     "justification": "Vanishing gradients prevent deep networks from learning early layers.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -927,7 +927,7 @@
     "key": "Selecting or creating relevant features from raw data",
     "justification": "Feature extraction prepares data for ML algorithms.",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 7
   },
   {
     "type": "medium",
@@ -957,7 +957,7 @@
     "key": "Function is abstract specification; program is implementation",
     "justification": "Agent function maps percepts to actions; program runs on physical architecture.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -1062,7 +1062,7 @@
     "key": "A network with feedback connections enabling memory",
     "justification": "RNNs are suited for sequence processing.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -1077,7 +1077,7 @@
     "key": "Combining multiple models to improve predictions",
     "justification": "Ensemble methods like random forests often outperform single models.",
     "justified_by": "Perplexity",
-    "frequency": 13
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -1137,7 +1137,7 @@
     "key": "Gradient descent using mini-batches instead of full dataset",
     "justification": "SGD is faster and often works better than batch gradient descent.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -1167,7 +1167,7 @@
     "key": "A property where every value in a domain is consistent with some value in neighboring domains",
     "justification": "Arc consistency reduces domain sizes before search.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -1182,7 +1182,7 @@
     "key": "A search technique mimicking biological evolution with selection and mutation",
     "justification": "Genetic algorithms use crossover and mutation for optimization.",
     "justified_by": "Perplexity",
-    "frequency": 13
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -1302,7 +1302,7 @@
     "key": "A classifier that finds optimal hyperplane maximizing margin",
     "justification": "SVMs are effective for both linear and nonlinear classification.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -1347,7 +1347,7 @@
     "key": "Learning through interaction with environment and rewards",
     "justification": "Reinforcement learning trains agents through trial and error.",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -1392,7 +1392,7 @@
     "key": "The Nobel Prize of Computing given for contributions to AI",
     "justification": "The Turing Award is the highest honor in computer science.",
     "justified_by": "Perplexity",
-    "frequency": 14
+    "frequency": 15
   },
   {
     "type": "easy",
@@ -1632,7 +1632,7 @@
     "key": "Learning algorithms that can quickly adapt to new tasks",
     "justification": "Meta-learning enables few-shot learning.",
     "justified_by": "Perplexity",
-    "frequency": 11
+    "frequency": 12
   },
   {
     "type": "hard",
@@ -1647,7 +1647,7 @@
     "key": "A structured representation of entities and relationships",
     "justification": "Knowledge graphs power semantic search.",
     "justified_by": "Perplexity",
-    "frequency": 12
+    "frequency": 13
   },
   {
     "type": "hard",
@@ -1827,7 +1827,7 @@
     "key": "One complete pass through the training data",
     "justification": "Training typically requires multiple epochs.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -2052,7 +2052,7 @@
     "key": "Probability of deactivating a neuron during training",
     "justification": "Common dropout rates are 0.5 to 0.8.",
     "justified_by": "Perplexity",
-    "frequency": 12
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -2127,7 +2127,7 @@
     "key": "Learning with both labeled and unlabeled data",
     "justification": "Semi-supervised learning is practical when labeling is expensive.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -2187,7 +2187,7 @@
     "key": "Simpler explanations are preferable to complex ones",
     "justification": "Occam's Razor supports models with fewer parameters.",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 11
   },
   {
     "type": "hard",
@@ -2232,7 +2232,7 @@
     "key": "Visualization of how loss changes with parameters",
     "justification": "Loss landscape affects optimization difficulty.",
     "justified_by": "Perplexity",
-    "frequency": 12
+    "frequency": 13
   },
   {
     "type": "medium",
@@ -2382,7 +2382,7 @@
     "key": "Measuring angle between vectors in high-dimensional space",
     "justification": "Cosine similarity is scale-invariant.",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "easy",
@@ -2427,7 +2427,7 @@
     "key": "Parameter set before training, not learned",
     "justification": "Hyperparameters need manual tuning.",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "easy",

@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useAuth } from '../../../../contexts/AuthContext';
 import './ApplicationPage.css';
 
 // ============================================================================
@@ -7,7 +8,7 @@ import './ApplicationPage.css';
 // ============================================================================
 
 interface Application {
-  id: number;
+  id: string; // UUID from database
   jobTitle: string;
   company: string;
   logoColor: string;
@@ -17,6 +18,8 @@ interface Application {
   location: string;
   status: 'applied' | 'reviewing' | 'interview' | 'offer' | 'rejected';
   interviewType?: 'interview' | 'test'; // Optional field for interview stage
+  interviewDate?: string; // ISO string from database
+  offerDeadline?: string; // ISO string from database
 }
 
 type StatusColumn = {
@@ -26,7 +29,7 @@ type StatusColumn = {
 };
 
 // ============================================================================
-// MOCK DATA
+// CONSTANTS
 // ============================================================================
 
 const STATUS_COLUMNS: StatusColumn[] = [
@@ -37,87 +40,7 @@ const STATUS_COLUMNS: StatusColumn[] = [
   { id: 'rejected', title: 'Rejected', color: '#ef4444' }
 ];
 
-const APPLICATIONS_DATA: Application[] = [
-  {
-    id: 1,
-    jobTitle: 'Senior Product Designer',
-    company: 'Google',
-    logoColor: '#4285f4',
-    logoInitial: 'G',
-    appliedDate: '2 days ago',
-    salary: '$120k - $180k',
-    location: 'Mountain View, CA',
-    status: 'interview',
-    interviewType: 'interview'
-  },
-  {
-    id: 2,
-    jobTitle: 'UX Researcher',
-    company: 'Meta',
-    logoColor: '#0668E1',
-    logoInitial: 'M',
-    appliedDate: '5 days ago',
-    salary: '$100k - $150k',
-    location: 'Menlo Park, CA',
-    status: 'reviewing'
-  },
-  {
-    id: 3,
-    jobTitle: 'UI/UX Designer',
-    company: 'Netflix',
-    logoColor: '#E50914',
-    logoInitial: 'N',
-    appliedDate: '1 week ago',
-    salary: '$110k - $160k',
-    location: 'Los Gatos, CA',
-    status: 'applied'
-  },
-  {
-    id: 4,
-    jobTitle: 'Interaction Designer',
-    company: 'Airbnb',
-    logoColor: '#FF5A5F',
-    logoInitial: 'A',
-    appliedDate: '3 days ago',
-    salary: '$115k - $170k',
-    location: 'San Francisco, CA',
-    status: 'offer'
-  },
-  {
-    id: 5,
-    jobTitle: 'Visual Designer',
-    company: 'Spotify',
-    logoColor: '#1DB954',
-    logoInitial: 'S',
-    appliedDate: '1 week ago',
-    salary: '$100k - $150k',
-    location: 'New York, NY',
-    status: 'applied'
-  },
-  {
-    id: 6,
-    jobTitle: 'Product Designer',
-    company: 'Apple',
-    logoColor: '#000000',
-    logoInitial: '',
-    appliedDate: '2 weeks ago',
-    salary: '$150k - $220k',
-    location: 'Cupertino, CA',
-    status: 'rejected'
-  },
-  {
-    id: 7,
-    jobTitle: 'UX Designer',
-    company: 'Amazon',
-    logoColor: '#FF9900',
-    logoInitial: 'A',
-    appliedDate: '4 days ago',
-    salary: '$130k - $190k',
-    location: 'Seattle, WA',
-    status: 'interview',
-    interviewType: 'test'
-  }
-];
+const API_BASE_URL = 'http://localhost:8000/api';
 
 // ============================================================================
 // CHILD COMPONENTS
@@ -157,20 +80,123 @@ const ApplicationCard = ({ application }: { application: Application }) => {
 };
 
 // ============================================================================
+// HELPER FUNCTIONS
+// ============================================================================
+
+// Convert database timestamp to relative time (e.g., "2 days ago")
+const getRelativeTime = (dateString: string): string => {
+  const date = new Date(dateString);
+  const now = new Date();
+  const diffInMs = now.getTime() - date.getTime();
+  const diffInDays = Math.floor(diffInMs / (1000 * 60 * 60 * 24));
+
+  if (diffInDays === 0) return 'Today';
+  if (diffInDays === 1) return 'Yesterday';
+  if (diffInDays < 7) return `${diffInDays} days ago`;
+  if (diffInDays < 14) return '1 week ago';
+  if (diffInDays < 30) return `${Math.floor(diffInDays / 7)} weeks ago`;
+  if (diffInDays < 60) return '1 month ago';
+  return `${Math.floor(diffInDays / 30)} months ago`;
+};
+
+// Check if interview type indicates a test
+const isTestInterview = (interviewType: string | null): boolean => {
+  if (!interviewType) return false;
+  return ['test', 'assessment'].includes(interviewType);
+};
+
+// ============================================================================
 // MAIN COMPONENT
 // ============================================================================
 
 function ApplicationPage() {
-  const [applications] = useState<Application[]>(APPLICATIONS_DATA);
+  const { accessToken, isAuthenticated, loading: authLoading } = useAuth();
+  const [applications, setApplications] = useState<Application[]>([]);
   const [activeTab, setActiveTab] = useState<string>('pipeline');
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+
+  // Fetch applications from the database
+  useEffect(() => {
+    const fetchApplications = async () => {
+      // Don't do anything if auth is still initializing
+      if (authLoading) return;
+
+      try {
+        if (!isAuthenticated || !accessToken) {
+          setError('Please login to view your applications');
+          setLoading(false);
+          return;
+        }
+
+        // Make the API call - let the backend handle authentication
+        const headers: Record<string, string> = {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${accessToken}`
+        };
+
+        const response = await fetch(`${API_BASE_URL}/applications/`, {
+          method: 'GET',
+          headers,
+          credentials: 'include'
+        });
+
+        const data = await response.json();
+
+        // Handle authentication errors
+        if (response.status === 401 || response.status === 403) {
+          setError('Your session has expired. Please login again.');
+          setLoading(false);
+          // Set a timeout to redirect to login
+          setTimeout(() => {
+            window.location.href = 'http://localhost:8000/auth/';
+          }, 3000);
+          return;
+        }
+
+        if (!response.ok) {
+          throw new Error(data.error || 'Failed to fetch applications');
+        }
+
+        if (data.success) {
+          // Transform database applications to match the Application interface
+          const transformedApps: Application[] = data.applications.map((app: any) => ({
+            id: app.id,
+            jobTitle: app.job_title,
+            company: app.company_name,
+            logoColor: app.company_logo_color || '#6366f1',
+            logoInitial: app.company_logo_initial || app.company_name.charAt(0),
+            appliedDate: getRelativeTime(app.applied_at),
+            salary: app.salary_range || 'Not specified',
+            location: app.location || 'Remote',
+            status: app.status as 'applied' | 'reviewing' | 'interview' | 'offer' | 'rejected',
+            interviewType: app.interview_type && isTestInterview(app.interview_type) ? 'test' :
+              app.status === 'interview' ? 'interview' : undefined,
+            interviewDate: app.interview_date,
+            offerDeadline: app.offer_deadline
+          }));
+
+          setApplications(transformedApps);
+        } else {
+          throw new Error(data.error || 'Failed to load applications');
+        }
+      } catch (err) {
+        console.error('Error fetching applications:', err);
+        setError(err instanceof Error ? err.message : 'Failed to load applications');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchApplications();
+  }, [isAuthenticated, accessToken, authLoading]);
 
   const getApplicationsByStatus = (status: string) => {
     return applications.filter(app => app.status === status);
   };
 
   const getTotalApplications = () => applications.length;
-  const getStatusCount = (status: string) => applications.filter(app => app.status === status).length;
-  const getActiveCount = () => applications.filter(app => app.status !== 'rejected').length;
+
 
   // Get upcoming interviews only
   const getUpcomingApplications = () => {
@@ -192,6 +218,43 @@ function ApplicationPage() {
       daysLeft: app.status === 'interview' ? '1 day' : '5 days'
     }));
   };
+
+  // Show loading state
+  if (loading) {
+    return (
+      <div className="application-page">
+        <div className="app-header">
+          <div>
+            <h1 className="app-page-title">My Applications</h1>
+            <p className="app-page-subtitle">Loading your applications...</p>
+          </div>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px' }}>
+          <p>Loading applications...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Show error state
+  if (error) {
+    return (
+      <div className="application-page">
+        <div className="app-header">
+          <div>
+            <h1 className="app-page-title">My Applications</h1>
+            <p className="app-page-subtitle">Error loading applications</p>
+          </div>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px', flexDirection: 'column', gap: '1rem' }}>
+          <p style={{ color: '#ef4444' }}>{error}</p>
+          <button onClick={() => window.location.reload()} style={{ padding: '0.5rem 1rem', borderRadius: '0.5rem', border: '1px solid #e5e7eb', background: 'white', cursor: 'pointer' }}>
+            Retry
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="application-page">
@@ -254,17 +317,7 @@ function ApplicationPage() {
           <span>Calendar</span>
           <span className="tab-badge">{getTimelineEvents().length}</span>
         </button>
-        <button
-          className={`tab-button ${activeTab === 'insights' ? 'active' : ''}`}
-          onClick={() => setActiveTab('insights')}
-        >
-          <svg className="tab-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <line x1="12" y1="20" x2="12" y2="10"></line>
-            <line x1="18" y1="20" x2="18" y2="4"></line>
-            <line x1="6" y1="20" x2="6" y2="16"></line>
-          </svg>
-          <span>Insights</span>
-        </button>
+
       </div>
 
       {/* Pipeline - Full Kanban Board */}
@@ -340,10 +393,21 @@ function ApplicationPage() {
                     </div>
                     <div className="detail-item">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <line x1="12" y1="1" x2="12" y2="23"></line>
-                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
                       </svg>
-                      <span>{app.salary}</span>
+                      <span>
+                        {app.interviewDate
+                          ? new Date(app.interviewDate).toLocaleString([], {
+                            month: 'short',
+                            day: 'numeric',
+                            hour: '2-digit',
+                            minute: '2-digit'
+                          })
+                          : 'Date TBD'}
+                      </span>
                     </div>
                   </div>
                   <div className="upcoming-actions">
@@ -378,223 +442,191 @@ function ApplicationPage() {
       {/* Calendar/Timeline - Calendar Grid View */}
       {activeTab === 'calendar' && (
         <div className="calendar-view">
-          <div className="calendar-header">
-            <h2>January 2026</h2>
-            <p>View all your upcoming interviews, tests, and deadlines</p>
-          </div>
+          {(() => {
+            const now = new Date();
+            const currentYear = now.getFullYear();
+            const currentMonth = now.getMonth(); // 0-indexed
+            const currentDay = now.getDate();
 
-          <div className="calendar-grid">
-            {/* Calendar Header - Days of Week */}
-            <div className="calendar-day-header">Sun</div>
-            <div className="calendar-day-header">Mon</div>
-            <div className="calendar-day-header">Tue</div>
-            <div className="calendar-day-header">Wed</div>
-            <div className="calendar-day-header">Thu</div>
-            <div className="calendar-day-header">Fri</div>
-            <div className="calendar-day-header">Sat</div>
+            // Get first day of month and calculate calendar grid
+            const firstDay = new Date(currentYear, currentMonth, 1);
+            const lastDay = new Date(currentYear, currentMonth + 1, 0);
+            const daysInMonth = lastDay.getDate();
+            const startingDayOfWeek = firstDay.getDay(); // 0 = Sunday
 
-            {/* Calendar Days - Week 1 */}
-            {[29, 30, 31, 1, 2, 3, 4].map((day, index) => (
-              <div key={`week1-${day}`} className={`calendar-day ${index < 3 ? 'other-month' : ''}`}>
-                <span className="day-number">{day}</span>
-              </div>
-            ))}
+            // Month names
+            const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+              'July', 'August', 'September', 'October', 'November', 'December'];
 
-            {/* Calendar Days - Week 2 */}
-            {[5, 6, 7, 8, 9, 10, 11].map((day) => (
-              <div key={`week2-${day}`} className="calendar-day">
-                <span className="day-number">{day}</span>
-              </div>
-            ))}
+            // Generate calendar days array
+            const calendarDays: Array<{ day: number; currentMonth: boolean; hasEvents: boolean; events: any[] }> = [];
 
-            {/* Calendar Days - Week 3 with Events */}
-            <div className="calendar-day">
-              <span className="day-number">12</span>
-            </div>
-            <div className="calendar-day">
-              <span className="day-number">13</span>
-            </div>
-            <div className="calendar-day">
-              <span className="day-number">14</span>
-            </div>
+            // Add previous month days
+            const prevMonthLastDay = new Date(currentYear, currentMonth, 0).getDate();
+            for (let i = startingDayOfWeek - 1; i >= 0; i--) {
+              calendarDays.push({
+                day: prevMonthLastDay - i,
+                currentMonth: false,
+                hasEvents: false,
+                events: []
+              });
+            }
 
-            {/* Day 15 - Today with Google Interview */}
-            <div className="calendar-day today has-events">
-              <span className="day-number">15</span>
-              <div className="day-events">
-                <motion.div
-                  className="calendar-event interview"
-                  whileHover={{ scale: 1.02 }}
-                  onClick={() => { }}
-                >
-                  <div className="event-time">2:00 PM</div>
-                  <div className="event-title">Google Interview</div>
-                  <div className="event-type">💼 Interview</div>
-                </motion.div>
-              </div>
-            </div>
+            // Add current month days and check for events
+            for (let day = 1; day <= daysInMonth; day++) {
+              const events: any[] = [];
 
-            {/* Day 16 - Amazon Test */}
-            <div className="calendar-day has-events">
-              <span className="day-number">16</span>
-              <div className="day-events">
-                <motion.div
-                  className="calendar-event test"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <div className="event-time">10:00 AM</div>
-                  <div className="event-title">Amazon Assessment</div>
-                  <div className="event-type">📝 Test</div>
-                </motion.div>
-              </div>
-            </div>
+              // Check each application for events on this day
+              applications.forEach(app => {
+                // For interviews: use actual date or fallback to calculated date
+                if (app.status === 'interview') {
+                  let eventDate: Date;
 
-            <div className="calendar-day">
-              <span className="day-number">17</span>
-            </div>
-            <div className="calendar-day">
-              <span className="day-number">18</span>
-            </div>
+                  if (app.interviewDate) {
+                    eventDate = new Date(app.interviewDate);
+                  } else {
+                    // Skip if no explicit date
+                    return;
+                  }
 
-            {/* Calendar Days - Week 4 */}
-            <div className="calendar-day">
-              <span className="day-number">19</span>
-            </div>
+                  if (eventDate.getDate() === day &&
+                    eventDate.getMonth() === currentMonth &&
+                    eventDate.getFullYear() === currentYear) {
 
-            {/* Day 20 - Airbnb Offer Deadline */}
-            <div className="calendar-day has-events">
-              <span className="day-number">20</span>
-              <div className="day-events">
-                <motion.div
-                  className="calendar-event offer"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <div className="event-time">Deadline</div>
-                  <div className="event-title">Airbnb Offer</div>
-                  <div className="event-type">🎁 Respond</div>
-                </motion.div>
-              </div>
-            </div>
+                    // Format time from the date object
+                    const timeStr = eventDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
-            {[21, 22, 23, 24, 25].map((day) => (
-              <div key={`week4-${day}`} className="calendar-day">
-                <span className="day-number">{day}</span>
-              </div>
-            ))}
+                    events.push({
+                      type: app.interviewType === 'test' ? 'test' : 'interview',
+                      title: `${app.company} ${app.interviewType === 'test' ? 'Assessment' : 'Interview'}`,
+                      time: timeStr,
+                      application: app
+                    });
+                  }
+                }
 
-            {/* Calendar Days - Week 5 */}
-            {[26, 27, 28, 29, 30, 31, 1].map((day, index) => (
-              <div key={`week5-${day}`} className={`calendar-day ${index === 6 ? 'other-month' : ''}`}>
-                <span className="day-number">{day}</span>
-              </div>
-            ))}
-          </div>
+                // For offers: use actual deadline
+                if (app.status === 'offer') {
+                  let eventDate: Date;
 
-          {/* Legend */}
-          <div className="calendar-legend">
-            <div className="legend-item">
-              <div className="legend-dot interview"></div>
-              <span>Interview</span>
-            </div>
-            <div className="legend-item">
-              <div className="legend-dot test"></div>
-              <span>Assessment</span>
-            </div>
-            <div className="legend-item">
-              <div className="legend-dot offer"></div>
-              <span>Offer Deadline</span>
-            </div>
-          </div>
-        </div>
-      )}
+                  if (app.offerDeadline) {
+                    eventDate = new Date(app.offerDeadline);
+                  } else {
+                    // Skip if no explicit date
+                    return;
+                  }
 
-      {/* Insights - Statistics View */}
-      {activeTab === 'insights' && (
-        <div className="statistics-view">
-          <div className="stats-grid">
-            <div className="stat-card">
-              <div className="stat-card-header">
-                <h3>Total Applications</h3>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6366f1" strokeWidth="2">
-                  <rect x="3" y="3" width="7" height="7"></rect>
-                  <rect x="14" y="3" width="7" height="7"></rect>
-                  <rect x="14" y="14" width="7" height="7"></rect>
-                  <rect x="3" y="14" width="7" height="7"></rect>
-                </svg>
-              </div>
-              <div className="stat-card-value">{getTotalApplications()}</div>
-              <div className="stat-card-label">Applications submitted</div>
-            </div>
+                  if (eventDate.getDate() === day &&
+                    eventDate.getMonth() === currentMonth &&
+                    eventDate.getFullYear() === currentYear) {
+                    events.push({
+                      type: 'offer',
+                      title: `${app.company} Offer`,
+                      time: 'Deadline',
+                      application: app
+                    });
+                  }
+                }
+              });
 
-            <div className="stat-card">
-              <div className="stat-card-header">
-                <h3>Active</h3>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                </svg>
-              </div>
-              <div className="stat-card-value">{getActiveCount()}</div>
-              <div className="stat-card-label">In progress</div>
-            </div>
+              calendarDays.push({
+                day,
+                currentMonth: true,
+                hasEvents: events.length > 0,
+                events
+              });
+            }
 
-            <div className="stat-card">
-              <div className="stat-card-header">
-                <h3>Interviews</h3>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" strokeWidth="2">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-              </div>
-              <div className="stat-card-value">{getStatusCount('interview')}</div>
-              <div className="stat-card-label">Scheduled interviews</div>
-            </div>
+            // Add next month days to complete the grid
+            const remainingDays = 42 - calendarDays.length; // 6 weeks * 7 days
+            for (let day = 1; day <= remainingDays; day++) {
+              calendarDays.push({
+                day,
+                currentMonth: false,
+                hasEvents: false,
+                events: []
+              });
+            }
 
-            <div className="stat-card">
-              <div className="stat-card-header">
-                <h3>Offers</h3>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-              </div>
-              <div className="stat-card-value">{getStatusCount('offer')}</div>
-              <div className="stat-card-label">Job offers received</div>
-            </div>
-          </div>
+            return (
+              <>
+                <div className="calendar-header">
+                  <h2>{monthNames[currentMonth]} {currentYear}</h2>
+                  <p>View all your upcoming interviews, tests, and deadlines</p>
+                </div>
 
-          <div className="status-breakdown">
-            <h3 className="breakdown-title">Application Status Breakdown</h3>
-            <div className="breakdown-list">
-              {STATUS_COLUMNS.map((column) => {
-                const count = getStatusCount(column.id);
-                const percentage = getTotalApplications() > 0
-                  ? Math.round((count / getTotalApplications()) * 100)
-                  : 0;
-                return (
-                  <div key={column.id} className="breakdown-item">
-                    <div className="breakdown-info">
-                      <span className="breakdown-label">{column.title}</span>
-                      <span className="breakdown-count">{count} applications</span>
-                    </div>
-                    <div className="breakdown-bar-container">
+                <div className="calendar-grid">
+                  {/* Calendar Header - Days of Week */}
+                  <div className="calendar-day-header">Sun</div>
+                  <div className="calendar-day-header">Mon</div>
+                  <div className="calendar-day-header">Tue</div>
+                  <div className="calendar-day-header">Wed</div>
+                  <div className="calendar-day-header">Thu</div>
+                  <div className="calendar-day-header">Fri</div>
+                  <div className="calendar-day-header">Sat</div>
+
+                  {/* Calendar Days */}
+                  {calendarDays.map((dayInfo, index) => {
+                    const isToday = dayInfo.currentMonth &&
+                      dayInfo.day === currentDay &&
+                      currentMonth === now.getMonth();
+
+                    return (
                       <div
-                        className="breakdown-bar"
-                        style={{
-                          width: `${percentage}%`,
-                          backgroundColor: column.color
-                        }}
-                      ></div>
-                    </div>
-                    <span className="breakdown-percentage">{percentage}%</span>
+                        key={`day-${index}`}
+                        className={`calendar-day 
+                          ${!dayInfo.currentMonth ? 'other-month' : ''} 
+                          ${isToday ? 'today' : ''} 
+                          ${dayInfo.hasEvents ? 'has-events' : ''}`}
+                      >
+                        <span className="day-number">{dayInfo.day}</span>
+                        {dayInfo.hasEvents && (
+                          <div className="day-events">
+                            {dayInfo.events.map((event, eventIndex) => (
+                              <motion.div
+                                key={`event-${index}-${eventIndex}`}
+                                className={`calendar-event ${event.type}`}
+                                whileHover={{ scale: 1.02 }}
+                                title={`${event.title} - ${event.time}`}
+                              >
+                                <div className="event-time">{event.time}</div>
+                                <div className="event-title">{event.title}</div>
+                                <div className="event-type">
+                                  {event.type === 'interview' ? '💼 Interview' :
+                                    event.type === 'test' ? '📝 Test' :
+                                      '🎁 Respond'}
+                                </div>
+                              </motion.div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Legend */}
+                <div className="calendar-legend">
+                  <div className="legend-item">
+                    <div className="legend-dot interview"></div>
+                    <span>Interview</span>
                   </div>
-                );
-              })}
-            </div>
-          </div>
+                  <div className="legend-item">
+                    <div className="legend-dot test"></div>
+                    <span>Assessment</span>
+                  </div>
+                  <div className="legend-item">
+                    <div className="legend-dot offer"></div>
+                    <span>Offer Deadline</span>
+                  </div>
+                </div>
+              </>
+            );
+          })()}
         </div>
       )}
+
+
     </div>
   );
 }

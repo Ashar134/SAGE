@@ -216,6 +216,43 @@
     margin: 0;
 }
 
+/* Bookmark Button in Job Item */
+.job-item .btn-bookmark {
+    background: #f3f4f6;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #374151;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.job-item .btn-bookmark:hover {
+    background: #e5e7eb;
+    transform: scale(1.05);
+}
+
+.job-item .btn-bookmark.bookmarked {
+    background: rgba(0, 102, 204, 0.1);
+    color: #0066cc;
+}
+
+.job-item .btn-bookmark.bookmarked:hover {
+    background: rgba(0, 102, 204, 0.15);
+}
+
+.job-item .btn-bookmark svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
 .job-item-meta {
     display: flex;
     gap: 10px;

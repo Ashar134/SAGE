@@ -57,7 +57,7 @@
     "key": "128-bit address scheme supporting more addresses",
     "justification": "IPv6 addresses IPv4 exhaustion",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 9
   },
   {
     "type": "easy",
@@ -102,7 +102,7 @@
     "key": "Protocol for transferring web pages and data",
     "justification": "HTTP is web protocol",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "easy",
@@ -132,7 +132,7 @@
     "key": "Protocol for automatic IP address assignment",
     "justification": "DHCP automates IP configuration",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 7
   },
   {
     "type": "easy",
@@ -147,7 +147,7 @@
     "key": "Device that forwards packets between networks",
     "justification": "Routers connect and route between networks",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 6
   },
   {
     "type": "easy",
@@ -207,7 +207,7 @@
     "key": "Unit of data transmitted over network",
     "justification": "Packets are fundamental data units",
     "justified_by": "Perplexity",
-    "frequency": 13
+    "frequency": 14
   },
   {
     "type": "easy",
@@ -237,7 +237,7 @@
     "key": "Technique to map private IP addresses to public address",
     "justification": "NAT enables address translation",
     "justified_by": "Perplexity",
-    "frequency": 13
+    "frequency": 14
   },
   {
     "type": "easy",
@@ -267,7 +267,7 @@
     "key": "Utility to test host reachability using ICMP",
     "justification": "Ping tests network connectivity",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 7
   },
   {
     "type": "easy",
@@ -327,7 +327,7 @@
     "key": "Division of network into smaller networks",
     "justification": "Subnetting organizes networks",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 9
   },
   {
     "type": "easy",
@@ -477,7 +477,7 @@
     "key": "Wide Area Network spanning large geographic areas",
     "justification": "WAN spans multiple locations",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "easy",
@@ -552,7 +552,7 @@
     "key": "Set of rules for network communication",
     "justification": "Protocols define communication rules",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 6
   },
   {
     "type": "easy",
@@ -642,7 +642,7 @@
     "key": "Mechanisms ensuring performance levels for network traffic",
     "justification": "QoS maintains service levels",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 12
   },
   {
     "type": "easy",
@@ -747,7 +747,7 @@
     "key": "Resending lost or damaged packets",
     "justification": "Retransmission recovers lost packets",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 5
   },
   {
     "type": "easy",
@@ -852,7 +852,7 @@
     "key": "Process of determining path for data packets",
     "justification": "Routing determines packet path",
     "justified_by": "Perplexity",
-    "frequency": 13
+    "frequency": 14
   },
   {
     "type": "medium",
@@ -972,7 +972,7 @@
     "key": "Interface for network communication in applications",
     "justification": "Socket API enables network programming",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -1002,7 +1002,7 @@
     "key": "Distributed Denial of Service attack",
     "justification": "DDoS overwhelms network",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -1047,7 +1047,7 @@
     "key": "Control information containing addressing info",
     "justification": "IP header contains protocol information",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "medium",
@@ -1062,7 +1062,7 @@
     "key": "Forwards packets using forwarding table",
     "justification": "Data plane handles packet forwarding",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -1152,7 +1152,7 @@
     "key": "Network under single administrative control",
     "justification": "AS is routing domain",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -1302,7 +1302,7 @@
     "key": "Process establishing secure connection",
     "justification": "Handshake negotiates security",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 9
   },
   {
     "type": "medium",
@@ -1347,7 +1347,7 @@
     "key": "Extensions securing DNS responses",
     "justification": "DNSSEC validates DNS",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -1407,7 +1407,7 @@
     "key": "Protocol enabling SDN control",
     "justification": "OpenFlow implements SDN",
     "justified_by": "Perplexity",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "medium",
@@ -1527,7 +1527,7 @@
     "key": "Finding shortest path in networks",
     "justification": "Dijkstra finds optimal routes",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 11
   },
   {
     "type": "hard",
@@ -1587,7 +1587,7 @@
     "key": "TCP parameter controlling transmission",
     "justification": "cwnd manages flow",
     "justified_by": "Perplexity",
-    "frequency": 14
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -1782,7 +1782,7 @@
     "key": "Finding hops to destination",
     "justification": "Traceroute reveals path",
     "justified_by": "Perplexity",
-    "frequency": 14
+    "frequency": 15
   },
   {
     "type": "hard",
@@ -1887,7 +1887,7 @@
     "key": "Function computing link cost",
     "justification": "Cost guides routing",
     "justified_by": "Perplexity",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -1902,7 +1902,7 @@
     "key": "Combining multiple routes into one",
     "justification": "Aggregation reduces table size",
     "justified_by": "Perplexity",
-    "frequency": 4
+    "frequency": 5
   },
   {
     "type": "hard",
@@ -1992,7 +1992,7 @@
     "key": "Enforcing traffic rate limit",
     "justification": "Policing limits traffic",
     "justified_by": "Perplexity",
-    "frequency": 15
+    "frequency": 16
   },
   {
     "type": "hard",
@@ -2007,7 +2007,7 @@
     "key": "Buffering excess traffic",
     "justification": "Shaping smooths traffic",
     "justified_by": "Perplexity",
-    "frequency": 12
+    "frequency": 13
   },
   {
     "type": "hard",
@@ -2052,7 +2052,7 @@
     "key": "Computing expected round-trip time",
     "justification": "RTT estimation critical for TCP",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 11
   },
   {
     "type": "hard",
@@ -2142,7 +2142,7 @@
     "key": "Retransmitting on 3 duplicate ACKs",
     "justification": "Fast retransmit recovers quickly",
     "justified_by": "Perplexity",
-    "frequency": 12
+    "frequency": 13
   },
   {
     "type": "hard",
@@ -2157,7 +2157,7 @@
     "key": "Bytes receiver can accept",
     "justification": "rwnd controls flow",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 7
   },
   {
     "type": "easy",
@@ -2292,7 +2292,7 @@
     "key": "Session Description Protocol",
     "justification": "SDP describes multimedia sessions",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -2306,7 +2306,7 @@
     },
     "key": "Protocol for establishing multimedia sessions",
     "justified_by": "Perplexity",
-    "frequency": 5
+    "frequency": 6
   },
   {
     "type": "medium",
@@ -2681,7 +2681,7 @@
     "key": "Marking packets to signal congestion",
     "justification": "ECN signals without dropping",
     "justified_by": "Perplexity",
-    "frequency": 13
+    "frequency": 14
   },
   {
     "type": "hard",
@@ -2771,7 +2771,7 @@
     "key": "TCP modeling network as pipe",
     "justification": "BBR novel approach",
     "justified_by": "Perplexity",
-    "frequency": 8
+    "frequency": 9
   },
   {
     "type": "hard",
@@ -2801,7 +2801,7 @@
     "key": "Maximum window size to use link fully",
     "justification": "BDP determines window",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 7
   },
   {
     "type": "hard",
@@ -2816,7 +2816,7 @@
     "key": "Splitting datagram for transmission",
     "justification": "Fragmentation handles MTU",
     "justified_by": "Perplexity",
-    "frequency": 6
+    "frequency": 7
   },
   {
     "type": "hard",
@@ -2876,7 +2876,7 @@
     "key": "Protocol for device discovery and control",
     "justification": "UPnP simplifies setup",
     "justified_by": "Perplexity",
-    "frequency": 10
+    "frequency": 11
   },
   {
     "type": "easy",
@@ -2921,7 +2921,7 @@
     "key": "Process locating network services",
     "justification": "Discovery enables service access",
     "justified_by": "Perplexity",
-    "frequency": 12
+    "frequency": 13
   },
   {
     "type": "medium",

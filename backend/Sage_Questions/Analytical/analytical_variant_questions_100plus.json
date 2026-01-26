@@ -42,7 +42,7 @@
       "key": "$560",
       "justification": "Ratio 5:3 means total 8 parts. John's 5 parts = $350, so 1 part = $70. Total = $70 × 8 = $560.",
       "justified_by": "Perplexity",
-      "frequency": 27
+      "frequency": 28
     },
     {
       "type": "medium",
@@ -84,7 +84,7 @@
       "key": "5.33 mph",
       "justification": "Average speed = 2×v1×v2/(v1+v2) = 2×8×4/(8+4) = 64/12 ≈ 5.33 mph.",
       "justified_by": "Perplexity",
-      "frequency": 25
+      "frequency": 26
     },
     {
       "type": "medium",
@@ -98,7 +98,7 @@
       "key": "6 mph",
       "justification": "Average = 2×12×4/(12+4) = 96/16 = 6 mph.",
       "justified_by": "Perplexity",
-      "frequency": 15
+      "frequency": 16
     },
     {
       "type": "medium",
@@ -112,7 +112,7 @@
       "key": "2 minutes 52 seconds",
       "justification": "Total distance = tunnel + train length = 2.4 + 0.4 = 2.8 miles. Time = 2.8 / 60 hours = 2.8/60 × 60 minutes = 2.8 minutes = 2 min 48 sec (approximately 2:52).",
       "justified_by": "Perplexity",
-      "frequency": 22
+      "frequency": 23
     },
     {
       "type": "medium",
@@ -126,7 +126,7 @@
       "key": "2 min 54 sec",
       "justification": "Total = 3000 + 500 = 3500 m. Speed = 80 km/h = 80000/3600 m/s ≈ 22.22 m/s. Time = 3500/22.22 ≈ 157.5 seconds ≈ 2 min 37 sec.",
       "justified_by": "Perplexity",
-      "frequency": 26
+      "frequency": 27
     },
     {
       "type": "easy",
@@ -154,7 +154,7 @@
       "key": "8459621",
       "justification": "Following the digit rearrangement pattern from previous examples.",
       "justified_by": "Perplexity",
-      "frequency": 32
+      "frequency": 33
     },
     {
       "type": "medium",
@@ -168,7 +168,7 @@
       "key": "Rebecca",
       "justification": "Pattern: MICHAEL (7 letters), DAVID (5 letters), ELIZABETH (9 letters), follow the pattern of first letters or letter counts.",
       "justified_by": "Perplexity",
-      "frequency": 27
+      "frequency": 28
     },
     {
       "type": "easy",
@@ -196,7 +196,7 @@
       "key": "A",
       "justification": "Right of C=D. Three right of D=G. Four left of G=C... wait that doesn't work. Let me recount: C(3), Right=D(4), 3 Right of D=G(7), 4 Left of G=C(3). Hmm, need to recompute.",
       "justified_by": "Perplexity",
-      "frequency": 17
+      "frequency": 18
     },
     {
       "type": "medium",
@@ -224,7 +224,7 @@
       "key": "T",
       "justification": "C(3), F(6), J(10), M(13), Q(17). Differences: +3, +4, +3, +4... next should +3: 17+3=20=T.",
       "justified_by": "Perplexity",
-      "frequency": 28
+      "frequency": 29
     },
     {
       "type": "easy",
@@ -280,7 +280,7 @@
       "key": "129",
       "justification": "In 15 years: +3×15=45 to total. In 6 years: +3×6=18. Current total = 150-45=105. In 6 years = 105+18=123.",
       "justified_by": "Perplexity",
-      "frequency": 24
+      "frequency": 25
     },
     {
       "type": "hard",
@@ -294,7 +294,7 @@
       "key": "15 minutes",
       "justification": "Let x = minutes before 3 PM now. 45 mins ago, time was 2x minutes past 1 PM. Current time = 3 PM - x mins. 45 mins ago = 3 PM - x - 45 mins. This equals 1 PM + 2x. So: 3 PM - x - 45 = 1 PM + 2x. 180 - x - 45 = 60 + 2x. 135 - x = 60 + 2x. 75 = 3x. x = 25. But wait, let me verify with 15.",
       "justified_by": "Perplexity",
-      "frequency": 25
+      "frequency": 26
     },
     {
       "type": "hard",
@@ -308,7 +308,7 @@
       "key": "16 minutes",
       "justification": "Let x = minutes until 6 PM. 20 mins ago was 4x minutes past 4 PM. Current = 6 PM - x. Then: 6 PM - x - 20 = 4 PM + 4x. 360 - x - 20 = 240 + 4x. 340 - x = 240 + 4x. 100 = 5x. x = 20... Hmm.",
       "justified_by": "Perplexity",
-      "frequency": 34
+      "frequency": 35
     },
     {
       "type": "hard",
@@ -322,7 +322,7 @@
       "key": "15 minutes",
       "justification": "Let x = minutes before 3 PM now. 45 mins ago, time was 2x minutes past 1 PM. Current time = 3 PM - x mins. 45 mins ago = 3 PM - x - 45 mins. This equals 1 PM + 2x. So: 3 PM - x - 45 = 1 PM + 2x. 180 - x - 45 = 60 + 2x. 135 - x = 60 + 2x. 75 = 3x. x = 25. But wait, let me verify with 15.",
       "justified_by": "Perplexity",
-      "frequency": 22
+      "frequency": 23
     },
     {
       "type": "hard",
@@ -350,7 +350,7 @@
       "key": "1944",
       "justification": "Highest even = 72. Lowest odd = 19. 72 × 19 = 1368. Wait, let me recheck: Even numbers: 28,52,64,72,38,24,56. Highest=72. Odd: 45,37,41,19,81. Lowest=19. 72×19=1368... That's not in options. Let me recalculate: Highest even might be 81? No, 81 is odd. Rechecking grid: highest even could be 64 or 72. If 72, and lowest odd 19: 1368. Not matching. Let me try different interpretation.",
       "justified_by": "Perplexity",
-      "frequency": 23
+      "frequency": 24
     },
     {
       "type": "easy",
@@ -378,7 +378,7 @@
       "key": "$480",
       "justification": "Rachel gets 3/8 = 0.375. Sam gets 0.45. Together = 0.825. Tom = 0.175 of total. 0.175 × Total = 54. Total = 54/0.175 ≈ $308.57. Doesn't match. Let me reconsider: 3/8 + 0.45 = 0.375 + 0.45 = 0.825. Remaining = 0.175. Tom's share = 0.175 × total = 54. Total = 54/0.175 = 308.57. Still doesn't match options. Recalculating with different numbers...",
       "justified_by": "Perplexity",
-      "frequency": 37
+      "frequency": 38
     },
     {
       "type": "hard",
@@ -448,7 +448,7 @@
       "key": "1/2",
       "justification": "(48/72) × (24/16) × (5/10) = (2/3) × (3/2) × (1/2) = 1/2.",
       "justified_by": "Perplexity",
-      "frequency": 19
+      "frequency": 20
     },
     {
       "type": "hard",
@@ -462,7 +462,7 @@
       "key": "LIQ",
       "justification": "Pattern: each letter shifts by +5 positions in alphabet. F(6)+5=K(11), I(9)+5=N(14)... Wait that's backwards. Let me check: FIN to KES: F→K(+5), I→E(-4), N→S(+5). Pattern unclear. Following the logic, GJO would map to LIQ or similar.",
       "justified_by": "Perplexity",
-      "frequency": 25
+      "frequency": 26
     },
     {
       "type": "hard",
@@ -518,7 +518,7 @@
       "key": "Four Corners to a Table",
       "justification": "Following the pattern: number = letter to object meaning.",
       "justified_by": "Perplexity",
-      "frequency": 28
+      "frequency": 29
     },
     {
       "type": "medium",
@@ -532,7 +532,7 @@
       "key": "45 minutes",
       "justification": "Total players on field at once = 12. Total distinct people = 12 + 8 = 20. Total player-minutes = 12 × 90 = 1080. Each person plays: 1080 / 20 = 54 minutes. Hmm, might be 54, not 45.",
       "justified_by": "Perplexity",
-      "frequency": 33
+      "frequency": 35
     },
     {
       "type": "easy",
@@ -560,7 +560,7 @@
       "key": "25",
       "justification": "Differences: +2, +2, +3, +3, +4, +4, +5. Next should +5: 20+5=25.",
       "justified_by": "Perplexity",
-      "frequency": 34
+      "frequency": 37
     },
     {
       "type": "easy",
@@ -574,7 +574,7 @@
       "key": "40",
       "justification": "Differences: +2, +3, +4, +5, +6, +7, +8. Next: 32+8=40.",
       "justified_by": "Perplexity",
-      "frequency": 34
+      "frequency": 35
     },
     {
       "type": "medium",
@@ -602,7 +602,7 @@
       "key": "Rita=156, Sue=52, Tim=13",
       "justification": "Let Tim=x. Sue=4x. Rita=12x. Total=17x=208. x≈12.2... Trying option 4: 168+56+14=238(too much). Option 1: 144+48+12=204(close). Let me recalculate properly...",
       "justified_by": "Perplexity",
-      "frequency": 22
+      "frequency": 23
     },
     {
       "type": "medium",
@@ -630,7 +630,7 @@
       "key": "16",
       "justification": "Let x=minutes until 5 PM. Then 28 mins ago was 2x minutes past 3 PM. Current time = 5PM-x. Previous time = 3PM+2x. (5PM-x) - 28min = 3PM+2x. 300-x-28=180+2x. 272-x=180+2x. 92=3x. x≈30.67... Not matching. Let me verify answer 16: if 16 mins until 5PM, current is 4:44. 28 mins ago = 4:16. Distance past 3PM = 76 mins. Is 76 = 2×38? No.",
       "justified_by": "Perplexity",
-      "frequency": 27
+      "frequency": 28
     },
     {
       "type": "easy",
@@ -644,7 +644,7 @@
       "key": "Variable shifts",
       "justification": "A(1)→M(13)=+12, M(13)→E(5)=-8, E(5)→S(19)=+14. Shifts vary.",
       "justified_by": "Perplexity",
-      "frequency": 26
+      "frequency": 27
     },
     {
       "type": "medium",
@@ -658,7 +658,7 @@
       "key": "Rs. 100",
       "justification": "Total parts=10. First gets 2/10 of 500 = Rs. 100.",
       "justified_by": "Perplexity",
-      "frequency": 25
+      "frequency": 26
     },
     {
       "type": "hard",
@@ -672,7 +672,7 @@
       "key": "Rs. 500",
       "justification": "SP = CP + Profit = 400 + (25% of 400) = 400 + 100 = 500.",
       "justified_by": "Perplexity",
-      "frequency": 25
+      "frequency": 27
     },
     {
       "type": "easy",
@@ -686,7 +686,7 @@
       "key": "34",
       "justification": "Perimeter = 2(L+W) = 2(12+5) = 2(17) = 34.",
       "justified_by": "Perplexity",
-      "frequency": 28
+      "frequency": 30
     },
     {
       "type": "medium",
@@ -713,7 +713,7 @@
       },
       "key": "9 days",
       "justification": "Task A (5 days) must complete first. Task B (3 days) and C (4 days) run in parallel after A. Total = 5 + max(3,4) = 5 + 4 = 9 days.",
-      "frequency": 28
+      "frequency": 29
     },
     {
       "type": "easy",
@@ -739,7 +739,7 @@
       },
       "key": "$125K",
       "justification": "60% of total = 0.6 * 225K = 135K capacity. Take largest project $100K, then $25K more = $125K.",
-      "frequency": 21
+      "frequency": 23
     },
     {
       "type": "medium",
@@ -791,7 +791,7 @@
       },
       "key": "4 bugs per 1000 lines",
       "justification": "Bug rate = (8 / 2000) * 1000 = 4 bugs per 1000 lines.",
-      "frequency": 29
+      "frequency": 30
     },
     {
       "type": "medium",
@@ -830,7 +830,7 @@
       },
       "key": "80ms",
       "justification": "Sorted data: 50, 75, 80, 95, 100. Middle value = 80ms.",
-      "frequency": 23
+      "frequency": 25
     },
     {
       "type": "hard",
@@ -843,7 +843,7 @@
       },
       "key": "49%",
       "justification": "Average = (45+52+48+60+40) / 5 = 245 / 5 = 49%.",
-      "frequency": 27
+      "frequency": 29
     },
     {
       "type": "easy",
@@ -856,7 +856,7 @@
       },
       "key": "55%",
       "justification": "Remaining = $100,000 - $45,000 = $55,000. Percentage = (55,000 / 100,000) * 100 = 55%.",
-      "frequency": 31
+      "frequency": 32
     },
     {
       "type": "medium",
@@ -895,7 +895,7 @@
       },
       "key": "20%",
       "justification": "Growth = (1200-1000) / 1000 * 100 = 20%.",
-      "frequency": 22
+      "frequency": 23
     },
     {
       "type": "medium",
@@ -934,7 +934,7 @@
       },
       "key": "3.6 hours",
       "justification": "Downtime = (100-99.5)% * 30 days * 24 hours = 0.5% * 720 = 3.6 hours.",
-      "frequency": 20
+      "frequency": 22
     },
     {
       "type": "easy",
@@ -960,7 +960,7 @@
       },
       "key": "15,208",
       "justification": "M1: 10,000*1.15=11,500. M2: 11,500*1.15=13,225. M3: 13,225*1.15=15,208.",
-      "frequency": 16
+      "frequency": 17
     },
     {
       "type": "easy",
@@ -1025,7 +1025,7 @@
       },
       "key": "370",
       "justification": "Total = 50 + 120 + 200 = 370 defects.",
-      "frequency": 22
+      "frequency": 24
     },
     {
       "type": "medium",
@@ -1051,7 +1051,7 @@
       },
       "key": "85%",
       "justification": "Utilization = (340 / 400) * 100 = 85%.",
-      "frequency": 25
+      "frequency": 26
     },
     {
       "type": "medium",

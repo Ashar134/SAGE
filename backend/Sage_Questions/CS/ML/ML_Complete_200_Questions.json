@@ -95,7 +95,7 @@
     },
     "key": "Measure of impurity or disorder in data",
     "justification": "Entropy quantifies data homogeneity",
-    "frequency": 6
+    "frequency": 7
   },
   {
     "type": "medium",
@@ -333,7 +333,7 @@
     },
     "key": "Unsupervised technique finding principal components of variance",
     "justification": "PCA is standard dimensionality reduction method",
-    "frequency": 14
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -347,7 +347,7 @@
     },
     "key": "Balance between model underfitting (high bias) and overfitting (high variance)",
     "justification": "Bias-variance tradeoff is fundamental ML concept",
-    "frequency": 14
+    "frequency": 15
   },
   {
     "type": "medium",
@@ -403,7 +403,7 @@
     },
     "key": "Ensemble method building trees sequentially using gradient descent",
     "justification": "Gradient boosting is highly effective ensemble method",
-    "frequency": 15
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -431,7 +431,7 @@
     },
     "key": "Adding penalty proportional to absolute weight values",
     "justification": "L1 (Lasso) encourages sparsity",
-    "frequency": 6
+    "frequency": 7
   },
   {
     "type": "medium",
@@ -459,7 +459,7 @@
     },
     "key": "Combining L1 and L2 regularization",
     "justification": "Elastic net combines benefits of Lasso and Ridge",
-    "frequency": 10
+    "frequency": 11
   },
   {
     "type": "medium",
@@ -501,7 +501,7 @@
     },
     "key": "Converting categorical variables to binary vectors",
     "justification": "One-hot encoding handles categorical features",
-    "frequency": 6
+    "frequency": 7
   },
   {
     "type": "medium",
@@ -515,7 +515,7 @@
     },
     "key": "Assigning integer values to categorical variables",
     "justification": "Label encoding for ordinal categories",
-    "frequency": 12
+    "frequency": 13
   },
   {
     "type": "medium",
@@ -683,7 +683,7 @@
     },
     "key": "Output of convolution filter representing detected features",
     "justification": "Feature maps detect image patterns",
-    "frequency": 15
+    "frequency": 16
   },
   {
     "type": "medium",
@@ -823,7 +823,7 @@
     },
     "key": "Allowing gradients to bypass layers, enabling very deep networks",
     "justification": "Skip connections solve vanishing gradient",
-    "frequency": 17
+    "frequency": 18
   },
   {
     "type": "hard",
@@ -921,7 +921,7 @@
     },
     "key": "Iterative algorithm for maximum likelihood estimation with hidden variables",
     "justification": "EM is fundamental in probabilistic learning",
-    "frequency": 10
+    "frequency": 11
   },
   {
     "type": "hard",
@@ -935,7 +935,7 @@
     },
     "key": "Finding parameters that maximize probability of observed data",
     "justification": "MLE is fundamental statistical principle",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -963,7 +963,7 @@
     },
     "key": "Approximate Bayesian inference using optimization",
     "justification": "Variational inference scales to large data",
-    "frequency": 6
+    "frequency": 7
   },
   {
     "type": "hard",
@@ -977,7 +977,7 @@
     },
     "key": "Model learning joint distribution P(X,Y) to generate samples",
     "justification": "Generative models can create new data",
-    "frequency": 6
+    "frequency": 7
   },
   {
     "type": "hard",
@@ -1033,7 +1033,7 @@
     },
     "key": "Learning how to learn, quickly adapting to new tasks",
     "justification": "Meta-learning enables few-shot learning",
-    "frequency": 9
+    "frequency": 10
   },
   {
     "type": "hard",
@@ -1047,7 +1047,7 @@
     },
     "key": "Learning new tasks from very limited labeled examples",
     "justification": "Few-shot learning mimics human learning",
-    "frequency": 12
+    "frequency": 13
   },
   {
     "type": "hard",
@@ -1061,7 +1061,7 @@
     },
     "key": "Recognizing unseen classes using semantic information",
     "justification": "Zero-shot learning requires external knowledge",
-    "frequency": 10
+    "frequency": 11
   },
   {
     "type": "hard",
@@ -1313,7 +1313,7 @@
     },
     "key": "Learning incrementally from streaming data",
     "justification": "Online learning handles continuous data streams",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "hard",
@@ -1327,7 +1327,7 @@
     },
     "key": "Creating variations of text to improve robustness",
     "justification": "Text augmentation improves generalization",
-    "frequency": 7
+    "frequency": 8
   },
   {
     "type": "hard",

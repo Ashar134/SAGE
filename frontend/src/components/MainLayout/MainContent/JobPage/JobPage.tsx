@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useSavedJobs } from '../../../../contexts/SavedJobsContext';
+import { useAuth } from '../../../../contexts/AuthContext';
 import './JobPage.css';
 
 // ============================================================================
@@ -7,7 +9,7 @@ import './JobPage.css';
 // ============================================================================
 
 interface Job {
-  id: number;
+  id: number | string;
   title: string;
   company: string;
   location: string;
@@ -21,109 +23,114 @@ interface Job {
   saved?: boolean;
 }
 
-// ============================================================================
-// DATA
-// ============================================================================
+// Helper for date formatting
+const formatPostedDate = (dateString: string): string => {
+  const date = new Date(dateString);
+  const now = new Date();
+  const diffTime = Math.abs(now.getTime() - date.getTime());
+  const days = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 
-const JOBS: Job[] = [
-  {
-    id: 1,
-    title: 'Senior Product Designer',
-    company: 'Google',
-    location: 'Mountain View, CA',
-    posted: '2d',
-    type: 'Full-time',
-    salary: '$120k - $180k',
-    description: 'We are looking for a talented Product Designer to join our team and help shape the future of our products.',
-    requirements: [
-      '5+ years of product design experience',
-      'Strong portfolio demonstrating UX/UI skills',
-      'Proficiency in Figma or similar tools',
-      'Experience with design systems',
-      'Excellent communication skills'
-    ],
-    logoColor: '#4285f4',
-    logoText: 'G',
-    saved: true
-  },
-  {
-    id: 2,
-    title: 'UX Researcher',
-    company: 'Meta',
-    location: 'Menlo Park, CA',
-    posted: '1w',
-    type: 'Full-time',
-    salary: '$100k - $150k',
-    description: 'Join our UX Research team to uncover insights that drive product innovation.',
-    requirements: [
-      '3+ years of UX research experience',
-      'Experience with qualitative methods',
-      'Strong analytical skills',
-      'Bachelor\'s degree in HCI or related field'
-    ],
-    logoColor: '#0668E1',
-    logoText: 'M'
-  },
-  {
-    id: 3,
-    title: 'UI/UX Designer',
-    company: 'Netflix',
-    location: 'Los Gatos, CA',
-    posted: '3d',
-    type: 'Full-time',
-    salary: '$110k - $160k',
-    description: 'Design experiences that entertain millions worldwide.',
-    requirements: [
-      '4+ years of UI/UX design experience',
-      'Strong visual design skills',
-      'Experience with streaming platforms',
-      'Portfolio showcasing shipped products'
-    ],
-    logoColor: '#E50914',
-    logoText: 'N',
-    saved: true
-  },
-  {
-    id: 4,
-    title: 'Interaction Designer',
-    company: 'Airbnb',
-    location: 'San Francisco, CA',
-    posted: '5d',
-    type: 'Remote',
-    salary: '$115k - $170k',
-    description: 'Design delightful experiences for travelers and hosts around the world.',
-    requirements: [
-      '3+ years of interaction design experience',
-      'Strong understanding of motion design',
-      'Experience with prototyping tools',
-      'Excellent problem-solving skills'
-    ],
-    logoColor: '#FF5A5F',
-    logoText: 'A'
-  }
-];
+  if (days === 0) return 'Today';
+  if (days < 7) return `${days}d`;
+  if (days < 30) return `${Math.floor(days / 7)}w`;
+  return `${Math.floor(days / 30)}mo`;
+};
 
 // ============================================================================
 // COMPONENT
 // ============================================================================
 
 function JobPage() {
-  const [selected, setSelected] = useState<Job>(JOBS[0]);
+  const { isAuthenticated, loading: authLoading } = useAuth();
+  const [jobs, setJobs] = useState<Job[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [selected, setSelected] = useState<Job | null>(null);
   const [activeTab, setActiveTab] = useState('all');
+  const { isSaved, toggleSaveJob } = useSavedJobs(); // Use the saved jobs context
 
-  const filteredJobs = JOBS.filter(job => {
-    if (activeTab === 'saved') return job.saved;
+  // Fetch Jobs from API
+  useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        const response = await fetch('http://localhost:8000/api/jobs/');
+        const data = await response.json();
+
+        if (data.success) {
+          const mappedJobs: Job[] = data.jobs.map((apiJob: any) => {
+            // Construct salary string
+            const min = apiJob.salary_min ? Math.round(apiJob.salary_min / 1000) + 'k' : '';
+            const max = apiJob.salary_max ? Math.round(apiJob.salary_max / 1000) + 'k' : '';
+            const salaryObj = (min && max) ? `$${min} - $${max}` : (min ? `$${min}+` : 'Competitive');
+
+            return {
+              id: apiJob.id,
+              title: apiJob.title,
+              company: apiJob.company_name,
+              location: apiJob.location,
+              posted: formatPostedDate(apiJob.posted_date),
+              type: (apiJob.job_type && apiJob.job_type.length > 0) ? apiJob.job_type[0] : 'Full-time',
+              salary: salaryObj,
+              description: apiJob.description,
+              requirements: apiJob.requirements || [],
+              logoColor: apiJob.company?.logo_color || '#6366f1',
+              logoText: apiJob.company?.logo_initial || apiJob.company_name.charAt(0).toUpperCase(),
+              saved: false // Default to false until auth is fully linked
+            };
+          });
+
+          setJobs(mappedJobs);
+          if (mappedJobs.length > 0) {
+            setSelected(mappedJobs[0]);
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching jobs:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchJobs();
+  }, []);
+
+  // Bookmark handler
+  const handleBookmark = (e: React.MouseEvent, jobId: string | number) => {
+    e.stopPropagation(); // Prevent triggering job selection
+
+    // Check if we're unsaving the currently selected job on the saved tab
+    const isCurrentlySelected = selected?.id === jobId;
+    const isBeingUnsaved = isSaved(jobId);
+    const isOnSavedTab = activeTab === 'saved';
+
+    // Toggle the save state
+    toggleSaveJob(jobId);
+
+    // If we just unsaved the selected job while on saved tab, select another job
+    if (isCurrentlySelected && isBeingUnsaved && isOnSavedTab) {
+      // Find the next saved job (excluding the one we just unsaved)
+      const remainingSavedJobs = jobs.filter(job => job.id !== jobId && isSaved(job.id));
+
+      if (remainingSavedJobs.length > 0) {
+        setSelected(remainingSavedJobs[0]);
+      } else {
+        setSelected(null); // No more saved jobs
+      }
+    }
+  };
+
+  const filteredJobs = jobs.filter(job => {
+    if (activeTab === 'saved') return isSaved(job.id);
     return true;
   });
 
-  const savedCount = JOBS.filter(job => job.saved).length;
+  const savedCount = jobs.filter(job => isSaved(job.id)).length;
 
   return (
     <div className='jobs-page'>
       <div className="job-header">
         <div>
           <h1 className="job-page-title">Find Your Dream Job</h1>
-          <p className="job-page-subtitle">{JOBS.length} recommended jobs for you</p>
+          <p className="job-page-subtitle">{jobs.length} recommended jobs for you</p>
         </div>
         <div className="job-quote">
           <svg className="quote-icon" width="32" height="32" viewBox="0 0 24 24" fill="none">
@@ -143,7 +150,7 @@ function JobPage() {
           className={`tab-button ${activeTab === 'all' ? 'active' : ''}`}
           onClick={() => {
             setActiveTab('all');
-            const firstRecommended = JOBS[0];
+            const firstRecommended = jobs[0];
             if (firstRecommended) setSelected(firstRecommended);
           }}
         >
@@ -151,15 +158,15 @@ function JobPage() {
             <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
           <span>All Jobs</span>
-          <span className="tab-badge">{JOBS.length}</span>
+          <span className="tab-badge">{jobs.length}</span>
         </button>
         <button
           className={`tab-button ${activeTab === 'saved' ? 'active' : ''}`}
           onClick={() => {
             setActiveTab('saved');
-            const firstSaved = JOBS.find(j => j.saved);
+            const firstSaved = jobs.find(j => isSaved(j.id));
             if (firstSaved) setSelected(firstSaved);
-            else setSelected(null as any);
+            else setSelected(null);
           }}
         >
           <svg className="tab-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -173,7 +180,9 @@ function JobPage() {
       <div className="jobs-container">
         {/* List */}
         <div className="jobs-list">
-          {filteredJobs.length > 0 ? (
+          {loading ? (
+            <div className="padding-4">Loading...</div>
+          ) : filteredJobs.length > 0 ? (
             filteredJobs.map((job) => (
               <div
                 key={job.id}
@@ -188,6 +197,15 @@ function JobPage() {
                     <h3>{job.title}</h3>
                     <p className="company">{job.company}</p>
                   </div>
+                  <button
+                    className={`btn-bookmark ${isSaved(job.id) ? 'bookmarked' : ''}`}
+                    onClick={(e) => handleBookmark(e, job.id)}
+                    aria-label={isSaved(job.id) ? "Remove bookmark" : "Save job"}
+                  >
+                    <svg width="18" height="18" fill={isSaved(job.id) ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                    </svg>
+                  </button>
                 </div>
                 <div className="job-item-meta">
                   <span>{job.location}</span>
@@ -201,7 +219,7 @@ function JobPage() {
             ))
           ) : (
             <div className="empty-state-jobs">
-              <p>No saved jobs yet</p>
+              <p>No jobs found</p>
             </div>
           )}
         </div>
@@ -234,7 +252,16 @@ function JobPage() {
                       </div>
                     </div>
                   </div>
-                  <button className="apply-btn">Apply Now</button>
+                  <button className="apply-btn" onClick={() => {
+                    if (authLoading) return;
+
+                    if (!isAuthenticated) {
+                      alert('Please login to apply for jobs');
+                      window.location.href = 'http://localhost:8000/auth/';
+                      return;
+                    }
+                    alert(`Applying for ${selected.title} at ${selected.company}!`);
+                  }}>Apply Now</button>
                 </div>
 
                 <div className="detail-salary">

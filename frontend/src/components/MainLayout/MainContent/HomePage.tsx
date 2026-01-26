@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useSavedJobs } from '../../../contexts/SavedJobsContext';
+import { useAuth } from '../../../contexts/AuthContext';
+
 import './HomePage.css';
 
 // ============================================================================
@@ -7,7 +10,7 @@ import './HomePage.css';
 // ============================================================================
 
 interface Job {
-    id: number;
+    id: number | string;
     title: string;
     company: string;
     location: string;
@@ -53,12 +56,6 @@ interface SalaryFilter {
 // UTILITY FUNCTIONS
 // ============================================================================
 
-const daysAgo = (days: number): Date => {
-    const date = new Date();
-    date.setDate(date.getDate() - days);
-    return date;
-};
-
 const getDaysDifference = (date: Date): number => {
     const now = new Date();
     const diffTime = Math.abs(now.getTime() - date.getTime());
@@ -66,125 +63,20 @@ const getDaysDifference = (date: Date): number => {
 };
 
 // ============================================================================
-// MOCK DATA
+// DYNAMIC HERO MESSAGES (No static data)
 // ============================================================================
-
-const JOBS_DATA: Job[] = [
-    {
-        id: 1,
-        title: 'Human Interface Designer',
-        company: 'Apple',
-        location: 'Cupertino, California',
-        postedTime: 'Posted 30 days ago',
-        createdAt: daysAgo(30),
-        type: ['Full-Time', 'Flexible schedule'],
-        description: 'Design intuitive and beautiful user interfaces for Apple products. Work with cutting-edge technology.',
-        logoColor: '#000000',
-        logoInitial: '',
-        salaryMin: 150,
-        salaryMax: 220,
-        isRemote: false
-    },
-    {
-        id: 2,
-        title: 'Product Designer',
-        company: 'Google',
-        location: 'Mountain View, California',
-        postedTime: 'Posted 5 mins ago',
-        createdAt: new Date(),
-        type: ['Full-time', 'Remote'],
-        description: 'Create world-class product experiences for billions of users. Join our design team.',
-        logoColor: '#4285f4',
-        logoInitial: 'G',
-        salaryMin: 120,
-        salaryMax: 180,
-        isRemote: true
-    },
-    {
-        id: 3,
-        title: 'Senior UX Designer',
-        company: 'Meta',
-        location: 'Menlo Park, California',
-        postedTime: 'Posted 2 days ago',
-        createdAt: daysAgo(2),
-        type: ['Full-time', 'Hybrid'],
-        description: 'Shape the future of social connection through innovative design solutions.',
-        logoColor: '#0668E1',
-        logoInitial: 'M',
-        salaryMin: 130,
-        salaryMax: 200,
-        isRemote: false
-    },
-    {
-        id: 4,
-        title: 'UI/UX Designer',
-        company: 'Netflix',
-        location: 'Los Gatos, California',
-        postedTime: 'Posted 1 week ago',
-        createdAt: daysAgo(7),
-        type: ['Full-time'],
-        description: 'Design experiences that entertain millions worldwide. Be part of our creative team.',
-        logoColor: '#E50914',
-        logoInitial: 'N',
-        salaryMin: 110,
-        salaryMax: 160,
-        isRemote: false
-    },
-    {
-        id: 5,
-        title: 'Interaction Designer',
-        company: 'Airbnb',
-        location: 'San Francisco, California',
-        postedTime: 'Posted 3 days ago',
-        createdAt: daysAgo(3),
-        type: ['Full-time', 'Remote'],
-        description: 'Design delightful experiences for travelers and hosts around the world.',
-        logoColor: '#FF5A5F',
-        logoInitial: 'A',
-        salaryMin: 115,
-        salaryMax: 170,
-        isRemote: true
-    },
-    {
-        id: 6,
-        title: 'Visual Designer',
-        company: 'Spotify',
-        location: 'New York, New York',
-        postedTime: 'Posted 5 days ago',
-        createdAt: daysAgo(5),
-        type: ['Full-time', 'Flexible schedule'],
-        description: 'Create stunning visual designs for the world\'s leading music streaming platform.',
-        logoColor: '#1DB954',
-        logoInitial: 'S',
-        salaryMin: 100,
-        salaryMax: 150,
-        isRemote: false
-    }
-];
-
-const HERO_MESSAGES: HeroMessage[] = [
-    {
-        title: "Welcome back, Ashar!",
-        subtitle: "Ready to take the next step in your career journey?",
-        tag: "Dashboard"
-    },
-    {
-        title: "12 New Opportunities",
-        subtitle: "Matched to your skills and preferences",
-        tag: "Recommended"
-    },
-    {
-        title: "Your Profile is 95% Complete",
-        subtitle: "Add certifications to reach 100%",
-        tag: "Profile"
-    }
-];
 
 // ============================================================================
 // CHILD COMPONENTS
 // ============================================================================
 
-const HeroSection = ({ currentMessage }: { currentMessage: number }) => (
+const HeroSection = ({
+    currentMessage,
+    heroMessages
+}: {
+    currentMessage: number;
+    heroMessages: HeroMessage[];
+}) => (
     <section className="hero-section">
         <div className="hero-content">
             <AnimatePresence mode="wait">
@@ -195,9 +87,9 @@ const HeroSection = ({ currentMessage }: { currentMessage: number }) => (
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
                 >
-                    <span className="hero-tag">{HERO_MESSAGES[currentMessage].tag}</span>
-                    <h1 className="hero-title">{HERO_MESSAGES[currentMessage].title}</h1>
-                    <p className="hero-subtitle">{HERO_MESSAGES[currentMessage].subtitle}</p>
+                    <span className="hero-tag">{heroMessages[currentMessage]?.tag}</span>
+                    <h1 className="hero-title">{heroMessages[currentMessage]?.title}</h1>
+                    <p className="hero-subtitle">{heroMessages[currentMessage]?.subtitle}</p>
                 </motion.div>
             </AnimatePresence>
         </div>
@@ -376,7 +268,7 @@ const FilterSidebar = ({
 
 const JobCard = ({ job, onBookmark, isBookmarked, onApply }: {
     job: Job;
-    onBookmark: (id: number) => void;
+    onBookmark: (id: number | string) => void;
     isBookmarked: boolean;
     onApply: (job: Job) => void;
 }) => {
@@ -533,24 +425,121 @@ const useJobFiltering = (
 // ============================================================================
 
 function HomePage() {
+    const { login } = useAuth();
     const [searchTerm, setSearchTerm] = useState('');
     const [locationTerm, setLocationTerm] = useState('');
     const [datePostFilter, setDatePostFilter] = useState('Anytime');
     const [salaryFilter, setSalaryFilter] = useState<SalaryFilter>({ type: 'all', value: 5000 });
     const [currentMessage, setCurrentMessage] = useState(0);
-    const [bookmarkedJobs, setBookmarkedJobs] = useState<Set<number>>(new Set());
+    const { isSaved, toggleSaveJob } = useSavedJobs();
+    const [jobs, setJobs] = useState<Job[]>([]);
+    const [loading, setLoading] = useState(true);
     const [filters, setFilters] = useState<FilterState>({
         jobType: { fullTime: false, internship: false, freelance: false, volunteer: false },
         remote: { site: false, hybrid: false, remote: false }
     });
+    const [heroMessages, setHeroMessages] = useState<HeroMessage[]>([
+        {
+            title: "Welcome back!",
+            subtitle: "Ready to take the next step in your career journey?",
+            tag: "Dashboard"
+        },
+        {
+            title: "New Opportunities",
+            subtitle: "Matched to your skills and preferences",
+            tag: "Recommended"
+        },
+        {
+            title: "Your Career Journey",
+            subtitle: "Explore opportunities tailored for you",
+            tag: "Profile"
+        }
+    ]);
+
+    // Load User Data and update hero messages
+    useEffect(() => {
+        // Check for user_data and tokens from external auth (redirect from backend login)
+        const params = new URLSearchParams(window.location.search);
+        const userDataStr = params.get('user_data');
+        const accessToken = params.get('access_token');
+
+        if (userDataStr && accessToken) {
+            try {
+                const userData = JSON.parse(decodeURIComponent(userDataStr));
+
+                // Use AuthContext to login (sets memory token)
+                login(userData, decodeURIComponent(accessToken));
+
+                // Clear query string to hide data
+                window.history.replaceState({}, document.title, window.location.pathname);
+
+                return;
+            } catch (e) {
+                console.error("Failed to parse auth data from URL:", e);
+            }
+        }
+
+        const userStr = localStorage.getItem('user');
+        const user = userStr ? JSON.parse(userStr) : null;
+        if (user && user.first_name) {
+            // Update hero messages dynamically with user's name
+            setHeroMessages(prev => [
+                {
+                    ...prev[0],
+                    title: `Welcome back, ${user.first_name}!`
+                },
+                prev[1],
+                prev[2]
+            ]);
+        }
+    }, [login]);
+
+    // Fetch Jobs from API
+    useEffect(() => {
+        const fetchJobs = async () => {
+            try {
+                const response = await fetch('http://127.0.0.1:8000/api/jobs/');
+                const data = await response.json();
+
+                if (data.success) {
+                    // Map API data to component Job interface
+                    const mappedJobs: Job[] = data.jobs.map((apiJob: any) => ({
+                        id: apiJob.id,
+                        title: apiJob.title,
+                        company: apiJob.company_name,
+                        location: apiJob.location,
+                        postedTime: `Posted ${getDaysDifference(new Date(apiJob.posted_date))} days ago`,
+                        createdAt: new Date(apiJob.posted_date),
+                        type: apiJob.job_type || [],
+                        description: apiJob.description,
+                        bullets: apiJob.requirements,
+                        salaryMin: apiJob.salary_min ? apiJob.salary_min / 1000 : undefined,
+                        salaryMax: apiJob.salary_max ? apiJob.salary_max / 1000 : undefined,
+                        logoColor: apiJob.company?.logo_color || '#6366f1',
+                        logoInitial: apiJob.company?.logo_initial || apiJob.company_name.charAt(0),
+                        isRemote: apiJob.is_remote
+                    }));
+                    setJobs(mappedJobs);
+                }
+            } catch (error) {
+                console.error('Error fetching jobs:', error);
+                // No static fallback - show error state to user
+                setJobs([]);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchJobs();
+    }, []);
 
     // Auto-rotate hero messages
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentMessage((prev) => (prev + 1) % HERO_MESSAGES.length);
+            setCurrentMessage((prev) => (prev + 1) % heroMessages.length);
         }, 3000);
         return () => clearInterval(interval);
-    }, []);
+    }, [heroMessages]);
 
     const handleFilterChange = (category: 'jobType' | 'remote', key: string) => {
         setFilters(prev => ({
@@ -574,26 +563,27 @@ function HomePage() {
     };
 
     // Bookmark handlers
-    const handleBookmark = (jobId: number) => {
-        setBookmarkedJobs(prev => {
-            const newSet = new Set(prev);
-            if (newSet.has(jobId)) {
-                newSet.delete(jobId);
-            } else {
-                newSet.add(jobId);
-            }
-            return newSet;
-        });
+    const handleBookmark = (jobId: string | number) => {
+        toggleSaveJob(jobId);
     };
 
     const handleApply = (job: Job) => {
+        // Check if user is logged in
+        const user = localStorage.getItem('user');
+        if (!user) {
+            // User is not logged in - redirect to login
+            alert('Please login to apply for jobs');
+            window.location.href = 'http://127.0.0.1:8000/auth/'; // Redirect to login page
+            return;
+        }
+
         alert(`Applying for ${job.title} at ${job.company}!\n\nThis would redirect to the application page.`);
         // In a real app, this would navigate to an application form or external URL
     };
 
     // Filter jobs
     const filteredJobs = useJobFiltering(
-        JOBS_DATA,
+        jobs,
         searchTerm,
         locationTerm,
         filters,
@@ -603,7 +593,7 @@ function HomePage() {
 
     return (
         <div className="home-page">
-            <HeroSection currentMessage={currentMessage} />
+            <HeroSection currentMessage={currentMessage} heroMessages={heroMessages} />
             <SearchBar
                 searchTerm={searchTerm}
                 locationTerm={locationTerm}
@@ -625,18 +615,25 @@ function HomePage() {
                 <section className="job-list-section">
                     <div className="results-header">
                         <h2 className="results-count">
-                            <span className="count-number"></span> Recommended Jobs
+                            <span className="count-number">{filteredJobs.length}</span> Recommended Jobs
                         </h2>
                     </div>
 
                     <div className="job-list">
-                        {filteredJobs.length > 0 ? (
+                        {loading ? (
+                            <div className="loading-state">
+                                <svg className="spinner" viewBox="0 0 50 50">
+                                    <circle className="path" cx="25" cy="25" r="20" fill="none" strokeWidth="5"></circle>
+                                </svg>
+                                <p>Finding the best jobs for you...</p>
+                            </div>
+                        ) : filteredJobs.length > 0 ? (
                             filteredJobs.map(job => (
                                 <JobCard
                                     key={job.id}
                                     job={job}
                                     onBookmark={handleBookmark}
-                                    isBookmarked={bookmarkedJobs.has(job.id)}
+                                    isBookmarked={isSaved(job.id)}
                                     onApply={handleApply}
                                 />
                             ))

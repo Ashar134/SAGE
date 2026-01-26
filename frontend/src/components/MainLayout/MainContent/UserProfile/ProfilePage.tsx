@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useAuth } from '../../../../contexts/AuthContext';
 import './ProfilePage.css';
 
 const ProfilePage: React.FC = () => {
+    const { isAuthenticated, loading } = useAuth();
     // State for form data
     const [personalInfo] = useState({
         firstName: 'John',
@@ -58,6 +60,13 @@ const ProfilePage: React.FC = () => {
         frameworks: ['React', 'Node.js', 'Express', 'Django', 'Spring Boot'],
         tools: ['Docker', 'Kubernetes', 'AWS', 'PostgreSQL', 'MongoDB', 'Redis']
     });
+
+    React.useEffect(() => {
+        if (!loading && !isAuthenticated) {
+            alert('Please login to view your profile');
+            window.location.href = 'http://localhost:8000/auth/';
+        }
+    }, [isAuthenticated, loading]);
 
 
 

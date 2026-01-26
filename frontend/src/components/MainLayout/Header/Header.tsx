@@ -1,8 +1,10 @@
 import { useState, useRef, useEffect } from 'react';
+import { useAuth } from '../../../contexts/AuthContext';
 import './HeaderStyle.css';
 import profileAvatar from '../../../assets/profile-org.png';
 
 function Header() {
+    const { user, logout } = useAuth();
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -23,11 +25,8 @@ function Header() {
         };
     }, [isDropdownOpen]);
 
-    const handleLogout = () => {
-        // Add your logout logic here
-        console.log('Logging out...');
-        alert('Logout functionality will be implemented here');
-        setIsDropdownOpen(false);
+    const handleLogout = async () => {
+        await logout();
     };
 
     return (
@@ -65,8 +64,12 @@ function Header() {
                                                 <img src={profileAvatar} alt="Profile" />
                                             </div>
                                             <div className="dropdown-info">
-                                                <p className="dropdown-name">Ashar Naveed</p>
-                                                <p className="dropdown-email">asharnaveed2002@gmail.com</p>
+                                                <p className="dropdown-name">
+                                                    {user ? `${user.first_name} ${user.last_name}` : 'Ashar Naveed'}
+                                                </p>
+                                                <p className="dropdown-email">
+                                                    {user ? user.email : 'asharnaveed2002@gmail.com'}
+                                                </p>
                                             </div>
                                         </div>
                                         <div className="dropdown-divider"></div>
