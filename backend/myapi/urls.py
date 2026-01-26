@@ -38,6 +38,7 @@ urlpatterns = [
     # User Profile APIs
     path("api/users/<uuid:user_id>/profile/", views.get_user_profile, name="get_user_profile"),
     path("api/users/<uuid:user_id>/profile/update/", views.update_user_profile, name="update_user_profile"),
+    path("api/users/onboarding/complete/", views.complete_onboarding, name="complete_onboarding"),
     
     # User Skills APIs
     path("api/users/<uuid:user_id>/skills/", views.add_user_skill, name="add_user_skill"),

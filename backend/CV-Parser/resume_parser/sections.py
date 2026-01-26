@@ -15,6 +15,9 @@ SECTION_HEADINGS = {
     "key competencies",
     "projects",
     "certifications",
+    "certificates",
+    "research",
+    "publications",
     "education certifications",
     "education certifications and",
     "summary",
@@ -253,3 +256,104 @@ def extract_education(section_text: str) -> List[Dict[str, str]]:
                 )
 
     return education
+
+
+def extract_certificates(section_text: str) -> List[Dict[str, str]]:
+    """
+    Extract certificates from a section string.
+    Looks for common patterns: 'Name | Issuer | Year' or 'Name - Issuer, Year'.
+    """
+    certificates: List[Dict[str, str]] = []
+    if not section_text:
+        return certificates
+
+    lines = [ln.strip() for ln in section_text.splitlines() if ln.strip()]
+
+    for ln in lines:
+        # Avoid lines that look like navigation or boilerplate
+        if len(ln) < 3 or len(ln) > 200:
+            continue
+
+        # Look for a 4-digit year
+        year_match = re.search(r"\b(19|20)\d{2}\b", ln)
+        year = year_match.group(0) if year_match else ""
+
+        # Remove the year for easier part splitting
+        text_no_year = re.sub(r"\b(19|20)\d{2}\b", "", ln).strip(" ,()[]/|–—")
+
+        # Prioritize pipes, then long dashes/dashes, then commas
+        parts: List[str] = []
+        if "|" in text_no_year:
+            parts = [p.strip() for p in text_no_year.split("|", 1)]
+        elif " — " in text_no_year:
+            parts = [p.strip() for p in text_no_year.split(" — ", 1)]
+        elif " – " in text_no_year:
+            parts = [p.strip() for p in text_no_year.split(" – ", 1)]
+        elif " - " in text_no_year:
+            parts = [p.strip() for p in text_no_year.split(" - ", 1)]
+        elif "," in text_no_year:
+            # Only split on comma if it seems like a separator (not in the middle of a name)
+            comma_parts = [p.strip() for p in text_no_year.split(",", 1)]
+            if len(comma_parts) > 1 and len(comma_parts[0]) > 5:
+                parts = comma_parts
+        
+        if parts:
+            name = parts[0]
+            issuer = parts[1] if len(parts) > 1 else ""
+            certificates.append({
+                "name": name,
+                "issuer": issuer,
+                "year": year
+            })
+        else:
+            # Fallback for simple standalone certificates
+            if len(text_no_year) > 5:
+                certificates.append({
+                    "name": text_no_year,
+                    "issuer": "",
+                    "year": year
+                })
+
+    return certificates
+
+
+def extract_research(section_text: str) -> List[Dict[str, str]]:
+    """
+    Extract research papers, projects or publications.
+    Reuses the logic from experience extraction as they share a similar structure
+    (Title, Organization/Publisher, Date, Details).
+    """
+    if not section_text:
+        return []
+    
+    # We can reuse extract_experiences logic but map 'organization' to institution/publisher
+    exps = extract_experiences(section_text)
+    research_items = []
+    for e in exps:
+        research_items.append({
+            "title": e.get("title", ""),
+            "organization": e.get("organization", ""),
+            "period": e.get("period", ""),
+            "details": e.get("details", "")
+        })
+    return research_items
+
+
+def extract_projects(section_text: str) -> List[Dict[str, str]]:
+    """
+    Extract technical or academic projects.
+    Reuses the logic from experience extraction.
+    """
+    if not section_text:
+        return []
+    
+    exps = extract_experiences(section_text)
+    project_items = []
+    for e in exps:
+        project_items.append({
+            "title": e.get("title", ""),
+            "organization": e.get("organization", ""),
+            "period": e.get("period", ""),
+            "details": e.get("details", "")
+        })
+    return project_items

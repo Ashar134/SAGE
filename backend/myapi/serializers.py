@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import (
-    User, UserSkill, Education, WorkExperience, Company, Job,
+    User, UserSkill, Education, WorkExperience, Certificate, Research, Project, Company, Job,
     SavedJob, Application, ApplicationTimeline
 )
 
@@ -12,7 +12,7 @@ class UserSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'email', 'first_name', 'last_name', 'phone', 'bio',
             'avatar_url', 'street_address', 'city_state', 'postal_code',
-            'country', 'created_at', 'updated_at', 'last_login'
+            'country', 'is_onboarded', 'created_at', 'updated_at', 'last_login'
         ]
         read_only_fields = ['id', 'created_at', 'updated_at']
 
@@ -48,6 +48,30 @@ class WorkExperienceSerializer(serializers.ModelSerializer):
             'end_date', 'is_current', 'description', 'responsibilities',
             'achievements', 'created_at', 'updated_at'
         ]
+        read_only_fields = ['id', 'created_at', 'updated_at']
+
+
+class CertificateSerializer(serializers.ModelSerializer):
+    """Serializer for Certificate model"""
+    class Meta:
+        model = Certificate
+        fields = ['id', 'user', 'name', 'issuer', 'year', 'link', 'created_at', 'updated_at']
+        read_only_fields = ['id', 'created_at', 'updated_at']
+
+
+class ResearchSerializer(serializers.ModelSerializer):
+    """Serializer for Research model"""
+    class Meta:
+        model = Research
+        fields = ['id', 'user', 'title', 'organization', 'period', 'details', 'created_at', 'updated_at']
+        read_only_fields = ['id', 'created_at', 'updated_at']
+
+
+class ProjectSerializer(serializers.ModelSerializer):
+    """Serializer for Project model"""
+    class Meta:
+        model = Project
+        fields = ['id', 'user', 'title', 'organization', 'period', 'details', 'link', 'created_at', 'updated_at']
         read_only_fields = ['id', 'created_at', 'updated_at']
 
 
@@ -133,13 +157,17 @@ class UserProfileSerializer(serializers.ModelSerializer):
     skills = UserSkillSerializer(many=True, read_only=True)
     education = EducationSerializer(many=True, read_only=True)
     work_experience = WorkExperienceSerializer(many=True, read_only=True)
+    certificates = CertificateSerializer(many=True, read_only=True)
+    research = ResearchSerializer(many=True, read_only=True)
+    projects = ProjectSerializer(many=True, read_only=True)
     
     class Meta:
         model = User
         fields = [
             'id', 'email', 'first_name', 'last_name', 'phone', 'bio',
             'avatar_url', 'street_address', 'city_state', 'postal_code',
-            'country', 'skills', 'education', 'work_experience',
+            'country', 'is_onboarded', 'skills', 'education', 'work_experience',
+            'certificates', 'research', 'projects',
             'created_at', 'updated_at', 'last_login'
         ]
         read_only_fields = ['id', 'created_at', 'updated_at']

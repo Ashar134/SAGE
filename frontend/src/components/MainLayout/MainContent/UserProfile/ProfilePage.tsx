@@ -1,185 +1,307 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 import { useAuth } from '../../../../contexts/AuthContext';
+import Header from '../../../MainLayout/Header/Header';
 import './ProfilePage.css';
+import '../../../Onboarding/CvOnboarding.css';
+
+interface Skill {
+    id: string;
+    skill_name: string;
+    skill_type: string;
+}
+
+interface Education {
+    id: string;
+    degree: string;
+    school: string;
+    description: string;
+}
+
+interface Experience {
+    id: string;
+    job_title: string;
+    company: string;
+    description: string;
+}
+
+interface ProjectItem {
+    id: string;
+    title: string;
+    organization: string;
+    period: string;
+    details: string;
+}
+
+interface CertificateItem {
+    id: string;
+    name: string;
+    issuer: string;
+    year: string;
+}
+
+interface ResearchItem {
+    id: string;
+    title: string;
+    organization: string;
+    period: string;
+    details: string;
+}
+
+interface UserProfile {
+    id: string;
+    first_name: string;
+    last_name: string;
+    email: string;
+    phone: string;
+    bio: string;
+    city_state: string;
+    country: string;
+    skills: Skill[];
+    education: Education[];
+    work_experience: Experience[];
+    certificates: CertificateItem[];
+    research: ResearchItem[];
+    projects: ProjectItem[];
+}
+
+const API_BASE_URL = "http://localhost:8000";
 
 const ProfilePage: React.FC = () => {
-    const { isAuthenticated, loading } = useAuth();
-    // State for form data
-    const [personalInfo] = useState({
-        firstName: 'John',
-        lastName: 'Doe',
-        email: 'john.doe@email.com',
-        phone: '+1 234 567 8900',
-        bio: 'Software Engineer with 5+ years of experience in full-stack development'
-    });
+    const { user, accessToken, isAuthenticated, loading: authLoading } = useAuth();
+    const [profileData, setProfileData] = useState<UserProfile | null>(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
 
-    const [addressInfo] = useState({
-        country: 'United States',
-        cityState: 'San Francisco, California',
-        postalCode: '94102',
-        streetAddress: '123 Market Street'
-    });
-
-    const [education] = useState([
-        {
-            id: 1,
-            degree: 'Bachelor of Science in Computer Science',
-            school: 'Stanford University',
-            dates: '2015 - 2019',
-            description: 'GPA: 3.8/4.0 • Dean\'s List • Computer Science Society President'
-        },
-        {
-            id: 2,
-            degree: 'Master of Science in Software Engineering',
-            school: 'MIT',
-            dates: '2019 - 2021',
-            description: 'Specialization in Distributed Systems and Cloud Computing'
-        }
-    ]);
-
-    const [experience] = useState([
-        {
-            id: 1,
-            title: 'Senior Software Engineer',
-            company: 'Tech Corp Inc.',
-            dates: 'Jan 2022 - Present',
-            description: 'Leading a team of 5 developers in building scalable microservices architecture. Improved system performance by 40% and reduced deployment time by 60%.'
-        },
-        {
-            id: 2,
-            title: 'Software Engineer',
-            company: 'StartUp XYZ',
-            dates: 'Jun 2019 - Dec 2021',
-            description: 'Developed full-stack web applications using React, Node.js, and PostgreSQL. Contributed to product features used by 100K+ users.'
-        }
-    ]);
-
-    const [skills] = useState({
-        languages: ['JavaScript', 'TypeScript', 'Python', 'Java', 'Go'],
-        frameworks: ['React', 'Node.js', 'Express', 'Django', 'Spring Boot'],
-        tools: ['Docker', 'Kubernetes', 'AWS', 'PostgreSQL', 'MongoDB', 'Redis']
-    });
-
-    React.useEffect(() => {
-        if (!loading && !isAuthenticated) {
-            alert('Please login to view your profile');
+    useEffect(() => {
+        if (!authLoading && !isAuthenticated) {
             window.location.href = 'http://localhost:8000/auth/';
+            return;
         }
-    }, [isAuthenticated, loading]);
 
+        const fetchProfile = async () => {
+            if (!user?.id || !accessToken) return;
 
+            try {
+                setLoading(true);
+                const response = await fetch(`${API_BASE_URL}/api/users/${user.id}/profile/`, {
+                    headers: {
+                        'Authorization': `Bearer ${accessToken}`
+                    }
+                });
 
-    return (
-        <div className="profile-page">
-            <div className="profile-header">
-                <div className="profile-header-avatar">
-                    {personalInfo.firstName.charAt(0)}{personalInfo.lastName.charAt(0)}
-                </div>
-                <div className="profile-header-info">
-                    <h2 className="profile-header-name">{personalInfo.firstName} {personalInfo.lastName}</h2>
-                    <p className="profile-header-title">Senior Software Engineer</p>
-                    <p className="profile-header-location">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                        {addressInfo.cityState}, {addressInfo.country}
-                    </p>
+                const data = await response.json();
+                if (data.success) {
+                    setProfileData(data.user);
+                } else {
+                    setError(data.error || "Failed to fetch profile");
+                }
+            } catch (err) {
+                setError("Network error. Please try again.");
+                console.error(err);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchProfile();
+    }, [user, accessToken, isAuthenticated, authLoading]);
+
+    if (authLoading || (loading && !profileData)) {
+        return (
+            <div className="cv-onboarding-page-container">
+                <Header />
+                <div className="cv-onboarding-content-wrapper" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh' }}>
+                    <div className="spinner small" />
+                    <span style={{ marginLeft: '12px', color: '#64748b' }}>Loading your profile...</span>
                 </div>
             </div>
+        );
+    }
 
-            {/* Profile Content */}
-            <motion.div
-                className="profile-content"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}
-            >
-                {/* Main Profile Card */}
-                <div className="overview-main-card">
-                    <div className="overview-body">
-                        {/* About */}
-                        <div className="overview-section">
-                            <h3 className="overview-section-title">About</h3>
-                            <p className="overview-bio">{personalInfo.bio}</p>
-                        </div>
+    if (error) {
+        return (
+            <div className="cv-onboarding-page-container">
+                <Header />
+                <div className="cv-onboarding-content-wrapper">
+                    <div className="validation-message error" style={{ maxWidth: '600px', margin: '40px auto' }}>
+                        {error}
+                    </div>
+                </div>
+            </div>
+        );
+    }
 
-                        {/* Contact */}
-                        <div className="overview-section">
-                            <h3 className="overview-section-title">Contact</h3>
-                            <div className="overview-contact-grid">
-                                <div className="overview-contact-item">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                        <polyline points="22,6 12,13 2,6"></polyline>
-                                    </svg>
-                                    <span>{personalInfo.email}</span>
+    return (
+        <div className="cv-onboarding-page-container profile-page-refined">
+            <Header />
+
+            <div className="cv-onboarding-content-wrapper">
+                <div className="cv-onboarding-header-section">
+                    <div>
+                        <h1 className="page-title">User Profile</h1>
+                        <p className="page-subtitle">View and manage your professional summary</p>
+                    </div>
+                </div>
+
+                <div className="tabs-container">
+                    {/* Tabs Navigation */}
+                    <div className="onboarding-tabs">
+                        <button className="tab-button active">Summary</button>
+                    </div>
+
+                    {/* Tab Content */}
+                    <div className="tab-content">
+                        <div className="review-tab-layout fade-in">
+                            <div className="review-main-grid">
+                                {/* Left Column: Basics, Summary & Skills */}
+                                <div className="review-col review-col-left">
+                                    {/* Personal Details as a standard card */}
+                                    <div className="summary-preview-section">
+                                        <div className="summary-section-header">
+                                            <h3 className="summary-section-title">Personal Details</h3>
+                                        </div>
+                                        <div className="summary-content">
+                                            <div className="summary-details-grid">
+                                                <div className="detail-row"><strong>Name:</strong> {profileData ? `${profileData.first_name} ${profileData.last_name}` : "Not provided"}</div>
+                                                <div className="detail-row"><strong>Email:</strong> {profileData?.email || "Not provided"}</div>
+                                                <div className="detail-row"><strong>Phone:</strong> {profileData?.phone || "Not provided"}</div>
+                                                <div className="detail-row"><strong>Location:</strong> {profileData ? `${profileData.city_state}, ${profileData.country}` : "Not provided"}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {profileData?.bio && (
+                                        <div className="summary-preview-section">
+                                            <div className="summary-section-header">
+                                                <h3 className="summary-section-title">Professional Summary</h3>
+                                            </div>
+                                            <div className="summary-content">
+                                                <p style={{ margin: 0 }}>{profileData.bio}</p>
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    <div className="summary-preview-section">
+                                        <div className="summary-section-header">
+                                            <h3 className="summary-section-title">Technical Skills</h3>
+                                        </div>
+                                        <div className="summary-content">
+                                            {profileData?.skills && profileData.skills.length > 0 ? (
+                                                <div className="summary-skills-list">
+                                                    {profileData.skills.map((skill, idx) => (
+                                                        <span key={idx} className="skill-tag">{skill.skill_name}</span>
+                                                    ))}
+                                                </div>
+                                            ) : (
+                                                <p className="summary-empty">No skills added</p>
+                                            )}
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="overview-contact-item">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                                    </svg>
-                                    <span>{personalInfo.phone}</span>
-                                </div>
-                            </div>
-                        </div>
 
-                        {/* Skills */}
-                        <div className="overview-section">
-                            <h3 className="overview-section-title">Top Skills</h3>
-                            <div className="overview-skills-grid">
-                                {[...skills.languages.slice(0, 4), ...skills.frameworks.slice(0, 4)].map((skill, index) => (
-                                    <div key={index} className="overview-skill-tag">{skill}</div>
-                                ))}
+                                {/* Right Column: Experience & Education */}
+                                <div className="review-col review-col-right">
+                                    <div className="summary-preview-section">
+                                        <div className="summary-section-header">
+                                            <h3 className="summary-section-title">Technical Projects</h3>
+                                        </div>
+                                        <div className="summary-content">
+                                            {profileData?.projects && profileData.projects.length > 0 ? (
+                                                profileData.projects.map((proj, idx) => (
+                                                    <div key={idx} className="summary-item">
+                                                        <div className="summary-item-title">{proj.title}</div>
+                                                        <div className="summary-item-subtitle">{proj.organization}</div>
+                                                        <div className="summary-item-meta" style={{ fontSize: '0.85rem', color: '#64748b' }}>{proj.period}</div>
+                                                        {proj.details && <div className="summary-item-details" style={{ whiteSpace: 'pre-wrap' }}>{proj.details}</div>}
+                                                    </div>
+                                                ))
+                                            ) : (
+                                                <p className="summary-empty">No projects listed</p>
+                                            )}
+                                        </div>
+                                    </div>
+
+                                    <div className="summary-preview-section">
+                                        <div className="summary-section-header">
+                                            <h3 className="summary-section-title">Research Work</h3>
+                                        </div>
+                                        <div className="summary-content">
+                                            {profileData?.research && profileData.research.length > 0 ? (
+                                                profileData.research.map((res, idx) => (
+                                                    <div key={idx} className="summary-item">
+                                                        <div className="summary-item-title">{res.title}</div>
+                                                        <div className="summary-item-subtitle">{res.organization}</div>
+                                                        <div className="summary-item-meta" style={{ fontSize: '0.85rem', color: '#64748b' }}>{res.period}</div>
+                                                        {res.details && <div className="summary-item-details" style={{ whiteSpace: 'pre-wrap' }}>{res.details}</div>}
+                                                    </div>
+                                                ))
+                                            ) : (
+                                                <p className="summary-empty">No research listed</p>
+                                            )}
+                                        </div>
+                                    </div>
+
+                                    <div className="summary-preview-section">
+                                        <div className="summary-section-header">
+                                            <h3 className="summary-section-title">Certifications</h3>
+                                        </div>
+                                        <div className="summary-content">
+                                            {profileData?.certificates && profileData.certificates.length > 0 ? (
+                                                profileData.certificates.map((cert, idx) => (
+                                                    <div key={idx} className="summary-item">
+                                                        <div className="summary-item-title">{cert.name}</div>
+                                                        <div className="summary-item-subtitle">{cert.issuer} {cert.year ? `(${cert.year})` : ''}</div>
+                                                    </div>
+                                                ))
+                                            ) : (
+                                                <p className="summary-empty">No certifications listed</p>
+                                            )}
+                                        </div>
+                                    </div>
+
+                                    <div className="summary-preview-section">
+                                        <div className="summary-section-header">
+                                            <h3 className="summary-section-title">Work Experience</h3>
+                                        </div>
+                                        <div className="summary-content">
+                                            {profileData?.work_experience && profileData.work_experience.length > 0 ? (
+                                                profileData.work_experience.map((exp, idx) => (
+                                                    <div key={idx} className="summary-item">
+                                                        <div className="summary-item-title">{exp.job_title || 'No title'}</div>
+                                                        <div className="summary-item-subtitle">{exp.company || 'No organization'}</div>
+                                                        {exp.description && <div className="summary-item-details" style={{ whiteSpace: 'pre-wrap' }}>{exp.description}</div>}
+                                                    </div>
+                                                ))
+                                            ) : (
+                                                <p className="summary-empty">No work experience added</p>
+                                            )}
+                                        </div>
+                                    </div>
+
+                                    <div className="summary-preview-section">
+                                        <div className="summary-section-header">
+                                            <h3 className="summary-section-title">Education</h3>
+                                        </div>
+                                        <div className="summary-content">
+                                            {profileData?.education && profileData.education.length > 0 ? (
+                                                profileData.education.map((edu, idx) => (
+                                                    <div key={idx} className="summary-item">
+                                                        <div className="summary-item-title">{edu.degree || 'No degree'}</div>
+                                                        <div className="summary-item-subtitle">{edu.school || 'No institution'}</div>
+                                                        {edu.description && <div className="summary-item-details" style={{ whiteSpace: 'pre-wrap' }}>{edu.description}</div>}
+                                                    </div>
+                                                ))
+                                            ) : (
+                                                <p className="summary-empty">No education added</p>
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                {/* Experience & Education Cards */}
-                <div className="overview-cards-grid">
-                    {/* Experience Card */}
-                    <div className="overview-info-card">
-                        <div className="info-card-header">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                            </svg>
-                            <h3>Work Experience</h3>
-                        </div>
-                        <div className="info-card-body">
-                            {experience.map((exp) => (
-                                <div key={exp.id} className="info-card-item">
-                                    <h4 className="item-title">{exp.title}</h4>
-                                    <p className="item-subtitle">{exp.company}</p>
-                                    <p className="item-date">{exp.dates}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* Education Card */}
-                    <div className="overview-info-card">
-                        <div className="info-card-header">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-                            </svg>
-                            <h3>Education</h3>
-                        </div>
-                        <div className="info-card-body">
-                            {education.map((edu) => (
-                                <div key={edu.id} className="info-card-item">
-                                    <h4 className="item-title">{edu.degree}</h4>
-                                    <p className="item-subtitle">{edu.school}</p>
-                                    <p className="item-date">{edu.dates}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </motion.div>
+            </div>
         </div>
     );
 };

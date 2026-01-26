@@ -26,8 +26,8 @@ from test_generator.config import TEST_COMPOSITIONS, CS_DISTRIBUTION
 from resume_parser import parse_resume
 
 from .models import (
-    User, UserSkill, Education, WorkExperience, Company, Job,
-    SavedJob, Application, ApplicationTimeline
+    User, UserSkill, Education, WorkExperience, Certificate, Research, Project, Job, SavedJob, 
+    Application, ApplicationTimeline
 )
 from .serializers import (
     UserSerializer, UserProfileSerializer, JobSerializer, SavedJobSerializer,
@@ -127,7 +127,7 @@ def homepage(request):
 @csrf_exempt  # Demo-only: bypass CSRF so form can post without setup
 def authenticate_user(request):
     if request.method == "POST":
-        return redirect("http://localhost:5173/app/onboarding")
+        return redirect("http://localhost:5173/")
     return render(request, "authentication_page.html")
 
 
@@ -816,7 +816,7 @@ def application_detail(request, app_id):
 def get_user_profile(request, user_id):
     """Get complete user profile with skills, education, and work experience"""
     try:
-        user = User.objects.prefetch_related('skills', 'education', 'work_experience').get(id=user_id)
+        user = User.objects.prefetch_related('skills', 'education', 'work_experience', 'certificates', 'research', 'projects').get(id=user_id)
         serializer = UserProfileSerializer(user)
         return Response({
             'success': True,
@@ -862,6 +862,194 @@ def update_user_profile(request, user_id):
             'success': False,
             'error': 'User not found'
         }, status=status.HTTP_404_NOT_FOUND)
+    except Exception as e:
+        return Response({
+            'success': False,
+            'error': str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+@csrf_exempt
+@api_view(['POST'])
+@require_authentication
+def complete_onboarding(request):
+    """
+    Complete user onboarding:
+    1. Update user profile details
+    2. Add skills, education, and experience
+    3. Set is_onboarded = True
+    """
+    try:
+        user_id = request.user_obj.id
+        user = User.objects.get(id=user_id)
+        data = request.data
+        
+        # 1. Update basic info
+        full_name = data.get('fullName', '')
+        if full_name:
+            parts = full_name.split(' ', 1)
+            user.first_name = parts[0]
+            if len(parts) > 1:
+                user.last_name = parts[1]
+        
+        if data.get('phone'):
+            user.phone = data.get('phone')
+        
+        if data.get('summary'):
+            user.bio = data.get('summary')
+            
+        location = data.get('location')
+        if location:
+            # Simple assumption: "City, Country"
+            parts = location.split(',')
+            if len(parts) > 0:
+                user.city_state = parts[0].strip()
+            if len(parts) > 1:
+                user.country = parts[-1].strip()
+                
+        # 2. Process Skills
+        skills_text = data.get('skillsText', '')
+        if skills_text:
+            # Clear existing skills to avoid duplicates if retrying
+            UserSkill.objects.filter(user=user).delete()
+            
+            skill_names = [s.strip() for s in skills_text.split(',') if s.strip()]
+            for name in skill_names:
+                # Basic inference of type (can be improved)
+                skill_type = 'tool'
+                if name.lower() in ['python', 'javascript', 'typescript', 'java', 'c++', 'c#', 'ruby', 'go']:
+                    skill_type = 'language'
+                elif name.lower() in ['react', 'node', 'django', 'flask', 'vue', 'angular', 'spring']:
+                    skill_type = 'framework'
+                    
+                UserSkill.objects.create(
+                    user=user,
+                    skill_name=name,
+                    skill_type=skill_type,
+                    proficiency_level='intermediate' # Default
+                )
+
+        # 3. Process Education
+        education_data = data.get('education')
+        edu_text = data.get('educationText', '')
+        
+        if education_data and isinstance(education_data, list):
+            Education.objects.filter(user=user).delete()
+            for edu_item in education_data:
+                # { degree, institution, year, details }
+                Education.objects.create(
+                    user=user,
+                    degree=edu_item.get('degree') or "Degree",
+                    school=edu_item.get('institution') or "Institution",
+                    description=f"Dates: {edu_item.get('year', '')}\n{edu_item.get('details', '')}",
+                    start_date=timezone.now().date() # Placeholder
+                )
+        elif edu_text:
+            Education.objects.filter(user=user).delete()
+            lines = [l.strip() for l in edu_text.split('\n') if l.strip()]
+            for line in lines:
+                parts = line.split(' · ')
+                if len(parts) < 2:
+                    parts = line.split(',')
+                    
+                degree = parts[0].strip() if len(parts) > 0 else "Degree"
+                school = parts[1].strip() if len(parts) > 1 else "Institution"
+                dates = parts[2].strip() if len(parts) > 2 else ""
+                
+                Education.objects.create(
+                    user=user,
+                    degree=degree,
+                    school=school,
+                    description=f"Dates: {dates}", 
+                    start_date=timezone.now().date()
+                )
+
+        # 4. Process Experience
+        experience_data = data.get('experience')
+        exp_text = data.get('experienceText', '')
+        
+        if experience_data and isinstance(experience_data, list):
+            WorkExperience.objects.filter(user=user).delete()
+            for exp_item in experience_data:
+                # { title, organization, period, details }
+                WorkExperience.objects.create(
+                    user=user,
+                    job_title=exp_item.get('title') or "Title",
+                    company=exp_item.get('organization') or "Company",
+                    description=f"Period: {exp_item.get('period', '')}\n{exp_item.get('details', '')}",
+                    start_date=timezone.now().date() # Placeholder
+                )
+        elif exp_text:
+            WorkExperience.objects.filter(user=user).delete()
+            lines = [l.strip() for l in exp_text.split('\n') if l.strip()]
+            for line in lines:
+                parts = line.split(' · ')
+                if len(parts) < 2:
+                    parts = line.split(',')
+                
+                title = parts[0].strip() if len(parts) > 0 else "Title"
+                company = parts[1].strip() if len(parts) > 1 else "Company"
+                period = parts[2].strip() if len(parts) > 2 else ""
+                
+                WorkExperience.objects.create(
+                    user=user,
+                    job_title=title,
+                    company=company,
+                    start_date=timezone.now().date(),
+                    description=f"Period: {period}"
+                )
+
+        # 5. Process Certificates
+        certificates_data = data.get('certificates')
+        if certificates_data and isinstance(certificates_data, list):
+            Certificate.objects.filter(user=user).delete()
+            for cert in certificates_data:
+                Certificate.objects.create(
+                    user=user,
+                    name=cert.get('name') or "Certificate",
+                    issuer=cert.get('issuer') or "",
+                    year=cert.get('year') or ""
+                )
+
+        # 6. Process Research
+        research_data = data.get('research')
+        if research_data and isinstance(research_data, list):
+            Research.objects.filter(user=user).delete()
+            for res in research_data:
+                Research.objects.create(
+                    user=user,
+                    title=res.get('title') or "Research Project",
+                    organization=res.get('organization') or "",
+                    period=res.get('period') or "",
+                    details=res.get('details') or ""
+                )
+
+        # 7. Process Projects
+        projects_data = data.get('projects')
+        if projects_data and isinstance(projects_data, list):
+            Project.objects.filter(user=user).delete()
+            for proj in projects_data:
+                Project.objects.create(
+                    user=user,
+                    title=proj.get('title') or "Project",
+                    organization=proj.get('organization') or "",
+                    period=proj.get('period') or "",
+                    details=proj.get('details') or ""
+                )
+
+        # 8. Set Onboarded
+        user.is_onboarded = True
+        user.save()
+        
+        refresh = False
+        # Return new token if user info changed significantly? No need usually.
+        
+        serializer = UserSerializer(user)
+        return Response({
+            'success': True,
+            'user': serializer.data
+        })
+
     except Exception as e:
         return Response({
             'success': False,

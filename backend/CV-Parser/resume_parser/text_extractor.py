@@ -5,7 +5,7 @@ from typing import Iterable, Optional, Set
 
 def extract_text_from_pdf(pdf_path: str) -> Optional[str]:
     """
-    Convert PDF to text using the system's `pdftotext` command.
+    Convert PDF to text using pdfplumber for better layout preservation.
     Returns None if conversion fails.
     """
     path = Path(pdf_path)
@@ -13,17 +13,43 @@ def extract_text_from_pdf(pdf_path: str) -> Optional[str]:
         raise FileNotFoundError(f"{pdf_path} not found")
 
     try:
-        result = subprocess.run(
-            ["pdftotext", "-layout", str(path), "-"],
-            check=True,
-            capture_output=True,
-            text=True,
-        )
-    except (subprocess.CalledProcessError, FileNotFoundError):
+        import pdfplumber
+        
+        full_text = []
+        with pdfplumber.open(path) as pdf:
+            for page in pdf.pages:
+                # layout=True maintains the physical layout of the text
+                text = page.extract_text(layout=True)
+                if text:
+                    full_text.append(text)
+        
+        return "\n".join(full_text).strip() or None
+        
+    except ImportError:
+        print("pdfplumber not found. Falling back to pypdf.")
+        # Fallback to pypdf if pdfplumber is missing
+        try:
+            try:
+                from pypdf import PdfReader
+            except ImportError:
+                from PyPDF2 import PdfReader
+                
+            reader = PdfReader(str(path))
+            text_content = []
+            for page in reader.pages:
+                extracted = page.extract_text()
+                if extracted:
+                    text_content.append(extracted)
+            
+            full_text = "\n".join(text_content)
+            return full_text.strip() or None
+        except Exception as e:
+            print(f"Error extracting text with pypdf: {e}")
+            return None
+            
+    except Exception as e:
+        print(f"Error extracting text with pdfplumber: {e}")
         return None
-
-    text = result.stdout or ""
-    return text.strip() or None
 
 
 def extract_links_from_pdf(pdf_path: str) -> Set[str]:

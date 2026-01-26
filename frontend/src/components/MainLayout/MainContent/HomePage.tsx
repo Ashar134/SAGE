@@ -424,10 +424,20 @@ const useJobFiltering = (
 // MAIN COMPONENT
 // ============================================================================
 
+import { useNavigate } from 'react-router-dom';
+
 function HomePage() {
-    const { login } = useAuth();
+    const { login, user } = useAuth(); // Destructure user
+    const navigate = useNavigate();
     const [searchTerm, setSearchTerm] = useState('');
     const [locationTerm, setLocationTerm] = useState('');
+
+    // Redirect to onboarding if not onboarded
+    useEffect(() => {
+        if (user && user.is_onboarded === false) {
+            navigate('/onboarding');
+        }
+    }, [user, navigate]);
     const [datePostFilter, setDatePostFilter] = useState('Anytime');
     const [salaryFilter, setSalaryFilter] = useState<SalaryFilter>({ type: 'all', value: 5000 });
     const [currentMessage, setCurrentMessage] = useState(0);
@@ -532,6 +542,20 @@ function HomePage() {
 
         fetchJobs();
     }, []);
+
+    // Update hero messages with job count
+    useEffect(() => {
+        if (jobs.length > 0) {
+            setHeroMessages(prev => {
+                const updatedMessages = [...prev];
+                updatedMessages[1] = {
+                    ...updatedMessages[1],
+                    title: `${jobs.length} New Opportunities`
+                };
+                return updatedMessages;
+            });
+        }
+    }, [jobs]);
 
     // Auto-rotate hero messages
     useEffect(() => {

@@ -9,6 +9,7 @@ import JobPage from './components/MainLayout/MainContent/JobPage/JobPage.tsx';
 import ProfilePage from './components/MainLayout/MainContent/UserProfile/ProfilePage.tsx';
 import ApplicationPage from './components/MainLayout/MainContent/ApplicationPage/ApplicationPage.tsx';
 import TestPage from './components/TestPageLayout/TestPage.tsx';
+import CvOnboarding from './components/Onboarding/CvOnboarding.tsx';
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       { path: "profile", element: <ProfilePage /> },
       { path: "test", element: <TestPage /> },
     ]
+  },
+  {
+    path: "/onboarding",
+    element: <CvOnboarding />
   }
 ]);
 

@@ -7,7 +7,7 @@ from typing import Any, Dict, Optional
 from .city_country import infer_country
 from .entities import extract_contacts, extract_location, extract_name
 from .normalizer import normalize_text
-from .sections import extract_education, extract_experiences, split_sections, SECTION_HEADINGS
+from .sections import extract_education, extract_experiences, extract_certificates, extract_research, extract_projects, split_sections, SECTION_HEADINGS
 from .skills import extract_skills
 from .text_extractor import extract_text_from_pdf, extract_links_from_pdf
 
@@ -41,7 +41,23 @@ def parse_resume(pdf_path: str) -> Dict[str, Any]:
     education = extract_education(
         sections.get("education")
         or sections.get("education and certifications")
-        or sections.get("certifications")
+        or ""
+    )
+
+    certificates = extract_certificates(
+        sections.get("certifications")
+        or sections.get("certificates")
+        or ""
+    )
+
+    research = extract_research(
+        sections.get("research")
+        or sections.get("publications")
+        or ""
+    )
+
+    projects = extract_projects(
+        sections.get("projects")
         or ""
     )
 
@@ -76,6 +92,9 @@ def parse_resume(pdf_path: str) -> Dict[str, Any]:
         "skills": skills,
         "experience": experiences,
         "education": education,
+        "certificates": certificates,
+        "research": research,
+        "projects": projects,
     }
 
 

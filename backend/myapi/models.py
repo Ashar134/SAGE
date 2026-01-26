@@ -22,6 +22,7 @@ class User(models.Model):
     country = models.CharField(max_length=100, blank=True, null=True)
     
     # Metadata
+    is_onboarded = models.BooleanField(default=False)
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
     last_login = models.DateTimeField(blank=True, null=True)
@@ -112,6 +113,65 @@ class WorkExperience(models.Model):
         
     def __str__(self):
         return f"{self.job_title} at {self.company}"
+
+
+class Certificate(models.Model):
+    """User certificates and awards"""
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='certificates')
+    name = models.CharField(max_length=255)
+    issuer = models.CharField(max_length=255, blank=True, null=True)
+    year = models.CharField(max_length=50, blank=True, null=True)
+    link = models.URLField(max_length=500, blank=True, null=True)
+    
+    created_at = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        db_table = 'user_certificates'
+        
+    def __str__(self):
+        return f"{self.name} from {self.issuer}"
+
+
+class Research(models.Model):
+    """User research work and publications"""
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='research')
+    title = models.CharField(max_length=255)
+    organization = models.CharField(max_length=255, blank=True, null=True)
+    period = models.CharField(max_length=100, blank=True, null=True)
+    details = models.TextField(blank=True, null=True)
+    
+    created_at = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        db_table = 'user_research'
+        verbose_name_plural = 'research projects'
+        
+    def __str__(self):
+        return self.title
+
+
+class Project(models.Model):
+    """User technical or academic projects"""
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='projects')
+    title = models.CharField(max_length=255)
+    organization = models.CharField(max_length=255, blank=True, null=True)
+    period = models.CharField(max_length=100, blank=True, null=True)
+    details = models.TextField(blank=True, null=True)
+    link = models.URLField(max_length=500, blank=True, null=True)
+    
+    created_at = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        db_table = 'user_projects'
+        
+    def __str__(self):
+        return self.title
 
 
 class Company(models.Model):
