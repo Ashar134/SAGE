@@ -34,7 +34,6 @@ def parse_resume(pdf_path: str) -> Dict[str, Any]:
         sections.get("professional experience")
         or sections.get("experience")
         or sections.get("work experience")
-        or sections.get("project experience")
         or ""
     )
 
@@ -58,6 +57,7 @@ def parse_resume(pdf_path: str) -> Dict[str, Any]:
 
     projects = extract_projects(
         sections.get("projects")
+        or sections.get("project experience")
         or ""
     )
 

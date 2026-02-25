@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useAuth } from '../../../../contexts/AuthContext';
+import { ApplicationPageSkeleton } from '../../../Skeletons/Skeletons';
 import './ApplicationPage.css';
 
 // ============================================================================
@@ -124,7 +125,7 @@ function ApplicationPage() {
 
       try {
         if (!isAuthenticated || !accessToken) {
-          setError('Please login to view your applications');
+          // Don't fetch if not authenticated - UI will show login banner
           setLoading(false);
           return;
         }
@@ -219,25 +220,27 @@ function ApplicationPage() {
     }));
   };
 
-  // Show loading state
-  if (loading) {
+  // Show loading state or unauthenticated state with skeleton
+  if (authLoading || loading || (!isAuthenticated && !authLoading)) {
     return (
       <div className="application-page">
         <div className="app-header">
           <div>
             <h1 className="app-page-title">My Applications</h1>
-            <p className="app-page-subtitle">Loading your applications...</p>
+            <p className="app-page-subtitle">
+              {authLoading ? 'Checking authentication...' :
+                !isAuthenticated ? 'Track your job applications' :
+                  'Curating your pursuit...'}
+            </p>
           </div>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px' }}>
-          <p>Loading applications...</p>
-        </div>
+        <ApplicationPageSkeleton />
       </div>
     );
   }
 
-  // Show error state
-  if (error) {
+  // Show error state (only for non-auth errors)
+  if (error && isAuthenticated) {
     return (
       <div className="application-page">
         <div className="app-header">

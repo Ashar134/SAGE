@@ -4,29 +4,35 @@ import './HeaderStyle.css';
 import profileAvatar from '../../../assets/profile-org.png';
 
 function Header() {
-    const { user, logout } = useAuth();
+    const { user, logout, isAuthenticated } = useAuth();
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isNotificationOpen, setIsNotificationOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
+    const notificationRef = useRef<HTMLDivElement>(null);
 
-    // Close dropdown when clicking outside
+    // Close dropdowns when clicking outside
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
                 setIsDropdownOpen(false);
             }
+            if (notificationRef.current && !notificationRef.current.contains(event.target as Node)) {
+                setIsNotificationOpen(false);
+            }
         };
 
-        if (isDropdownOpen) {
+        if (isDropdownOpen || isNotificationOpen) {
             document.addEventListener('mousedown', handleClickOutside);
         }
 
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [isDropdownOpen]);
+    }, [isDropdownOpen, isNotificationOpen]);
 
     const handleLogout = async () => {
         await logout();
+        setIsDropdownOpen(false);
     };
 
     return (
@@ -42,12 +48,57 @@ function Header() {
                         </div>
 
                         <div className="header-actions">
-                            <button className="action-icon">
-                                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m9-9h.01" />
-                                </svg>
-                                <span className="notification-dot"></span>
-                            </button>
+                            <div className="notification-wrapper" ref={notificationRef}>
+                                <button
+                                    className={`action-icon ${isNotificationOpen ? 'active' : ''}`}
+                                    onClick={() => setIsNotificationOpen(!isNotificationOpen)}
+                                >
+                                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m9-9h.01" />
+                                    </svg>
+                                    {!isAuthenticated && <span className="notification-dot"></span>}
+                                </button>
+
+                                {isNotificationOpen && (
+                                    <div className="notification-dropdown">
+                                        <div className="dropdown-title">
+                                            <h3>Notifications</h3>
+                                            {!isAuthenticated && <span className="noti-count">1</span>}
+                                        </div>
+                                        <div className="dropdown-divider"></div>
+                                        {!isAuthenticated ? (
+                                            <div className="notification-list">
+                                                <div className="notification-item unread">
+                                                    <div className="notification-content">
+                                                        <p className="notification-text">
+                                                            Log in to view notifications and personalized updates
+                                                        </p>
+                                                        <span className="notification-time">Just now</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ) : (
+                                            <div className="no-notifications">
+                                                <div className="no-notifications-icon">
+                                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                                        <path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m9-9h.01" />
+                                                    </svg>
+                                                </div>
+                                                <p>All caught up!</p>
+                                                <span>No new notifications at this time.</span>
+                                            </div>
+                                        )}
+                                        {!isAuthenticated && (
+                                            <>
+                                                <div className="dropdown-divider"></div>
+                                                <a href="http://localhost:8000/auth/" className="view-all-link">
+                                                    Sign in to access all features
+                                                </a>
+                                            </>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
 
                             <div className="profile-dropdown" ref={dropdownRef}>
                                 <div

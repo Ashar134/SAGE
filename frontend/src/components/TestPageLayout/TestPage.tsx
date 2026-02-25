@@ -1,4 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
+import { useAuth } from "../../contexts/AuthContext";
+import { TestPageSkeleton } from "../Skeletons/Skeletons";
 import "./TestPage.css";
 
 interface Question {
@@ -11,6 +13,7 @@ interface Question {
 const API_BASE_URL = "http://localhost:8000"; // Django backend URL
 
 const TestPage = () => {
+  const { isAuthenticated, loading: authLoading } = useAuth();
   const [questionsData, setQuestionsData] = useState<Question[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -30,19 +33,23 @@ const TestPage = () => {
   // Fetch questions from API on component mount
   useEffect(() => {
     const fetchQuestions = async () => {
+      if (!isAuthenticated) {
+        if (!authLoading) setLoading(false);
+        return;
+      }
       try {
         setLoading(true);
         setError(null);
-        
+
         // For now, generate CS test (as requested)
         const response = await fetch(`${API_BASE_URL}/api/generate-test/?expertise=cs`);
-        
+
         if (!response.ok) {
           throw new Error(`Failed to fetch questions: ${response.statusText}`);
         }
-        
+
         const data = await response.json();
-        
+
         if (data.success && data.questions) {
           setQuestionsData(data.questions);
           setAnswers(Array(data.questions.length).fill(null));
@@ -58,7 +65,7 @@ const TestPage = () => {
     };
 
     fetchQuestions();
-  }, []);
+  }, [isAuthenticated, authLoading]);
 
   useEffect(() => {
     if (toastMessage) {
@@ -80,7 +87,7 @@ const TestPage = () => {
         userAns &&
         correct &&
         userAns.toString().trim().toLowerCase() ===
-          correct.toString().trim().toLowerCase()
+        correct.toString().trim().toLowerCase()
       ) {
         computedScore += 1;
       }
@@ -239,14 +246,11 @@ const TestPage = () => {
 
 
 
-  // Show loading state
-  if (loading) {
+  // Show loading state or unauthenticated state with skeleton
+  if (authLoading || loading || (!isAuthenticated && !authLoading)) {
     return (
       <div className="test-wrapper">
-        <div className="instruction-section">
-          <h2>Loading Test...</h2>
-          <p>Please wait while we prepare your test questions.</p>
-        </div>
+        <TestPageSkeleton />
       </div>
     );
   }
@@ -258,8 +262,8 @@ const TestPage = () => {
         <div className="instruction-section">
           <h2>Error Loading Test</h2>
           <p style={{ color: "red" }}>{error}</p>
-          <button 
-            className="btn start-btn" 
+          <button
+            className="btn start-btn"
             onClick={() => window.location.reload()}
           >
             Retry

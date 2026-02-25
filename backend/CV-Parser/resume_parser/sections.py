@@ -84,7 +84,7 @@ def extract_experiences(section_text: str) -> List[Dict[str, str]]:
     lines = [ln.strip() for ln in section_text.splitlines() if ln.strip()]
     current_org: Optional[str] = None
     current_exp: Optional[Dict[str, Any]] = None
-    VERB_STARTS = {"developed", "implemented", "applied", "designing", "developing", "implementing", "led", "managed", "built"}
+    VERB_STARTS = {"developed", "implemented", "applied", "designing", "developing", "implementing", "led", "managed", "built", "created", "designed"}
 
     def flush() -> None:
         nonlocal current_exp
@@ -115,11 +115,16 @@ def extract_experiences(section_text: str) -> List[Dict[str, str]]:
             if current_exp and first_word in VERB_STARTS:
                 current_exp.setdefault("details", []).append(cleaned)
                 continue
+            
             if current_exp:
                 flush()
-            if not current_org:
+            
+            # Heuristic: Organizations are usually short and don't end with a period.
+            # If it looks like a sentence, it's probably not an organization.
+            if not current_org and len(cleaned.split()) <= 8 and not cleaned.endswith('.'):
                 current_org = cleaned
                 continue
+                
             current_exp = {
                 "title": cleaned,
                 "organization": current_org or "",
@@ -131,13 +136,13 @@ def extract_experiences(section_text: str) -> List[Dict[str, str]]:
         if current_exp:
             if not current_exp.get("organization") and not is_bullet and not DATE_RANGE_RE.search(ln):
                 # Treat the first standalone line after the title as organization if it's short
-                if len(cleaned.split()) <= 12:
+                if len(cleaned.split()) <= 10 and not cleaned.endswith('.'):
                     current_exp["organization"] = cleaned
                     continue
             current_exp.setdefault("details", []).append(cleaned)
         else:
-            # No active experience; treat as org/context line.
-            if cleaned:
+            # No active experience; treat as org/context line if it's short.
+            if cleaned and len(cleaned.split()) <= 8 and not cleaned.endswith('.'):
                 current_org = cleaned
 
     flush()
@@ -342,18 +347,80 @@ def extract_research(section_text: str) -> List[Dict[str, str]]:
 def extract_projects(section_text: str) -> List[Dict[str, str]]:
     """
     Extract technical or academic projects.
-    Reuses the logic from experience extraction.
     """
     if not section_text:
         return []
     
-    exps = extract_experiences(section_text)
-    project_items = []
-    for e in exps:
-        project_items.append({
-            "title": e.get("title", ""),
-            "organization": e.get("organization", ""),
-            "period": e.get("period", ""),
-            "details": e.get("details", "")
-        })
+    lines = [ln.strip() for ln in section_text.splitlines() if ln.strip()]
+    project_items: List[Dict[str, str]] = []
+    current_proj: Optional[Dict[str, Any]] = None
+    
+    # Common action verbs that typically start project bullet points
+    VERB_STARTS = {"developed", "implemented", "applied", "designing", "developing", "implementing", "led", "managed", "built", "created", "designed"}
+
+    def flush() -> None:
+        nonlocal current_proj
+        if current_proj:
+            current_proj["details"] = " ".join(current_proj.get("details", [])).strip()
+            project_items.append(current_proj)
+            current_proj = None
+
+    for ln in lines:
+        is_bullet = ln.lstrip().startswith(("-", "•"))
+        date_match = DATE_RANGE_RE.search(ln)
+        cleaned = ln.lstrip("-• ").strip()
+
+        if date_match:
+            if current_proj:
+                current_proj["period"] = date_match.group(0)
+                # If title is still generic, try to refine it
+                if current_proj["title"] == "Project":
+                    t = DATE_RANGE_RE.sub("", cleaned).strip(" -–—")
+                    if t: current_proj["title"] = t
+            else:
+                title = DATE_RANGE_RE.sub("", cleaned).strip(" -–—")
+                current_proj = {
+                    "title": title or cleaned,
+                    "organization": "",
+                    "period": date_match.group(0),
+                    "details": []
+                }
+            continue
+
+        if not is_bullet and TITLE_RE.match(ln):
+            first_word = cleaned.split()[0].lower() if cleaned else ""
+            if first_word in VERB_STARTS:
+                if current_proj:
+                    current_proj.setdefault("details", []).append(cleaned)
+                else:
+                    current_proj = {
+                        "title": "Project",
+                        "organization": "",
+                        "period": "",
+                        "details": [cleaned]
+                    }
+                continue
+            
+            # Likely a new project title
+            flush()
+            current_proj = {
+                "title": cleaned,
+                "organization": "",
+                "period": "",
+                "details": []
+            }
+            continue
+
+        if current_proj:
+            current_proj.setdefault("details", []).append(cleaned)
+        elif not is_bullet and len(cleaned.split()) <= 10:
+            # Standalone line before any project - could be a project title or organization
+            current_proj = {
+                "title": cleaned,
+                "organization": "",
+                "period": "",
+                "details": []
+            }
+
+    flush()
     return project_items

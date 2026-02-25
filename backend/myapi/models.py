@@ -219,6 +219,7 @@ class Job(models.Model):
     requirements = ArrayField(models.TextField(), blank=True, null=True)
     responsibilities = ArrayField(models.TextField(), blank=True, null=True)
     benefits = ArrayField(models.TextField(), blank=True, null=True)
+    selection_process = ArrayField(models.TextField(), blank=True, null=True)
     
     # Metadata
     is_remote = models.BooleanField(default=False)

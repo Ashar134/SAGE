@@ -1,7 +1,16 @@
-import { useRef, useState, useMemo } from "react";
+import { useRef, useState, useMemo, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import Header from "../MainLayout/Header/Header";
+import {
+  INPUT_LIMITS,
+  validateTextInput,
+  validateEmail,
+  validatePhone,
+  validateURL,
+  removeDangerousPatterns,
+  sanitizeProfileData
+} from "../../utils/inputSecurity";
 import "./CvOnboarding.css";
 
 interface ParsedCvResponse {
@@ -79,8 +88,18 @@ const CvOnboarding = () => {
   const [dragActive, setDragActive] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [profileDraft, setProfileDraft] = useState<ProfileDraft | null>(null);
+  const [profileDraft, setProfileDraft] = useState<ProfileDraft | null>(() => {
+    const saved = localStorage.getItem("onboardingDraft");
+    return saved ? JSON.parse(saved) : null;
+  });
   const hasDraft = !!profileDraft;
+
+  // Persist draft to localStorage
+  useEffect(() => {
+    if (profileDraft) {
+      localStorage.setItem("onboardingDraft", JSON.stringify(profileDraft));
+    }
+  }, [profileDraft]);
 
   const [activeTab, setActiveTab] = useState<'basics' | 'experience' | 'education' | 'skills' | 'certificates' | 'research' | 'projects' | 'review'>('basics');
 
@@ -104,6 +123,129 @@ const CvOnboarding = () => {
     const idx = tabs.findIndex(t => t.id === activeTab);
     if (idx > 0) setActiveTab(tabs[idx - 1].id);
   };
+
+  // ============================================================================
+  // Secure Input Handling
+  // ============================================================================
+
+  const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
+
+  /**
+   * Securely updates a text field with validation and sanitization
+   */
+  const handleSecureTextInput = (
+    fieldName: string,
+    value: string,
+    limitKey: keyof typeof INPUT_LIMITS,
+    options: { required?: boolean } = {}
+  ) => {
+    if (!profileDraft) return;
+
+    // Validate and sanitize
+    const result = validateTextInput(value, limitKey, options);
+
+    // Update validation errors
+    setValidationErrors(prev => {
+      const newErrors = { ...prev };
+      if (!result.isValid && result.error) {
+        newErrors[fieldName] = result.error;
+      } else {
+        delete newErrors[fieldName];
+      }
+      return newErrors;
+    });
+
+    // Update profile with sanitized value (allow typing, but truncate at max)
+    const sanitizedValue = removeDangerousPatterns(value).substring(0, INPUT_LIMITS[limitKey].max);
+    setProfileDraft({ ...profileDraft, [fieldName]: sanitizedValue });
+  };
+
+  /**
+   * Securely updates email field
+   */
+  const handleSecureEmailInput = (value: string) => {
+    if (!profileDraft) return;
+
+    const result = validateEmail(value);
+
+    setValidationErrors(prev => {
+      const newErrors = { ...prev };
+      if (!result.isValid && result.error && value.length > 0) {
+        newErrors.email = result.error;
+      } else {
+        delete newErrors.email;
+      }
+      return newErrors;
+    });
+
+    const sanitizedValue = removeDangerousPatterns(value).substring(0, INPUT_LIMITS.email.max);
+    setProfileDraft({ ...profileDraft, email: sanitizedValue });
+  };
+
+  /**
+   * Securely updates phone field
+   */
+  const handleSecurePhoneInput = (value: string) => {
+    if (!profileDraft) return;
+
+    const result = validatePhone(value);
+
+    setValidationErrors(prev => {
+      const newErrors = { ...prev };
+      if (!result.isValid && result.error) {
+        newErrors.phone = result.error;
+      } else {
+        delete newErrors.phone;
+      }
+      return newErrors;
+    });
+
+    setProfileDraft({ ...profileDraft, phone: result.sanitizedValue });
+  };
+
+  /**
+   * Securely updates URL field (Available for future LinkedIn/Portfolio fields)
+   */
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const handleSecureURLInput = (
+    fieldName: 'linkedIn' | 'portfolio',
+    value: string
+  ) => {
+    if (!profileDraft) return;
+
+    const result = validateURL(value, fieldName);
+
+    setValidationErrors(prev => {
+      const newErrors = { ...prev };
+      if (!result.isValid && result.error && value.length > 0) {
+        newErrors[fieldName] = result.error;
+      } else {
+        delete newErrors[fieldName];
+      }
+      return newErrors;
+    });
+
+    const sanitizedValue = removeDangerousPatterns(value).substring(0, INPUT_LIMITS[fieldName].max);
+    setProfileDraft({ ...profileDraft, [fieldName]: sanitizedValue });
+  };
+
+  /**
+   * Validates entire profile before submission (Available for form validation)
+   */
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const validateProfileBeforeSubmit = (): boolean => {
+    if (!profileDraft) return false;
+
+    const result = sanitizeProfileData(profileDraft as Record<string, unknown>);
+
+    if (!result.isValid) {
+      setValidationErrors(result.errors);
+      return false;
+    }
+
+    return true;
+  };
+
 
   const handleFile = (incoming: File | null) => {
     if (!incoming) return;
@@ -186,6 +328,7 @@ const CvOnboarding = () => {
         }
 
         localStorage.setItem("profileData", JSON.stringify(profileDraft));
+        localStorage.removeItem("onboardingDraft"); // Clear draft
         sessionStorage.setItem("cvSessionCompleted", "true");
         navigate("/"); // Redirect to Homepage
       } else {
@@ -237,10 +380,23 @@ const CvOnboarding = () => {
     }
   };
 
+  // Secure update for Experience items
   const updateExperience = (index: number, field: keyof ExperienceItem, value: string) => {
     if (!profileDraft) return;
+
+    // Get appropriate limit based on field
+    const limitMap: Record<keyof ExperienceItem, keyof typeof INPUT_LIMITS> = {
+      title: 'jobTitle',
+      organization: 'company',
+      period: 'location', // Reuse location limit for period
+      details: 'description'
+    };
+
+    // Sanitize and limit input
+    const sanitized = removeDangerousPatterns(value).substring(0, INPUT_LIMITS[limitMap[field]].max);
+
     const newExp = [...profileDraft.experience];
-    newExp[index] = { ...newExp[index], [field]: value };
+    newExp[index] = { ...newExp[index], [field]: sanitized };
     setProfileDraft({ ...profileDraft, experience: newExp });
   };
 
@@ -258,10 +414,23 @@ const CvOnboarding = () => {
     setProfileDraft({ ...profileDraft, experience: newExp });
   };
 
+  // Secure update for Education items
   const updateEducation = (index: number, field: keyof EducationItem, value: string) => {
     if (!profileDraft) return;
+
+    // Get appropriate limit based on field
+    const limitMap: Record<keyof EducationItem, keyof typeof INPUT_LIMITS> = {
+      degree: 'degree',
+      institution: 'institution',
+      year: 'location', // Reuse location limit for year
+      details: 'description'
+    };
+
+    // Sanitize and limit input
+    const sanitized = removeDangerousPatterns(value).substring(0, INPUT_LIMITS[limitMap[field]].max);
+
     const newEdu = [...profileDraft.education];
-    newEdu[index] = { ...newEdu[index], [field]: value };
+    newEdu[index] = { ...newEdu[index], [field]: sanitized };
     setProfileDraft({ ...profileDraft, education: newEdu });
   };
 
@@ -279,10 +448,23 @@ const CvOnboarding = () => {
     setProfileDraft({ ...profileDraft, education: newEdu });
   };
 
+  // Secure update for Certificate items
   const updateCertificate = (index: number, field: keyof CertificateItem, value: string) => {
     if (!profileDraft) return;
+
+    // Get appropriate limit based on field
+    const limitMap: Record<keyof CertificateItem, keyof typeof INPUT_LIMITS> = {
+      name: 'certificateName',
+      issuer: 'issuer',
+      year: 'location',
+      link: 'projectUrl'
+    };
+
+    // Sanitize and limit input
+    const sanitized = removeDangerousPatterns(value).substring(0, INPUT_LIMITS[limitMap[field]].max);
+
     const newCert = [...profileDraft.certificates];
-    newCert[index] = { ...newCert[index], [field]: value };
+    newCert[index] = { ...newCert[index], [field]: sanitized };
     setProfileDraft({ ...profileDraft, certificates: newCert });
   };
 
@@ -300,10 +482,23 @@ const CvOnboarding = () => {
     setProfileDraft({ ...profileDraft, certificates: newCert });
   };
 
+  // Secure update for Research items
   const updateResearch = (index: number, field: keyof ResearchItem, value: string) => {
     if (!profileDraft) return;
+
+    // Get appropriate limit based on field
+    const limitMap: Record<keyof ResearchItem, keyof typeof INPUT_LIMITS> = {
+      title: 'researchTitle',
+      organization: 'company',
+      period: 'location',
+      details: 'researchDescription'
+    };
+
+    // Sanitize and limit input
+    const sanitized = removeDangerousPatterns(value).substring(0, INPUT_LIMITS[limitMap[field]].max);
+
     const newRes = [...profileDraft.research];
-    newRes[index] = { ...newRes[index], [field]: value };
+    newRes[index] = { ...newRes[index], [field]: sanitized };
     setProfileDraft({ ...profileDraft, research: newRes });
   };
 
@@ -321,10 +516,23 @@ const CvOnboarding = () => {
     setProfileDraft({ ...profileDraft, research: newRes });
   };
 
+  // Secure update for Project items
   const updateProject = (index: number, field: keyof ProjectItem, value: string) => {
     if (!profileDraft) return;
+
+    // Get appropriate limit based on field
+    const limitMap: Record<keyof ProjectItem, keyof typeof INPUT_LIMITS> = {
+      title: 'projectName',
+      organization: 'company',
+      period: 'location',
+      details: 'projectDescription'
+    };
+
+    // Sanitize and limit input
+    const sanitized = removeDangerousPatterns(value).substring(0, INPUT_LIMITS[limitMap[field]].max);
+
     const newProj = [...profileDraft.projects];
-    newProj[index] = { ...newProj[index], [field]: value };
+    newProj[index] = { ...newProj[index], [field]: sanitized };
     setProfileDraft({ ...profileDraft, projects: newProj });
   };
 
@@ -341,6 +549,112 @@ const CvOnboarding = () => {
     const newProj = profileDraft.projects.filter((_, i) => i !== index);
     setProfileDraft({ ...profileDraft, projects: newProj });
   };
+
+
+  // Skills state - using tags instead of free text
+  const [availableSkills, setAvailableSkills] = useState<string[]>([]);
+  const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
+  const [skillSearchInput, setSkillSearchInput] = useState("");
+  const [skillSuggestions, setSkillSuggestions] = useState<string[]>([]);
+  const [showSkillSuggestions, setShowSkillSuggestions] = useState(false);
+  const [selectedSuggestionIndex, setSelectedSuggestionIndex] = useState(-1);
+
+  // Fetch available skills from API on mount
+  useEffect(() => {
+    const fetchSkills = async () => {
+      try {
+        const response = await fetch(`${API_BASE_URL}/api/skills/available/`);
+        const data = await response.json();
+        if (data.success) {
+          setAvailableSkills(data.skills);
+        }
+      } catch (error) {
+        console.error("Failed to fetch skills:", error);
+      }
+    };
+    fetchSkills();
+  }, []);
+
+  // Initialize selected skills from profileDraft
+  useEffect(() => {
+    if (activeTab === 'skills' && profileDraft?.skillsText) {
+      const skills = profileDraft.skillsText
+        .split(',')
+        .map(s => s.trim())
+        .filter(s => s !== "");
+      setSelectedSkills(skills);
+    }
+  }, [activeTab, profileDraft?.skillsText]);
+
+  // Handle skill search input change and filter suggestions
+  const handleSkillSearchChange = (value: string) => {
+    setSkillSearchInput(value);
+
+    if (value.trim().length > 0) {
+      const filtered = availableSkills
+        .filter(skill =>
+          skill.toLowerCase().includes(value.toLowerCase()) &&
+          !selectedSkills.includes(skill)
+        )
+        .slice(0, 10);
+
+      setSkillSuggestions(filtered);
+      setShowSkillSuggestions(filtered.length > 0);
+      setSelectedSuggestionIndex(-1);
+    } else {
+      setShowSkillSuggestions(false);
+    }
+  };
+
+  // Add skill from suggestions
+  const addSkill = (skill: string) => {
+    if (!profileDraft || selectedSkills.includes(skill)) return;
+
+    const newSkills = [...selectedSkills, skill];
+    setSelectedSkills(newSkills);
+    setProfileDraft({
+      ...profileDraft,
+      skillsText: newSkills.join(', ')
+    });
+
+    setSkillSearchInput("");
+    setShowSkillSuggestions(false);
+    setSelectedSuggestionIndex(-1);
+  };
+
+  // Remove skill
+  const removeSkill = (skillToRemove: string) => {
+    if (!profileDraft) return;
+
+    const newSkills = selectedSkills.filter(s => s !== skillToRemove);
+    setSelectedSkills(newSkills);
+    setProfileDraft({
+      ...profileDraft,
+      skillsText: newSkills.join(', ')
+    });
+  };
+
+  // Handle keyboard navigation in skill suggestions
+  const handleSkillSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (!showSkillSuggestions || skillSuggestions.length === 0) return;
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setSelectedSuggestionIndex(prev =>
+        prev < skillSuggestions.length - 1 ? prev + 1 : prev
+      );
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setSelectedSuggestionIndex(prev => prev > 0 ? prev - 1 : -1);
+    } else if (e.key === 'Enter' && selectedSuggestionIndex >= 0) {
+      e.preventDefault();
+      addSkill(skillSuggestions[selectedSuggestionIndex]);
+    } else if (e.key === 'Escape') {
+      setShowSkillSuggestions(false);
+    }
+  };
+
+
 
   return (
     <div className="cv-onboarding-page-container">
@@ -435,40 +749,65 @@ const CvOnboarding = () => {
                   <div className="form-grid">
                     <label>
                       <span className="input-label">Full Name</span>
-                      <input className="input-field" type="text"
+                      <input className={`input-field ${validationErrors.fullName ? 'input-error' : ''}`}
+                        type="text"
                         value={profileDraft?.fullName || ""}
-                        onChange={(e) => profileDraft && setProfileDraft({ ...profileDraft, fullName: e.target.value })}
+                        onChange={(e) => handleSecureTextInput('fullName', e.target.value, 'firstName')}
                         placeholder="e.g. John Doe"
+                        maxLength={INPUT_LIMITS.firstName.max}
                       />
+                      {validationErrors.fullName && (
+                        <span className="error-text">{validationErrors.fullName}</span>
+                      )}
                     </label>
                     <label>
                       <span className="input-label">Email</span>
-                      <input className="input-field" type="email"
+                      <input className={`input-field ${validationErrors.email ? 'input-error' : ''}`}
+                        type="email"
                         value={profileDraft?.email || ""}
-                        onChange={(e) => profileDraft && setProfileDraft({ ...profileDraft, email: e.target.value })}
+                        onChange={(e) => handleSecureEmailInput(e.target.value)}
+                        maxLength={INPUT_LIMITS.email.max}
                       />
+                      {validationErrors.email && (
+                        <span className="error-text">{validationErrors.email}</span>
+                      )}
                     </label>
                     <label>
                       <span className="input-label">Phone</span>
-                      <input className="input-field" type="text"
+                      <input className={`input-field ${validationErrors.phone ? 'input-error' : ''}`}
+                        type="text"
                         value={profileDraft?.phone || ""}
-                        onChange={(e) => profileDraft && setProfileDraft({ ...profileDraft, phone: e.target.value })}
+                        onChange={(e) => handleSecurePhoneInput(e.target.value)}
+                        maxLength={INPUT_LIMITS.phone.max}
                       />
+                      {validationErrors.phone && (
+                        <span className="error-text">{validationErrors.phone}</span>
+                      )}
                     </label>
                     <label>
                       <span className="input-label">Location</span>
-                      <input className="input-field" type="text"
+                      <input className={`input-field ${validationErrors.location ? 'input-error' : ''}`}
+                        type="text"
                         value={profileDraft?.location || ""}
-                        onChange={(e) => profileDraft && setProfileDraft({ ...profileDraft, location: e.target.value })}
+                        onChange={(e) => handleSecureTextInput('location', e.target.value, 'location')}
+                        maxLength={INPUT_LIMITS.location.max}
                       />
+                      {validationErrors.location && (
+                        <span className="error-text">{validationErrors.location}</span>
+                      )}
                     </label>
                     <label className="full-row">
                       <span className="input-label">Headline / Title</span>
-                      <input className="input-field" type="text"
+                      <input className={`input-field ${validationErrors.domain ? 'input-error' : ''}`}
+                        type="text"
                         value={profileDraft?.domain || ""}
-                        onChange={(e) => profileDraft && setProfileDraft({ ...profileDraft, domain: e.target.value })}
+                        onChange={(e) => handleSecureTextInput('domain', e.target.value, 'jobTitle')}
                         placeholder="e.g. Senior Software Engineer"
+                        maxLength={INPUT_LIMITS.jobTitle.max}
                       />
+                      {validationErrors.domain && (
+                        <span className="error-text">{validationErrors.domain}</span>
+                      )}
                     </label>
                   </div>
                 </div>
@@ -487,20 +826,24 @@ const CvOnboarding = () => {
                           <input className="card-input input-title" placeholder="Job Title"
                             value={exp.title}
                             onChange={e => updateExperience(idx, 'title', e.target.value)}
+                            maxLength={INPUT_LIMITS.jobTitle.max}
                           />
                           <button className="btn-remove" onClick={() => removeExperience(idx)} title="Remove">×</button>
                         </div>
                         <input className="card-input input-subtitle" placeholder="Company Name"
                           value={exp.organization}
                           onChange={e => updateExperience(idx, 'organization', e.target.value)}
+                          maxLength={INPUT_LIMITS.company.max}
                         />
                         <input className="card-input input-meta" placeholder="Period (e.g. Jan 2020 - Present)"
                           value={exp.period}
                           onChange={e => updateExperience(idx, 'period', e.target.value)}
+                          maxLength={INPUT_LIMITS.location.max}
                         />
                         <textarea className="card-input input-details" placeholder="Describe your responsibilities and achievements..."
                           value={exp.details}
                           onChange={e => updateExperience(idx, 'details', e.target.value)}
+                          maxLength={INPUT_LIMITS.description.max}
                         />
                       </div>
                     ))}
@@ -524,16 +867,19 @@ const CvOnboarding = () => {
                           <input className="card-input input-title" placeholder="Degree / Major"
                             value={edu.degree}
                             onChange={e => updateEducation(idx, 'degree', e.target.value)}
+                            maxLength={INPUT_LIMITS.degree.max}
                           />
                           <button className="btn-remove" onClick={() => removeEducation(idx)} title="Remove">×</button>
                         </div>
                         <input className="card-input input-subtitle" placeholder="Institution / School"
                           value={edu.institution}
                           onChange={e => updateEducation(idx, 'institution', e.target.value)}
+                          maxLength={INPUT_LIMITS.institution.max}
                         />
                         <input className="card-input input-meta" placeholder="Year (e.g. 2018 - 2022)"
                           value={edu.year}
                           onChange={e => updateEducation(idx, 'year', e.target.value)}
+                          maxLength={INPUT_LIMITS.location.max}
                         />
                       </div>
                     ))}
@@ -549,14 +895,84 @@ const CvOnboarding = () => {
                   <h2 className="section-heading">Skills & Summary</h2>
                   <div style={{ marginBottom: '24px' }}>
                     <label>
-                      <span className="input-label">Technical Skills</span>
-                      <p className="helper-text" style={{ margin: '0 0 8px 0' }}>Enter your skills, separated by commas.</p>
-                      <textarea className="input-field"
-                        value={profileDraft?.skillsText || ""}
-                        onChange={(e) => profileDraft && setProfileDraft({ ...profileDraft, skillsText: e.target.value })}
-                        placeholder="e.g. Python, React, JavaScript, SQL, Leadership..."
-                        style={{ minHeight: '100px' }}
-                      />
+                      {/* Search Input */}
+                      <div style={{ position: 'relative', marginBottom: selectedSkills.length > 0 ? '16px' : '0' }}>
+                        <input
+                          type="text"
+                          className="input-field"
+                          value={skillSearchInput}
+                          onChange={(e) => handleSkillSearchChange(e.target.value)}
+                          onKeyDown={handleSkillSearchKeyDown}
+                          onBlur={() => setTimeout(() => setShowSkillSuggestions(false), 200)}
+                          onFocus={() => {
+                            if (skillSearchInput.trim().length > 0) {
+                              handleSkillSearchChange(skillSearchInput);
+                            }
+                          }}
+                          placeholder="Search for skills (e.g., Python, React, JavaScript)..."
+                        />
+
+                        {/* Autocomplete Suggestions Dropdown */}
+                        {showSkillSuggestions && skillSuggestions.length > 0 && (
+                          <div className="skill-suggestions-dropdown">
+                            {skillSuggestions.map((skill, idx) => (
+                              <div
+                                key={skill}
+                                className={`suggestion-item ${idx === selectedSuggestionIndex ? 'selected' : ''}`}
+                                onClick={() => addSkill(skill)}
+                                onMouseEnter={() => setSelectedSuggestionIndex(idx)}
+                              >
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ flexShrink: 0 }}>
+                                  <circle cx="8" cy="8" r="6" stroke="currentColor" strokeWidth="1.5" opacity="0.3" />
+                                  <path d="M6 8l1.5 1.5L11 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                                <span>{skill}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Selected Skills Tags */}
+                      {selectedSkills.length > 0 && (
+                        <div className="selected-skills-wrapper">
+                          <div className="selected-skills-header">
+                            <span className="skills-count">{selectedSkills.length} skill{selectedSkills.length !== 1 ? 's' : ''} selected</span>
+                            <button
+                              type="button"
+                              className="clear-all-skills"
+                              onClick={() => {
+                                setSelectedSkills([]);
+                                if (profileDraft) {
+                                  setProfileDraft({ ...profileDraft, skillsText: '' });
+                                }
+                              }}
+                            >
+                              Clear all
+                            </button>
+                          </div>
+                          <div className="selected-skills-container">
+                            {selectedSkills.map((skill) => (
+                              <div key={skill} className="skill-tag-selected">
+                                <span>{skill}</span>
+                                <button
+                                  type="button"
+                                  className="skill-tag-remove"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    removeSkill(skill);
+                                  }}
+                                  title="Remove skill"
+                                  aria-label={`Remove ${skill}`}
+                                >
+                                  ×
+                                </button>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </label>
                   </div>
                   <div>
@@ -565,8 +981,9 @@ const CvOnboarding = () => {
                       <p className="helper-text" style={{ margin: '0 0 8px 0' }}>A brief overview of your career and goals.</p>
                       <textarea className="input-field large-area"
                         value={profileDraft?.summary || ""}
-                        onChange={(e) => profileDraft && setProfileDraft({ ...profileDraft, summary: e.target.value })}
+                        onChange={(e) => handleSecureTextInput('summary', e.target.value, 'summary')}
                         placeholder="I am a passionate software engineer with 5 years of experience..."
+                        maxLength={INPUT_LIMITS.summary.max}
                       />
                     </label>
                   </div>
@@ -586,16 +1003,19 @@ const CvOnboarding = () => {
                           <input className="card-input input-title" placeholder="Certificate Name (e.g. AWS Certified Solutions Architect)"
                             value={cert.name}
                             onChange={e => updateCertificate(idx, 'name', e.target.value)}
+                            maxLength={INPUT_LIMITS.certificateName.max}
                           />
                           <button className="btn-remove" onClick={() => removeCertificate(idx)} title="Remove">×</button>
                         </div>
                         <input className="card-input input-subtitle" placeholder="Issuing Organization"
                           value={cert.issuer}
                           onChange={e => updateCertificate(idx, 'issuer', e.target.value)}
+                          maxLength={INPUT_LIMITS.issuer.max}
                         />
                         <input className="card-input input-meta" placeholder="Year / Month"
                           value={cert.year}
                           onChange={e => updateCertificate(idx, 'year', e.target.value)}
+                          maxLength={INPUT_LIMITS.location.max}
                         />
                       </div>
                     ))}
@@ -619,20 +1039,24 @@ const CvOnboarding = () => {
                           <input className="card-input input-title" placeholder="Project Title"
                             value={proj.title}
                             onChange={e => updateProject(idx, 'title', e.target.value)}
+                            maxLength={INPUT_LIMITS.projectName.max}
                           />
                           <button className="btn-remove" onClick={() => removeProject(idx)} title="Remove">×</button>
                         </div>
                         <input className="card-input input-subtitle" placeholder="Organization (Optional)"
                           value={proj.organization}
                           onChange={e => updateProject(idx, 'organization', e.target.value)}
+                          maxLength={INPUT_LIMITS.company.max}
                         />
                         <input className="card-input input-meta" placeholder="Period / Date"
                           value={proj.period}
                           onChange={e => updateProject(idx, 'period', e.target.value)}
+                          maxLength={INPUT_LIMITS.location.max}
                         />
                         <textarea className="card-input input-details" placeholder="Briefly describe your project, technologies used, and your role..."
                           value={proj.details}
                           onChange={e => updateProject(idx, 'details', e.target.value)}
+                          maxLength={INPUT_LIMITS.projectDescription.max}
                         />
                       </div>
                     ))}
@@ -656,20 +1080,24 @@ const CvOnboarding = () => {
                           <input className="card-input input-title" placeholder="Project / Publication Title"
                             value={res.title}
                             onChange={e => updateResearch(idx, 'title', e.target.value)}
+                            maxLength={INPUT_LIMITS.researchTitle.max}
                           />
                           <button className="btn-remove" onClick={() => removeResearch(idx)} title="Remove">×</button>
                         </div>
                         <input className="card-input input-subtitle" placeholder="Institution / Publisher"
                           value={res.organization}
                           onChange={e => updateResearch(idx, 'organization', e.target.value)}
+                          maxLength={INPUT_LIMITS.company.max}
                         />
                         <input className="card-input input-meta" placeholder="Period / Date"
                           value={res.period}
                           onChange={e => updateResearch(idx, 'period', e.target.value)}
+                          maxLength={INPUT_LIMITS.location.max}
                         />
                         <textarea className="card-input input-details" placeholder="Briefly describe your research findings or contributions..."
                           value={res.details}
                           onChange={e => updateResearch(idx, 'details', e.target.value)}
+                          maxLength={INPUT_LIMITS.researchDescription.max}
                         />
                       </div>
                     ))}
@@ -736,68 +1164,8 @@ const CvOnboarding = () => {
                       </div>
                     </div>
 
-                    {/* Right Column: Experience & Education & More */}
+                    {/* Right Column: Key Professional History */}
                     <div className="review-col review-col-right">
-                      {/* Research & Projects */}
-                      <div className="summary-preview-section">
-                        <div className="summary-section-header">
-                          <h3 className="summary-section-title">Technical Projects</h3>
-                          <button className="btn-edit-section" onClick={() => setActiveTab('projects')}>Edit</button>
-                        </div>
-                        <div className="summary-content">
-                          {profileDraft?.projects && profileDraft.projects.length > 0 ? (
-                            profileDraft.projects.map((proj, idx) => (
-                              <div key={idx} className="summary-item">
-                                <div className="summary-item-title">{proj.title}</div>
-                                <div className="summary-item-subtitle">{proj.organization}</div>
-                                <div className="summary-item-meta">{proj.period}</div>
-                              </div>
-                            ))
-                          ) : (
-                            <p className="summary-empty">No projects listed</p>
-                          )}
-                        </div>
-                      </div>
-
-                      <div className="summary-preview-section">
-                        <div className="summary-section-header">
-                          <h3 className="summary-section-title">Research Work</h3>
-                          <button className="btn-edit-section" onClick={() => setActiveTab('research')}>Edit</button>
-                        </div>
-                        <div className="summary-content">
-                          {profileDraft?.research && profileDraft.research.length > 0 ? (
-                            profileDraft.research.map((res, idx) => (
-                              <div key={idx} className="summary-item">
-                                <div className="summary-item-title">{res.title}</div>
-                                <div className="summary-item-subtitle">{res.organization}</div>
-                                <div className="summary-item-meta">{res.period}</div>
-                              </div>
-                            ))
-                          ) : (
-                            <p className="summary-empty">No research listed</p>
-                          )}
-                        </div>
-                      </div>
-
-                      <div className="summary-preview-section">
-                        <div className="summary-section-header">
-                          <h3 className="summary-section-title">Certifications</h3>
-                          <button className="btn-edit-section" onClick={() => setActiveTab('certificates')}>Edit</button>
-                        </div>
-                        <div className="summary-content">
-                          {profileDraft?.certificates && profileDraft.certificates.length > 0 ? (
-                            profileDraft.certificates.map((cert, idx) => (
-                              <div key={idx} className="summary-item">
-                                <div className="summary-item-title">{cert.name}</div>
-                                <div className="summary-item-subtitle">{cert.issuer} ({cert.year})</div>
-                              </div>
-                            ))
-                          ) : (
-                            <p className="summary-empty">No certifications listed</p>
-                          )}
-                        </div>
-                      </div>
-
                       <div className="summary-preview-section">
                         <div className="summary-section-header">
                           <h3 className="summary-section-title">Work Experience</h3>
@@ -807,9 +1175,9 @@ const CvOnboarding = () => {
                           {profileDraft?.experience && profileDraft.experience.length > 0 ? (
                             profileDraft.experience.map((exp, idx) => (
                               <div key={idx} className="summary-item">
-                                <div className="summary-item-title">{exp.title || 'No title'}</div>
-                                <div className="summary-item-subtitle">{exp.organization || 'No organization'}</div>
-                                <div className="summary-item-meta">{exp.period || 'No period'}</div>
+                                <div className="summary-item-title"><span style={{ fontWeight: 500, color: '#64748b', fontSize: '0.9em' }}>Role:</span> {exp.title || 'No title'}</div>
+                                <div className="summary-item-subtitle"><span style={{ fontWeight: 500, color: '#64748b', fontSize: '0.9em' }}>Company:</span> {exp.organization || 'No organization'}</div>
+                                {exp.period && <div className="summary-item-meta"><span style={{ fontWeight: 500, color: '#94a3b8' }}>Date:</span> {exp.period}</div>}
                                 {exp.details && <div className="summary-item-details">{exp.details}</div>}
                               </div>
                             ))
@@ -830,11 +1198,74 @@ const CvOnboarding = () => {
                               <div key={idx} className="summary-item">
                                 <div className="summary-item-title">{edu.degree || 'No degree'}</div>
                                 <div className="summary-item-subtitle">{edu.institution || 'No institution'}</div>
-                                <div className="summary-item-meta">{edu.year || 'No year'}</div>
+                                {edu.year && <div className="summary-item-meta">{edu.year}</div>}
                               </div>
                             ))
                           ) : (
                             <p className="summary-empty">No education added</p>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="summary-preview-section">
+                        <div className="summary-section-header">
+                          <h3 className="summary-section-title">Technical Projects</h3>
+                          <button className="btn-edit-section" onClick={() => setActiveTab('projects')}>Edit</button>
+                        </div>
+                        <div className="summary-content">
+                          {profileDraft?.projects && profileDraft.projects.length > 0 ? (
+                            profileDraft.projects.map((proj, idx) => (
+                              <div key={idx} className="summary-item">
+                                <div className="summary-item-title"><span style={{ fontWeight: 500, color: '#64748b', fontSize: '0.9em' }}>Project:</span> {proj.title || 'No title'}</div>
+                                <div className="summary-item-subtitle"><span style={{ fontWeight: 500, color: '#64748b', fontSize: '0.9em' }}>Organization:</span> {proj.organization || 'No organization'}</div>
+                                {proj.period && <div className="summary-item-meta"><span style={{ fontWeight: 500, color: '#94a3b8' }}>Date:</span> {proj.period}</div>}
+                                {proj.details && <div className="summary-item-details">{proj.details}</div>}
+                              </div>
+                            ))
+                          ) : (
+                            <p className="summary-empty">No projects listed</p>
+                          )}
+                        </div>
+                      </div>
+
+
+                      <div className="summary-preview-section">
+                        <div className="summary-section-header">
+                          <h3 className="summary-section-title">Research Work</h3>
+                          <button className="btn-edit-section" onClick={() => setActiveTab('research')}>Edit</button>
+                        </div>
+                        <div className="summary-content">
+                          {profileDraft?.research && profileDraft.research.length > 0 ? (
+                            profileDraft.research.map((res, idx) => (
+                              <div key={idx} className="summary-item">
+                                <div className="summary-item-title"><span style={{ fontWeight: 500, color: '#64748b', fontSize: '0.9em' }}>Title:</span> {res.title || 'No title'}</div>
+                                <div className="summary-item-subtitle"><span style={{ fontWeight: 500, color: '#64748b', fontSize: '0.9em' }}>Organization:</span> {res.organization || 'No organization'}</div>
+                                {res.period && <div className="summary-item-meta"><span style={{ fontWeight: 500, color: '#94a3b8' }}>Date:</span> {res.period}</div>}
+                                {res.details && <div className="summary-item-details">{res.details}</div>}
+                              </div>
+                            ))
+                          ) : (
+                            <p className="summary-empty">No research listed</p>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="summary-preview-section">
+                        <div className="summary-section-header">
+                          <h3 className="summary-section-title">Certifications</h3>
+                          <button className="btn-edit-section" onClick={() => setActiveTab('certificates')}>Edit</button>
+                        </div>
+                        <div className="summary-content">
+                          {profileDraft?.certificates && profileDraft.certificates.length > 0 ? (
+                            profileDraft.certificates.map((cert, idx) => (
+                              <div key={idx} className="summary-item">
+                                <div className="summary-item-title">{cert.name}</div>
+                                <div className="summary-item-subtitle">{cert.issuer}</div>
+                                <div className="summary-item-meta">{cert.year || 'Not provided'}</div>
+                              </div>
+                            ))
+                          ) : (
+                            <p className="summary-empty">No certifications listed</p>
                           )}
                         </div>
                       </div>

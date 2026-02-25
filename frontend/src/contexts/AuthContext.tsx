@@ -45,7 +45,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setAccessToken(null);
         localStorage.removeItem('user');
         localStorage.removeItem('savedJobs');
-        window.location.href = 'http://localhost:8000/auth/';
+        window.location.href = 'http://localhost:8000/';
     };
 
     const refreshAccessToken = useCallback(async () => {
@@ -63,6 +63,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             } else {
                 // If refresh fails, user needs to login again
                 setAccessToken(null);
+                setUser(null);
+                localStorage.removeItem('user');
                 return null;
             }
         } catch (error) {

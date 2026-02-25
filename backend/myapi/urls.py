@@ -51,6 +51,9 @@ urlpatterns = [
     # Work Experience APIs
     path("api/users/<uuid:user_id>/experience/", views.add_work_experience, name="add_work_experience"),
     path("api/experience/<uuid:experience_id>/", views.manage_work_experience, name="manage_work_experience"),
+    
+    # Skills List API
+    path("api/skills/available/", views.get_available_skills, name="get_available_skills"),
 ]
 
 

@@ -312,6 +312,7 @@ textarea.input-field {
 
 textarea.input-field.large-area {
   min-height: 140px;
+  resize: none;
 }
 
 /* Items List */
@@ -377,6 +378,7 @@ textarea.input-field.large-area {
   color: #333;
   margin-top: 10px;
   min-height: 70px;
+  resize: none;
 }
 
 /* Buttons */
@@ -757,8 +759,8 @@ textarea.input-field.large-area {
 }
 
 .summary-item {
-  margin-bottom: 16px;
-  padding-bottom: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
   border-bottom: 1px dashed #e2e8f0;
 }
 
@@ -766,6 +768,34 @@ textarea.input-field.large-area {
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: none;
+}
+
+.summary-item-title {
+  color: #0f172a;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.summary-item-subtitle {
+  color: #475569;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.summary-item-meta {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.summary-item-details {
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-wrap;
 }
 
 .summary-skills-list {
@@ -816,4 +846,252 @@ textarea.input-field.large-area {
   .profile-contacts-strip {
     justify-content: center;
   }
+}
+
+/* ============================================================================
+   Skills Autocomplete Dropdown
+   ============================================================================ */
+
+.skill-suggestions-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 320px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skill-suggestions-dropdown::-webkit-scrollbar {
+  width: 8px;
+}
+
+.skill-suggestions-dropdown::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.skill-suggestions-dropdown::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.skill-suggestions-dropdown::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.suggestion-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #1e293b;
+  transition: all 0.15s ease;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover,
+.suggestion-item.selected {
+  background: #eff6ff;
+  color: #0066cc;
+  font-weight: 500;
+}
+
+.suggestion-item.selected {
+  background: #dbeafe;
+  border-left: 3px solid #0066cc;
+  padding-left: 13px;
+}
+
+/* ============================================================================
+   Selected Skills Tags - Modern & Professional
+   ============================================================================ */
+
+.selected-skills-wrapper {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.selected-skills-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.skills-count {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  background: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 5px;
+}
+
+.clear-all-skills {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+
+.clear-all-skills:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.selected-skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px;
+  background: #f9fafb;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  min-height: 44px;
+}
+
+.selected-skills-container:hover {
+  border-color: #d1d5db;
+}
+
+.skill-tag-selected {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #ffffff;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  padding: 4px 5px 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.skill-tag-selected:hover {
+  border-color: #0066cc;
+  background: #f8fafc;
+}
+
+.skill-tag-remove {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #9ca3af;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  transition: all 0.15s;
+  padding: 0;
+}
+
+.skill-tag-remove:hover {
+  background: #fee2e2;
+  color: #dc2626;
+  transform: scale(1.1);
+}
+
+/* Suggestion dropdown - Modern */
+.suggestion-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #334155;
+  transition: all 0.15s;
+  border-bottom: 1px solid #f1f5f9;
+  font-weight: 500;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover {
+  background: #f8fafc;
+  color: #0066cc;
+  padding-left: 20px;
+}
+
+.suggestion-item.selected {
+  background: #eff6ff;
+  color: #0066cc;
+  border-left: 3px solid #0066cc;
+  padding-left: 13px;
+}
+
+/* ============================================================================
+   Input Validation Errors
+   ============================================================================ */
+
+.input-field.input-error {
+  border-color: #ef4444 !important;
+  background-color: #fef2f2;
+}
+
+.input-field.input-error:focus {
+  border-color: #dc2626 !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.error-text {
+  display: block;
+  color: #dc2626;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 4px;
+  padding-left: 2px;
+}
+
+/* Character count indicator */
+.char-count {
+  display: block;
+  text-align: right;
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 4px;
+}
+
+.char-count.warning {
+  color: #f59e0b;
+}
+
+.char-count.error {
+  color: #ef4444;
 }

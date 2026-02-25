@@ -1267,3 +1267,100 @@ def manage_work_experience(request, experience_id):
             'error': str(e)
         }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+
+# ============================================================================
+# Skills API
+# ============================================================================
+
+@api_view(['GET'])
+def get_available_skills(request):
+    """Get list of available skills with optional filtering"""
+    try:
+        # Comprehensive skills list
+        all_skills = [
+            # Programming Languages
+            "Python", "JavaScript", "TypeScript", "Java", "C++", "C#", "Go", "Rust", "Swift", "Kotlin",
+            "PHP", "Ruby", "Scala", "R", "MATLAB", "Perl", "Objective-C", "Dart", "Julia", "Haskell",
+            
+            # Web Development
+            "React", "Angular", "Vue.js", "Next.js", "Node.js", "Express.js", "Django", "Flask", "FastAPI",
+            "Spring Boot", "ASP.NET", "Laravel", "Ruby on Rails", "HTML", "CSS", "SASS", "LESS", "Bootstrap",
+            "Tailwind CSS", "jQuery", "Redux", "MobX", "GraphQL", "REST API", "WebSockets",
+            
+            # Mobile Development
+            "React Native", "Flutter", "Android", "iOS", "Xamarin", "Ionic", "SwiftUI",
+            
+            # Databases
+            "SQL", "MySQL", "PostgreSQL", "MongoDB", "Redis", "Cassandra", "Oracle", "Microsoft SQL Server",
+            "SQLite", "DynamoDB", "Firebase", "Elasticsearch", "Neo4j", "CouchDB", "MariaDB",
+            
+            # Cloud & DevOps
+            "AWS", "Azure", "Google Cloud Platform", "Docker", "Kubernetes", "Jenkins", "GitLab CI/CD",
+            "GitHub Actions", "Terraform", "Ansible", "Chef", "Puppet", "CircleCI", "Travis CI",
+            "Heroku", "DigitalOcean", "Netlify", "Vercel",
+            
+            # Data Science & ML
+            "Machine Learning", "Deep Learning", "TensorFlow", "PyTorch", "Scikit-learn", "Keras", "Pandas",
+            "NumPy", "SciPy", "Matplotlib", "Seaborn", "Jupyter", "Apache Spark", "Hadoop", "NLP",
+            "Computer Vision", "Neural Networks", "Data Analysis", "Data Visualization", "Statistical Analysis",
+            
+            # Testing
+            "Jest", "Mocha", "Chai", "Pytest", "JUnit", "TestNG", "Selenium", "Cypress", "Playwright",
+            "Postman", "Unit Testing", "Integration Testing", "E2E Testing", "TDD", "BDD",
+            
+            # Version Control & Collaboration
+            "Git", "GitHub", "GitLab", "Bitbucket", "SVN", "Mercurial", "Jira", "Confluence", "Trello",
+            "Asana", "Slack", "Microsoft Teams",
+            
+            # Design & UI/UX
+            "Figma", "Adobe XD", "Sketch", "Photoshop", "Illustrator", "InVision", "Zeplin", "UI Design",
+            "UX Design", "Wireframing", "Prototyping", "User Research", "Responsive Design",
+            
+            # Other Technical Skills
+            "Microservices", "System Design", "API Development", "Agile", "Scrum", "Kanban", "CI/CD",
+            "Linux", "Unix", "Bash", "Shell Scripting", "Networking", "Security", "Cybersecurity",
+            "Blockchain", "Solidity", "Cryptography", "OAuth", "JWT", "WebRTC",
+            
+            # Soft Skills
+            "Leadership", "Communication", "Problem Solving", "Critical Thinking", "Team Collaboration",
+            "Project Management", "Time Management", "Analytical Skills", "Creativity", "Adaptability",
+            "Public Speaking", "Mentoring", "Strategic Planning", "Conflict Resolution",
+            
+            # Business & Analytics
+            "Business Analysis", "Data Analytics", "Power BI", "Tableau", "Excel", "Google Analytics",
+            "SEO", "SEM", "Digital Marketing", "Content Marketing", "Social Media Marketing",
+            
+            # Other Technologies
+            "IoT", "AR/VR", "Unity", "Unreal Engine", "WebGL", "Three.js", "D3.js",
+            "Socket.io", "RabbitMQ", "Kafka", "gRPC", "Microservices Architecture"
+        ]
+        
+        # Filter by search query if provided
+        search_query = request.GET.get('search', '').strip()
+        if search_query:
+            filtered_skills = [
+                skill for skill in all_skills 
+                if search_query.lower() in skill.lower()
+            ]
+        else:
+            filtered_skills = all_skills
+        
+        # Limit results if requested
+        limit = request.GET.get('limit')
+        if limit:
+            try:
+                filtered_skills = filtered_skills[:int(limit)]
+            except ValueError:
+                pass
+        
+        return Response({
+            'success': True,
+            'count': len(filtered_skills),
+            'skills': filtered_skills
+        })
+        
+    except Exception as e:
+        return Response({
+            'success': False,
+            'error': str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

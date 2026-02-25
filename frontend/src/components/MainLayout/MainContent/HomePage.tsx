@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSavedJobs } from '../../../contexts/SavedJobsContext';
 import { useAuth } from '../../../contexts/AuthContext';
+import { JobCardSkeleton } from '../../Skeletons/Skeletons';
 
 import './HomePage.css';
 
@@ -47,14 +48,25 @@ interface FilterState {
     };
 }
 
-interface SalaryFilter {
-    type: string;
-    value: number;
-}
-
 // ============================================================================
 // UTILITY FUNCTIONS
 // ============================================================================
+
+const formatTimeAgo = (date: Date): string => {
+    const now = new Date();
+    const diffMs = now.getTime() - date.getTime();
+    const diffMins = Math.floor(diffMs / (1000 * 60));
+    const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+    if (diffMins < 1) return 'Just now';
+    if (diffMins < 60) return `${diffMins}m ago`;
+    if (diffHours < 24) return `${diffHours}h ago`;
+    if (diffDays === 1) return 'Yesterday';
+    if (diffDays < 7) return `${diffDays}d ago`;
+    if (diffDays < 30) return `${Math.floor(diffDays / 7)}w ago`;
+    return `${Math.floor(diffDays / 30)}mo ago`;
+};
 
 const getDaysDifference = (date: Date): number => {
     const now = new Date();
@@ -150,18 +162,14 @@ const SearchBar = ({
 const FilterSidebar = ({
     filters,
     datePostFilter,
-    salaryFilter,
     onFilterChange,
     onDateChange,
-    onSalaryChange,
     onClearAll
 }: {
     filters: FilterState;
     datePostFilter: string;
-    salaryFilter: SalaryFilter;
     onFilterChange: (category: 'jobType' | 'remote', key: string) => void;
     onDateChange: (value: string) => void;
-    onSalaryChange: (value: SalaryFilter) => void;
     onClearAll: () => void;
 }) => (
     <aside className="filters-sidebar">
@@ -183,11 +191,11 @@ const FilterSidebar = ({
             <div className="filter-group-title">Job Type</div>
             <div className="checkbox-group">
                 {[
-                    { key: 'fullTime', label: 'Full-time', count: 2 },
-                    { key: 'internship', label: 'Internship', count: 0 },
-                    { key: 'freelance', label: 'Freelance', count: 1 },
-                    { key: 'volunteer', label: 'Volunteer', count: 0 }
-                ].map(({ key, label, count }) => (
+                    { key: 'fullTime', label: 'Full-time' },
+                    { key: 'internship', label: 'Internship' },
+                    { key: 'freelance', label: 'Freelance' },
+                    { key: 'volunteer', label: 'Volunteer' }
+                ].map(({ key, label }) => (
                     <label key={key} className="checkbox-label">
                         <input
                             type="checkbox"
@@ -196,7 +204,6 @@ const FilterSidebar = ({
                         />
                         <span className="checkbox-text">
                             {label}
-                            <span className="checkbox-count">{count}</span>
                         </span>
                     </label>
                 ))}
@@ -204,51 +211,13 @@ const FilterSidebar = ({
         </div>
 
         <div className="filter-group">
-            <div className="filter-group-title">Salary Range</div>
-            <div className="salary-range">
-                {[
-                    { type: 'under_1000', label: 'Under $1,000', value: 1000 },
-                    { type: '1000_2500', label: '$1,000 - $2,500', value: 2500 },
-                    { type: '2500_5000', label: '$2,500 - $5,000', value: 5000 },
-                    { type: 'custom', label: 'Custom Range', value: salaryFilter.value }
-                ].map(({ type, label, value }) => (
-                    <label key={type} className="checkbox-label">
-                        <input
-                            type="radio"
-                            name="salary"
-                            checked={salaryFilter.type === type}
-                            onChange={() => onSalaryChange({ type, value })}
-                        />
-                        <span className="checkbox-text">{label}</span>
-                    </label>
-                ))}
-                <div className="range-slider-container">
-                    <input
-                        type="range"
-                        className="range-slider"
-                        min="0"
-                        max="5000"
-                        step="100"
-                        disabled={salaryFilter.type !== 'custom'}
-                        value={salaryFilter.type === 'custom' ? salaryFilter.value : 5000}
-                        onChange={(e) => onSalaryChange({ type: 'custom', value: Number(e.target.value) })}
-                    />
-                    <div className="range-labels">
-                        <span>$0</span>
-                        <span className="range-value">${salaryFilter.type === 'custom' ? salaryFilter.value.toLocaleString() : '5,000'}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div className="filter-group">
             <div className="filter-group-title">Work Location</div>
             <div className="checkbox-group">
                 {[
-                    { key: 'site', label: 'On-site', count: 2 },
-                    { key: 'hybrid', label: 'Hybrid', count: 0 },
-                    { key: 'remote', label: 'Remote', count: 1 }
-                ].map(({ key, label, count }) => (
+                    { key: 'site', label: 'On-site' },
+                    { key: 'hybrid', label: 'Hybrid' },
+                    { key: 'remote', label: 'Remote' }
+                ].map(({ key, label }) => (
                     <label key={key} className="checkbox-label">
                         <input
                             type="checkbox"
@@ -257,7 +226,6 @@ const FilterSidebar = ({
                         />
                         <span className="checkbox-text">
                             {label}
-                            <span className="checkbox-count">{count}</span>
                         </span>
                     </label>
                 ))}
@@ -266,12 +234,12 @@ const FilterSidebar = ({
     </aside>
 );
 
-const JobCard = ({ job, onBookmark, isBookmarked, onApply }: {
+const JobCard = ({ job, onBookmark, isBookmarked }: {
     job: Job;
     onBookmark: (id: number | string) => void;
     isBookmarked: boolean;
-    onApply: (job: Job) => void;
 }) => {
+    const navigate = useNavigate();
     const formatLocation = (location: string) => {
         const parts = location.split(',').map(p => p.trim());
         if (parts.length >= 2) {
@@ -313,8 +281,14 @@ const JobCard = ({ job, onBookmark, isBookmarked, onApply }: {
                 <span className="posted-time">{job.postedTime.replace('Posted ', '')}</span>
             </div>
 
-            {/* Job Title */}
-            <h3 className="job-title">{job.title}</h3>
+            {/* Job Title - Clickable */}
+            <h3
+                className="job-title"
+                onClick={() => navigate(`/jobs?selectedJob=${job.id}`)}
+                style={{ cursor: 'pointer' }}
+            >
+                {job.title}
+            </h3>
 
             {/* Job Tags */}
             <div className="job-tags">
@@ -328,23 +302,11 @@ const JobCard = ({ job, onBookmark, isBookmarked, onApply }: {
             {/* Spacer for layout */}
             <div className="card-spacer"></div>
 
-            {/* Salary and Location */}
+            {/* Location only */}
             <div className="job-footer-info">
-                <div className="salary-location">
-                    {job.salaryMin && job.salaryMax && (
-                        <span className="salary">${job.salaryMin}k - ${job.salaryMax}k</span>
-                    )}
-                    <span className="location">{formatLocation(job.location)}</span>
-                </div>
+                <span className="location">{formatLocation(job.location)}</span>
             </div>
 
-            {/* Apply Button */}
-            <button
-                className="btn-apply"
-                onClick={() => onApply(job)}
-            >
-                Apply now
-            </button>
         </div>
     );
 };
@@ -358,8 +320,7 @@ const useJobFiltering = (
     searchTerm: string,
     locationTerm: string,
     filters: FilterState,
-    datePostFilter: string,
-    salaryFilter: SalaryFilter
+    datePostFilter: string
 ) => {
     return jobs.filter(job => {
         // Search filter
@@ -397,26 +358,7 @@ const useJobFiltering = (
             return datePostFilter === 'Today' ? diffDays <= 1 : diffDays <= 2;
         })();
 
-        // Salary filter
-        const matchesSalary = salaryFilter.type === 'all' || (() => {
-            if (salaryFilter.type === 'custom') {
-                return job.salaryMin !== undefined && job.salaryMin <= salaryFilter.value;
-            }
-            if (salaryFilter.type === 'under_1000') {
-                return job.salaryMax !== undefined && job.salaryMax < 1000;
-            }
-            if (salaryFilter.type === '1000_2500') {
-                return job.salaryMin !== undefined && job.salaryMax !== undefined &&
-                    job.salaryMin >= 1000 && job.salaryMax <= 2500;
-            }
-            if (salaryFilter.type === '2500_5000') {
-                return job.salaryMin !== undefined && job.salaryMax !== undefined &&
-                    job.salaryMin >= 2500 && job.salaryMax <= 5000;
-            }
-            return true;
-        })();
-
-        return matchesSearch && matchesLocation && matchesJobType && matchesRemote && matchesDate && matchesSalary;
+        return matchesSearch && matchesLocation && matchesJobType && matchesRemote && matchesDate;
     });
 };
 
@@ -427,7 +369,7 @@ const useJobFiltering = (
 import { useNavigate } from 'react-router-dom';
 
 function HomePage() {
-    const { login, user } = useAuth(); // Destructure user
+    const { login, user, isAuthenticated, loading: authLoading } = useAuth();
     const navigate = useNavigate();
     const [searchTerm, setSearchTerm] = useState('');
     const [locationTerm, setLocationTerm] = useState('');
@@ -439,11 +381,12 @@ function HomePage() {
         }
     }, [user, navigate]);
     const [datePostFilter, setDatePostFilter] = useState('Anytime');
-    const [salaryFilter, setSalaryFilter] = useState<SalaryFilter>({ type: 'all', value: 5000 });
     const [currentMessage, setCurrentMessage] = useState(0);
     const { isSaved, toggleSaveJob } = useSavedJobs();
     const [jobs, setJobs] = useState<Job[]>([]);
     const [loading, setLoading] = useState(true);
+    const [currentPage, setCurrentPage] = useState(1);
+    const jobsPerPage = 8;
     const [filters, setFilters] = useState<FilterState>({
         jobType: { fullTime: false, internship: false, freelance: false, volunteer: false },
         remote: { site: false, hybrid: false, remote: false }
@@ -460,10 +403,11 @@ function HomePage() {
             tag: "Recommended"
         },
         {
-            title: "Your Career Journey",
-            subtitle: "Explore opportunities tailored for you",
+            title: "Your Career Story Begins Here",
+            subtitle: "Discover jobs matched to your skills and goals",
             tag: "Profile"
         }
+
     ]);
 
     // Load User Data and update hero messages
@@ -518,7 +462,7 @@ function HomePage() {
                         title: apiJob.title,
                         company: apiJob.company_name,
                         location: apiJob.location,
-                        postedTime: `Posted ${getDaysDifference(new Date(apiJob.posted_date))} days ago`,
+                        postedTime: formatTimeAgo(new Date(apiJob.posted_date)),
                         createdAt: new Date(apiJob.posted_date),
                         type: apiJob.job_type || [],
                         description: apiJob.description,
@@ -579,7 +523,7 @@ function HomePage() {
         setSearchTerm('');
         setLocationTerm('');
         setDatePostFilter('Anytime');
-        setSalaryFilter({ type: 'all', value: 5000 });
+        setCurrentPage(1);
         setFilters({
             jobType: { fullTime: false, internship: false, freelance: false, volunteer: false },
             remote: { site: false, hybrid: false, remote: false }
@@ -591,29 +535,78 @@ function HomePage() {
         toggleSaveJob(jobId);
     };
 
-    const handleApply = (job: Job) => {
-        // Check if user is logged in
-        const user = localStorage.getItem('user');
-        if (!user) {
-            // User is not logged in - redirect to login
-            alert('Please login to apply for jobs');
-            window.location.href = 'http://127.0.0.1:8000/auth/'; // Redirect to login page
-            return;
-        }
-
-        alert(`Applying for ${job.title} at ${job.company}!\n\nThis would redirect to the application page.`);
-        // In a real app, this would navigate to an application form or external URL
-    };
-
     // Filter jobs
     const filteredJobs = useJobFiltering(
         jobs,
         searchTerm,
         locationTerm,
         filters,
-        datePostFilter,
-        salaryFilter
+        datePostFilter
     );
+
+    // Reset to page 1 when filters change
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [searchTerm, locationTerm, filters, datePostFilter]);
+
+    // Pagination calculations
+    const totalPages = Math.ceil(filteredJobs.length / jobsPerPage);
+    const startIndex = (currentPage - 1) * jobsPerPage;
+    const endIndex = startIndex + jobsPerPage;
+    const currentJobs = filteredJobs.slice(startIndex, endIndex);
+
+    // Generate page numbers to display
+    const getPageNumbers = () => {
+        const pages: (number | string)[] = [];
+        if (totalPages <= 5) {
+            for (let i = 1; i <= totalPages; i++) pages.push(i);
+        } else {
+            if (currentPage <= 3) {
+                pages.push(1, 2, 3, 4, '...', totalPages);
+            } else if (currentPage >= totalPages - 2) {
+                pages.push(1, '...', totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
+            } else {
+                pages.push(1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages);
+            }
+        }
+        return pages;
+    };
+
+    // Show skeleton with login banner for unauthenticated users
+    if (!isAuthenticated && !authLoading) {
+        return (
+            <div className="home-page">
+                <HeroSection currentMessage={currentMessage} heroMessages={heroMessages} />
+                <SearchBar
+                    searchTerm={searchTerm}
+                    locationTerm={locationTerm}
+                    onSearchChange={setSearchTerm}
+                    onLocationChange={setLocationTerm}
+                />
+                <div className="main-layout">
+                    <FilterSidebar
+                        filters={filters}
+                        datePostFilter={datePostFilter}
+                        onFilterChange={handleFilterChange}
+                        onDateChange={setDatePostFilter}
+                        onClearAll={handleClearAll}
+                    />
+                    <section className="job-list-section">
+                        <div className="results-header">
+                            <h2 className="results-count">
+                                <span className="count-number">--</span> Recommended Jobs
+                            </h2>
+                        </div>
+                        <div className="job-list">
+                            {[1, 2, 3, 4, 5, 6, 7, 8].map(i => (
+                                <JobCardSkeleton key={i} />
+                            ))}
+                        </div>
+                    </section>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="home-page">
@@ -629,10 +622,8 @@ function HomePage() {
                 <FilterSidebar
                     filters={filters}
                     datePostFilter={datePostFilter}
-                    salaryFilter={salaryFilter}
                     onFilterChange={handleFilterChange}
                     onDateChange={setDatePostFilter}
-                    onSalaryChange={setSalaryFilter}
                     onClearAll={handleClearAll}
                 />
 
@@ -645,20 +636,18 @@ function HomePage() {
 
                     <div className="job-list">
                         {loading ? (
-                            <div className="loading-state">
-                                <svg className="spinner" viewBox="0 0 50 50">
-                                    <circle className="path" cx="25" cy="25" r="20" fill="none" strokeWidth="5"></circle>
-                                </svg>
-                                <p>Finding the best jobs for you...</p>
-                            </div>
-                        ) : filteredJobs.length > 0 ? (
-                            filteredJobs.map(job => (
+                            <>
+                                {[1, 2, 3, 4, 5, 6, 7, 8].map(i => (
+                                    <JobCardSkeleton key={i} />
+                                ))}
+                            </>
+                        ) : currentJobs.length > 0 ? (
+                            currentJobs.map(job => (
                                 <JobCard
                                     key={job.id}
                                     job={job}
                                     onBookmark={handleBookmark}
                                     isBookmarked={isSaved(job.id)}
-                                    onApply={handleApply}
                                 />
                             ))
                         ) : (
@@ -672,6 +661,40 @@ function HomePage() {
                             </div>
                         )}
                     </div>
+
+                    {/* Pagination Controls */}
+                    {!loading && totalPages > 1 && (
+                        <div className="pagination-wrapper">
+                            <div className="pagination-divider"></div>
+                            <div className="pagination">
+                                <div className="pagination-pages">
+                                    {getPageNumbers().map((page, index) => (
+                                        <button
+                                            key={index}
+                                            className={`pagination-page ${page === currentPage ? 'active' : ''} ${page === '...' ? 'ellipsis' : ''}`}
+                                            onClick={() => typeof page === 'number' && setCurrentPage(page)}
+                                            disabled={page === '...'}
+                                        >
+                                            {page}
+                                        </button>
+                                    ))}
+                                </div>
+
+                                <button
+                                    className="pagination-btn pagination-next"
+                                    onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                                    disabled={currentPage === totalPages}
+                                >
+                                    Next
+                                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    )}
+
+
                 </section>
             </div>
         </div>

@@ -5,7 +5,6 @@
 
 .profile-page-refined .cv-onboarding-header-section {
     margin-top: 0;
-    /* Header already handles spacing */
     border-radius: 0;
 }
 
@@ -18,89 +17,77 @@
     padding-top: 32px;
 }
 
-.profile-page-refined .summary-preview-section {
-    border: 1px solid #e2e8f0;
-    box-shadow: none;
-    /* Removed back shadow */
-    border-radius: 12px;
-    transition: all 0.2s ease;
-}
-
+/* Decent Hover States for Onboarding-style cards */
 .profile-page-refined .summary-preview-section:hover {
-    border-color: #3b82f6;
-    /* Decent blue border on hover */
-    box-shadow: none;
+    border-color: #cbd5e1;
     background-color: #ffffff;
+    box-shadow: none;
 }
 
-.profile-page-refined .summary-section-title {
-    color: #1e293b;
-    font-size: 1.1rem;
-}
-
-.profile-page-refined .summary-skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 12px;
-}
-
-.profile-page-refined .skill-tag {
-    background: #f1f5f9;
+.profile-page-refined .btn-edit-section:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
     color: #475569;
-    border: 1px solid #e2e8f0;
-    padding: 6px 14px;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    transition: all 0.2s;
 }
 
 .profile-page-refined .skill-tag:hover {
-    background: #e2e8f0;
-    color: #1e293b;
-    transform: translateY(-1px);
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+    transform: none;
 }
 
-.profile-page-refined .summary-item-title {
+
+/* Let CvOnboarding.css handle the core summary preview styles for a consistent look */
+
+/* Update Tab Body Styles - Maintain the clean centered look */
+.profile-page-refined .update-tab-body {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    margin-top: 32px;
+}
+
+.profile-page-refined .update-simple-container {
+    text-align: center;
+    max-width: 400px;
+}
+
+.profile-page-refined .update-title {
+    font-size: 1.25rem;
     color: #0f172a;
-    font-size: 1rem;
+    margin-bottom: 8px;
     font-weight: 600;
 }
 
-.profile-page-refined .summary-item-subtitle {
+.profile-page-refined .update-description {
     color: #64748b;
-    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 24px;
 }
 
-.profile-page-refined .summary-item-details {
-    margin-top: 12px;
+.profile-page-refined .update-btn-decent {
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+    transition: all 0.2s ease;
+}
+
+.profile-page-refined .update-btn-decent:hover {
+    opacity: 0.9;
+}
+
+.profile-page-refined .tab-button:hover {
     color: #475569;
-    line-height: 1.6;
+    background: none;
 }
 
-.profile-page-refined .detail-row strong {
-    width: 100px;
-    display: inline-block;
-    color: #64748b;
-}
-
-/* Ensure the spinner is visible */
-.spinner.small {
-    width: 24px;
-    height: 24px;
-    border: 3px solid #e2e8f0;
-    border-top: 3px solid #3b82f6;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
+.profile-page-refined .tab-button.active {
+    color: #3b82f6;
+    border-bottom-color: #3b82f6;
 }

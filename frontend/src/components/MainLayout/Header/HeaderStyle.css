@@ -183,9 +183,133 @@
   object-fit: cover;
 }
 
-/* Profile Dropdown */
-.profile-dropdown {
+/* Profile & Notification Dropdowns */
+.profile-dropdown,
+.notification-wrapper {
   position: relative;
+}
+
+.notification-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: -80px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  width: 420px;
+  z-index: 1001;
+  animation: dropdownFadeIn 0.2s ease;
+  overflow: hidden;
+}
+
+.dropdown-title {
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-title h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.noti-count {
+  background: var(--primary-color);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.notification-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.notification-item {
+  padding: 16px 20px;
+  transition: background 0.2s ease;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+}
+
+.notification-item:hover {
+  background: #f9fafb;
+}
+
+.notification-item.unread {
+  background: rgba(0, 155, 176, 0.03);
+  border-left-color: var(--primary-color);
+}
+
+.notification-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.notification-text {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #374151;
+  font-weight: 500;
+}
+
+.notification-time {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.view-all-link {
+  display: block;
+  padding: 14px;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.view-all-link:hover {
+  background: #f9fafb;
+  text-decoration: underline;
+}
+
+.no-notifications {
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.no-notifications-icon {
+  width: 64px;
+  height: 64px;
+  background: #f3f4f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  margin-bottom: 4px;
+}
+
+.no-notifications p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.no-notifications span {
+  font-size: 0.875rem;
+  color: #6b7280;
 }
 
 .dropdown-menu {

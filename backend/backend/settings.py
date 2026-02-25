@@ -49,7 +49,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    # By this below command 'corsheaders', our website connect to the Django server (like React in our case)
+    # By this below command 'corsheaders', our website connect to the Django server
     'corsheaders.middleware.CorsMiddleware',  # Added Manually
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -160,14 +160,13 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# ============================================================================
-# JWT Configuration (Simple JWT)
-# ============================================================================
+#------------------- JWT Configuration ------------------------
+
 from datetime import timedelta
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(hours=1),  # Access token valid for 1 hour
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),  # Refresh token valid for 7 days
+    'ACCESS_TOKEN_LIFETIME': timedelta(hours=1),  # So for the initial stage, we are providing Access token valid for 1 hour
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),  # And Refresh token valid for 7 days
     'ROTATE_REFRESH_TOKENS': False,
     'BLACKLIST_AFTER_ROTATION': False,
     'UPDATE_LAST_LOGIN': True,
@@ -180,8 +179,8 @@ SIMPLE_JWT = {
     
     'AUTH_HEADER_TYPES': ('Bearer',),
     'AUTH_HEADER_NAME': 'HTTP_AUTHORIZATION',
-    'USER_ID_FIELD': 'id',  # Our User model uses 'id' (UUID)
-    'USER_ID_CLAIM': 'user_id',  # The claim name in the token payload
+    'USER_ID_FIELD': 'id',  
+    'USER_ID_CLAIM': 'user_id',  
     
     'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
     'TOKEN_TYPE_CLAIM': 'token_type',
