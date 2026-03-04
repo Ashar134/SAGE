@@ -352,3 +352,8 @@ class ApplicationTimeline(models.Model):
         return f"{self.application.job_title} - {self.title}"
 
 
+# ============================================================================
+# HR Dashboard Models (MySQL)
+# ============================================================================
+
+

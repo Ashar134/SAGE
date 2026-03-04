@@ -4,41 +4,24 @@ import StatCard from "../components/dashboard/StatCard";
 import { ChartsRow } from "../components/dashboard/Charts";
 import ApplicantsTable from "../components/dashboard/ApplicantsTable";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
-import {
-  checkSupabaseConnection,
-  fetchApplicants,
-} from "../lib/supabaseClient";
+import { fetchApplicants, checkApiConnection } from "../lib/apiClient";
 
 export default function Dashboard() {
   const [isDateOpen, setIsDateOpen] = useState(false);
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const dateRef = useRef(null);
-  const [supabaseStatus, setSupabaseStatus] = useState({
-    state: "loading",
-    message: "Checking Supabase...",
-  });
   const [applicants, setApplicants] = useState([]);
   const [dataStatus, setDataStatus] = useState({
     state: "loading",
     message: "Fetching applicants...",
   });
-  const hasError = dataStatus.state === "error" || supabaseStatus.state === "error";
+  const hasError = dataStatus.state === "error";
 
   useEffect(() => {
-    checkSupabaseConnection()
-      .then((result) => {
-        setSupabaseStatus({
-          state: "ok",
-          message: `Connected (${result.session})`,
-        });
-      })
-      .catch((err) => {
-        setSupabaseStatus({
-          state: "error",
-          message: err.message || "Unable to reach Supabase",
-        });
-      });
+    checkApiConnection().catch((err) => {
+      setDataStatus({ state: "error", message: err.message || "API unavailable" });
+    });
   }, []);
 
   useEffect(() => {
@@ -248,22 +231,18 @@ export default function Dashboard() {
           <div className="hidden sm:inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs bg-white text-gray-700">
             <span
               className={`h-2 w-2 rounded-full ${
-                supabaseStatus.state === "ok"
+                dataStatus.state === "ok"
                   ? "bg-emerald-500"
-                  : supabaseStatus.state === "error"
+                  : dataStatus.state === "error"
                   ? "bg-red-500"
                   : "bg-amber-400 animate-pulse"
               }`}
             />
             <span className="font-medium">
-              {supabaseStatus.state === "loading"
-                ? "Supabase"
-                : supabaseStatus.state === "ok"
-                ? "Supabase"
-                : "Supabase"}
+              API
             </span>
             <span className="text-gray-500">
-              {supabaseStatus.message}
+              {dataStatus.message}
             </span>
           </div>
           <div className="relative" ref={dateRef}>
@@ -406,12 +385,12 @@ export default function Dashboard() {
       <div className="space-y-3">
         {hasError && (
           <div className="rounded-md border border-red-200 bg-red-50 text-red-700 px-3 py-2 text-sm">
-            {supabaseStatus.state === "error" ? supabaseStatus.message : dataStatus.message}
+            {dataStatus.message}
           </div>
         )}
         {!hasError && !filteredApplicants.length && (
           <div className="rounded-md border border-amber-200 bg-amber-50 text-amber-700 px-3 py-2 text-sm">
-            No applicants yet. Add rows to the `applicants` table in Supabase to see data.
+            No applicants yet. Add records via the HR dashboard or API.
           </div>
         )}
         <ChartsRow
@@ -441,7 +420,7 @@ export default function Dashboard() {
           <ApplicantsTable items={filteredApplicants} />
           {!filteredApplicants.length && (
             <p className="text-sm text-gray-500 mt-3">
-              No applicants to display. Add data in Supabase to populate this table.
+              No applicants to display. Add data via the HR dashboard to populate this table.
             </p>
           )}
         </CardContent>

@@ -13,7 +13,7 @@ import {
 import {
   fetchApplicants,
   updateApplicantStatus,
-} from "../lib/supabaseClient";
+} from "../lib/apiClient";
 
 const visibleColumns = [
   { id: "applied", title: "Applied" },

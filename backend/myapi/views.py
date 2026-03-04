@@ -809,6 +809,173 @@ def application_detail(request, app_id):
 
 
 # ============================================================================
+# HR Dashboard APIs (MySQL)
+# ============================================================================
+
+
+def _serialize_hr_job(job):
+    requirements = job.requirements or []
+    if isinstance(requirements, list):
+        requirements_str = ", ".join(requirements)
+    else:
+        requirements_str = str(requirements or "")
+
+    return {
+        'id': str(job.id),
+        'title': job.title,
+        'department': job.company_name,
+        'type': job.job_type[0] if isinstance(job.job_type, list) and job.job_type else 'Full-time',
+        'location': job.location,
+        'deadline': job.expires_at,
+        'salary': job.salary_max or job.salary_min,
+        'description': job.description,
+        'requirements': requirements_str,
+        'created_at': job.created_at,
+    }
+
+
+def _serialize_hr_applicant(app):
+    user = getattr(app, 'user', None)
+    full_name = None
+    email = None
+    if user:
+        full_name = f"{user.first_name or ''} {user.last_name or ''}".strip() or None
+        email = user.email
+
+    return {
+        'id': str(app.id),
+        'candidate_code': str(app.id),
+        'name': full_name or app.job_title,
+        'department': app.company_name,
+        'role': app.job_title,
+        'email': email,
+        'status': app.status,
+        'applied_date': app.applied_at,
+        'education': None,
+        'skills': [],
+        'test_score': None,
+        'interview_score': None,
+        'match_score': None,
+        'video_url': app.resume_url,
+        'rejection_reason': app.notes,
+        'job_id': str(app.job_id) if app.job_id else None,
+    }
+
+
+@csrf_exempt
+@api_view(['GET'])
+def hr_applicants(request):
+    """List applicants using existing Application records."""
+    try:
+        qs = Application.objects.select_related('user').all()
+
+        start_date = request.GET.get('start_date')
+        end_date = request.GET.get('end_date')
+
+        if start_date:
+            qs = qs.filter(applied_at__gte=start_date)
+        if end_date:
+            qs = qs.filter(applied_at__lte=end_date)
+
+        qs = qs.order_by('-applied_at')
+
+        return Response({
+            'success': True,
+            'applicants': [_serialize_hr_applicant(a) for a in qs]
+        })
+    except Exception as e:
+        return Response({'success': False, 'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+@csrf_exempt
+@api_view(['GET', 'POST'])
+def hr_jobs(request):
+    """List or create job postings using existing Job model."""
+    try:
+        if request.method == 'GET':
+            qs = Job.objects.all()
+            return Response({
+                'success': True,
+                'jobs': [_serialize_hr_job(j) for j in qs]
+            })
+
+        # POST -> create Job
+        data = request.data
+
+        # Map incoming fields to Job fields
+        job = Job.objects.create(
+            title=data.get('title', ''),
+            company_name=data.get('department', ''),
+            location=data.get('location', ''),
+            description=data.get('description', ''),
+            job_type=[data.get('type', 'Full-time')],
+            requirements=[s.strip() for s in data.get('requirements', '').split(',') if s.strip()],
+            salary_min=None,
+            salary_max=None,
+            salary_currency='USD',
+            expires_at=data.get('deadline') or None,
+        )
+
+        return Response({'success': True, 'job': _serialize_hr_job(job)}, status=status.HTTP_201_CREATED)
+
+    except Exception as e:
+        return Response({'success': False, 'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+@csrf_exempt
+@api_view(['DELETE'])
+def hr_job_detail(request, job_id):
+    """Delete a job posting (Job model)."""
+    try:
+        job = Job.objects.get(id=job_id)
+        job.delete()
+        return Response({'success': True})
+    except Job.DoesNotExist:
+        return Response({'success': False, 'error': 'Job not found'}, status=status.HTTP_404_NOT_FOUND)
+    except Exception as e:
+        return Response({'success': False, 'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+@csrf_exempt
+@api_view(['GET'])
+def hr_job_applicants(request, job_id):
+    """List applicants for a specific job using Application model."""
+    try:
+        qs = Application.objects.select_related('user').filter(job_id=job_id).order_by('-applied_at')
+        return Response({'success': True, 'applicants': [_serialize_hr_applicant(a) for a in qs]})
+    except Exception as e:
+        return Response({'success': False, 'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+@csrf_exempt
+@api_view(['PATCH', 'POST'])
+def hr_update_applicant_status(request, applicant_id):
+    """Update Application status (id or candidate_code alias)."""
+    try:
+        status_val = request.data.get('status')
+        rejection_reason = request.data.get('rejection_reason')
+        if not status_val:
+            return Response({'success': False, 'error': 'status is required'}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            applicant = Application.objects.get(id=applicant_id)
+        except Application.DoesNotExist:
+            try:
+                applicant = Application.objects.get(id=applicant_id)
+            except Application.DoesNotExist:
+                return Response({'success': False, 'error': 'Applicant not found'}, status=status.HTTP_404_NOT_FOUND)
+
+        applicant.status = status_val
+        applicant.notes = rejection_reason or applicant.notes
+        applicant.last_status_update = timezone.now()
+        applicant.save()
+
+        return Response({'success': True, 'applicant': _serialize_hr_applicant(applicant)})
+    except Exception as e:
+        return Response({'success': False, 'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+# ============================================================================
 # User Profile APIs
 # ============================================================================
 

@@ -10,7 +10,7 @@ import {
   createJob,
   deleteJob,
   fetchJobApplicants,
-} from "../lib/supabaseClient";
+} from "../lib/apiClient";
 
 const defaultForm = {
   title: "",
@@ -58,8 +58,8 @@ export default function JobPostings() {
         }
       })
       .catch((err) => {
-        setError(err.message || "Unable to load jobs from Supabase.");
-        setInfo("Supabase unavailable. Jobs will not be stored until keys are set.");
+        setError(err.message || "Unable to load jobs from the API.");
+        setInfo("API unavailable. Jobs will not be stored until the backend is reachable.");
       })
       .finally(() => setLoading(false));
   }, []);
@@ -77,7 +77,7 @@ export default function JobPostings() {
       const created = await createJob(form);
       setJobs((prev) => [created, ...prev]);
       setForm(defaultForm);
-      setInfo("Job published to Supabase.");
+      setInfo("Job published to the backend.");
     } catch (err) {
       setError(err.message || "Failed to publish job.");
     } finally {
@@ -278,7 +278,7 @@ export default function JobPostings() {
           <CardHeader className="flex flex-row items-center justify-between">
             <div>
               <CardTitle className="text-base font-semibold text-gray-900">Recent postings</CardTitle>
-              <p className="text-sm text-gray-500">Stored in Supabase. View applicants per job.</p>
+              <p className="text-sm text-gray-500">Stored in the Django/MySQL backend. View applicants per job.</p>
             </div>
             <Badge className="bg-white text-gray-700 border">{jobs.length || 0} saved</Badge>
           </CardHeader>

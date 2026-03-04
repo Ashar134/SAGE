@@ -54,8 +54,13 @@ urlpatterns = [
     
     # Skills List API
     path("api/skills/available/", views.get_available_skills, name="get_available_skills"),
+
+    # HR Dashboard APIs (MySQL)
+    path("api/hr/applicants/", views.hr_applicants, name="hr_applicants"),
+    path("api/hr/jobs/", views.hr_jobs, name="hr_jobs"),
+    path("api/hr/jobs/<uuid:job_id>/", views.hr_job_detail, name="hr_job_detail"),
+    path("api/hr/jobs/<uuid:job_id>/applicants/", views.hr_job_applicants, name="hr_job_applicants"),
+    path("api/hr/applicants/<slug:applicant_id>/status/", views.hr_update_applicant_status, name="hr_update_applicant_status"),
 ]
-
-
 
 
