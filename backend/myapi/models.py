@@ -1,6 +1,5 @@
 import uuid
 from django.db import models
-from django.contrib.postgres.fields import ArrayField
 from django.utils import timezone
 
 
@@ -102,8 +101,8 @@ class WorkExperience(models.Model):
     end_date = models.DateField(blank=True, null=True)
     is_current = models.BooleanField(default=False)
     description = models.TextField(blank=True, null=True)
-    responsibilities = ArrayField(models.TextField(), blank=True, null=True)
-    achievements = ArrayField(models.TextField(), blank=True, null=True)
+    responsibilities = models.JSONField(default=list, blank=True, null=True)
+    achievements = models.JSONField(default=list, blank=True, null=True)
     
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
@@ -209,17 +208,17 @@ class Job(models.Model):
     description = models.TextField()
     
     # Job Details
-    job_type = ArrayField(models.CharField(max_length=50), default=list, blank=True)
-    work_mode = ArrayField(models.CharField(max_length=50), default=list, blank=True)
+    job_type = models.JSONField(default=list, blank=True)
+    work_mode = models.JSONField(default=list, blank=True)
     salary_min = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
     salary_max = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
     salary_currency = models.CharField(max_length=3, default='USD')
     
     # Requirements & Bullets
-    requirements = ArrayField(models.TextField(), blank=True, null=True)
-    responsibilities = ArrayField(models.TextField(), blank=True, null=True)
-    benefits = ArrayField(models.TextField(), blank=True, null=True)
-    selection_process = ArrayField(models.TextField(), blank=True, null=True)
+    requirements = models.JSONField(default=list, blank=True, null=True)
+    responsibilities = models.JSONField(default=list, blank=True, null=True)
+    benefits = models.JSONField(default=list, blank=True, null=True)
+    selection_process = models.JSONField(default=list, blank=True, null=True)
     
     # Metadata
     is_remote = models.BooleanField(default=False)
@@ -351,6 +350,5 @@ class ApplicationTimeline(models.Model):
         
     def __str__(self):
         return f"{self.application.job_title} - {self.title}"
-
 
 

@@ -30,6 +30,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setUser(userData);
         setAccessToken(token);
         localStorage.setItem('user', JSON.stringify(userData));
+        localStorage.setItem('accessToken', token);
     };
 
     const logout = async () => {
@@ -44,6 +45,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setUser(null);
         setAccessToken(null);
         localStorage.removeItem('user');
+        localStorage.removeItem('accessToken');
         localStorage.removeItem('savedJobs');
         window.location.href = 'http://localhost:8000/';
     };
@@ -59,12 +61,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             const data = await response.json();
             if (data.success && data.access_token) {
                 setAccessToken(data.access_token);
+                localStorage.setItem('accessToken', data.access_token);
                 return data.access_token;
             } else {
                 // If refresh fails, user needs to login again
                 setAccessToken(null);
                 setUser(null);
                 localStorage.removeItem('user');
+                localStorage.removeItem('accessToken');
                 return null;
             }
         } catch (error) {
@@ -78,14 +82,23 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     useEffect(() => {
         const initAuth = async () => {
             const savedUser = localStorage.getItem('user');
+            const savedToken = localStorage.getItem('accessToken');
+
             if (savedUser) {
                 try {
                     setUser(JSON.parse(savedUser));
-                    await refreshAccessToken();
                 } catch (e) {
-                    console.error('Auth initialization error:', e);
+                    console.error('Auth initialization error (user parse):', e);
                 }
             }
+
+            if (savedToken) {
+                setAccessToken(savedToken);
+            }
+
+            // Attempt refresh to keep session valid if refresh cookie exists
+            await refreshAccessToken();
+
             setLoading(false);
         };
         initAuth();
