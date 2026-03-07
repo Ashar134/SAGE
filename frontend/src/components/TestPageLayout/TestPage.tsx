@@ -1,4 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
+import { useSearchParams } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import { TestPageSkeleton } from "../Skeletons/Skeletons";
 import "./TestPage.css";
@@ -13,7 +14,10 @@ interface Question {
 const API_BASE_URL = "http://localhost:8000"; // Django backend URL
 
 const TestPage = () => {
-  const { isAuthenticated, loading: authLoading } = useAuth();
+  const { isAuthenticated, loading: authLoading, user } = useAuth();
+  const [searchParams] = useSearchParams();
+  const jobTitle = searchParams.get('job') || 'Software Engineer';  // passed from Take Test button
+  const jobId = searchParams.get('job_id') || '';  // Job UUID for fetching requirements
   const [questionsData, setQuestionsData] = useState<Question[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -24,6 +28,15 @@ const TestPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const [answers, setAnswers] = useState<(string | null)[]>([]);
+  const [loadingMessage, setLoadingMessage] = useState(0);
+
+  const LOADING_MESSAGES = [
+    '⚙️ Initializing your test...',
+    '🔍 Analyzing job requirements...',
+    '🤖 Generating role-specific questions...',
+    `📝 Crafting ${jobTitle} scenarios...`,
+    '✨ Almost there, finalizing your test...'
+  ];
 
 
   // For each test the voilation then initialize to 0 to start fresh for each test
@@ -32,6 +45,8 @@ const TestPage = () => {
 
   // Fetch questions from API on component mount
   useEffect(() => {
+    const controller = new AbortController();
+
     const fetchQuestions = async () => {
       if (!isAuthenticated) {
         if (!authLoading) setLoading(false);
@@ -41,8 +56,12 @@ const TestPage = () => {
         setLoading(true);
         setError(null);
 
-        // For now, generate CS test (as requested)
-        const response = await fetch(`${API_BASE_URL}/api/generate-test/?expertise=cs`);
+        // Pass job_id and candidate info to get job-specific questions
+        const encodedJobTitle = encodeURIComponent(jobTitle);
+        const candidateId = user?.id || 'default';
+        const response = await fetch(`${API_BASE_URL}/api/generate-test/?job_title=${encodedJobTitle}&job_id=${jobId}&candidate_id=${candidateId}`, {
+          signal: controller.signal
+        });
 
         if (!response.ok) {
           throw new Error(`Failed to fetch questions: ${response.statusText}`);
@@ -53,19 +72,39 @@ const TestPage = () => {
         if (data.success && data.questions) {
           setQuestionsData(data.questions);
           setAnswers(Array(data.questions.length).fill(null));
+          // Set time left from backend (data.time_allowed is in minutes, convert to seconds)
+          if (data.time_allowed) {
+            setTimeLeft(data.time_allowed * 60);
+          }
         } else {
           throw new Error(data.error || "Failed to load questions");
         }
-      } catch (err) {
+      } catch (err: any) {
+        if (err.name === 'AbortError') return;
         setError(err instanceof Error ? err.message : "Failed to load questions");
         console.error("Error fetching questions:", err);
       } finally {
-        setLoading(false);
+        if (!controller.signal.aborted) {
+          setLoading(false);
+        }
       }
     };
 
     fetchQuestions();
+
+    return () => {
+      controller.abort();
+    };
   }, [isAuthenticated, authLoading]);
+
+  // Cycle through loading messages
+  useEffect(() => {
+    if (!loading) return;
+    const interval = setInterval(() => {
+      setLoadingMessage(prev => (prev + 1) % LOADING_MESSAGES.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, [loading]);
 
   useEffect(() => {
     if (toastMessage) {
@@ -75,10 +114,10 @@ const TestPage = () => {
   }, [toastMessage]);
 
   // CORE TEST LOGIC - Define submitTest early so it can be referenced
-  const submitTest = useCallback(() => {
+  const submitTest = useCallback(async () => {
     if (submitted) return;
 
-    // Calculate score by comparing selected answer with correct answer
+    // Calculate score locally by comparing selected answer with correct answer
     let computedScore = 0;
     questionsData.forEach((q, idx) => {
       const userAns = answers[idx];
@@ -93,10 +132,40 @@ const TestPage = () => {
       }
     });
 
-    setScore(computedScore);
-    setSubmitted(true);
-    setToastMessage(`Test Submitted! Score: ${computedScore}/${questionsData.length}`);
-  }, [submitted, questionsData, answers]);
+    try {
+      setToastMessage("Submitting your results...");
+
+      const response = await fetch(`${API_BASE_URL}/api/submit-test/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${localStorage.getItem("access_token")}` // Assuming token is here
+        },
+        body: JSON.stringify({
+          job_id: jobId,
+          candidate_id: user?.id,
+          score: computedScore,
+          total_questions: questionsData.length
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setScore(computedScore);
+        setSubmitted(true);
+        setToastMessage(`Test Submitted! ${data.message}`);
+      } else {
+        throw new Error(data.error || "Failed to submit test");
+      }
+    } catch (err) {
+      console.error("Submission error:", err);
+      setToastMessage(`Error submitting test: ${err instanceof Error ? err.message : "Unknown error"}`);
+      // Fallback for UI if API fails (still mark as submitted locally for safety)
+      setScore(computedScore);
+      setSubmitted(true);
+    }
+  }, [submitted, questionsData, answers, jobId, user]);
 
   // VIOLATION COUNTING AND HANDLING
   const addViolation = (reason: string) => {
@@ -247,10 +316,24 @@ const TestPage = () => {
 
 
   // Show loading state or unauthenticated state with skeleton
-  if (authLoading || loading || (!isAuthenticated && !authLoading)) {
+  if (authLoading || (!isAuthenticated && !authLoading)) {
     return (
       <div className="test-wrapper">
         <TestPageSkeleton />
+      </div>
+    );
+  }
+
+  // Show animated loading state while fetching questions
+  if (loading) {
+    return (
+      <div className="test-wrapper">
+        <div className="test-loading-state">
+          <div className="test-loading-spinner"></div>
+          <h2 className="test-loading-title">Preparing Your Assessment</h2>
+          <p className="test-loading-message">{LOADING_MESSAGES[loadingMessage]}</p>
+          <p className="test-loading-subtext">This may take up to a minute — our AI is tailoring questions just for you.</p>
+        </div>
       </div>
     );
   }
@@ -293,7 +376,13 @@ const TestPage = () => {
       <div className="instruction-section">
         <div>
           <h2>Test Instructions</h2>
-          <p>You have <strong>2 Hours</strong> to complete the assessment.</p>
+          <p>
+            You have <strong>
+              {timeLeft >= 3600
+                ? `${Math.round(timeLeft / 3600)} Hour${Math.round(timeLeft / 3600) > 1 ? 's' : ''}`
+                : `${Math.round(timeLeft / 60)} Minute${Math.round(timeLeft / 60) > 1 ? 's' : ''}`}
+            </strong> to complete the assessment.
+          </p>
           <p>This test is continuously monitored to maintain exam integrity. Any detected violation will result in a warning.</p>
           <p>If you receive three warnings, your test will be automatically submitted.</p>
           <p>To ensure a fair testing environment, actions such as text selection, copying, pasting, and switching browser tabs are disabled during the exam.</p>

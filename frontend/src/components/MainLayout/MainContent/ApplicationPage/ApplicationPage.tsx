@@ -10,6 +10,7 @@ import './ApplicationPage.css';
 
 interface Application {
   id: string; // UUID from database
+  jobId: string; // Job UUID for test generation
   jobTitle: string;
   company: string;
   logoColor: string;
@@ -21,6 +22,7 @@ interface Application {
   interviewType?: 'interview' | 'test'; // Optional field for interview stage
   interviewDate?: string; // ISO string from database
   offerDeadline?: string; // ISO string from database
+  testDeadline?: string; // ISO string from database
 }
 
 type StatusColumn = {
@@ -35,7 +37,7 @@ type StatusColumn = {
 
 const STATUS_COLUMNS: StatusColumn[] = [
   { id: 'applied', title: 'Applied', color: '#6366f1' },
-  { id: 'reviewing', title: 'In Review', color: '#f59e0b' },
+  { id: 'reviewing', title: 'Assessments', color: '#f59e0b' },
   { id: 'interview', title: 'Interview', color: '#8b5cf6' },
   { id: 'offer', title: 'Offer', color: '#10b981' },
   { id: 'rejected', title: 'Rejected', color: '#ef4444' }
@@ -73,7 +75,6 @@ const ApplicationCard = ({ application }: { application: Application }) => {
         <span>{application.location}</span>
       </div>
       <div className="app-footer">
-        <span className="app-salary">{application.salary}</span>
         <span className="app-date">{application.appliedDate}</span>
       </div>
     </motion.div>
@@ -163,6 +164,7 @@ function ApplicationPage() {
           // Transform database applications to match the Application interface
           const transformedApps: Application[] = data.applications.map((app: any) => ({
             id: app.id,
+            jobId: app.job || '',
             jobTitle: app.job_title,
             company: app.company_name,
             logoColor: app.company_logo_color || '#6366f1',
@@ -174,7 +176,8 @@ function ApplicationPage() {
             interviewType: app.interview_type && isTestInterview(app.interview_type) ? 'test' :
               app.status === 'interview' ? 'interview' : undefined,
             interviewDate: app.interview_date,
-            offerDeadline: app.offer_deadline
+            offerDeadline: app.offer_deadline,
+            testDeadline: app.test_deadline
           }));
 
           setApplications(transformedApps);
@@ -193,16 +196,20 @@ function ApplicationPage() {
   }, [isAuthenticated, accessToken, authLoading]);
 
   const getApplicationsByStatus = (status: string) => {
+    // Make the 'Applied' column show all applications to act as a permanent record
+    if (status === 'applied') {
+      return applications;
+    }
     return applications.filter(app => app.status === status);
   };
 
   const getTotalApplications = () => applications.length;
 
 
-  // Get upcoming interviews only
+  // Get upcoming interviews and assessments
   const getUpcomingApplications = () => {
     return applications.filter(app =>
-      app.status === 'interview'
+      app.status === 'interview' || app.status === 'reviewing'
     );
   };
 
@@ -380,8 +387,8 @@ function ApplicationPage() {
                         </svg>
                       )}
                     </div>
-                    <span className={`status-badge ${app.interviewType === 'test' ? 'status-test' : 'status-interview'}`}>
-                      {app.interviewType === 'test' ? 'Assessment Test' : 'Interview Scheduled'}
+                    <span className={`status-badge ${app.status === 'reviewing' || app.interviewType === 'test' ? 'status-test' : 'status-interview'}`}>
+                      {app.status === 'reviewing' ? 'Assessment Pending' : app.interviewType === 'test' ? 'Assessment Test' : 'Interview Scheduled'}
                     </span>
                   </div>
                   <h3 className="upcoming-title">{app.jobTitle}</h3>
@@ -402,19 +409,39 @@ function ApplicationPage() {
                         <line x1="3" y1="10" x2="21" y2="10"></line>
                       </svg>
                       <span>
-                        {app.interviewDate
-                          ? new Date(app.interviewDate).toLocaleString([], {
-                            month: 'short',
-                            day: 'numeric',
-                            hour: '2-digit',
-                            minute: '2-digit'
-                          })
-                          : 'Date TBD'}
+                        {app.status === 'reviewing'
+                          ? (app.testDeadline ? `Deadline: ${new Date(app.testDeadline).toLocaleDateString()}` : 'Date TBD')
+                          : (app.interviewDate
+                            ? new Date(app.interviewDate).toLocaleString([], {
+                              month: 'short',
+                              day: 'numeric',
+                              hour: '2-digit',
+                              minute: '2-digit'
+                            })
+                            : 'Date TBD')}
                       </span>
                     </div>
                   </div>
                   <div className="upcoming-actions">
-                    {app.interviewType === 'test' ? (
+                    {app.status === 'reviewing' ? (
+                      <button
+                        className="action-btn primary w-full flex items-center justify-center gap-2"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          const cleanJobTitle = app.jobTitle.split('-')[0].trim();
+                          window.open(`http://localhost:5173/test?job=${encodeURIComponent(cleanJobTitle)}&job_id=${app.jobId}`, '_blank');
+                        }}
+                      >
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                          <polyline points="14 2 14 8 20 8"></polyline>
+                          <line x1="16" y1="13" x2="8" y2="13"></line>
+                          <line x1="16" y1="17" x2="8" y2="17"></line>
+                          <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        Take Test
+                      </button>
+                    ) : app.interviewType === 'test' ? (
                       <>
                         <button className="action-btn primary">Start Test</button>
                         <button className="action-btn secondary">View Details</button>
@@ -525,6 +552,22 @@ function ApplicationPage() {
                     events.push({
                       type: 'offer',
                       title: `${app.company} Offer`,
+                      time: 'Deadline',
+                      application: app
+                    });
+                  }
+                }
+
+                // For tests: use test deadline when in reviewing status
+                if (app.status === 'reviewing' && app.testDeadline) {
+                  let eventDate = new Date(app.testDeadline);
+
+                  if (eventDate.getDate() === day &&
+                    eventDate.getMonth() === currentMonth &&
+                    eventDate.getFullYear() === currentYear) {
+                    events.push({
+                      type: 'test',
+                      title: `${app.company} Test Deadline`,
                       time: 'Deadline',
                       application: app
                     });

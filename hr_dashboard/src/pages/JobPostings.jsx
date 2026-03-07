@@ -21,6 +21,9 @@ const defaultForm = {
   salary: "",
   description: "",
   requirements: "",
+  test_no_of_questions: "100",
+  test_time_allowed: "60",
+  test_deadline_days: "3",
 };
 
 const jobTypes = ["Full-time", "Part-time", "Contract", "Visiting"];
@@ -232,6 +235,42 @@ export default function JobPostings() {
                 />
               </div>
 
+              <div className="pt-2 border-t border-gray-100">
+                <h3 className="text-sm font-semibold text-gray-900 mb-3">Test Configuration</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-gray-600">No. of Questions *</label>
+                    <Input
+                      type="number"
+                      min="1"
+                      value={form.test_no_of_questions}
+                      onChange={handleChange("test_no_of_questions")}
+                      placeholder="100"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-gray-600">Time Allowed (mins) *</label>
+                    <Input
+                      type="number"
+                      min="1"
+                      value={form.test_time_allowed}
+                      onChange={handleChange("test_time_allowed")}
+                      placeholder="60"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-gray-600">Deadline (Days) *</label>
+                    <Input
+                      type="number"
+                      min="1"
+                      value={form.test_deadline_days}
+                      onChange={handleChange("test_deadline_days")}
+                      placeholder="3"
+                    />
+                  </div>
+                </div>
+              </div>
+
               <div className="flex justify-end gap-2">
                 <Button type="button" variant="outline" onClick={() => setForm(defaultForm)}>
                   Reset
@@ -274,28 +313,28 @@ export default function JobPostings() {
         </Card>
       </div>
 
-        <Card className="shadow-sm border-gray-200">
-          <CardHeader className="flex flex-row items-center justify-between">
-            <div>
-              <CardTitle className="text-base font-semibold text-gray-900">Recent postings</CardTitle>
-              <p className="text-sm text-gray-500">Stored in the Django/MySQL backend. View applicants per job.</p>
-            </div>
-            <Badge className="bg-white text-gray-700 border">{jobs.length || 0} saved</Badge>
-          </CardHeader>
-          <CardContent>
-            <Table>
-              <TableHeader>
-                <TableRow className="bg-gray-50/60">
-                  <TableHead>Title</TableHead>
-                  <TableHead>Department</TableHead>
-                  <TableHead>Type</TableHead>
-                  <TableHead>Location</TableHead>
-                  <TableHead>Deadline</TableHead>
-                  <TableHead>Salary</TableHead>
-                  <TableHead className="text-right">Actions</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
+      <Card className="shadow-sm border-gray-200">
+        <CardHeader className="flex flex-row items-center justify-between">
+          <div>
+            <CardTitle className="text-base font-semibold text-gray-900">Recent postings</CardTitle>
+            <p className="text-sm text-gray-500">Stored in the Django/MySQL backend. View applicants per job.</p>
+          </div>
+          <Badge className="bg-white text-gray-700 border">{jobs.length || 0} saved</Badge>
+        </CardHeader>
+        <CardContent>
+          <Table>
+            <TableHeader>
+              <TableRow className="bg-gray-50/60">
+                <TableHead>Title</TableHead>
+                <TableHead>Department</TableHead>
+                <TableHead>Type</TableHead>
+                <TableHead>Location</TableHead>
+                <TableHead>Deadline</TableHead>
+                <TableHead>Salary</TableHead>
+                <TableHead className="text-right">Actions</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
               {jobs.map((job) => {
                 const applicantsState = applicantsByJob[job.id] || {};
                 const hasApplicants = Array.isArray(applicantsState.items);
@@ -374,8 +413,8 @@ export default function JobPostings() {
                   </>
                 );
               })}
-              </TableBody>
-            </Table>
+            </TableBody>
+          </Table>
           {loading && (
             <p className="text-sm text-gray-500 mt-3">Loading jobs...</p>
           )}

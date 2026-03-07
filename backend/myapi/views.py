@@ -22,7 +22,6 @@ if cv_parser_dir.exists():
     sys.path.insert(0, str(cv_parser_dir))
 
 from test_generator.service import TestGeneratorService
-from test_generator.config import TEST_COMPOSITIONS, CS_DISTRIBUTION
 from resume_parser import parse_resume
 
 from .models import (
@@ -157,61 +156,67 @@ def parse_cv(request):
             os.remove(temp_path)
 
 
-def get_question_type(expertise: str, question_number: int) -> str:
-    """
-    Determine the question type based on expertise and question number.
-    Uses TEST_COMPOSITIONS to determine which category a question belongs to.
-    """
-    if expertise not in TEST_COMPOSITIONS:
-        return "Test"
-    
-    composition = TEST_COMPOSITIONS[expertise]
-    current_pos = 1
-    
-    # Go through each category in order
-    for category, count in composition.items():
-        end_pos = current_pos + count - 1
-        
-        if current_pos <= question_number <= end_pos:
-            # If it's CS category, need to determine subcategory
-            if category == "cs":
-                cs_current_pos = current_pos
-                # Go through CS subcategories
-                for subcategory, sub_count in CS_DISTRIBUTION.items():
-                    cs_end_pos = cs_current_pos + sub_count - 1
-                    if cs_current_pos <= question_number <= cs_end_pos:
-                        return subcategory
-                    cs_current_pos = cs_end_pos + 1
-                return "CS"  # Fallback
-            else:
-                # Capitalize first letter for display
-                return category.capitalize()
-        
-        current_pos = end_pos + 1
-    
-    return "Test"  # Fallback
 
-
+# --- Automated Question Generation (RAG) ---
 # Test Generator API Endpoints
 @api_view(['GET'])
 def generate_test(request):
     """
-    Generate a test for a candidate
-    For now, generates CS test by default
-    Later will be based on candidate expertise
+    Generate a test for a candidate based on the job posting.
+    Looks up Job model for title, requirements, and question count.
     """
     try:
-        # Initialize test generator service
+        from myapi.models import Job
+        
         service = TestGeneratorService()
         
-        # For now, generate CS test (as requested)
-        # Later: Get expertise from request or candidate data
-        expertise = request.GET.get('expertise', 'cs')
         candidate_id = request.GET.get('candidate_id', 'default')
+        job_id = request.GET.get('job_id', '')
         
-        # Generate test
-        result = service.generate_test_by_expertise(
-            expertise=expertise,
+        # Check if test was already completed for this candidate/job
+        if job_id and candidate_id != 'default':
+            try:
+                application = Application.objects.get(job_id=job_id, user_id=candidate_id)
+                if application.test_score is not None:
+                    return Response({
+                        'success': False,
+                        'error': 'Test already completed for this job.',
+                        'test_score': application.test_score,
+                        'status': application.status
+                    }, status=400)
+            except Application.DoesNotExist:
+                pass
+
+        # Look up job details from the database
+        print(f"DEBUG: generate_test called with job_id='{job_id}'")
+        time_allowed = 60  # Default 60 minutes
+        
+        if job_id:
+            try:
+                job = Job.objects.get(id=job_id)
+                job_title = job.title
+                requirements = job.requirements or []
+                total_questions = job.test_no_of_questions or 100
+                time_allowed = job.test_time_allowed or 60
+                print(f"DEBUG: Found job '{job_title}' with {total_questions} questions and {time_allowed} mins")
+            except Job.DoesNotExist:
+                print(f"DEBUG: Job with id='{job_id}' not found")
+                job_title = request.GET.get('job_title', 'Software Engineer')
+                requirements = []
+                total_questions = 20
+        else:
+            print("DEBUG: No job_id provided")
+            # Fallback: use query params
+            job_title = request.GET.get('job_title', 'Software Engineer')
+            requirements = []
+            total_questions = 20
+        
+        # Generate test using RAG
+        result = service.generate_rag_test_for_job(
+            job_id=job_id or 'unknown',
+            job_title=job_title,
+            requirements=requirements,
+            total_questions=total_questions,
             candidate_id=candidate_id
         )
         
@@ -221,8 +226,8 @@ def generate_test(request):
             # Extract question text
             question_text = question.get('question', question.get('Question', question.get('question_text', '')))
             
-            # Extract the correct answer (string)
-            correct_answer = (
+            # Extract the correct answer key
+            raw_correct = (
                 question.get('key')
                 or question.get('correct_answer')
                 or question.get('correct')
@@ -230,17 +235,33 @@ def generate_test(request):
                 or question.get('Answer')
             )
             
-            # Extract options - handle different possible field names
+            # Extract options and try to resolve raw_correct to its text value
             options = []
+            correct_answer = raw_correct
             
             # Handle answers object format (A1, A2, A3, A4)
             if 'answers' in question and isinstance(question['answers'], dict):
+                answers_dict = question['answers']
+                # If raw_correct is a key in the answers (e.g., "A2"), get its value
+                if raw_correct in answers_dict:
+                    correct_answer = answers_dict[raw_correct]
+                
                 # Sort by key to maintain order (A1, A2, A3, A4)
-                sorted_answers = sorted(question['answers'].items())
+                sorted_answers = sorted(answers_dict.items())
                 options = [value for key, value in sorted_answers]
+                
             # Handle options array format
             elif 'options' in question and isinstance(question['options'], list):
                 options = question['options']
+                # If raw_correct is a number (1-indexed or 0-indexed string/int), resolve it
+                try:
+                    idx_val = int(raw_correct)
+                    if 0 <= idx_val < len(options): # 0-indexed
+                        correct_answer = options[idx_val]
+                    elif 1 <= idx_val <= len(options): # 1-indexed
+                        correct_answer = options[idx_val - 1]
+                except (ValueError, TypeError):
+                    pass
             elif 'Options' in question and isinstance(question['Options'], list):
                 options = question['Options']
             elif 'choices' in question and isinstance(question['choices'], list):
@@ -255,37 +276,124 @@ def generate_test(request):
                 for key in option_keys:
                     if key in question and question[key]:
                         options.append(question[key])
+                
+                # If it's a single character key 'A', 'B', 'C', 'D'
+                if raw_correct in question and raw_correct in ['A', 'B', 'C', 'D', 'option_a', 'option_b', 'option_c', 'option_c']:
+                    correct_answer = question[raw_correct]
             
             # If still no options, try to extract from any list field
             if not options:
                 for key, value in question.items():
                     if isinstance(value, list) and len(value) > 0 and key != 'question':
                         options = value
+                        if raw_correct in ['0', '1', '2', '3'] or isinstance(raw_correct, int):
+                            try:
+                                correct_answer = options[int(raw_correct)]
+                            except: pass
                         break
             
             # If still no options, create placeholder
             if not options:
                 options = ['Option A', 'Option B', 'Option C', 'Option D']
             
-            # Determine question type based on position
-            question_type = get_question_type(expertise, idx)
+            # Determine question type from the question object itself
+            category = question.get('category', 'General')
             
             formatted_questions.append({
                 'id': idx,
                 'question': question_text,
                 'options': options,
                 'correctAnswer': correct_answer,  # included for scoring on frontend
-                'questionType': question_type  # Category/subject for display
+                'questionType': category.capitalize()  # Category/subject for display
             })
         
         return Response({
             'success': True,
-            'expertise': result['expertise'],
+            'expertise': job_title,
             'total_questions': result['total_questions'],
+            'time_allowed': time_allowed,  # in minutes
             'questions': formatted_questions
         })
         
     except Exception as e:
+        import traceback
+        print("\n=== GENERATE TEST ERROR ===")
+        traceback.print_exc()
+        print("=========================\n")
+        return Response({
+            'success': False,
+            'error': str(e)
+        }, status=500)
+
+
+@api_view(['POST'])
+def submit_test(request):
+    """
+    Submit test results, calculate score, and update application status.
+    Threshold: 40%
+    """
+    try:
+        data = request.data
+        job_id = data.get('job_id')
+        candidate_id = data.get('candidate_id')
+        score = data.get('score')  # Initial numerical score from frontend
+        total_questions = data.get('total_questions')
+        
+        if not all([job_id, candidate_id, score is not None, total_questions]):
+            return Response({
+                'success': False,
+                'error': 'Missing required fields: job_id, candidate_id, score, total_questions'
+            }, status=400)
+
+        # Get the application
+        try:
+            application = Application.objects.get(job_id=job_id, user_id=candidate_id)
+        except Application.DoesNotExist:
+            return Response({
+                'success': False,
+                'error': 'Application not found'
+            }, status=404)
+
+        # Check if already submitted
+        if application.test_score is not None:
+            return Response({
+                'success': False,
+                'error': 'Test already submitted for this application.'
+            }, status=400)
+
+        # Calculate percentage
+        percentage = (float(score) / float(total_questions)) * 100
+        
+        # Branching logic: 40% threshold
+        old_status = application.status
+        new_status = 'interview' if percentage >= 40 else 'rejected'
+        
+        # Update application
+        application.test_score = percentage
+        application.test_completed_at = timezone.now()
+        application.status = new_status
+        application.save()
+        
+        # Create timeline entry
+        ApplicationTimeline.objects.create(
+            application=application,
+            event_type='status_change' if old_status != new_status else 'test_completed',
+            old_status=old_status,
+            new_status=new_status,
+            title=f'Test Completed - {percentage:.1f}%',
+            description=f'Scored {score}/{total_questions} ({percentage:.1f}%). Candidate moved to {new_status}.'
+        )
+        
+        return Response({
+            'success': True,
+            'percentage': percentage,
+            'new_status': new_status,
+            'message': f'Test submitted successfully. Your score: {percentage:.1f}%'
+        })
+
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
         return Response({
             'success': False,
             'error': str(e)
@@ -687,6 +795,13 @@ def applications(request):
             
             # Get job details if job_id provided
             job_id = data.get('job_id')
+            
+            # Prevent duplicate job applications
+            if job_id and Application.objects.filter(user_id=user_id, job_id=job_id).exists():
+                return Response({
+                    'success': False,
+                    'error': 'You have already applied for this job.'
+                }, status=status.HTTP_400_BAD_REQUEST)
             if job_id:
                 try:
                     job = Job.objects.select_related('company').get(id=job_id)
@@ -711,7 +826,7 @@ def applications(request):
                 company_logo_initial=data.get('company_logo_initial', ''),
                 location=data.get('location', ''),
                 salary_range=data.get('salary_range', ''),
-                status=data.get('status', 'applied'),
+                status=data.get('status', 'reviewing'),  # Assessments status directly upon apply
                 cover_letter=data.get('cover_letter', ''),
                 resume_url=data.get('resume_url', ''),
                 notes=data.get('notes', '')
@@ -831,6 +946,9 @@ def _serialize_hr_job(job):
         'description': job.description,
         'requirements': requirements_str,
         'created_at': job.created_at,
+        'test_no_of_questions': job.test_no_of_questions,
+        'test_time_allowed': job.test_time_allowed,
+        'test_deadline_days': job.test_deadline_days,
     }
 
 
@@ -903,6 +1021,24 @@ def hr_jobs(request):
         data = request.data
 
         # Map incoming fields to Job fields
+        salary_str = data.get('salary', '')
+        salary_min = None
+        salary_max = None
+        
+        import re
+        # Basic parsing: find all numbers
+        numbers = re.findall(r'\d+', salary_str.replace(',', ''))
+        if numbers:
+            if len(numbers) >= 2:
+                salary_min = float(numbers[0])
+                salary_max = float(numbers[1])
+                # If they typed "100 - 150" or "100k":
+                if salary_min < 1000 and 'k' in salary_str.lower(): salary_min *= 1000
+                if salary_max < 1000 and 'k' in salary_str.lower(): salary_max *= 1000
+            elif len(numbers) == 1:
+                salary_min = float(numbers[0])
+                if salary_min < 1000 and 'k' in salary_str.lower(): salary_min *= 1000
+
         job = Job.objects.create(
             title=data.get('title', ''),
             company_name=data.get('department', ''),
@@ -910,10 +1046,13 @@ def hr_jobs(request):
             description=data.get('description', ''),
             job_type=[data.get('type', 'Full-time')],
             requirements=[s.strip() for s in data.get('requirements', '').split(',') if s.strip()],
-            salary_min=None,
-            salary_max=None,
+            salary_min=salary_min,
+            salary_max=salary_max,
             salary_currency='USD',
             expires_at=data.get('deadline') or None,
+            test_no_of_questions=int(data.get('test_no_of_questions', 100)),
+            test_time_allowed=int(data.get('test_time_allowed', 60)),
+            test_deadline_days=int(data.get('test_deadline_days', 3)),
         )
 
         return Response({'success': True, 'job': _serialize_hr_job(job)}, status=status.HTTP_201_CREATED)

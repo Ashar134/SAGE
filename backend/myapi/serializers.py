@@ -136,6 +136,7 @@ class ApplicationTimelineSerializer(serializers.ModelSerializer):
 class ApplicationSerializer(serializers.ModelSerializer):
     """Serializer for Application model"""
     timeline = ApplicationTimelineSerializer(many=True, read_only=True)
+    test_deadline = serializers.SerializerMethodField()
     
     class Meta:
         model = Application
@@ -143,10 +144,22 @@ class ApplicationSerializer(serializers.ModelSerializer):
             'id', 'user', 'job', 'job_title', 'company_name', 'company_logo_color',
             'company_logo_initial', 'location', 'salary_range', 'status',
             'interview_type', 'interview_date', 'interview_notes', 'offer_deadline', 
+            'test_score', 'test_completed_at', 'test_deadline',
             'applied_at', 'last_status_update', 'cover_letter', 'resume_url', 'notes',
             'created_at', 'updated_at', 'timeline'
         ]
         read_only_fields = ['id', 'created_at', 'updated_at', 'last_status_update']
+
+    def get_test_deadline(self, obj):
+        if not hasattr(obj, 'job') or obj.job is None:
+            return None
+            
+        test_deadline_days = getattr(obj.job, 'test_deadline_days', 3)  # default 3 days if missing
+        if getattr(obj, 'applied_at', None):
+            from datetime import timedelta
+            deadline = obj.applied_at + timedelta(days=test_deadline_days)
+            return deadline.isoformat()
+        return None
 
 
 

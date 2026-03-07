@@ -51,13 +51,39 @@ const formatPostedDate = (dateString: string): string => {
 // ============================================================================
 
 function JobPage() {
-  const { isAuthenticated, loading: authLoading } = useAuth();
+  const { isAuthenticated, loading: authLoading, accessToken } = useAuth();
+  const [isApplying, setIsApplying] = useState(false);
   const [jobs, setJobs] = useState<Job[]>([]);
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState<Job | null>(null);
   const [activeTab, setActiveTab] = useState('all');
   const { isSaved, toggleSaveJob } = useSavedJobs(); // Use the saved jobs context
   const [searchParams] = useSearchParams();
+  const [appliedJobIds, setAppliedJobIds] = useState<Set<string | number>>(new Set());
+
+  // Fetch applied jobs to disable Apply button
+  useEffect(() => {
+    const fetchAppliedJobs = async () => {
+      if (!isAuthenticated || !accessToken) return;
+      try {
+        const response = await fetch('http://localhost:8000/api/applications/', {
+          headers: { 'Authorization': `Bearer ${accessToken}` }
+        });
+        const data = await response.json();
+        if (data.success) {
+          const appliedSet = new Set<string | number>();
+          data.applications.forEach((app: any) => {
+            if (app.job) appliedSet.add(app.job);
+            if (app.job_id) appliedSet.add(app.job_id); // Fallback
+          });
+          setAppliedJobIds(appliedSet);
+        }
+      } catch (error) {
+        console.error('Error fetching applied jobs:', error);
+      }
+    };
+    fetchAppliedJobs();
+  }, [isAuthenticated, accessToken]);
 
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
@@ -73,9 +99,9 @@ function JobPage() {
         if (data.success) {
           const mappedJobs: Job[] = data.jobs.map((apiJob: any) => {
             // Construct salary string
-            const min = apiJob.salary_min ? Math.round(apiJob.salary_min / 1000) + 'k' : '';
-            const max = apiJob.salary_max ? Math.round(apiJob.salary_max / 1000) + 'k' : '';
-            const salaryObj = (min && max) ? `$${min} - $${max}` : (min ? `$${min}+` : 'Competitive');
+            const minStr = apiJob.salary_min ? Math.round(apiJob.salary_min / 1000) + 'k' : '';
+            const maxStr = apiJob.salary_max ? Math.round(apiJob.salary_max / 1000) + 'k' : '';
+            const salaryObj = (minStr && maxStr) ? `$${minStr} - $${maxStr}` : (minStr ? `$${minStr}+` : 'Not specified');
 
             return {
               id: apiJob.id,
@@ -372,16 +398,63 @@ function JobPage() {
                       </div>
                     </div>
                   </div>
-                  <button className="apply-btn" onClick={() => {
-                    if (authLoading) return;
+                  {(() => {
+                    const hasApplied = selected && (appliedJobIds.has(selected.id) || appliedJobIds.has(String(selected.id)));
+                    return (
+                      <div className="apply-btn-container">
+                        <button
+                          className={`apply-btn ${hasApplied ? 'applied' : ''}`}
+                          disabled={isApplying || hasApplied}
+                          onClick={async () => {
+                            if (authLoading) return;
 
-                    if (!isAuthenticated) {
-                      alert('Please login to apply for jobs');
-                      window.location.href = 'http://localhost:8000/auth/';
-                      return;
-                    }
-                    alert(`Applying for ${selected.title} at ${selected.company}!`);
-                  }}>Apply Now</button>
+                            if (!isAuthenticated) {
+                              alert('Please login to apply for jobs');
+                              window.location.href = 'http://localhost:8000/auth/';
+                              return;
+                            }
+
+                            setIsApplying(true);
+                            try {
+                              const response = await fetch('http://localhost:8000/api/applications/', {
+                                method: 'POST',
+                                headers: {
+                                  'Content-Type': 'application/json',
+                                  'Authorization': `Bearer ${accessToken}`
+                                },
+                                body: JSON.stringify({
+                                  job_id: selected.id
+                                })
+                              });
+
+                              const data = await response.json();
+
+                              if (data.success) {
+                                alert(`Successfully applied for ${selected.title} at ${selected.company}!`);
+                                setAppliedJobIds(prev => {
+                                  const next = new Set(prev);
+                                  next.add(selected.id);
+                                  next.add(String(selected.id));
+                                  return next;
+                                });
+                              } else {
+                                alert(`Failed to apply: ${data.error || 'Unknown error'}`);
+                              }
+                            } catch (error) {
+                              console.error('Error applying for job:', error);
+                              alert('An error occurred while applying.');
+                            } finally {
+                              setIsApplying(false);
+                            }
+                          }}>
+                          {hasApplied ? 'Already Applied' : (isApplying ? 'Applying...' : 'Apply Now')}
+                        </button>
+                        {hasApplied && (
+                          <span className="already-applied-text">You have already submitted an application for this role.</span>
+                        )}
+                      </div>
+                    );
+                  })()}
                 </div>
 
                 <div className="detail-salary">

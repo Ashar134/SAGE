@@ -302,9 +302,10 @@ const JobCard = ({ job, onBookmark, isBookmarked }: {
             {/* Spacer for layout */}
             <div className="card-spacer"></div>
 
-            {/* Location only */}
-            <div className="job-footer-info">
+            {/* Location and Salary */}
+            <div className="job-footer-info" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <span className="location">{formatLocation(job.location)}</span>
+                {job.salary && <span className="salary" style={{ fontWeight: 600, color: '#10b981', fontSize: '14px' }}>{job.salary}</span>}
             </div>
 
         </div>
@@ -456,23 +457,29 @@ function HomePage() {
                 const data = await response.json();
 
                 if (data.success) {
-                    // Map API data to component Job interface
-                    const mappedJobs: Job[] = data.jobs.map((apiJob: any) => ({
-                        id: apiJob.id,
-                        title: apiJob.title,
-                        company: apiJob.company_name,
-                        location: apiJob.location,
-                        postedTime: formatTimeAgo(new Date(apiJob.posted_date)),
-                        createdAt: new Date(apiJob.posted_date),
-                        type: apiJob.job_type || [],
-                        description: apiJob.description,
-                        bullets: apiJob.requirements,
-                        salaryMin: apiJob.salary_min ? apiJob.salary_min / 1000 : undefined,
-                        salaryMax: apiJob.salary_max ? apiJob.salary_max / 1000 : undefined,
-                        logoColor: apiJob.company?.logo_color || '#6366f1',
-                        logoInitial: apiJob.company?.logo_initial || apiJob.company_name.charAt(0),
-                        isRemote: apiJob.is_remote
-                    }));
+                    const mappedJobs: Job[] = data.jobs.map((apiJob: any) => {
+                        const minStr = apiJob.salary_min ? Math.round(apiJob.salary_min / 1000) + 'k' : '';
+                        const maxStr = apiJob.salary_max ? Math.round(apiJob.salary_max / 1000) + 'k' : '';
+                        const salaryStr = (minStr && maxStr) ? `$${minStr} - $${maxStr}` : (minStr ? `$${minStr}+` : 'Not specified');
+
+                        return {
+                            id: apiJob.id,
+                            title: apiJob.title,
+                            company: apiJob.company_name,
+                            location: apiJob.location,
+                            postedTime: formatTimeAgo(new Date(apiJob.posted_date)),
+                            createdAt: new Date(apiJob.posted_date),
+                            type: apiJob.job_type || [],
+                            description: apiJob.description,
+                            bullets: apiJob.requirements,
+                            salary: salaryStr !== 'Not specified' ? salaryStr : undefined,
+                            salaryMin: apiJob.salary_min ? apiJob.salary_min / 1000 : undefined,
+                            salaryMax: apiJob.salary_max ? apiJob.salary_max / 1000 : undefined,
+                            logoColor: apiJob.company?.logo_color || '#6366f1',
+                            logoInitial: apiJob.company?.logo_initial || apiJob.company_name.charAt(0),
+                            isRemote: apiJob.is_remote
+                        };
+                    });
                     setJobs(mappedJobs);
                 }
             } catch (error) {

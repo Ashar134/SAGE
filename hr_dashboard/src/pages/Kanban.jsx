@@ -51,11 +51,7 @@ const columnThemes = {
 function KanbanCard({ item, onReject }) {
   return (
     <div
-      draggable
-      onDragStart={(e) => {
-        e.dataTransfer.setData("text/plain", item.id);
-      }}
-      className="rounded-xl border border-gray-200 bg-white/90 p-3 shadow-sm hover:shadow-md transition-all cursor-grab active:cursor-grabbing"
+      className="rounded-xl border border-gray-200 bg-white/90 p-3 shadow-sm hover:shadow-md transition-all"
     >
       <div className="flex items-start justify-between gap-2">
         <div>
@@ -188,88 +184,86 @@ export default function Kanban() {
   const rejectedCount = board.rejected?.length || 0;
 
   return (
-      <div className="space-y-6 w-full max-w-[1600px] mx-auto">
-        <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-          <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-gray-400">Pipeline</p>
-            <h1 className="text-2xl font-semibold text-gray-900">Candidate Kanban</h1>
-            <p className="text-sm text-gray-500">Drag candidates across stages to update status.</p>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-2 items-start sm:items-center">
-            <select
-              value={selectedId}
-              onChange={(e) => setSelectedId(e.target.value)}
-              className="w-56 rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-100"
-            >
-              <option value="">Add applicant to board</option>
-              {remainingApplicants.map((app) => (
-                <option key={app.id} value={app.id}>
-                  {app.name} — {app.role}
-                </option>
-              ))}
-            </select>
-            <button
-              onClick={handleAdd}
-              disabled={!selectedId}
-              className="inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-3 py-2 text-sm font-semibold disabled:opacity-50 shadow-sm"
-            >
-              <Plus size={16} />
-              Add
-            </button>
-          </div>
+    <div className="space-y-6 w-full max-w-[1600px] mx-auto">
+      <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p className="text-xs uppercase tracking-[0.2em] text-gray-400">Pipeline</p>
+          <h1 className="text-2xl font-semibold text-gray-900">Candidate Kanban</h1>
+          <p className="text-sm text-gray-500">View automated candidate progress across stages.</p>
         </div>
-        {error && (
-          <div className="rounded-md border border-red-200 bg-red-50 text-red-700 px-3 py-2 text-sm">
-            {error}
-          </div>
-        )}
-
-        <div className="flex flex-col gap-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {visibleColumns.map((col) => (
-              <Card
-                key={col.id}
-                className={`bg-gradient-to-b from-white to-gray-50 border ${columnThemes[col.id]?.border || "border-gray-200"} shadow-sm`}
-              >
-                <CardHeader className="flex flex-row items-center justify-between py-3">
-                  <div>
-                    <CardTitle className="text-sm font-semibold text-gray-900">
-                      {col.title}
-                    </CardTitle>
-                    <p className="text-xs text-gray-500">Drag candidates here</p>
-                  </div>
-                  <Badge className="bg-white text-gray-700 border">
-                    {board[col.id]?.length || 0}
-                  </Badge>
-                </CardHeader>
-                <CardContent>
-                  <div
-                    onDragOver={handleDragOver}
-                    onDrop={(e) => handleDrop(col.id, e)}
-                    className="min-h-[180px] space-y-3 rounded-xl border border-dashed border-gray-200 bg-white/70 p-3"
-                  >
-                    {board[col.id]?.length === 0 && (
-                      <div className="text-xs text-gray-400 text-center py-8">
-                        Drag here to add
-                      </div>
-                    )}
-                    {board[col.id]?.map((item) => (
-                      <KanbanCard
-                        key={item.id}
-                        item={item}
-                        onReject={(id, reason) =>
-                          moveCandidate(id, "rejected", {
-                            status: "Rejected",
-                            rejectionReason: reason,
-                          })
-                        }
-                      />
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+        <div className="flex flex-col sm:flex-row gap-2 items-start sm:items-center">
+          <select
+            value={selectedId}
+            onChange={(e) => setSelectedId(e.target.value)}
+            className="w-56 rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-100"
+          >
+            <option value="">Add applicant to board</option>
+            {remainingApplicants.map((app) => (
+              <option key={app.id} value={app.id}>
+                {app.name} — {app.role}
+              </option>
             ))}
-          </div>
+          </select>
+          <button
+            onClick={handleAdd}
+            disabled={!selectedId}
+            className="inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-3 py-2 text-sm font-semibold disabled:opacity-50 shadow-sm"
+          >
+            <Plus size={16} />
+            Add
+          </button>
+        </div>
+      </div>
+      {error && (
+        <div className="rounded-md border border-red-200 bg-red-50 text-red-700 px-3 py-2 text-sm">
+          {error}
+        </div>
+      )}
+
+      <div className="flex flex-col gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {visibleColumns.map((col) => (
+            <Card
+              key={col.id}
+              className={`bg-gradient-to-b from-white to-gray-50 border ${columnThemes[col.id]?.border || "border-gray-200"} shadow-sm`}
+            >
+              <CardHeader className="flex flex-row items-center justify-between py-3">
+                <div>
+                  <CardTitle className="text-sm font-semibold text-gray-900">
+                    {col.title}
+                  </CardTitle>
+                  <p className="text-xs text-gray-500">Drag candidates here</p>
+                </div>
+                <Badge className="bg-white text-gray-700 border">
+                  {board[col.id]?.length || 0}
+                </Badge>
+              </CardHeader>
+              <CardContent>
+                <div
+                  className="min-h-[180px] space-y-3 rounded-xl border border-dashed border-gray-200 bg-white/70 p-3"
+                >
+                  {board[col.id]?.length === 0 && (
+                    <div className="text-xs text-gray-400 text-center py-8">
+                      Drag here to add
+                    </div>
+                  )}
+                  {board[col.id]?.map((item) => (
+                    <KanbanCard
+                      key={item.id}
+                      item={item}
+                      onReject={(id, reason) =>
+                        moveCandidate(id, "rejected", {
+                          status: "Rejected",
+                          rejectionReason: reason,
+                        })
+                      }
+                    />
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Card className="border-gray-200 shadow-sm">

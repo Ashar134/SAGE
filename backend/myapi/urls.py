@@ -12,6 +12,7 @@ urlpatterns = [
     
     # Test Generator & CV Parser APIs
     path("api/generate-test/", views.generate_test, name="generate_test"),
+    path("api/submit-test/", views.submit_test, name="submit_test"),
     path("api/parse-cv/", views.parse_cv, name="parse_cv"),
     
     # Authentication APIs

@@ -227,6 +227,11 @@ class Job(models.Model):
     source_url = models.URLField(max_length=500, blank=True, null=True)
     is_active = models.BooleanField(default=True)
     
+    # Test Configuration
+    test_no_of_questions = models.IntegerField(default=100, blank=True, null=True)
+    test_time_allowed = models.IntegerField(default=60, help_text="Time allowed in minutes", blank=True, null=True)
+    test_deadline_days = models.IntegerField(default=3, help_text="Days to complete test after application", blank=True, null=True)
+    
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
     
@@ -307,6 +312,8 @@ class Application(models.Model):
     # Additional Information
     cover_letter = models.TextField(blank=True, null=True)
     resume_url = models.URLField(max_length=500, blank=True, null=True)
+    test_score = models.FloatField(blank=True, null=True)
+    test_completed_at = models.DateTimeField(blank=True, null=True)
     notes = models.TextField(blank=True, null=True)
     
     created_at = models.DateTimeField(default=timezone.now)
