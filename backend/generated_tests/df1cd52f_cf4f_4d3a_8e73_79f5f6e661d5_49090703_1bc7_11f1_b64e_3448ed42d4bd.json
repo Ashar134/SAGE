@@ -1,0 +1,792 @@
+{
+    "candidate_id": "df1cd52f-cf4f-4d3a-8e73-79f5f6e661d5",
+    "job_id": "49090703-1bc7-11f1-b64e-3448ed42d4bd",
+    "job_title": "DevOps Engineer",
+    "requirements": [
+        "BS/MS in Computer Science, IT, or related field",
+        "3+ years experience in DevOps or Site Reliability Engineering",
+        "Hands-on experience with AWS, Docker, Kubernetes, Terraform",
+        "Familiarity with CI/CD pipelines (Jenkins, GitHub Actions)",
+        "Monitoring and logging experience (Prometheus, ELK Stack)",
+        "Scripting skills in Python, Bash, or Go",
+        "Strong problem-solving and troubleshooting skills"
+    ],
+    "total_questions": 51,
+    "distribution": {
+        "analytical": 15,
+        "english": 15,
+        "job_specific": 70
+    },
+    "questions": [
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "Aslam rents a car for his marriage. On Monday, he used petrol of Rs. 1,200. On Tuesday and Wednesday, his petrol costs Rs. 1,500 on each day. On Thursday and Friday, the petrol costs him Rs. 1,800. What is the average daily cost for the five days?",
+            "answers": {
+                "A1": "1,200",
+                "A2": "1,500",
+                "A3": "900",
+                "A4": "None of the above"
+            },
+            "key": "1,200",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 27
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "At 12 noon my watch was correct. However, it then started to lose 18 minutes per hour. Four hours ago it stopped completely and is now showing the time as 15.30. What is the correct time?",
+            "answers": {
+                "A1": "8 PM",
+                "A2": "9 PM",
+                "A3": "7 PM",
+                "A4": "9 AM"
+            },
+            "key": "9 PM",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 40
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "Which one is the odd number out?",
+            "answers": {
+                "A1": "462",
+                "A2": "683",
+                "A3": "385",
+                "A4": "198"
+            },
+            "key": "683",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 30
+        },
+        {
+            "type": "hard",
+            "category": "analytical",
+            "question": "If IQS : LNV, then JRM : ?",
+            "answers": {
+                "A1": "LOP",
+                "A2": "MOP",
+                "A3": "LIP",
+                "A4": "MOW"
+            },
+            "key": "MOP",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 24
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "How much does a bag of flour weigh if it weighs 1 kilogram plus the weight of half the bag of flour?",
+            "answers": {
+                "A1": "2 Kg",
+                "A2": "3 Kg",
+                "A3": "1 Kg",
+                "A4": "5 Kg"
+            },
+            "key": "2 Kg",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 26
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "How many minutes is it before 12 noon if nine minutes ago it was twice as many minutes past 10 am?",
+            "answers": {
+                "A1": "32",
+                "A2": "37",
+                "A3": "39",
+                "A4": "40"
+            },
+            "key": "37",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 24
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "Which number appears next in the pattern? 13, 17, 19, 23, ?",
+            "answers": {
+                "A1": "25",
+                "A2": "27",
+                "A3": "29",
+                "A4": "33"
+            },
+            "key": "29",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 36
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "A car covers a distance of 250 km in 2 hours and 30 minutes and then covers 200 km in 2 hours. What is the average speed of the car during this trip?",
+            "answers": {
+                "A1": "80 km/h",
+                "A2": "100 km/h",
+                "A3": "120 km/h",
+                "A4": "140 km/h"
+            },
+            "key": "100 km/h",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 29
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "If $x = -2$, find $f(x) = x - x^2 + x^3$",
+            "answers": {
+                "A1": "-14",
+                "A2": "8",
+                "A3": "-2",
+                "A4": "18"
+            },
+            "key": "-14",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 22
+        },
+        {
+            "type": "hard",
+            "category": "analytical",
+            "question": "My watch was correct at noon, after which it started to lose 17 minutes per hour until six hours ago it stopped completely. It now shows the time as 2.52 pm. What time is it now?",
+            "answers": {
+                "A1": "10:00 PM",
+                "A2": "10:12 PM",
+                "A3": "09:50 PM",
+                "A4": "10:30 PM"
+            },
+            "key": "10:00 PM",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 28
+        },
+        {
+            "type": "hard",
+            "category": "analytical",
+            "question": "You have 59 cubic blocks. What is the minimum number that needs to be taken away in order to construct a solid cube with none left over?",
+            "answers": {
+                "A1": "32",
+                "A2": "28",
+                "A3": "48",
+                "A4": "16"
+            },
+            "key": "32",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 32
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "0.33 / 0.1 = ?",
+            "answers": {
+                "A1": "0.033",
+                "A2": "3.31",
+                "A3": "3.3",
+                "A4": "33"
+            },
+            "key": "3.3",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 22
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "What number should replace the question mark in this sequence: 1, 3, 4, 7, 11, 18, 29, ?",
+            "answers": {
+                "A1": "48",
+                "A2": "46",
+                "A3": "47",
+                "A4": "45"
+            },
+            "key": "47",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 36
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "What number should replace the question mark :  7 & 6 & 4 & 52 , 9 & 3 & 5 & 60 , 10 & 5 & 4 & 60 , 8 & 7 & 3 & ? ",
+            "answers": {
+                "A1": "63",
+                "A2": "7",
+                "A3": "52",
+                "A4": "45"
+            },
+            "key": "45",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 26
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "Which off the following is the odd one out?",
+            "answers": {
+                "A1": "5 7 12 19",
+                "A2": "8 3 11 14",
+                "A3": "9 7 16 13",
+                "A4": "7 8 15 23"
+            },
+            "key": "9 7 16 13",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 33
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "The military general's ___ strategy led decisively to an overwhelming victory.",
+            "answers": {
+                "A1": "flawed",
+                "A2": "astute",
+                "A3": "misguided",
+                "A4": "reckless"
+            },
+            "key": "astute",
+            "justification": "Winning strategy is astute",
+            "justified_by": "JSON-Fallback",
+            "frequency": 12
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Opposite of AUSPICIOUS:",
+            "answers": {
+                "A1": "Favorable",
+                "A2": "Promising",
+                "A3": "Inauspicious",
+                "A4": "Fortunate"
+            },
+            "key": "Inauspicious",
+            "justification": "Opposite of favorable",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "Correct: 'Scarcely ___ we arrived when it rained.'",
+            "answers": {
+                "A1": "had",
+                "A2": "have",
+                "A3": "did",
+                "A4": "were"
+            },
+            "key": "had",
+            "justification": "Scarcely...when inversion",
+            "justified_by": "JSON-Fallback",
+            "frequency": 8
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Choose similar meaning to INSOUCIANT:",
+            "answers": {
+                "A1": "Serious",
+                "A2": "Carefree",
+                "A3": "Formal",
+                "A4": "Rigid"
+            },
+            "key": "Carefree",
+            "justification": "Insouciant means without care",
+            "justified_by": "JSON-Fallback",
+            "frequency": 14
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Opposite of FRAGILE:",
+            "answers": {
+                "A1": "Weak",
+                "A2": "Strong",
+                "A3": "Delicate",
+                "A4": "Tender"
+            },
+            "key": "Strong",
+            "justification": "Opposite of delicate",
+            "justified_by": "JSON-Fallback",
+            "frequency": 12
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Opposite of EXONERATE:",
+            "answers": {
+                "A1": "Excuse",
+                "A2": "Pardon",
+                "A3": "Incriminate",
+                "A4": "Release"
+            },
+            "key": "Incriminate",
+            "justification": "Opposite of clearing from blame",
+            "justified_by": "JSON-Fallback",
+            "frequency": 9
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "Correct: 'It's time you ___ home.'",
+            "answers": {
+                "A1": "go",
+                "A2": "went",
+                "A3": "will go",
+                "A4": "going"
+            },
+            "key": "went",
+            "justification": "It's time + past tense",
+            "justified_by": "JSON-Fallback",
+            "frequency": 7
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "The philosophy professor's lectures were renowned for their ___ wit and penetrating observations.",
+            "answers": {
+                "A1": "dull",
+                "A2": "trenchant",
+                "A3": "bland",
+                "A4": "insipid"
+            },
+            "key": "trenchant",
+            "justification": "Sharp wit is trenchant",
+            "justified_by": "JSON-Fallback",
+            "frequency": 13
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "The artist's work was noted for its ___ symbolism that critics struggled to interpret.",
+            "answers": {
+                "A1": "obvious",
+                "A2": "abstract",
+                "A3": "cryptic",
+                "A4": "straightforward"
+            },
+            "key": "cryptic",
+            "justification": "Mysterious symbolism is cryptic",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "PRUDENCE : CAUTION",
+            "answers": {
+                "A1": "Recklessness : Care",
+                "A2": "Wisdom : Reflection",
+                "A3": "Folly : Judgment",
+                "A4": "Haste : Speed",
+                "A5": "Bravery : Fear"
+            },
+            "key": "Wisdom : Reflection",
+            "justification": "Quality showing thoughtful behavior",
+            "justified_by": "JSON-Fallback",
+            "frequency": 9
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "CLANDESTINE : SECRECY",
+            "answers": {
+                "A1": "Open : Concealment",
+                "A2": "Candid : Honesty",
+                "A3": "Public : Privacy",
+                "A4": "Obvious : Clarity",
+                "A5": "Hidden : Revelation"
+            },
+            "key": "Candid : Honesty",
+            "justification": "Quality requiring specific condition",
+            "justified_by": "JSON-Fallback",
+            "frequency": 14
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "The athlete's ___ training regimen consistently prepared him for Olympic competition.",
+            "answers": {
+                "A1": "lax",
+                "A2": "rigorous",
+                "A3": "casual",
+                "A4": "relaxed"
+            },
+            "key": "rigorous",
+            "justification": "Olympic training requires rigor",
+            "justified_by": "JSON-Fallback",
+            "frequency": 11
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "Correct: 'I ___ never ___ such beauty.'",
+            "answers": {
+                "A1": "have...seen",
+                "A2": "had...seen",
+                "A3": "was...seeing",
+                "A4": "did...see"
+            },
+            "key": "have...seen",
+            "justification": "Present perfect with never",
+            "justified_by": "JSON-Fallback",
+            "frequency": 9
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "PERFIDIOUS : LOYALTY",
+            "answers": {
+                "A1": "Steadfast : Commitment",
+                "A2": "Faithful : Devotion",
+                "A3": "Treacherous : Trust",
+                "A4": "Honorable : Integrity",
+                "A5": "Reliable : Dependability"
+            },
+            "key": "Treacherous : Trust",
+            "justification": "Betraying relationship foundation",
+            "justified_by": "JSON-Fallback",
+            "frequency": 12
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "Correct: 'I ___ him since we were in college.'",
+            "answers": {
+                "A1": "knew",
+                "A2": "have known",
+                "A3": "had known",
+                "A4": "was knowing"
+            },
+            "key": "have known",
+            "justification": "Present perfect for duration",
+            "justified_by": "JSON-Fallback",
+            "frequency": 13
+        },
+        {
+            "type": "easy",
+            "category": "OOP",
+            "question": "What is a member variable in OOP?",
+            "answers": {
+                "A1": "A global variable",
+                "A2": "A local variable inside a function",
+                "A3": "A variable defined inside a class",
+                "A4": "A constant variable"
+            },
+            "key": "A variable defined inside a class",
+            "justification": "A member variable (or attribute) is a variable that belongs to a class and is present in every instance of that class.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 16
+        },
+        {
+            "type": "medium",
+            "category": "OOP",
+            "question": "What is the problem with shallow copy?",
+            "answers": {
+                "A1": "It copies too much data",
+                "A2": "Multiple objects can point to same memory, causing issues when one object is deleted",
+                "A3": "It's always slower",
+                "A4": "It requires more memory"
+            },
+            "key": "Multiple objects can point to same memory, causing issues when one object is deleted",
+            "justification": "Shallow copy leads to multiple objects sharing the same dynamically allocated memory, causing dangling pointers and double deletion errors.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 21
+        },
+        {
+            "type": "medium",
+            "category": "OOP",
+            "question": "What is a memory leak?",
+            "answers": {
+                "A1": "Memory that leaks to another program",
+                "A2": "Memory allocated but never deallocated, becoming inaccessible",
+                "A3": "Memory that is corrupted",
+                "A4": "A security vulnerability"
+            },
+            "key": "Memory allocated but never deallocated, becoming inaccessible",
+            "justification": "Memory leaks occur when dynamically allocated memory is not freed, wasting resources and potentially causing program failure.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 17
+        },
+        {
+            "type": "easy",
+            "category": "Data Structures",
+            "question": "A linear list can be defined as which of the following data organization concepts?",
+            "answers": {
+                "A1": "A mathematical equation",
+                "A2": "An ordered collection of elements",
+                "A3": "A non-linear structure",
+                "A4": "A circular structure"
+            },
+            "key": "An ordered collection of elements",
+            "justification": "Linear lists maintain sequential order",
+            "justified_by": "JSON-Fallback",
+            "frequency": 20
+        },
+        {
+            "type": "easy",
+            "category": "Data Structures",
+            "question": "Bubble sort is characterized by which sorting mechanism?",
+            "answers": {
+                "A1": "Sorting bubbles",
+                "A2": "Repeatedly swapping adjacent elements",
+                "A3": "Random shuffling",
+                "A4": "Binary comparison"
+            },
+            "key": "Repeatedly swapping adjacent elements",
+            "justification": "Bubble sort compares adjacent elements",
+            "justified_by": "JSON-Fallback",
+            "frequency": 31
+        },
+        {
+            "type": "easy",
+            "category": "Data Structures",
+            "question": "In a linked list implementation, what term is used for the basic building block that contains both data and reference(s) to other blocks?",
+            "answers": {
+                "A1": "An array element",
+                "A2": "A unit containing data and pointer(s)",
+                "A3": "A function parameter",
+                "A4": "A variable declaration"
+            },
+            "key": "A unit containing data and pointer(s)",
+            "justification": "Nodes are the fundamental units of linked lists",
+            "justified_by": "JSON-Fallback",
+            "frequency": 26
+        },
+        {
+            "type": "easy",
+            "category": "Data Base",
+            "question": "What is a database management system (DBMS)?",
+            "answers": {
+                "A1": "A programming language",
+                "A2": "A system for storing, managing, and retrieving data",
+                "A3": "A type of spreadsheet",
+                "A4": "A networking protocol"
+            },
+            "key": "A system for storing, managing, and retrieving data",
+            "justification": "DBMS is fundamental database technology",
+            "justified_by": "JSON-Fallback",
+            "frequency": 21
+        },
+        {
+            "type": "hard",
+            "category": "Data Base",
+            "question": "What is the CAP theorem in databases?",
+            "answers": {
+                "A1": "Capital allocation principle",
+                "A2": "Consistency, Availability, Partition tolerance tradeoff",
+                "A3": "Cache, Analysis, Performance principle",
+                "A4": "Centralization, Availability, Persistence principle"
+            },
+            "key": "Consistency, Availability, Partition tolerance tradeoff",
+            "justification": "CAP theorem limits distributed system design",
+            "justified_by": "JSON-Fallback",
+            "frequency": 16
+        },
+        {
+            "type": "hard",
+            "category": "Data Base",
+            "question": "What is Fourth Normal Form (4NF)?",
+            "answers": {
+                "A1": "Fourth database level",
+                "A2": "In BCNF without non-trivial multivalued dependencies",
+                "A3": "After third form",
+                "A4": "Advanced normalization"
+            },
+            "key": "In BCNF without non-trivial multivalued dependencies",
+            "justification": "4NF handles multivalued dependencies",
+            "justified_by": "JSON-Fallback",
+            "frequency": 14
+        },
+        {
+            "type": "hard",
+            "category": "Computer Networks",
+            "question": "What is distance vector?",
+            "answers": {
+                "A1": "Vector distance",
+                "A2": "Routing where routers share distance info",
+                "A3": "Distance measurement",
+                "A4": "Vector routing"
+            },
+            "key": "Routing where routers share distance info",
+            "justification": "DV shares routing info",
+            "justified_by": "JSON-Fallback",
+            "frequency": 14
+        },
+        {
+            "type": "easy",
+            "category": "Computer Networks",
+            "question": "What is daemon?",
+            "answers": {
+                "A1": "Evil spirit",
+                "A2": "Background process providing network service",
+                "A3": "Background service",
+                "A4": "System process"
+            },
+            "key": "Background process providing network service",
+            "justification": "Daemons run background services",
+            "justified_by": "JSON-Fallback",
+            "frequency": 9
+        },
+        {
+            "type": "easy",
+            "category": "Computer Networks",
+            "question": "What is WiFi?",
+            "answers": {
+                "A1": "Wireless Fidelity",
+                "A2": "Wireless technology for local network access",
+                "A3": "Wireless Internet",
+                "A4": "Wireless Connection"
+            },
+            "key": "Wireless technology for local network access",
+            "justification": "WiFi enables wireless networking",
+            "justified_by": "JSON-Fallback",
+            "frequency": 4
+        },
+        {
+            "type": "hard",
+            "category": "Window",
+            "question": "What does window.alert() do?",
+            "answers": {
+                "A1": "Logs a message to console",
+                "A2": "Shows a popup dialog with a message",
+                "A3": "Sends an alert to the server",
+                "A4": "Displays a notification"
+            },
+            "key": "Shows a popup dialog with a message",
+            "justification": "alert() displays a blocking modal dialog.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 12
+        },
+        {
+            "type": "medium",
+            "category": "JavaScript",
+            "question": "How do you write an arrow function with multiple parameters?",
+            "answers": {
+                "A1": "x, y => x + y",
+                "A2": "(x, y) => x + y",
+                "A3": "Both A and B are correct",
+                "A4": "x y => x + y"
+            },
+            "key": "(x, y) => x + y",
+            "justification": "Multiple parameters require parentheses.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 17
+        },
+        {
+            "type": "medium",
+            "category": "JavaScript",
+            "question": "Which JavaScript engine is used in Chrome?",
+            "answers": {
+                "A1": "SpiderMonkey",
+                "A2": "V8",
+                "A3": "JavaScriptCore",
+                "A4": "Chakra"
+            },
+            "key": "V8",
+            "justification": "V8 is Google's engine used in Chrome and Node.js.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 14
+        },
+        {
+            "type": "medium",
+            "category": "Local Search",
+            "question": "What is simulated annealing?",
+            "answers": {
+                "A1": "A metallurgical process of heating and cooling materials",
+                "A2": "A probabilistic technique that occasionally accepts worse solutions",
+                "A3": "A simulation method for modeling heat transfer",
+                "A4": "An algorithm specifically designed for metal processing"
+            },
+            "key": "A probabilistic technique that occasionally accepts worse solutions",
+            "justification": "Simulated annealing escapes local optima with temperature-dependent probability.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 11
+        },
+        {
+            "type": "easy",
+            "category": "Knowledge Representation",
+            "question": "What is a rule-based system?",
+            "answers": {
+                "A1": "The exactness of measurements taken",
+                "A2": "Percentage of correct predictions",
+                "A3": "A measure of precision in outcomes",
+                "A4": "The correctness of model outputs"
+            },
+            "key": "System using IF-THEN rules for decision making",
+            "justification": "Rule-based systems use knowledge encoded as rules.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 8
+        },
+        {
+            "type": "easy",
+            "category": "Constraint Satisfaction",
+            "question": "What is a constraint satisfaction problem (CSP)?",
+            "answers": {
+                "A1": "A problem with computer satisfaction",
+                "A2": "A problem with variables, domains, and constraints to satisfy",
+                "A3": "Satisfying user demands",
+                "A4": "A problem with solutions"
+            },
+            "key": "A problem with variables, domains, and constraints to satisfy",
+            "justification": "CSPs require finding variable assignments that satisfy all constraints.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 11
+        },
+        {
+            "type": "hard",
+            "category": "Machine Learning",
+            "question": "What is expectation-maximization (EM) algorithm?",
+            "answers": {
+                "A1": "Maximum expectation",
+                "A2": "Iterative algorithm for maximum likelihood estimation with hidden variables",
+                "A3": "EM algorithm",
+                "A4": "Likelihood maximization"
+            },
+            "key": "Iterative algorithm for maximum likelihood estimation with hidden variables",
+            "justification": "EM is fundamental in probabilistic learning",
+            "justified_by": "JSON-Fallback",
+            "frequency": 11
+        },
+        {
+            "type": "hard",
+            "category": "Neural Networks",
+            "question": "What is attention mechanism?",
+            "answers": {
+                "A1": "Paying attention",
+                "A2": "Computing weighted sum over all inputs based on relevance",
+                "A3": "Attention model",
+                "A4": "Focus mechanism"
+            },
+            "key": "Computing weighted sum over all inputs based on relevance",
+            "justification": "Attention improves model interpretability",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        },
+        {
+            "type": "medium",
+            "category": "Machine Learning",
+            "question": "What is elastic net?",
+            "answers": {
+                "A1": "Elastic network",
+                "A2": "Combining L1 and L2 regularization",
+                "A3": "Elastic regularization",
+                "A4": "Hybrid penalty"
+            },
+            "key": "Combining L1 and L2 regularization",
+            "justification": "Elastic net combines benefits of Lasso and Ridge",
+            "justified_by": "JSON-Fallback",
+            "frequency": 11
+        }
+    ],
+    "generated_at": "2026-03-09 20:58:59",
+    "source": "RAG-Ollama"
+}

@@ -1,5 +1,5 @@
-import { useMemo, useState } from "react";
-import { applicants } from "../data/applicants";
+import { useEffect, useState, useMemo } from "react";
+import { fetchApplicants } from "../lib/apiClient";
 import StatCard from "../components/dashboard/StatCard";
 import { Badge } from "../components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
@@ -17,7 +17,23 @@ const statusPalette = {
 const stageOrder = ["Applied", "Shortlisted", "Interview Scheduled", "Offer", "Rejected"];
 
 export default function Applicants() {
+  const [applicants, setApplicants] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
   const [stageFilter, setStageFilter] = useState("all");
+
+  useEffect(() => {
+    setLoading(true);
+    fetchApplicants()
+      .then((rows) => {
+        setApplicants(rows);
+        setError("");
+      })
+      .catch((err) => {
+        setError(err.message || "Unable to fetch applicants");
+      })
+      .finally(() => setLoading(false));
+  }, []);
 
   const stats = useMemo(() => {
     const total = applicants.length;

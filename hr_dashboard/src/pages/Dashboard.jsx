@@ -4,7 +4,7 @@ import StatCard from "../components/dashboard/StatCard";
 import { ChartsRow } from "../components/dashboard/Charts";
 import ApplicantsTable from "../components/dashboard/ApplicantsTable";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
-import { fetchApplicants, checkApiConnection } from "../lib/apiClient";
+import { fetchApplicants, checkApiConnection, fetchJobs } from "../lib/apiClient";
 
 export default function Dashboard() {
   const [isDateOpen, setIsDateOpen] = useState(false);
@@ -12,16 +12,22 @@ export default function Dashboard() {
   const [endDate, setEndDate] = useState("");
   const dateRef = useRef(null);
   const [applicants, setApplicants] = useState([]);
+  const [jobs, setJobs] = useState([]);
   const [dataStatus, setDataStatus] = useState({
     state: "loading",
     message: "Fetching applicants...",
   });
   const hasError = dataStatus.state === "error";
-
   useEffect(() => {
     checkApiConnection().catch((err) => {
       setDataStatus({ state: "error", message: err.message || "API unavailable" });
     });
+  }, []);
+
+  useEffect(() => {
+    fetchJobs()
+      .then(setJobs)
+      .catch((err) => console.error("Error fetching jobs:", err));
   }, []);
 
   useEffect(() => {
@@ -87,7 +93,8 @@ export default function Dashboard() {
     const total = filteredApplicants.length;
     const shortlisted = filteredApplicants.filter((a) => a.status === "Shortlisted").length;
     const interviews = filteredApplicants.filter((a) => a.status === "Interview Scheduled").length;
-    const openPositions = new Set(filteredApplicants.map((a) => a.role)).size;
+    const openPositions = jobs.length;
+    const departmentsCount = new Set(jobs.map((j) => j.department)).size;
 
     return [
       {
@@ -118,7 +125,7 @@ export default function Dashboard() {
         id: 4,
         title: "Positions Open",
         value: openPositions,
-        subtitle: `${new Set(filteredApplicants.map((a) => a.department)).size || 0} departments`,
+        subtitle: `${departmentsCount || 0} departments`,
         trend: null,
         trendType: "up",
       },
@@ -230,13 +237,12 @@ export default function Dashboard() {
         <div className="flex items-center gap-2">
           <div className="hidden sm:inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs bg-white text-gray-700">
             <span
-              className={`h-2 w-2 rounded-full ${
-                dataStatus.state === "ok"
-                  ? "bg-emerald-500"
-                  : dataStatus.state === "error"
+              className={`h-2 w-2 rounded-full ${dataStatus.state === "ok"
+                ? "bg-emerald-500"
+                : dataStatus.state === "error"
                   ? "bg-red-500"
                   : "bg-amber-400 animate-pulse"
-              }`}
+                }`}
             />
             <span className="font-medium">
               API
@@ -396,7 +402,7 @@ export default function Dashboard() {
         <ChartsRow
           lineData={filteredLineData}
           barData={barData}
-          onExport={() => {}}
+          onExport={() => { }}
         />
       </div>
 

@@ -1,10 +1,6 @@
-import { useMemo, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
+import { fetchApplicants } from "../lib/apiClient";
 import { CalendarClock, Filter, MapPin, MessageSquare, Play, Video, ArrowUpRight, Clock, UserRoundCheck, AlertTriangle } from "lucide-react";
-import StatCard from "../components/dashboard/StatCard";
-import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
-import { Badge } from "../components/ui/badge";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../components/ui/table";
-import { interviews } from "../data/interviews";
 
 const statusStyles = {
   Scheduled: "bg-indigo-50 text-indigo-700",
@@ -25,8 +21,48 @@ const formatDate = (dateStr) =>
 const parseDateTime = (dateStr, timeStr) => new Date(`${dateStr} ${timeStr}`);
 
 export default function Interviews() {
+  const [applicants, setApplicants] = useState([]);
   const [statusFilter, setStatusFilter] = useState("all");
   const [typeFilter, setTypeFilter] = useState("all");
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  const interviews = useMemo(() => {
+    return applicants
+      .filter((a) => ["Interview Scheduled", "Shortlisted", "Offer", "Hired", "Rejected"].includes(a.status))
+      .map((a) => ({
+        id: `INT-${a.id}`,
+        candidate: a.name,
+        role: a.role,
+        department: a.department,
+        date: a.appliedDate || new Date().toISOString().split("T")[0],
+        time: "10:00 AM",
+        duration: "45 min",
+        type: "Online",
+        stage: "Technical + Demo",
+        status: a.status === "Interview Scheduled" ? "Scheduled" : (a.interviewScore > 0 ? "Completed" : "Feedback Pending"),
+        interviewer: "TBD",
+        panel: ["Hiring Manager"],
+        score: a.interviewScore,
+        decision: a.interviewScore > 0 ? (a.interviewScore >= 80 ? "Move to Offer" : "Shortlist") : "Pending",
+        feedback: "",
+        recording: a.interviewScore > 0 ? "#" : "",
+        location: "Zoom",
+      }));
+  }, [applicants]);
+
+  useEffect(() => {
+    setLoading(true);
+    fetchApplicants()
+      .then((rows) => {
+        setApplicants(rows);
+        setError("");
+      })
+      .catch((err) => {
+        setError(err.message || "Unable to fetch applicants");
+      })
+      .finally(() => setLoading(false));
+  }, []);
 
   const stats = useMemo(() => {
     const scheduled = interviews.filter((i) => i.status === "Scheduled").length;
@@ -37,8 +73,8 @@ export default function Interviews() {
     const avgScore =
       scored.length > 0
         ? Math.round(
-            scored.reduce((sum, i) => sum + i.score, 0) / scored.length
-          )
+          scored.reduce((sum, i) => sum + i.score, 0) / scored.length
+        )
         : "—";
 
     return [

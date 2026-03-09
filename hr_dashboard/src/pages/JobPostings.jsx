@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, Fragment } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import { Input } from "../components/ui/input";
 import { Badge } from "../components/ui/badge";
@@ -18,7 +18,6 @@ const defaultForm = {
   type: "Full-time",
   location: "",
   deadline: "",
-  salary: "",
   description: "",
   requirements: "",
   test_no_of_questions: "100",
@@ -203,14 +202,6 @@ export default function JobPostings() {
                     <CalendarRange className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
                   </div>
                 </div>
-                <div className="space-y-1">
-                  <label className="text-xs font-semibold text-gray-600">Salary range</label>
-                  <Input
-                    value={form.salary}
-                    onChange={handleChange("salary")}
-                    placeholder="PKR 250,000 - 350,000"
-                  />
-                </div>
               </div>
 
               <div className="space-y-1">
@@ -311,7 +302,7 @@ export default function JobPostings() {
             </div>
           </CardContent>
         </Card>
-      </div>
+      </div >
 
       <Card className="shadow-sm border-gray-200">
         <CardHeader className="flex flex-row items-center justify-between">
@@ -330,7 +321,6 @@ export default function JobPostings() {
                 <TableHead>Type</TableHead>
                 <TableHead>Location</TableHead>
                 <TableHead>Deadline</TableHead>
-                <TableHead>Salary</TableHead>
                 <TableHead className="text-right">Actions</TableHead>
               </TableRow>
             </TableHeader>
@@ -339,7 +329,7 @@ export default function JobPostings() {
                 const applicantsState = applicantsByJob[job.id] || {};
                 const hasApplicants = Array.isArray(applicantsState.items);
                 return (
-                  <>
+                  <Fragment key={job.id}>
                     <TableRow key={job.id} className="hover:bg-gray-50/80">
                       <TableCell className="font-medium text-gray-900">
                         <div>{job.title}</div>
@@ -352,9 +342,6 @@ export default function JobPostings() {
                       <TableCell className="text-gray-700">{job.location}</TableCell>
                       <TableCell className="text-gray-700">
                         {job.deadline || "—"}
-                      </TableCell>
-                      <TableCell className="text-gray-700">
-                        {job.salary || "—"}
                       </TableCell>
                       <TableCell className="text-right">
                         <div className="inline-flex gap-2">
@@ -410,7 +397,7 @@ export default function JobPostings() {
                         </TableCell>
                       </TableRow>
                     )}
-                  </>
+                  </Fragment>
                 );
               })}
             </TableBody>
@@ -425,6 +412,6 @@ export default function JobPostings() {
           )}
         </CardContent>
       </Card>
-    </div>
+    </div >
   );
 }

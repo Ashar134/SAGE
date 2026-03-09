@@ -166,31 +166,12 @@ def generate_test(request):
     Looks up Job model for title, requirements, and question count.
     """
     try:
-        from myapi.models import Job
-        
         service = TestGeneratorService()
         
         candidate_id = request.GET.get('candidate_id', 'default')
         job_id = request.GET.get('job_id', '')
         
-        # Check if test was already completed for this candidate/job
-        if job_id and candidate_id != 'default':
-            try:
-                application = Application.objects.get(job_id=job_id, user_id=candidate_id)
-                if application.test_score is not None:
-                    return Response({
-                        'success': False,
-                        'error': 'Test already completed for this job.',
-                        'test_score': application.test_score,
-                        'status': application.status
-                    }, status=400)
-            except Application.DoesNotExist:
-                pass
-
-        # Look up job details from the database
-        print(f"DEBUG: generate_test called with job_id='{job_id}'")
-        time_allowed = 60  # Default 60 minutes
-        
+        # Look up job details first
         if job_id:
             try:
                 job = Job.objects.get(id=job_id)
@@ -198,18 +179,40 @@ def generate_test(request):
                 requirements = job.requirements or []
                 total_questions = job.test_no_of_questions or 100
                 time_allowed = job.test_time_allowed or 60
-                print(f"DEBUG: Found job '{job_title}' with {total_questions} questions and {time_allowed} mins")
             except Job.DoesNotExist:
-                print(f"DEBUG: Job with id='{job_id}' not found")
+                job = None
                 job_title = request.GET.get('job_title', 'Software Engineer')
                 requirements = []
                 total_questions = 20
         else:
-            print("DEBUG: No job_id provided")
-            # Fallback: use query params
+            job = None
             job_title = request.GET.get('job_title', 'Software Engineer')
             requirements = []
             total_questions = 20
+
+        # Check if test was already completed for this candidate/job
+        if job_id and candidate_id != 'default':
+            try:
+                application = Application.objects.get(job_id=job_id, user_id=candidate_id)
+                if application.test_score is not None:
+                    # Fetch total questions from generated test file if it exists
+                    existing_test = service.load_test(candidate_id, job_id)
+                    actual_total = existing_test.get('total_questions', total_questions) if existing_test else total_questions
+                    
+                    # Convert score from percentage back to numerical if possible
+                    raw_score = round((application.test_score / 100) * actual_total)
+
+                    return Response({
+                        'success': True,
+                        'already_completed': True,
+                        'test_score': raw_score, 
+                        'percentage': application.test_score,
+                        'total_questions': actual_total,
+                        'status': application.status,
+                        'questions': [] 
+                    })
+            except Application.DoesNotExist:
+                pass
         
         # Generate test using RAG
         result = service.generate_rag_test_for_job(
@@ -329,55 +332,89 @@ def generate_test(request):
 @api_view(['POST'])
 def submit_test(request):
     """
-    Submit test results, calculate score, and update application status.
+    Submit test results, calculate score securely on backend, and update status.
     Threshold: 40%
     """
     try:
         data = request.data
         job_id = data.get('job_id')
         candidate_id = data.get('candidate_id')
-        score = data.get('score')  # Initial numerical score from frontend
-        total_questions = data.get('total_questions')
+        user_answers = data.get('answers', []) # List of strings matched to question order
         
-        if not all([job_id, candidate_id, score is not None, total_questions]):
+        if not all([job_id, candidate_id]):
             return Response({
                 'success': False,
-                'error': 'Missing required fields: job_id, candidate_id, score, total_questions'
+                'error': 'Missing required fields: job_id, candidate_id'
             }, status=400)
 
         # Get the application
         try:
             application = Application.objects.get(job_id=job_id, user_id=candidate_id)
         except Application.DoesNotExist:
-            return Response({
-                'success': False,
-                'error': 'Application not found'
-            }, status=404)
+            return Response({'success': False, 'error': 'Application not found'}, status=404)
 
         # Check if already submitted
         if application.test_score is not None:
-            return Response({
-                'success': False,
-                'error': 'Test already submitted for this application.'
-            }, status=400)
+            return Response({'success': False, 'error': 'Test already submitted for this job.'}, status=400)
+
+        # Load the generated test to calculate score securely
+        service = TestGeneratorService()
+        test_file_data = service.load_test(candidate_id, job_id)
+        
+        if not test_file_data or 'questions' not in test_file_data:
+            # Fallback to frontend-provided score if file is missing (not ideal but avoids blocking)
+            score = float(data.get('score', 0))
+            total_questions = int(data.get('total_questions', 20))
+        else:
+            # Secure Backend Calculation
+            questions = test_file_data['questions']
+            total_questions = len(questions)
+            score = 0
+            
+            for idx, q in enumerate(questions):
+                if idx < len(user_answers):
+                    user_ans = user_answers[idx]
+                    if user_ans is None:
+                        continue
+                        
+                    correct_key = q.get('key') or q.get('correct_answer')
+                    answers_map = q.get('answers', q.get('options', {}))
+                    
+                    # 1. Comparison by key-matching
+                    is_correct = False
+                    if isinstance(answers_map, dict):
+                        # If user_ans precisely matches the string of the correct key
+                        if correct_key in answers_map and str(answers_map[correct_key]).strip().lower() == str(user_ans).strip().lower():
+                            is_correct = True
+                    elif isinstance(answers_map, list):
+                        # For list of options, correct_key might be index or string
+                        try:
+                            idx_val = int(correct_key)
+                            if 0 <= idx_val < len(answers_map) and str(answers_map[idx_val]).strip().lower() == str(user_ans).strip().lower():
+                                is_correct = True
+                        except:
+                            if str(correct_key).strip().lower() == str(user_ans).strip().lower():
+                                is_correct = True
+                    
+                    if is_correct:
+                        score += 1
 
         # Calculate percentage
-        percentage = (float(score) / float(total_questions)) * 100
+        percentage = (float(score) / float(total_questions)) * 100 if total_questions > 0 else 0
         
-        # Branching logic: 40% threshold
+        # Update application status
         old_status = application.status
         new_status = 'interview' if percentage >= 40 else 'rejected'
         
-        # Update application
         application.test_score = percentage
         application.test_completed_at = timezone.now()
         application.status = new_status
         application.save()
         
-        # Create timeline entry
+        # Timeline
         ApplicationTimeline.objects.create(
             application=application,
-            event_type='status_change' if old_status != new_status else 'test_completed',
+            event_type='status_change',
             old_status=old_status,
             new_status=new_status,
             title=f'Test Completed - {percentage:.1f}%',
@@ -387,6 +424,8 @@ def submit_test(request):
         return Response({
             'success': True,
             'percentage': percentage,
+            'score': score,
+            'total_questions': total_questions,
             'new_status': new_status,
             'message': f'Test submitted successfully. Your score: {percentage:.1f}%'
         })
@@ -1666,6 +1705,486 @@ def get_available_skills(request):
         })
         
     except Exception as e:
+        return Response({
+            'success': False,
+            'error': str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+# ============================================================================
+# Semantic Job Recommendation Engine
+# ============================================================================
+
+# ---------------------------------------------------------------------------
+# Lazy-loaded sentence-transformer model (loaded once, reused on every call)
+# ---------------------------------------------------------------------------
+_embedding_model = None
+
+def _get_embedding_model():
+    """
+    Load and cache the pretrained sentence-transformer model.
+    Uses 'all-MiniLM-L6-v2' — a lightweight, high-quality 384-dim model
+    that balances speed and semantic accuracy perfectly for job matching.
+    """
+    global _embedding_model
+    if _embedding_model is None:
+        from sentence_transformers import SentenceTransformer
+        _embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+    return _embedding_model
+
+# ---------------------------------------------------------------------------
+# NLTK-powered Technology Synonym Builder
+# ---------------------------------------------------------------------------
+# Seed groups: each inner list is a cluster of equivalent/related tech terms.
+# These cover brand names, abbreviations, and framework aliases that WordNet
+# (a general English dictionary) cannot know about.
+# WordNet is then used to automatically enrich each term with additional
+# natural-language synonyms at module load time.
+_TECH_SEED_GROUPS = [
+    # Frontend
+    ['react', 'reactjs', 'react.js', 'frontend', 'front-end', 'ui development'],
+    ['angular', 'angularjs', 'angular.js', 'frontend', 'front-end'],
+    ['vue', 'vuejs', 'vue.js', 'frontend', 'front-end'],
+    ['javascript', 'js', 'ecmascript', 'es6', 'frontend'],
+    ['typescript', 'ts', 'javascript', 'js'],
+    ['html', 'html5', 'frontend', 'web development'],
+    ['css', 'css3', 'sass', 'scss', 'less', 'styling', 'frontend'],
+    ['next.js', 'nextjs', 'react', 'ssr', 'frontend'],
+    # Backend
+    ['node', 'nodejs', 'node.js', 'express', 'backend', 'server-side', 'javascript'],
+    ['python', 'django', 'flask', 'fastapi', 'backend', 'scripting'],
+    ['django', 'python', 'backend', 'rest api', 'web framework'],
+    ['flask', 'python', 'backend', 'rest api', 'microservices'],
+    ['java', 'spring', 'spring boot', 'jvm', 'backend', 'enterprise'],
+    ['spring', 'spring boot', 'java', 'backend', 'microservices'],
+    ['ruby', 'rails', 'ruby on rails', 'backend'],
+    ['php', 'laravel', 'backend', 'web development'],
+    ['go', 'golang', 'backend', 'microservices', 'distributed systems'],
+    ['rust', 'systems programming', 'backend'],
+    ['c#', 'dotnet', '.net', 'asp.net', 'backend', 'microsoft'],
+    ['c++', 'systems programming', 'embedded', 'performance'],
+    # Databases
+    ['sql', 'mysql', 'postgresql', 'database', 'rdbms', 'relational database'],
+    ['mysql', 'sql', 'database', 'rdbms'],
+    ['postgresql', 'postgres', 'sql', 'database', 'rdbms'],
+    ['mongodb', 'nosql', 'database', 'document database'],
+    ['redis', 'caching', 'in-memory', 'nosql'],
+    ['elasticsearch', 'search', 'nosql', 'database', 'kibana'],
+    ['firebase', 'nosql', 'database', 'real-time', 'google cloud'],
+    ['dynamodb', 'aws', 'nosql', 'database'],
+    # DevOps / Cloud
+    ['docker', 'containerization', 'devops', 'containers', 'kubernetes', 'microservices'],
+    ['kubernetes', 'k8s', 'orchestration', 'devops', 'containers', 'docker'],
+    ['aws', 'amazon web services', 'cloud', 'devops', 'ec2', 's3', 'lambda'],
+    ['azure', 'microsoft azure', 'cloud', 'devops'],
+    ['gcp', 'google cloud', 'google cloud platform', 'cloud', 'devops'],
+    ['jenkins', 'ci/cd', 'devops', 'automation', 'pipeline'],
+    ['terraform', 'infrastructure as code', 'iac', 'devops', 'cloud'],
+    ['ansible', 'configuration management', 'devops', 'automation'],
+    ['linux', 'unix', 'bash', 'shell', 'devops', 'systems'],
+    # Data Science / ML / AI
+    ['machine learning', 'ml', 'ai', 'artificial intelligence', 'data science', 'deep learning', 'neural network'],
+    ['deep learning', 'neural network', 'ml', 'ai', 'tensorflow', 'pytorch'],
+    ['tensorflow', 'deep learning', 'ml', 'machine learning', 'keras', 'python'],
+    ['pytorch', 'deep learning', 'ml', 'machine learning', 'python'],
+    ['data science', 'machine learning', 'statistics', 'python', 'data analysis', 'analytics'],
+    ['nlp', 'natural language processing', 'text processing', 'ml', 'ai'],
+    ['computer vision', 'cv', 'image processing', 'ml', 'ai', 'deep learning', 'opencv'],
+    ['pandas', 'python', 'data analysis', 'data science'],
+    ['spark', 'apache spark', 'big data', 'data engineering', 'scala'],
+    ['hadoop', 'big data', 'data engineering', 'mapreduce'],
+    ['tableau', 'data visualization', 'bi', 'business intelligence', 'analytics'],
+    ['power bi', 'data visualization', 'bi', 'business intelligence', 'analytics', 'microsoft'],
+    # Mobile
+    ['ios', 'swift', 'swiftui', 'objective-c', 'xcode', 'mobile development'],
+    ['android', 'kotlin', 'java', 'mobile development'],
+    ['flutter', 'dart', 'mobile development', 'cross-platform'],
+    ['react native', 'react', 'mobile development', 'cross-platform'],
+    # Architecture & Methodology
+    ['microservices', 'distributed systems', 'docker', 'kubernetes', 'api', 'backend'],
+    ['rest api', 'restful', 'api', 'backend', 'web services'],
+    ['graphql', 'api', 'backend', 'query language'],
+    ['agile', 'scrum', 'kanban', 'project management', 'sprint'],
+    ['devops', 'ci/cd', 'docker', 'kubernetes', 'cloud', 'automation'],
+]
+
+
+def _ensure_nltk_wordnet():
+    """Download NLTK WordNet corpus if not already present (runs once)."""
+    import nltk
+    for resource in ['wordnet', 'omw-1.4']:
+        try:
+            nltk.data.find(f'corpora/{resource}')
+        except LookupError:
+            nltk.download(resource, quiet=True)
+
+
+def _build_tech_synonyms():
+    """
+    Build the TECH_SYNONYMS dict dynamically using two layers:
+
+    Layer 1 – Seed groups (_TECH_SEED_GROUPS):
+        Bidirectional expansion within each group so every term in a cluster
+        is linked to every other term in that cluster.
+
+    Layer 2 – NLTK WordNet:
+        For each canonical term, look up WordNet synsets and add any lemma
+        names found there. Limited to the top-2 synsets to avoid noise from
+        unrelated word senses (e.g. 'python' the snake).
+
+    Returns:
+        dict[str, set[str]]: canonical term → set of related terms.
+    """
+    _ensure_nltk_wordnet()
+    import nltk
+    from nltk.corpus import wordnet
+
+    synonyms_dict: dict = {}
+
+    # --- Layer 1: bidirectional seed-group expansion ---
+    for group in _TECH_SEED_GROUPS:
+        group_set = {term.lower() for term in group}
+        for term in group:
+            term_lower = term.lower()
+            synonyms_dict.setdefault(term_lower, set())
+            synonyms_dict[term_lower] |= group_set - {term_lower}
+
+    # --- Layer 2: WordNet augmentation ---
+    for term in list(synonyms_dict.keys()):
+        # Convert term to a WordNet-friendly identifier
+        wn_key = term.replace('.', '').replace('-', '_').replace(' ', '_')
+        try:
+            synsets = wordnet.synsets(wn_key)
+            for synset in synsets[:2]:          # top-2 senses only
+                for lemma in synset.lemmas():
+                    wordnet_syn = lemma.name().replace('_', ' ').lower()
+                    if wordnet_syn != term and len(wordnet_syn) > 2:
+                        synonyms_dict[term].add(wordnet_syn)
+        except Exception:
+            pass  # silently skip if WordNet has no entry for a tech term
+
+    return synonyms_dict
+
+
+# Built once at module load time; reused on every recommendation request.
+TECH_SYNONYMS = _build_tech_synonyms()
+
+
+def _expand_terms_with_synonyms(text: str) -> str:
+    """
+    Expand the given text with semantic synonyms.
+    Finds all known technology terms in the text and appends their synonyms.
+    This boosts recall for semantically related but differently named skills.
+    """
+    text_lower = text.lower()
+    extra_terms = set()
+
+    for canonical, synonyms in TECH_SYNONYMS.items():
+        # Check if the canonical term or any synonym is in the text
+        all_terms = {canonical} | synonyms
+        for term in all_terms:
+            if term in text_lower:
+                # Add all related terms to expand the representation
+                extra_terms |= all_terms
+                break
+
+    if extra_terms:
+        return text + ' ' + ' '.join(extra_terms)
+    return text
+
+
+def _cosine_similarity_np(vec_a, vec_b) -> float:
+    """
+    Compute cosine similarity between two dense numpy embedding vectors.
+    Returns a float in [0, 1].
+    """
+    import numpy as np
+    norm_a = np.linalg.norm(vec_a)
+    norm_b = np.linalg.norm(vec_b)
+    if norm_a == 0.0 or norm_b == 0.0:
+        return 0.0
+    return float(np.dot(vec_a, vec_b) / (norm_a * norm_b))
+
+
+def _build_candidate_text(user) -> str:
+    """
+    Combine all user profile data into a single rich text representation
+    for semantic matching: skills, job titles, descriptions, education, bio, etc.
+    """
+    parts = []
+
+    # Bio / summary (high signal)
+    if user.bio:
+        parts.append(user.bio)
+        parts.append(user.bio)  # Double weight bio
+
+    # Skills (highest signal — repeat 3x for weighting)
+    skills = user.skills.all()
+    skill_names = [s.skill_name for s in skills]
+    if skill_names:
+        skill_text = ' '.join(skill_names)
+        parts.append(skill_text)
+        parts.append(skill_text)
+        parts.append(skill_text)
+
+    # Work experience
+    experiences = user.work_experience.all()
+    for exp in experiences:
+        if exp.job_title:
+            parts.append(exp.job_title)
+        if exp.description:
+            parts.append(exp.description)
+        if exp.responsibilities:
+            if isinstance(exp.responsibilities, list):
+                parts.extend(exp.responsibilities)
+            else:
+                parts.append(str(exp.responsibilities))
+        if exp.achievements:
+            if isinstance(exp.achievements, list):
+                parts.extend(exp.achievements)
+
+    # Education
+    education = user.education.all()
+    for edu in education:
+        if edu.degree:
+            parts.append(edu.degree)
+        if edu.field_of_study:
+            parts.append(edu.field_of_study)
+        if edu.description:
+            parts.append(edu.description)
+
+    # Projects
+    projects = user.projects.all()
+    for proj in projects:
+        if proj.title:
+            parts.append(proj.title)
+        if proj.details:
+            parts.append(proj.details)
+
+    # Research
+    research = user.research.all()
+    for res in research:
+        if res.title:
+            parts.append(res.title)
+        if res.details:
+            parts.append(res.details)
+
+    # Certificates
+    certs = user.certificates.all()
+    for cert in certs:
+        if cert.name:
+            parts.append(cert.name)
+
+    # Return the clean combined text — the embedding model handles semantic
+    # similarity natively; synonym expansion is NOT needed and actually
+    # pollutes similarity by adding unrelated generic terms.
+    return ' '.join(filter(None, parts))
+
+
+def _build_job_text(job) -> str:
+    """Build a rich text representation for a single job posting."""
+    parts = []
+
+    if job.title:
+        # Title is highest signal — repeat 3x
+        parts.append(job.title)
+        parts.append(job.title)
+        parts.append(job.title)
+
+    if job.description:
+        parts.append(job.description)
+
+    if job.requirements:
+        if isinstance(job.requirements, list):
+            parts.extend(job.requirements)
+        else:
+            parts.append(str(job.requirements))
+
+    if job.responsibilities:
+        if isinstance(job.responsibilities, list):
+            parts.extend(job.responsibilities)
+
+    if job.benefits:
+        if isinstance(job.benefits, list):
+            parts.extend(job.benefits)
+
+    # Same as candidate text: embedding model handles semantics natively.
+    return ' '.join(filter(None, parts))
+
+
+def _compute_skill_overlap_bonus(candidate_skills: list, job_text: str) -> float:
+    """
+    Compute a direct skill overlap bonus score (0-1).
+    This gives extra weight to exact/near-exact skill name matches.
+    """
+    if not candidate_skills:
+        return 0.0
+
+    job_lower = job_text.lower()
+    matches = 0
+    for skill in candidate_skills:
+        skill_lower = skill.lower()
+        # Check canonical name and its synonyms
+        if skill_lower in job_lower:
+            matches += 1
+        else:
+            # Check synonyms
+            synonyms = TECH_SYNONYMS.get(skill_lower, set())
+            if any(syn in job_lower for syn in synonyms):
+                matches += 0.7  # Partial credit for synonym match
+
+    return min(matches / len(candidate_skills), 1.0)
+
+
+@api_view(['GET'])
+def get_job_recommendations(request):
+    """
+    Semantic Job Recommendation Engine.
+    
+    Accepts: ?user_id=<uuid>
+    
+    Algorithm:
+    1. Build a rich candidate text from user profile (skills, experience, bio, education, projects).
+    2. Expand all terms with technology synonyms for semantic coverage.
+    3. Build a job corpus text for every active job (title, description, requirements).
+    4. Expand job texts with synonyms.
+    5. Encode candidate + all job texts into dense vectors using 'all-MiniLM-L6-v2'.
+    6. Compute cosine similarity between candidate vector and each job embedding.
+    7. Apply a skill overlap bonus for direct technical term matches.
+    8. Scale to 0-100, rank descending, and return top N results.
+    """
+    try:
+        user_id = request.GET.get('user_id')
+        top_n = int(request.GET.get('top_n', 10))
+
+        if not user_id:
+            return Response({
+                'success': False,
+                'error': 'user_id is required'
+            }, status=status.HTTP_400_BAD_REQUEST)
+
+        # Fetch user with all related profile data
+        try:
+            user = User.objects.prefetch_related(
+                'skills', 'work_experience', 'education',
+                'projects', 'research', 'certificates'
+            ).get(id=user_id)
+        except User.DoesNotExist:
+            return Response({
+                'success': False,
+                'error': 'User not found'
+            }, status=status.HTTP_404_NOT_FOUND)
+
+        # Build candidate profile text
+        candidate_text = _build_candidate_text(user)
+
+        # Check if profile has meaningful content
+        if len(candidate_text.strip()) < 20:
+            # Not enough profile data — return jobs sorted by date instead
+            jobs = Job.objects.filter(is_active=True).select_related('company').order_by('-posted_date')[:top_n]
+            serializer = JobSerializer(jobs, many=True, context={'request': request})
+            return Response({
+                'success': True,
+                'has_profile': False,
+                'message': 'Complete your profile for personalized recommendations',
+                'recommendations': [
+                    # No relevance_score or match_label — profile is empty,
+                    # so any score would be meaningless. Frontend should
+                    # hide the score badge when has_profile is False.
+                    {**job_data, 'relevance_score': None, 'match_label': None}
+                    for job_data in serializer.data
+                ]
+            })
+
+        # Fetch all active jobs
+        all_jobs = list(Job.objects.filter(is_active=True).select_related('company').order_by('-posted_date'))
+
+        if not all_jobs:
+            return Response({
+                'success': True,
+                'has_profile': True,
+                'recommendations': []
+            })
+
+        # Build job texts
+        job_texts = [_build_job_text(job) for job in all_jobs]
+
+        # Get candidate skill names for overlap bonus
+        candidate_skill_names = [s.skill_name for s in user.skills.all()]
+
+        # Encode candidate and all jobs into dense embedding vectors
+        model = _get_embedding_model()
+        corpus = [candidate_text] + job_texts
+        embeddings = model.encode(corpus, convert_to_numpy=True, show_progress_bar=False)
+
+        candidate_vec = embeddings[0]
+        job_vecs = embeddings[1:]
+
+        # Score each job
+        scored_jobs = []
+        for i, job in enumerate(all_jobs):
+            # Raw cosine similarity from sentence embeddings.
+            # 'all-MiniLM-L6-v2' produces values roughly in [0.0, 1.0] for
+            # real-world text; do NOT shift or amplify — use the value as-is.
+            cosine_sim = _cosine_similarity_np(candidate_vec, job_vecs[i])
+            # Clamp to [0, 1] — cosine can technically be slightly negative
+            cosine_sim = max(cosine_sim, 0.0)
+
+            # Direct skill overlap bonus (0-1)
+            overlap_bonus = _compute_skill_overlap_bonus(candidate_skill_names, job_texts[i])
+
+            # Combined score: 50% semantic embedding similarity + 50% exact skill overlap
+            # Skills now carry equal weight — both components are in [0, 1]
+            combined = (cosine_sim * 0.50) + (overlap_bonus * 0.50)
+
+            # Honest linear scaling to 0-100 — no artificial amplification
+            relevance_score = round(min(max(combined * 100, 0), 100))
+
+            scored_jobs.append((relevance_score, job))
+
+        # Sort by score descending
+        scored_jobs.sort(key=lambda x: x[0], reverse=True)
+
+        # NOTE: Forced normalization ("top score always ≥ 70") is intentionally
+        # removed. It created false confidence — a poor match profile would
+        # still display 70%+ scores. Scores are now genuine (0-100).
+
+        # Take top N
+        top_jobs = scored_jobs[:top_n]
+
+        # Determine match label based on score
+        def get_match_label(score: int) -> str:
+            if score >= 85:
+                return 'Excellent Match'
+            elif score >= 70:
+                return 'Strong Match'
+            elif score >= 55:
+                return 'Good Match'
+            elif score >= 40:
+                return 'Fair Match'
+            else:
+                return 'Potential Match'
+
+        # Serialize and attach scores
+        result_jobs = []
+        for score, job in top_jobs:
+            serializer = JobSerializer(job, context={'request': request})
+            job_data = serializer.data
+            job_data['relevance_score'] = score
+            job_data['match_label'] = get_match_label(score)
+            result_jobs.append(job_data)
+
+        return Response({
+            'success': True,
+            'has_profile': True,
+            'candidate_name': f"{user.first_name or ''} {user.last_name or ''}".strip() or user.email,
+            'total_jobs_analyzed': len(all_jobs),
+            'recommendations': result_jobs
+        })
+
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
         return Response({
             'success': False,
             'error': str(e)

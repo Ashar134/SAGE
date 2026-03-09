@@ -26,6 +26,7 @@ urlpatterns = [
     
     # Job APIs
     path("api/jobs/", views.get_jobs, name="get_jobs"),
+    path("api/jobs/recommendations/", views.get_job_recommendations, name="get_job_recommendations"),
     path("api/jobs/<uuid:job_id>/", views.get_job_detail, name="get_job_detail"),
     
     # Saved Jobs APIs
