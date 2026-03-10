@@ -1,0 +1,1056 @@
+/* ============================================================================
+   Skeleton Loading Components - Modern Premium Design
+   ============================================================================ */
+
+/* Base Skeleton Styles */
+.skeleton {
+    background: linear-gradient(90deg,
+            #f0f0f0 25%,
+            #e8e8e8 37%,
+            #f0f0f0 63%);
+    background-size: 400% 100%;
+    animation: skeleton-shimmer 1.4s ease infinite;
+    border-radius: 8px;
+}
+
+.skeleton-dark {
+    background: linear-gradient(90deg,
+            #e2e8f0 25%,
+            #cbd5e1 37%,
+            #e2e8f0 63%);
+    background-size: 400% 100%;
+    animation: skeleton-shimmer 1.4s ease infinite;
+}
+
+@keyframes skeleton-shimmer {
+    0% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+/* Skeleton pulse animation (alternative) */
+.skeleton-pulse {
+    animation: skeleton-pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes skeleton-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* ============================================================================
+   Login Required Banner (Premium Magic UI Style)
+   ============================================================================ */
+
+.premium-login-alert {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 12px 16px;
+    margin: 20px auto;
+    max-width: 500px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05),
+        0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    gap: 14px;
+    animation: alert-slide-down 0.5s ease-out;
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+}
+
+@keyframes alert-slide-down {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.alert-icon-container {
+    flex-shrink: 0;
+}
+
+.alert-icon-bg {
+    width: 44px;
+    height: 44px;
+    background: #ffb000;
+    /* Yellow from image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    color: white;
+}
+
+.alert-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1px;
+}
+
+.alert-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.alert-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.alert-dot {
+    color: #9ca3af;
+    font-size: 0.8rem;
+}
+
+.alert-time {
+    font-size: 0.85rem;
+    color: #6b7280;
+    font-weight: 400;
+}
+
+.alert-message {
+    font-size: 0.88rem;
+    color: #4b5563;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.alert-link {
+    color: #6366f1;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.alert-link:hover {
+    color: #4f46e5;
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+    .premium-login-alert {
+        margin: 10px 16px;
+        max-width: calc(100% - 32px);
+    }
+}
+
+/* ============================================================================
+   Base Skeleton Elements
+   ============================================================================ */
+
+.skeleton-text {
+    height: 14px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.skeleton-text.sm {
+    height: 12px;
+}
+
+.skeleton-text.lg {
+    height: 18px;
+}
+
+.skeleton-text.xl {
+    height: 24px;
+}
+
+.skeleton-title {
+    height: 28px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    width: 60%;
+}
+
+.skeleton-circle {
+    border-radius: 50%;
+}
+
+.skeleton-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+}
+
+.skeleton-avatar.sm {
+    width: 36px;
+    height: 36px;
+}
+
+.skeleton-avatar.lg {
+    width: 64px;
+    height: 64px;
+}
+
+.skeleton-button {
+    height: 40px;
+    border-radius: 10px;
+    width: 100px;
+}
+
+.skeleton-tag {
+    height: 28px;
+    border-radius: 6px;
+    width: 70px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+/* ============================================================================
+   HomePage Skeleton
+   ============================================================================ */
+
+.home-skeleton {
+    padding: 0;
+    background-color: #fafafa;
+    min-height: 100vh;
+}
+
+/* Hero Skeleton */
+.skeleton-hero {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+    padding: 56px 4% 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 280px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skeleton-hero-content {
+    max-width: 55%;
+    z-index: 2;
+    padding-left: 2%;
+}
+
+.skeleton-hero-tag {
+    width: 100px;
+    height: 28px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+}
+
+.skeleton-hero-title {
+    width: 400px;
+    height: 42px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.skeleton-hero-subtitle {
+    width: 320px;
+    height: 20px;
+    border-radius: 6px;
+}
+
+.skeleton-hero-graphics {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5%;
+}
+
+.skeleton-shape {
+    border-radius: 40px;
+    opacity: 0.3;
+}
+
+.skeleton-shape-1 {
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    right: 120px;
+    top: -40px;
+    transform: skewX(-10deg) rotate(10deg);
+}
+
+.skeleton-shape-2 {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    right: 80px;
+    top: 140px;
+    border-radius: 30px;
+    transform: skewX(-10deg) rotate(10deg);
+}
+
+.skeleton-shape-3 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: -20px;
+    top: 50px;
+    border-radius: 20px;
+    transform: skewX(-10deg) rotate(10deg);
+}
+
+/* Search Bar Skeleton */
+.skeleton-search-container {
+    padding: 0 4%;
+    margin-top: -28px;
+    position: relative;
+    z-index: 10;
+}
+
+.skeleton-search-bar {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+    display: flex;
+    padding: 12px 14px;
+    gap: 12px;
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 68px;
+    align-items: center;
+}
+
+.skeleton-search-input {
+    flex: 1;
+    height: 44px;
+    border-radius: 8px;
+}
+
+.skeleton-search-btn {
+    width: 120px;
+    height: 48px;
+    border-radius: 10px;
+}
+
+/* Main Layout Skeleton */
+.skeleton-main-layout {
+    display: flex;
+    padding: 56px 4% 32px;
+    gap: 48px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Sidebar Skeleton */
+.skeleton-sidebar {
+    width: 240px;
+    min-width: 220px;
+    flex-shrink: 0;
+}
+
+.skeleton-filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.skeleton-filter-title {
+    width: 60px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.skeleton-filter-clear {
+    width: 60px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.skeleton-filter-group {
+    margin-bottom: 28px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.skeleton-filter-group:last-child {
+    border-bottom: none;
+}
+
+.skeleton-filter-group-title {
+    width: 80px;
+    height: 14px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.skeleton-select {
+    width: 100%;
+    height: 44px;
+    border-radius: 10px;
+}
+
+.skeleton-checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.skeleton-checkbox {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+}
+
+.skeleton-checkbox-text {
+    width: 100px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+/* Job List Skeleton */
+.skeleton-job-section {
+    flex: 1;
+}
+
+.skeleton-results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.skeleton-results-count {
+    width: 200px;
+    height: 24px;
+    border-radius: 6px;
+}
+
+/* Job Card Skeleton */
+.skeleton-job-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.skeleton-job-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 20px;
+    min-height: 260px;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+}
+
+.skeleton-job-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.skeleton-company-logo {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+}
+
+.skeleton-bookmark-btn {
+    width: 80px;
+    height: 36px;
+    border-radius: 12px;
+}
+
+.skeleton-job-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.skeleton-company-name {
+    width: 120px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.skeleton-posted-time {
+    width: 60px;
+    height: 14px;
+    border-radius: 4px;
+}
+
+.skeleton-job-title {
+    width: 100%;
+    height: 22px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.skeleton-job-tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.skeleton-job-tag {
+    width: 70px;
+    height: 28px;
+    border-radius: 6px;
+}
+
+.skeleton-job-spacer {
+    flex: 1;
+    min-height: 20px;
+}
+
+.skeleton-job-location {
+    width: 140px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+/* ============================================================================
+   JobPage Skeleton
+   ============================================================================ */
+
+.job-page-skeleton {
+    padding: 24px;
+}
+
+.skeleton-job-header {
+    margin-bottom: 24px;
+}
+
+.skeleton-job-page-title {
+    width: 280px;
+    height: 32px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.skeleton-job-page-subtitle {
+    width: 180px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.skeleton-job-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 16px;
+}
+
+.skeleton-tab {
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.skeleton-jobs-container {
+    display: flex;
+    gap: 24px;
+}
+
+/* Jobs List Skeleton */
+.skeleton-jobs-list {
+    width: 380px;
+    min-width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skeleton-job-item {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid #e5e7eb;
+}
+
+.skeleton-job-item-top {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.skeleton-job-item-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+}
+
+.skeleton-job-item-info {
+    flex: 1;
+}
+
+.skeleton-job-item-title {
+    width: 160px;
+    height: 18px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+}
+
+.skeleton-job-item-company {
+    width: 100px;
+    height: 14px;
+    border-radius: 4px;
+}
+
+.skeleton-job-item-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.skeleton-job-item-location {
+    width: 100px;
+    height: 14px;
+    border-radius: 4px;
+}
+
+.skeleton-job-item-time {
+    width: 40px;
+    height: 14px;
+    border-radius: 4px;
+}
+
+.skeleton-job-item-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skeleton-job-item-salary {
+    width: 80px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.skeleton-job-item-type {
+    width: 70px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+/* Job Details Skeleton */
+.skeleton-job-detail {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid #e5e7eb;
+}
+
+.skeleton-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.skeleton-detail-top {
+    display: flex;
+    gap: 16px;
+}
+
+.skeleton-detail-logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+}
+
+.skeleton-detail-info {
+    flex: 1;
+}
+
+.skeleton-detail-title {
+    width: 240px;
+    height: 28px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.skeleton-detail-company {
+    width: 140px;
+    height: 18px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.skeleton-detail-meta {
+    display: flex;
+    gap: 12px;
+}
+
+.skeleton-detail-meta-item {
+    width: 80px;
+    height: 14px;
+    border-radius: 4px;
+}
+
+.skeleton-apply-btn {
+    width: 120px;
+    height: 44px;
+    border-radius: 10px;
+}
+
+.skeleton-detail-salary {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+.skeleton-salary-label {
+    width: 50px;
+    height: 14px;
+    border-radius: 4px;
+}
+
+.skeleton-salary-value {
+    width: 100px;
+    height: 20px;
+    border-radius: 6px;
+}
+
+.skeleton-detail-section {
+    margin-bottom: 24px;
+}
+
+.skeleton-section-title {
+    width: 150px;
+    height: 22px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.skeleton-section-text {
+    width: 100%;
+    height: 80px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.skeleton-section-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skeleton-list-item {
+    width: 100%;
+    height: 18px;
+    border-radius: 4px;
+}
+
+.skeleton-list-item:nth-child(2) {
+    width: 90%;
+}
+
+.skeleton-list-item:nth-child(3) {
+    width: 85%;
+}
+
+.skeleton-list-item:nth-child(4) {
+    width: 95%;
+}
+
+/* ============================================================================
+   ApplicationPage Skeleton
+   ============================================================================ */
+
+.application-skeleton {
+    padding: 24px;
+}
+
+.skeleton-app-header {
+    margin-bottom: 24px;
+}
+
+.skeleton-app-title {
+    width: 200px;
+    height: 32px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.skeleton-app-subtitle {
+    width: 160px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.skeleton-app-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 16px;
+}
+
+/* Kanban Board Skeleton */
+.skeleton-kanban {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 16px;
+}
+
+.skeleton-kanban-column {
+    min-width: 280px;
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.skeleton-column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.skeleton-column-title {
+    width: 80px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.skeleton-column-count {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.skeleton-app-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.skeleton-app-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.skeleton-app-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.skeleton-app-card-title {
+    width: 140px;
+    height: 18px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+}
+
+.skeleton-app-card-company {
+    width: 100px;
+    height: 14px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.skeleton-app-card-meta {
+    width: 80px;
+    height: 12px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.skeleton-app-card-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skeleton-app-salary {
+    width: 70px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.skeleton-app-date {
+    width: 60px;
+    height: 14px;
+    border-radius: 4px;
+}
+
+.skeleton-edit-btn {
+    width: 48px;
+    height: 28px;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 37%, #f0f0f0 63%);
+    background-size: 400% 100%;
+    animation: skeleton-shimmer 1.4s ease infinite;
+}
+
+.skeleton-fade-in {
+    animation: skeleton-fade-in-anim 0.4s ease-out;
+}
+
+@keyframes skeleton-fade-in-anim {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skeleton-detail-label {
+    width: 80px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.skeleton-detail-value {
+    flex: 1;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.skeleton-skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skeleton-skill-tag {
+    width: 80px;
+    height: 32px;
+    border-radius: 8px;
+}
+
+.skeleton-summary-item {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 24px;
+}
+
+.skeleton-summary-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.skeleton-summary-item-title {
+    width: 180px;
+    height: 18px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.skeleton-summary-item-subtitle {
+    width: 140px;
+    height: 14px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.skeleton-summary-item-meta {
+    width: 100px;
+    height: 12px;
+    border-radius: 4px;
+}
+
+.skeleton-text-line {
+    height: 14px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 37%, #f0f0f0 63%);
+    background-size: 400% 100%;
+    animation: skeleton-shimmer 1.4s ease infinite;
+}
+
+.skeleton-text-line:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================================================
+   Responsive Styles
+   ============================================================================ */
+
+@media (max-width: 1200px) {
+    .skeleton-profile-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .skeleton-main-layout {
+        flex-direction: column;
+    }
+
+    .skeleton-sidebar {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .skeleton-jobs-container {
+        flex-direction: column;
+    }
+
+    .skeleton-jobs-list {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .skeleton-hero {
+        padding: 40px 4% 50px;
+        min-height: 200px;
+    }
+
+    .skeleton-hero-content {
+        max-width: 100%;
+    }
+
+    .skeleton-hero-graphics {
+        display: none;
+    }
+
+    .skeleton-hero-title {
+        width: 280px;
+    }
+
+    .skeleton-kanban {
+        flex-direction: column;
+    }
+
+    .skeleton-kanban-column {
+        min-width: 100%;
+    }
+}

@@ -1,0 +1,745 @@
+/* Jobs Page - Ultra Clean Modern Design */
+
+.jobs-page {
+    background: #f8f8f8;
+    min-height: 100vh;
+    /* padding: 12px 3%; */
+    padding-bottom: 100px;
+}
+
+/* ============================================================================
+   Job Page Header
+   ============================================================================ */
+
+.job-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 5%;
+    background: linear-gradient(135deg, #F0F2F0 0%, #000C40 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 40px;
+    overflow: hidden;
+    min-height: 170px;
+    padding-bottom: 60px;
+    /* margin-bottom: 30px; */
+}
+
+.job-header::after {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: 10%;
+    width: 35%;
+    height: 180%;
+    background: radial-gradient(circle, rgba(100, 149, 237, 0.4) 0%, rgba(147, 197, 253, 0.3) 30%, transparent 70%);
+    filter: blur(60px);
+    animation: blob-float-2 25s ease-in-out infinite;
+}
+
+@keyframes blob-float-1 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -20px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 10px) scale(0.9);
+    }
+}
+
+@keyframes blob-float-2 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(-30px, 20px) scale(0.9);
+    }
+
+    66% {
+        transform: translate(20px, -10px) scale(1.1);
+    }
+}
+
+.job-header>* {
+    position: relative;
+    z-index: 1;
+}
+
+.job-page-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.job-page-subtitle {
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    font-weight: 500;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+.job-quote {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    max-width: 520px;
+    padding: 20px 24px;
+    border-radius: 12px;
+}
+
+.quote-icon {
+    color: rgba(255, 255, 255, 0.9);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.quote-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.quote-text {
+    font-size: 0.9375rem;
+    font-style: italic;
+    color: #ffffff;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 500;
+}
+
+.quote-author {
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+    margin: 0;
+}
+
+.jobs-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 20px;
+}
+
+/* ============= List ============= */
+
+.jobs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.job-item {
+    background: #fafafa;
+    padding: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.job-item:hover {
+    background: #f0f0f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.empty-state-jobs {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+    background: #fff;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.job-item.selected {
+    background: #f0f7ff;
+    box-shadow: 0 0 0 2px #a7d3ffe5;
+}
+
+.job-item-top {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.job-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.job-item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.job-item-info h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111;
+    margin: 0 0 5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.job-item-info .company {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* Bookmark Button in Job Item */
+.job-item .btn-bookmark {
+    background: #f3f4f6;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #374151;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.job-item .btn-bookmark:hover {
+    background: #e5e7eb;
+    transform: scale(1.05);
+}
+
+.job-item .btn-bookmark.bookmarked {
+    background: rgba(0, 102, 204, 0.1);
+    color: #0066cc;
+}
+
+.job-item .btn-bookmark.bookmarked:hover {
+    background: rgba(0, 102, 204, 0.15);
+}
+
+.job-item .btn-bookmark svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.job-item-meta {
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 12px;
+}
+
+.job-item-bottom {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.job-item-bottom .salary {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+}
+
+.job-item-bottom .type {
+    font-size: 13px;
+    color: #666;
+    background: #f5f5f5;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* ============================================================================
+   Job Tabs
+   ============================================================================ */
+
+.job-tabs {
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0 5%;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    margin-bottom: 24px;
+}
+
+.job-tabs::-webkit-scrollbar {
+    height: 0;
+}
+
+.tab-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 20px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: #666;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+    position: relative;
+    outline: none;
+}
+
+.tab-button:hover {
+    color: #0066cc;
+    background: rgba(0, 102, 204, 0.04);
+}
+
+.tab-button.active {
+    color: #0066cc;
+    border-bottom-color: #0066cc;
+}
+
+.tab-icon {
+    flex-shrink: 0;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tab-button:hover .tab-icon {
+    transform: scale(1.1);
+}
+
+.tab-button.active .tab-icon {
+    transform: scale(1.05);
+}
+
+.tab-badge {
+    background: #f5f5f5;
+    color: #666;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+    min-width: 24px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tab-button.active .tab-badge {
+    background: rgba(0, 102, 204, 0.1);
+    color: #0066cc;
+}
+
+/* ============= Details ============= */
+
+.job-detail {
+    background: white;
+    border-radius: 8px;
+    padding: 28px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 24px;
+}
+
+.detail-top {
+    display: flex;
+    gap: 16px;
+    flex: 1;
+}
+
+.detail-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 26px;
+    flex-shrink: 0;
+}
+
+.detail-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #111;
+    margin: 0 0 8px 0;
+    line-height: 1.2;
+}
+
+.detail-company {
+    font-size: 16px;
+    color: #666;
+    margin: 0 0 10px 0;
+}
+
+.detail-meta {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    color: #999;
+    align-items: center;
+}
+
+.apply-btn {
+    background: #0066cc;
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 102, 204, 0.2);
+}
+
+.apply-btn:hover {
+    background: #0052a3;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 102, 204, 0.3);
+}
+
+.apply-btn:disabled {
+    background: #f1f5f9;
+    color: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.apply-btn.applied {
+    padding: 8px 20px;
+    font-size: 14px;
+    width: fit-content;
+    background: #f1f5f9;
+    color: #64748b;
+    border: 1px solid #e2e8f0;
+}
+
+.apply-btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-end;
+    /* Align items to the right */
+}
+
+.already-applied-text {
+    font-size: 12px;
+    color: #94a3b8;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+}
+
+.detail-salary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    background: #f0f7ff;
+    border-radius: 6px;
+    margin-bottom: 24px;
+}
+
+.salary-label {
+    font-size: 13px;
+    color: #666;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.salary-value {
+    font-size: 17px;
+    font-weight: 600;
+    color: #111;
+}
+
+.detail-section {
+    margin-bottom: 32px;
+}
+
+.detail-section:last-child {
+    margin-bottom: 0;
+}
+
+.detail-section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111;
+    margin: 0 0 14px 0;
+}
+
+.detail-section p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.detail-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.detail-section li {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+    padding-left: 24px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.detail-section li::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 11px;
+    width: 6px;
+    height: 6px;
+    background: #0066cc;
+    border-radius: 50%;
+}
+
+/* ============= Responsive ============= */
+
+@media (max-width: 900px) {
+    .jobs-container {
+        grid-template-columns: 1fr;
+    }
+
+    .jobs-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .jobs-page {
+        padding: 16px 3%;
+    }
+
+    .jobs-list {
+        grid-template-columns: 1fr;
+    }
+
+    .job-detail {
+        padding: 20px;
+    }
+
+    .detail-header {
+        flex-direction: column;
+    }
+
+    .detail-top {
+        flex-direction: column;
+    }
+
+    .apply-btn {
+        width: 100%;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+    }
+
+    .pagination-btn {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+    }
+
+    .pagination-page {
+        min-width: 32px;
+        height: 32px;
+        font-size: 0.75rem;
+    }
+}
+
+/* ============================================================================
+   Pagination Styles for Job List - Compact Modern Design
+   ============================================================================ */
+
+.jobs-list .pagination-wrapper {
+    margin-top: 16px;
+}
+
+.jobs-list .pagination-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #cbd5e1, transparent);
+    margin-bottom: 16px;
+}
+
+.jobs-list .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 16px 12px;
+    /* background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); */
+    border-radius: 12px;
+    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04); */
+}
+
+.jobs-list .pagination-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 14px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #475569;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.jobs-list .pagination-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-color: #0066cc;
+    color: #0066cc;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 102, 204, 0.12);
+}
+
+.jobs-list .pagination-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.jobs-list .pagination-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    background: #f8fafc;
+}
+
+.jobs-list .pagination-btn svg {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.jobs-list .pagination-btn:hover:not(:disabled) svg {
+    transform: scale(1.1);
+}
+
+.jobs-list .pagination-prev:hover:not(:disabled) svg {
+    transform: translateX(-2px);
+}
+
+.jobs-list .pagination-next:hover:not(:disabled) svg {
+    transform: translateX(2px);
+}
+
+.jobs-list .pagination-pages {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    background: #f1f5f9;
+    border-radius: 10px;
+}
+
+.jobs-list .pagination-page {
+    min-width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.jobs-list .pagination-page:hover:not(:disabled):not(.active):not(.ellipsis) {
+    background: #ffffff;
+    color: #0066cc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.jobs-list .pagination-page.active {
+    background: #0066cc;
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(0, 102, 204, 0.25);
+}
+
+.jobs-list .pagination-page.ellipsis {
+    background: transparent;
+    cursor: default;
+    min-width: 28px;
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+.jobs-list .pagination-page.ellipsis:hover {
+    background: transparent;
+    box-shadow: none;
+}
+
+.jobs-list .pagination-info {
+    text-align: center;
+    margin-top: 12px;
+    padding: 12px 16px;
+    font-size: 0.8125rem;
+    color: #64748b;
+    font-weight: 500;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border-radius: 10px;
+    letter-spacing: 0.01em;
+}

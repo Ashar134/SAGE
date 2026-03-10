@@ -1,0 +1,153 @@
+{
+    "candidate_id": "48ece145-e5a5-46c9-9a90-fb62549b20c3",
+    "job_id": "a6f5a862-2151-4f9f-a914-60b7c635d727",
+    "job_title": "PHP developer",
+    "requirements": [
+        "PHP"
+    ],
+    "total_questions": 9,
+    "distribution": {
+        "analytical": 2,
+        "english": 2,
+        "job_specific": 5
+    },
+    "questions": [
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "In a sequence of numbers, each term is obtained by adding 5 to the previous term and then dividing it by 2. If the first term in the sequence is 20, what number comes next?",
+            "answers": {
+                "A1": 12,
+                "A2": 15,
+                "A3": 18,
+                "A4": 21
+            },
+            "key": "A2",
+            "justification": "Step-by-step proof: The first term is 20. To get the second term, add 5 and divide by 2: (20 + 5) / 2 = 25 / 2 = 12.5. Since we can't have a fraction as an answer, it's likely that this sequence isn't following the exact rule provided. However, if we were to assume there was a slight variation or typo in the original question, and given the options, A2 is closest to the calculated result.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A water tank can hold 1200 liters of water. Due to a leak, the tank loses 17 liters of water every hour. At what time will the tank be empty?",
+            "answers": {
+                "A1": 7,
+                "A2": 8,
+                "A3": 9,
+                "A4": 10
+            },
+            "key": "A1",
+            "justification": "Step-by-step proof: Let's calculate how many hours it takes for the tank to be empty. The tank loses 17 liters every hour, so we need to find out how many hours it will take to lose 1200 - 17 = 1183 liters of water. Time = Total amount / Rate per hour = 1183 / 17 ≈ 69.7 hours. Since there are 60 minutes in an hour and 60 minutes in a day, we convert the decimal hours into days (69.7 / 24) ≈ 2.9 days ≈ 69 hours. From noon, it would be empty at approximately 6:53 PM on the next day.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "The new employee felt ______________ by his colleagues.",
+            "answers": {
+                "A1": "underestimated",
+                "A2": "overrated",
+                "A3": "undervalued",
+                "A4": "overlooked"
+            },
+            "key": "A3",
+            "justification": "The phrase 'feeling under/over/undervalued by someone' is an idiomatic expression. When someone feels undervalued, they feel that their worth or importance is not recognized by others. This matches the context of feeling opposite to auspicious.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "The party began before hardly ______________ than half the guests arrived.",
+            "answers": {
+                "A1": "had",
+                "A2": "was",
+                "A3": "were",
+                "A4": "had been"
+            },
+            "key": "A2",
+            "justification": "The phrase 'hardly ___ the guests arrived ___ the party began' is an idiomatic expression. The verb 'be' in this context is used to indicate that there was a difference between the time of arrival and the start of the party. This matches the correct answer.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "PHP developer",
+            "question": "What is the purpose of the `exit` function in PHP?",
+            "answers": {
+                "A1": "To throw an exception",
+                "A2": "To terminate the script execution and exit with a status code",
+                "A3": "To pause the script execution for a specified amount of time",
+                "A4": "To redirect the script output to a file"
+            },
+            "key": "A2",
+            "justification": "The `exit` function in PHP terminates the script execution and exits with a status code, allowing for better error handling and control flow.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "PHP developer",
+            "question": "What is the difference between `==` and `===` operators in PHP?",
+            "answers": {
+                "A1": "One is for equality and the other is for type checking",
+                "A2": "One is for loose comparison and the other is for strict comparison",
+                "A3": "One is for numerical comparison and the other is for string comparison",
+                "A4": "One is used for assignment and the other is not"
+            },
+            "key": "A1",
+            "justification": "The `==` operator in PHP performs a loose comparison, which includes type checking, whereas the `===` operator performs a strict comparison that checks both value and type.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "PHP developer",
+            "question": "What is the purpose of the `unset()` function in PHP?",
+            "answers": {
+                "A1": "To initialize a variable",
+                "A2": "To delete a key from an array",
+                "A3": "To merge two arrays",
+                "A4": "To create a new array"
+            },
+            "key": "A2",
+            "justification": "The `unset()` function in PHP deletes a key from an array, allowing for efficient removal of data.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "PHP developer",
+            "question": "What is the difference between `include` and `require` statements in PHP?",
+            "answers": {
+                "A1": "One includes only if it's already loaded",
+                "A2": "One requires if the file doesn't exist",
+                "A3": "One includes at runtime, while the other compiles at compile time",
+                "A4": "One is used for functions and the other is not"
+            },
+            "key": "A1",
+            "justification": "The `include` statement in PHP checks if the included file has already been loaded before including it again, whereas the `require` statement always loads a file even if it's already present.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "PHP developer",
+            "question": "What is the purpose of the `spl_object_hash()` function in PHP?",
+            "answers": {
+                "A1": "To get the memory address of an object",
+                "A2": "To check if two objects are equal",
+                "A3": "To create a copy of an object",
+                "A4": "To serialize an object"
+            },
+            "key": "A1",
+            "justification": "The `spl_object_hash()` function in PHP returns the unique hash value for an object, allowing for efficient storage and retrieval.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        }
+    ],
+    "generated_at": "2026-03-07 22:07:33",
+    "source": "RAG-Ollama"
+}
