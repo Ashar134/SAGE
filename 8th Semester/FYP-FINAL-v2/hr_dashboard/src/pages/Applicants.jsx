@@ -23,17 +23,17 @@ import {
 } from "lucide-react";
 
 const statusPalette = {
-  Applied: "bg-blue-50 text-blue-700",
-  Shortlisted: "bg-amber-50 text-amber-700",
-  "Interview Scheduled": "bg-indigo-50 text-indigo-700",
-  Rejected: "bg-red-50 text-red-700",
-  Offer: "bg-emerald-50 text-emerald-700",
-  Accepted: "bg-emerald-50 text-emerald-700",
+  applied: "bg-blue-50 text-blue-700",
+  test: "bg-amber-50 text-amber-700",
+  interview: "bg-indigo-50 text-indigo-700",
+  rejected: "bg-red-50 text-red-700",
+  offer: "bg-emerald-50 text-emerald-700",
+  accepted: "bg-emerald-50 text-emerald-700",
   reviewing: "bg-indigo-50 text-indigo-700",
   Reviewing: "bg-indigo-50 text-indigo-700",
 };
 
-const stageOrder = ["reviewing", "Reviewing", "Applied", "Shortlisted", "Interview Scheduled", "Offer", "Rejected", "Accepted"];
+const stageOrder = ["reviewing", "Reviewing", "applied", "test", "interview", "offer", "rejected", "accepted"];
 
 const formatStatus = (status) => {
   if (!status) return "Status";
@@ -78,10 +78,10 @@ export default function Applicants() {
 
   const stats = useMemo(() => {
     const total = applicants.length;
-    const shortlisted = applicants.filter((a) => a.status === "Shortlisted").length;
-    const interview = applicants.filter((a) => a.status === "Interview Scheduled").length;
-    const offers = applicants.filter((a) => a.status === "Offer").length;
-    const rejected = applicants.filter((a) => a.status === "Rejected").length;
+    const shortlisted = applicants.filter((a) => a.status === "test").length;
+    const interview = applicants.filter((a) => a.status === "interview").length;
+    const offers = applicants.filter((a) => a.status === "offer").length;
+    const rejected = applicants.filter((a) => a.status === "rejected").length;
     const avgMatch =
       applicants.length > 0
         ? Math.round(
@@ -202,11 +202,11 @@ export default function Applicants() {
                 className="bg-transparent outline-none"
               >
                 <option value="all">All stages</option>
-                <option value="Applied">Applied</option>
-                <option value="Shortlisted">Assessment</option>
-                <option value="Interview Scheduled">Interview</option>
-                <option value="Offer">Offer</option>
-                <option value="Rejected">Rejected</option>
+                <option value="applied">Applied</option>
+                <option value="test">Assessment</option>
+                <option value="interview">Interview</option>
+                <option value="offer">Offer</option>
+                <option value="rejected">Rejected</option>
               </select>
             </div>
             <button className="hidden sm:inline-flex items-center gap-2 rounded-md bg-indigo-600 text-white px-3 py-2 text-sm font-semibold shadow-sm hover:bg-indigo-500">

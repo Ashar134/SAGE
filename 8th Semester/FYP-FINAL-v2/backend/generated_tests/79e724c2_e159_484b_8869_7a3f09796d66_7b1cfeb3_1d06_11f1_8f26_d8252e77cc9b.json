@@ -1,0 +1,321 @@
+{
+    "candidate_id": "79e724c2-e159-484b-8869-7a3f09796d66",
+    "job_id": "7b1cfeb3-1d06-11f1-8f26-d8252e77cc9b",
+    "job_title": "Software Engineer",
+    "requirements": [
+        "Bachelor’s degree in Computer Science, Software Engineering, or a related technical field",
+        "Strong understanding of programming fundamentals including data structures and algorithms",
+        "Experience with programming languages such as Python, Java, or JavaScript",
+        "Hands-on experience with web frameworks such as Django, Flask, Node.js, or Spring Boot",
+        "Experience designing and implementing RESTful APIs",
+        "Familiarity with relational databases such as MySQL or PostgreSQL",
+        "Experience using Git and version control systems",
+        "Understanding of software development lifecycle and agile development methodologies",
+        "Knowledge of debugging, testing, and performance optimization techniques",
+        "Basic knowledge of cloud platforms such as AWS, Azure, or Google Cloud is considered a plus",
+        "Strong problem-solving and analytical thinking abilities",
+        "Good communication skills and ability to work effectively within a development team"
+    ],
+    "total_questions": 20,
+    "distribution": {
+        "analytical": 3,
+        "english": 3,
+        "job_specific": 14
+    },
+    "questions": [
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "In a sequence of numbers, each term is obtained by adding 3 to the previous term. If the first term is x, what is the value of the fifth term?",
+            "answers": {
+                "A1": "x+12",
+                "A2": "x+11",
+                "A3": "x+9",
+                "A4": "x+18"
+            },
+            "key": "A1",
+            "justification": "Step 1: Start with the first term x. Step 2: Add 3 to get the second term (x+3). Step 3: Add 3 again to get the third term ((x+3)+3 = x+6). Step 4: Repeat this process two more times to get the fourth and fifth terms. The correct sequence is x, x+3, x+6, x+9, x+12. Therefore, the value of the fifth term is x+12.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A bakery sells 480 muffins in a day. If they make a profit of $0.50 per muffin, how much money do they make in total?",
+            "answers": {
+                "A1": "240",
+                "A2": "360",
+                "A3": "480",
+                "A4": "720"
+            },
+            "key": "A2",
+            "justification": "Step 1: Multiply the number of muffins sold (480) by the profit per muffin ($0.50). Step 2: Calculate the total profit. The correct calculation is 480 x $0.50 = $240. Therefore, the bakery makes a total of $240.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "In a game of chess, if White has one more pawn than Black and White is down by two pawns, what is the current score?",
+            "answers": {
+                "A1": "1-2",
+                "A2": "2-0",
+                "A3": "0-1",
+                "A4": "0-0"
+            },
+            "key": "A1",
+            "justification": "Step 1: White has one more pawn than Black, so if the number of pawns is x, then White has x+1 pawns and Black has x pawns. Step 2: Since White is down by two pawns, we can set up an equation: (x+1) - x = 2. However, this equation doesn't make sense because it would imply that the number of pawns is always greater for White than Black. Let's re-examine the problem: If White has one more pawn than Black and is down by two pawns, then it means that White had two more pawns initially than Black did. This can be represented as x+1 = x+2. Solving this equation doesn't make sense either because it would imply a negative number of pawns for Black. However, we know that the score must be less than 0-0 (White is down by two pawns). Therefore, we should rephrase the problem: White had one more pawn initially than Black did and White lost 2 pawns. This can be represented as x+1 = (x-2). Solving this equation: x+1 = x-2 --> 1 = -2 --> This is a contradiction because you cannot have both numbers equal to 1 at the same time. Therefore, we must re-examine our assumptions about the problem. We can start by assuming that White had 3 pawns initially and Black had 2 pawns. If this were true, then after losing 2 pawns, White would have 3-2 = 1 pawn left and Black would have 2-2 = 0 pawns left. Therefore, the current score is 1-0.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "Her __ attitude towards learning was marked by a keen sense of analytical thinking.",
+            "answers": {
+                "A1": "ASTUTE",
+                "A2": "OBSCURE",
+                "A3": "INATTENTIVE",
+                "A4": "DISMAYED"
+            },
+            "key": "A1",
+            "justification": "Synonyms for 'astute' include words like discerning, perceptive, and sharp. The correct answer, ASTUTE, shares these qualities.",
+            "justified_by": "Oxford Dictionary",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "The new policy aims to __ the negative impact of pollution on local ecosystems.",
+            "answers": {
+                "A1": "AMPLIFY",
+                "A2": "MITIGATE",
+                "A3": "EXAGGERATE",
+                "A4": "EMPHATIZE"
+            },
+            "key": "A2",
+            "justification": "The word 'mitigate' means to reduce or lessening the severity of something. The correct answer, MITIGATE, is an antonym of words like AMPLIFY and EXAGGERATE.",
+            "justified_by": "Merriam-Webster Dictionary",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "The teacher's __ tone helped to create a relaxed atmosphere in the classroom.",
+            "answers": {
+                "A1": "CALM",
+                "A2": "HARSH",
+                "A3": "Soporific",
+                "A4": "Tense"
+            },
+            "key": "A1",
+            "justification": "The word 'calm' means peaceful and serene. The correct answer, CALM, is a synonym for the soporific tone mentioned in the reference context.",
+            "justified_by": "Cambridge Dictionary",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Software Engineer",
+            "question": "A software engineer is tasked with designing a new web application. Which of the following best describes the primary function of a RESTful API?",
+            "answers": {
+                "A1": "To establish a real-time connection between clients and servers.",
+                "A2": "To enable data transfer between different systems.",
+                "A3": "To provide a standardized way for clients to request resources from servers.",
+                "A4": "To authenticate users before granting access to the application."
+            },
+            "key": "A3",
+            "justification": "RESTful APIs are designed around resource-based architecture, where clients interact with servers to retrieve, update, or delete resources. This approach provides a standardized way for clients to request resources from servers.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Software Engineer",
+            "question": "Which of the following data structures is particularly useful for implementing hash-based maps?",
+            "answers": {
+                "A1": "Stack",
+                "A2": "Queue",
+                "A3": "Tree Set",
+                "A4": "Hash Table"
+            },
+            "key": "A4",
+            "justification": "Hash tables are optimized for fast lookups, insertions, and deletions. They store key-value pairs in an array and use a hash function to map keys to indices.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Software Engineer",
+            "question": "A software engineer is tasked with optimizing the performance of a database query. Which of the following optimization techniques is most effective?",
+            "answers": {
+                "A1": "Indexing",
+                "A2": "Caching",
+                "A3": "Connection Pooling",
+                "A4": "Regular Maintenance"
+            },
+            "key": "A1",
+            "justification": "Indexing can significantly improve query performance by reducing the number of disk I/O operations. A well-designed index can minimize the amount of data that needs to be scanned.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Software Engineer",
+            "question": "A software engineer is tasked with designing a new system for managing user authentication. Which of the following security protocols would provide the most secure authentication mechanism?",
+            "answers": {
+                "A1": "CSMA/CA",
+                "A2": "SPNEGO",
+                "A3": "SHA-256 Hashing",
+                "A4": "SSL/TLS Encryption"
+            },
+            "key": "A4",
+            "justification": "SSL/TLS encryption provides end-to-end security for data transmission between clients and servers. It uses symmetric-key cryptography to ensure confidentiality, integrity, and authenticity of user credentials.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Software Engineer",
+            "question": "A software engineer is tasked with implementing a machine learning model using Python. Which of the following activation functions would be most suitable for this task?",
+            "answers": {
+                "A1": "ReLU",
+                "A2": "Sigmoid",
+                "A3": "Tanh",
+                "A4": "Softmax"
+            },
+            "key": "A2",
+            "justification": "The sigmoid function is commonly used in binary classification problems, where it maps the input to a value between 0 and 1. This activation function provides a smooth, S-shaped curve that allows for non-linear transformations.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Software Engineer",
+            "question": "A software engineer is tasked with designing a new system for managing large-scale data. Which of the following databases would be most suitable for this task?",
+            "answers": {
+                "A1": "MySQL",
+                "A2": "PostgreSQL",
+                "A3": "MongoDB",
+                "A4": "Oracle"
+            },
+            "key": "A3",
+            "justification": "MongoDB is designed for large-scale, distributed data storage. It uses a document-oriented database model that allows for flexible schema design and efficient data retrieval.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Software Engineer",
+            "question": "A software engineer is tasked with implementing version control for a team. Which of the following version control systems would be most suitable for this task?",
+            "answers": {
+                "A1": "Git",
+                "A2": "SVN",
+                "A3": "Mercurial",
+                "A4": "Perforce"
+            },
+            "key": "A1",
+            "justification": "Git is a widely-used, distributed version control system that provides robust branching and merging mechanisms. It also offers efficient conflict resolution and scalable scalability.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Software Engineer",
+            "question": "A software engineer is tasked with designing a new system for managing Agile development methodologies. Which of the following principles would be most relevant to this task?",
+            "answers": {
+                "A1": "Single Responsibility Principle",
+                "A2": "Open-Closed Principle",
+                "A3": "Don't Repeat Yourself Principle",
+                "A4": "Separation of Concerns Principle"
+            },
+            "key": "A3",
+            "justification": "The Don't Repeat Yourself principle emphasizes the importance of avoiding duplicated code and reducing technical debt. It encourages developers to extract reusable components and libraries.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Software Engineer",
+            "question": "What is the primary purpose of the RESTful API design pattern?",
+            "answers": {
+                "A1": "To improve database performance",
+                "A2": "To increase server security",
+                "A3": "To provide a scalable and maintainable interface for web services",
+                "A4": "To reduce development time"
+            },
+            "key": "A3",
+            "justification": "The primary purpose of the RESTful API design pattern is to provide a scalable and maintainable interface for web services. It does this by using HTTP methods (GET, POST, PUT, DELETE) to interact with resources on the server.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Software Engineer",
+            "question": "Which data structure is suitable for implementing a hash table?",
+            "answers": {
+                "A1": "Binary Search Tree",
+                "A2": "Queue",
+                "A3": "Stack",
+                "A4": "Hash Table"
+            },
+            "key": "A4",
+            "justification": "A hash table is a data structure that maps keys to values using a hash function. It is suitable for implementing a hash table because it allows for fast lookup, insertion, and deletion of elements.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Software Engineer",
+            "question": "What is the main advantage of using Git in software development?",
+            "answers": {
+                "A1": "It provides a centralized version control system",
+                "A2": "It allows for fast collaboration among team members",
+                "A3": "It enables version tracking and rollbacks",
+                "A4": "It improves code readability"
+            },
+            "key": "A3",
+            "justification": "The main advantage of using Git is that it enables version tracking and rollbacks. This means that developers can easily track changes made to the codebase and revert to previous versions if needed.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Software Engineer",
+            "question": "Which cloud platform is known for its serverless computing capabilities?",
+            "answers": {
+                "A1": "AWS",
+                "A2": "Azure",
+                "A3": "Google Cloud",
+                "A4": "IBM Cloud"
+            },
+            "key": "A3",
+            "justification": "Google Cloud is known for its serverless computing capabilities, which allow developers to write code without worrying about the underlying infrastructure.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Software Engineer",
+            "question": "What is the purpose of a constructor in object-oriented programming?",
+            "answers": {
+                "A1": "To define a class's attributes",
+                "A2": "To initialize objects with default values",
+                "A3": "To implement inheritance",
+                "A4": "To create a new instance of an object"
+            },
+            "key": "A2",
+            "justification": "The purpose of a constructor is to initialize objects with default values. It is called when an object is created and is used to set the initial state of the object.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Software Engineer",
+            "question": "Which algorithm is used for sorting an array in ascending order?",
+            "answers": {
+                "A1": "Bubble Sort",
+                "A2": "Selection Sort",
+                "A3": "Insertion Sort",
+                "A4": "Merge Sort"
+            },
+            "key": "A4",
+            "justification": "The Merge Sort algorithm is used for sorting an array in ascending order. It works by dividing the array into smaller subarrays, sorting each subarray recursively, and then merging the sorted subarrays back together.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        }
+    ],
+    "generated_at": "2026-03-11 05:10:17",
+    "source": "RAG-Ollama"
+}

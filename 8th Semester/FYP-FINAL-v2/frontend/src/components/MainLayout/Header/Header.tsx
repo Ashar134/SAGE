@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useAuth } from '../../../contexts/AuthContext';
 import './HeaderStyle.css';
-import profileAvatar from '../../../assets/profile-org.png';
+import './HeaderStyle.css';
 
 function Header() {
     const { user, logout, isAuthenticated } = useAuth();
@@ -102,24 +102,38 @@ function Header() {
 
                             <div className="profile-dropdown" ref={dropdownRef}>
                                 <div
-                                    className="profile-avatar"
+                                    className="profile-avatar-container"
                                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                                 >
-                                    <img src={profileAvatar} alt="Profile" />
+                                    {user?.avatar_url ? (
+                                        <img src={user.avatar_url} alt="Profile" className="profile-img" />
+                                    ) : (
+                                        <div className="avatar-initials">
+                                            {user ? `${user.first_name?.[0] || ''}${user.last_name?.[0] || ''}` || user.email[0].toUpperCase() : 'U'}
+                                        </div>
+                                    )}
                                 </div>
 
                                 {isDropdownOpen && (
                                     <div className="dropdown-menu">
                                         <div className="dropdown-header">
-                                            <div className="dropdown-avatar">
-                                                <img src={profileAvatar} alt="Profile" />
+                                            <div className="dropdown-avatar-container">
+                                                {user?.avatar_url ? (
+                                                    <img src={user.avatar_url} alt="Profile" className="dropdown-profile-img" />
+                                                ) : (
+                                                    <div className="avatar-initials large">
+                                                        {user ? `${user.first_name?.[0] || ''}${user.last_name?.[0] || ''}` || user.email[0].toUpperCase() : 'U'}
+                                                    </div>
+                                                )}
                                             </div>
                                             <div className="dropdown-info">
                                                 <p className="dropdown-name">
-                                                    {user ? `${user.first_name} ${user.last_name}` : 'Ashar Naveed'}
+                                                    {user ? 
+                                                        (user.first_name || user.last_name ? `${user.first_name || ''} ${user.last_name || ''}`.trim() : 'User') 
+                                                        : 'Guest User'}
                                                 </p>
                                                 <p className="dropdown-email">
-                                                    {user ? user.email : 'asharnaveed2002@gmail.com'}
+                                                    {user ? user.email : 'Log in to access profile'}
                                                 </p>
                                             </div>
                                         </div>

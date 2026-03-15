@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import { Input } from "../components/ui/input";
 import { Badge } from "../components/ui/badge";
@@ -36,6 +37,7 @@ export default function JobPostings() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [applicantsByJob, setApplicantsByJob] = useState({});
+  const [searchParams] = useSearchParams();
 
   const isValid = useMemo(() => {
     return (
@@ -52,6 +54,12 @@ export default function JobPostings() {
   };
 
   useEffect(() => {
+    // Prefill department from query param
+    const dept = searchParams.get("department");
+    if (dept) {
+      setForm((prev) => ({ ...prev, department: dept }));
+    }
+
     fetchJobs()
       .then((rows) => {
         setJobs(rows);

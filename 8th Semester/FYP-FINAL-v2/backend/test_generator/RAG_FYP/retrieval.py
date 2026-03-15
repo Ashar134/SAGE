@@ -1,19 +1,3 @@
-"""
-On-Demand RAG Test Generation using Ollama (llama3.2).
-
-Flow:
-  1. Candidate clicks "Take Test"
-  2. Backend looks up Job model → gets title, requirements, question count
-  3. RAG generates unique questions in 3 separate calls:
-     - 15% Analytical
-     - 15% English
-     - 70% Job-specific (based on title + requirements)
-  4. Saves to generated_tests/{candidate_id}_{job_id}.json
-  5. API returns questions to frontend
-
-Falls back to direct JSON question bank if Ollama fails.
-"""
-
 import json
 import logging
 import math
@@ -27,12 +11,10 @@ from langchain_core.messages import HumanMessage, SystemMessage
 
 logger = logging.getLogger(__name__)
 
-# ── Paths ──────────────────────────────────────────────────────────
 _BASE_DIR = Path(__file__).resolve().parent.parent.parent  # backend/
 _GENERATED_DIR = _BASE_DIR / "generated_tests"
 _GENERATED_DIR.mkdir(exist_ok=True)
 
-# ── JSON Question Bank (fallback) ──────────────────────────────────
 _CATEGORY_FILES = {
     "analytical": [
         "Sage_Questions/Analytical/analytical_variant_questions_100plus.json",
@@ -161,7 +143,7 @@ def _parse_llm_json(raw: str) -> list | None:
         try:
             parsed = json.loads(truncated)
             if isinstance(parsed, list):
-                print(f"🔧 Recovered {len(parsed)} questions from truncated JSON")
+                print(f" Recovered {len(parsed)} questions from truncated JSON")
                 return _clean_parsed(parsed)
         except json.JSONDecodeError:
             pass
@@ -224,7 +206,7 @@ Return ONLY the JSON array.""")
             start = time.time()
             response = llm.invoke([sys_prompt, user_prompt])
             elapsed = time.time() - start
-            print(f"    ⏱️ {category} (Chunk {i+1}/{len(chunks)} for {chunk_size} qs): Ollama responded in {elapsed:.1f}s")
+            print(f"    {category} (Chunk {i+1}/{len(chunks)} for {chunk_size} qs): Ollama responded in {elapsed:.1f}s")
 
             parsed = _parse_llm_json(response.content)
             if parsed:
@@ -262,7 +244,7 @@ def generate_and_save_test(
     n_job_specific = total_questions - n_analytical - n_english
 
     requirements_text = ", ".join(requirements) if requirements else job_title
-    print(f"🤖 Generating {total_questions} questions for '{job_title}' "
+    print(f" Generating {total_questions} questions for '{job_title}' "
           f"(analytical={n_analytical}, english={n_english}, job-specific={n_job_specific})")
     print(f"   Requirements: {requirements_text}")
 
@@ -271,7 +253,7 @@ def generate_and_save_test(
     try:
         llm = ChatOllama(
             model="llama3.2",
-            temperature=0.7, # Reverted to 0.7 as requested
+            temperature=0.7, 
             base_url="http://localhost:11434",
         )
     except Exception as e:
@@ -319,7 +301,7 @@ def generate_and_save_test(
         all_questions.extend(_fallback_questions("english", deficit))
 
     # ── Section 3: Job-Specific ────────────────────────────────
-    print(f"  📝 Section 3: {n_job_specific} {job_title} questions")
+    print(f"   Section 3: {n_job_specific} {job_title} questions")
     # Get context from all CS categories
     job_context_lines = []
     for cat in _CATEGORY_FILES:

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../components/ui/table";
 import { Badge } from "../components/ui/badge";
@@ -14,6 +15,7 @@ export default function Departments() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [selectedDept, setSelectedDept] = useState("all");
+  const navigate = useNavigate();
 
   useEffect(() => {
     setLoading(true);
@@ -47,6 +49,7 @@ export default function Departments() {
 
   const currentDept = selectedDept === "all" ? null : selectedDept;
   const currentStats = currentDept ? deptStats[currentDept] : null;
+  const deptListFiltered = currentDept ? [currentDept] : departmentList;
 
   const stageCounts = useMemo(() => {
     const counts = { Applied: 0, Shortlisted: 0, "Interview Scheduled": 0, Offer: 0, Accepted: 0, Rejected: 0 };
@@ -156,7 +159,7 @@ export default function Departments() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {departmentList.map((dept) => {
+              {deptListFiltered.map((dept) => {
                 const stats = deptStats[dept] || { jobs: [], applicants: [] };
                 const shortlist = stats.applicants.filter((a) => a.status === "Shortlisted").length;
                 const interviews = stats.applicants.filter((a) => a.status === "Interview Scheduled").length;
@@ -225,18 +228,14 @@ export default function Departments() {
                     <Button
                       variant="outline"
                       size="sm"
-                      onClick={() => {
-                        window.location.href = `/applicants?q=${encodeURIComponent(job.title)}`;
-                      }}
+                      onClick={() => navigate(`/applicants?q=${encodeURIComponent(job.title)}`)}
                     >
                       View applicants
                     </Button>
                     <Button
                       variant="ghost"
                       size="sm"
-                      onClick={() => {
-                        window.location.href = `/jobs`;
-                      }}
+                      onClick={() => navigate(`/jobs?department=${encodeURIComponent(job.department || currentDept || "")}`)}
                     >
                       Open job post
                     </Button>
@@ -269,9 +268,7 @@ export default function Departments() {
               <div className="pt-2">
                 <Button
                   className="w-full"
-                  onClick={() => {
-                    window.location.href = `/applicants?q=${encodeURIComponent(currentDept)}`;
-                  }}
+                  onClick={() => navigate(`/applicants?q=${encodeURIComponent(currentDept)}`)}
                 >
                   View applicants for {currentDept}
                 </Button>
@@ -279,6 +276,63 @@ export default function Departments() {
             </CardContent>
           </Card>
         </div>
+      )}
+
+      {currentDept && (
+        <Card className="shadow-sm border-gray-200">
+          <CardHeader className="flex flex-row items-center justify-between">
+            <div>
+              <CardTitle className="text-base font-semibold text-gray-900">Applicants in {currentDept}</CardTitle>
+              <p className="text-sm text-gray-500">Filtered list for the selected department.</p>
+            </div>
+            <Badge className="bg-white text-gray-700 border">{(currentStats?.applicants || []).length}</Badge>
+          </CardHeader>
+          <CardContent>
+            <Table>
+              <TableHeader>
+                <TableRow className="bg-gray-50/60">
+                  <TableHead>Name</TableHead>
+                  <TableHead>Role</TableHead>
+                  <TableHead>Status</TableHead>
+                  <TableHead>Applied</TableHead>
+                  <TableHead className="text-right">Resume</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {(currentStats?.applicants || []).map((a) => (
+                  <TableRow key={a.id}>
+                    <TableCell className="font-medium text-gray-900">{a.name}</TableCell>
+                    <TableCell className="text-gray-700">{a.role}</TableCell>
+                    <TableCell>
+                      <Badge className="text-[10px] px-2 py-1 bg-gray-100 text-gray-700">
+                        {a.status}
+                      </Badge>
+                    </TableCell>
+                    <TableCell className="text-gray-700">
+                      {a.appliedDate ? new Date(a.appliedDate).toLocaleDateString() : "—"}
+                    </TableCell>
+                    <TableCell className="text-right">
+                      {a.resumeUrl ? (
+                        <a href={a.resumeUrl} target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline text-sm">
+                          View
+                        </a>
+                      ) : (
+                        <span className="text-xs text-gray-400">No CV</span>
+                      )}
+                    </TableCell>
+                  </TableRow>
+                ))}
+                {!(currentStats?.applicants || []).length && (
+                  <TableRow>
+                    <TableCell colSpan={5} className="text-center text-sm text-gray-500 py-6">
+                      No applicants for this department.
+                    </TableCell>
+                  </TableRow>
+                )}
+              </TableBody>
+            </Table>
+          </CardContent>
+        </Card>
       )}
     </div>
   );

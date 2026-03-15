@@ -6,35 +6,32 @@ import { Filter, ArrowRight, ArrowLeft, X, Check } from "lucide-react";
 import { fetchApplicants, updateApplicantStatus } from "../lib/apiClient";
 
 const columns = [
-  { id: "Applied", title: "Applied" },
-  { id: "Shortlisted", title: "Assessment" },
-  { id: "Interview Scheduled", title: "Interview" },
-  { id: "Offer", title: "Offer" },
-  { id: "Accepted", title: "Accepted" },
-  { id: "Rejected", title: "Rejected" },
+  { id: "applied", title: "Applied" },
+  { id: "test", title: "Assessment" },
+  { id: "interview", title: "Interview" },
+  { id: "offer", title: "Offer" },
+  { id: "rejected", title: "Rejected" },
 ];
 
 const nextStatus = {
-  Applied: "Shortlisted",
-  Shortlisted: "Interview Scheduled",
-  "Interview Scheduled": "Offer",
-  Offer: "Accepted",
+  applied: "test",
+  test: "interview",
+  interview: "offer",
 };
 
 const prevStatus = {
-  Shortlisted: "Applied",
-  "Interview Scheduled": "Shortlisted",
-  Offer: "Interview Scheduled",
-  Accepted: "Offer",
-  Rejected: "Interview Scheduled",
+  test: "applied",
+  interview: "test",
+  offer: "interview",
+  rejected: "interview",
 };
 const statusChip = {
-  Applied: "bg-blue-50 text-blue-700 border-blue-100",
-  Shortlisted: "bg-amber-50 text-amber-700 border-amber-100",
-  "Interview Scheduled": "bg-indigo-50 text-indigo-700 border-indigo-100",
-  Offer: "bg-emerald-50 text-emerald-700 border-emerald-100",
-  Accepted: "bg-emerald-100 text-emerald-800 border-emerald-200",
-  Rejected: "bg-red-50 text-red-700 border-red-100",
+  applied: "bg-blue-50 text-blue-700 border-blue-100",
+  test: "bg-amber-50 text-amber-700 border-amber-100",
+  interview: "bg-indigo-50 text-indigo-700 border-indigo-100",
+  offer: "bg-emerald-50 text-emerald-700 border-emerald-100",
+  accepted: "bg-emerald-100 text-emerald-800 border-emerald-200",
+  rejected: "bg-red-50 text-red-700 border-red-100",
 };
 
 export default function Kanban() {
@@ -58,7 +55,9 @@ export default function Kanban() {
     const base = columns.reduce((acc, c) => ({ ...acc, [c.id]: [] }), {});
     applicants.forEach((a) => {
       if (roleFilter !== "all" && (a.role || "") !== roleFilter) return;
-      const key = columns.find((c) => c.id === a.status)?.id || "Applied";
+      let statusKey = a.status;
+      if (statusKey === "accepted") statusKey = "offer";
+      const key = columns.find((c) => c.id === statusKey)?.id || "applied";
       base[key].push(a);
     });
     return base;
@@ -91,7 +90,7 @@ export default function Kanban() {
   };
 
   const handleReject = async (id) => {
-    moveTo(id, "Rejected");
+    moveTo(id, "rejected");
   };
 
   return (
@@ -151,6 +150,11 @@ export default function Kanban() {
                         <div className="text-sm font-semibold text-gray-900">{item.name}</div>
                         <div className="text-xs text-gray-500">{item.role}</div>
                         <div className="mt-1 text-xs text-gray-400">{item.department}</div>
+                        {item.testScore !== null && item.testScore !== undefined && (
+                          <div className="mt-1.5 inline-flex items-center gap-1 rounded-full bg-blue-50 px-2 py-0.5 text-[10px] font-medium text-blue-700 border border-blue-100">
+                            Score: {Math.round(item.testScore)}%
+                          </div>
+                        )}
                       </div>
                       <Badge className={`text-[10px] px-2 py-1 border ${statusChip[col.id] || "bg-gray-100 text-gray-700"}`}>
                         {col.id}
@@ -179,7 +183,7 @@ export default function Kanban() {
                           <ArrowRight size={16} />
                         </Button>
                       )}
-                      {col.id !== "Rejected" && col.id !== "Accepted" && (
+                      {col.id !== "rejected" && col.id !== "accepted" && (
                         <Button
                           variant="ghost"
                           size="icon"
@@ -190,12 +194,12 @@ export default function Kanban() {
                           <X size={16} />
                         </Button>
                       )}
-                      {col.id === "Offer" && (
+                      {col.id === "offer" && item.status !== "accepted" && (
                         <Button
                           variant="outline"
                           size="icon"
                           className="h-8 w-8 text-emerald-700 border-emerald-200"
-                          onClick={() => handleAdvance(item.id, col.id)}
+                          onClick={() => moveTo(item.id, "accepted")}
                           title="Mark Accepted"
                         >
                           <Check size={16} />

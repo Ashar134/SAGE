@@ -18,7 +18,7 @@ interface Application {
   appliedDate: string;
   salary: string;
   location: string;
-  status: 'applied' | 'reviewing' | 'interview' | 'offer' | 'rejected';
+  status: 'applied' | 'reviewing' | 'interview' | 'offer' | 'rejected' | 'test' | 'accepted' | 'withdrawn';
   interviewType?: 'interview' | 'test'; // Optional field for interview stage
   interviewDate?: string; // ISO string from database
   offerDeadline?: string; // ISO string from database
@@ -37,7 +37,7 @@ type StatusColumn = {
 
 const STATUS_COLUMNS: StatusColumn[] = [
   { id: 'applied', title: 'Applied', color: '#6366f1' },
-  { id: 'reviewing', title: 'Assessments', color: '#f59e0b' },
+  { id: 'test', title: 'Assessments', color: '#f59e0b' },
   { id: 'interview', title: 'Interview', color: '#8b5cf6' },
   { id: 'offer', title: 'Offer', color: '#10b981' },
   { id: 'rejected', title: 'Rejected', color: '#ef4444' }
@@ -172,12 +172,12 @@ function ApplicationPage() {
             appliedDate: getRelativeTime(app.applied_at),
             salary: app.salary_range || 'Not specified',
             location: app.location || 'Remote',
-            status: app.status as 'applied' | 'reviewing' | 'interview' | 'offer' | 'rejected',
-            interviewType: app.interview_type && isTestInterview(app.interview_type) ? 'test' :
+            status: app.status as Application['status'],
+            interviewType: (app.interview_type && isTestInterview(app.interview_type)) || app.status === 'test' ? 'test' :
               app.status === 'interview' ? 'interview' : undefined,
             interviewDate: app.interview_date,
             offerDeadline: app.offer_deadline,
-            testDeadline: app.test_deadline
+            testDeadline: app.test_deadline || app.test_completed_at
           }));
 
           setApplications(transformedApps);
@@ -200,6 +200,9 @@ function ApplicationPage() {
     if (status === 'applied') {
       return applications;
     }
+    if (status === 'offer') {
+      return applications.filter(app => app.status === 'offer' || app.status === 'accepted');
+    }
     return applications.filter(app => app.status === status);
   };
 
@@ -209,22 +212,44 @@ function ApplicationPage() {
   // Get upcoming interviews and assessments
   const getUpcomingApplications = () => {
     return applications.filter(app =>
-      app.status === 'interview' || app.status === 'reviewing'
+      app.status === 'interview' || app.status === 'test' || app.status === 'reviewing'
     );
   };
 
   // Get timeline events (interviews, tests, offers with deadlines)
   const getTimelineEvents = () => {
     return applications.filter(app =>
-      app.status === 'interview' || app.status === 'offer'
-    ).map(app => ({
-      ...app,
-      eventType: app.status === 'interview'
-        ? (app.interviewType === 'test' ? 'test' : 'interview')
-        : 'offer',
-      date: app.status === 'interview' ? 'Tomorrow, 2:00 PM' : 'Respond by: Jan 20',
-      daysLeft: app.status === 'interview' ? '1 day' : '5 days'
-    }));
+      app.status === 'interview' || app.status === 'offer' || (app.status === 'test' && app.testDeadline) || (app.status === 'reviewing' && app.testDeadline)
+    ).map(app => {
+      let dateStr = 'Date TBD';
+      let daysLeft = '';
+
+      if (app.status === 'interview' && app.interviewDate) {
+        const date = new Date(app.interviewDate);
+        dateStr = date.toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+        const diff = date.getTime() - new Date().getTime();
+        daysLeft = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24))) + ' days';
+      } else if ((app.status === 'test' || app.status === 'reviewing') && app.testDeadline) {
+        const date = new Date(app.testDeadline);
+        dateStr = 'Deadline: ' + date.toLocaleDateString([], { month: 'short', day: 'numeric' });
+        const diff = date.getTime() - new Date().getTime();
+        daysLeft = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24))) + ' days';
+      } else if (app.status === 'offer' && app.offerDeadline) {
+        const date = new Date(app.offerDeadline);
+        dateStr = 'Respond by: ' + date.toLocaleDateString([], { month: 'short', day: 'numeric' });
+        const diff = date.getTime() - new Date().getTime();
+        daysLeft = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24))) + ' days';
+      }
+
+      return {
+        ...app,
+        eventType: app.status === 'interview'
+          ? (app.interviewType === 'test' ? 'test' : 'interview')
+          : (app.status === 'test' || app.status === 'reviewing' ? 'test' : 'offer'),
+        date: dateStr,
+        daysLeft: daysLeft
+      };
+    });
   };
 
   // Show loading state or unauthenticated state with skeleton
@@ -369,7 +394,7 @@ function ApplicationPage() {
           </div>
           <div className="upcoming-grid">
             {getUpcomingApplications().length > 0 ? (
-              getUpcomingApplications().map((app) => (
+              getUpcomingApplications().map((app: Application) => (
                 <motion.div
                   key={app.id}
                   className="upcoming-card"
@@ -409,7 +434,7 @@ function ApplicationPage() {
                         <line x1="3" y1="10" x2="21" y2="10"></line>
                       </svg>
                       <span>
-                        {app.status === 'reviewing'
+                        {(app.status === 'reviewing' || app.status === 'test')
                           ? (app.testDeadline ? `Deadline: ${new Date(app.testDeadline).toLocaleDateString()}` : 'Date TBD')
                           : (app.interviewDate
                             ? new Date(app.interviewDate).toLocaleString([], {
@@ -423,7 +448,7 @@ function ApplicationPage() {
                     </div>
                   </div>
                   <div className="upcoming-actions">
-                    {app.status === 'reviewing' ? (
+                    {app.status === 'reviewing' || app.status === 'test' ? (
                       <button
                         className="action-btn primary w-full flex items-center justify-center gap-2"
                         onClick={(e) => {
@@ -558,8 +583,8 @@ function ApplicationPage() {
                   }
                 }
 
-                // For tests: use test deadline when in reviewing status
-                if (app.status === 'reviewing' && app.testDeadline) {
+                // For tests: use test deadline when in reviewing or test status
+                if ((app.status === 'reviewing' || app.status === 'test') && app.testDeadline) {
                   let eventDate = new Date(app.testDeadline);
 
                   if (eventDate.getDate() === day &&

@@ -1,0 +1,792 @@
+{
+    "candidate_id": "4c28b6fd-3e0e-4efa-a743-53c5facd168e",
+    "job_id": "73edea20-2f48-420c-a507-f81f7340b54d",
+    "job_title": "Machine Learning Engineer",
+    "requirements": [
+        "BS/MS in Computer Science, AI, or related field",
+        "2+ years experience in machine learning development",
+        "Proficiency in Python and ML libraries (scikit-learn, TensorFlow, PyTorch)",
+        "Experience with data preprocessing and feature engineering",
+        "Knowledge of SQL and NoSQL databases",
+        "Understanding of model deployment and REST API integration",
+        "Strong analytical and problem-solving skills"
+    ],
+    "total_questions": 51,
+    "distribution": {
+        "analytical": 15,
+        "english": 15,
+        "job_specific": 70
+    },
+    "questions": [
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "Which number appears next in the pattern? 21, 23, 26, 30, ?",
+            "answers": {
+                "A1": "32",
+                "A2": "33",
+                "A3": "35",
+                "A4": "37"
+            },
+            "key": "35",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 29
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "What is the value of x in the expression: $64 - 12 times 2 + 6 div 3 = x",
+            "answers": {
+                "A1": "50",
+                "A2": "42",
+                "A3": "48",
+                "A4": "63"
+            },
+            "key": "42",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 27
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "What letter comes next in the sequence: A D H K O ?",
+            "answers": {
+                "A1": "Q",
+                "A2": "R",
+                "A3": "S",
+                "A4": "T"
+            },
+            "key": "R",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 28
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "What letter will come after J in the sequence: A, C, F, J, ?",
+            "answers": {
+                "A1": "G",
+                "A2": "N",
+                "A3": "O",
+                "A4": "Y"
+            },
+            "key": "O",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 28
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A car travels at a speed of 40 mph over a certain distance and then returns over the same distance at a speed of 60 mph. What is the average speed for the total journey?",
+            "answers": {
+                "A1": "46 mph",
+                "A2": "48 mph",
+                "A3": "50 mph",
+                "A4": "52 mph"
+            },
+            "key": "48 mph",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 27
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "Which two numbers come next in the sequence: 38, 24, 62, 12, 74, ?",
+            "answers": {
+                "A1": "28, 102",
+                "A2": "30, 100",
+                "A3": "26, 106",
+                "A4": "32, 108"
+            },
+            "key": "28, 102",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 20
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "What number should replace the question mark in this sequence: 1, 3, 4, 7, 11, 18, 29, ?",
+            "answers": {
+                "A1": "48",
+                "A2": "46",
+                "A3": "47",
+                "A4": "45"
+            },
+            "key": "47",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 36
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "What number should replace the question mark below:  7 & 10 & 9 & 6 , 5 & 1 & 3 & 7 , 2 & 3 & 2 & 1 , 4 & 12 & 8 & ?",
+            "answers": {
+                "A1": "0",
+                "A2": "2",
+                "A3": "1",
+                "A4": "4"
+            },
+            "key": "0",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 22
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "Which number appears next in the pattern? 13, 17, 19, 23, ?",
+            "answers": {
+                "A1": "25",
+                "A2": "27",
+                "A3": "29",
+                "A4": "33"
+            },
+            "key": "29",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 36
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "In this sequence, identify what should appear at the end: 100, 97.25, 91.75, 83.5, ?",
+            "answers": {
+                "A1": "71.5",
+                "A2": "72.5",
+                "A3": "74.5",
+                "A4": "73.0"
+            },
+            "key": "72.5",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 30
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "0.33 / 0.1 = ?",
+            "answers": {
+                "A1": "0.033",
+                "A2": "3.31",
+                "A3": "3.3",
+                "A4": "33"
+            },
+            "key": "3.3",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 22
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A week contains the days: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. If three days ago was the day before Friday what day will be after tomorrow?",
+            "answers": {
+                "A1": "Sunday",
+                "A2": "Thursday",
+                "A3": "Wednesday",
+                "A4": "Tuesday"
+            },
+            "key": "Tuesday",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 29
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "I met four of my old school friends today whose names have linked patterns. In the morning I first saw PATRICIA and later bumped into RICHIE. Then in the afternoon I saw CHRISTABEL. Who did I encounter in the evening? ",
+            "answers": {
+                "A1": "Stella",
+                "A2": "Thelma",
+                "A3": "Sally",
+                "A4": "Thora"
+            },
+            "key": "Stella",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 39
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "On taking delivery of a consignment of eggs the market stall owner was furious to find that several were cracked. In fact, on counting them up in order to assess the damage he found that 72 were cracked, which was 12 per cent of the total consignment. How many eggs in total were in the consignment?",
+            "answers": {
+                "A1": "600",
+                "A2": "620",
+                "A3": "580",
+                "A4": "400"
+            },
+            "key": "600",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 31
+        },
+        {
+            "type": "hard",
+            "category": "analytical",
+            "question": "In 13 years time the combined ages of my three brothers will be 94. What will it be in nine years time?",
+            "answers": {
+                "A1": "91",
+                "A2": "72",
+                "A3": "82",
+                "A4": "Not sufficient information to answer."
+            },
+            "key": "82",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 27
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "SURGEON : SCALPEL",
+            "answers": {
+                "A1": "Teacher : Desk",
+                "A2": "Carpenter : Hammer",
+                "A3": "Chef : Plate",
+                "A4": "Driver : Road",
+                "A5": "Painter : Canvas"
+            },
+            "key": "Carpenter : Hammer",
+            "justification": "Professional and their primary tool",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Choose similar meaning to NONCHALANT:",
+            "answers": {
+                "A1": "Concerned",
+                "A2": "Casual",
+                "A3": "Worried",
+                "A4": "Anxious"
+            },
+            "key": "Casual",
+            "justification": "Nonchalant means unconcerned",
+            "justified_by": "JSON-Fallback",
+            "frequency": 11
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "Correct: 'She said she ___ the report by evening.'",
+            "answers": {
+                "A1": "finishes",
+                "A2": "would finish",
+                "A3": "will finish",
+                "A4": "is finishing"
+            },
+            "key": "would finish",
+            "justification": "Reported speech backshift",
+            "justified_by": "JSON-Fallback",
+            "frequency": 8
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "Correct: 'By the end of the year, I ___ my degree.'",
+            "answers": {
+                "A1": "complete",
+                "A2": "will complete",
+                "A3": "will have completed",
+                "A4": "am completing"
+            },
+            "key": "will have completed",
+            "justification": "Future perfect",
+            "justified_by": "JSON-Fallback",
+            "frequency": 8
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "PRUDENCE : CAUTION",
+            "answers": {
+                "A1": "Recklessness : Care",
+                "A2": "Wisdom : Reflection",
+                "A3": "Folly : Judgment",
+                "A4": "Haste : Speed",
+                "A5": "Bravery : Fear"
+            },
+            "key": "Wisdom : Reflection",
+            "justification": "Quality showing thoughtful behavior",
+            "justified_by": "JSON-Fallback",
+            "frequency": 9
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "Correct: 'It's the first time I ___ such view.'",
+            "answers": {
+                "A1": "saw",
+                "A2": "have seen",
+                "A3": "had seen",
+                "A4": "see"
+            },
+            "key": "have seen",
+            "justification": "Present perfect with first time",
+            "justified_by": "JSON-Fallback",
+            "frequency": 9
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Choose similar meaning to PLACATE:",
+            "answers": {
+                "A1": "Anger",
+                "A2": "Appease",
+                "A3": "Provoke",
+                "A4": "Annoy"
+            },
+            "key": "Appease",
+            "justification": "Placate means to calm down",
+            "justified_by": "JSON-Fallback",
+            "frequency": 12
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Opposite of TRANQUIL:",
+            "answers": {
+                "A1": "Peaceful",
+                "A2": "Turbulent",
+                "A3": "Calm",
+                "A4": "Serene"
+            },
+            "key": "Turbulent",
+            "justification": "Opposite of calm and peaceful",
+            "justified_by": "JSON-Fallback",
+            "frequency": 6
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "The philosophy professor's lectures were renowned for their ___ wit and penetrating observations.",
+            "answers": {
+                "A1": "dull",
+                "A2": "trenchant",
+                "A3": "bland",
+                "A4": "insipid"
+            },
+            "key": "trenchant",
+            "justification": "Sharp wit is trenchant",
+            "justified_by": "JSON-Fallback",
+            "frequency": 13
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "The Olympic athlete's ___ training regimen prepared him for international competition.",
+            "answers": {
+                "A1": "lax",
+                "A2": "rigorous",
+                "A3": "casual",
+                "A4": "relaxed"
+            },
+            "key": "rigorous",
+            "justification": "Olympic training is rigorous",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Choose similar meaning to UNTENABLE:",
+            "answers": {
+                "A1": "Indefensible",
+                "A2": "Unpleasant",
+                "A3": "Unexpected",
+                "A4": "Unnecessary"
+            },
+            "key": "Indefensible",
+            "justification": "Untenable means impossible to defend",
+            "justified_by": "JSON-Fallback",
+            "frequency": 9
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "PEDANTIC : KNOWLEDGE",
+            "answers": {
+                "A1": "Expert : Authority",
+                "A2": "Novice : Experience",
+                "A3": "Scholar : Wisdom",
+                "A4": "Pedant : Understanding",
+                "A5": "Sage : Insight"
+            },
+            "key": "Pedant : Understanding",
+            "justification": "Pedantic obsesses over knowledge details",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "Correct: 'The scientists ___ on this since 2015.'",
+            "answers": {
+                "A1": "worked",
+                "A2": "have been working",
+                "A3": "had worked",
+                "A4": "are working"
+            },
+            "key": "have been working",
+            "justification": "Present perfect continuous",
+            "justified_by": "JSON-Fallback",
+            "frequency": 11
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Opposite of ALLEVIATE:",
+            "answers": {
+                "A1": "Relieve",
+                "A2": "Ease",
+                "A3": "Exacerbate",
+                "A4": "Comfort"
+            },
+            "key": "Exacerbate",
+            "justification": "Opposite of relief",
+            "justified_by": "JSON-Fallback",
+            "frequency": 3
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Opposite of AMPLIFY:",
+            "answers": {
+                "A1": "Increase",
+                "A2": "Diminish",
+                "A3": "Expand",
+                "A4": "Enlarge"
+            },
+            "key": "Diminish",
+            "justification": "Opposite of increase and amplify",
+            "justified_by": "JSON-Fallback",
+            "frequency": 11
+        },
+        {
+            "type": "medium",
+            "category": "OOP",
+            "question": "What is the Adapter pattern?",
+            "answers": {
+                "A1": "A pattern for adapting hardware",
+                "A2": "A pattern that converts interface of one class to expected interface",
+                "A3": "A pattern for database adapters",
+                "A4": "A pattern for network adaptation"
+            },
+            "key": "A pattern that converts interface of one class to expected interface",
+            "justification": "Adapter pattern bridges incompatible interfaces, allowing objects with different interfaces to collaborate.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 17
+        },
+        {
+            "type": "medium",
+            "category": "OOP",
+            "question": "What is the difference between map and unordered_map?",
+            "answers": {
+                "A1": "Map is slower; unordered_map is faster",
+                "A2": "Map maintains sorted order (O(log n)); unordered_map uses hash (average O(1))",
+                "A3": "unordered_map can have duplicate keys; map cannot",
+                "A4": "They are the same"
+            },
+            "key": "Map maintains sorted order (O(log n)); unordered_map uses hash (average O(1))",
+            "justification": "Map uses balanced tree for ordered access, unordered_map uses hash table for faster average-case access.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 16
+        },
+        {
+            "type": "medium",
+            "category": "OOP",
+            "question": "What is the diamond problem in multiple inheritance?",
+            "answers": {
+                "A1": "A derived class inherits same base class through two paths",
+                "A2": "A class cannot inherit from multiple classes",
+                "A3": "Virtual functions cannot work in multiple inheritance",
+                "A4": "A derived class has too many base classes"
+            },
+            "key": "A derived class inherits same base class through two paths",
+            "justification": "The diamond problem occurs when a class inherits from two classes that both inherit from a common ancestor, creating ambiguity.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 18
+        },
+        {
+            "type": "hard",
+            "category": "Data Structures",
+            "question": "What is double hashing as a collision resolution method?",
+            "answers": {
+                "A1": "Hashing twice in sequence",
+                "A2": "Using two hash functions to find alternative positions",
+                "A3": "Doubling hash output values",
+                "A4": "Hash function applied twice to key"
+            },
+            "key": "Using two hash functions to find alternative positions",
+            "justification": "Double hashing reduces clustering in hash tables",
+            "justified_by": "JSON-Fallback",
+            "frequency": 17
+        },
+        {
+            "type": "hard",
+            "category": "Data Structures",
+            "question": "What is an adjacency matrix representation of a graph?",
+            "answers": {
+                "A1": "A matrix of adjacent numbers",
+                "A2": "2D array showing edges between vertices",
+                "A3": "A list of graph vertices",
+                "A4": "Matrix of vertex coordinates"
+            },
+            "key": "2D array showing edges between vertices",
+            "justification": "Adjacency matrix represents graph connectivity",
+            "justified_by": "JSON-Fallback",
+            "frequency": 23
+        },
+        {
+            "type": "hard",
+            "category": "Data Structures",
+            "question": "What is quadratic probing in hash tables?",
+            "answers": {
+                "A1": "Probing quadratic functions",
+                "A2": "Using quadratic intervals to find next available slot",
+                "A3": "Probing squared positions",
+                "A4": "Quadratic growth probing"
+            },
+            "key": "Using quadratic intervals to find next available slot",
+            "justification": "Quadratic probing reduces primary clustering",
+            "justified_by": "JSON-Fallback",
+            "frequency": 30
+        },
+        {
+            "type": "hard",
+            "category": "Data Base",
+            "question": "What is database replication?",
+            "answers": {
+                "A1": "Creating exact copies of database",
+                "A2": "Maintaining copies of database across systems",
+                "A3": "Backup replication process only",
+                "A4": "Duplicating databases locally"
+            },
+            "key": "Maintaining copies of database across systems",
+            "justification": "Replication ensures availability",
+            "justified_by": "JSON-Fallback",
+            "frequency": 21
+        },
+        {
+            "type": "easy",
+            "category": "Data Base",
+            "question": "What is the degree of a relation in database terms?",
+            "answers": {
+                "A1": "The strength of the relation",
+                "A2": "The number of attributes in a relation",
+                "A3": "The number of tables",
+                "A4": "The relationship strength"
+            },
+            "key": "The number of attributes in a relation",
+            "justification": "Degree is the attribute count",
+            "justified_by": "JSON-Fallback",
+            "frequency": 25
+        },
+        {
+            "type": "easy",
+            "category": "Data Base",
+            "question": "What is a transaction?",
+            "answers": {
+                "A1": "A business deal",
+                "A2": "A sequence of database operations",
+                "A3": "Money transfer",
+                "A4": "A sale"
+            },
+            "key": "A sequence of database operations",
+            "justification": "Transaction is logical unit of work",
+            "justified_by": "JSON-Fallback",
+            "frequency": 21
+        },
+        {
+            "type": "medium",
+            "category": "Computer Networks",
+            "question": "What is pipelining?",
+            "answers": {
+                "A1": "Pipeline processing",
+                "A2": "Multiple requests before responses",
+                "A3": "Request batching",
+                "A4": "Sequential processing"
+            },
+            "key": "Multiple requests before responses",
+            "justification": "Pipelining improves throughput",
+            "justified_by": "JSON-Fallback",
+            "frequency": 12
+        },
+        {
+            "type": "medium",
+            "category": "Computer Networks",
+            "question": "What is an AS?",
+            "answers": {
+                "A1": "Independent system",
+                "A2": "Network under single administrative control",
+                "A3": "Autonomous network",
+                "A4": "Self-governing network"
+            },
+            "key": "Network under single administrative control",
+            "justification": "AS is routing domain",
+            "justified_by": "JSON-Fallback",
+            "frequency": 9
+        },
+        {
+            "type": "medium",
+            "category": "Computer Networks",
+            "question": "What is forwarding?",
+            "answers": {
+                "A1": "Going forward",
+                "A2": "Moving packets from input to output port",
+                "A3": "Packet sending",
+                "A4": "Data transfer"
+            },
+            "key": "Moving packets from input to output port",
+            "justification": "Forwarding moves packets through routers",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        },
+        {
+            "type": "medium",
+            "category": "Events",
+            "question": "What does the 'click' event do?",
+            "answers": {
+                "A1": "Triggers when the mouse hovers over an element",
+                "A2": "Triggers when an element is clicked",
+                "A3": "Triggers when the page loads",
+                "A4": "Triggers when the page scrolls"
+            },
+            "key": "Triggers when an element is clicked",
+            "justification": "click event fires on mouse button click.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 12
+        },
+        {
+            "type": "medium",
+            "category": "JavaScript",
+            "question": "What does alert() do in JavaScript?",
+            "answers": {
+                "A1": "Logs a message to the console",
+                "A2": "Displays a popup dialog box with a message",
+                "A3": "Sends an alert to the server",
+                "A4": "Plays an audio alert"
+            },
+            "key": "Displays a popup dialog box with a message",
+            "justification": "alert() is a browser interaction function.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 16
+        },
+        {
+            "type": "medium",
+            "category": "Responsive Design",
+            "question": "What does @media speech do?",
+            "answers": {
+                "A1": "Applies styles for voice assistants",
+                "A2": "Applies styles for screen readers and audio browsers",
+                "A3": "Applies styles for video",
+                "A4": "Applies styles for text-to-speech"
+            },
+            "key": "Applies styles for screen readers and audio browsers",
+            "justification": "speech media type targets devices that read content aloud.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 11
+        },
+        {
+            "type": "medium",
+            "category": "Intelligent Agents",
+            "question": "What is a continuous environment?",
+            "answers": {
+                "A1": "An environment that operates 24/7 without interruption",
+                "A2": "An environment with infinite possible states",
+                "A3": "An environment that extends indefinitely in time",
+                "A4": "An environment with no pauses or breaks in operation"
+            },
+            "key": "An environment with infinite possible states",
+            "justification": "Continuous environments have smooth transitions and infinite states.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 3
+        },
+        {
+            "type": "medium",
+            "category": "Machine Learning",
+            "question": "What is logistic regression?",
+            "answers": {
+                "A1": "Regression with logic",
+                "A2": "A classification algorithm using logistic function",
+                "A3": "A logical regression",
+                "A4": "A regression method"
+            },
+            "key": "A classification algorithm using logistic function",
+            "justification": "Logistic regression predicts probability of binary outcomes.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 9
+        },
+        {
+            "type": "medium",
+            "category": "Uninformed Search",
+            "question": "What is the time complexity of breadth-first search?",
+            "answers": {
+                "A1": "O(n) - linear time in the number of nodes",
+                "A2": "O(b^d) where b is branching factor and d is depth",
+                "A3": "O(log n) - logarithmic time complexity",
+                "A4": "O(n²) - quadratic time complexity"
+            },
+            "key": "O(b^d) where b is branching factor and d is depth",
+            "justification": "BFS explores exponentially many nodes in worst case.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 8
+        },
+        {
+            "type": "medium",
+            "category": "Machine Learning",
+            "question": "What is the difference between supervised and unsupervised learning?",
+            "answers": {
+                "A1": "Supervised is faster",
+                "A2": "Supervised uses labeled data; unsupervised uses unlabeled data",
+                "A3": "Unsupervised is better",
+                "A4": "They are the same"
+            },
+            "key": "Supervised uses labeled data; unsupervised uses unlabeled data",
+            "justification": "Key distinction in ML paradigms",
+            "justified_by": "JSON-Fallback",
+            "frequency": 11
+        },
+        {
+            "type": "medium",
+            "category": "Machine Learning",
+            "question": "What is bagging?",
+            "answers": {
+                "A1": "Using bags for data",
+                "A2": "Bootstrap aggregating - creating multiple datasets by sampling with replacement",
+                "A3": "Sampling method",
+                "A4": "Data aggregation"
+            },
+            "key": "Bootstrap aggregating - creating multiple datasets by sampling with replacement",
+            "justification": "Bagging reduces variance through averaging",
+            "justified_by": "JSON-Fallback",
+            "frequency": 13
+        },
+        {
+            "type": "hard",
+            "category": "Machine Learning",
+            "question": "What is data augmentation for NLP?",
+            "answers": {
+                "A1": "Increasing text data",
+                "A2": "Creating variations of text to improve robustness",
+                "A3": "Text generation",
+                "A4": "Data expansion"
+            },
+            "key": "Creating variations of text to improve robustness",
+            "justification": "Text augmentation improves generalization",
+            "justified_by": "JSON-Fallback",
+            "frequency": 8
+        }
+    ],
+    "generated_at": "2026-03-11 01:47:35",
+    "source": "RAG-Ollama"
+}

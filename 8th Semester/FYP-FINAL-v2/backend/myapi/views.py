@@ -249,11 +249,13 @@ def generate_test(request):
                 job_title = request.GET.get('job_title', 'Software Engineer')
                 requirements = []
                 total_questions = 20
+                time_allowed = 30
         else:
             job = None
             job_title = request.GET.get('job_title', 'Software Engineer')
             requirements = []
             total_questions = 20
+            time_allowed = 30
 
         # Check if test was already completed for this candidate/job
         if job_id and candidate_id != 'default':
@@ -930,7 +932,7 @@ def applications(request):
                 company_logo_initial=data.get('company_logo_initial', ''),
                 location=data.get('location', ''),
                 salary_range=data.get('salary_range', ''),
-                status=data.get('status', 'reviewing'),  # Assessments status directly upon apply
+                status=data.get('status', 'test'),  # Assessments status directly upon apply
                 cover_letter=data.get('cover_letter', ''),
                 resume_url=data.get('resume_url', ''),
                 notes=data.get('notes', '')
@@ -940,7 +942,7 @@ def applications(request):
             ApplicationTimeline.objects.create(
                 application=application,
                 event_type='status_change',
-                new_status='applied',
+                new_status='test',
                 title='Application Submitted',
                 description=f'Applied for {application.job_title} at {application.company_name}'
             )
@@ -1235,6 +1237,12 @@ def hr_update_applicant_status(request, applicant_id):
         applicant.status = status_val
         applicant.notes = rejection_reason or applicant.notes
         applicant.last_status_update = timezone.now()
+
+        # Reset test scores if moved back to assessment
+        if status_val == 'test':
+            applicant.test_score = None
+            applicant.test_completed_at = None
+
         applicant.save()
 
         return Response({'success': True, 'applicant': _serialize_hr_applicant(applicant)})
@@ -1827,31 +1835,16 @@ def get_available_skills(request):
 # Semantic Job Recommendation Engine
 # ============================================================================
 
-# ---------------------------------------------------------------------------
-# Lazy-loaded sentence-transformer model (loaded once, reused on every call)
-# ---------------------------------------------------------------------------
 _embedding_model = None
 
 def _get_embedding_model():
-    """
-    Load and cache the pretrained sentence-transformer model.
-    Uses 'all-MiniLM-L6-v2' — a lightweight, high-quality 384-dim model
-    that balances speed and semantic accuracy perfectly for job matching.
-    """
     global _embedding_model
     if _embedding_model is None:
         from sentence_transformers import SentenceTransformer
         _embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
     return _embedding_model
 
-# ---------------------------------------------------------------------------
-# NLTK-powered Technology Synonym Builder
-# ---------------------------------------------------------------------------
-# Seed groups: each inner list is a cluster of equivalent/related tech terms.
-# These cover brand names, abbreviations, and framework aliases that WordNet
-# (a general English dictionary) cannot know about.
-# WordNet is then used to automatically enrich each term with additional
-# natural-language synonyms at module load time.
+
 _TECH_SEED_GROUPS = [
     # Frontend
     ['react', 'reactjs', 'react.js', 'frontend', 'front-end', 'ui development'],
@@ -2150,21 +2143,7 @@ def _compute_skill_overlap_bonus(candidate_skills: list, job_text: str) -> float
 
 @api_view(['GET'])
 def get_job_recommendations(request):
-    """
-    Semantic Job Recommendation Engine.
     
-    Accepts: ?user_id=<uuid>
-    
-    Algorithm:
-    1. Build a rich candidate text from user profile (skills, experience, bio, education, projects).
-    2. Expand all terms with technology synonyms for semantic coverage.
-    3. Build a job corpus text for every active job (title, description, requirements).
-    4. Expand job texts with synonyms.
-    5. Encode candidate + all job texts into dense vectors using 'all-MiniLM-L6-v2'.
-    6. Compute cosine similarity between candidate vector and each job embedding.
-    7. Apply a skill overlap bonus for direct technical term matches.
-    8. Scale to 0-100, rank descending, and return top N results.
-    """
     try:
         user_id = request.GET.get('user_id')
         top_n = int(request.GET.get('top_n', 10))

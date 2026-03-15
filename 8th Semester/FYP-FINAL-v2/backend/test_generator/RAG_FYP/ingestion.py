@@ -6,23 +6,18 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.documents import Document
 from ..config import QUESTION_FILES, BASE_DIR
 
-EMBEDDING_MODEL = None  # Lazy-initialized to avoid blocking Django startup
+EMBEDDING_MODEL = None
 
 
 def _get_embedding_model():
-    """Lazy initialization of the embedding model (only when first needed)"""
     global EMBEDDING_MODEL
     if EMBEDDING_MODEL is None:
-        print("Loading HuggingFace embedding model (first time only)...")
+        print("Loading HuggingFace embedding model")
         EMBEDDING_MODEL = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
         print("Embedding model loaded.")
     return EMBEDDING_MODEL
 
 def ingest_all_json_questions():
-    """
-    Reads all JSON questions defined in config.py's QUESTION_FILES,
-    converts them into LangChain Document objects, and stores them in a single ChromaDB.
-    """
     print("Starting JSON Question Ingestion...")
     
     # Set up the database directory

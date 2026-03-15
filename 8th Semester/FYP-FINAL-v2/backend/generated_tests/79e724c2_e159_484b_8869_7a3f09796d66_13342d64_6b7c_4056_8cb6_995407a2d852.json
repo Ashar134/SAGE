@@ -1,0 +1,168 @@
+{
+    "candidate_id": "79e724c2-e159-484b-8869-7a3f09796d66",
+    "job_id": "13342d64-6b7c-4056-8cb6-995407a2d852",
+    "job_title": "Backend Developer",
+    "requirements": [
+        "Masters in Software Engineering",
+        "php",
+        "node.js",
+        "next.js",
+        "express",
+        "react"
+    ],
+    "total_questions": 10,
+    "distribution": {
+        "analytical": 2,
+        "english": 2,
+        "job_specific": 6
+    },
+    "questions": [
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "In a sequence of 5 terms, the first term is twice the third term and the second term is three times the fourth term. If the fifth term is 10 more than the first term, what is the value of the third term?",
+            "answers": {
+                "A1": "2",
+                "A2": "6",
+                "A3": "4",
+                "A4": "8"
+            },
+            "key": "A3",
+            "justification": "Let the terms be a, b, c, d, e. Given: b = 2c and d = 3c. Also, e = a + 10. Substitute for b and d in e = a + 10 to get e = 6c + a + 10. Equating this with the given expression for e, we have 6c + a + 10 = a + 2c. Rearrange to get c = 4.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "In a group of 8 people, 3 pairs have identical twins. Which one is the odd number out?",
+            "answers": {
+                "A1": "1",
+                "A2": "2",
+                "A3": "3",
+                "A4": "4"
+            },
+            "key": "A1",
+            "justification": "Consider pairs 1-2, 3-4 and 5-6. The remaining person is the odd one out.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "The Olympic athlete's ___ training regimen prepared him for international competition.",
+            "answers": {
+                "A1": "lax",
+                "A2": "rigorous",
+                "A3": "casual",
+                "A4": "relaxed"
+            },
+            "key": "rigorous",
+            "justification": "Olympic training is rigorous",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "FAMINE : FOOD",
+            "answers": {
+                "A1": "War : Soldiers",
+                "A2": "Drought : Water",
+                "A3": "Epidemic : Disease",
+                "A4": "Poverty : Money",
+                "A5": "Storm : Wind"
+            },
+            "key": "Drought : Water",
+            "justification": "Extreme scarcity relationship",
+            "justified_by": "JSON-Fallback",
+            "frequency": 12
+        },
+        {
+            "type": "medium",
+            "category": "Backend Developer",
+            "question": "What is the primary function of a middleware in a Next.js application?",
+            "answers": {
+                "A1": "To handle HTTP requests and responses",
+                "A2": "To render React components",
+                "A3": "To manage server-side rendering",
+                "A4": "To enable internationalization"
+            },
+            "key": "A1",
+            "justification": "Next.js middleware allows developers to extend the functionality of an application without modifying its code. Middleware functions are executed in a specific order, allowing for efficient handling of HTTP requests and responses.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Backend Developer",
+            "question": "Which data structure is used in Node.js to implement cache storage?",
+            "answers": {
+                "A1": "Array",
+                "A2": "Object",
+                "A3": "Set",
+                "A4": "Map"
+            },
+            "key": "A2",
+            "justification": "Node.js provides an object called `process.memory` which includes a cache. This cache is implemented using a Map data structure, allowing for efficient lookups and updates.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Backend Developer",
+            "question": "What is the main difference between Express.js and Next.js in terms of routing?",
+            "answers": {
+                "A1": "Express.js uses a more complex routing system",
+                "A2": "Next.js uses a simpler routing system",
+                "A3": "Both use a similar routing system",
+                "A4": "Routing is not a key difference between the two frameworks"
+            },
+            "key": "A2",
+            "justification": "Express.js has a more flexible and customizable routing system, allowing developers to create complex routes. Next.js, on the other hand, uses a simpler and more straightforward routing system.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Backend Developer",
+            "question": "Which programming paradigm is used in React for managing state changes?",
+            "answers": {
+                "A1": "Object-Oriented Programming (OOP)",
+                "A2": "Functional Programming",
+                "A3": "Declarative Programming",
+                "A4": "Imperative Programming"
+            },
+            "key": "A2",
+            "justification": "React uses a declarative programming style to manage state changes. This approach focuses on describing what the UI should look like, rather than how it should be updated.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Backend Developer",
+            "question": "What is the primary purpose of the `express.json()` middleware in Express.js?",
+            "answers": {
+                "A1": "To parse JSON requests",
+                "A2": "To validate request bodies",
+                "A3": "To enable CORS",
+                "A4": "To handle HTTP errors"
+            },
+            "key": "A1",
+            "justification": "The `express.json()` middleware is used to parse incoming JSON requests, allowing developers to easily access and validate JSON data.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Backend Developer",
+            "question": "Which Node.js module provides a way to interact with a MySQL database?",
+            "answers": {
+                "A1": "mysql",
+                "A2": "mssql",
+                "A3": "postgres",
+                "A4": "oracle"
+            },
+            "key": "A1",
+            "justification": "The `mysql` module is the official Node.js module for interacting with MySQL databases, providing a convenient and efficient way to perform CRUD operations.",
+            "justified_by": "RAG-Source"
+        }
+    ],
+    "generated_at": "2026-03-11 01:25:56",
+    "source": "RAG-Ollama"
+}
