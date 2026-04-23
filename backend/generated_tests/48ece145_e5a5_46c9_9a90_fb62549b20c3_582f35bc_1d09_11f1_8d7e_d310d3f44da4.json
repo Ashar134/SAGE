@@ -1,0 +1,320 @@
+{
+    "candidate_id": "48ece145-e5a5-46c9-9a90-fb62549b20c3",
+    "job_id": "582f35bc-1d09-11f1-8d7e-d310d3f44da4",
+    "job_title": "AI Engineer",
+    "requirements": [
+        "Bachelor’s or Master’s degree in Computer Science, Artificial Intelligence, Data Science, or a related field",
+        "Strong knowledge of machine learning algorithms and deep learning concepts",
+        "Proficiency in Python programming",
+        "Experience with machine learning libraries such as TensorFlow, PyTorch, or Scikit-learn",
+        "Knowledge of natural language processing or computer vision techniques",
+        "Experience working with large datasets and data preprocessing",
+        "Understanding of REST APIs and integrating AI models into applications",
+        "Familiarity with databases such as MySQL, PostgreSQL, or NoSQL systems",
+        "Experience with cloud platforms such as AWS, Google Cloud, or Azure is a plus",
+        "Strong analytical and problem-solving skills",
+        "Ability to work collaboratively in a cross-functional team environment"
+    ],
+    "total_questions": 20,
+    "distribution": {
+        "analytical": 3,
+        "english": 3,
+        "job_specific": 14
+    },
+    "questions": [
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "If a bakery sells 250 loaves of bread at $2 each, and they make a profit of $25, how much does a bag of flour weigh?",
+            "answers": {
+                "A1": "0.1 kg",
+                "A2": "0.2 kg",
+                "A3": "0.5 kg",
+                "A4": "1 kg"
+            },
+            "key": "A1",
+            "justification": "Let x be the weight of flour in kg. Cost price = (cost price per loaf * 250) + (x * 250). Profit = Revenue - cost price. $25 = ($2*250) + (250*x). Solve for x.",
+            "justified_by": "Math",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "What number should replace the question mark in this sequence: 1, 3, 4, 7, 11, 18?",
+            "answers": {
+                "A1": "12",
+                "A2": "15",
+                "A3": "17",
+                "A4": "20"
+            },
+            "key": "A2",
+            "justification": "The sequence is formed by adding consecutive integers: +2 (from 1 to 3), +1 (from 3 to 4), +3 (from 4 to 7), +4 (from 7 to 11), +7 (from 11 to 18). Next difference should be +8, so the correct number is 18 + 8 = 26. However, the question mark must be a single digit, therefore the answer cannot fit this sequence.",
+            "justified_by": "Math",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "Jack is twice as old as Jill, but in five years time, he will only be one year older than Jill. How old are Jack and Jill now?",
+            "answers": {
+                "A1": "4, 2",
+                "A2": "6, 3",
+                "A3": "10, 9",
+                "A4": "12, 11"
+            },
+            "key": "A1",
+            "justification": "Let x be Jack's current age. Then Jill's current age is x/2. In five years time, Jack will be x + 5 and Jill will be (x/2) + 5. According to the problem statement: x + 5 = (x/2) + 5 + 1. Solve for x.",
+            "justified_by": "Math",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "Which word is a suitable antonym of 'expensive'?",
+            "answers": {
+                "A1": "Cheap",
+                "A2": "Affordable",
+                "A3": "Luxurious",
+                "A4": "Inexpensive"
+            },
+            "key": "A1",
+            "justification": "The antonym of 'expensive' is something that is not costly, which is 'cheap'.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "Which word best completes the sentence: 'The new policy has made it _____ for everyone to afford a house'?",
+            "answers": {
+                "A1": "more",
+                "A2": "less",
+                "A3": "even",
+                "A4": "harder"
+            },
+            "key": "A2",
+            "justification": "To make something more difficult or less accessible, you use the word 'less'. This makes it a suitable antonym for 'affordable'.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "Which words are synonyms of 'lucrative'?",
+            "answers": {
+                "A1": "Profitable",
+                "A2": "Unprofitable",
+                "A3": "Generous",
+                "A4": "Thriving"
+            },
+            "key": "A1",
+            "justification": "Both 'profitable' and 'thriving' imply a state of being successful or profitable, making them suitable synonyms for 'lucrative'.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "Which machine learning algorithm is particularly suited for handling high-dimensional data?",
+            "answers": {
+                "A1": "k-means",
+                "A2": "KNN",
+                "A3": "Support Vector Machine (SVM)",
+                "A4": "Random Forest"
+            },
+            "key": "A1",
+            "justification": "High-dimensional data often requires algorithms that can handle many features simultaneously. Random Forests are particularly suited for this task due to their ability to handle high-dimensional feature spaces and reduce dimensionality through feature selection.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "What is the primary difference between a neural network's weights and biases?",
+            "answers": {
+                "A1": "Weights are used for input, while biases affect output",
+                "A2": "Weights determine layer order, biases decide activation functions",
+                "A3": "Weights are updated during backpropagation, biases are fixed",
+                "A4": "Weights are scaled with sigmoid function, biases are clipped at 0"
+            },
+            "key": "A1",
+            "justification": "The primary difference lies in their role in the neural network's operation. Weights determine how much each input contributes to the output, while biases shift the activation function's output along the same range.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "Which data preprocessing technique is most commonly used for handling categorical variables?",
+            "answers": {
+                "A1": "Standardization",
+                "A2": "Normalization",
+                "A3": "One-Hot Encoding",
+                "A4": "Log Transformation"
+            },
+            "key": "A3",
+            "justification": "One-Hot Encoding is a widely used technique for handling categorical variables. It converts categorical variables into binary vectors, allowing the use of standard machine learning algorithms.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "What is the primary advantage of using TensorFlow over PyTorch for developing deep learning models?",
+            "answers": {
+                "A1": "TensorFlow has better support for distributed training",
+                "A2": "PyTorch provides more efficient autograd system",
+                "A3": "TensorFlow is easier to integrate with other tools",
+                "A4": "PyTorch has faster model compilation"
+            },
+            "key": "A1",
+            "justification": "TensorFlow's built-in support for distributed training makes it a popular choice for large-scale deep learning projects, where multiple GPUs or machines are used.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "Which of the following natural language processing techniques is most suitable for sentiment analysis tasks?",
+            "answers": {
+                "A1": "Named Entity Recognition",
+                "A2": "Part-of-Speech Tagging",
+                "A3": "Sentiment Analysis using Machine Learning models",
+                "A4": "Text Classification"
+            },
+            "key": "A3",
+            "justification": "Sentiment Analysis is a specific type of machine learning task that involves predicting the sentiment (positive, negative, or neutral) behind text. Specialized machine learning models like Naive Bayes, Random Forests, or Support Vector Machines are typically used for this task.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "What is the primary advantage of using a cloud-based machine learning platform like AWS SageMaker?",
+            "answers": {
+                "A1": "Simplified model deployment",
+                "A2": "Access to pre-trained models",
+                "A3": "Scalability and cost-effectiveness",
+                "A4": "Integration with other AWS services"
+            },
+            "key": "A3",
+            "justification": "Cloud-based platforms like AWS SageMaker provide scalability and cost-effectiveness, allowing users to easily scale up or down based on the demand for their models. This is particularly useful for big data and real-time analytics applications.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "Which of the following databases is best suited for handling large amounts of semi-structured data?",
+            "answers": {
+                "A1": "Relational databases",
+                "A2": "NoSQL databases",
+                "A3": "Graph databases",
+                "A4": "Time-series databases"
+            },
+            "key": "A2",
+            "justification": "NoSQL databases are designed to handle large amounts of semi-structured data efficiently. They often use flexible schema designs and optimized storage systems to achieve high performance.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "What is the primary advantage of using REST APIs in machine learning applications?",
+            "answers": {
+                "A1": "Easier integration with mobile apps",
+                "A2": "Faster model deployment",
+                "A3": "Improved scalability and reliability",
+                "A4": "Reduced latency"
+            },
+            "key": "A3",
+            "justification": "REST APIs provide improved scalability and reliability by allowing multiple clients to access the same data source. This makes them well-suited for machine learning applications that require high availability.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "What is the primary advantage of using logistic regression over linear regression for classification tasks?",
+            "answers": {
+                "A1": "Logistic regression can handle non-linear relationships",
+                "A2": "Linear regression requires less data to train a model",
+                "A3": "Logistic regression provides better interpretability",
+                "A4": "Linear regression is more computationally efficient"
+            },
+            "key": "A1",
+            "justification": "Logistic regression models the probability of an event occurring as a sigmoid function, allowing it to capture non-linear relationships between features and target variables. This makes it particularly suitable for classification tasks where the goal is to predict a binary label (0/1, yes/no, etc.). While linear regression can be used for classification, its inability to model non-linear relationships results in poorer performance on complex datasets.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "What is the difference between a shallow neural network and a deep neural network?",
+            "answers": {
+                "A1": "Shallow networks have more layers",
+                "A2": "Deep networks use more complex activation functions",
+                "A3": "Deep networks are trained on smaller datasets",
+                "A4": "Deep networks learn to recognize local features"
+            },
+            "key": "A1",
+            "justification": "A shallow neural network typically consists of only one or two hidden layers, whereas a deep neural network has multiple hidden layers that allow it to model more complex relationships between inputs and outputs. This increased depth enables the network to learn to recognize abstract features and patterns in data, rather than just relying on local gradients.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "Which machine learning library is known for its simplicity and ease of use?",
+            "answers": {
+                "A1": "TensorFlow",
+                "A2": "PyTorch",
+                "A3": "Scikit-learn",
+                "A4": "Keras"
+            },
+            "key": "A4",
+            "justification": "Keras is a high-level neural networks API that provides an easy-to-use interface for building and training deep learning models. It is particularly well-suited for rapid prototyping and development, making it a popular choice among beginners and experienced practitioners alike.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "What is the purpose of data preprocessing in machine learning?",
+            "answers": {
+                "A1": "To improve model interpretability",
+                "A2": "To increase model accuracy",
+                "A3": "To reduce training time",
+                "A4": "To clean and prepare datasets for modeling"
+            },
+            "key": "A4",
+            "justification": "Data preprocessing involves cleaning, transforming, and scaling the input data to improve its quality and relevance. This step is essential for many machine learning algorithms, as it helps to remove noise, handle missing values, and ensure that the data is in a suitable format for modeling.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "What is RESTful architecture and how does it differ from other architectures?",
+            "answers": {
+                "A1": "REST stands for 'Representational State of Resource'",
+                "A2": "REST is an architectural style that uses HTTP requests",
+                "A3": "REST emphasizes statelessness over other protocols",
+                "A4": "REST is primarily used for web development"
+            },
+            "key": "A1",
+            "justification": "The term REST stands for 'Representational State of Resource'. It is an architectural style that emphasizes resource-based communication, where each resource on the server has a unique identifier and can be manipulated using standard HTTP methods (GET, POST, PUT, DELETE). This approach provides a simple, scalable, and maintainable way to build web services.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "What is the difference between a supervised learning model and an unsupervised learning model?",
+            "answers": {
+                "A1": "Supervised models are trained on labeled data",
+                "A2": "Unsupervised models are trained on unlabeled data",
+                "A3": "Supervised models make predictions based on features",
+                "A4": "Unsupervised models identify patterns in data"
+            },
+            "key": "A1",
+            "justification": "Supervised learning models, such as regression and classification, are trained on labeled datasets to learn the relationship between inputs (features) and outputs (labels). The goal is to make accurate predictions based on new, unseen data. Unsupervised learning models, like clustering and dimensionality reduction, are trained on unlabeled data to identify patterns, structure, or relationships that may not be apparent through human intuition.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        }
+    ],
+    "generated_at": "2026-04-18 15:58:46",
+    "source": "RAG-Ollama"
+}

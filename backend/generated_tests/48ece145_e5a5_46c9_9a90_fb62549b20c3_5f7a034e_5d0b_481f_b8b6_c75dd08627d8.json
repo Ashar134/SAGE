@@ -1,0 +1,245 @@
+{
+    "candidate_id": "48ece145-e5a5-46c9-9a90-fb62549b20c3",
+    "job_id": "5f7a034e-5d0b-481f-b8b6-c75dd08627d8",
+    "job_title": "Assisstant Professor- Computer Science",
+    "requirements": [
+        "PHD in Computer Science",
+        "3 years of teaching experience",
+        "1 year of industry experience"
+    ],
+    "total_questions": 15,
+    "distribution": {
+        "analytical": 3,
+        "english": 3,
+        "job_specific": 9
+    },
+    "questions": [
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A snail is at the bottom of a 20-foot well. Each day, it climbs up 3 feet, but at night, it slips back 2 feet. How many days will it take for the snail to reach the top of the well?",
+            "answers": {
+                "A1": 18,
+                "A2": 20,
+                "A3": 22,
+                "A4": 15
+            },
+            "key": "A1",
+            "justification": "Let's break this down: Day 1: 3 feet up, 17 feet left. Day 2: 5 feet up, 16 feet left. Day 3: 8 feet up, 14 feet left. Notice the pattern? Each day, it climbs 3 feet and slips back 2 feet, so the net progress is 1 foot per day. Since the well is 20 feet deep, it will take 18 days to climb out (19 feet of progress).",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A bat and a ball together cost $1.10. The bat costs $1.00 more than the ball. How much does the ball cost?",
+            "answers": {
+                "A1": 0.5,
+                "A2": 0.6,
+                "A3": 0.4,
+                "A4": 0.8
+            },
+            "key": "A2",
+            "justification": "Let's call the price of the ball x. Since the bat costs $1.00 more than the ball, the bat costs x + $1.00. Together, they cost $1.10, so we can set up the equation: x + (x + $1.00) = $1.10. Simplifying this equation gives us 2x = $0.10, which means x = $0.05. Therefore, the ball costs $0.05.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A woman has two coins that add up to 30 cents. One coin is not a nickel. What are the two coins?",
+            "answers": {
+                "A1": "25 cents + 5 cents",
+                "A2": "15 cents + 15 cents",
+                "A3": "20 cents + 10 cents",
+                "A4": "5 cents + 25 cents"
+            },
+            "key": "A1",
+            "justification": "Since one coin is not a nickel (5 cents), the other coin must be. The only combination that works is 25 cents + 5 cents, which equals 30 cents.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "Which word best completes the analogy: FERTILE - SOIL - _______?",
+            "answers": {
+                "A1": "SEED",
+                "A2": "PLANT",
+                "A3": "CROP",
+                "A4": "FARM"
+            },
+            "key": "A1",
+            "justification": "The relationship is between a word describing a quality and the thing that has or shows that quality. FERTILE describes SOIL, which grows SEED.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "The word _______ of a sentence is the part that provides information about time or place.",
+            "answers": {
+                "A1": "SUBJECT",
+                "A2": "OBJECT",
+                "A3": "ADVERB",
+                "A4": "PREPOSITION"
+            },
+            "key": "A3",
+            "justification": "The adverb typically answers questions like when, where, how, or to what extent. For example, in the sentence 'She sings beautifully', 'beautifully' is an adverb modifying the verb 'sings'.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "The opposite of LAID-BACK is _______.",
+            "answers": {
+                "A1": "CAUTIOUS",
+                "A2": "RESTLESS",
+                "A3": "RECKLESS",
+                "A4": "INDECISIVE"
+            },
+            "key": "A3",
+            "justification": "Laid-back describes a person who is relaxed and calm. The opposite would be someone who acts or behaves in a more reckless manner, without considering the potential risks or consequences.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Assisstant Professor- Computer Science",
+            "question": "As an Assistant Professor in Computer Science, a PhD holder with 3 years of teaching experience is most likely to have designed which data structure in their research?",
+            "answers": {
+                "A1": "Stack",
+                "A2": "Queue",
+                "A3": "Heap",
+                "A4": "B-Tree"
+            },
+            "key": "A2",
+            "justification": "Since the PhD holder has 3 years of teaching experience, they are likely to have designed data structures that are commonly used in computer science education, such as a Queue.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Assisstant Professor- Computer Science",
+            "question": "As an Assistant Professor with 1 year of industry experience, what is the primary responsibility for ensuring compliance with SDP?",
+            "answers": {
+                "A1": "Designing Algorithms",
+                "A2": "Testing Software",
+                "A3": "Ensuring Compliance with SDP",
+                "A4": "Implementing Data Structures"
+            },
+            "key": "A3",
+            "justification": "SDP stands for Specification Design Patterns, and as an Assistant Professor with industry experience, they would be responsible for ensuring that their designs comply with SDP.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Assisstant Professor- Computer Science",
+            "question": "When implementing an Assistant Professor's web application using JavaScript, what is the purpose of window.location.href?",
+            "answers": {
+                "A1": "To set the title of the page",
+                "A2": "To get the current URL",
+                "A3": "To refresh the page",
+                "A4": "To submit a form"
+            },
+            "key": "A2",
+            "justification": "window.location.href is used to get the current URL of the web application, allowing the Assistant Professor to navigate between pages or track user interactions.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Assisstant Professor- Computer Science",
+            "question": "Which search algorithm is known for being complete but not guaranteed to terminate?",
+            "answers": {
+                "A1": "Depth-First Search",
+                "A2": "Breadth-First Search",
+                "A3": "Dijkstra's Algorithm",
+                "A4": "Greedy Search"
+            },
+            "key": "A4",
+            "justification": "Greedy search algorithms are known for being complete but not guaranteed to terminate, as they may get stuck in an infinite loop.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Assisstant Professor- Computer Science",
+            "question": "In the context of machine learning, what is a soft margin in Support Vector Machines?",
+            "answers": {
+                "A1": "The boundary between classes",
+                "A2": "The decision value for classification",
+                "A3": "A relaxation of the constraints to allow for errors",
+                "A4": "The regularization parameter"
+            },
+            "key": "A3",
+            "justification": "Soft margins in Support Vector Machines are a way to relax the constraints of the problem, allowing for some errors and improving the accuracy of the model.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Assisstant Professor- Computer Science",
+            "question": "What is a parameterized constructor in object-oriented programming?",
+            "answers": {
+                "A1": "A constructor that takes multiple arguments",
+                "A2": "A method that returns an object",
+                "A3": "A property of an object",
+                "A4": "An interface defined by a class"
+            },
+            "key": "A1",
+            "justification": "A parameterized constructor is a constructor that takes multiple arguments, allowing for more flexibility and reusability in the creation of objects.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Assisstant Professor- Computer Science",
+            "question": "In graph theory, what is the purpose of Breadth-First Search (BFS) algorithm?",
+            "answers": {
+                "A1": "To find the shortest path between nodes",
+                "A2": "To traverse the graph level by level",
+                "A3": "To detect cycles in the graph",
+                "A4": "To find strongly connected components"
+            },
+            "key": "A2",
+            "justification": "The primary purpose of BFS is to traverse a graph or tree level by level, starting from a given source node.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Assisstant Professor- Computer Science",
+            "question": "In database theory, what is the purpose of a tuple in a relation?",
+            "answers": {
+                "A1": "To store a single row of data",
+                "A2": "To represent a set of related values",
+                "A3": "To define a database schema",
+                "A4": "To optimize query performance"
+            },
+            "key": "A1",
+            "justification": "Tuples in relational databases are used to store individual rows of data, providing a fundamental structure for organizing and querying data.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Assisstant Professor- Computer Science",
+            "question": "An Assistant Professor with a PhD in Computer Science has 3 years of teaching experience and 1 year of industry experience, which is most likely to impact their ability to",
+            "answers": {
+                "A1": "write research papers",
+                "A2": "design and teach courses",
+                "A3": "develop software products",
+                "A4": "network with peers"
+            },
+            "key": "A2",
+            "justification": "With 3 years of teaching experience, the Assistant Professor is more likely to have developed expertise in designing and teaching courses. Industry experience can also impact this skill, but teaching experience is a stronger indicator.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        }
+    ],
+    "generated_at": "2026-04-23 11:27:40",
+    "source": "RAG-Ollama"
+}

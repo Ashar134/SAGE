@@ -1,0 +1,246 @@
+{
+    "candidate_id": "8ab28678-2048-4951-b497-320777e9f0b6",
+    "job_id": "c36c49e8-1ee7-4155-8b48-0e355d3ccb78",
+    "job_title": "AI/ML Engineer",
+    "requirements": [
+        "Masters in Artificial Intelligence",
+        "have basic knowledge of AI",
+        "knows supervised learning",
+        "knows linear regression"
+    ],
+    "total_questions": 15,
+    "distribution": {
+        "analytical": 3,
+        "english": 3,
+        "job_specific": 9
+    },
+    "questions": [
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A snail is at the bottom of a 20-foot well. Each day, it climbs up 3 feet, but at night, it slips back 2 feet. How many days will it take for the snail to reach the top of the well?",
+            "answers": {
+                "A1": "18",
+                "A2": "20",
+                "A3": "22",
+                "A4": "25"
+            },
+            "key": "A1",
+            "justification": "Day 1: 1 foot up, 2 feet back. Day 2: 4 feet up, 2 feet back. Day 3: 6 feet up, 2 feet back. Notice a pattern? The snail effectively climbs 1 foot every 2 days. It takes 18 * 2 = 36 feet to climb 20 feet. Since the snail climbs 3 feet per day, it will take 18 days to reach the top.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A bat and a ball together cost $1.10. The bat costs $1.00 more than the ball. How much does the ball cost?",
+            "answers": {
+                "A1": "0.05",
+                "A2": "0.10",
+                "A3": "0.25",
+                "A4": "0.50"
+            },
+            "key": "A2",
+            "justification": "Let's say the ball costs x cents. Then, the bat costs x + 1 cent. The total cost is $1.10 or 110 cents. We can set up an equation: x + (x + 1) = 110. Solving for x gives us x = 5 cents. Therefore, the ball costs 0.10 dollars.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A man is looking at a photograph of someone. His friend tells him that the photo was taken before the man had hair. If his friend is correct, how old is the man in the photograph?",
+            "answers": {
+                "A1": "1",
+                "A2": "2",
+                "A3": "5",
+                "A4": "10"
+            },
+            "key": "A1",
+            "justification": "If the photo was taken before the man had hair, it means that when the photo was taken, he was bald. Since then, he has grown hair. This implies that the man is currently wearing a hat or some other headgear. However, this also means that his friend's statement cannot be true in the context of the question (the man can't wear a hat and look bald at the same time). Therefore, we must assume that the photo was taken before he had any hair at all. The only age that makes sense is 1 year old.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "The technical report was ___ with computational errors making analysis unreliable.",
+            "answers": {
+                "A1": "devoid",
+                "A2": "replete",
+                "A3": "lacking",
+                "A4": "free"
+            },
+            "key": "replete",
+            "justification": "Full of errors means replete",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "The peace treaty was designed to ___ rising tensions between warring nations.",
+            "answers": {
+                "A1": "exacerbate",
+                "A2": "alleviate",
+                "A3": "intensify",
+                "A4": "aggravate"
+            },
+            "key": "alleviate",
+            "justification": "Treaties reduce tensions",
+            "justified_by": "JSON-Fallback",
+            "frequency": 3
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Opposite of ALLEVIATE:",
+            "answers": {
+                "A1": "Relieve",
+                "A2": "Ease",
+                "A3": "Exacerbate",
+                "A4": "Comfort"
+            },
+            "key": "Exacerbate",
+            "justification": "Opposite of relief",
+            "justified_by": "JSON-Fallback",
+            "frequency": 3
+        },
+        {
+            "type": "medium",
+            "category": "AI/ML Engineer",
+            "question": "In supervised linear regression, what is the role of regularization?",
+            "answers": {
+                "A1": "Increases model complexity",
+                "A2": "Decreases model bias and variance",
+                "A3": "Reduces feature dimensionality",
+                "A4": "Regularizes coefficients to prevent overfitting"
+            },
+            "key": "A2",
+            "justification": "To reduce the risk of overfitting, regularization adds a penalty term to the loss function. This forces the model to find a balance between fitting the training data and generalizing well to new data.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI/ML Engineer",
+            "question": "Given a linear regression model, what is the purpose of cross-validation?",
+            "answers": {
+                "A1": "To select the best feature",
+                "A2": "To estimate model performance on unseen data",
+                "A3": "To optimize hyperparameters",
+                "A4": "To train the model on the entire dataset"
+            },
+            "key": "A2",
+            "justification": "Cross-validation helps evaluate a model's performance by training and testing it multiple times with different subsets of the data. This provides a more accurate estimate of the model's generalizability.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI/ML Engineer",
+            "question": "What is the difference between gradient descent and its variant, momentum-based gradient descent?",
+            "answers": {
+                "A1": "Gradient descent always uses a fixed learning rate",
+                "A2": "Momentum-based gradient descent uses a variable learning rate based on previous step's update",
+                "A3": "Gradient descent only updates weights in the direction of negative gradient",
+                "A4": "Momentum-based gradient descent never updates weights"
+            },
+            "key": "A2",
+            "justification": "In standard gradient descent, the learning rate is fixed and updated after each iteration. In momentum-based gradient descent, a fraction of the previous update is retained and added to the new update, which helps escape local minima.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI/ML Engineer",
+            "question": "What is a common issue in deep neural networks that can cause the model to diverge?",
+            "answers": {
+                "A1": "Overfitting due to too many layers",
+                "A2": "Exploding gradients caused by large weights",
+                "A3": "Vanishing gradients caused by small weights",
+                "A4": "Dead neurons caused by feature scaling"
+            },
+            "key": "A2",
+            "justification": "When the model has a large number of parameters, the gradients can become very large, causing the update step to diverge. This is known as the exploding gradient problem.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI/ML Engineer",
+            "question": "Given a linear regression model, what is the purpose of normalization?",
+            "answers": {
+                "A1": "To reduce feature dimensionality",
+                "A2": "To scale features to a common range for better comparison",
+                "A3": "To improve model interpretability by reducing noise",
+                "A4": "To speed up training by reducing computations"
+            },
+            "key": "A2",
+            "justification": "Normalization scales the features to a common range, usually between 0 and 1. This helps ensure that all features are treated equally and can improve model performance.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI/ML Engineer",
+            "question": "What is a common metric used to evaluate the performance of a neural network?",
+            "answers": {
+                "A1": "Accuracy",
+                "A2": "Precision",
+                "A3": "Recall",
+                "A4": "F1-score"
+            },
+            "key": "A4",
+            "justification": "The F1-score is the harmonic mean of precision and recall, providing a balanced measure of both. It's commonly used to evaluate the performance of neural networks.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI/ML Engineer",
+            "question": "Given a supervised learning model, what is the purpose of early stopping?",
+            "answers": {
+                "A1": "To prevent overfitting by reducing training time",
+                "A2": "To improve model generalization by preventing overfitting",
+                "A3": "To select the best hyperparameters quickly",
+                "A4": "To train the model on the entire dataset"
+            },
+            "key": "A2",
+            "justification": "Early stopping stops the training process when the model's performance on the validation set starts to degrade. This helps prevent overfitting and improves the model's generalizability.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI/ML Engineer",
+            "question": "What is a common technique used to reduce overfitting in neural networks?",
+            "answers": {
+                "A1": "Regularization",
+                "A2": "Data augmentation",
+                "A3": "Dropout",
+                "A4": "Batch normalization"
+            },
+            "key": "A3",
+            "justification": "Dropout randomly sets a fraction of the neurons to zero during training. This helps prevent overfitting by forcing the model to learn more general representations.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI/ML Engineer",
+            "question": "In linear regression, what is the cost function typically used to measure model performance?",
+            "answers": {
+                "A1": "$\\frac{1}{2} (y - (w^T x))^2$",
+                "A2": "$|y - (w^T x)|$",
+                "A3": "$(y - (w^T x))^4$",
+                "A4": "$e^{-2(y - (w^T x)^2)}$"
+            },
+            "key": "A1",
+            "justification": "The cost function in linear regression is typically $\\frac{1}{2} (y - (w^T x))^2$, which measures the difference between predicted and actual values. This is a common choice because it is easy to compute and provides a clear indication of model performance.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        }
+    ],
+    "generated_at": "2026-04-23 15:10:43",
+    "source": "RAG-Ollama"
+}

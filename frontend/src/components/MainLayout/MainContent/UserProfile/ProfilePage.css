@@ -1,0 +1,93 @@
+/* ProfilePage Refined Styles */
+.profile-page-refined {
+    background-color: #f8fafc;
+}
+
+.profile-page-refined .cv-onboarding-header-section {
+    margin-top: 0;
+    border-radius: 0;
+}
+
+.profile-page-refined .tab-content {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.profile-page-refined .review-tab-layout {
+    padding-top: 32px;
+}
+
+/* Decent Hover States for Onboarding-style cards */
+.profile-page-refined .summary-preview-section:hover {
+    border-color: #cbd5e1;
+    background-color: #ffffff;
+    box-shadow: none;
+}
+
+.profile-page-refined .btn-edit-section:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    color: #475569;
+}
+
+.profile-page-refined .skill-tag:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+    transform: none;
+}
+
+
+/* Let CvOnboarding.css handle the core summary preview styles for a consistent look */
+
+/* Update Tab Body Styles - Maintain the clean centered look */
+.profile-page-refined .update-tab-body {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    margin-top: 32px;
+}
+
+.profile-page-refined .update-simple-container {
+    text-align: center;
+    max-width: 400px;
+}
+
+.profile-page-refined .update-title {
+    font-size: 1.25rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.profile-page-refined .update-description {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+}
+
+.profile-page-refined .update-btn-decent {
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+    transition: all 0.2s ease;
+}
+
+.profile-page-refined .update-btn-decent:hover {
+    opacity: 0.9;
+}
+
+.profile-page-refined .tab-button:hover {
+    color: #475569;
+    background: none;
+}
+
+.profile-page-refined .tab-button.active {
+    color: #3b82f6;
+    border-bottom-color: #3b82f6;
+}

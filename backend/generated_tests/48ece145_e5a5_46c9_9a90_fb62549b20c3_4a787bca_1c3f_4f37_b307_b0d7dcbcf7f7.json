@@ -1,0 +1,458 @@
+{
+    "candidate_id": "48ece145-e5a5-46c9-9a90-fb62549b20c3",
+    "job_id": "4a787bca-1c3f-4f37-b307-b0d7dcbcf7f7",
+    "job_title": "Pakistan Study",
+    "requirements": [
+        "PHD in Pakistan Studies"
+    ],
+    "total_questions": 30,
+    "distribution": {
+        "analytical": 5,
+        "english": 5,
+        "job_specific": 20
+    },
+    "questions": [
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "In a sequence of numbers, each term is obtained by adding 3 to the previous term. If the first term is 2, what is the next three terms in the sequence?",
+            "answers": {
+                "A1": "5,8,11",
+                "A2": "4,7,10",
+                "A3": "6,9,12",
+                "A4": "0,3,6"
+            },
+            "key": "A1",
+            "justification": "Start with the first term 2. Add 3 to get 5. Then add 3 again to get 8. Finally, add 3 one more time to get 11.",
+            "justified_by": "Math Sequence"
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A bat and a ball together cost $1.10. The bat costs $1.00 more than the ball. How much does the ball cost?",
+            "answers": {
+                "A1": "$0.05",
+                "A2": "$0.10",
+                "A3": "$0.25",
+                "A4": "$0.50"
+            },
+            "key": "A2",
+            "justification": "Let the price of the ball be x. The bat costs $1.00 more than the ball, so its price is x + 1. The total cost of both is $1.10. Set up an equation: x + (x+1) = 1.10. Solve for x: 2x + 1 = 1.10 => 2x = 0.10 => x = 0.05.",
+            "justified_by": "Algebra"
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A snail is at the bottom of a 20-foot well. Each day, it climbs up 3 feet, but at night, it slips back 2 feet. How many days will it take for the snail to reach the top of the well?",
+            "answers": {
+                "A1": "18",
+                "A2": "20",
+                "A3": "22",
+                "A4": "18"
+            },
+            "key": "A1",
+            "justification": "Calculate daily progress: 3 feet up + 2 feet slip = 1 foot net gain per day. Since the well is 20 feet deep, it will take 20 days to climb 20 feet (20/1 = 20). However, on the 18th day, the snail climbs the final 3 feet and reaches the top.",
+            "justified_by": "Basic Math"
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A car travels at a speed of 40 mph over a certain distance. If it then returns over the same distance, how many hours will it take to complete the round trip?",
+            "answers": {
+                "A1": "3",
+                "A2": "4",
+                "A3": "2",
+                "A4": "6"
+            },
+            "key": "A2",
+            "justification": "Time = Distance/Speed. Since distance is the same for both legs of the trip, let's call it d. The total time is 2d/40 + 2d/40 = 4d/40 = d/10 hours.",
+            "justified_by": "Algebra"
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "In a sequence of numbers, each term after the first is obtained by multiplying the previous term by 2. If the first term is 5, what are the next three terms in the sequence?",
+            "answers": {
+                "A1": "10,20,40",
+                "A2": "15,30,60",
+                "A3": "25,50,100",
+                "A4": "8,16,32"
+            },
+            "key": "A1",
+            "justification": "Start with the first term 5. Multiply by 2 to get 10. Then multiply by 2 again to get 20. Finally, multiply by 2 one more time to get 40.",
+            "justified_by": "Math Sequence"
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "The philosopher's ___ arguments were extremely difficult for students to comprehend.",
+            "answers": {
+                "A1": "lucid",
+                "A2": "abstruse",
+                "A3": "clear",
+                "A4": "simple"
+            },
+            "key": "abstruse",
+            "justification": "Difficult arguments are abstruse",
+            "justified_by": "JSON-Fallback",
+            "frequency": 12
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "PALLIATE : PAIN",
+            "answers": {
+                "A1": "Solve : Problem",
+                "A2": "Mitigate : Damage",
+                "A3": "Cure : Disease",
+                "A4": "Remove : Obstacle",
+                "A5": "Heal : Wound"
+            },
+            "key": "Mitigate : Damage",
+            "justification": "To reduce severity of something",
+            "justified_by": "JSON-Fallback",
+            "frequency": 13
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "CLANDESTINE : SECRECY",
+            "answers": {
+                "A1": "Open : Concealment",
+                "A2": "Candid : Honesty",
+                "A3": "Public : Privacy",
+                "A4": "Obvious : Clarity",
+                "A5": "Hidden : Revelation"
+            },
+            "key": "Candid : Honesty",
+            "justification": "Quality requiring specific condition",
+            "justified_by": "JSON-Fallback",
+            "frequency": 14
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "PERFIDIOUS : LOYALTY",
+            "answers": {
+                "A1": "Steadfast : Commitment",
+                "A2": "Faithful : Devotion",
+                "A3": "Treacherous : Trust",
+                "A4": "Honorable : Integrity",
+                "A5": "Reliable : Dependability"
+            },
+            "key": "Treacherous : Trust",
+            "justification": "Betraying relationship foundation",
+            "justified_by": "JSON-Fallback",
+            "frequency": 12
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Opposite of CONDONE:",
+            "answers": {
+                "A1": "Forgive",
+                "A2": "Overlook",
+                "A3": "Condemn",
+                "A4": "Accept"
+            },
+            "key": "Condemn",
+            "justification": "Opposite of forgiving",
+            "justified_by": "JSON-Fallback",
+            "frequency": 13
+        },
+        {
+            "type": "medium",
+            "category": "Pakistan Study",
+            "question": "Who is credited with establishing the first department of Pakistan Studies at the University of Punjab?",
+            "answers": {
+                "A1": "Rahimuddin Kidwai",
+                "A2": "Muhammad Zafrulla Khan",
+                "A3": "Abdul Hamid Khan",
+                "A4": "Sir Sikandar Hayat Tahiri"
+            },
+            "key": "A1",
+            "justification": "Establishment of the first department in 1928 marked a significant milestone in the development of Pakistan Studies.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Pakistan Study",
+            "question": "What is the primary focus of the PhD program in Pakistan Studies?",
+            "answers": {
+                "A1": "Comparative Politics",
+                "A2": "History of Pakistan",
+                "A3": "Social and Cultural Dynamics",
+                "A4": "Interdisciplinary Approaches"
+            },
+            "key": "A2",
+            "justification": "The primary focus is on in-depth analysis of historical, social, cultural, and political aspects of Pakistan.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Pakistan Study",
+            "question": "Which of the following scholars is known for his work on the 'Urdu Movement' in Pakistan?",
+            "answers": {
+                "A1": "Muhammad Zafrulla Khan",
+                "A2": "Rahimuddin Kidwai",
+                "A3": "Sir Sikandar Hayat Tahiri",
+                "A4": "Abdul Hamid Khan"
+            },
+            "key": "A1",
+            "justification": "Muhammad Zafrulla Khan's work on the 'Urdu Movement' is a seminal contribution to Pakistan Studies.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Pakistan Study",
+            "question": "What is the significance of the concept of 'Jehlum Movement' in Pakistani history?",
+            "answers": {
+                "A1": "It marked the beginning of Pakistan's struggle for independence",
+                "A2": "It symbolized the unity of Muslims across South Asia",
+                "A3": "It was a key factor in the partition of India",
+                "A4": "It had no impact on Pakistan's foreign policy"
+            },
+            "key": "A1",
+            "justification": "The Jehlum Movement marked the beginning of Pakistan's struggle for independence and self-determination.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Pakistan Study",
+            "question": "Who is the author of the influential book 'The Great Indian Empire'?",
+            "answers": {
+                "A1": "Sir Sikandar Hayat Tahiri",
+                "A2": "Rahimuddin Kidwai",
+                "A3": "Muhammad Zafrulla Khan",
+                "A4": "Abdul Hamid Khan"
+            },
+            "key": "A1",
+            "justification": "The book provides a comprehensive analysis of the Indian subcontinent's history and politics.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Pakistan Study",
+            "question": "What is the primary method used in Pakistan Studies to analyze social change?",
+            "answers": {
+                "A1": "Qualitative Content Analysis",
+                "A2": "Quantitative Surveys",
+                "A3": "Case Study Approach",
+                "A4": "Narrative Analysis"
+            },
+            "key": "A1",
+            "justification": "Pakistan Studies employs qualitative content analysis to analyze complex social phenomena.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Pakistan Study",
+            "question": "Who is credited with the development of the first Pakistan Studies curriculum?",
+            "answers": {
+                "A1": "Sir Sikandar Hayat Tahiri",
+                "A2": "Rahimuddin Kidwai",
+                "A3": "Muhammad Zafrulla Khan",
+                "A4": "Abdul Hamid Khan"
+            },
+            "key": "A1",
+            "justification": "The curriculum provides a comprehensive framework for the study of Pakistan Studies.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Pakistan Study",
+            "question": "What is the significance of the concept of 'Pakistan Movement' in Pakistani history?",
+            "answers": {
+                "A1": "It marked the beginning of Pakistan's struggle for independence",
+                "A2": "It symbolized the unity of Muslims across South Asia",
+                "A3": "It was a key factor in the partition of India",
+                "A4": "It had no impact on Pakistan's foreign policy"
+            },
+            "key": "A1",
+            "justification": "The Pakistan Movement marked the beginning of Pakistan's struggle for independence and self-determination.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Pakistan Study",
+            "question": "What is the primary focus of a PhD in Pakistan Studies?",
+            "answers": {
+                "A1": "Foreign Policy",
+                "A2": "Domestic Politics",
+                "A3": "Economic Development",
+                "A4": "South Asian Relations"
+            },
+            "key": "A2",
+            "justification": "A PhD in Pakistan Studies focuses on the domestic politics of Pakistan, including its history, institutions, and governance.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Pakistan Study",
+            "question": "Which of the following is a key area of study in Pakistan Studies?",
+            "answers": {
+                "A1": "International Relations",
+                "A2": "Economic History",
+                "A3": "Social Movement Theory",
+                "A4": "Comparative Politics"
+            },
+            "key": "A1",
+            "justification": "International relations is a key area of study in Pakistan Studies, as it helps understand Pakistan's relationships with other countries.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Pakistan Study",
+            "question": "What is the significance of the concept of 'Wajda' in Pakistani politics?",
+            "answers": {
+                "A1": "It refers to a national day of mourning",
+                "A2": "It symbolizes Pakistan's independence",
+                "A3": "It represents Pakistan's relationship with India",
+                "A4": "It is a term used to describe Islamic values"
+            },
+            "key": "A1",
+            "justification": "Wajda refers to a national day of mourning in Pakistan, which is observed on March 23rd.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Pakistan Study",
+            "question": "Which of the following is a key factor that has influenced Pakistan's foreign policy?",
+            "answers": {
+                "A1": "Colonial legacy",
+                "A2": "Cold War dynamics",
+                "A3": "Regional security concerns",
+                "A4": "Economic interests"
+            },
+            "key": "A1",
+            "justification": "The colonial legacy of British India has significantly influenced Pakistan's foreign policy, particularly in terms of its relationships with other South Asian countries.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Pakistan Study",
+            "question": "What is the significance of the concept of 'Ideology' in Pakistani politics?",
+            "answers": {
+                "A1": "It refers to a set of principles guiding Pakistan's governance",
+                "A2": "It symbolizes Pakistan's relationship with the West",
+                "A3": "It represents Islamic values in Pakistan",
+                "A4": "It is a term used to describe economic policies"
+            },
+            "key": "A1",
+            "justification": "Ideology refers to a set of principles guiding Pakistan's governance, including its social and economic policies.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Pakistan Study",
+            "question": "Which of the following is a key area of study in comparative politics?",
+            "answers": {
+                "A1": "Domestic institutions",
+                "A2": "Foreign policy",
+                "A3": "Economic systems",
+                "A4": "Social movements"
+            },
+            "key": "A1",
+            "justification": "Comparative politics focuses on the comparison of domestic institutions, including their structure and function.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Pakistan Study",
+            "question": "What is the significance of the concept of 'Social Movement Theory' in Pakistani politics?",
+            "answers": {
+                "A1": "It refers to a type of protest movement",
+                "A2": "It symbolizes Pakistan's relationship with the West",
+                "A3": "It represents Islamic values in Pakistan",
+                "A4": "It is a term used to describe economic policies"
+            },
+            "key": "A1",
+            "justification": "Social Movement Theory refers to a type of protest movement that seeks to bring about social change.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Pakistan Study",
+            "question": "Which of the following is a key factor that has influenced Pakistan's economic development?",
+            "answers": {
+                "A1": "Colonial legacy",
+                "A2": "Foreign aid",
+                "A3": "Regional security concerns",
+                "A4": "Economic liberalization"
+            },
+            "key": "A2",
+            "justification": "Foreign aid has played a significant role in influencing Pakistan's economic development, particularly during the 1950s and 1960s.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Pakistan Study",
+            "question": "Who is the author of the book 'The Indus Civilization' which is considered as a seminal work on the subject of Indus Valley Civilization?",
+            "answers": {
+                "A1": "R. D. Banerji",
+                "A2": "I. J. Starostin",
+                "A3": "J. R. Marshall",
+                "A4": "D. P. Singh Rawat"
+            },
+            "key": "A1",
+            "justification": "The book 'The Indus Civilization' is written by Sir Robert Bruce Forbes (not mentioned in the options), but a similar seminal work was written by R.D.Banerji. However, it is widely agreed that D.P.Singh Rawat's book 'The Indus Valley Civilization: A New Perspective' has been considered as the most authoritative book on the subject.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Pakistan Study",
+            "question": "What is the name of the ancient trade route that connected the Indus Valley Civilization with the Mediterranean region?",
+            "answers": {
+                "A1": "Silk Road",
+                "A2": "Maritime Silk Road",
+                "A3": "Indus Trade Route",
+                "A4": "Khyber Pass"
+            },
+            "key": "A2",
+            "justification": "The Maritime Silk Road was the ancient trade route that connected the Indus Valley Civilization with the Mediterranean region.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Pakistan Study",
+            "question": "Which of the following ancient cities was an important center of trade and commerce in the Indus Valley Civilization?",
+            "answers": {
+                "A1": "Mohenjo-Daro",
+                "A2": "Harappa",
+                "A3": "Lothal",
+                "A4": "Dholavira"
+            },
+            "key": "A1",
+            "justification": "Mohenjo-Daro was an important center of trade and commerce in the Indus Valley Civilization.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Pakistan Study",
+            "question": "What is the name of the ancient civilization that flourished in modern-day Pakistan and northwestern India?",
+            "answers": {
+                "A1": "Vedic Civilization",
+                "A2": "Indus Valley Civilization",
+                "A3": "Sindhu Civilization",
+                "A4": "Bactrian Civilization"
+            },
+            "key": "A2",
+            "justification": "The Indus Valley Civilization was an ancient civilization that flourished in modern-day Pakistan and northwestern India.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        }
+    ],
+    "generated_at": "2026-04-18 16:35:09",
+    "source": "RAG-Ollama"
+}

@@ -1,0 +1,368 @@
+{
+    "candidate_id": "4c28b6fd-3e0e-4efa-a743-53c5facd168e",
+    "job_id": "bd560837-4894-4440-8b23-80a8a436bb28",
+    "job_title": "Front-end Developer",
+    "requirements": [
+        "2 years of experience in HTML",
+        "CSS",
+        "JavaScript and React",
+        "should also have Idea about php."
+    ],
+    "total_questions": 25,
+    "distribution": {
+        "analytical": 4,
+        "english": 4,
+        "job_specific": 17
+    },
+    "questions": [
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "In the sequence: A B C D E F G H, what letter is two positions to the left of H?",
+            "answers": {
+                "A1": "H",
+                "A2": "G",
+                "A3": "F",
+                "A4": "E"
+            },
+            "key": "A2",
+            "justification": "Since the sequence wraps around after H, we need to find the letter 2 positions before H. Starting from H and moving left, we get F (1 position) and E (2 positions). Therefore, E is two positions to the left of H.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "If a bag of flour weighs 1 kilogram plus the weight of hay, and it costs $0.50 per kilogram plus $0.10 per unit of hay, how much does the bag of flour weigh?",
+            "answers": {
+                "A1": "$2.20",
+                "A2": "$2.30",
+                "A3": "$2.40",
+                "A4": "$2.50"
+            },
+            "key": "A2",
+            "justification": "The weight of hay is not given, but we know the total cost includes $0.50 per kilogram plus $0.10 per unit of hay. Let's assume the bag contains x units of hay. The total cost would be $0.50x + 1$. We need to find the value of x that satisfies this equation. Assuming a fixed weight for the bag, we can set up an inequality: $0.50x + 1 < 2.30$, which gives us x = 4.6 units of hay. However, since we can't have fractions of hay, and the question asks for the total weight, not the cost or the number of units of hay, the most reasonable answer is that the bag weighs $2.30 (1kg + 0.30kg), which is a simplification of the original problem.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "In 13 years time, the combined ages of my three brothers will be 94. What will it be in 5 years?",
+            "answers": {
+                "A1": "85",
+                "A2": "88",
+                "A3": "91",
+                "A4": "94"
+            },
+            "key": "A2",
+            "justification": "Let's assume the current age of each brother is x, y, and z. In 13 years, their ages will be x+13, y+13, and z+13. The sum of these ages is 3x+39=94. We can find the value of x: 3x = 55, so x = 18.33. This means each brother's current age is approximately 18.33 years. In 5 years, their combined ages will be (18.33 + 5) x 3 = 88.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A snail is at the bottom of a 20-foot well. Each day, it climbs up 3 feet, but at night, it slips back 2 feet. How many days will it take for the snail to reach the top of the well?",
+            "answers": {
+                "A1": "18",
+                "A2": "20",
+                "A3": "22",
+                "A4": "25"
+            },
+            "key": "A3",
+            "justification": "The snail climbs 3 feet up during the day, so every day it advances 3-2=1 foot. Since the well is 20 feet deep, the snail will climb for 18 days to reach 18 feet. On the 19th day, the snail climbs 3 feet and reaches 21 feet, but since the top of the well is only at 20 feet, it can't climb further on that day. Therefore, the snail needs 19 days to climb 18 feet and then one more day to reach the top.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "Opposite of SOLICIT: What does this word convey?",
+            "answers": {
+                "A1": "Request",
+                "A2": "Entreat",
+                "A3": "Implore",
+                "A4": "Negotiate"
+            },
+            "key": "A1",
+            "justification": "Solicit implies asking or seeking something. Its opposite would be a situation where someone is refusing or denying a request, which makes 'Negotiate' the correct answer.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "Choose similar meaning to VINDICATE: What does this word convey?",
+            "answers": {
+                "A1": "Defend",
+                "A2": "Justify",
+                "A3": "Explain",
+                "A4": "Apologize"
+            },
+            "key": "A2",
+            "justification": "Vindicate means to prove or justify something, often in a formal or official context. Similar meanings include 'justify' and 'explain', which makes option A2 the correct answer.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "Choose similar meaning to PRAGMATIC: What does this word convey?",
+            "answers": {
+                "A1": "Idealistic",
+                "A2": "Practical",
+                "A3": "Rational",
+                "A4": "Emotional"
+            },
+            "key": "A2",
+            "justification": "Pragmatic refers to something that is practical or useful, often in a situation where idealism may not be feasible. Options A2 and B are both correct, but since the prompt asks for 'similar meaning', option A2 is the more suitable answer.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "Complete the sentence: The teacher's firm tone made it clear that _______.",
+            "answers": {
+                "A1": "she was angry",
+                "A2": "he was disappointed",
+                "A3": "they were surprised",
+                "A4": "they were pleased"
+            },
+            "key": "A1",
+            "justification": "The sentence requires an adjective to describe the teacher's tone, and 'firm' implies a sense of authority or seriousness. Since the context suggests that the teacher is emphasizing something strongly, option A1 is the most logical completion.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Front-end Developer",
+            "question": "In React, what is the purpose of the 'key' prop in a JSX element?",
+            "answers": {
+                "A1": "To specify the ID of an HTML element.",
+                "A2": "To group elements by their context.",
+                "A3": "To optimize rendering performance by minimizing re-renders.",
+                "A4": "To enable server-side rendering."
+            },
+            "key": "A1",
+            "justification": "The 'key' prop in React helps the library efficiently update components when the state changes. It allows React to identify which elements have changed, added, or removed, and update them accordingly.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Front-end Developer",
+            "question": "What is the difference between ' var' and 'let' in JavaScript?",
+            "answers": {
+                "A1": "Scope and hoisting differences.",
+                "A2": "Syntax and semantics differences.",
+                "A3": "Runtime behavior differences.",
+                "A4": "Compilation differences."
+            },
+            "key": "A2",
+            "justification": "In JavaScript, 'var' declares a variable with function scope, whereas 'let' declares a variable with block scope. This difference affects how variables are hoisted and accessed within the code.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Front-end Developer",
+            "question": "How do you handle server-side rendering with React and Express?",
+            "answers": {
+                "A1": "Using a library like React Server Components.",
+                "A2": "By using the 'req.session' object in your components.",
+                "A3": "By setting up an Express middleware to render React components.",
+                "A4": "By disabling server-side rendering altogether."
+            },
+            "key": "A1",
+            "justification": "To handle server-side rendering with React and Express, you can use a library like React Server Components or set up an Express middleware to render React components. This allows you to serve React apps on the server-side.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Front-end Developer",
+            "question": "What is the purpose of PHP's 'isset' function?",
+            "answers": {
+                "A1": "To check if a variable has been set.",
+                "A2": "To check if a variable has been initialized.",
+                "A3": "To check if a variable has changed value.",
+                "A4": "To check if a variable is empty."
+            },
+            "key": "A1",
+            "justification": "PHP's 'isset' function checks if a variable has been set and is not NULL. This allows you to write safer code by avoiding errors caused by unset variables.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Front-end Developer",
+            "question": "In React, what is the difference between 'state' and 'props'?",
+            "answers": {
+                "A1": "State is immutable, while props are mutable.",
+                "A2": "State is reactive, while props are immutable.",
+                "A3": "State is shared among components, while props are not.",
+                "A4": "State is server-side rendered, while props are client-side rendered."
+            },
+            "key": "A2",
+            "justification": "In React, 'state' refers to the component's internal state, which can change over time. 'Props', short for properties, refer to data passed from a parent component to a child component.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Front-end Developer",
+            "question": "How do you optimize image loading in React?",
+            "answers": {
+                "A1": "By using the 'Lazy Load' library.",
+                "A2": "By compressing images using GIMP.",
+                "A3": "By setting a low 'imageQuality' option when using 'img' tags.",
+                "A4": "By using CSS to set an 'object-fit' property."
+            },
+            "key": "A1",
+            "justification": "To optimize image loading in React, you can use libraries like Lazy Load or compress images using tools like GIMP. This reduces the initial payload and improves page load times.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Front-end Developer",
+            "question": "What is the purpose of PHP's 'session_start' function?",
+            "answers": {
+                "A1": "To create a new session.",
+                "A2": "To initialize an existing session.",
+                "A3": "To destroy a session.",
+                "A4": "To retrieve a session value."
+            },
+            "key": "A2",
+            "justification": "PHP's 'session_start' function initializes an existing session or creates a new one. This allows you to store data across multiple requests and sessions.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Front-end Developer",
+            "question": "In React, what is the purpose of the 'useContext' hook?",
+            "answers": {
+                "A1": "To access context values from a parent component.",
+                "A2": "To create a new context API.",
+                "A3": "To share data between components without props.",
+                "A4": "To optimize rendering performance."
+            },
+            "key": "A1",
+            "justification": "The 'useContext' hook in React allows you to access context values from a parent component. This enables you to share data between components without using props or state.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Front-end Developer",
+            "question": "What is the primary difference between a GET and POST request in React?",
+            "answers": {
+                "A1": "The request body size is limited",
+                "A2": "The request body is sent as form data",
+                "A3": "The request is cached by the browser",
+                "A4": "The server responds with a redirect"
+            },
+            "key": "A1"
+        },
+        {
+            "type": "medium",
+            "category": "Front-end Developer",
+            "question": "How do you update an element's style using JavaScript?",
+            "answers": {
+                "A1": ".style = 'color: blue';",
+                "A2": "$.style = 'color: blue';",
+                "A3": "document.style = 'color: blue';",
+                "A4": "element.classList.add('blue');"
+            },
+            "key": "A1"
+        },
+        {
+            "type": "medium",
+            "category": "Front-end Developer",
+            "question": "What is the purpose of the `fetch` API in React?",
+            "answers": {
+                "A1": "To send a request to the server and get data",
+                "A2": "To update the DOM with new data",
+                "A3": "To cache data on the client-side",
+                "A4": "To handle server-side rendering"
+            },
+            "key": "A1"
+        },
+        {
+            "type": "medium",
+            "category": "Front-end Developer",
+            "question": "How do you handle errors in a React application?",
+            "answers": {
+                "A1": "By using try-catch blocks",
+                "A2": "By using error callbacks",
+                "A3": "By ignoring errors and continuing execution",
+                "A4": "By using async/await syntax"
+            },
+            "key": "A1"
+        },
+        {
+            "type": "medium",
+            "category": "Front-end Developer",
+            "question": "What is the difference between `var`, `let`, and `const` in JavaScript?",
+            "answers": {
+                "A1": "Var declares a global variable",
+                "A2": "Let declares a block-scoped variable",
+                "A3": "Const declares an immutable variable",
+                "A4": "Const declares a function parameter"
+            },
+            "key": "A1"
+        },
+        {
+            "type": "medium",
+            "category": "Front-end Developer",
+            "question": "How do you optimize the performance of a React application?",
+            "answers": {
+                "A1": "By using lazy loading and caching",
+                "A2": "By using infinite scrolling and polling",
+                "A3": "By ignoring performance optimization and continuing development",
+                "A4": "By using code splitting and dynamic imports"
+            },
+            "key": "A1"
+        },
+        {
+            "type": "medium",
+            "category": "Front-end Developer",
+            "question": "What is the purpose of PHP's `session_start()` function?",
+            "answers": {
+                "A1": "To start a new session",
+                "A2": "To destroy an existing session",
+                "A3": "To check if a session exists",
+                "A4": "To regenerate a session ID"
+            },
+            "key": "A1"
+        },
+        {
+            "type": "medium",
+            "category": "Front-end Developer",
+            "question": "How do you secure a React application against cross-site scripting (XSS) attacks?",
+            "answers": {
+                "A1": "By using input validation and sanitization",
+                "A2": "By ignoring security measures and continuing development",
+                "A3": "By using CSRF tokens and same-origin policy",
+                "A4": "By using secure protocols like HTTPS"
+            },
+            "key": "A1"
+        },
+        {
+            "type": "medium",
+            "category": "Front-end Developer",
+            "question": "A front-end developer is tasked with optimizing the loading of images on a webpage. Which JavaScript optimization technique would be most effective in this scenario?",
+            "answers": {
+                "A1": "Defer",
+                "A2": "Preload",
+                "A3": "Lazy Loading",
+                "A4": "Async"
+            },
+            "key": "A1",
+            "justification": "When images are preloaded, the browser starts loading them before they become visible on the page. This reduces the load time and makes the webpage feel faster. Defer only delays the execution of the script, whereas async can lead to inconsistent rendering of web pages.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        }
+    ],
+    "generated_at": "2026-03-11 01:40:52",
+    "source": "RAG-Ollama"
+}

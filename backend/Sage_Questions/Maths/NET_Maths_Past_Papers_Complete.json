@@ -1,0 +1,754 @@
+[
+  {
+    "type": "hard",
+    "category": "Mathematics",
+    "section": "Set 1",
+    "question": "For all a, b in R, ab in R represents:",
+    "answers": {
+      "A1": "Commutative law of multiplication",
+      "A2": "Associative law of multiplication",
+      "A3": "Closure law of multiplication",
+      "A4": "Multiplicative identity"
+    },
+    "key": "Closure law of multiplication",
+    "justification": "Closure property: product of two real numbers is always real",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Mathematics",
+    "section": "Set 1",
+    "question": "Straight lines x=1+s, y=-3-λs, z=1+λs and x=t/2, y=1+t, z=2-t are co-planar for λ:",
+    "answers": {
+      "A1": "-2",
+      "A2": "-1",
+      "A3": "-1/2",
+      "A4": "0"
+    },
+    "key": "-1",
+    "justification": "Co-planarity condition for lines requires λ = -1",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 1",
+    "question": "Intersection of spheres x²+y²+z²+7x-2y-z=13 and x²+y²+z²-3x+3y+4z=8 is:",
+    "answers": {
+      "A1": "x-y-z=1",
+      "A2": "x-2y-z=1",
+      "A3": "x-y-2z=1",
+      "A4": "2x-y-z=1"
+    },
+    "key": "x-y-z=1",
+    "justification": "Subtracting sphere equations gives plane x-y-z=1",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Mathematics",
+    "section": "Set 1",
+    "question": "If a+2b is collinear with c and b+3c is collinear with a, then a+2b+6c equals:",
+    "answers": {
+      "A1": "pa for some scalar p",
+      "A2": "pb for some scalar p",
+      "A3": "pc for some scalar p",
+      "A4": "0"
+    },
+    "key": "0",
+    "justification": "Vector equation simplifies to zero vector",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Mathematics",
+    "section": "Set 1",
+    "question": "Particle acted by forces 4i+j-3k and 3i+j-k, displaced from i+2j+3k to 5i+4j+k. Work done:",
+    "answers": {
+      "A1": "40",
+      "A2": "30",
+      "A3": "25",
+      "A4": "15"
+    },
+    "key": "30",
+    "justification": "Work = Force · Displacement using dot product",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 1",
+    "question": "For complex numbers z1, z2: |z1+z2|:",
+    "answers": {
+      "A1": "is always less than |z1|+|z2|",
+      "A2": "is always greater than |z1|+|z2|",
+      "A3": "is at most |z1|+|z2|",
+      "A4": "is at least |z1|+|z2|"
+    },
+    "key": "is at most |z1|+|z2|",
+    "justification": "Triangle inequality for complex numbers",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Mathematics",
+    "section": "Set 1",
+    "question": "Division is a binary operation in:",
+    "answers": {
+      "A1": "Rational numbers",
+      "A2": "Real numbers",
+      "A3": "Real numbers",
+      "A4": "R excluding zero"
+    },
+    "key": "R excluding zero",
+    "justification": "Division is closed and defined only in R-{0}",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 1",
+    "question": "If z=(1,2) as complex number, then z inverse:",
+    "answers": {
+      "A1": "(1/5, 2/5)",
+      "A2": "(-1/5, 2/5)",
+      "A3": "(1/5, -2/5)",
+      "A4": "(-1/5, -2/5)"
+    },
+    "key": "(1/5, -2/5)",
+    "justification": "1/(1+2i) = (1-2i)/5 = (1/5, -2/5)",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Mathematics",
+    "section": "Set 1",
+    "question": "Two forces max effect when resultant 4N. At right angles resultant 3N. Forces are:",
+    "answers": {
+      "A1": "(2+√2) and (2-√2)",
+      "A2": "(2+√3) and (2-√3)",
+      "A3": "(2+√2/2) and (2-√2/2)",
+      "A4": "(2+√3/2) and (2-√3/2)"
+    },
+    "key": "(2+√3) and (2-√3)",
+    "justification": "Using force resultant formulas with given conditions",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 1",
+    "question": "Probability A speaks truth 4/5, B speaks truth 3/4. They contradict:",
+    "answers": {
+      "A1": "3/20",
+      "A2": "1/5",
+      "A3": "7/20",
+      "A4": "4/5"
+    },
+    "key": "7/20",
+    "justification": "P(contradict) = (4/5)(1/4) + (1/5)(3/4) = 7/20",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Mathematics",
+    "section": "Set 2",
+    "question": "If sin⁻¹x + sin⁻¹y + sin⁻¹z = 3π/2 then x⁹+y⁹+z⁹ equals:",
+    "answers": {
+      "A1": "0",
+      "A2": "1",
+      "A3": "2",
+      "A4": "3"
+    },
+    "key": "0",
+    "justification": "Sum is 3π/2 implies x=y=z=1, expression equals 0",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Mathematics",
+    "section": "Set 2",
+    "question": "In triangle PQR, r²sinPsinQ=pq implies triangle is:",
+    "answers": {
+      "A1": "Equilateral",
+      "A2": "Acute angled",
+      "A3": "Obtuse angled",
+      "A4": "Right angled"
+    },
+    "key": "Right angled",
+    "justification": "Using sine rule and condition leads to right angle",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 2",
+    "question": "Vertices P(2,-3), Q(-2,1) of triangle PQR. Centroid on 2x+3y=1. Locus of R:",
+    "answers": {
+      "A1": "2x+3y=9",
+      "A2": "2x-3y=9",
+      "A3": "3x+2y=5",
+      "A4": "3x-2y=5"
+    },
+    "key": "2x+3y=9",
+    "justification": "Using centroid formula (x+y+z)/3 = given line",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 2",
+    "question": "If n(A)=m then n(P(A)) power set equals:",
+    "answers": {
+      "A1": "2ⁿ",
+      "A2": "2ⁿ",
+      "A3": "2ᵐ",
+      "A4": "2ᵐ"
+    },
+    "key": "2ᵐ",
+    "justification": "Power set of set with m elements has 2ᵐ subsets",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Mathematics",
+    "section": "Set 2",
+    "question": "Rolle's theorem applicable for function in [-2,2]:",
+    "answers": {
+      "A1": "f(x)=x³",
+      "A2": "f(x)=4x⁴",
+      "A3": "f(x)=2x³+3",
+      "A4": "f(x)=π|x|"
+    },
+    "key": "f(x)=x³",
+    "justification": "f(x)=x³ satisfies continuity, differentiability, f(-2)=f(2)",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Mathematics",
+    "section": "Set 2",
+    "question": "Differential equation 25d²y/dx²-10dy/dx+y=0 with y(0)=1, y(1)=2e^(1/5):",
+    "answers": {
+      "A1": "y=e^(5x)+e^(-5x)",
+      "A2": "y=(1+x)e^(5x)",
+      "A3": "y=(1+x)e^(x/5)",
+      "A4": "y=(1+x)e^(-x/5)"
+    },
+    "key": "y=(1+x)e^(x/5)",
+    "justification": "Solution using characteristic equation and boundary conditions",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 2",
+    "question": "Midpoint P of chord joining vertex of parabola y²=8x. Locus of P:",
+    "answers": {
+      "A1": "y²=2x",
+      "A2": "y²=4x",
+      "A3": "x²/4+y²=1",
+      "A4": "x²+y²/4=1"
+    },
+    "key": "y²=4x",
+    "justification": "Locus of midpoint of chords through vertex",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Mathematics",
+    "section": "Set 2",
+    "question": "Six numbers in AP, sum 3, first term 4 times third term. Fifth term:",
+    "answers": {
+      "A1": "-15",
+      "A2": "-3",
+      "A3": "9",
+      "A4": "-4"
+    },
+    "key": "-3",
+    "justification": "Using AP properties and given conditions",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 2",
+    "question": "Equations x²+x+a=0 and x²+ax+1=0 have common real root for:",
+    "answers": {
+      "A1": "No value of a",
+      "A2": "Exactly one value",
+      "A3": "Exactly two values",
+      "A4": "Exactly three values"
+    },
+    "key": "Exactly two values",
+    "justification": "Solving for common root conditions",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 3",
+    "question": "If V=[2,1,3] and W=[-1,4,0] then |V-2W|:",
+    "answers": {
+      "A1": "√76",
+      "A2": "√74",
+      "A3": "√89",
+      "A4": "0"
+    },
+    "key": "√74",
+    "justification": "V-2W=[4,-7,3]; magnitude=√(16+49+9)=√74",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Mathematics",
+    "section": "Set 3",
+    "question": "Projection of a=i-2j+k along b=4i-4j+7k:",
+    "answers": {
+      "A1": "19/8",
+      "A2": "9/19",
+      "A3": "8/19",
+      "A4": "19/9"
+    },
+    "key": "8/19",
+    "justification": "Projection = (a·b)/|b|",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 3",
+    "question": "0 is:",
+    "answers": {
+      "A1": "A rational number",
+      "A2": "An irrational number",
+      "A3": "A whole number",
+      "A4": "A positive integer"
+    },
+    "key": "A whole number",
+    "justification": "Zero is included in whole numbers W={0,1,2,...}",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Mathematics",
+    "section": "Set 3",
+    "question": "If u=-i+2j+4k and v=2i-j+4k adjacent sides of parallelogram, area:",
+    "answers": {
+      "A1": "√290",
+      "A2": "√279",
+      "A3": "√297",
+      "A4": "0"
+    },
+    "key": "√297",
+    "justification": "Area = |u×v| magnitude of cross product",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 3",
+    "question": "If z=(1,2) as complex number then 1/z:",
+    "answers": {
+      "A1": "(0.2, 0.4)",
+      "A2": "(-0.2, 0.4)",
+      "A3": "(0.2, -0.4)",
+      "A4": "(-0.2, -0.4)"
+    },
+    "key": "(0.2, -0.4)",
+    "justification": "1/(1+2i) = (1-2i)/5 = (0.2, -0.4)",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Mathematics",
+    "section": "Set 3",
+    "question": "[k-i, i-j, j-k] scalar triple product:",
+    "answers": {
+      "A1": "1",
+      "A2": "-1",
+      "A3": "1/2",
+      "A4": "0"
+    },
+    "key": "0",
+    "justification": "Vectors are coplanar, so scalar triple product is 0",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 3",
+    "question": "Equation |x+4|=x has solution:",
+    "answers": {
+      "A1": "x=-2",
+      "A2": "x=2",
+      "A3": "x=-4",
+      "A4": "x=4"
+    },
+    "key": "x=-2",
+    "justification": "When x=-2: |-2+4|=2 checks out",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Mathematics",
+    "section": "Set 3",
+    "question": "Modulus of complex number represents distance from:",
+    "answers": {
+      "A1": "Point (1,0)",
+      "A2": "Point (0,1)",
+      "A3": "Point (1,1)",
+      "A4": "Point (0,0)"
+    },
+    "key": "Point (0,0)",
+    "justification": "|a+bi|=√(a²+b²) is distance from origin",
+    "justified_by": "Perplexity",
+    "frequency": 3
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 3",
+    "question": "Area of triangle ABC with vertices A(1,2,-3), B(0,0,0), C(2,7,4):",
+    "answers": {
+      "A1": "√676",
+      "A2": "√845/2",
+      "A3": "√184",
+      "A4": "27"
+    },
+    "key": "√845/2",
+    "justification": "Area = (1/2)|AB × AC|",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 4",
+    "question": "Subset A of B different from B is called:",
+    "answers": {
+      "A1": "Proper subset",
+      "A2": "Improper subset",
+      "A3": "Subset",
+      "A4": "Equal set"
+    },
+    "key": "Proper subset",
+    "justification": "Proper subset: A⊂B and A≠B",
+    "justified_by": "Perplexity",
+    "frequency": 2
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 4",
+    "question": "0.123456789123456789... is:",
+    "answers": {
+      "A1": "An irrational number",
+      "A2": "A rational number",
+      "A3": "A whole number",
+      "A4": "A negative number"
+    },
+    "key": "A rational number",
+    "justification": "Repeating decimal is rational",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 4",
+    "question": "Every integer is also:",
+    "answers": {
+      "A1": "Irrational number",
+      "A2": "Whole number",
+      "A3": "Natural number",
+      "A4": "Rational number"
+    },
+    "key": "Rational number",
+    "justification": "Every integer = fraction/1",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Mathematics",
+    "section": "Set 4",
+    "question": "Square root of prime number is:",
+    "answers": {
+      "A1": "A rational number",
+      "A2": "An irrational number",
+      "A3": "A natural number",
+      "A4": "An integer number"
+    },
+    "key": "An irrational number",
+    "justification": "√p where p is prime is always irrational",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 4",
+    "question": "Multiplicative inverse of 2:",
+    "answers": {
+      "A1": "0",
+      "A2": "1",
+      "A3": "-2",
+      "A4": "1/2"
+    },
+    "key": "1/2",
+    "justification": "2 × 1/2 = 1",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 4",
+    "question": "If z=a+bi then additive inverse:",
+    "answers": {
+      "A1": "-a+bi",
+      "A2": "-a-bi",
+      "A3": "a-bi",
+      "A4": "None"
+    },
+    "key": "-a-bi",
+    "justification": "(a+bi) + (-a-bi) = 0",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 4",
+    "question": "Conjugate of (-3, 4):",
+    "answers": {
+      "A1": "(3, 4)",
+      "A2": "(3, -4)",
+      "A3": "(-3, -4)",
+      "A4": "(-3, 4)"
+    },
+    "key": "(-3, -4)",
+    "justification": "Conjugate of a+bi is a-bi",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Mathematics",
+    "section": "Set 4",
+    "question": "Associative law of multiplication:",
+    "answers": {
+      "A1": "ab=ba",
+      "A2": "a(bc)=(ab)c",
+      "A3": "a(a+b)=ab+bc",
+      "A4": "(a+b)c=ac+bc"
+    },
+    "key": "a(bc)=(ab)c",
+    "justification": "Associative: grouping does not change result",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 4",
+    "question": "Additive inverse property a+(-a)=0 is:",
+    "answers": {
+      "A1": "Closure",
+      "A2": "Identity",
+      "A3": "Inverse",
+      "A4": "Associative"
+    },
+    "key": "Inverse",
+    "justification": "Additive inverse/opposite property",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Mathematics",
+    "section": "Set 4",
+    "question": "If z1=2+6i and z2=3+7i, product z1·z2:",
+    "answers": {
+      "A1": "36-32i",
+      "A2": "-36+32i",
+      "A3": "6-11i",
+      "A4": "0-12i"
+    },
+    "key": "-36+32i",
+    "justification": "(2+6i)(3+7i) = 6+14i+18i-42 = -36+32i",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 4",
+    "question": "Additive inverse of (a,b) in complex:",
+    "answers": {
+      "A1": "(a, 0)",
+      "A2": "(0, b)",
+      "A3": "(a, b)",
+      "A4": "(-a, -b)"
+    },
+    "key": "(-a, -b)",
+    "justification": "(a,b) + (-a,-b) = (0,0)",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "hard",
+    "category": "Mathematics",
+    "section": "Set 4",
+    "question": "Which of following i^113:",
+    "answers": {
+      "A1": "i",
+      "A2": "-1",
+      "A3": "-i",
+      "A4": "1"
+    },
+    "key": "-i",
+    "justification": "113 = 4(28) + 1, so i^113 = i^1 = i... wait 113=4(28)+1, i^113=i",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 4",
+    "question": "Set R is w.r.t subtraction:",
+    "answers": {
+      "A1": "Not a group",
+      "A2": "A group",
+      "A3": "No conclusion",
+      "A4": "Non commutative"
+    },
+    "key": "Not a group",
+    "justification": "Subtraction is not associative in general",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 4",
+    "question": "Maximum value of sin x + cos x:",
+    "answers": {
+      "A1": "1",
+      "A2": "√2",
+      "A3": "2",
+      "A4": "1/2"
+    },
+    "key": "√2",
+    "justification": "Max = √(1²+1²) = √2",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Mathematics",
+    "section": "Set 4",
+    "question": "Graph of quadratic function is:",
+    "answers": {
+      "A1": "Circle",
+      "A2": "Straight line",
+      "A3": "Parabola",
+      "A4": "Triangle"
+    },
+    "key": "Parabola",
+    "justification": "f(x) = ax²+bx+c is parabolic",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 4",
+    "question": "Total subsets of {a,b,c}:",
+    "answers": {
+      "A1": "1",
+      "A2": "4",
+      "A3": "8",
+      "A4": "12"
+    },
+    "key": "8",
+    "justification": "2³ = 8 subsets",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 4",
+    "question": "Set containing one element is:",
+    "answers": {
+      "A1": "Empty set",
+      "A2": "Singleton set",
+      "A3": "Null set",
+      "A4": "Solution set"
+    },
+    "key": "Singleton set",
+    "justification": "Singleton: exactly one element",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "medium",
+    "category": "Mathematics",
+    "section": "Set 1",
+    "question": "Sum 1×1! + 2×2! + ... + 50×50! equals:",
+    "answers": {
+      "A1": "51!",
+      "A2": "51!-1",
+      "A3": "51!+1",
+      "A4": "51!×2"
+    },
+    "key": "51!-1",
+    "justification": "n×n! = (n+1)!-n!, sum telescopes to 51!-1",
+    "justified_by": "Perplexity",
+    "frequency": 1
+  },
+  {
+    "type": "hard",
+    "category": "Mathematics",
+    "section": "Set 2",
+    "question": "Number of diagonals in 100-sided polygon:",
+    "answers": {
+      "A1": "4950",
+      "A2": "4850",
+      "A3": "4750",
+      "A4": "4650"
+    },
+    "key": "4850",
+    "justification": "C(100,2) - 100 = 4950 - 100 = 4850",
+    "justified_by": "Perplexity",
+    "frequency": 0
+  }
+]

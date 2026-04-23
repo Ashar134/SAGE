@@ -1,0 +1,593 @@
+{
+    "candidate_id": "48ece145-e5a5-46c9-9a90-fb62549b20c3",
+    "job_id": "28740540-dcbe-4791-bfc0-e4d79728b749",
+    "job_title": "Front-end developer and React Expert",
+    "requirements": [
+        "2 years of experience in React",
+        "Html",
+        "CSS",
+        "JavaScript"
+    ],
+    "total_questions": 37,
+    "distribution": {
+        "analytical": 8,
+        "english": 8,
+        "job_specific": 34
+    },
+    "questions": [
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "What number will come at the question mark in the sequence: 25, 32, 27, 36, ?",
+            "answers": {
+                "A1": "31",
+                "A2": "29",
+                "A3": "27",
+                "A4": "33"
+            },
+            "key": "29",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 31
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A man has 53 socks in his drawer: 21 identical blue, 15 identical black and 17 identical red. The lights are fused and he is completely in the dark. How many socks must he take out to make 100 per cent certain he has a pair of black socks?",
+            "answers": {
+                "A1": "35",
+                "A2": "40",
+                "A3": "45",
+                "A4": "50"
+            },
+            "key": "40",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 22
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "What number should replace the question mark below:  7 & 10 & 9 & 6 , 5 & 1 & 3 & 7 , 2 & 3 & 2 & 1 , 4 & 12 & 8 & ?",
+            "answers": {
+                "A1": "0",
+                "A2": "2",
+                "A3": "1",
+                "A4": "4"
+            },
+            "key": "0",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 22
+        },
+        {
+            "type": "hard",
+            "category": "analytical",
+            "question": "You have 59 cubic blocks. What is the minimum number that needs to be taken away in order to construct a solid cube with none left over?",
+            "answers": {
+                "A1": "32",
+                "A2": "28",
+                "A3": "48",
+                "A4": "16"
+            },
+            "key": "32",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 32
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "The original price of a shirt is Rs. 1,200. What would be its price after 22% sale?",
+            "answers": {
+                "A1": "1,086",
+                "A2": "876",
+                "A3": "936",
+                "A4": "1,046"
+            },
+            "key": "936",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 19
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A man jogs at 6 mph over a certain journey and walks back over the same journey at 3 mph. What is his average speed for the journey?",
+            "answers": {
+                "A1": "3mph",
+                "A2": "4mph",
+                "A3": "2mph",
+                "A4": "5mph"
+            },
+            "key": "4mph",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 28
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "Which number appears next in the pattern? 21, 23, 26, 30, ?",
+            "answers": {
+                "A1": "32",
+                "A2": "33",
+                "A3": "35",
+                "A4": "37"
+            },
+            "key": "35",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 29
+        },
+        {
+            "type": "hard",
+            "category": "analytical",
+            "question": "In 13 years time the combined ages of my three brothers will be 94. What will it be in nine years time?",
+            "answers": {
+                "A1": "91",
+                "A2": "72",
+                "A3": "82",
+                "A4": "Not sufficient information to answer."
+            },
+            "key": "82",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 27
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "Correct: 'It's time you ___ home.'",
+            "answers": {
+                "A1": "go",
+                "A2": "went",
+                "A3": "will go",
+                "A4": "going"
+            },
+            "key": "went",
+            "justification": "It's time + past tense",
+            "justified_by": "JSON-Fallback",
+            "frequency": 7
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "Correct: 'I wish I ___ harder when younger.'",
+            "answers": {
+                "A1": "studied",
+                "A2": "had studied",
+                "A3": "have studied",
+                "A4": "would study"
+            },
+            "key": "had studied",
+            "justification": "Past perfect after wish",
+            "justified_by": "JSON-Fallback",
+            "frequency": 12
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "EPHEMERAL : DURATION",
+            "answers": {
+                "A1": "Infinite : Space",
+                "A2": "Massive : Weight",
+                "A3": "Minuscule : Size",
+                "A4": "Rapid : Speed",
+                "A5": "Ancient : Time"
+            },
+            "key": "Minuscule : Size",
+            "justification": "Adjective describing measurement",
+            "justified_by": "JSON-Fallback",
+            "frequency": 14
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "The treaty's provisions were intentionally ___ to allow for future interpretations.",
+            "answers": {
+                "A1": "specific",
+                "A2": "vague",
+                "A3": "explicit",
+                "A4": "detailed"
+            },
+            "key": "vague",
+            "justification": "Unclear language is vague",
+            "justified_by": "JSON-Fallback",
+            "frequency": 12
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Choose similar meaning to EQUIVOCAL:",
+            "answers": {
+                "A1": "Clear",
+                "A2": "Ambiguous",
+                "A3": "Definite",
+                "A4": "Certain"
+            },
+            "key": "Ambiguous",
+            "justification": "Equivocal means open to interpretation",
+            "justified_by": "JSON-Fallback",
+            "frequency": 14
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Choose similar meaning to UNTENABLE:",
+            "answers": {
+                "A1": "Indefensible",
+                "A2": "Unpleasant",
+                "A3": "Unexpected",
+                "A4": "Unnecessary"
+            },
+            "key": "Indefensible",
+            "justification": "Untenable means impossible to defend",
+            "justified_by": "JSON-Fallback",
+            "frequency": 9
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "Correct: 'By next month, he ___ at this company for exactly ten years.'",
+            "answers": {
+                "A1": "will work",
+                "A2": "will have worked",
+                "A3": "works",
+                "A4": "has worked"
+            },
+            "key": "will have worked",
+            "justification": "Future perfect for duration",
+            "justified_by": "JSON-Fallback",
+            "frequency": 6
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "The film critic's ___ review condemned the director's entire body of work.",
+            "answers": {
+                "A1": "mild",
+                "A2": "scathing",
+                "A3": "favorable",
+                "A4": "neutral"
+            },
+            "key": "scathing",
+            "justification": "Harsh criticism is scathing",
+            "justified_by": "JSON-Fallback",
+            "frequency": 11
+        },
+        {
+            "type": "hard",
+            "category": "OOP",
+            "question": "What is the Facade pattern?",
+            "answers": {
+                "A1": "A pattern for building facades",
+                "A2": "A pattern that provides unified interface to subsystem",
+                "A3": "A pattern for exterior design",
+                "A4": "A pattern for surface treatment"
+            },
+            "key": "A pattern that provides unified interface to subsystem",
+            "justification": "Facade pattern hides complexity of subsystems behind simple interface, improving usability.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 15
+        },
+        {
+            "type": "medium",
+            "category": "OOP",
+            "question": "What is const correctness?",
+            "answers": {
+                "A1": "Using const keyword everywhere",
+                "A2": "A programming practice of using const to prevent unintended modifications",
+                "A3": "Making all variables constants",
+                "A4": "A compiler optimization"
+            },
+            "key": "A programming practice of using const to prevent unintended modifications",
+            "justification": "Const correctness means using const strategically to enforce compile-time contracts about object mutability.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 23
+        },
+        {
+            "type": "medium",
+            "category": "OOP",
+            "question": "In a copy constructor, objects must be passed by ______",
+            "answers": {
+                "A1": "Value",
+                "A2": "Pointer",
+                "A3": "Reference",
+                "A4": "Const reference"
+            },
+            "key": "Const reference",
+            "justification": "Objects are passed by const reference to prevent infinite recursion and ensure the source object isn't modified.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 16
+        },
+        {
+            "type": "easy",
+            "category": "Data Structures",
+            "question": "In graph terminology, what is a vertex?",
+            "answers": {
+                "A1": "An edge connection",
+                "A2": "A node in a graph",
+                "A3": "A connection line",
+                "A4": "A path endpoint"
+            },
+            "key": "A node in a graph",
+            "justification": "Vertices are graph nodes",
+            "justified_by": "JSON-Fallback",
+            "frequency": 21
+        },
+        {
+            "type": "medium",
+            "category": "Data Structures",
+            "question": "What is the minimum number of elements needed in a B-tree node of order m?",
+            "answers": {
+                "A1": "0 (except root)",
+                "A2": "ceil(m/2) - 1 (except root)",
+                "A3": "m - 1",
+                "A4": "m"
+            },
+            "key": "ceil(m/2) - 1 (except root)",
+            "justification": "B-tree property definition",
+            "justified_by": "JSON-Fallback",
+            "frequency": 26
+        },
+        {
+            "type": "easy",
+            "category": "Data Structures",
+            "question": "In tree and graph data structures, traversal refers to which operation?",
+            "answers": {
+                "A1": "Tree height calculation",
+                "A2": "Visiting all nodes in specific order",
+                "A3": "Adding new nodes",
+                "A4": "Removing existing nodes"
+            },
+            "key": "Visiting all nodes in specific order",
+            "justification": "Traversal systematically visits nodes",
+            "justified_by": "JSON-Fallback",
+            "frequency": 26
+        },
+        {
+            "type": "easy",
+            "category": "Data Base",
+            "question": "What is the cardinality of a relation?",
+            "answers": {
+                "A1": "The cardinal numbers",
+                "A2": "The number of tuples in a relation",
+                "A3": "The table name",
+                "A4": "The number of attributes"
+            },
+            "key": "The number of tuples in a relation",
+            "justification": "Cardinality is the tuple count",
+            "justified_by": "JSON-Fallback",
+            "frequency": 18
+        },
+        {
+            "type": "easy",
+            "category": "Data Base",
+            "question": "What is a JOIN in SQL?",
+            "answers": {
+                "A1": "Joining two companies",
+                "A2": "Combining rows from multiple tables",
+                "A3": "Adding columns",
+                "A4": "Removing duplicates"
+            },
+            "key": "Combining rows from multiple tables",
+            "justification": "JOIN combines related tables",
+            "justified_by": "JSON-Fallback",
+            "frequency": 18
+        },
+        {
+            "type": "medium",
+            "category": "Data Base",
+            "question": "In database design, what is data redundancy?",
+            "answers": {
+                "A1": "Backup data",
+                "A2": "Unnecessary duplication of data",
+                "A3": "Extra storage",
+                "A4": "Multiple databases"
+            },
+            "key": "Unnecessary duplication of data",
+            "justification": "Redundancy is eliminated by normalization",
+            "justified_by": "JSON-Fallback",
+            "frequency": 28
+        },
+        {
+            "type": "hard",
+            "category": "Computer Networks",
+            "question": "What is MSS?",
+            "answers": {
+                "A1": "Maximum size segment",
+                "A2": "Largest segment size TCP sends",
+                "A3": "Maximum segment",
+                "A4": "Segment size"
+            },
+            "key": "Largest segment size TCP sends",
+            "justification": "MSS prevents fragmentation",
+            "justified_by": "JSON-Fallback",
+            "frequency": 19
+        },
+        {
+            "type": "medium",
+            "category": "Computer Networks",
+            "question": "What is port number?",
+            "answers": {
+                "A1": "Physical connection",
+                "A2": "16-bit number identifying network services",
+                "A3": "Network interface",
+                "A4": "Connection port"
+            },
+            "key": "16-bit number identifying network services",
+            "justification": "Ports identify network services",
+            "justified_by": "JSON-Fallback",
+            "frequency": 11
+        },
+        {
+            "type": "medium",
+            "category": "Computer Networks",
+            "question": "What is RTP?",
+            "answers": {
+                "A1": "Real Time Protocol",
+                "A2": "Transport protocol for real-time media",
+                "A3": "Real Transfer Protocol",
+                "A4": "Real-time Transfer"
+            },
+            "key": "Transport protocol for real-time media",
+            "justification": "RTP carries real-time data",
+            "justified_by": "JSON-Fallback",
+            "frequency": 6
+        },
+        {
+            "type": "medium",
+            "category": "CSS",
+            "question": "What does aspect-ratio media feature check?",
+            "answers": {
+                "A1": "The width of the viewport",
+                "A2": "The height of the viewport",
+                "A3": "The ratio of width to height of the viewport",
+                "A4": "The screen resolution"
+            },
+            "key": "The ratio of width to height of the viewport",
+            "justification": "aspect-ratio checks viewport proportions.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        },
+        {
+            "type": "medium",
+            "category": "DOM",
+            "question": "What is the difference between innerHTML and innerText?",
+            "answers": {
+                "A1": "innerHTML includes HTML; innerText is text-only",
+                "A2": "They are identical",
+                "A3": "innerText is faster",
+                "A4": "innerHTML works only in Firefox"
+            },
+            "key": "innerHTML includes HTML; innerText is text-only",
+            "justification": "innerHTML parses HTML; innerText treats content as plain text.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 16
+        },
+        {
+            "type": "medium",
+            "category": "DOM",
+            "question": "What is a node in the DOM?",
+            "answers": {
+                "A1": "A JavaScript function",
+                "A2": "An object representing a part of the document (element, text, comment)",
+                "A3": "A type of CSS property",
+                "A4": "A browser feature"
+            },
+            "key": "An object representing a part of the document (element, text, comment)",
+            "justification": "Nodes are the building blocks of the DOM tree.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 17
+        },
+        {
+            "type": "easy",
+            "category": "Machine Learning",
+            "question": "What is accuracy in classification?",
+            "answers": {
+                "A1": "Exact measurements",
+                "A2": "Percentage of correct predictions",
+                "A3": "Precision measure",
+                "A4": "Correctness"
+            },
+            "key": "Percentage of correct predictions",
+            "justification": "Accuracy is basic classification metric.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 7
+        },
+        {
+            "type": "hard",
+            "category": "Machine Learning",
+            "question": "What is transfer learning?",
+            "answers": {
+                "A1": "Moving learning materials between storage systems",
+                "A2": "Using knowledge from one task to improve performance on another",
+                "A3": "Transferring skills from one person to another",
+                "A4": "Learning how to transfer data efficiently"
+            },
+            "key": "Using knowledge from one task to improve performance on another",
+            "justification": "Transfer learning reduces data requirements for new tasks.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 2
+        },
+        {
+            "type": "easy",
+            "category": "Neural Networks",
+            "question": "What is a bias in a neural network?",
+            "answers": {
+                "A1": "An unfair preference toward certain outcomes",
+                "A2": "A learned parameter added to weighted input sum",
+                "A3": "A prejudice in the model's predictions",
+                "A4": "A preference that affects model behavior"
+            },
+            "key": "A learned parameter added to weighted input sum",
+            "justification": "Biases shift activation functions enabling better expressiveness.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 8
+        },
+        {
+            "type": "hard",
+            "category": "Clustering",
+            "question": "What is Gaussian Mixture Model (GMM)?",
+            "answers": {
+                "A1": "Gaussian model",
+                "A2": "Probabilistic model assuming data from mixture of Gaussians",
+                "A3": "Mixture model",
+                "A4": "Gaussian clustering"
+            },
+            "key": "Probabilistic model assuming data from mixture of Gaussians",
+            "justification": "GMM provides soft clustering",
+            "justified_by": "JSON-Fallback",
+            "frequency": 4
+        },
+        {
+            "type": "medium",
+            "category": "Machine Learning",
+            "question": "What is L1 regularization?",
+            "answers": {
+                "A1": "First type of regularization",
+                "A2": "Adding penalty proportional to absolute weight values",
+                "A3": "Lasso penalty",
+                "A4": "Linear penalty"
+            },
+            "key": "Adding penalty proportional to absolute weight values",
+            "justification": "L1 (Lasso) encourages sparsity",
+            "justified_by": "JSON-Fallback",
+            "frequency": 7
+        },
+        {
+            "type": "medium",
+            "category": "CNN",
+            "question": "What is pooling in CNN?",
+            "answers": {
+                "A1": "Swimming pool processing",
+                "A2": "Downsampling operation reducing spatial dimensions",
+                "A3": "Data aggregation",
+                "A4": "Dimension reduction"
+            },
+            "key": "Downsampling operation reducing spatial dimensions",
+            "justification": "Pooling reduces computation and extracts important features",
+            "justified_by": "JSON-Fallback",
+            "frequency": 6
+        }
+    ],
+    "generated_at": "2026-04-18 19:35:49",
+    "source": "RAG-Ollama"
+}    "category": "CNN",
+            "question": "What is padding in convolution?",
+            "answers": {
+                "A1": "Adding padding",
+                "A2": "Adding zeros around image borders for convolution",
+                "A3": "Border addition",
+                "A4": "Edge padding"
+            },
+            "key": "Adding zeros around image borders for convolution",
+            "justification": "Padding preserves spatial dimensions",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        }
+    ],
+    "generated_at": "2026-04-18 19:35:49",
+    "source": "RAG-Ollama"
+}

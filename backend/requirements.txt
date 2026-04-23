@@ -1,0 +1,39 @@
+# Django & REST Framework
+Django==5.2.4
+djangorestframework==3.16.0
+django-cors-headers==4.7.0
+djangorestframework-simplejwt==5.5.0
+
+# Database
+mysqlclient==2.2.7
+
+# CV Parser
+spacy==3.8.7
+pycountry==24.6.1
+pypdf==5.8.0
+
+# ML / Embeddings / Recommendations
+sentence-transformers==3.4.1
+nltk==3.9.1
+
+# RAG / LLM (Test Generator)
+langchain-ollama==0.3.3
+langchain-core==0.3.65
+langchain-community==0.3.24
+langchain-huggingface==0.1.2
+langchain-chroma==0.2.4
+chromadb>=1.0.9
+
+# Utilities
+Pillow==11.2.1
+python-dotenv==1.1.0
+
+# Interview Bot
+gTTS==2.5.3
+openai-whisper
+
+# Visual Confidence Analysis
+mediapipe
+deepface
+opencv-python
+textstat

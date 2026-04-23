@@ -1,0 +1,1 @@
+pip install langchain-chroma langchain-huggingface langchain-google-genai langchain-community sentence-transformers chromadb

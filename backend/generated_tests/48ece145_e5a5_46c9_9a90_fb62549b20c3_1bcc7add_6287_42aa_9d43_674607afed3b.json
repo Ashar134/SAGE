@@ -1,0 +1,754 @@
+{
+    "candidate_id": "48ece145-e5a5-46c9-9a90-fb62549b20c3",
+    "job_id": "1bcc7add-6287-42aa-9d43-674607afed3b",
+    "job_title": "Django Developer",
+    "requirements": [
+        "10 years of experience in Django",
+        "knows web dev",
+        "knows ML/AI"
+    ],
+    "total_questions": 50,
+    "distribution": {
+        "analytical": 8,
+        "english": 8,
+        "job_specific": 34
+    },
+    "questions": [
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "In a sequence, each term is obtained by adding 5 to the previous term. If the first term is 10, what is the next term in the sequence?",
+            "answers": {
+                "A1": "15",
+                "A2": "20",
+                "A3": "25",
+                "A4": "30"
+            },
+            "key": "A2",
+            "justification": "Start with the given first term (10). Add 5 to get the next term: 10 + 5 = 15. Then add 5 again: 15 + 5 = 20.",
+            "justified_by": "Pattern observation",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "Which number is the next term in the sequence: 2, 4, 8, 16, ?",
+            "answers": {
+                "A1": "32",
+                "A2": "28",
+                "A3": "20",
+                "A4": "40"
+            },
+            "key": "A1",
+            "justification": "Each term in the sequence is obtained by multiplying the previous term by 2. So, multiply 16 by 2 to get the next term: 16 * 2 = 32.",
+            "justified_by": "Pattern observation",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "If IQS : LNV, then JRM : ?",
+            "answers": {
+                "A1": "JQI",
+                "A2": "JKL",
+                "A3": "JLN",
+                "A4": "JLI"
+            },
+            "key": "A3",
+            "justification": "Compare the letters: IQS = LNV (each letter in IQS corresponds to a letter in LNV). JRM should be formed similarly. The correct sequence is: J-R-M = L-N-V, so JRM corresponds to LNv.",
+            "justified_by": "Letter substitution",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A snail is at the bottom of a 20-foot well. Each day, it climbs up 3 feet, but at night, it slips back 2 feet. How many days will the snail take to reach the top of the well?",
+            "answers": {
+                "A1": "18",
+                "A2": "19",
+                "A3": "20",
+                "A4": "22"
+            },
+            "key": "A2",
+            "justification": "The snail climbs 3 feet up and slips back 2 feet down, making a net progress of 1 foot per day. To climb 20 feet, it will take 20 days (18 days to reach 18 feet) plus one more day to reach the top.",
+            "justified_by": "Arithmetic progression",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "In a sequence, each term is obtained by adding 3 to the previous term. If the second term is 7, what is the first term in the sequence?",
+            "answers": {
+                "A1": "4",
+                "A2": "5",
+                "A3": "6",
+                "A4": "8"
+            },
+            "key": "A1",
+            "justification": "Let x be the first term. Then the second term is x + 3 = 7. Subtracting 3 from both sides: x = 4.",
+            "justified_by": "Algebraic manipulation",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "Which number is the next term in the sequence: 10, 12, 14, 16, ?",
+            "answers": {
+                "A1": "18",
+                "A2": "20",
+                "A3": "22",
+                "A4": "30"
+            },
+            "key": "A2",
+            "justification": "Each term in the sequence is obtained by adding 2 to the previous term. So, add 2 to 16: 16 + 2 = 18.",
+            "justified_by": "Pattern observation",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "If a bat and a ball together cost $1.50, and the bat costs $1.20 more than the ball, how much does the ball cost?",
+            "answers": {
+                "A1": "$0.90",
+                "A2": "$1.00",
+                "A3": "$1.10",
+                "A4": "$1.20"
+            },
+            "key": "A2",
+            "justification": "Let x be the cost of the ball. Then the cost of the bat is x + $1.20. The total cost is $1.50, so (x + $1.20) = $1.50. Subtracting $1.20 from both sides: x = $0.30.",
+            "justified_by": "Algebraic manipulation",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "In a sequence, each term is obtained by multiplying the previous term by 4. If the first term is 9, what is the fourth term in the sequence?",
+            "answers": {
+                "A1": "32",
+                "A2": "40",
+                "A3": "48",
+                "A4": "54"
+            },
+            "key": "A4",
+            "justification": "The second term is 9 * 4 = 36. The third term is 36 * 4 = 144. The fourth term is 144 * 4 = 576.",
+            "justified_by": "Pattern observation",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "Which word best completes the sentence: 'The tourists got lost in the city because they relied too heavily on their __________ map.'?",
+            "answers": {
+                "A1": "outdated",
+                "A2": "current",
+                "A3": "physical",
+                "A4": "digital"
+            },
+            "key": "A2",
+            "justification": "The sentence implies that the tourists needed a current map to navigate, as relying on an outdated one would not provide accurate information.",
+            "justified_by": "Grammar-Rationale"
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "What is the opposite of the word 'fasten'?",
+            "answers": {
+                "A1": "loosen",
+                "A2": "tighten",
+                "A3": "secure",
+                "A4": "unzip"
+            },
+            "key": "A1",
+            "justification": "The prefix 'un-' is often used to indicate the opposite of a verb, and 'fasten' means to secure or attach.",
+            "justified_by": "Etymology-Source"
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "Which word best completes the sentence: 'The teacher asked the students to __________ their pencils so that they could see the board better.'?",
+            "answers": {
+                "A1": "straighten",
+                "A2": "angle",
+                "A3": "align",
+                "A4": "flatten"
+            },
+            "key": "A3",
+            "justification": "The sentence implies that the teacher wanted the pencils to be parallel to each other, which is achieved by aligning them.",
+            "justified_by": "Grammar-Rationale"
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "What is the opposite of the word 'expansive'?",
+            "answers": {
+                "A1": "restrictive",
+                "A2": "narrow",
+                "A3": "concentrated",
+                "A4": "diluted"
+            },
+            "key": "A1",
+            "justification": "The prefix 're-' is often used to indicate the opposite of a word, and 'expansive' means taking up much space or room.",
+            "justified_by": "Etymology-Source"
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "Which word best completes the sentence: 'The new employee was very __________ in his abilities and quickly took on more responsibilities.'?",
+            "answers": {
+                "A1": "capable",
+                "A2": "skilled",
+                "A3": "qualified",
+                "A4": "untrained"
+            },
+            "key": "A1",
+            "justification": "The sentence implies that the employee had a high level of proficiency in his work, making him capable of handling additional tasks.",
+            "justified_by": "Grammar-Rationale"
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "What is the opposite of the word 'precise'?",
+            "answers": {
+                "A1": "vague",
+                "A2": "clear",
+                "A3": "exact",
+                "A4": "ambiguous"
+            },
+            "key": "A1",
+            "justification": "The prefix 'in-' is often used to indicate the opposite of a word, and 'precise' means exact or exacting.",
+            "justified_by": "Etymology-Source"
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "Which word best completes the sentence: 'The company's __________ goals were more focused on profits than people.'?",
+            "answers": {
+                "A1": "ambitious",
+                "A2": "generous",
+                "A3": "selfish",
+                "A4": "narrow"
+            },
+            "key": "A3",
+            "justification": "The sentence implies that the company's goals were prioritizing financial gain over social responsibility or other considerations.",
+            "justified_by": "Grammar-Rationale"
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "What is the opposite of the word 'intimate'?",
+            "answers": {
+                "A1": "public",
+                "A2": "private",
+                "A3": "secluded",
+                "A4": "isolated"
+            },
+            "key": "A1",
+            "justification": "The prefix 'in-' is often used to indicate the opposite of a word, and 'intimate' means personal or familiar.",
+            "justified_by": "Etymology-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "In Django, what is the purpose of using a POST request to send data from a form?",
+            "answers": {
+                "A1": "To improve security",
+                "A2": "To enable caching",
+                "A3": "To send data from the server to the client",
+                "A4": "To send data from the client to the server"
+            },
+            "key": "A4",
+            "justification": "When using a POST request, the data is sent from the client (usually a web browser) to the server. This is in contrast to GET requests, where data is sent from the server to the client.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "In Django, what is the purpose of using a ORM (Object-Relational Mapping) system?",
+            "answers": {
+                "A1": "To improve database performance",
+                "A2": "To enable data encryption",
+                "A3": "To map objects to database tables and vice versa",
+                "A4": "To optimize queries"
+            },
+            "key": "A3",
+            "justification": "The ORM system in Django allows developers to interact with the database using Python objects, rather than writing raw SQL queries. This improves portability and maintainability.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "In Django, what is the purpose of using a middleware class?",
+            "answers": {
+                "A1": "To handle HTTP requests and responses",
+                "A2": "To store data in the database",
+                "A3": "To decorate views with additional functionality",
+                "A4": "To create RESTful APIs"
+            },
+            "key": "A3",
+            "justification": "Middleware classes in Django are used to modify or extend the behavior of HTTP requests and responses. They can be used to perform tasks such as authentication, caching, and content compression.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "In Django, what is the purpose of using a model's `save()` method?",
+            "answers": {
+                "A1": "To create a new instance of the model",
+                "A2": "To update an existing instance of the model",
+                "A3": "To delete an instance of the model",
+                "A4": "To serialize data to JSON"
+            },
+            "key": "A2",
+            "justification": "The `save()` method in a Django model is used to save changes to an existing instance of the model. It automatically creates or updates the corresponding database record.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "In Django, what is the purpose of using a `views.py` file?",
+            "answers": {
+                "A1": "To define database models",
+                "A2": "To create RESTful APIs",
+                "A3": "To handle HTTP requests and responses",
+                "A4": "To render templates"
+            },
+            "key": "A3",
+            "justification": "The `views.py` file in Django is used to define functions that handle HTTP requests and return responses. These views are then mapped to URLs using the `urls.py` file.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "In Django, what is the purpose of using a template's `{% csrf_token %}` tag?",
+            "answers": {
+                "A1": "To prevent cross-site scripting attacks",
+                "A2": "To enable caching",
+                "A3": "To optimize database queries",
+                "A4": "To improve page loading times"
+            },
+            "key": "A1",
+            "justification": "The `{% csrf_token %}` tag in a Django template is used to generate a token that helps prevent cross-site scripting attacks. This token is checked on every form submission to ensure it matches the one generated by the client-side JavaScript.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "In Django, what is the purpose of using a `forms.py` file?",
+            "answers": {
+                "A1": "To define database models",
+                "A2": "To create RESTful APIs",
+                "A3": "To handle form data and validation",
+                "A4": "To render templates"
+            },
+            "key": "A3",
+            "justification": "The `forms.py` file in Django is used to define classes that handle form data and validation. These forms are then used in views to validate user input.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "In Django, what is the purpose of using a `urls.py` file?",
+            "answers": {
+                "A1": "To define database models",
+                "A2": "To create RESTful APIs",
+                "A3": "To map URLs to views and templates",
+                "A4": "To optimize page loading times"
+            },
+            "key": "A3",
+            "justification": "The `urls.py` file in Django is used to map URLs to views and templates. This allows users to access specific pages of a website by entering the corresponding URL.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "What is the purpose of using Django's built-in ORM instead of a third-party library?",
+            "answers": {
+                "A1": "To gain more control over SQL queries",
+                "A2": "To reduce the overhead of an extra layer of abstraction",
+                "A3": "To improve performance by avoiding object-relational mapping",
+                "A4": "To simplify database interactions and focus on application logic"
+            },
+            "key": "A2",
+            "justification": "The ORM provides a higher-level interface for interacting with databases, abstracting away the underlying SQL syntax and allowing developers to write database queries in a more Pythonic way. This simplifies database interactions and reduces the likelihood of errors.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "What is the difference between a Django model's `meta` attribute and a database table's primary key?",
+            "answers": {
+                "A1": "The `meta` attribute specifies the database table name",
+                "A2": "The `meta` attribute specifies the database table columns",
+                "A3": "The primary key is specified by the `meta` attribute, while column names are defined elsewhere",
+                "A4": "The `meta` attribute has no relation to the database table's structure"
+            },
+            "key": "A1",
+            "justification": "The `meta` attribute in a Django model specifies the name of the corresponding database table. This allows Django to create and manage the table automatically during development and deployment.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "What is the purpose of using Django's built-in authentication system?",
+            "answers": {
+                "A1": "To implement complex authentication logic",
+                "A2": "To provide a flexible framework for managing user accounts and sessions",
+                "A3": "To simplify database interactions with user data",
+                "A4": "To improve performance by reducing the overhead of an extra layer of abstraction"
+            },
+            "key": "A2",
+            "justification": "The built-in authentication system in Django provides a comprehensive framework for managing user accounts, sessions, and permissions. It simplifies the process of implementing authentication logic and reduces the likelihood of errors.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "What is the difference between a Django form's `initial` attribute and a model instance's initial values?",
+            "answers": {
+                "A1": "The `initial` attribute specifies default values for form fields",
+                "A2": "The initial values are specified by the `initial` attribute of the model instance",
+                "A3": "The `initial` attribute has no relation to the model instance's values",
+                "A4": "The `initial` attribute specifies the database table columns"
+            },
+            "key": "A1",
+            "justification": "The `initial` attribute in a Django form specifies default values for form fields. This allows developers to populate forms with initial data, making it easier to fill out and submit the form.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "What is the purpose of using Django's built-in caching framework?",
+            "answers": {
+                "A1": "To improve performance by reducing database queries",
+                "A2": "To simplify cache management and reduce the overhead of an extra layer of abstraction",
+                "A3": "To implement complex caching logic",
+                "A4": "To provide a flexible framework for managing user data"
+            },
+            "key": "A1",
+            "justification": "The built-in caching framework in Django improves performance by reducing database queries and loading frequently accessed data into memory. This reduces the overhead of database interactions and makes the application faster.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "What is the difference between a Django view's `post` method and a function-based view?",
+            "answers": {
+                "A1": "The `post` method specifies default values for form fields",
+                "A2": "The `post` method provides a flexible framework for managing user data",
+                "A3": "The `post` method has no relation to the function-based view",
+                "A4": "The `post` method specifies the database table columns"
+            },
+            "key": "A2",
+            "justification": "The `post` method in a Django view provides a flexible framework for managing user data. It allows developers to handle form submissions and update model instances using a more functional approach.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "What is the purpose of using Django's built-in middleware?",
+            "answers": {
+                "A1": "To implement complex authentication logic",
+                "A2": "To provide a flexible framework for managing user data",
+                "A3": "To simplify database interactions with user data",
+                "A4": "To improve performance by reducing the overhead of an extra layer of abstraction"
+            },
+            "key": "A2",
+            "justification": "The built-in middleware in Django provides a comprehensive framework for managing various aspects of the application, such as authentication, caching, and request processing. It simplifies the process of implementing middleware logic and reduces the likelihood of errors.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "What is the difference between a Django model's `ManyToManyField` and a foreign key?",
+            "answers": {
+                "A1": "The `ManyToManyField` specifies default values for form fields",
+                "A2": "The `ManyToManyField` provides a flexible framework for managing user data",
+                "A3": "The `ManyToManyField` has no relation to the foreign key",
+                "A4": "The `ManyToManyField` specifies the database table columns"
+            },
+            "key": "A3",
+            "justification": "The `ManyToManyField` in a Django model establishes a many-to-many relationship between two models, whereas a foreign key represents a one-to-one or one-to-many relationship. The `ManyToManyField` requires additional database tables to manage the relationships.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "When using Django's ORM to create a new model, what is the purpose of the `Meta` class?",
+            "answers": {
+                "A1": "To specify the database table name",
+                "A2": "To define the model's structure",
+                "A3": "To configure caching",
+                "A4": "To enable pagination"
+            },
+            "key": "A2",
+            "justification": "The `Meta` class is used to define the model's structure, including its fields and relationships. It allows developers to customize the behavior of the model without modifying the underlying database schema.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "What is the purpose of the `Content-Type` header in an HTTP response?",
+            "answers": {
+                "A1": "To specify the response's caching policy",
+                "A2": "To indicate the response's character encoding",
+                "A3": "To identify the response's media type",
+                "A4": "To authenticate the request"
+            },
+            "key": "A3",
+            "justification": "The `Content-Type` header is used to specify the format of the response data, such as text/html, application/json, or image/jpeg. It helps clients understand how to interpret the response content.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "In a Django application, what is the purpose of using a `View` instead of a `FunctionView`?",
+            "answers": {
+                "A1": "To handle larger request payloads",
+                "A2": "To implement more complex business logic",
+                "A3": "To provide better caching and performance",
+                "A4": "To enable asynchronous processing"
+            },
+            "key": "A2",
+            "justification": "Views are a more flexible and powerful way to handle requests in Django, allowing developers to implement more complex business logic and interact with models. Function views, on the other hand, are simpler but less versatile.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "What is the difference between a `Model` and a `View` in Django?",
+            "answers": {
+                "A1": "A Model handles requests, while a View processes data",
+                "A2": "A Model provides caching, while a View implements security",
+                "A3": "A Model interacts with databases, while a View returns responses",
+                "A4": "A Model enables pagination, while a View handles authentication"
+            },
+            "key": "A3",
+            "justification": "Models are used to interact with the database and define data structures, while views handle requests and return responses. Models typically do not directly handle requests or process data.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "What is a `Serializer` in Django REST framework?",
+            "answers": {
+                "A1": "A Serializer converts complex data into JSON",
+                "A2": "A Serializer provides caching and security features",
+                "A3": "A Serializer enables pagination and filtering",
+                "A4": "A Serializer handles authentication and authorization"
+            },
+            "key": "A1",
+            "justification": "Serializers are used to convert complex, nested data structures into a format that can be easily serialized and deserialized. This is particularly useful when working with APIs or JSON data.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "In a Django application, what is the purpose of using `asyncio` for asynchronous processing?",
+            "answers": {
+                "A1": "To improve caching performance",
+                "A2": "To optimize database queries",
+                "A3": "To enable concurrent requests and tasks",
+                "A4": "To provide better error handling and logging"
+            },
+            "key": "A3",
+            "justification": "Asyncio is used to enable asynchronous processing in Python, allowing developers to write single-threaded concurrent code. This can improve the overall performance and responsiveness of their applications.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "What is `cross_entropy` loss in machine learning?",
+            "answers": {
+                "A1": "A measure of the difference between predicted and true labels",
+                "A2": "A type of neural network activation function",
+                "A3": "A method for regularizing model weights",
+                "A4": "A technique for handling missing data"
+            },
+            "key": "A1",
+            "justification": "Cross-entropy loss is a measure of the difference between predicted and true labels in a classification problem. It's commonly used to train neural networks and other machine learning models.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "What is the purpose of `batch_size` in training a machine learning model?",
+            "answers": {
+                "A1": "To specify the number of samples to train on per iteration",
+                "A2": "To enable gradient accumulation for larger models",
+                "A3": "To provide better regularization and generalization",
+                "A4": "To accelerate convergence by processing more data"
+            },
+            "key": "A1",
+            "justification": "Batch size is a hyperparameter that determines how many samples are processed together during training. A smaller batch size can lead to faster training but may also cause oscillations in the gradient, while a larger batch size can improve stability but increase memory usage.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "In Django, what is the purpose of using the `asgi` module?",
+            "answers": {
+                "A1": "To handle HTTP requests and responses",
+                "A2": "To implement WebSockets and gRPC support",
+                "A3": "To run ASGI applications asynchronously",
+                "A4": "To manage Django's ORM connections"
+            },
+            "key": "A3",
+            "justification": "ASGI is designed to handle asynchronous requests, allowing for more efficient handling of concurrent connections. This is particularly useful in modern web development where scalability and performance are crucial.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "In a Django project, what does the `migrations` app do?",
+            "answers": {
+                "A1": "To manage user authentication and permissions",
+                "A2": "To handle file uploads and storage",
+                "A3": "To automate database schema management and versioning",
+                "A4": "To implement Django's caching framework"
+            },
+            "key": "A3",
+            "justification": "The `migrations` app is responsible for tracking changes to the database schema, allowing developers to easily revert or apply changes as needed. This ensures data consistency and integrity across different environments.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "In Django, what is the difference between `django.db.models.Manager` and `django.db.models.query.QuerySet`?",
+            "answers": {
+                "A1": "Manager retrieves data from the database, while QuerySet manipulates it in memory",
+                "A2": "Manager creates new objects in the database, while QuerySet updates existing ones",
+                "A3": "Manager is faster for large datasets due to its connection pooling capabilities",
+                "A4": "QuerySet is more flexible due to its support for custom filtering and ordering"
+            },
+            "key": "A1",
+            "justification": "The `Manager` class provides a way to interact with the database, whereas the `QuerySet` object represents the results of a query. QuerySets are optimized for memory efficiency, making them suitable for large datasets or complex queries.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "In Django, what is the purpose of using `context_processors`?",
+            "answers": {
+                "A1": "To store user session data",
+                "A2": "To manage request and response contexts",
+                "A3": "To handle email notifications and reminders",
+                "A4": "To implement authentication and authorization logic"
+            },
+            "key": "A2",
+            "justification": "Context processors are used to process variables that should be available in every view, such as user information or request data. They provide a centralized way to manage these contexts, making it easier to maintain consistent application behavior.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "In Django, what is the difference between `django.conf.urls.urlpatterns` and `django.urls.path`?",
+            "answers": {
+                "A1": "`urlpatterns` uses regular expressions for URL matching, while `path` uses a more concise syntax",
+                "A2": "`urlpatterns` only supports HTTP methods, whereas `path` supports additional methods like WebSocket connections",
+                "A3": "`urlpatterns` is deprecated in favor of `path`, which provides better performance and flexibility",
+                "A4": "`path` requires additional imports due to its compatibility with newer Python versions"
+            },
+            "key": "A1",
+            "justification": "The `urlpatterns` module uses regular expressions for URL matching, providing more flexibility but also increased complexity. The `path` function offers a more concise syntax, making it easier to define URLs while maintaining consistency.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "In Django, what is the purpose of using `select_related()`?",
+            "answers": {
+                "A1": "To improve query performance by reducing database overhead",
+                "A2": "To increase memory usage by loading related objects into memory",
+                "A3": "To cache frequently accessed relationships to reduce future queries",
+                "A4": "To implement lazy loading for related models"
+            },
+            "key": "A1",
+            "justification": "The `select_related()` method is used to prefetch related objects associated with the current model instance, reducing database queries and improving performance. This is particularly useful when working with many-to-one relationships.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "In Django, what is the purpose of using `django.forms`?",
+            "answers": {
+                "A1": "To handle file uploads and storage",
+                "A2": "To implement user authentication and authorization logic",
+                "A3": "To provide a built-in form validation system",
+                "A4": "To manage data processing and business logic"
+            },
+            "key": "A3",
+            "justification": "The `forms` module provides a set of classes and tools for building forms in Django applications. It includes features like automatic form validation, field cleaning, and CSRF protection, making it easier to handle user input and validate data.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "In Django, what is the purpose of using `django.views.generic`?",
+            "answers": {
+                "A1": "To implement custom view classes for handling specific URLs or views",
+                "A2": "To provide a set of built-in view classes for common use cases like listing and detail views",
+                "A3": "To handle file uploads and storage directly in views",
+                "A4": "To manage data processing and business logic using generic views"
+            },
+            "key": "A2",
+            "justification": "The `generic` module provides a set of built-in view classes that can be used to implement common use cases like listing, detail, create, and update views. These views simplify the process of handling URL-based requests and return results in a standardized way.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "A Django developer with 10 years of experience is designing a new web application. What type of database query would result in the best performance for a large dataset?",
+            "answers": {
+                "A1": "JOIN",
+                "A2": "INDEX",
+                "A3": "SUBQUERY",
+                "A4": "MERGE"
+            },
+            "key": "A2",
+            "justification": "A dense index is a data structure that improves query performance by allowing for efficient lookup of specific values. This would result in the best performance for a large dataset.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "Django Developer",
+            "question": "A Django developer is building a web application that requires real-time prediction of user behavior. What type of machine learning algorithm would be most suitable for this task?",
+            "answers": {
+                "A1": "K-Means",
+                "A2": "Random Forest",
+                "A3": "Gradient Boosting",
+                "A4": "Neural Networks"
+            },
+            "key": "A4",
+            "justification": "Neural networks are particularly well-suited for tasks that require real-time prediction, as they can learn from large amounts of data and make complex predictions. This would be the most suitable algorithm for this task.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        }
+    ],
+    "generated_at": "2026-04-18 16:18:21",
+    "source": "RAG-Ollama"
+}

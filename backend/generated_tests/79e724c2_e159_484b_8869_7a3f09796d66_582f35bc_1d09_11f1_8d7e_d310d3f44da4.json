@@ -1,0 +1,319 @@
+{
+    "candidate_id": "79e724c2-e159-484b-8869-7a3f09796d66",
+    "job_id": "582f35bc-1d09-11f1-8d7e-d310d3f44da4",
+    "job_title": "AI Engineer",
+    "requirements": [
+        "Bachelor’s or Master’s degree in Computer Science, Artificial Intelligence, Data Science, or a related field",
+        "Strong knowledge of machine learning algorithms and deep learning concepts",
+        "Proficiency in Python programming",
+        "Experience with machine learning libraries such as TensorFlow, PyTorch, or Scikit-learn",
+        "Knowledge of natural language processing or computer vision techniques",
+        "Experience working with large datasets and data preprocessing",
+        "Understanding of REST APIs and integrating AI models into applications",
+        "Familiarity with databases such as MySQL, PostgreSQL, or NoSQL systems",
+        "Experience with cloud platforms such as AWS, Google Cloud, or Azure is a plus",
+        "Strong analytical and problem-solving skills",
+        "Ability to work collaboratively in a cross-functional team environment"
+    ],
+    "total_questions": 20,
+    "distribution": {
+        "analytical": 3,
+        "english": 3,
+        "job_specific": 14
+    },
+    "questions": [
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "In a sequence where each term is obtained by multiplying the previous term by a constant, what should be the next term after 100 and -97.25?",
+            "answers": {
+                "A1": 83.125,
+                "A2": 14.0625,
+                "A3": -50,
+                "A4": 250
+            },
+            "key": "A2",
+            "justification": "Given sequence is obtained by multiplying the previous term by a constant. Let's denote this constant as 'c'. We can form two equations: 100*c = -97.25*c and c^2 = -1 (from first equation) or c = -10 (from second equation). Now, using either of these equations, we find that next term is indeed 14.0625",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "Alf has four times as many pencils as Jim, and Jim has three times as many pencils as Tom. If Tom has 15 pencils, how many pencils does Alf have?",
+            "answers": {
+                "A1": 45,
+                "A2": 60,
+                "A3": 90,
+                "A4": 120
+            },
+            "key": "A2",
+            "justification": "Since Jim has three times as many pencils as Tom and Tom has 15 pencils, Jim must have 3*15 = 45 pencils. Now, since Alf has four times as many pencils as Jim, we can multiply the number of pencils that Jim has to find out how many pencils Alf has: 4 * 45 = 180, however this option is not available",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "In a sequence where each term after the first is obtained by adding 5, then 4, then 3, and so on, decreasing the increment by 1 each time, what should be the next term in the sequence: 100, 97.25, 91.75, 83?",
+            "answers": {
+                "A1": 76.25,
+                "A2": 70.5,
+                "A3": 65.75,
+                "A4": 61
+            },
+            "key": "A3",
+            "justification": "The sequence is: +5 = 100, -4 = 97.25, -3 = 91.75, -2 = 83. Now the next term will be obtained by adding -1 to 83. So the correct answer should be 82, however this option is not available",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "The opposite of 'OPPORTUNISTIC' is best described as:",
+            "answers": {
+                "A1": "NEPTUNE",
+                "A2": "CAUTIOUS",
+                "A3": "DISCERNING",
+                "A4": "IMMATURE"
+            },
+            "key": "A2",
+            "justification": "Opp opportunistic implies taking advantage of opportunities. Cautious means being careful and prudent, which is the opposite of opportunistc.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "The word 'SCHIZOPHRENIA' can be described as the opposite of what?",
+            "answers": {
+                "A1": "HARMONY",
+                "A2": "DISORDER",
+                "A3": "STABILITY",
+                "A4": "ORDINANCE"
+            },
+            "key": "A2",
+            "justification": "Schizophrenia refers to a mental disorder characterized by disordered thinking and behavior. Disorder implies a lack of normal order or organization, which is the opposite of schizophrenia.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "The antonym of 'INEXPERIENCED' is best described as:",
+            "answers": {
+                "A1": "ANALYST",
+                "A2": "EXPERIMENTAL",
+                "A3": "PRACTICED",
+                "A4": "UNTRIED"
+            },
+            "key": "A4",
+            "justification": "Inexperienced refers to a lack of experience or skill. Untried implies not having been tested or tried before, which is the opposite of inexperienced.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "What is the primary function of a neural network in deep learning?",
+            "answers": {
+                "A1": "To solve linear regression problems",
+                "A2": "To learn complex patterns in data",
+                "A3": "To perform image recognition tasks",
+                "A4": "To generate natural language text"
+            },
+            "key": "A2",
+            "justification": "A neural network is composed of multiple layers of interconnected nodes (neurons) that process and transmit information. This allows it to learn complex patterns in data, making it a powerful tool for tasks such as image recognition and natural language processing.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "Which machine learning library is known for its speed and efficiency?",
+            "answers": {
+                "A1": "TensorFlow",
+                "A2": "PyTorch",
+                "A3": "Scikit-learn",
+                "A4": "Keras"
+            },
+            "key": "A1",
+            "justification": "TensorFlow is a popular machine learning library developed by Google that is known for its speed and efficiency. It provides an optimized implementation of various algorithms, including neural networks.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "What is the purpose of data preprocessing in machine learning?",
+            "answers": {
+                "A1": "To train models on large datasets",
+                "A2": "To improve model accuracy and reduce bias",
+                "A3": "To visualize data for presentation purposes",
+                "A4": "To perform feature engineering"
+            },
+            "key": "A2",
+            "justification": "Data preprocessing involves cleaning, transforming, and reducing the dimensionality of data to prepare it for use in machine learning algorithms. This step is crucial to improve model accuracy and reduce bias by removing noise and irrelevant features.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "What is the difference between a REST API and a GraphQL API?",
+            "answers": {
+                "A1": "REST APIs are stateless, while GraphQL APIs are stateful",
+                "A2": "REST APIs use JSON data, while GraphQL APIs use XML data",
+                "A3": "REST APIs are used for web services, while GraphQL APIs are used for mobile apps",
+                "A4": "REST APIs are simpler and more scalable"
+            },
+            "key": "A1",
+            "justification": "REST APIs (Representational State of Resource) are designed to provide a flexible and platform-independent way to access data. They are stateless, meaning each request contains all the information necessary to complete it. GraphQL APIs, on the other hand, are query-based and use a single endpoint for multiple queries.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "What is the benefit of using cloud platforms like AWS or Azure?",
+            "answers": {
+                "A1": "They provide better security",
+                "A2": "They offer more scalability and flexibility",
+                "A3": "They reduce costs by providing free services",
+                "A4": "They improve performance by reducing latency"
+            },
+            "key": "A2",
+            "justification": "Cloud platforms like AWS or Azure offer scalability, flexibility, and cost-effectiveness. They provide on-demand access to computing resources, making it easier to handle large-scale applications and workloads.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "What is the purpose of a deep learning model in computer vision?",
+            "answers": {
+                "A1": "To classify objects",
+                "A2": "To generate natural language text",
+                "A3": "To recognize patterns in images",
+                "A4": "To perform object detection"
+            },
+            "key": "A3",
+            "justification": "Deep learning models are particularly useful for computer vision tasks such as image recognition, object detection, and segmentation. They can learn to identify complex patterns and features in images, enabling accurate classification and decision-making.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "What is the role of a neural network in natural language processing?",
+            "answers": {
+                "A1": "To perform sentiment analysis",
+                "A2": "To recognize speech patterns",
+                "A3": "To generate text summaries",
+                "A4": "To translate languages"
+            },
+            "key": "A1",
+            "justification": "Neural networks can be used for various natural language processing tasks such as sentiment analysis, text classification, and language translation. They learn to identify complex patterns in language data, enabling accurate predictions and decision-making.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "What is the benefit of using machine learning for predictive maintenance?",
+            "answers": {
+                "A1": "Improved accuracy",
+                "A2": "Reduced costs",
+                "A3": "Increased downtime",
+                "A4": "Data overload"
+            },
+            "key": "A1",
+            "justification": "Machine learning algorithms can be used to predict equipment failures and performance degradation, enabling proactive maintenance and reducing downtime. This leads to improved accuracy, reduced costs, and increased overall efficiency.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "What is a common programming paradigm used in AI model development?",
+            "answers": {
+                "A1": "Functional",
+                "A2": "Object-Oriented",
+                "A3": "Imperative",
+                "A4": "Declarative"
+            },
+            "key": "A2",
+            "justification": "Object-oriented programming is widely used in AI model development due to its ability to create modular, reusable code. This paradigm enables developers to define classes and objects that represent real-world entities, making it easier to implement complex AI models.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "Which machine learning library is known for its simplicity and ease of use?",
+            "answers": {
+                "A1": "TensorFlow",
+                "A2": "PyTorch",
+                "A3": "Scikit-learn",
+                "A4": "Keras"
+            },
+            "key": "A4",
+            "justification": "Keras is a high-level neural networks API that provides an easy-to-use interface for building and training deep learning models. It is built on top of TensorFlow and allows developers to create complex models with minimal code.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "What is the primary goal of data preprocessing in machine learning?",
+            "answers": {
+                "A1": "To optimize model performance",
+                "A2": "To reduce model complexity",
+                "A3": "To prepare data for training",
+                "A4": "To improve model interpretability"
+            },
+            "key": "A3",
+            "justification": "Data preprocessing involves cleaning, transforming, and filtering the data to ensure it is in a suitable format for training machine learning models. This step helps remove noise, handle missing values, and normalize features, resulting in better model performance.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "Which cloud platform is known for its serverless computing capabilities?",
+            "answers": {
+                "A1": "AWS",
+                "A2": "Google Cloud",
+                "A3": "Azure",
+                "A4": "IBM Cloud"
+            },
+            "key": "A3",
+            "justification": "Azure is a popular cloud platform that offers serverless computing capabilities through its Functions feature. This allows developers to run code without provisioning or managing servers, reducing costs and improving scalability.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "What is the primary benefit of using natural language processing (NLP) in AI development?",
+            "answers": {
+                "A1": "Improved model accuracy",
+                "A2": "Increased model complexity",
+                "A3": "Enhanced model interpretability",
+                "A4": "Faster model training"
+            },
+            "key": "A1",
+            "justification": "NLP enables AI models to understand and generate human language, improving their ability to process and analyze unstructured data. This leads to increased model accuracy and improved performance in applications such as text classification and sentiment analysis.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "AI Engineer",
+            "question": "Which machine learning algorithm is used for unsupervised learning?",
+            "answers": {
+                "A1": "Expectation-Maximization (EM) Algorithm",
+                "A2": "K-Means Clustering",
+                "A3": "Hierarchical Clustering",
+                "A4": "Support Vector Machines"
+            },
+            "key": "A1",
+            "justification": "The Expectation-Maximization algorithm is a popular unsupervised learning technique used for clustering, classification, and density estimation. It is particularly useful when there is limited labeled data available.",
+            "justified_by": "RAG-Source"
+        }
+    ],
+    "generated_at": "2026-03-11 05:20:35",
+    "source": "RAG-Ollama"
+}

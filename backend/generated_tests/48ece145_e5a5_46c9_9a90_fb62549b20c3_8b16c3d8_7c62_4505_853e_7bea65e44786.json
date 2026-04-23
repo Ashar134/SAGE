@@ -1,0 +1,234 @@
+{
+    "candidate_id": "48ece145-e5a5-46c9-9a90-fb62549b20c3",
+    "job_id": "8b16c3d8-7c62-4505-853e-7bea65e44786",
+    "job_title": "Web Engineer",
+    "requirements": [
+        "html",
+        "css",
+        "javascript",
+        "php"
+    ],
+    "total_questions": 15,
+    "distribution": {
+        "analytical": 3,
+        "english": 3,
+        "job_specific": 9
+    },
+    "questions": [
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "In a sequence of numbers, the first term is 2, and each subsequent term is obtained by multiplying the previous term by 3. What is the next term after 27?",
+            "answers": {
+                "A1": "81",
+                "A2": "243",
+                "A3": "729",
+                "A4": "2187"
+            },
+            "key": "A1",
+            "justification": "To find the next term, we need to multiply 27 by 3. Since 27 = 3^3, multiplying it by 3 will give us 3 * 3^3 = 3^4 = 81.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "In a game of chess, if a player has the same number of pawns on both sides and each pawn can capture diagonally one square, which player is at an advantage?",
+            "answers": {
+                "A1": "Player B",
+                "A2": "Player A",
+                "A3": "Neither player has an advantage",
+                "A4": "Player A"
+            },
+            "key": "A2",
+            "justification": "Since both players have the same number of pawns, and each pawn can capture diagonally one square, it means that every move made by Player B will be countered by a move from Player A. Therefore, neither player has an advantage.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A snail is at the bottom of a 20-foot well. Each day, it climbs up 3 feet, but at night, it slips back 2 feet. How many days will it take for the snail to reach the top of the well?",
+            "answers": {
+                "A1": "18",
+                "A2": "19",
+                "A3": "20",
+                "A4": "18"
+            },
+            "key": "A2",
+            "justification": "To find out how many days it will take for the snail to reach the top, we can calculate the net progress each day. The snail climbs 3 feet during the day and slips back 2 feet at night, so it makes a net progress of 1 foot per day. Since the well is 20 feet deep, it will take 20 days for the snail to make a total progress of 20 feet. On the 18th day, the snail climbs 3 feet and reaches 18 + 3 = 21 feet. On the 19th day, it slips back 2 feet and reaches 21 - 2 = 19 feet. On the 20th day, it climbs 3 feet and reaches 19 + 3 = 22 feet. However, since the top of the well is at 20 feet, it will reach the top on the 18th day.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "The new policy was based on a ___ approach, which prioritized efficiency over cost.",
+            "answers": {
+                "A1": "liberal",
+                "A2": "conservative",
+                "A3": "parsimonious",
+                "A4": "moderate"
+            },
+            "key": "A3",
+            "justification": "Parsimony means being frugal and avoiding unnecessary expenses. It is the opposite of liberal or generous spending.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "The teacher asked the students to ___ their answers, so that everyone could see the correct solutions.",
+            "answers": {
+                "A1": "edit",
+                "A2": "redact",
+                "A3": " revise",
+                "A4": "delete"
+            },
+            "key": "A3",
+            "justification": "Revising means making changes to improve something. It is a logical action in an educational context.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "The tourists got lost in the city because they took a ___ route that was not well-marked.",
+            "answers": {
+                "A1": "main",
+                "A2": "minor",
+                "A3": "parsimonious",
+                "A4": "major"
+            },
+            "key": "A2",
+            "justification": "Minor routes are less traveled and often not well-maintained. They can be easily missed or overlooked.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "Web Engineer",
+            "question": "What is the primary purpose of the `<link>` tag in HTML?",
+            "answers": {
+                "A1": "To define a new document type",
+                "A2": "To link to an external stylesheet",
+                "A3": "To embed a media file",
+                "A4": "To specify character encoding"
+            },
+            "key": "A2",
+            "justification": "The `<link>` tag is used to create a hyperlink to an external resource, such as a CSS or JavaScript file, which can be linked to the current HTML document.",
+            "justified_by": "W3C-Documentation"
+        },
+        {
+            "type": "medium",
+            "category": "Web Engineer",
+            "question": "Which of the following is a benefit of using CSS Grid over Flexbox?",
+            "answers": {
+                "A1": "Better support for older browsers",
+                "A2": "Improved layout control",
+                "A3": "Simplified syntax",
+                "A4": "Increased performance"
+            },
+            "key": "A2",
+            "justification": "CSS Grid provides more advanced layout capabilities, such as row and column definitions, which can lead to more complex and responsive designs.",
+            "justified_by": "CSS-Grid-Documentation"
+        },
+        {
+            "type": "medium",
+            "category": "Web Engineer",
+            "question": "What is the purpose of the `var` keyword in JavaScript?",
+            "answers": {
+                "A1": "To declare a constant variable",
+                "A2": "To declare a mutable variable",
+                "A3": "To create an anonymous function",
+                "A4": "To scope a variable"
+            },
+            "key": "A4",
+            "justification": "The `var` keyword is used to declare a variable that has block scope, which means its value is scoped to the surrounding code blocks.",
+            "justified_by": "ECMAScript-Reference"
+        },
+        {
+            "type": "medium",
+            "category": "Web Engineer",
+            "question": "Which PHP framework is known for its modular and component-based design?",
+            "answers": {
+                "A1": "Laravel",
+                "A2": "CodeIgniter",
+                "A3": "Symfony",
+                "A4": "CakePHP"
+            },
+            "key": "A3",
+            "justification": "Symfony is a popular PHP framework that follows the principles of modular and component-based design, making it easier to build and maintain large-scale applications.",
+            "justified_by": "Symfony-Documentation"
+        },
+        {
+            "type": "medium",
+            "category": "Web Engineer",
+            "question": "What is the purpose of the `console.log()` function in JavaScript?",
+            "answers": {
+                "A1": "To throw an error",
+                "A2": "To parse JSON data",
+                "A3": "To output debug information to the console",
+                "A4": "To redirect to a new page"
+            },
+            "key": "A3",
+            "justification": "The `console.log()` function is used to output debug information, such as variables or objects, to the browser's console for debugging purposes.",
+            "justified_by": "ECMAScript-Reference"
+        },
+        {
+            "type": "medium",
+            "category": "Web Engineer",
+            "question": "Which HTML element is used to create a form that can be submitted to a server?",
+            "answers": {
+                "A1": "<input>",
+                "A2": "<select>",
+                "A3": "<textarea>",
+                "A4": "<form>"
+            },
+            "key": "A4",
+            "justification": "The `<form>` element is used to create a form that can be submitted to a server, allowing users to input data and send it for processing.",
+            "justified_by": "HTML-Reference"
+        },
+        {
+            "type": "medium",
+            "category": "Web Engineer",
+            "question": "What is the purpose of the `async` keyword in JavaScript?",
+            "answers": {
+                "A1": "To make a synchronous request",
+                "A2": "To make an asynchronous request",
+                "A3": "To throw an error",
+                "A4": "To redirect to a new page"
+            },
+            "key": "A2",
+            "justification": "The `async` keyword is used to indicate that the following function call is asynchronous, meaning it does not block the execution of the surrounding code.",
+            "justified_by": "ECMAScript-Reference"
+        },
+        {
+            "type": "medium",
+            "category": "Web Engineer",
+            "question": "Which CSS property is used to add a box shadow effect to an element?",
+            "answers": {
+                "A1": "-webkit-box-shadow",
+                "A2": "-moz-box-shadow",
+                "A3": "box-shadow",
+                "A4": "-ms-box-shadow"
+            },
+            "key": "A3",
+            "justification": "The `box-shadow` property is used to add a box shadow effect to an element, which can be used for visual styling and design purposes.",
+            "justified_by": "CSS-Properties"
+        },
+        {
+            "type": "medium",
+            "category": "Web Engineer",
+            "question": "In CSS, which of the following properties is used to define the background color of an element?",
+            "answers": {
+                "A1": "background-color",
+                "A2": "color",
+                "A3": "font-size",
+                "A4": "margin-top"
+            },
+            "key": "A1",
+            "justification": "This property is commonly used in CSS to set the background color of an element.",
+            "justified_by": "RAG-Source"
+        }
+    ],
+    "generated_at": "2026-04-18 19:39:51",
+    "source": "RAG-Ollama"
+}
