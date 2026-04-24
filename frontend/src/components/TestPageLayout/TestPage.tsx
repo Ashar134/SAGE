@@ -162,7 +162,8 @@ const TestPage = () => {
         setScore(computedScore);
         setSubmitted(true);
         const passed = data.new_status === 'interview';
-        showToast(`Test Submitted! ${data.message}`, passed ? 'success' : 'error');
+        const pct = data.percentage != null ? data.percentage.toFixed(1) : (computedScore / questionsData.length * 100).toFixed(1);
+        showToast(`Test Submitted! Your score: ${pct}%`, passed ? 'success' : 'error');
       } else {
         throw new Error(data.error || "Failed to submit test");
       }

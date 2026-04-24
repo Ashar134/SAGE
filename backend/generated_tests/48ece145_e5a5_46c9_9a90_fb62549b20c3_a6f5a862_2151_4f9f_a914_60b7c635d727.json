@@ -1,0 +1,151 @@
+{
+    "candidate_id": "48ece145-e5a5-46c9-9a90-fb62549b20c3",
+    "job_id": "a6f5a862-2151-4f9f-a914-60b7c635d727",
+    "job_title": "PHP developer",
+    "requirements": [
+        "PHP"
+    ],
+    "total_questions": 9,
+    "distribution": {
+        "analytical": 2,
+        "english": 2,
+        "job_specific": 5
+    },
+    "questions": [
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "In a game of eight players lasting for 70 minutes, six substitutes alternate with each player. This means that all players, including the substitutes, are on the pitch for the same length of time. For how long?",
+            "answers": {
+                "A1": "40 minutes",
+                "A2": "35 minutes",
+                "A3": "45 minutes",
+                "A4": "50 minutes"
+            },
+            "key": "40 minutes",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 32
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "7964325 is to 6975234, and 5822139 is to 2859312. Therefore, 7469851 is to ?",
+            "answers": {
+                "A1": "6471589",
+                "A2": "6972139",
+                "A3": "5825234",
+                "A4": "6975234"
+            },
+            "key": "6471589",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 23
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "The new employee's first day of work was ruined by a severe thunderstorm, but fortunately, it only lasted ______________.",
+            "answers": {
+                "A1": "half an hour",
+                "A2": "for two hours",
+                "A3": "a few minutes",
+                "A4": "throughout the morning"
+            },
+            "key": "A3",
+            "justification": "The phrase 'ruined by' means to make something completely unsuccessful or unpleasant. In this case, if the storm lasted for half an hour, it would be a brief and temporary inconvenience. If it lasted through the morning, it would be more prolonged. The only option that captures a brief duration is 'a few minutes'.",
+            "justified_by": "Grammar Rules"
+        },
+        {
+            "type": "medium",
+            "category": "english",
+            "question": "The city's population has been growing at an alarming rate, which is causing the local government to reevaluate its ______________.",
+            "answers": {
+                "A1": "economic policy",
+                "A2": "public transportation system",
+                "A3": "housing options",
+                "A4": "revenue streams"
+            },
+            "key": "A1",
+            "justification": "The phrase 'cause' is often used to indicate a reason for something. In this case, the city's population growth is causing the government to reconsider its economic policies.",
+            "justified_by": "Syntax Rules"
+        },
+        {
+            "type": "medium",
+            "category": "OOP",
+            "question": "What is the purpose of the == operator overload?",
+            "answers": {
+                "A1": "To assign values",
+                "A2": "To define equality comparison between objects",
+                "A3": "To delete objects",
+                "A4": "To create copies"
+            },
+            "key": "To define equality comparison between objects",
+            "justification": "Overloading == allows custom comparison logic for user-defined types instead of default pointer comparison.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 25
+        },
+        {
+            "type": "medium",
+            "category": "OOP",
+            "question": "What is a stack in STL?",
+            "answers": {
+                "A1": "A pile of objects",
+                "A2": "A LIFO (Last-In-First-Out) container",
+                "A3": "A type of array",
+                "A4": "A sorting algorithm"
+            },
+            "key": "A LIFO (Last-In-First-Out) container",
+            "justification": "Stack implements LIFO where elements are added and removed from the top (back).",
+            "justified_by": "JSON-Fallback",
+            "frequency": 22
+        },
+        {
+            "type": "medium",
+            "category": "OOP",
+            "question": "What is static_cast in C++?",
+            "answers": {
+                "A1": "A cast for static variables",
+                "A2": "A compile-time type conversion with type checking",
+                "A3": "A runtime type conversion",
+                "A4": "A cast for pointers only"
+            },
+            "key": "A compile-time type conversion with type checking",
+            "justification": "static_cast performs type conversion at compile time with some type checking, used for safe conversions.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 11
+        },
+        {
+            "type": "hard",
+            "category": "Data Structures",
+            "question": "In the analysis of the Union-Find data structure with path compression and union by rank, what is the nearly constant amortized time complexity per operation?",
+            "answers": {
+                "A1": "O(1) exactly",
+                "A2": "O(α(n)) where α is inverse Ackermann",
+                "A3": "O(log n)",
+                "A4": "O(√n)"
+            },
+            "key": "O(α(n)) where α is inverse Ackermann",
+            "justification": "Inverse Ackermann function",
+            "justified_by": "JSON-Fallback",
+            "frequency": 22
+        },
+        {
+            "type": "easy",
+            "category": "Data Structures",
+            "question": "A hash function in hash tables serves which primary purpose?",
+            "answers": {
+                "A1": "Computing the size of table",
+                "A2": "Mapping a key to array index",
+                "A3": "Sorting array elements",
+                "A4": "Deleting elements"
+            },
+            "key": "Mapping a key to array index",
+            "justification": "Hash functions enable fast lookup",
+            "justified_by": "JSON-Fallback",
+            "frequency": 22
+        }
+    ],
+    "generated_at": "2026-04-24 14:44:14",
+    "source": "RAG-Ollama"
+}
