@@ -1,0 +1,312 @@
+{
+    "candidate_id": "8ab28678-2048-4951-b497-320777e9f0b6",
+    "job_id": "77995a41-2616-43fc-83d5-726555ebf106",
+    "job_title": "English Professor",
+    "requirements": [
+        "Must have 3 years of experience in English Teaching",
+        "Should have PHD in English"
+    ],
+    "total_questions": 20,
+    "distribution": {
+        "analytical": 3,
+        "english": 3,
+        "job_specific": 14
+    },
+    "questions": [
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "In a sequence of numbers, each term is obtained by adding 3, then 2, and finally 5 to the previous term. What number should replace the question mark in the sequence: 0, 1, 2, 4, 6, 9,?",
+            "answers": {
+                "A1": "15",
+                "A2": "12",
+                "A3": "18",
+                "A4": "16"
+            },
+            "key": "A1",
+            "justification": "Step 1: Add 3 to 0: 0+3=3. Step 2: Add 2 to 1: 1+2=3. Step 3: Add 5 to 2: 2+5=7. Step 4: Add 3 to 3: 3+3=6. Step 5: Add 2 to 4: 4+2=6. Step 6: Add 5 to 6: 6+5=11. However, this isn't the correct sequence. Let's try another approach. Looking at the differences between terms (3, 2, 5), we can see a pattern emerging. The difference increases by 1 each time (+1 from 3 to 4, +3 from 4 to 7). Therefore, following the sequence: Add 6 to 9: 9+6=15.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A snail is at the bottom of a 20-foot well. Each day, it climbs up 3 feet, but at night, it slips back 2 feet. How many days will it take for the snail to reach the top of the well?",
+            "answers": {
+                "A1": "18",
+                "A2": "19",
+                "A3": "20",
+                "A4": "16"
+            },
+            "key": "A2",
+            "justification": "Step 1: Calculate the daily progress (3 feet up, 2 feet down). net_progress = 3 - 2 = 1 foot. Step 2: Divide the well height by the daily progress to find the number of days it will take to climb out. total_days = 20 / 1 = 20.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "In a sequence of numbers, each term is obtained by multiplying the previous term by 2 and then adding 3. What number should replace the question mark in the sequence: 0, 1, 2, 4, 6,?",
+            "answers": {
+                "A1": "12",
+                "A2": "9",
+                "A3": "15",
+                "A4": "10"
+            },
+            "key": "A2",
+            "justification": "Step 1: Find the pattern in the sequence. Step 2: Multiply the last known term by 2 and add 3 to find the next term. For the last known term (6), multiply by 2 to get 12, then add 3 to get 15.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "Correct: 'By the time we arrived, the movie ___.'",
+            "answers": {
+                "A1": "has started",
+                "A2": "had started",
+                "A3": "started",
+                "A4": "was starting"
+            },
+            "key": "had started",
+            "justification": "Past perfect for prior past action",
+            "justified_by": "JSON-Fallback",
+            "frequency": 14
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "NOMAD : SEDENTARY",
+            "answers": {
+                "A1": "Leader : Follower",
+                "A2": "Recluse : Social",
+                "A3": "Expert : Novice",
+                "A4": "Rich : Poor",
+                "A5": "Young : Old"
+            },
+            "key": "Recluse : Social",
+            "justification": "Opposite lifestyle types",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Opposite of OSTENTATIOUS:",
+            "answers": {
+                "A1": "Showy",
+                "A2": "Flashy",
+                "A3": "Modest",
+                "A4": "Pretentious"
+            },
+            "key": "Modest",
+            "justification": "Opposite of showy",
+            "justified_by": "JSON-Fallback",
+            "frequency": 7
+        },
+        {
+            "type": "medium",
+            "category": "English Professor",
+            "question": "What is a key qualification for an English Professor to teach at a university?",
+            "answers": {
+                "A1": "10 years of experience",
+                "A2": "3 years of teaching experience",
+                "A3": "Master's degree in English",
+                "A4": "PhD in English"
+            },
+            "key": "A2",
+            "justification": "According to the job description, 3 years of teaching experience is a must-have qualification for an English Professor. This ensures that the professor has adequate expertise and knowledge to teach at the university level.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "English Professor",
+            "question": "What is a fundamental requirement for an English Professor's curriculum design?",
+            "answers": {
+                "A1": "Student feedback",
+                "A2": "Course syllabus",
+                "A3": "Teaching methodology",
+                "A4": "PhD dissertation research"
+            },
+            "key": "A2",
+            "justification": "An English Professor's curriculum design should be guided by a clear understanding of the course syllabus, which outlines the learning objectives and assessment criteria.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "English Professor",
+            "question": "Which skill is essential for an English Professor to assess student writing?",
+            "answers": {
+                "A1": "Grammar analysis",
+                "A2": "Style evaluation",
+                "A3": "Content assessment",
+                "A4": "Mechanics checking"
+            },
+            "key": "A2",
+            "justification": "An English Professor should be able to evaluate the style and effectiveness of student writing, which involves assessing the writer's voice, tone, and overall communication strategy.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "English Professor",
+            "question": "What is a typical evaluation criterion for an English Professor's teaching performance?",
+            "answers": {
+                "A1": "Student enrollment",
+                "A2": "Course accreditation",
+                "A3": "Teaching load reduction",
+                "A4": "Student learning outcomes"
+            },
+            "key": "A4",
+            "justification": "An English Professor's teaching performance is typically evaluated based on student learning outcomes, which assess the students' acquisition of knowledge and skills in their chosen field.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "English Professor",
+            "question": "Which document is commonly used to outline an English Professor's research agenda?",
+            "answers": {
+                "A1": "Curriculum vitae",
+                "A2": "Research proposal",
+                "A3": "Teaching portfolio",
+                "A4": "Scholarly article"
+            },
+            "key": "A2",
+            "justification": "An English Professor's research agenda is often outlined in a research proposal, which serves as a roadmap for their future research projects and grants.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "English Professor",
+            "question": "What is an essential aspect of an English Professor's academic integrity?",
+            "answers": {
+                "A1": "Plagiarism detection",
+                "A2": "Original research contribution",
+                "A3": "Peer review expertise",
+                "A4": "Academic writing clarity"
+            },
+            "key": "A2",
+            "justification": "An English Professor's academic integrity is essential for maintaining the trust and credibility of their students, colleagues, and peers. Original research contributions are a hallmark of academic excellence.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "English Professor",
+            "question": "Which administrative responsibility is typically handled by an English Professor?",
+            "answers": {
+                "A1": "Department head",
+                "A2": "Curriculum committee chair",
+                "A3": "Student advising",
+                "A4": "Teaching assistantship"
+            },
+            "key": "A3",
+            "justification": "An English Professor often serves as a student advisor, providing guidance and support to students in their academic pursuits.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "English Professor",
+            "question": "What is an important aspect of an English Professor's professional development?",
+            "answers": {
+                "A1": "Professional conference attendance",
+                "A2": "Online course completion",
+                "A3": "Teaching certification renewal",
+                "A4": "Research publication milestone"
+            },
+            "key": "A4",
+            "justification": "An English Professor's professional development is essential for maintaining their expertise and staying current with the latest research trends. Research publication milestones are a key indicator of academic success.",
+            "justified_by": "RAG-Source"
+        },
+        {
+            "type": "medium",
+            "category": "English Professor",
+            "question": "A university appoints an English Professor without a PhD in English, but with extensive experience in teaching English Literature. What is likely to be a consequence of this appointment?",
+            "answers": {
+                "A1": "The professor will not be allowed to teach advanced courses",
+                "A2": "The professor may face disciplinary action for lacking the required degree",
+                "A3": "The university's reputation may suffer due to the lack of academic credentials",
+                "A4": "The professor's salary will increase due to their teaching experience"
+            },
+            "key": "A1",
+            "justification": "Given that a PhD is often a requirement for a Professor position, lacking this degree may lead to restrictions on courses taught or areas of expertise.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "English Professor",
+            "question": "An English Professor has 3 years of experience in teaching English and a PhD in English. What is the minimum requirement for this position?",
+            "answers": {
+                "A1": "2 years of experience",
+                "A2": "5 years of experience",
+                "A3": "3 years of experience + Master's degree",
+                "A4": "PhD in Education"
+            },
+            "key": "A1",
+            "justification": "The question explicitly states that the Professor must have 3 years of experience, so this is the correct answer.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "English Professor",
+            "question": "An English Professor without a PhD in English is allowed to teach certain courses. What could be the reason for this exception?",
+            "answers": {
+                "A1": "The university has limited funding",
+                "A2": "The professor has exceptional teaching skills",
+                "A3": "The course is not part of the PhD curriculum",
+                "A4": "The department head made a mistake"
+            },
+            "key": "A2",
+            "justification": "A PhD may not always be necessary for teaching certain courses, especially if they are not part of the academic program.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "English Professor",
+            "question": "A university appoints an English Professor with a PhD in English but no teaching experience. What is likely to be the outcome of this appointment?",
+            "answers": {
+                "A1": "The professor will receive additional training",
+                "A2": "The university's reputation may suffer due to the lack of academic credentials",
+                "A3": "The professor will not be allowed to teach advanced courses",
+                "A4": "The professor's salary will increase due to their PhD"
+            },
+            "key": "A2",
+            "justification": "Lacking teaching experience may lead to difficulties in connecting with students and effectively communicating course material.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "English Professor",
+            "question": "An English Professor is allowed to teach courses outside of their area of specialization. What could be a consequence of this?",
+            "answers": {
+                "A1": "The professor's reputation may suffer",
+                "A2": "The university's reputation may increase due to the professor's broad expertise",
+                "A3": "The professor will not receive promotion opportunities",
+                "A4": "The department head made a mistake"
+            },
+            "key": "A2",
+            "justification": "Teaching outside one's area of specialization can demonstrate flexibility and adaptability, which are valuable skills for a Professor.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        },
+        {
+            "type": "medium",
+            "category": "English Professor",
+            "question": "A university appoints an English Professor with a PhD in English and extensive teaching experience. What is likely to be the outcome of this appointment?",
+            "answers": {
+                "A1": "The professor will not receive additional promotions",
+                "A2": "The professor's salary will increase due to their expertise",
+                "A3": "The university's reputation may suffer due to the lack of academic credentials",
+                "A4": "The professor will be allowed to teach advanced courses"
+            },
+            "key": "A4",
+            "justification": "Lacking a PhD in English may not necessarily affect the Professor's ability to teach advanced courses, given their extensive teaching experience.",
+            "justified_by": "RAG-Source",
+            "frequency": 1
+        }
+    ],
+    "generated_at": "2026-04-25 08:10:56",
+    "source": "RAG-Ollama"
+}

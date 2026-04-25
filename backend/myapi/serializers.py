@@ -147,7 +147,7 @@ class ApplicationSerializer(serializers.ModelSerializer):
             'test_score', 'test_completed_at', 'test_deadline',
             # Interview results
             'interview_score', 'interview_transcript', 'interview_completed_at',
-            'confidence_score', 'interview_recording_url',
+            'confidence_score', 'interview_recording_url', 'interview_deadline',
             'applied_at', 'last_status_update', 'cover_letter', 'resume_url', 'notes',
             'created_at', 'updated_at', 'timeline'
         ]

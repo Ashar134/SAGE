@@ -324,6 +324,7 @@ class Application(models.Model):
     interview_completed_at = models.DateTimeField(blank=True, null=True)
     confidence_score = models.FloatField(blank=True, null=True)
     interview_recording_url = models.URLField(max_length=500, blank=True, null=True)
+    interview_deadline = models.DateTimeField(blank=True, null=True)  # 2 days after passing test
     
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)

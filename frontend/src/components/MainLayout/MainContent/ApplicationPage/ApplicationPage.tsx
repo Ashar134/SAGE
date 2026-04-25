@@ -23,6 +23,7 @@ interface Application {
   interviewDate?: string; // ISO string from database
   offerDeadline?: string; // ISO string from database
   testDeadline?: string; // ISO string from database
+  interviewDeadline?: string; // 2-day deadline after passing test
 }
 
 type StatusColumn = {
@@ -112,6 +113,49 @@ const isTestInterview = (interviewType: string | null): boolean => {
 // MAIN COMPONENT
 // ============================================================================
 
+// Helper component for interview action button with deadline logic
+const InterviewActionButton = ({ app }: { app: Application }) => {
+  const deadlineExpired = app.interviewDeadline
+    ? new Date() > new Date(app.interviewDeadline)
+    : false;
+  const hoursLeft = app.interviewDeadline
+    ? Math.max(0, Math.ceil((new Date(app.interviewDeadline).getTime() - Date.now()) / (1000 * 60 * 60)))
+    : null;
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 8, width: '100%' }}>
+      {app.interviewDeadline && (
+        <div style={{
+          fontSize: 12,
+          padding: '4px 10px',
+          borderRadius: 6,
+          textAlign: 'center',
+          background: deadlineExpired ? '#fee2e2' : hoursLeft !== null && hoursLeft < 12 ? '#fef3c7' : '#f0fdf4',
+          color: deadlineExpired ? '#dc2626' : hoursLeft !== null && hoursLeft < 12 ? '#d97706' : '#16a34a',
+          fontWeight: 600,
+        }}>
+          {deadlineExpired
+            ? '⛔ Deadline passed'
+            : hoursLeft !== null && hoursLeft < 24
+            ? `⚠ ${hoursLeft}h left to interview`
+            : `⏰ Interview by ${new Date(app.interviewDeadline).toLocaleDateString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}`}
+        </div>
+      )}
+      <button
+        className="action-btn primary w-full flex items-center justify-center gap-2"
+        disabled={deadlineExpired}
+        style={deadlineExpired ? { opacity: 0.5, cursor: 'not-allowed' } : {}}
+        onClick={(e) => {
+          e.stopPropagation();
+          if (!deadlineExpired) window.location.href = `/interview?application_id=${app.id}`;
+        }}
+      >
+        🎙 {deadlineExpired ? 'Deadline Passed' : 'Start Interview'}
+      </button>
+    </div>
+  );
+};
+
 function ApplicationPage() {
   const { accessToken, isAuthenticated, loading: authLoading } = useAuth();
   const [applications, setApplications] = useState<Application[]>([]);
@@ -178,7 +222,8 @@ function ApplicationPage() {
               app.status === 'interview' ? 'interview' : undefined,
             interviewDate: app.interview_date,
             offerDeadline: app.offer_deadline,
-            testDeadline: app.test_deadline || app.test_completed_at
+            testDeadline: app.test_deadline,
+            interviewDeadline: app.interview_deadline,
           }));
 
           setApplications(transformedApps);
@@ -223,19 +268,22 @@ function ApplicationPage() {
   // Get timeline events (interviews, tests, offers with deadlines)
   const getTimelineEvents = () => {
     return applications.filter(app =>
-      app.status === 'interview' || app.status === 'offer' || (app.status === 'test' && app.testDeadline)
+      (app.status === 'interview' && app.interviewDeadline) ||
+      app.status === 'offer' ||
+      (app.status === 'test' && app.testDeadline)
     ).map(app => {
       let dateStr = 'Date TBD';
       let daysLeft = '';
 
-      if (app.status === 'interview' && app.interviewDate) {
-        const date = new Date(app.interviewDate);
-        dateStr = date.toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+      if (app.status === 'interview' && app.interviewDeadline) {
+        const date = new Date(app.interviewDeadline);
         const diff = date.getTime() - new Date().getTime();
-        daysLeft = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24))) + ' days';
+        const hours = Math.max(0, Math.ceil(diff / (1000 * 60 * 60)));
+        dateStr = 'Interview by: ' + date.toLocaleDateString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+        daysLeft = hours < 24 ? `${hours}h left` : Math.ceil(diff / (1000 * 60 * 60 * 24)) + ' days';
       } else if (app.status === 'test' && app.testDeadline) {
         const date = new Date(app.testDeadline);
-        dateStr = 'Deadline: ' + date.toLocaleDateString([], { month: 'short', day: 'numeric' });
+        dateStr = 'Test deadline: ' + date.toLocaleDateString([], { month: 'short', day: 'numeric' });
         const diff = date.getTime() - new Date().getTime();
         daysLeft = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24))) + ' days';
       } else if (app.status === 'offer' && app.offerDeadline) {
@@ -247,9 +295,7 @@ function ApplicationPage() {
 
       return {
         ...app,
-        eventType: app.status === 'interview'
-          ? (app.interviewType === 'test' ? 'test' : 'interview')
-          : (app.status === 'test' ? 'test' : 'offer'),
+        eventType: app.status === 'interview' ? 'interview' : (app.status === 'test' ? 'test' : 'offer'),
         date: dateStr,
         daysLeft: daysLeft
       };
@@ -471,15 +517,7 @@ function ApplicationPage() {
                         Take Test
                       </button>
                     ) : app.status === 'interview' ? (
-                      <button
-                        className="action-btn primary w-full flex items-center justify-center gap-2"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          window.location.href = `/interview?application_id=${app.id}`;
-                        }}
-                      >
-                        🎙 Start Interview
-                      </button>
+                      <InterviewActionButton app={app} />
                     ) : app.interviewType === 'test' ? (
                       <>
                         <button className="action-btn primary">Start Test</button>
@@ -547,28 +585,27 @@ function ApplicationPage() {
 
               // Check each application for events on this day
               applications.forEach(app => {
-                // For interviews: use actual date or fallback to calculated date
+                // For interviews: show the 2-day deadline on the calendar
                 if (app.status === 'interview') {
-                  let eventDate: Date;
+                  const deadlineDate = app.interviewDeadline
+                    ? new Date(app.interviewDeadline)
+                    : app.interviewDate
+                    ? new Date(app.interviewDate)
+                    : null;
 
-                  if (app.interviewDate) {
-                    eventDate = new Date(app.interviewDate);
-                  } else {
-                    // Skip if no explicit date
-                    return;
-                  }
+                  if (!deadlineDate) return;
 
-                  if (eventDate.getDate() === day &&
-                    eventDate.getMonth() === currentMonth &&
-                    eventDate.getFullYear() === currentYear) {
+                  if (deadlineDate.getDate() === day &&
+                    deadlineDate.getMonth() === currentMonth &&
+                    deadlineDate.getFullYear() === currentYear) {
 
-                    // Format time from the date object
-                    const timeStr = eventDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                    const timeStr = deadlineDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                    const isPast = deadlineDate < now;
 
                     events.push({
-                      type: app.interviewType === 'test' ? 'test' : 'interview',
-                      title: `${app.company} ${app.interviewType === 'test' ? 'Assessment' : 'Interview'}`,
-                      time: timeStr,
+                      type: 'interview',
+                      title: `${app.company} — Interview Deadline`,
+                      time: isPast ? 'Expired' : `By ${timeStr}`,
                       application: app
                     });
                   }
@@ -576,37 +613,31 @@ function ApplicationPage() {
 
                 // For offers: use actual deadline
                 if (app.status === 'offer') {
-                  let eventDate: Date;
-
-                  if (app.offerDeadline) {
-                    eventDate = new Date(app.offerDeadline);
-                  } else {
-                    // Skip if no explicit date
-                    return;
-                  }
+                  if (!app.offerDeadline) return;
+                  const eventDate = new Date(app.offerDeadline);
 
                   if (eventDate.getDate() === day &&
                     eventDate.getMonth() === currentMonth &&
                     eventDate.getFullYear() === currentYear) {
                     events.push({
                       type: 'offer',
-                      title: `${app.company} Offer`,
-                      time: 'Deadline',
+                      title: `${app.company} — Offer Deadline`,
+                      time: 'Respond by today',
                       application: app
                     });
                   }
                 }
 
-                // For tests: use test deadline when in test status
+                // For tests: use test deadline
                 if (app.status === 'test' && app.testDeadline) {
-                  let eventDate = new Date(app.testDeadline);
+                  const eventDate = new Date(app.testDeadline);
 
                   if (eventDate.getDate() === day &&
                     eventDate.getMonth() === currentMonth &&
                     eventDate.getFullYear() === currentYear) {
                     events.push({
                       type: 'test',
-                      title: `${app.company} Test Deadline`,
+                      title: `${app.company} — Test Deadline`,
                       time: 'Deadline',
                       application: app
                     });

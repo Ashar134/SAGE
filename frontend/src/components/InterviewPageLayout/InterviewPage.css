@@ -434,3 +434,25 @@
 .meet-btn-red:hover { background: #b91c1c; }
 
 .meet-btn-full { width: 100%; }
+
+/* ── Real-time live transcription ── */
+.meet-live-text {
+  font-size: 14px;
+  color: #e2e8f0;
+  line-height: 1.6;
+  margin-top: 10px;
+  word-break: break-word;
+}
+
+.meet-cursor {
+  display: inline-block;
+  color: #6366f1;
+  font-weight: 700;
+  animation: blink-cursor 0.8s step-end infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

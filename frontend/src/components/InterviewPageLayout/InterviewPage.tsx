@@ -5,6 +5,14 @@ import "./InterviewPage.css";
 
 const API_BASE_URL = "http://localhost:8000";
 
+// Extend Window type for SpeechRecognition (browser API)
+declare global {
+  interface Window {
+    SpeechRecognition: typeof SpeechRecognition;
+    webkitSpeechRecognition: typeof SpeechRecognition;
+  }
+}
+
 interface TranscriptEntry {
   question: string;
   answer: string;
@@ -32,7 +40,7 @@ const InterviewPage = () => {
   const [jobTitle, setJobTitle] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [transcript, setTranscript] = useState<TranscriptEntry[]>([]);
-  const [currentAnswer, setCurrentAnswer] = useState("");
+  const [liveTranscript, setLiveTranscript] = useState(""); // real-time interim text
   const [errorMsg, setErrorMsg] = useState("");
   const [isMicMuted, setIsMicMuted] = useState(false);
   const [isCamOff, setIsCamOff] = useState(false);
@@ -48,6 +56,9 @@ const InterviewPage = () => {
   const videoChunksRef = useRef<Blob[]>([]);
   const audioContextRef = useRef<AudioContext | null>(null);
   const mixedDestRef = useRef<MediaStreamAudioDestinationNode | null>(null);
+  const speechRecognitionRef = useRef<SpeechRecognition | null>(null);
+  const liveTranscriptRef = useRef(""); // track latest live text for use in stopRecording
+  const isRecordingRef = useRef(false); // track recording state for silence detection
 
   // ── Camera setup ─────────────────────────────────────────────────────────
   const startCamera = useCallback(async () => {
@@ -192,6 +203,10 @@ const InterviewPage = () => {
   // ── Recording ─────────────────────────────────────────────────────────────
   const startRecording = async () => {
     audioChunksRef.current = [];
+    liveTranscriptRef.current = "";
+    setLiveTranscript("");
+    isRecordingRef.current = true;
+
     try {
       // Always use a fresh dedicated audio stream — more reliable than sharing camera tracks
       const audioStream = await navigator.mediaDevices.getUserMedia({
@@ -214,10 +229,100 @@ const InterviewPage = () => {
     } catch {
       setState("error");
       setErrorMsg("Microphone access denied.");
+      isRecordingRef.current = false;
+      return;
+    }
+
+    // ── Start Web Speech API for real-time transcription ──────────────────
+    const SpeechRecognitionAPI = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (SpeechRecognitionAPI) {
+      const recognition = new SpeechRecognitionAPI();
+      recognition.continuous = true;
+      recognition.interimResults = true;
+      recognition.lang = "en-US";
+
+      let finalText = "";
+      let lastSpeechTime = Date.now();
+      let silenceTimer: ReturnType<typeof setTimeout> | null = null;
+
+      // Function to start/reset silence timer
+      const resetSilenceTimer = () => {
+        if (silenceTimer) clearTimeout(silenceTimer);
+        lastSpeechTime = Date.now();
+        
+        silenceTimer = setTimeout(() => {
+          const timeSinceLastSpeech = Date.now() - lastSpeechTime;
+          console.log('[Silence Detection] 5 seconds of silence, stopping. Time since last speech:', timeSinceLastSpeech);
+          if (isRecordingRef.current) {
+            handleStopRecording();
+          }
+        }, 5000);
+      };
+
+      // Start silence timer immediately (handles case where user doesn't speak at all)
+      resetSilenceTimer();
+
+      recognition.onresult = (event: SpeechRecognitionEvent) => {
+        // Reset silence timer on any speech activity
+        resetSilenceTimer();
+
+        let interim = "";
+        for (let i = event.resultIndex; i < event.results.length; i++) {
+          const result = event.results[i];
+          if (result.isFinal) {
+            finalText += result[0].transcript + " ";
+            console.log('[Speech] Final result:', result[0].transcript);
+          } else {
+            interim += result[0].transcript;
+          }
+        }
+        const combined = (finalText + interim).trim();
+        liveTranscriptRef.current = finalText.trim();
+        setLiveTranscript(combined);
+      };
+
+      recognition.onspeechend = () => {
+        // Speech has ended, start the 5-second countdown
+        console.log('[Speech] Speech ended, starting 5s countdown');
+        resetSilenceTimer();
+      };
+
+      recognition.onerror = () => {
+        // Silently ignore errors
+      };
+
+      recognition.onend = () => {
+        // Clean up silence timer
+        if (silenceTimer) clearTimeout(silenceTimer);
+        
+        // Auto-restart if still recording (recognition times out after ~60s of silence)
+        if (isRecordingRef.current && mediaRecorderRef.current && mediaRecorderRef.current.state === "recording") {
+          try { 
+            recognition.start();
+            // Restart silence timer when recognition restarts
+            resetSilenceTimer();
+          } catch { /* already started */ }
+        }
+      };
+
+      try {
+        recognition.start();
+        speechRecognitionRef.current = recognition;
+      } catch {
+        speechRecognitionRef.current = null;
+      }
     }
   };
 
   const stopRecording = () => new Promise<Blob>(resolve => {
+    isRecordingRef.current = false;
+
+    // Stop Web Speech API (this will also clean up the silence timer via onend)
+    if (speechRecognitionRef.current) {
+      try { speechRecognitionRef.current.stop(); } catch { /* ignore */ }
+      speechRecognitionRef.current = null;
+    }
+
     const recorder = mediaRecorderRef.current;
     if (!recorder) { resolve(new Blob()); return; }
     recorder.onstop = () => {
@@ -228,36 +333,17 @@ const InterviewPage = () => {
   });
 
   const handleStopRecording = async () => {
-    setState("transcribing");
-    const audioBlob = await stopRecording();
+    // Use only the live transcript — no Whisper call
+    const finalAnswer = liveTranscriptRef.current.trim();
 
-    if (audioBlob.size === 0) {
-      setCurrentAnswer("");
-      setState("next");
-      return;
-    }
+    // Stop recording
+    await stopRecording();
 
-    const formData = new FormData();
-    formData.append("audio", audioBlob, "answer.webm");
-    try {
-      const res = await fetch(`${API_BASE_URL}/api/interview/stt/`, { method: "POST", body: formData });
-      const data = await res.json();
-      setCurrentAnswer(data.text || "");
-    } catch {
-      setCurrentAnswer("");
-    }
-    setState("next");
-  };
-
-  useEffect(() => {
-    if (state === "recording") startRecording();
-  }, [state]);
-
-  // ── Confirm & next ────────────────────────────────────────────────────────
-  const confirmAnswer = () => {
-    const updated = [...transcript, { question: questions[currentIndex], answer: currentAnswer }];
+    // Auto-confirm and move to next question
+    const updated = [...transcript, { question: questions[currentIndex], answer: finalAnswer }];
     setTranscript(updated);
-    setCurrentAnswer("");
+    setLiveTranscript("");
+    liveTranscriptRef.current = "";
     const next = currentIndex + 1;
     if (next < questions.length) {
       setCurrentIndex(next);
@@ -266,6 +352,10 @@ const InterviewPage = () => {
       submitInterview(updated);
     }
   };
+
+  useEffect(() => {
+    if (state === "recording") startRecording();
+  }, [state]);
 
   // ── Submit ────────────────────────────────────────────────────────────────
   const submitInterview = async (finalTranscript: TranscriptEntry[]) => {
@@ -472,16 +562,23 @@ const InterviewPage = () => {
           {/* Transcription */}
           <div className="meet-panel-section meet-panel-transcript-section">
             <p className="meet-panel-label">
-              {state === "recording" ? "🔴 Listening..." : state === "transcribing" ? "⏳ Transcribing..." : "Your Answer"}
+              {state === "recording" ? "🔴 Listening..." : "Your Answer"}
             </p>
             <div className={`meet-transcript-box ${state === "recording" ? "active" : ""}`}>
               {state === "recording" && (
-                <div className="meet-wave">
-                  <span /><span /><span /><span /><span />
-                </div>
-              )}
-              {(state === "next" || state === "transcribing") && (
-                <p>{currentAnswer || <em style={{ color: "#64748b" }}>No speech detected.</em>}</p>
+                <>
+                  <div className="meet-wave">
+                    <span /><span /><span /><span /><span />
+                  </div>
+                  {liveTranscript ? (
+                    <p className="meet-live-text">{liveTranscript}<span className="meet-cursor">|</span></p>
+                  ) : (
+                    <p style={{ color: "#64748b", fontStyle: "italic", marginTop: 8 }}>Listening for your answer...</p>
+                  )}
+                  <p style={{ fontSize: 11, color: '#94a3b8', marginTop: 8, textAlign: 'center' }}>
+                    Auto-advances after 5s of silence
+                  </p>
+                </>
               )}
               {(state === "intro" || state === "speaking") && (
                 <p style={{ color: "#64748b", fontStyle: "italic" }}>Your answer will appear here...</p>
@@ -505,16 +602,6 @@ const InterviewPage = () => {
             {state === "intro" && (
               <button className="meet-btn meet-btn-primary meet-btn-full" onClick={startInterview}>
                 ▶ Start Interview
-              </button>
-            )}
-            {state === "recording" && (
-              <button className="meet-btn meet-btn-red meet-btn-full" onClick={handleStopRecording}>
-                ⏹ Stop Recording
-              </button>
-            )}
-            {state === "next" && (
-              <button className="meet-btn meet-btn-primary meet-btn-full" onClick={confirmAnswer}>
-                {currentIndex + 1 < questions.length ? "Next Question →" : "Submit Interview"}
               </button>
             )}
           </div>

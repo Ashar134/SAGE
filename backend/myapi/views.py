@@ -480,6 +480,9 @@ def submit_test(request):
         application.test_score = percentage
         application.test_completed_at = timezone.now()
         application.status = new_status
+        if new_status == 'interview':
+            from datetime import timedelta
+            application.interview_deadline = timezone.now() + timedelta(days=2)
         application.save()
         
         # Timeline
@@ -2323,6 +2326,26 @@ def interview_get_questions(request):
 
         if application.interview_score is not None:
             return Response({'success': False, 'error': 'Interview already completed', 'already_completed': True}, status=400)
+
+        # Check interview deadline
+        if application.interview_deadline and timezone.now() > application.interview_deadline:
+            # Auto-reject and update status
+            application.status = 'rejected'
+            application.notes = 'Interview deadline passed (2-day window expired).'
+            application.save(update_fields=['status', 'notes', 'updated_at'])
+            ApplicationTimeline.objects.create(
+                application=application,
+                event_type='status_change',
+                old_status='interview',
+                new_status='rejected',
+                title='Interview Deadline Expired',
+                description='Candidate did not complete the interview within the 2-day window.'
+            )
+            return Response({
+                'success': False,
+                'error': 'Interview deadline has passed. You had 2 days to complete the interview.',
+                'deadline_expired': True
+            }, status=403)
 
         job_title = application.job_title
         requirements = application.job.requirements if application.job else []
