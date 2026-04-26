@@ -3,7 +3,7 @@ import { Bell, Moon, Search, Sun, CheckCircle2, AlertCircle } from "lucide-react
 import { useEffect, useRef, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
-import { fetchApplicants } from "../../lib/apiClient";
+import { fetchApplicants, getCompanyInfo, updateCompanyLogo } from "../../lib/apiClient";
 import { useAuth } from "../../context/AuthContext";
 
 export default function Topbar() {
@@ -19,6 +19,39 @@ export default function Topbar() {
   const [notifications, setNotifications] = useState([]);
   const [notifError, setNotifError] = useState(null);
   const [notifLoading, setNotifLoading] = useState(true);
+  const [companyLogo, setCompanyLogo] = useState("/loop.png");
+  const fileInputRef = useRef(null);
+
+  // Fetch company info on mount
+  useEffect(() => {
+    getCompanyInfo()
+      .then((data) => {
+        if (data.success && data.company?.logo_url) {
+          setCompanyLogo(data.company.logo_url);
+        }
+      })
+      .catch((err) => console.error("Failed to fetch company info:", err));
+  }, []);
+
+  const handleLogoUpdate = () => {
+    fileInputRef.current?.click();
+  };
+
+  const handleFileChange = async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    try {
+      const res = await updateCompanyLogo(file);
+      if (res.success) {
+        setCompanyLogo(res.logo_url);
+        alert("Company logo updated successfully!");
+        window.location.reload();
+      }
+    } catch (err) {
+      alert("Error updating logo: " + err.message);
+    }
+  };
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -118,7 +151,7 @@ export default function Topbar() {
       </div>
 
       <div className="flex items-center gap-3">
-        
+
         <button
           type="button"
           onClick={toggleTheme}
@@ -183,14 +216,12 @@ export default function Topbar() {
                             )
                           )
                         }
-                        className={`w-full text-left py-2 px-2 rounded-lg hover:bg-gray-50 transition flex items-start gap-3 ${
-                          n.read ? "text-gray-600" : "text-gray-900"
-                        }`}
+                        className={`w-full text-left py-2 px-2 rounded-lg hover:bg-gray-50 transition flex items-start gap-3 ${n.read ? "text-gray-600" : "text-gray-900"
+                          }`}
                       >
                         <div
-                          className={`mt-1 h-2.5 w-2.5 rounded-full ${
-                            n.read ? "bg-gray-200" : "bg-primary"
-                          }`}
+                          className={`mt-1 h-2.5 w-2.5 rounded-full ${n.read ? "bg-gray-200" : "bg-primary"
+                            }`}
                         />
                         <div className="flex-1">
                           <p className="text-sm font-medium leading-tight">{n.title}</p>
@@ -216,8 +247,8 @@ export default function Topbar() {
             className="flex items-center gap-2 rounded-full border px-2 py-1 hover:bg-gray-50 transition"
             aria-label="Profile menu"
           >
-            <div className="h-9 w-9 rounded-full bg-indigo-900 text-white flex items-center justify-center font-semibold">
-              HR
+            <div className="h-9 w-9 rounded-full bg-indigo-900 text-white flex items-center justify-center font-semibold overflow-hidden">
+              <img src={companyLogo} alt="HR" className="h-full w-full object-cover" />
             </div>
             <div className="hidden sm:block text-left">
               <p className="text-sm font-semibold text-gray-900 leading-tight">
@@ -236,6 +267,12 @@ export default function Topbar() {
                 Overview
               </button>
               <button
+                className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-50"
+                onClick={handleLogoUpdate}
+              >
+                Update Company Logo
+              </button>
+              <button
                 className="w-full text-left px-3 py-2 text-sm text-red-600 hover:bg-red-50"
                 onClick={() => {
                   logout();
@@ -248,6 +285,13 @@ export default function Topbar() {
           )}
         </div>
       </div>
+      <input
+        type="file"
+        ref={fileInputRef}
+        onChange={handleFileChange}
+        className="hidden"
+        accept="image/*"
+      />
     </header>
   );
 }

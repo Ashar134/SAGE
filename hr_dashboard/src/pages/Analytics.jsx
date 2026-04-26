@@ -33,10 +33,10 @@ export default function Analytics() {
       : 0;
 
     return [
-      { id: 1, title: "Total Funnel", value: total, subtitle: "Across all pipelines", trend: "+8% vs last week" },
-      { id: 2, title: "Avg Assessment", value: `${avgTest}%`, subtitle: "Qualified pool score", trend: "+2%" },
-      { id: 3, title: "Avg Interview", value: `${avgInterview}%`, subtitle: "Candidate quality", trend: "+12%" },
-      { id: 4, title: "Max Match", value: `${highestMatch}%`, subtitle: "Top recommendation", trend: "Target: 95%" },
+      { id: 1, title: "Total Funnel", value: total, subtitle: "Across all pipelines" },
+      { id: 2, title: "Avg Assessment", value: `${avgTest}%`, subtitle: "Qualified pool" },
+      { id: 3, title: "Avg Interview", value: `${avgInterview}%`, subtitle: "Candidate quality" },
+      { id: 4, title: "Max Match", value: `${highestMatch}%`, subtitle: "Top recommendation" },
     ];
   }, [applicants]);
 
@@ -76,7 +76,7 @@ export default function Analytics() {
                   </div>
                   <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-indigo-600 rounded-full transition-all duration-1000"
+                      className="h-full bg-[#272727] rounded-full transition-all duration-1000"
                       style={{ width: `${Math.min(100, (d.applicants / (applicants.length || 1)) * 100)}%` }}
                     />
                   </div>
@@ -97,7 +97,7 @@ export default function Analytics() {
               <Badge className="bg-emerald-500">Active</Badge>
             </div>
             <div className="flex items-center justify-between p-3 rounded-lg bg-emerald-50 border border-emerald-100">
-              <span className="text-sm text-emerald-800 font-medium">CV Parser (v2.4)</span>
+              <span className="text-sm text-emerald-800 font-medium">CV Parser</span>
               <Badge className="bg-emerald-500">Stable</Badge>
             </div>
             <div className="flex items-center justify-between p-3 rounded-lg bg-blue-50 border border-blue-100">

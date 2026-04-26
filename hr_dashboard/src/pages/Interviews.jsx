@@ -7,7 +7,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
 import { fetchApplicants } from "../lib/apiClient";
 
 const statusStyles = {
-  Scheduled: "bg-indigo-50 text-indigo-700",
+  Scheduled: "bg-[#e0f0ff] text-[#272727]",
   "Feedback Pending": "bg-amber-50 text-amber-700",
   Completed: "bg-emerald-50 text-emerald-700",
   "No-Show": "bg-red-50 text-red-700",
@@ -122,10 +122,10 @@ export default function Interviews() {
         : "—";
 
     return [
-      { id: 1, title: "Scheduled", value: scheduled, subtitle: "Next 10 days", trend: "+1 vs last week", trendType: "up" },
-      { id: 2, title: "Completed", value: completed, subtitle: "Past 14 days", trend: "+2 closed", trendType: "up" },
-      { id: 3, title: "Average Score", value: typeof avgScore === "number" ? `${avgScore}%` : avgScore, subtitle: "All completed rounds", trend: noShow ? `${noShow} no-shows` : "Stable", trendType: noShow ? "down" : "up" },
-      { id: 4, title: "Pending Feedback", value: feedbackPending, subtitle: "Need closure today", trend: feedbackPending ? "Remind panel" : "All clear", trendType: feedbackPending ? "down" : "up" },
+      { id: 1, title: "Scheduled", value: scheduled, subtitle: "Next 10 days" },
+      { id: 2, title: "Completed", value: completed, subtitle: "Past 14 days" },
+      { id: 3, title: "Average Score", value: typeof avgScore === "number" ? `${avgScore}%` : avgScore, subtitle: "All completed rounds", trend: noShow ? `${noShow} no-shows` : null, trendType: "down" },
+      { id: 4, title: "Pending Feedback", value: feedbackPending, subtitle: "Need closure today", trend: feedbackPending ? "Remind panel" : null, trendType: "down" },
     ];
   }, [interviews]);
 
@@ -200,7 +200,7 @@ export default function Interviews() {
             {upcoming.map((item) => {
               const Icon = typeIcon[item.type] || CalendarClock;
               return (
-                <div key={item.id} className="rounded-xl border border-indigo-50 bg-white p-3 shadow-xs flex flex-col gap-2">
+                <div key={item.id} className="rounded-xl border border-[#e0f0ff] bg-white p-3 shadow-xs flex flex-col gap-2">
                   <div className="flex items-start justify-between gap-2">
                     <div>
                       <div className="text-sm font-semibold text-gray-900">{item.candidate}</div>
@@ -213,7 +213,7 @@ export default function Interviews() {
                     </Badge>
                   </div>
                   <div className="flex flex-wrap items-center gap-3 text-xs text-gray-600">
-                    <span className="inline-flex items-center gap-1 rounded-full bg-indigo-50 text-indigo-700 px-2 py-1">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-[#e0f0ff] text-[#272727] px-2 py-1">
                       <CalendarClock size={12} />
                       {formatDate(item.date)} · {item.time}
                     </span>
@@ -378,7 +378,7 @@ export default function Interviews() {
                       {item.score > 0 ? (
                         <div className="flex items-center gap-2">
                           <div className="w-20 h-2 rounded-full bg-gray-100 overflow-hidden">
-                            <div className="h-full rounded-full bg-indigo-500" style={{ width: `${Math.min(item.score, 100)}%` }} />
+                            <div className="h-full rounded-full bg-[#272727]" style={{ width: `${Math.min(item.score, 100)}%` }} />
                           </div>
                           <span className="text-sm font-semibold text-gray-900">{item.score.toFixed(1)}%</span>
                         </div>
@@ -398,7 +398,7 @@ export default function Interviews() {
                       <div className="flex items-center justify-end gap-2">
                         {item.recording ? (
                           <button
-                            className="inline-flex items-center gap-1 rounded-md border px-2 py-1 text-xs text-indigo-700 border-indigo-200 hover:bg-indigo-50"
+                            className="inline-flex items-center gap-1 rounded-md border px-2 py-1 text-xs text-[#272727] border-[#e0f0ff] hover:bg-[#e0f0ff]"
                             onClick={() => setVideoModal(item)}
                           >
                             <Play size={12} />
@@ -433,13 +433,14 @@ export default function Interviews() {
                                       {s.total != null && (
                                         <div className="flex flex-wrap gap-2 text-xs">
                                           {[
-                                            { label: "Communication", val: s.communication, color: "bg-blue-100 text-blue-700" },
-                                            { label: "Relevance", val: s.relevance, color: "bg-purple-100 text-purple-700" },
-                                            { label: "Technical", val: s.technical, color: "bg-orange-100 text-orange-700" },
-                                            { label: "Reasoning", val: s.reasoning, color: "bg-green-100 text-green-700" },
-                                            { label: "Total", val: s.total, color: "bg-indigo-100 text-indigo-700 font-semibold" },
-                                          ].map(({ label, val, color }) => val != null && (
-                                            <span key={label} className={`rounded-full px-2 py-0.5 ${color}`}>
+                                            { label: "Communication", val: s.communication },
+                                            { label: "Relevance", val: s.relevance },
+                                            { label: "Technical", val: s.technical },
+                                            { label: "Reasoning", val: s.reasoning },
+                                            { label: "Total", val: s.total },
+                                          ].map(({ label, val }) => val != null && (
+                                            <span key={label} className={`rounded-full px-2 py-0.5 border border-blue-100 ${label === 'Total' ? 'font-bold' : ''}`}
+                                              style={{ backgroundColor: 'rgb(224, 240, 255)', color: '#111827' }}>
                                               {label}: {typeof val === "number" ? val.toFixed(1) : val}/10
                                             </span>
                                           ))}
@@ -458,7 +459,7 @@ export default function Interviews() {
                               <h4 className="text-sm font-semibold text-gray-800 mb-2">Visual Confidence Score</h4>
                               <div className="flex items-center gap-3">
                                 <div className="w-32 h-2 rounded-full bg-gray-100 overflow-hidden">
-                                  <div className="h-full rounded-full bg-emerald-500" style={{ width: `${Math.min(item.confidenceScore * 10, 100)}%` }} />
+                                  <div className="h-full rounded-full bg-[#272727]" style={{ width: `${Math.min(item.confidenceScore * 10, 100)}%` }} />
                                 </div>
                                 <span className="text-sm font-semibold text-gray-900">{(item.confidenceScore * 10).toFixed(1)}%</span>
                                 <span className="text-xs text-gray-500">(eye contact, facial expression, posture, dressing)</span>

@@ -41,7 +41,7 @@ function Header() {
                 <header className="page-header">
                     <div className="container header-container">
                         <div className="logo-brand">
-                            <img className="logo-image" src="./sage-logo.png" alt="Sage-Logo" />
+                            <img className="logo-image" src="/sage-logo.png" alt="Sage-Logo" />
                             <h1 className="brand-name">
                                 Sa<span className="brand-highlight">ge</span>
                             </h1>

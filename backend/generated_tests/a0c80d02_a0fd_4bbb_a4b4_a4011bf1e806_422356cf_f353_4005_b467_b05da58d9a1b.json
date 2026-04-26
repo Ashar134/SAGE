@@ -1,0 +1,791 @@
+{
+    "candidate_id": "a0c80d02-a0fd-4bbb-a4b4-a4011bf1e806",
+    "job_id": "422356cf-f353-4005-b467-b05da58d9a1b",
+    "job_title": "DevOps Engineer",
+    "requirements": [
+        "BS/MS in Computer Science, IT, or related field",
+        "3+ years experience in DevOps or Site Reliability Engineering",
+        "Hands-on experience with AWS, Docker, Kubernetes, Terraform",
+        "Familiarity with CI/CD pipelines (Jenkins, GitHub Actions)",
+        "Monitoring and logging experience (Prometheus, ELK Stack)",
+        "Scripting skills in Python, Bash, or Go",
+        "Strong problem-solving and troubleshooting skills"
+    ],
+    "total_questions": 51,
+    "distribution": {
+        "analytical": 15,
+        "english": 15,
+        "job_specific": 70
+    },
+    "questions": [
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "The average of three numbers is 48. The average of two of these numbers is 56. What is the third number?",
+            "answers": {
+                "A1": "32",
+                "A2": "84",
+                "A3": "52",
+                "A4": "104"
+            },
+            "key": "32",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 26
+        },
+        {
+            "type": "hard",
+            "category": "analytical",
+            "question": "My watch was correct at noon, after which it started to lose 17 minutes per hour until six hours ago it stopped completely. It now shows the time as 2.52 pm. What time is it now?",
+            "answers": {
+                "A1": "10:00 PM",
+                "A2": "10:12 PM",
+                "A3": "09:50 PM",
+                "A4": "10:30 PM"
+            },
+            "key": "10:00 PM",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 28
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A car travels at a speed of 40 mph over a certain distance and then returns over the same distance at a speed of 60 mph. What is the average speed for the total journey?",
+            "answers": {
+                "A1": "46 mph",
+                "A2": "48 mph",
+                "A3": "50 mph",
+                "A4": "52 mph"
+            },
+            "key": "48 mph",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 27
+        },
+        {
+            "type": "hard",
+            "category": "analytical",
+            "question": "Three teams from Peshawar, Islamabad, and Lahore are competing for two trophies. One tropy is for badminton, and one for table tennis. How many different outcomes of the two competitions exist?",
+            "answers": {
+                "A1": "6",
+                "A2": "8",
+                "A3": "9",
+                "A4": "12"
+            },
+            "key": "9",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 21
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "In a game of eight players lasting for 70 minutes, six substitutes alternate with each player. This means that all players, including the substitutes, are on the pitch for the same length of time. For how long?",
+            "answers": {
+                "A1": "40 minutes",
+                "A2": "35 minutes",
+                "A3": "45 minutes",
+                "A4": "50 minutes"
+            },
+            "key": "40 minutes",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 32
+        },
+        {
+            "type": "hard",
+            "category": "analytical",
+            "question": "Peter, Paul and Mary share out a certain sum of money between them. Peter gets 2 / 5, Paul gets 0.55 and Mary gets $45.00. How much is the original sum of money?",
+            "answers": {
+                "A1": "$800",
+                "A2": "$900",
+                "A3": "$700",
+                "A4": "$1000"
+            },
+            "key": "$900",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 23
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "Which two numbers come next in the sequence: 38, 24, 62, 12, 74, ?",
+            "answers": {
+                "A1": "28, 102",
+                "A2": "30, 100",
+                "A3": "26, 106",
+                "A4": "32, 108"
+            },
+            "key": "28, 102",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 20
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "What number should replace the question mark? 70 & 91 & 120 , 14 & 13 & 24 , 5 & 7 & ?",
+            "answers": {
+                "A1": "10",
+                "A2": "15",
+                "A3": "12",
+                "A4": "5"
+            },
+            "key": "5",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 24
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "If 2 = H are BTO is two heads are better than one, what is the meaning of 2 = S to ES?",
+            "answers": {
+                "A1": "Two sides to Every Story",
+                "A2": "Two heads to Every Story",
+                "A3": "Two sides are better than one",
+                "A4": "Two heads are better than one"
+            },
+            "key": "Two sides to Every Story",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 27
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "I met four of my old school friends today whose names have linked patterns. In the morning I first saw PATRICIA and later bumped into RICHIE. Then in the afternoon I saw CHRISTABEL. Who did I encounter in the evening? ",
+            "answers": {
+                "A1": "Stella",
+                "A2": "Thelma",
+                "A3": "Sally",
+                "A4": "Thora"
+            },
+            "key": "Stella",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 39
+        },
+        {
+            "type": "hard",
+            "category": "analytical",
+            "question": "In 13 years time the combined ages of my three brothers will be 94. What will it be in nine years time?",
+            "answers": {
+                "A1": "91",
+                "A2": "72",
+                "A3": "82",
+                "A4": "Not sufficient information to answer."
+            },
+            "key": "82",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 27
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "Which number appears next in the pattern? 13, 17, 19, 23, ?",
+            "answers": {
+                "A1": "25",
+                "A2": "27",
+                "A3": "29",
+                "A4": "33"
+            },
+            "key": "29",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 36
+        },
+        {
+            "type": "hard",
+            "category": "analytical",
+            "question": "MTD is to PXB as FRJ is to ?",
+            "answers": {
+                "A1": "VHI",
+                "A2": "PIB",
+                "A3": "BPI",
+                "A4": "IVH"
+            },
+            "key": "IVH",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 38
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "Jack is twice as old as Jill, but in five years time, he will only be one and a half times as old. How old are Jack and Jill now?",
+            "answers": {
+                "A1": "Jack: 10 and Jill: 5",
+                "A2": "Jack: 20 and Jill: 10",
+                "A3": "Jack: 2 and Jill: 1",
+                "A4": "Jack: 50 and Jill: 25"
+            },
+            "key": "Jack: 10 and Jill: 5",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 23
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "Which one is the odd one out?",
+            "answers": {
+                "A1": "triangle",
+                "A2": "hexagon",
+                "A3": "cube",
+                "A4": "pentagon"
+            },
+            "key": "cube",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 30
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Opposite of AUSTERE:",
+            "answers": {
+                "A1": "Strict",
+                "A2": "Luxurious",
+                "A3": "Severe",
+                "A4": "Plain"
+            },
+            "key": "Luxurious",
+            "justification": "Opposite of plain and severe",
+            "justified_by": "JSON-Fallback",
+            "frequency": 14
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Opposite of OBLIGE:",
+            "answers": {
+                "A1": "Help",
+                "A2": "Assist",
+                "A3": "Hinder",
+                "A4": "Support"
+            },
+            "key": "Hinder",
+            "justification": "Opposite of help and assist",
+            "justified_by": "JSON-Fallback",
+            "frequency": 5
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Opposite of EPHEMERAL:",
+            "answers": {
+                "A1": "Temporary",
+                "A2": "Permanent",
+                "A3": "Brief",
+                "A4": "Short"
+            },
+            "key": "Permanent",
+            "justification": "Opposite of short-lived",
+            "justified_by": "JSON-Fallback",
+            "frequency": 14
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "Correct: 'I ___ him since we were in college.'",
+            "answers": {
+                "A1": "knew",
+                "A2": "have known",
+                "A3": "had known",
+                "A4": "was knowing"
+            },
+            "key": "have known",
+            "justification": "Present perfect for duration",
+            "justified_by": "JSON-Fallback",
+            "frequency": 13
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Choose similar meaning to PRUDENT:",
+            "answers": {
+                "A1": "Reckless",
+                "A2": "Cautious",
+                "A3": "Careless",
+                "A4": "Impulsive"
+            },
+            "key": "Cautious",
+            "justification": "Prudent means acting with care",
+            "justified_by": "JSON-Fallback",
+            "frequency": 8
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "Correct: 'The data ___ that significant progress ___ made.'",
+            "answers": {
+                "A1": "show...has",
+                "A2": "shows...have",
+                "A3": "shows...has",
+                "A4": "show...have"
+            },
+            "key": "shows...has",
+            "justification": "Data singular with has been",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Opposite of IMPARTIAL:",
+            "answers": {
+                "A1": "Fair",
+                "A2": "Biased",
+                "A3": "Humane",
+                "A4": "Strict"
+            },
+            "key": "Biased",
+            "justification": "Opposite of fair and unbiased",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "EPITOME : PERFECTION",
+            "answers": {
+                "A1": "Summary : Length",
+                "A2": "Model : Mediocrity",
+                "A3": "Prototype : Excellence",
+                "A4": "Icon : Ordinariness",
+                "A5": "Paragon : Inferiority"
+            },
+            "key": "Prototype : Excellence",
+            "justification": "Representing ideal standard",
+            "justified_by": "JSON-Fallback",
+            "frequency": 11
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "ACT : ACTION",
+            "answers": {
+                "A1": "Image : Imagine",
+                "A2": "Book : Read",
+                "A3": "Tree : Wood",
+                "A4": "Water : Swim",
+                "A5": "Pen : Write"
+            },
+            "key": "Image : Imagine",
+            "justification": "Verb becomes noun; noun becomes verb",
+            "justified_by": "JSON-Fallback",
+            "frequency": 9
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Choose similar meaning to SCRUTINIZE:",
+            "answers": {
+                "A1": "Ignore",
+                "A2": "Examine",
+                "A3": "Overlook",
+                "A4": "Neglect"
+            },
+            "key": "Examine",
+            "justification": "Scrutinize means to examine closely",
+            "justified_by": "JSON-Fallback",
+            "frequency": 9
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "The political movement's ___ growth surprised even the most optimistic supporters.",
+            "answers": {
+                "A1": "gradual",
+                "A2": "meteoric",
+                "A3": "steady",
+                "A4": "modest"
+            },
+            "key": "meteoric",
+            "justification": "Rapid rise is meteoric",
+            "justified_by": "JSON-Fallback",
+            "frequency": 11
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "The artist's work was noted for its ___ symbolism that critics struggled to interpret.",
+            "answers": {
+                "A1": "obvious",
+                "A2": "abstract",
+                "A3": "cryptic",
+                "A4": "straightforward"
+            },
+            "key": "cryptic",
+            "justification": "Mysterious symbolism is cryptic",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "Correct: 'Had I known, I ___ him.'",
+            "answers": {
+                "A1": "would help",
+                "A2": "would have helped",
+                "A3": "had helped",
+                "A4": "help"
+            },
+            "key": "would have helped",
+            "justification": "Third conditional structure",
+            "justified_by": "JSON-Fallback",
+            "frequency": 9
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "Correct: 'The scientists ___ on this since 2015.'",
+            "answers": {
+                "A1": "worked",
+                "A2": "have been working",
+                "A3": "had worked",
+                "A4": "are working"
+            },
+            "key": "have been working",
+            "justification": "Present perfect continuous",
+            "justified_by": "JSON-Fallback",
+            "frequency": 11
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Choose similar meaning to LUCID:",
+            "answers": {
+                "A1": "Complicated",
+                "A2": "Clear",
+                "A3": "Boring",
+                "A4": "Brief"
+            },
+            "key": "Clear",
+            "justification": "Lucid means clear and transparent",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        },
+        {
+            "type": "medium",
+            "category": "OOP",
+            "question": "What is a queue in STL?",
+            "answers": {
+                "A1": "A line for customers",
+                "A2": "A FIFO (First-In-First-Out) container",
+                "A3": "A circular data structure",
+                "A4": "A type of pointer"
+            },
+            "key": "A FIFO (First-In-First-Out) container",
+            "justification": "Queue implements FIFO where elements are added at the back and removed from the front.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 18
+        },
+        {
+            "type": "medium",
+            "category": "OOP",
+            "question": "What are STL containers in C++?",
+            "answers": {
+                "A1": "Pre-built classes for storing collections of data",
+                "A2": "A type of variable",
+                "A3": "Functions in the C++ library",
+                "A4": "Operating system concepts"
+            },
+            "key": "Pre-built classes for storing collections of data",
+            "justification": "STL (Standard Template Library) containers are template classes that provide efficient data structures like vector, list, map, set, etc.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 12
+        },
+        {
+            "type": "hard",
+            "category": "OOP",
+            "question": "What is std::type_info?",
+            "answers": {
+                "A1": "Information about type definitions",
+                "A2": "A class providing information about types (name, equality, ordering)",
+                "A3": "A type of container",
+                "A4": "A function for type checking"
+            },
+            "key": "A class providing information about types (name, equality, ordering)",
+            "justification": "type_info provides runtime information about types including names and comparison capabilities.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 20
+        },
+        {
+            "type": "hard",
+            "category": "Data Structures",
+            "question": "What is Bellman-Ford algorithm advantage over Dijkstra?",
+            "answers": {
+                "A1": "Bellman-Ford is faster",
+                "A2": "Handles negative edge weights",
+                "A3": "Uses less memory",
+                "A4": "Better for directed graphs"
+            },
+            "key": "Handles negative edge weights",
+            "justification": "Bellman-Ford works with negative weights",
+            "justified_by": "JSON-Fallback",
+            "frequency": 18
+        },
+        {
+            "type": "easy",
+            "category": "Data Structures",
+            "question": "What is insertion in the context of data structure operations?",
+            "answers": {
+                "A1": "Removing an element",
+                "A2": "Adding a new element to the structure",
+                "A3": "Searching for an element",
+                "A4": "Modifying an element"
+            },
+            "key": "Adding a new element to the structure",
+            "justification": "Insertion adds elements",
+            "justified_by": "JSON-Fallback",
+            "frequency": 20
+        },
+        {
+            "type": "easy",
+            "category": "Data Structures",
+            "question": "An array is best described as which of the following data structures?",
+            "answers": {
+                "A1": "A collection of functions",
+                "A2": "Contiguous memory storing elements of the same type",
+                "A3": "A linked list implementation",
+                "A4": "A tree structure"
+            },
+            "key": "Contiguous memory storing elements of the same type",
+            "justification": "Arrays are fundamental sequential data structures",
+            "justified_by": "JSON-Fallback",
+            "frequency": 33
+        },
+        {
+            "type": "easy",
+            "category": "Data Base",
+            "question": "What is a bitmap index?",
+            "answers": {
+                "A1": "Image index",
+                "A2": "Index using bit-vectors for values",
+                "A3": "Bitmap storage",
+                "A4": "Graphic index"
+            },
+            "key": "Index using bit-vectors for values",
+            "justification": "Bitmap indexes optimize certain queries",
+            "justified_by": "JSON-Fallback",
+            "frequency": 23
+        },
+        {
+            "type": "easy",
+            "category": "Data Base",
+            "question": "What is a view in a database?",
+            "answers": {
+                "A1": "A way to look at data",
+                "A2": "A virtual table created from base relations",
+                "A3": "A physical copy of table",
+                "A4": "A backup view"
+            },
+            "key": "A virtual table created from base relations",
+            "justification": "Views are virtual tables",
+            "justified_by": "JSON-Fallback",
+            "frequency": 28
+        },
+        {
+            "type": "easy",
+            "category": "Data Base",
+            "question": "What is a schema?",
+            "answers": {
+                "A1": "A plan",
+                "A2": "A set of table definitions",
+                "A3": "A visual diagram",
+                "A4": "Database backup"
+            },
+            "key": "A set of table definitions",
+            "justification": "Schema defines database structure",
+            "justified_by": "JSON-Fallback",
+            "frequency": 26
+        },
+        {
+            "type": "easy",
+            "category": "Computer Networks",
+            "question": "What is unicast?",
+            "answers": {
+                "A1": "Single cast",
+                "A2": "One-to-one communication",
+                "A3": "Direct communication",
+                "A4": "Point-to-point"
+            },
+            "key": "One-to-one communication",
+            "justification": "Unicast sends to single destination",
+            "justified_by": "JSON-Fallback",
+            "frequency": 14
+        },
+        {
+            "type": "hard",
+            "category": "Computer Networks",
+            "question": "What is slow start?",
+            "answers": {
+                "A1": "Slow beginning",
+                "A2": "TCP starting with small window",
+                "A3": "Gradual start",
+                "A4": "Initial phase"
+            },
+            "key": "TCP starting with small window",
+            "justification": "Slow start ramps up",
+            "justified_by": "JSON-Fallback",
+            "frequency": 7
+        },
+        {
+            "type": "hard",
+            "category": "Computer Networks",
+            "question": "What is shaping?",
+            "answers": {
+                "A1": "Forming shape",
+                "A2": "Buffering excess traffic",
+                "A3": "Traffic buffering",
+                "A4": "Traffic regulation"
+            },
+            "key": "Buffering excess traffic",
+            "justification": "Shaping smooths traffic",
+            "justified_by": "JSON-Fallback",
+            "frequency": 13
+        },
+        {
+            "type": "medium",
+            "category": "JavaScript",
+            "question": "What are arrow functions?",
+            "answers": {
+                "A1": "A type of CSS selector",
+                "A2": "A concise syntax for writing functions in ES6+",
+                "A3": "A browser navigation feature",
+                "A4": "A type of loop"
+            },
+            "key": "A concise syntax for writing functions in ES6+",
+            "justification": "Arrow functions (=>) provide shorter function syntax.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 18
+        },
+        {
+            "type": "medium",
+            "category": "JavaScript",
+            "question": "Can you prevent form submission with JavaScript?",
+            "answers": {
+                "A1": "No, always submits",
+                "A2": "Yes, with event.preventDefault()",
+                "A3": "Only in certain browsers",
+                "A4": "Only on the server"
+            },
+            "key": "Yes, with event.preventDefault()",
+            "justification": "preventDefault() stops default form submission.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 17
+        },
+        {
+            "type": "medium",
+            "category": "DOM",
+            "question": "What does document.createElement() do?",
+            "answers": {
+                "A1": "Finds an element",
+                "A2": "Creates a new DOM element",
+                "A3": "Deletes an element",
+                "A4": "Clones an element"
+            },
+            "key": "Creates a new DOM element",
+            "justification": "createElement() creates a new element but doesn't add it to the page.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 16
+        },
+        {
+            "type": "easy",
+            "category": "Adversarial Search",
+            "question": "What is a max node in minimax?",
+            "answers": {
+                "A1": "Node that maximizes",
+                "A2": "Node representing maximizer's turn",
+                "A3": "Maximum value node",
+                "A4": "Largest node"
+            },
+            "key": "Node representing maximizer's turn",
+            "justification": "Max nodes choose highest valued child.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 11
+        },
+        {
+            "type": "easy",
+            "category": "Machine Learning",
+            "question": "What is machine learning?",
+            "answers": {
+                "A1": "Learning about machines",
+                "A2": "Computer programs that automatically improve performance from experience",
+                "A3": "Programming computers manually",
+                "A4": "Machine maintenance"
+            },
+            "key": "Computer programs that automatically improve performance from experience",
+            "justification": "ML enables systems to learn from data without explicit programming.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 9
+        },
+        {
+            "type": "hard",
+            "category": "Machine Learning",
+            "question": "What is variational autoencoder (VAE)?",
+            "answers": {
+                "A1": "Variable autoencoder",
+                "A2": "Autoencoder with probabilistic latent space",
+                "A3": "Autoencoding method",
+                "A4": "Variational encoding"
+            },
+            "key": "Autoencoder with probabilistic latent space",
+            "justification": "VAEs enable generative modeling.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 7
+        },
+        {
+            "type": "medium",
+            "category": "k-Nearest Neighbors",
+            "question": "How does kNN make predictions?",
+            "answers": {
+                "A1": "Using a distance formula",
+                "A2": "Majority vote or average of k nearest points' labels",
+                "A3": "Finding nearest neighbors",
+                "A4": "Proximity calculation"
+            },
+            "key": "Majority vote or average of k nearest points' labels",
+            "justification": "kNN uses simple neighbor voting mechanism",
+            "justified_by": "JSON-Fallback",
+            "frequency": 8
+        },
+        {
+            "type": "hard",
+            "category": "Machine Learning",
+            "question": "What is online learning?",
+            "answers": {
+                "A1": "Learning online",
+                "A2": "Learning incrementally from streaming data",
+                "A3": "Streaming learning",
+                "A4": "Sequential learning"
+            },
+            "key": "Learning incrementally from streaming data",
+            "justification": "Online learning handles continuous data streams",
+            "justified_by": "JSON-Fallback",
+            "frequency": 8
+        },
+        {
+            "type": "hard",
+            "category": "Neural Networks",
+            "question": "What is adversarial training?",
+            "answers": {
+                "A1": "Hostile training",
+                "A2": "Training model with adversarial examples for robustness",
+                "A3": "Competing training",
+                "A4": "Adversarial learning"
+            },
+            "key": "Training model with adversarial examples for robustness",
+            "justification": "Adversarial training improves model robustness",
+            "justified_by": "JSON-Fallback",
+            "frequency": 12
+        }
+    ],
+    "generated_at": "2026-04-26 17:49:34",
+    "source": "RAG-Ollama"
+}

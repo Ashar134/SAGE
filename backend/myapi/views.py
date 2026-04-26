@@ -27,7 +27,7 @@ from test_generator.service import TestGeneratorService
 from resume_parser import parse_resume
 
 from .models import (
-    User, UserSkill, Education, WorkExperience, Certificate, Research, Project, Job, SavedJob, 
+    User, UserSkill, Education, WorkExperience, Certificate, Research, Project, Company, Job, SavedJob, 
     Application, ApplicationTimeline
 )
 from .serializers import (
@@ -909,12 +909,43 @@ def applications(request):
             # Get job details if job_id provided
             job_id = data.get('job_id')
             
-            # Prevent duplicate job applications
-            if job_id and Application.objects.filter(user_id=user_id, job_id=job_id).exists():
+            # Prevent duplicate job applications (unless the previous one was withdrawn)
+            existing_app = None
+            if job_id:
+                existing_app = Application.objects.filter(user_id=user_id, job_id=job_id).first()
+                if existing_app and existing_app.status != 'withdrawn':
+                    return Response({
+                        'success': False,
+                        'error': 'You have already applied for this job.'
+                    }, status=status.HTTP_400_BAD_REQUEST)
+            
+            if existing_app and existing_app.status == 'withdrawn':
+                # Reuse the withdrawn application
+                application = existing_app
+                application.status = 'test'
+                application.applied_at = timezone.now()
+                # Clear previous scores if they exist
+                application.test_score = None
+                application.interview_score = None
+                application.save()
+                
+                # Create timeline entry for re-application
+                ApplicationTimeline.objects.create(
+                    application=application,
+                    event_type='status_change',
+                    new_status='test',
+                    title='Re-applied for Job',
+                    description=f'Re-applied for {application.job_title} after previous withdrawal'
+                )
+                
+                serializer = ApplicationSerializer(application)
                 return Response({
-                    'success': False,
-                    'error': 'You have already applied for this job.'
-                }, status=status.HTTP_400_BAD_REQUEST)
+                    'success': True,
+                    'application': serializer.data,
+                    'message': 'Re-applied successfully'
+                }, status=status.HTTP_201_CREATED)
+            
+            # Normal creation flow for new applications
             if job_id:
                 try:
                     job = Job.objects.select_related('company').get(id=job_id)
@@ -930,6 +961,9 @@ def applications(request):
                 except Job.DoesNotExist:
                     pass
             
+            # Inherit resume from user profile if not explicitly provided
+            final_resume_url = data.get('resume_url') or (request.user_obj.resume_url if hasattr(request.user_obj, 'resume_url') else None)
+
             application = Application.objects.create(
                 user_id=user_id,
                 job_id=job_id if job_id else None,
@@ -941,7 +975,7 @@ def applications(request):
                 salary_range=data.get('salary_range', ''),
                 status=data.get('status', 'test'),  # Assessments status directly upon apply
                 cover_letter=data.get('cover_letter', ''),
-                resume_url=data.get('resume_url', ''),
+                resume_url=final_resume_url or '',
                 notes=data.get('notes', '')
             )
             
@@ -1062,7 +1096,53 @@ def _serialize_hr_job(job):
         'test_no_of_questions': job.test_no_of_questions,
         'test_time_allowed': job.test_time_allowed,
         'test_deadline_days': job.test_deadline_days,
+        'company': {
+            'logo_url': job.company.logo_url if job.company else '/loop.png'
+        }
     }
+
+
+def _compute_skill_score(skills_list, job):
+    """
+    Compute a 0-100 skill-to-job-description overlap score.
+    Checks how many of the candidate's skills appear in the job description/requirements.
+    """
+    if not skills_list or not job:
+        return None
+    job_text = ' '.join(filter(None, [
+        job.title or '',
+        job.description or '',
+        ' '.join(job.requirements or []),
+        ' '.join(job.responsibilities or []),
+    ])).lower()
+    if not job_text.strip():
+        return None
+    matched = sum(1 for skill in skills_list if skill.lower() in job_text)
+    return round((matched / len(skills_list)) * 100)
+
+
+def _compute_final_match_score(skill_score, test_score, interview_score):
+    """
+    Weighted Final Matched Score:
+      - Skill-to-JD score:   10% weight
+      - Assessment score:    50% weight
+      - Interview score:     40% weight
+
+    If a component is missing (None), its weight is redistributed
+    proportionally among the available components so the result
+    is always a meaningful 0-100 score.
+    """
+    components = [
+        (skill_score,     0.10),
+        (test_score,      0.50),
+        (interview_score, 0.40),
+    ]
+    available = [(v, w) for v, w in components if v is not None]
+    if not available:
+        return None
+    total_weight = sum(w for _, w in available)
+    weighted_sum = sum(v * w for v, w in available)
+    return round(weighted_sum / total_weight)
 
 
 def _serialize_hr_applicant(app):
@@ -1071,8 +1151,8 @@ def _serialize_hr_applicant(app):
     email = None
     education_list = []
     skills_list = []
-    resume_url = app.resume_url
-    # Prefer user-level resume or recording if available
+    resume_url = app.resume_url or None
+    # Prefer user-level resume if available
     if user:
         if user.resume_url:
             resume_url = resume_url or user.resume_url
@@ -1086,14 +1166,31 @@ def _serialize_hr_applicant(app):
         for skill in getattr(user, "skills", []).all() if hasattr(user, "skills") else []:
             if skill.skill_name:
                 skills_list.append(skill.skill_name)
+        
+        # If still no resume, look through all user applications for any non-empty resume URL
         if not resume_url:
             latest_with_resume = (
-                Application.objects.filter(user=user, resume_url__isnull=False)
+                Application.objects.filter(user=user)
+                .exclude(resume_url__isnull=True)
+                .exclude(resume_url='')
                 .order_by("-applied_at")
                 .first()
             )
             if latest_with_resume:
                 resume_url = latest_with_resume.resume_url
+
+    # ── Score computation ────────────────────────────────────────────────
+    # skill_score: 10% — candidate skills vs job description overlap
+    job_obj = getattr(app, 'job', None)
+    skill_score = _compute_skill_score(skills_list, job_obj)
+
+    # test_score / interview_score are stored as 0-100 floats (percentage)
+    test_score = app.test_score  # already a percentage
+    interview_score = app.interview_score  # already a percentage
+
+    # final_match_score: weighted composite (10/50/40)
+    final_match_score = _compute_final_match_score(skill_score, test_score, interview_score)
+    # ─────────────────────────────────────────────────────────────────────
 
     return {
         'id': str(app.id),
@@ -1107,23 +1204,26 @@ def _serialize_hr_applicant(app):
         'education': education_list[0] if education_list else None,
         'education_list': education_list,
         'skills': skills_list,
-        'test_score': app.test_score,
+        'test_score': test_score,
         # ── Interview fields ──────────────────────────────────────────────
-        'interview_score': app.interview_score,
+        'interview_score': interview_score,
         'confidence_score': app.confidence_score,
         'interview_completed_at': app.interview_completed_at,
         'interview_transcript': app.interview_transcript or [],
         'interview_recording_url': app.interview_recording_url or (
             user.interview_recording_url if user and user.interview_recording_url else None
         ),
+        # ── Score breakdown ───────────────────────────────────────────────
+        'skill_score': skill_score,        # 10% weight — skill vs JD overlap
+        'match_score': final_match_score,  # final weighted composite score
         # ─────────────────────────────────────────────────────────────────
-        'match_score': None,
         'video_url': app.interview_recording_url or (
             user.interview_recording_url if user and user.interview_recording_url else None
         ),
         'resume_url': resume_url,
         'rejection_reason': app.notes,
         'job_id': str(app.job_id) if app.job_id else None,
+        'company_logo': app.job.company.logo_url if app.job and app.job.company else '/loop.png',
     }
 
 
@@ -1132,21 +1232,42 @@ def _serialize_hr_applicant(app):
 def hr_applicants(request):
     """List applicants using existing Application records."""
     try:
-        qs = Application.objects.select_related('user').prefetch_related('user__education','user__skills').exclude(job_title="Resume Upload")
+        qs = (
+            Application.objects
+            .select_related('user', 'job__company')
+            .prefetch_related('user__education', 'user__skills')
+            .exclude(job_title="Resume Upload")
+            .exclude(status='withdrawn')
+        )
 
         start_date = request.GET.get('start_date')
         end_date = request.GET.get('end_date')
+        job_title_filter = request.GET.get('job_title', '').strip()
 
         if start_date:
             qs = qs.filter(applied_at__gte=start_date)
         if end_date:
             qs = qs.filter(applied_at__lte=end_date)
+        if job_title_filter:
+            qs = qs.filter(job_title__iexact=job_title_filter)
 
         qs = qs.order_by('-applied_at')
 
+        applicants = [_serialize_hr_applicant(a) for a in qs]
+
+        # Collect distinct job titles for the filter dropdown
+        job_titles = (
+            Application.objects
+            .exclude(job_title="Resume Upload")
+            .values_list('job_title', flat=True)
+            .distinct()
+            .order_by('job_title')
+        )
+
         return Response({
             'success': True,
-            'applicants': [_serialize_hr_applicant(a) for a in qs]
+            'applicants': applicants,
+            'job_titles': list(job_titles),
         })
     except Exception as e:
         return Response({'success': False, 'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
@@ -1186,7 +1307,11 @@ def hr_jobs(request):
                 salary_min = float(numbers[0])
                 if salary_min < 1000 and 'k' in salary_str.lower(): salary_min *= 1000
 
+        # Ensure "Loop" company exists and associate job with it
+        company, _ = Company.objects.get_or_create(name="Loop", defaults={'logo_url': '/loop.png'})
+
         job = Job.objects.create(
+            company=company,
             title=data.get('title', ''),
             company_name=data.get('department', ''),
             location=data.get('location', ''),
@@ -1227,7 +1352,7 @@ def hr_job_detail(request, job_id):
 def hr_job_applicants(request, job_id):
     """List applicants for a specific job using Application model."""
     try:
-        qs = Application.objects.select_related('user').filter(job_id=job_id).order_by('-applied_at')
+        qs = Application.objects.select_related('user', 'job__company').filter(job_id=job_id).exclude(status='withdrawn').order_by('-applied_at')
         return Response({'success': True, 'applicants': [_serialize_hr_applicant(a) for a in qs]})
     except Exception as e:
         return Response({'success': False, 'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
@@ -2584,3 +2709,68 @@ def interview_upload_video(request):
     except Exception as e:
         import traceback; traceback.print_exc()
         return Response({'success': False, 'error': str(e)}, status=500)
+
+
+# ============================================================================
+# HR Company Profile APIs
+# ============================================================================
+
+@csrf_exempt
+@api_view(['GET'])
+def hr_get_company_info(request):
+    """Get information for the default company (Loop)."""
+    try:
+        company, _ = Company.objects.get_or_create(name="Loop", defaults={'logo_url': '/loop.png'})
+        return Response({
+            'success': True,
+            'company': {
+                'id': str(company.id),
+                'name': company.name,
+                'logo_url': company.logo_url
+            }
+        })
+    except Exception as e:
+        return Response({'success': False, 'error': str(e)}, status=500)
+
+
+@csrf_exempt
+@api_view(['POST'])
+def hr_update_company_logo(request):
+    """Update the logo for the default company (Loop) via file upload or URL."""
+    try:
+        company, _ = Company.objects.get_or_create(name="Loop", defaults={'logo_url': '/loop.png'})
+        
+        logo_file = request.FILES.get('logo')
+        if logo_file:
+            import os
+            import uuid
+            from django.core.files.storage import default_storage
+            
+            # Ensure the directory exists
+            logos_dir = os.path.join(settings.MEDIA_ROOT, 'company_logos')
+            if not os.path.exists(logos_dir):
+                os.makedirs(logos_dir)
+                
+            ext = os.path.splitext(logo_file.name)[1]
+            filename = f"company_logos/{uuid.uuid4()}{ext}"
+            saved_path = default_storage.save(filename, logo_file)
+            logo_url = request.build_absolute_uri(settings.MEDIA_URL + saved_path)
+            company.logo_url = logo_url
+        else:
+            logo_url = request.data.get('logo_url')
+            if logo_url:
+                company.logo_url = logo_url
+            else:
+                return Response({'success': False, 'error': 'No logo file or URL provided'}, status=400)
+        
+        company.save(update_fields=['logo_url', 'updated_at'])
+        
+        return Response({
+            'success': True,
+            'message': 'Company logo updated successfully',
+            'logo_url': company.logo_url
+        })
+    except Exception as e:
+        import traceback; traceback.print_exc()
+        return Response({'success': False, 'error': str(e)}, status=500)
+

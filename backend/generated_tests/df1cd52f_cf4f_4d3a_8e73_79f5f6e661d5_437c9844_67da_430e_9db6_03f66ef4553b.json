@@ -1,0 +1,170 @@
+{
+    "candidate_id": "df1cd52f-cf4f-4d3a-8e73-79f5f6e661d5",
+    "job_id": "437c9844-67da-430e-9db6-03f66ef4553b",
+    "job_title": "computer scinece",
+    "requirements": [
+        "computer scinece"
+    ],
+    "total_questions": 10,
+    "distribution": {
+        "analytical": 2,
+        "english": 2,
+        "job_specific": 6
+    },
+    "questions": [
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "What number should replace the question mark in this sequence: 1, 3, 4, 7, 11, 18, 29, ?",
+            "answers": {
+                "A1": "48",
+                "A2": "46",
+                "A3": "47",
+                "A4": "45"
+            },
+            "key": "47",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 36
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "What letter comes next in the sequence: A D H K O ?",
+            "answers": {
+                "A1": "Q",
+                "A2": "R",
+                "A3": "S",
+                "A4": "T"
+            },
+            "key": "R",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 28
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "ACUMEN : INSIGHT",
+            "answers": {
+                "A1": "Stupidity : Intelligence",
+                "A2": "Folly : Judgment",
+                "A3": "Prudence : Caution",
+                "A4": "Ignorance : Knowledge",
+                "A5": "Madness : Reason"
+            },
+            "key": "Prudence : Caution",
+            "justification": "Quality demonstrating specific trait",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "OBFUSCATE : CLARITY",
+            "answers": {
+                "A1": "Illuminate : Light",
+                "A2": "Reveal : Truth",
+                "A3": "Simplify : Complexity",
+                "A4": "Clarify : Understanding",
+                "A5": "Confuse : Confusion"
+            },
+            "key": "Confuse : Confusion",
+            "justification": "Obfuscate removes clarity; confuse removes understanding",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        },
+        {
+            "type": "hard",
+            "category": "OOP",
+            "question": "What is shared_ptr in C++?",
+            "answers": {
+                "A1": "A pointer that is always shared between functions",
+                "A2": "A smart pointer that allows multiple pointers to share ownership of same object",
+                "A3": "A pointer that cannot be copied",
+                "A4": "A pointer used only in shared libraries"
+            },
+            "key": "A smart pointer that allows multiple pointers to share ownership of same object",
+            "justification": "shared_ptr uses reference counting to manage shared ownership, deleting the object when the last pointer is destroyed.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 13
+        },
+        {
+            "type": "medium",
+            "category": "OOP",
+            "question": "What is the purpose of catch(...)?",
+            "answers": {
+                "A1": "To catch all exceptions as a last resort",
+                "A2": "To create a default catch block",
+                "A3": "To catch specific exceptions",
+                "A4": "To define a function"
+            },
+            "key": "To catch all exceptions as a last resort",
+            "justification": "catch(...) is a catch-all handler that catches any exception type not caught by specific catch blocks.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 14
+        },
+        {
+            "type": "medium",
+            "category": "OOP",
+            "question": "What is dynamic polymorphism?",
+            "answers": {
+                "A1": "Using operator overloading",
+                "A2": "Polymorphism resolved at runtime through virtual functions and inheritance",
+                "A3": "Creating multiple objects dynamically",
+                "A4": "Using pointers and references"
+            },
+            "key": "Polymorphism resolved at runtime through virtual functions and inheritance",
+            "justification": "Dynamic polymorphism (runtime) uses virtual functions to determine which overridden method to call based on actual object type at execution time.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 24
+        },
+        {
+            "type": "easy",
+            "category": "Data Structures",
+            "question": "Complexity analysis in algorithms refers to which of the following?",
+            "answers": {
+                "A1": "Analysis of complicated source code",
+                "A2": "Study of algorithm performance and resource usage",
+                "A3": "Code review process",
+                "A4": "Bug detection mechanism"
+            },
+            "key": "Study of algorithm performance and resource usage",
+            "justification": "Complexity analysis measures efficiency",
+            "justified_by": "JSON-Fallback",
+            "frequency": 15
+        },
+        {
+            "type": "hard",
+            "category": "Data Structures",
+            "question": "What is an adjacency list representation of a graph?",
+            "answers": {
+                "A1": "List of adjacent vertices in order",
+                "A2": "Collection of lists showing edges for each vertex",
+                "A3": "Ordered list of all graph elements",
+                "A4": "Link list of vertices only"
+            },
+            "key": "Collection of lists showing edges for each vertex",
+            "justification": "Adjacency list efficiently represents sparse graphs",
+            "justified_by": "JSON-Fallback",
+            "frequency": 29
+        },
+        {
+            "type": "easy",
+            "category": "Data Structures",
+            "question": "What distinguishes a priority queue from a regular queue in terms of element extraction?",
+            "answers": {
+                "A1": "All elements have the same priority",
+                "A2": "Elements are extracted based on priority",
+                "A3": "Only the first element is priority",
+                "A4": "Priority is determined randomly"
+            },
+            "key": "Elements are extracted based on priority",
+            "justification": "Priority queues organize by priority",
+            "justified_by": "JSON-Fallback",
+            "frequency": 17
+        }
+    ],
+    "generated_at": "2026-04-25 23:46:15",
+    "source": "RAG-Ollama"
+}

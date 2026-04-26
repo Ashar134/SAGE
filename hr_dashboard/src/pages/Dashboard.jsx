@@ -51,7 +51,7 @@ export default function Dashboard() {
     if (startDate && endDate) {
       return `${startDate} – ${endDate}`;
     }
-    return "This week";
+    return "All time";
   }, [startDate, endDate]);
 
   useEffect(() => {

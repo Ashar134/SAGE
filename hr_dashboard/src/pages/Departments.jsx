@@ -101,19 +101,19 @@ export default function Departments() {
             title: "Departments",
             value: departmentList.length,
             subtitle: "Active in system",
-            icon: <Building2 size={22} className="text-indigo-500" />,
+            icon: <Building2 size={22} />,
           },
           {
             title: "Open roles",
             value: jobs.length,
             subtitle: "Across all departments",
-            icon: <Briefcase size={22} className="text-indigo-500" />,
+            icon: <Briefcase size={22} />,
           },
           {
             title: "Applicants",
             value: applicants.length,
             subtitle: "Total candidates",
-            icon: <Users size={22} className="text-indigo-500" />,
+            icon: <Users size={22} />,
           },
           {
             title: "Selected dept",
@@ -121,14 +121,14 @@ export default function Departments() {
             subtitle: currentDept
               ? `${currentStats?.openRoles || 0} open · ${(currentStats?.applicants || []).length} applicants`
               : `${jobs.length} open · ${applicants.length} applicants`,
-            icon: <ArrowRight size={22} className="text-indigo-500" />,
+            icon: <ArrowRight size={22} />,
           },
         ].map((card) => (
           <Card key={card.title} className="border border-gray-200 shadow-sm bg-white">
             <CardHeader className="pb-2">
               <div className="flex items-center justify-between">
                 <CardTitle className="text-sm font-semibold text-gray-900">{card.title}</CardTitle>
-                <div className="rounded-full bg-gray-100 p-2 text-indigo-600">{card.icon}</div>
+                <div className="rounded-full p-2" style={{ backgroundColor: '#e0f0ff', color: '#272727' }}>{card.icon}</div>
               </div>
             </CardHeader>
             <CardContent className="space-y-1">

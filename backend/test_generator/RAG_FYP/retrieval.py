@@ -356,7 +356,18 @@ def generate_and_save_test(
 
 def load_test_from_file(candidate_id: str, job_id: str) -> dict | None:
     filepath = get_test_filepath(candidate_id, job_id)
-    if filepath.exists():
+    if not filepath.exists():
+        return None
+    try:
         with open(filepath, "r", encoding="utf-8") as f:
             return json.load(f)
-    return None
+    except (json.JSONDecodeError, ValueError) as e:
+        logger.warning(
+            f"Corrupted test cache for candidate={candidate_id} job={job_id}: {e}. "
+            f"Deleting '{filepath.name}' so a fresh test is generated."
+        )
+        try:
+            filepath.unlink()
+        except OSError:
+            pass
+        return None

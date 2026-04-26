@@ -64,6 +64,8 @@ urlpatterns = [
     path("api/hr/jobs/<uuid:job_id>/applicants/", views.hr_job_applicants, name="hr_job_applicants"),
     path("api/hr/applicants/<slug:applicant_id>/status/", views.hr_update_applicant_status, name="hr_update_applicant_status"),
     path("api/hr/applicants/<slug:applicant_id>/resume/", views.hr_update_applicant_resume, name="hr_update_applicant_resume"),
+    path("api/hr/company/", views.hr_get_company_info, name="hr_get_company_info"),
+    path("api/hr/company/logo/", views.hr_update_company_logo, name="hr_update_company_logo"),
 
     # Interview Bot APIs
     path("api/interview/questions/", views.interview_get_questions, name="interview_get_questions"),

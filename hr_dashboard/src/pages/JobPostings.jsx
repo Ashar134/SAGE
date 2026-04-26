@@ -29,6 +29,17 @@ const defaultForm = {
 
 const jobTypes = ["Full-time", "Part-time", "Contract", "Visiting"];
 
+const DEPARTMENTS = [
+  "Software Development",
+  "Backend Engineering",
+  "Frontend Engineering",
+  "DevOps & Cloud Engineering",
+  "Data Science & AI",
+  "Machine Learning Engineering",
+  "Quality Assurance",
+  "Cybersecurity",
+];
+
 export default function JobPostings() {
   const [form, setForm] = useState(defaultForm);
   const [jobs, setJobs] = useState([]);
@@ -138,7 +149,7 @@ export default function JobPostings() {
           <h1 className="text-2xl font-semibold text-gray-900">Post a new role</h1>
           <p className="text-sm text-gray-500">Collect required info for HR, faculty heads, and candidates.</p>
         </div>
-        <Badge className="bg-indigo-50 text-indigo-700 border border-indigo-100">
+        <Badge className="bg-[#e0f0ff] text-[#272727] border border-[#e0f0ff]">
           {jobs.length || 0} posting{jobs.length === 1 ? "" : "s"}
         </Badge>
       </div>
@@ -171,18 +182,23 @@ export default function JobPostings() {
                 </div>
                 <div className="space-y-1">
                   <label className="text-xs font-semibold text-gray-600">Department *</label>
-                  <Input
+                  <select
                     value={form.department}
                     onChange={handleChange("department")}
-                    placeholder="Computer Science"
-                  />
+                    className="w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#e0f0ff]"
+                  >
+                    <option value="">Select a department…</option>
+                    {DEPARTMENTS.map((d) => (
+                      <option key={d} value={d}>{d}</option>
+                    ))}
+                  </select>
                 </div>
                 <div className="space-y-1">
                   <label className="text-xs font-semibold text-gray-600">Employment type</label>
                   <select
                     value={form.type}
                     onChange={handleChange("type")}
-                    className="w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-100"
+                    className="w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#e0f0ff]"
                   >
                     {jobTypes.map((opt) => (
                       <option key={opt} value={opt}>
@@ -226,7 +242,7 @@ export default function JobPostings() {
                   value={form.description}
                   onChange={handleChange("description")}
                   rows={3}
-                  className="w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-100"
+                  className="w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#e0f0ff]"
                   placeholder="What teaching, research, and service responsibilities are expected?"
                 />
               </div>
@@ -237,7 +253,7 @@ export default function JobPostings() {
                   value={form.requirements}
                   onChange={handleChange("requirements")}
                   rows={2}
-                  className="w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-100"
+                  className="w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#e0f0ff]"
                   placeholder="PhD in subject, 2+ published papers, teaching demo required"
                 />
               </div>
@@ -282,7 +298,7 @@ export default function JobPostings() {
                 <Button type="button" variant="outline" onClick={() => setForm(defaultForm)}>
                   Reset
                 </Button>
-                <Button type="submit" disabled={saving} className="bg-indigo-600 hover:bg-indigo-500 disabled:opacity-60">
+                <Button type="submit" disabled={saving} className="bg-[#272727] hover:bg-black disabled:opacity-60">
                   {saving ? "Publishing..." : "Publish job"}
                 </Button>
               </div>
@@ -290,27 +306,27 @@ export default function JobPostings() {
           </CardContent>
         </Card>
 
-        <Card className="shadow-sm border-indigo-50 bg-gradient-to-b from-white to-indigo-50/40">
+        <Card className="shadow-sm border-[#e0f0ff] bg-gradient-to-b from-white to-[#e0f0ff]/40">
           <CardHeader>
             <CardTitle className="text-base font-semibold text-gray-900">Posting tips</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3 text-sm text-gray-700">
             <div className="flex items-start gap-2">
-              <Sparkles className="h-4 w-4 text-indigo-600 mt-0.5" />
+              <Sparkles className="h-4 w-4 text-[#272727] mt-0.5" />
               <div>
                 <div className="font-semibold text-gray-900">Be explicit</div>
                 <p className="text-xs text-gray-500">List teaching load, research expectations, and tenure/contract terms.</p>
               </div>
             </div>
             <div className="flex items-start gap-2">
-              <ClipboardList className="h-4 w-4 text-indigo-600 mt-0.5" />
+              <ClipboardList className="h-4 w-4 text-[#272727] mt-0.5" />
               <div>
                 <div className="font-semibold text-gray-900">Must-have vs nice-to-have</div>
                 <p className="text-xs text-gray-500">Separate critical requirements from preferences to widen the funnel.</p>
               </div>
             </div>
             <div className="flex items-start gap-2">
-              <CalendarRange className="h-4 w-4 text-indigo-600 mt-0.5" />
+              <CalendarRange className="h-4 w-4 text-[#272727] mt-0.5" />
               <div>
                 <div className="font-semibold text-gray-900">SLA for responses</div>
                 <p className="text-xs text-gray-500">Commit to an application review timeline and publish it.</p>
@@ -349,9 +365,16 @@ export default function JobPostings() {
                   <>
                     <TableRow key={job.id} className="hover:bg-gray-50/80">
                       <TableCell className="font-medium text-gray-900">
-                        <div>{job.title}</div>
-                        <div className="text-xs text-gray-400">
-                          Posted {job.createdAt || "—"}
+                        <div className="flex items-center gap-3">
+                          <div className="h-8 w-8 rounded bg-white flex items-center justify-center overflow-hidden border">
+                            <img src={job.companyLogo || "/loop.png"} alt="" className="h-full w-full object-cover" />
+                          </div>
+                          <div>
+                            <div>{job.title}</div>
+                            <div className="text-xs text-gray-400">
+                              Posted {job.createdAt || "—"}
+                            </div>
+                          </div>
                         </div>
                       </TableCell>
                       <TableCell className="text-gray-700">{job.department}</TableCell>

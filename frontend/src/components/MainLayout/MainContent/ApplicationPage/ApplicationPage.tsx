@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { HiDotsVertical } from 'react-icons/hi';
 import { useAuth } from '../../../../contexts/AuthContext';
 import { ApplicationPageSkeleton } from '../../../Skeletons/Skeletons';
 import './ApplicationPage.css';
@@ -24,6 +25,8 @@ interface Application {
   offerDeadline?: string; // ISO string from database
   testDeadline?: string; // ISO string from database
   interviewDeadline?: string; // 2-day deadline after passing test
+  testScore?: number | null;
+  logoUrl?: string;
 }
 
 type StatusColumn = {
@@ -51,7 +54,17 @@ const API_BASE_URL = 'http://localhost:8000/api';
 // CHILD COMPONENTS
 // ============================================================================
 
-const ApplicationCard = ({ application }: { application: Application }) => {
+const ApplicationCard = ({
+  application,
+  onStatusUpdate,
+  onDelete
+}: {
+  application: Application;
+  onStatusUpdate: (appId: string, newStatus: string) => void;
+  onDelete: (appId: string) => void;
+}) => {
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <motion.div
       className="app-card"
@@ -59,16 +72,183 @@ const ApplicationCard = ({ application }: { application: Application }) => {
       animate={{ opacity: 1, scale: 1 }}
       whileHover={{ y: -2 }}
       transition={{ duration: 0.2 }}
+      onClick={() => {
+        // If it's an offer, maybe clicking the card should do something else, 
+        // but for now we follow the user's request for the three dots.
+      }}
+      style={{ position: 'relative' }}
     >
-      <div className="app-card-header">
-        <div className="app-logo" style={{ backgroundColor: application.logoColor }}>
-          {application.logoInitial ? (
-            application.logoInitial
-          ) : (
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-              <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-            </svg>
-          )}
+      <div className="app-card-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+        <div className="app-logo" style={{ backgroundColor: '#ffffff', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid #eee' }}>
+          <img src={application.logoUrl || "/loop.png"} alt="Company Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+        </div>
+
+        <div className="card-options-container" style={{ position: 'relative' }}>
+          <button
+            className="dots-btn"
+            onClick={(e) => {
+              e.stopPropagation();
+              setShowMenu(!showMenu);
+            }}
+            style={{
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              padding: '4px',
+              color: '#666',
+              display: 'flex',
+              alignItems: 'center',
+              borderRadius: '4px'
+            }}
+          >
+            <HiDotsVertical size={18} />
+          </button>
+
+          <AnimatePresence>
+            {showMenu && (
+              <motion.div
+                className="options-dropdown"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                style={{
+                  position: 'absolute',
+                  top: '100%',
+                  right: 0,
+                  backgroundColor: 'white',
+                  boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+                  borderRadius: '8px',
+                  padding: '8px',
+                  zIndex: 10,
+                  minWidth: '150px',
+                  border: '1px solid #eee'
+                }}
+              >
+                {application.status === 'offer' ? (
+                  <>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onStatusUpdate(application.id, 'accepted');
+                        setShowMenu(false);
+                      }}
+                      style={{
+                        width: '100%',
+                        textAlign: 'left',
+                        padding: '8px 12px',
+                        background: 'none',
+                        border: 'none',
+                        cursor: 'pointer',
+                        fontSize: '14px',
+                        color: '#666',
+                        fontWeight: 600,
+                        borderRadius: '4px',
+                        display: 'block'
+                      }}
+                    >
+                      Accept Offer
+                    </button>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onStatusUpdate(application.id, 'rejected');
+                        setShowMenu(false);
+                      }}
+                      style={{
+                        width: '100%',
+                        textAlign: 'left',
+                        padding: '8px 12px',
+                        background: 'none',
+                        border: 'none',
+                        cursor: 'pointer',
+                        fontSize: '14px',
+                        color: '#666',
+                        fontWeight: 600,
+                        borderRadius: '4px',
+                        display: 'block'
+                      }}
+                    >
+                      Reject Offer
+                    </button>
+                  </>
+                ) : (
+                  (application.status === 'applied' || (application.status === 'test' && (application.testScore === null || application.testScore === undefined))) && (
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        if (confirm('Are you sure you want to withdraw this application?')) {
+                          onStatusUpdate(application.id, 'withdrawn');
+                        }
+                        setShowMenu(false);
+                      }}
+                      style={{
+                        width: '100%',
+                        textAlign: 'left',
+                        padding: '8px 12px',
+                        background: 'none',
+                        border: 'none',
+                        cursor: 'pointer',
+                        fontSize: '14px',
+                        color: '#666',
+                        borderRadius: '4px',
+                        display: 'block'
+                      }}
+                    >
+                      Withdraw
+                    </button>
+                  )
+                )}
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.location.href = `/jobs?selectedJob=${application.jobId}`;
+                    setShowMenu(false);
+                  }}
+                  style={{
+                    width: '100%',
+                    textAlign: 'left',
+                    padding: '8px 12px',
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                    fontSize: '14px',
+                    color: '#666',
+                    borderRadius: '4px',
+                    display: 'block'
+                  }}
+                >
+                  View Details
+                </button>
+                {(application.status === 'applied' || (application.status === 'test' && (application.testScore === null || application.testScore === undefined))) && (
+                  <>
+                    <div style={{ height: '1px', background: '#eee', margin: '4px 0' }} />
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onDelete(application.id);
+                        setShowMenu(false);
+                      }}
+                      style={{
+                        width: '100%',
+                        textAlign: 'left',
+                        padding: '8px 12px',
+                        background: 'none',
+                        border: 'none',
+                        cursor: 'pointer',
+                        fontSize: '14px',
+                        color: '#ef4444',
+                        fontWeight: 600,
+                        borderRadius: '4px',
+                        display: 'block'
+                      }}
+                    >
+                      Delete
+                    </button>
+                  </>
+                )}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
       <h3 className="app-title">{application.jobTitle}</h3>
@@ -124,21 +304,19 @@ const InterviewActionButton = ({ app }: { app: Application }) => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 8, width: '100%' }}>
-      {app.interviewDeadline && (
+      {app.interviewDeadline && (deadlineExpired || (hoursLeft !== null && hoursLeft < 24)) && (
         <div style={{
           fontSize: 12,
           padding: '4px 10px',
           borderRadius: 6,
           textAlign: 'center',
-          background: deadlineExpired ? '#fee2e2' : hoursLeft !== null && hoursLeft < 12 ? '#fef3c7' : '#f0fdf4',
-          color: deadlineExpired ? '#dc2626' : hoursLeft !== null && hoursLeft < 12 ? '#d97706' : '#16a34a',
+          background: deadlineExpired ? '#fee2e2' : '#fef3c7',
+          color: deadlineExpired ? '#dc2626' : '#d97706',
           fontWeight: 600,
         }}>
           {deadlineExpired
             ? '⛔ Deadline passed'
-            : hoursLeft !== null && hoursLeft < 24
-            ? `⚠ ${hoursLeft}h left to interview`
-            : `⏰ Interview by ${new Date(app.interviewDeadline).toLocaleDateString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}`}
+            : `⚠ ${hoursLeft}h left to interview`}
         </div>
       )}
       <button
@@ -150,7 +328,7 @@ const InterviewActionButton = ({ app }: { app: Application }) => {
           if (!deadlineExpired) window.location.href = `/interview?application_id=${app.id}`;
         }}
       >
-        🎙 {deadlineExpired ? 'Deadline Passed' : 'Start Interview'}
+        {deadlineExpired ? 'Deadline Passed' : 'Start Interview'}
       </button>
     </div>
   );
@@ -162,6 +340,7 @@ function ApplicationPage() {
   const [activeTab, setActiveTab] = useState<string>('pipeline');
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const [searchTerm, setSearchTerm] = useState<string>('');
 
   // Fetch applications from the database
   useEffect(() => {
@@ -214,6 +393,7 @@ function ApplicationPage() {
             company: app.company_name,
             logoColor: app.company_logo_color || '#6366f1',
             logoInitial: app.company_logo_initial || app.company_name.charAt(0),
+            logoUrl: app.company_logo_url,
             appliedDate: getRelativeTime(app.applied_at),
             salary: app.salary_range || 'Not specified',
             location: app.location || 'Remote',
@@ -224,6 +404,7 @@ function ApplicationPage() {
             offerDeadline: app.offer_deadline,
             testDeadline: app.test_deadline,
             interviewDeadline: app.interview_deadline,
+            testScore: app.test_score
           }));
 
           setApplications(transformedApps);
@@ -241,21 +422,98 @@ function ApplicationPage() {
     fetchApplications();
   }, [isAuthenticated, accessToken, authLoading]);
 
-  const getApplicationsByStatus = (status: string) => {
-    // Make the 'Applied' column show all applications to act as a permanent record
-    if (status === 'applied') {
-      return applications;
+  const handleStatusUpdate = async (appId: string, newStatus: string) => {
+    if (!accessToken) return;
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/applications/${appId}/`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${accessToken}`
+        },
+        body: JSON.stringify({ status: newStatus }),
+        credentials: 'include'
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        // Update local state
+        setApplications(prev => prev.map(app =>
+          app.id === appId ? { ...app, status: newStatus as Application['status'] } : app
+        ));
+      } else {
+        throw new Error(data.error || 'Failed to update status');
+      }
+    } catch (err) {
+      console.error('Error updating application status:', err);
+      alert('Failed to update application status. Please try again.');
     }
-    if (status === 'offer') {
-      return applications.filter(app => app.status === 'offer' || app.status === 'accepted');
-    }
-    if (status === 'reviewing') {
-      return applications.filter(app => app.status === 'reviewing');
-    }
-    return applications.filter(app => app.status === status);
   };
 
-  const getTotalApplications = () => applications.length;
+  const handleDeleteApplication = async (appId: string) => {
+    if (!accessToken) return;
+    if (!confirm('Are you sure you want to permanently delete this application? This action cannot be undone and will remove your record from the system.')) return;
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/applications/${appId}/`, {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${accessToken}`
+        },
+        credentials: 'include'
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        // Remove from local state
+        setApplications(prev => prev.filter(app => app.id !== appId));
+      } else {
+        throw new Error(data.error || 'Failed to delete application');
+      }
+    } catch (err) {
+      console.error('Error deleting application:', err);
+      alert('Failed to delete application. Please try again.');
+    }
+  };
+
+  const getApplicationsByStatus = (status: string) => {
+    let activeApps = applications.filter(app => app.status !== 'withdrawn');
+
+    if (searchTerm.trim()) {
+      const term = searchTerm.toLowerCase();
+      activeApps = activeApps.filter(app =>
+        app.jobTitle.toLowerCase().includes(term) ||
+        app.company.toLowerCase().includes(term)
+      );
+    }
+
+    // Make the 'Applied' column show all active applications
+    if (status === 'applied') {
+      return activeApps;
+    }
+    if (status === 'offer') {
+      return activeApps.filter(app => app.status === 'offer' || app.status === 'accepted');
+    }
+    if (status === 'reviewing') {
+      return activeApps.filter(app => app.status === 'reviewing');
+    }
+    return activeApps.filter(app => app.status === status);
+  };
+
+  const getTotalApplications = () => {
+    let active = applications.filter(app => app.status !== 'withdrawn');
+    if (searchTerm.trim()) {
+      const term = searchTerm.toLowerCase();
+      active = active.filter(app =>
+        app.jobTitle.toLowerCase().includes(term) ||
+        app.company.toLowerCase().includes(term)
+      );
+    }
+    return active.length;
+  };
 
 
   // Get upcoming interviews and assessments
@@ -407,32 +665,63 @@ function ApplicationPage() {
 
       {/* Pipeline - Full Kanban Board */}
       {activeTab === 'pipeline' && (
-        <div className="kanban-board">
-          {STATUS_COLUMNS.map((column) => {
-            const columnApps = getApplicationsByStatus(column.id);
-            return (
-              <div key={column.id} className="kanban-column">
-                <div className="column-header">
-                  <h2 className="column-title">{column.title}</h2>
-                  <span className="column-count" style={{ color: column.color }}>
-                    {columnApps.length}
-                  </span>
+        <>
+          <div className="pipeline-filters">
+            <div className="search-wrapper">
+              <svg className="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input
+                type="text"
+                placeholder="Search by job title or company..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="pipeline-search-input"
+              />
+              {searchTerm && (
+                <button className="clear-search" onClick={() => setSearchTerm('')}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+              )}
+            </div>
+
+          </div>
+          <div className="kanban-board">
+            {STATUS_COLUMNS.map((column) => {
+              const columnApps = getApplicationsByStatus(column.id);
+              return (
+                <div key={column.id} className="kanban-column">
+                  <div className="column-header">
+                    <h2 className="column-title">{column.title}</h2>
+                    <span className="column-count" style={{ color: column.color }}>
+                      {columnApps.length}
+                    </span>
+                  </div>
+                  <div className="column-content">
+                    {columnApps.length > 0 ? (
+                      columnApps.map((app) => (
+                        <ApplicationCard
+                          key={app.id}
+                          application={app}
+                          onStatusUpdate={handleStatusUpdate}
+                          onDelete={handleDeleteApplication}
+                        />
+                      ))
+                    ) : (
+                      <div className="empty-state">
+                        <p>No applications</p>
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <div className="column-content">
-                  {columnApps.length > 0 ? (
-                    columnApps.map((app) => (
-                      <ApplicationCard key={app.id} application={app} />
-                    ))
-                  ) : (
-                    <div className="empty-state">
-                      <p>No applications</p>
-                    </div>
-                  )}
-                </div>
-              </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
+        </>
       )}
 
       {/* Upcoming - Interviews & Tests */}
@@ -453,14 +742,8 @@ function ApplicationPage() {
                   transition={{ duration: 0.3 }}
                 >
                   <div className="upcoming-card-header">
-                    <div className="app-logo" style={{ backgroundColor: app.logoColor }}>
-                      {app.logoInitial ? (
-                        app.logoInitial
-                      ) : (
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                          <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                        </svg>
-                      )}
+                    <div className="app-logo" style={{ backgroundColor: '#ffffff', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid #eee' }}>
+                      <img src={app.logoUrl || "/loop.png"} alt="Company Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
                     <span className={`status-badge ${app.interviewType === 'test' ? 'status-test' : 'status-interview'}`}>
                       {app.interviewType === 'test' ? 'Assessment Test' : 'Interview Scheduled'}
@@ -485,15 +768,19 @@ function ApplicationPage() {
                       </svg>
                       <span>
                         {app.status === 'test'
-                          ? (app.testDeadline ? `Deadline: ${new Date(app.testDeadline).toLocaleDateString()}` : 'Date TBD')
-                          : (app.interviewDate
-                            ? new Date(app.interviewDate).toLocaleString([], {
-                              month: 'short',
-                              day: 'numeric',
-                              hour: '2-digit',
-                              minute: '2-digit'
-                            })
-                            : 'Date TBD')}
+                          ? (app.testDeadline
+                            ? `Deadline: ${new Date(app.testDeadline).toLocaleDateString([], { month: 'short', day: 'numeric' })}`
+                            : 'Date TBD')
+                          : (app.interviewDeadline
+                            ? `Deadline: ${new Date(app.interviewDeadline).toLocaleDateString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}`
+                            : app.interviewDate
+                              ? new Date(app.interviewDate).toLocaleString([], {
+                                month: 'short',
+                                day: 'numeric',
+                                hour: '2-digit',
+                                minute: '2-digit'
+                              })
+                              : 'Date TBD')}
                       </span>
                     </div>
                   </div>
@@ -507,13 +794,7 @@ function ApplicationPage() {
                           window.open(`http://localhost:5173/test?job=${encodeURIComponent(cleanJobTitle)}&job_id=${app.jobId}`, '_blank');
                         }}
                       >
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                          <polyline points="14 2 14 8 20 8"></polyline>
-                          <line x1="16" y1="13" x2="8" y2="13"></line>
-                          <line x1="16" y1="17" x2="8" y2="17"></line>
-                          <polyline points="10 9 9 9 8 9"></polyline>
-                        </svg>
+
                         Take Test
                       </button>
                     ) : app.status === 'interview' ? (
@@ -590,8 +871,8 @@ function ApplicationPage() {
                   const deadlineDate = app.interviewDeadline
                     ? new Date(app.interviewDeadline)
                     : app.interviewDate
-                    ? new Date(app.interviewDate)
-                    : null;
+                      ? new Date(app.interviewDate)
+                      : null;
 
                   if (!deadlineDate) return;
 

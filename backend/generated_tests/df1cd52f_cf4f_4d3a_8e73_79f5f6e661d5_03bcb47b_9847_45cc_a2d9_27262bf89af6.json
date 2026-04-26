@@ -1,0 +1,93 @@
+{
+    "candidate_id": "df1cd52f-cf4f-4d3a-8e73-79f5f6e661d5",
+    "job_id": "03bcb47b-9847-45cc-a2d9-27262bf89af6",
+    "job_title": "Backend Engineer",
+    "requirements": [
+        "Backend Engineer"
+    ],
+    "total_questions": 5,
+    "distribution": {
+        "analytical": 1,
+        "english": 1,
+        "job_specific": 3
+    },
+    "questions": [
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A car travels at a speed of 40 mph over a certain distance and then returns over the same distance at a speed of 60 mph. What is the average speed for the total journey?",
+            "answers": {
+                "A1": "46 mph",
+                "A2": "48 mph",
+                "A3": "50 mph",
+                "A4": "52 mph"
+            },
+            "key": "48 mph",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 27
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Choose similar meaning to PRAGMATIC:",
+            "answers": {
+                "A1": "Idealistic",
+                "A2": "Practical",
+                "A3": "Theoretical",
+                "A4": "Romantic"
+            },
+            "key": "Practical",
+            "justification": "Pragmatic means dealing realistically",
+            "justified_by": "JSON-Fallback",
+            "frequency": 9
+        },
+        {
+            "type": "easy",
+            "category": "OOP",
+            "question": "What is the purpose of the 'super' keyword in OOP?",
+            "answers": {
+                "A1": "To create a new object",
+                "A2": "To access parent class methods and constructors",
+                "A3": "To make a method faster",
+                "A4": "To declare a final variable"
+            },
+            "key": "To access parent class methods and constructors",
+            "justification": "The 'super' keyword allows a subclass to call methods or constructors defined in its parent class.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 15
+        },
+        {
+            "type": "hard",
+            "category": "OOP",
+            "question": "What is API (Application Programming Interface)?",
+            "answers": {
+                "A1": "A programming language",
+                "A2": "High-level interface defining how software components interact through functions/methods",
+                "A3": "An architecture pattern",
+                "A4": "A binary interface"
+            },
+            "key": "High-level interface defining how software components interact through functions/methods",
+            "justification": "API specifies how to request services from software libraries or operating systems using well-defined functions.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 14
+        },
+        {
+            "type": "medium",
+            "category": "OOP",
+            "question": "What is a map in STL?",
+            "answers": {
+                "A1": "A visual representation of data",
+                "A2": "An associative container storing key-value pairs in sorted order",
+                "A3": "A geographic tool",
+                "A4": "A type of array"
+            },
+            "key": "An associative container storing key-value pairs in sorted order",
+            "justification": "Map stores elements as key-value pairs, maintains sorted order by key, and provides O(log n) search/insert/delete.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 20
+        }
+    ],
+    "generated_at": "2026-04-26 17:52:32",
+    "source": "RAG-Ollama"
+}

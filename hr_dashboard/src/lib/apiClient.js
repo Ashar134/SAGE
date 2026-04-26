@@ -31,12 +31,15 @@ const toCamelApplicant = (row) => ({
   interviewCompletedAt: row.interview_completed_at,
   interviewTranscript: row.interview_transcript || [],
   interviewRecordingUrl: row.interview_recording_url,
+  // ── Score breakdown ───────────────────────────────────────────────────
+  skillScore: row.skill_score,      // 10% — skill vs JD overlap (0-100)
+  matchScore: row.match_score,      // weighted final score (0-100)
   // ─────────────────────────────────────────────────────────────────────
-  matchScore: row.match_score,
   videoUrl: row.interview_recording_url || row.video_url,
   resumeUrl: row.resume_url,
   rejectionReason: row.rejection_reason,
   jobId: row.job_id,
+  companyLogo: row.company_logo || "/loop.png",
 });
 
 const toCamelJob = (row) => ({
@@ -50,14 +53,29 @@ const toCamelJob = (row) => ({
   description: row.description,
   requirements: row.requirements,
   createdAt: row.created_at,
+  companyLogo: row.company?.logo_url || "/loop.png",
 });
 
-export async function fetchApplicants({ startDate, endDate } = {}) {
+export async function fetchApplicants({ startDate, endDate, jobTitle } = {}) {
   const params = new URLSearchParams();
   if (startDate) params.append("start_date", startDate);
   if (endDate) params.append("end_date", endDate);
+  if (jobTitle) params.append("job_title", jobTitle);
   const data = await fetchJson(`/api/hr/applicants/${params.toString() ? `?${params.toString()}` : ""}`);
+  // Always returns the array for backward-compatibility with all pages
   return (data.applicants || []).map(toCamelApplicant);
+}
+
+export async function fetchApplicantsWithMeta({ startDate, endDate, jobTitle } = {}) {
+  const params = new URLSearchParams();
+  if (startDate) params.append("start_date", startDate);
+  if (endDate) params.append("end_date", endDate);
+  if (jobTitle) params.append("job_title", jobTitle);
+  const data = await fetchJson(`/api/hr/applicants/${params.toString() ? `?${params.toString()}` : ""}`);
+  return {
+    applicants: (data.applicants || []).map(toCamelApplicant),
+    jobTitles: data.job_titles || [],
+  };
 }
 
 export async function fetchJobs() {
@@ -90,6 +108,28 @@ export async function updateApplicantStatus(id, status, { rejectionReason = null
     body: JSON.stringify({ status, rejection_reason: rejectionReason }),
   });
   return toCamelApplicant(data.applicant);
+}
+
+export async function getCompanyInfo() {
+  return await fetchJson("/api/hr/company/");
+}
+
+export async function updateCompanyLogo(logo) {
+  if (logo instanceof File) {
+    const formData = new FormData();
+    formData.append("logo", logo);
+    return await fetchJson("/api/hr/company/logo/", {
+      method: "POST",
+      body: formData,
+      // Note: Don't set Content-Type header when using FormData; 
+      // the browser will set it to multipart/form-data with a boundary.
+      headers: {}, 
+    });
+  }
+  return await fetchJson("/api/hr/company/logo/", {
+    method: "POST",
+    body: JSON.stringify({ logo_url: logo }),
+  });
 }
 
 export async function checkApiConnection() {

@@ -19,9 +19,7 @@ const statusColorClasses = {
 export default function ApplicantsTable({ items = [] }) {
   return (
     <Table>
-      <TableCaption className="text-left">
-        Recent teacher applicants.
-      </TableCaption>
+
       <TableHeader>
         <TableRow className="bg-gray-50/70">
           <TableHead>Applicant</TableHead>
@@ -38,9 +36,16 @@ export default function ApplicantsTable({ items = [] }) {
             className="hover:bg-gray-50/80"
           >
             <TableCell className="font-medium">
-              <div className="text-gray-900">{applicant.name}</div>
-              <div className="text-xs text-gray-400">
-                {applicant.candidateCode || applicant.id}
+              <div className="flex items-center gap-3">
+                <div className="h-8 w-8 rounded bg-white flex items-center justify-center overflow-hidden border">
+                  <img className="h-full w-full object-cover" src={applicant.companyLogo || "/loop.png"} alt="Company-Logo" />
+                </div>
+                <div>
+                  <div className="text-gray-900">{applicant.name}</div>
+                  <div className="text-xs text-gray-400">
+                    {applicant.candidateCode || applicant.id}
+                  </div>
+                </div>
               </div>
             </TableCell>
             <TableCell className="text-gray-600">{applicant.department}</TableCell>

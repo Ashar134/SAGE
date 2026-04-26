@@ -210,6 +210,81 @@
 }
 
 /* ============================================================================
+   Pipeline Filters
+   ============================================================================ */
+
+.pipeline-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 3%;
+    max-width: 1800px;
+    margin: 0 auto;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 400px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 14px;
+    color: #94a3b8;
+    pointer-events: none;
+}
+
+.pipeline-search-input {
+    width: 100%;
+    padding: 10px 40px 10px 42px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 0.875rem;
+    color: #1e293b;
+    transition: all 0.2s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.pipeline-search-input:focus {
+    outline: none;
+    border-color: #009bb0;
+    box-shadow: 0 0 0 3px rgba(0, 155, 176, 0.1);
+}
+
+.clear-search {
+    position: absolute;
+    right: 12px;
+    background: #f1f5f9;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.clear-search:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+.filter-stats {
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* ============================================================================
    Kanban Board
    ============================================================================ */
 

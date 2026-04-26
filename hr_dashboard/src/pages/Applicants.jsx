@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { fetchApplicants } from "../lib/apiClient";
+import { fetchApplicantsWithMeta } from "../lib/apiClient";
 import StatCard from "../components/dashboard/StatCard";
 import { Badge } from "../components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
@@ -25,12 +25,12 @@ import {
 const statusPalette = {
   applied: "bg-blue-50 text-blue-700",
   test: "bg-amber-50 text-amber-700",
-  interview: "bg-indigo-50 text-indigo-700",
+  interview: "bg-[#e0f0ff] text-[#272727]",
   rejected: "bg-red-50 text-red-700",
   offer: "bg-emerald-50 text-emerald-700",
   accepted: "bg-emerald-50 text-emerald-700",
-  reviewing: "bg-indigo-50 text-indigo-700",
-  Reviewing: "bg-indigo-50 text-indigo-700",
+  reviewing: "bg-[#e0f0ff] text-[#272727]",
+  Reviewing: "bg-[#e0f0ff] text-[#272727]",
 };
 
 const stageOrder = ["reviewing", "Reviewing", "applied", "test", "interview", "offer", "rejected", "accepted"];
@@ -43,18 +43,21 @@ const formatStatus = (status) => {
 
 export default function Applicants() {
   const [applicants, setApplicants] = useState([]);
+  const [jobTitles, setJobTitles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [stageFilter, setStageFilter] = useState("all");
+  const [tableJobFilter, setTableJobFilter] = useState("all");
   const [searchParams, setSearchParams] = useSearchParams();
   const searchTerm = (searchParams.get("q") || "").toLowerCase().trim();
   const [selected, setSelected] = useState(null);
 
   useEffect(() => {
     setLoading(true);
-    fetchApplicants()
-      .then((rows) => {
+    fetchApplicantsWithMeta()
+      .then(({ applicants: rows, jobTitles: titles }) => {
         setApplicants(rows || []);
+        setJobTitles(titles || []);
         setError(null);
       })
       .catch((err) => {
@@ -78,22 +81,22 @@ export default function Applicants() {
 
   const stats = useMemo(() => {
     const total = applicants.length;
-    const shortlisted = applicants.filter((a) => a.status === "test").length;
-    const interview = applicants.filter((a) => a.status === "interview").length;
-    const offers = applicants.filter((a) => a.status === "offer").length;
-    const rejected = applicants.filter((a) => a.status === "rejected").length;
+    const shortlisted = applicants.filter((a) => (a.status || "").toLowerCase() === "test").length;
+    const interview = applicants.filter((a) => (a.status || "").toLowerCase() === "interview").length;
+    const offers = applicants.filter((a) => ["offer", "accepted"].includes((a.status || "").toLowerCase())).length;
+    const rejected = applicants.filter((a) => (a.status || "").toLowerCase() === "rejected").length;
     const avgMatch =
       applicants.length > 0
         ? Math.round(
-            applicants.reduce((sum, a) => sum + (Number.isFinite(a.matchScore) ? a.matchScore : 0), 0) /
-              applicants.length
-          )
+          applicants.reduce((sum, a) => sum + (Number.isFinite(a.matchScore) ? a.matchScore : 0), 0) /
+          applicants.length
+        )
         : 0;
     return [
       { id: 1, title: "Total Applicants", value: total, subtitle: "Across all departments" },
       { id: 2, title: "Shortlisted", value: shortlisted, subtitle: "Assessment / Screening" },
       { id: 3, title: "Interviews", value: interview, subtitle: "Scheduled or in progress" },
-      { id: 4, title: "Offers", value: offers, subtitle: "Pending acceptance" },
+      { id: 4, title: "Onboarding", value: offers, subtitle: "Accepted or Pending" },
       { id: 5, title: "Rejected", value: rejected, subtitle: "Closed applications" },
       { id: 6, title: "Avg Match", value: `${avgMatch}%`, subtitle: "Overall fit score" },
     ];
@@ -102,7 +105,8 @@ export default function Applicants() {
   const statusCounts = useMemo(() => {
     const counts = {};
     applicants.forEach((a) => {
-      counts[a.status] = (counts[a.status] || 0) + 1;
+      const s = (a.status || "").toLowerCase();
+      counts[s] = (counts[s] || 0) + 1;
     });
     return counts;
   }, [applicants]);
@@ -119,11 +123,10 @@ export default function Applicants() {
       .slice(0, 5);
   }, [applicants]);
 
-  const topCandidates = useMemo(() => {
-    return [...applicants]
-      .filter((a) => Number.isFinite(a.matchScore))
-      .sort((a, b) => (b.matchScore || 0) - (a.matchScore || 0))
-      .slice(0, 4);
+  const onboardingCandidates = useMemo(() => {
+    return applicants
+      .filter((a) => (a.status || "").toLowerCase() === "accepted")
+      .sort((a, b) => new Date(b.appliedDate || 0) - new Date(a.appliedDate || 0));
   }, [applicants]);
 
   const filtered = useMemo(() => {
@@ -150,14 +153,25 @@ export default function Applicants() {
   }, [applicants, stageFilter, searchTerm]);
 
   const sorted = useMemo(() => {
-    return [...filtered].sort((a, b) => {
-      const aIdx = stageOrder.indexOf(a.status);
-      const bIdx = stageOrder.indexOf(b.status);
-      const matchA = Number.isFinite(a.matchScore) ? a.matchScore : 0;
-      const matchB = Number.isFinite(b.matchScore) ? b.matchScore : 0;
-      return aIdx - bIdx || matchB - matchA;
+    // Only show candidates who are Under Review AND have given test or interview
+    const shortlisted = filtered.filter((a) =>
+      (a.status === "reviewing" || a.status === "Reviewing") &&
+      (Number.isFinite(a.testScore) || Number.isFinite(a.interviewScore))
+    );
+
+    // Apply table-level job title filter
+    const jobFiltered =
+      tableJobFilter === "all"
+        ? shortlisted
+        : shortlisted.filter((a) => a.role === tableJobFilter);
+
+    // Sort by match score descending (highest first)
+    return [...jobFiltered].sort((a, b) => {
+      const matchA = Number.isFinite(a.matchScore) ? a.matchScore : -1;
+      const matchB = Number.isFinite(b.matchScore) ? b.matchScore : -1;
+      return matchB - matchA;
     });
-  }, [filtered]);
+  }, [filtered, tableJobFilter]);
 
   const formatDateTime = (value) => {
     if (!value) return "N/A";
@@ -178,10 +192,10 @@ export default function Applicants() {
           </div>
           <div className="flex items-center gap-2">
             {searchTerm && (
-              <div className="rounded-full bg-indigo-50 text-indigo-700 px-3 py-1 text-xs font-semibold flex items-center gap-2">
+              <div className="rounded-full bg-[#e0f0ff] text-[#272727] px-3 py-1 text-xs font-semibold flex items-center gap-2">
                 Searching for “{searchTerm}”
                 <button
-                  className="text-indigo-500 hover:text-indigo-700"
+                  className="text-gray-500 hover:text-gray-700"
                   onClick={() =>
                     setSearchParams((prev) => {
                       const p = new URLSearchParams(prev);
@@ -209,7 +223,7 @@ export default function Applicants() {
                 <option value="rejected">Rejected</option>
               </select>
             </div>
-            <button className="hidden sm:inline-flex items-center gap-2 rounded-md bg-indigo-600 text-white px-3 py-2 text-sm font-semibold shadow-sm hover:bg-indigo-500">
+            <button className="hidden sm:inline-flex items-center gap-2 rounded-md bg-[#272727] text-white px-3 py-2 text-sm font-semibold shadow-sm hover:bg-black">
               <ListFilter size={16} />
               Smart filters
             </button>
@@ -228,40 +242,51 @@ export default function Applicants() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        <Card className="lg:col-span-2 border-indigo-50 shadow-sm bg-gradient-to-br from-white via-indigo-50/40 to-white">
+        <Card className="lg:col-span-2 border-emerald-50 shadow-sm bg-gradient-to-br from-white via-emerald-50/30 to-white">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <div>
-              <CardTitle className="text-base font-semibold text-gray-900">Top Candidates by Match</CardTitle>
-              <p className="text-sm text-gray-500">Highest fit scores across the pipeline.</p>
+              <CardTitle className="text-base font-semibold text-gray-900">Onboarding Pipeline</CardTitle>
+              <p className="text-xs text-gray-400 mt-0.5">Candidates who accepted the offer — ready to onboard.</p>
             </div>
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100 px-3 py-1 text-xs font-semibold">
+              <BadgeCheck size={13} />
+              {onboardingCandidates.length} Accepted
+            </span>
           </CardHeader>
           <CardContent className="space-y-3">
-            {topCandidates.slice(0, 4).map((a) => (
+            {onboardingCandidates.map((a, idx) => (
               <div
                 key={a.id}
-                className="rounded-xl border border-indigo-50 bg-white p-3 shadow-xs flex flex-col gap-2"
+                className="rounded-xl border border-emerald-50 bg-white p-3 shadow-xs flex flex-col gap-2"
               >
                 <div className="flex items-center justify-between">
-                  <div>
-                    <div className="text-sm font-semibold text-gray-900">{a.name}</div>
-                    <div className="text-xs text-gray-500">
-                      {a.role} · {a.department}
+                  <div className="flex items-center gap-2">
+
+                    <div>
+                      <div className="text-sm font-semibold text-gray-900">{a.name}</div>
+                      <div className="text-xs text-gray-500">{a.role}</div>
                     </div>
                   </div>
-                  <Badge className={`text-xs px-3 py-1.5 font-medium ${statusPalette[a.status] || "bg-gray-100 text-gray-700"}`}>
-                    {formatStatus(a.status)}
+                  <Badge className="text-xs px-2.5 py-1 font-medium bg-emerald-50 text-emerald-700">
+                    Offer Accepted
                   </Badge>
                 </div>
-                <div className="flex flex-wrap gap-2 text-xs text-gray-600">
-                  <span className="rounded-full bg-indigo-50 text-indigo-700 px-2 py-1">Match {a.matchScore ?? "—"}%</span>
-                  <span className="rounded-full bg-blue-50 text-blue-700 px-2 py-1">Test {a.testScore ?? "—"}%</span>
-                  <span className="rounded-full bg-amber-50 text-amber-700 px-2 py-1">Interview {a.interviewScore || "Pending"}</span>
-                  <span className="rounded-full bg-gray-100 text-gray-700 px-2 py-1">{a.education || "No education listed"}</span>
+
+                <div className="flex items-center justify-between text-xs text-gray-400">
+                  <span>Applied {a.appliedDate ? new Date(a.appliedDate).toLocaleDateString() : "—"}</span>
+                  <button
+                    className="inline-flex items-center rounded-md border border-gray-200 bg-gray-50 px-2 py-1 text-xs text-gray-700 hover:bg-gray-100 font-medium"
+                    onClick={() => setSelected(a)}
+                  >
+                    View Profile
+                  </button>
                 </div>
               </div>
             ))}
-            {!topCandidates.length && (
-              <div className="text-sm text-gray-500">No scored candidates yet.</div>
+            {!onboardingCandidates.length && (
+              <div className="text-sm text-gray-500 py-6 text-center">
+                No candidates have accepted an offer yet.
+              </div>
             )}
           </CardContent>
         </Card>
@@ -275,7 +300,7 @@ export default function Applicants() {
             {topRoles.map((role) => (
               <div key={role.role} className="flex items-center justify-between rounded-md bg-gray-50 px-3 py-2">
                 <span className="font-semibold text-gray-900">{role.role}</span>
-                <span className="inline-flex items-center gap-1 text-indigo-700 font-semibold">
+                <span className="inline-flex items-center gap-1 text-[#272727] font-semibold">
                   <TrendingUp size={14} /> {role.count}
                 </span>
               </div>
@@ -288,8 +313,23 @@ export default function Applicants() {
       <Card className="shadow-sm border-gray-200">
         <CardHeader className="flex flex-row items-center justify-between">
           <div>
-            <CardTitle className="text-base font-semibold text-gray-900">Applicant Details</CardTitle>
-            <p className="text-sm text-gray-500">Assessments, interviews, and AI recommendations.</p>
+            <CardTitle className="text-base font-semibold text-gray-900"> Top Candidates by Match</CardTitle>
+            <p className="text-sm text-gray-500">Candidates recommended by Sage for each role.</p>
+          </div>
+          {/* Job title filter for this table */}
+          <div className="flex items-center gap-2 rounded-md border bg-white px-3 py-2 text-sm text-gray-700 shadow-xs">
+            <ListFilter size={15} className="text-[#272727]" />
+            <select
+              id="table-job-title-filter"
+              value={tableJobFilter}
+              onChange={(e) => setTableJobFilter(e.target.value)}
+              className="bg-transparent outline-none text-sm max-w-[180px]"
+            >
+              <option value="all">All Jobs</option>
+              {jobTitles.map((t) => (
+                <option key={t} value={t}>{t}</option>
+              ))}
+            </select>
           </div>
         </CardHeader>
         <CardContent>
@@ -310,6 +350,7 @@ export default function Applicants() {
                 <TableHead>Applied</TableHead>
                 <TableHead>Role</TableHead>
                 <TableHead>Dept</TableHead>
+                <TableHead>Skill</TableHead>
                 <TableHead>Test</TableHead>
                 <TableHead>Interview</TableHead>
                 <TableHead>Match</TableHead>
@@ -321,25 +362,55 @@ export default function Applicants() {
             <TableBody>
               {sorted.map((a) => (
                 <TableRow key={a.id} className="hover:bg-gray-50/80">
-                  <TableCell className="font-medium">
-                    <div className="text-gray-900">{a.name}</div>
-                    <div className="text-xs text-gray-400">{a.education}</div>
-                  </TableCell>
+                  <TableCell className="font-medium text-gray-900">{a.name}</TableCell>
                   <TableCell className="text-gray-700 text-sm">
                     {a.appliedDate ? new Date(a.appliedDate).toLocaleDateString() : "—"}
                   </TableCell>
                   <TableCell className="text-gray-700">{a.role}</TableCell>
                   <TableCell className="text-gray-700">{a.department}</TableCell>
-                  <TableCell className="text-gray-700">{a.testScore ?? "—"}%</TableCell>
-                  <TableCell className="text-gray-700">{a.interviewScore || "Pending"}</TableCell>
-                  <TableCell className="text-gray-700">{a.matchScore ?? "—"}%</TableCell>
+                  <TableCell>
+                    {a.skillScore != null ? (
+                      <span className="text-xs font-semibold text-gray-900">
+                        {a.skillScore}%
+                      </span>
+                    ) : (
+                      <span className="text-xs text-gray-400">—</span>
+                    )}
+                  </TableCell>
+                  <TableCell>
+                    {Number.isFinite(a.testScore) ? (
+                      <span className="text-xs font-semibold text-gray-900">
+                        {Math.round(a.testScore)}%
+                      </span>
+                    ) : (
+                      <span className="text-xs text-gray-400">—</span>
+                    )}
+                  </TableCell>
+                  <TableCell>
+                    {Number.isFinite(a.interviewScore) ? (
+                      <span className="text-xs font-semibold text-gray-900">
+                        {Math.round(a.interviewScore)}%
+                      </span>
+                    ) : (
+                      <span className="text-xs text-gray-400">Pending</span>
+                    )}
+                  </TableCell>
+                  <TableCell>
+                    {Number.isFinite(a.matchScore) ? (
+                      <span className="text-xs font-semibold text-gray-900">
+                        {a.matchScore}%
+                      </span>
+                    ) : (
+                      <span className="text-xs text-gray-400">—</span>
+                    )}
+                  </TableCell>
                   <TableCell className="text-gray-700">
                     {a.resumeUrl ? (
                       <a
                         href={a.resumeUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-indigo-600 hover:underline text-xs"
+                        className="text-gray-600 hover:underline text-xs"
                       >
                         View
                       </a>
@@ -348,7 +419,8 @@ export default function Applicants() {
                     )}
                   </TableCell>
                   <TableCell>
-                    <Badge className={`text-xs px-3 py-1.5 font-medium ${statusPalette[a.status] || "bg-gray-100 text-gray-700"}`}>
+                    <Badge className="text-xs px-3 py-1.5 font-medium"
+                      style={{ backgroundColor: '#e0f0ff', color: '#111827' }}>
                       {formatStatus(a.status)}
                     </Badge>
                   </TableCell>
@@ -378,8 +450,9 @@ export default function Applicants() {
               ))}
               {!sorted.length && (
                 <TableRow>
-                  <TableCell colSpan={8} className="text-center text-sm text-gray-500 py-6">
-                    No applicants match this search.
+                  <TableCell colSpan={10} className="text-center text-sm text-gray-500 py-6">
+                    No candidates are currently under review or have an offer
+                    {tableJobFilter !== "all" ? ` for "${tableJobFilter}"` : ""}.
                   </TableCell>
                 </TableRow>
               )}
@@ -410,22 +483,30 @@ export default function Applicants() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 p-6">
               <div className="lg:col-span-2 space-y-4">
                 <div className="flex flex-wrap gap-3">
-                  <Badge className={`px-3 py-1.5 text-sm font-semibold ${statusPalette[selected.status] || "bg-gray-100 text-gray-700"}`}>
-                    {formatStatus(selected.status)}
-                  </Badge>
-                  {Number.isFinite(selected.matchScore) && (
-                    <span className="inline-flex items-center rounded-full bg-indigo-50 text-indigo-700 px-3 py-1.5 text-sm font-medium">
-                      Match {selected.matchScore}%
+
+
+                  {Number.isFinite(selected.skillScore) && (
+                    <span className="inline-flex items-center rounded-full px-3 py-1.5 text-sm font-semibold"
+                      style={{ backgroundColor: 'rgb(224, 240, 255)', color: '#111827' }}>
+                      Skill {selected.skillScore}%
                     </span>
                   )}
                   {Number.isFinite(selected.testScore) && (
-                    <span className="inline-flex items-center rounded-full bg-blue-50 text-blue-700 px-3 py-1.5 text-sm font-medium">
+                    <span className="inline-flex items-center rounded-full px-3 py-1.5 text-sm font-semibold"
+                      style={{ backgroundColor: 'rgb(224, 240, 255)', color: '#111827' }}>
                       Test {selected.testScore}%
                     </span>
                   )}
                   {selected.interviewScore && (
-                    <span className="inline-flex items-center rounded-full bg-amber-50 text-amber-700 px-3 py-1.5 text-sm font-medium">
-                      Interview {selected.interviewScore}
+                    <span className="inline-flex items-center rounded-full px-3 py-1.5 text-sm font-semibold"
+                      style={{ backgroundColor: 'rgb(224, 240, 255)', color: '#111827' }}>
+                      Interview {selected.interviewScore}%
+                    </span>
+                  )}
+                  {Number.isFinite(selected.matchScore) && (
+                    <span className="inline-flex items-center rounded-full px-3 py-1.5 text-sm font-semibold"
+                      style={{ backgroundColor: 'rgb(224, 240, 255)', color: '#111827' }}>
+                      Match {selected.matchScore}%
                     </span>
                   )}
                   <span className="inline-flex items-center rounded-full bg-gray-100 text-gray-700 px-3 py-1.5 text-sm font-medium">
@@ -436,7 +517,7 @@ export default function Applicants() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700">
                   <div className="rounded-xl border border-gray-100 bg-gray-50 px-3 py-2">
                     <p className="text-xs uppercase text-gray-400">Current stage</p>
-                    <p className="font-semibold text-gray-900">{selected.status || "Unknown"}</p>
+                    <p className="font-semibold text-gray-900">{formatStatus(selected.status || "Unknown")}</p>
                   </div>
                   <div className="rounded-xl border border-gray-100 bg-gray-50 px-3 py-2">
                     <p className="text-xs uppercase text-gray-400">Role / Dept</p>
@@ -500,7 +581,8 @@ export default function Applicants() {
                       href={selected.resumeUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-semibold"
+                      className="inline-flex items-center gap-2"
+                      style={{ color: 'black' }}
                     >
                       <FileText size={14} />
                       View Resume
@@ -508,42 +590,23 @@ export default function Applicants() {
                   ) : (
                     <span className="text-gray-500">No resume uploaded</span>
                   )}
-                  {selected.videoUrl && (
+                </div>
+
+                {selected.videoUrl && (
+                  <div className="rounded-xl border border-[#e0f0ff] bg-[#e0f0ff]/30 px-4 py-4 space-y-2">
+                    <p className="text-xs uppercase text-gray-400">Interview Session</p>
                     <a
                       href={selected.videoUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-semibold"
+                      className="flex items-center gap-3  text-base bg-white w-fit px-4 py-2 rounded-lg border border-[#e0f0ff] shadow-sm transition-all hover:shadow-md"
+                      style={{ color: 'black' }}
                     >
-                      <Video size={14} />
-                      Play recording
+                      <Video size={20} />
+                      View Interview Recording
                     </a>
-                  )}
-                </div>
-
-                <div className="rounded-xl border border-gray-100 bg-white px-3 py-3 space-y-2 text-sm text-gray-700">
-                  <p className="text-xs uppercase text-gray-400">Status & scoring</p>
-                  <div className="grid grid-cols-2 gap-2 text-center">
-                    <div className="rounded-lg bg-indigo-50 text-indigo-700 px-2 py-2">
-                    <p className="text-xs uppercase tracking-wide">Match</p>
-                    <p className="text-lg font-semibold">{selected.matchScore ?? "—"}%</p>
                   </div>
-                  <div className="rounded-lg bg-blue-50 text-blue-700 px-2 py-2">
-                    <p className="text-xs uppercase tracking-wide">Test</p>
-                    <p className="text-lg font-semibold">{selected.testScore ?? "—"}%</p>
-                  </div>
-                  <div className="rounded-lg bg-amber-50 text-amber-700 px-2 py-2">
-                    <p className="text-xs uppercase tracking-wide">Interview</p>
-                    <p className="text-lg font-semibold">{selected.interviewScore ?? "—"}</p>
-                  </div>
-                  <div className="rounded-lg bg-emerald-50 text-emerald-700 px-2 py-2">
-                    <p className="text-xs uppercase tracking-wide">Overall</p>
-                      <p className="text-lg font-semibold">
-                        {selected.matchScore ?? selected.testScore ?? selected.interviewScore ?? "—"}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                )}
 
                 {selected.status === "Accepted" && (
                   <div className="rounded-xl border border-emerald-100 bg-emerald-50 px-3 py-3 text-emerald-700 flex items-center gap-2 text-sm">

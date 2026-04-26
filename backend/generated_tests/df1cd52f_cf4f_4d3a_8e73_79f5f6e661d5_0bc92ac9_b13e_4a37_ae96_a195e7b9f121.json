@@ -1,0 +1,791 @@
+{
+    "candidate_id": "df1cd52f-cf4f-4d3a-8e73-79f5f6e661d5",
+    "job_id": "0bc92ac9-b13e-4a37-ae96-a195e7b9f121",
+    "job_title": "Full Stack Developer",
+    "requirements": [
+        "BS/MS in Computer Science, Software Engineering, or related field",
+        "3+ years experience with Django, Python, or Node.js",
+        "Proficiency in React, Angular, or Vue.js",
+        "Experience designing RESTful APIs and microservices",
+        "Knowledge of relational databases (MySQL/PostgreSQL) and ORM",
+        "Hands-on experience with version control (Git) and CI/CD pipelines",
+        "Familiarity with cloud platforms like AWS or Azure",
+        "Strong problem-solving and analytical skills"
+    ],
+    "total_questions": 51,
+    "distribution": {
+        "analytical": 15,
+        "english": 15,
+        "job_specific": 70
+    },
+    "questions": [
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "Harry is one and a third as old as Larry and Larry is one and a third as old as Carrie. Together their ages total 74. How old are Larry, Harry and Carrie?",
+            "answers": {
+                "A1": "Harry: 48, Larry: 36, Carrie: 27",
+                "A2": "Harry: 16, Larry: 12, Carrie: 9",
+                "A3": "Harry: 32, Larry: 24, Carrie: 18",
+                "A4": "Harry: 36, Larry: 27, Carrie: 12"
+            },
+            "key": "Harry: 32, Larry: 24, Carrie: 18",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 23
+        },
+        {
+            "type": "hard",
+            "category": "analytical",
+            "question": "You have 59 cubic blocks. What is the minimum number that needs to be taken away in order to construct a solid cube with none left over?",
+            "answers": {
+                "A1": "32",
+                "A2": "28",
+                "A3": "48",
+                "A4": "16"
+            },
+            "key": "32",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 32
+        },
+        {
+            "type": "hard",
+            "category": "analytical",
+            "question": "Peter, Paul and Mary share out a certain sum of money between them. Peter gets 2 / 5, Paul gets 0.55 and Mary gets $45.00. How much is the original sum of money?",
+            "answers": {
+                "A1": "$800",
+                "A2": "$900",
+                "A3": "$700",
+                "A4": "$1000"
+            },
+            "key": "$900",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 23
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "Alf has four times as many pencils as Jim, and Jim has three times as many pencils as Sid. Altogether they have 192. How many has each?",
+            "answers": {
+                "A1": "Alf = 120, Jim: 30, Sid = 10",
+                "A2": "Alf = 128, Jim: 32, Sid = 10",
+                "A3": "Alf = 144, Jim: 36, Sid = 12",
+                "A4": "Alf = 180, Jim: 45, Sid = 15"
+            },
+            "key": "Alf = 144, Jim: 36, Sid = 12",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 27
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "Which one is the odd number out?",
+            "answers": {
+                "A1": "462",
+                "A2": "683",
+                "A3": "385",
+                "A4": "198"
+            },
+            "key": "683",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 30
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A man jogs at 6 mph over a certain journey and walks back over the same journey at 3 mph. What is his average speed for the journey?",
+            "answers": {
+                "A1": "3mph",
+                "A2": "4mph",
+                "A3": "2mph",
+                "A4": "5mph"
+            },
+            "key": "4mph",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 28
+        },
+        {
+            "type": "hard",
+            "category": "analytical",
+            "question": "My watch was correct at noon, after which it started to lose 17 minutes per hour until six hours ago it stopped completely. It now shows the time as 2.52 pm. What time is it now?",
+            "answers": {
+                "A1": "10:00 PM",
+                "A2": "10:12 PM",
+                "A3": "09:50 PM",
+                "A4": "10:30 PM"
+            },
+            "key": "10:00 PM",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 28
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "What number should replace the question mark in the sequence: 0, 1, 2, 4, 6, 9, 12, 16, ?",
+            "answers": {
+                "A1": "18",
+                "A2": "17",
+                "A3": "22",
+                "A4": "20"
+            },
+            "key": "20",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 30
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A man has 53 socks in his drawer: 21 identical blue, 15 identical black and 17 identical red. The lights are fused and he is completely in the dark. How many socks must he take out to make 100 per cent certain he has a pair of black socks?",
+            "answers": {
+                "A1": "35",
+                "A2": "40",
+                "A3": "45",
+                "A4": "50"
+            },
+            "key": "40",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 22
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "Which number appears next in the pattern? 13, 17, 19, 23, ?",
+            "answers": {
+                "A1": "25",
+                "A2": "27",
+                "A3": "29",
+                "A4": "33"
+            },
+            "key": "29",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 36
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "What number should replace the question mark below: 9 2 6 = 24 , 7 9 9 = 72 , 9 5 6 = ?",
+            "answers": {
+                "A1": "51",
+                "A2": "48",
+                "A3": "53",
+                "A4": "47"
+            },
+            "key": "51",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 23
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "What number will come at the question mark in the sequence: 25, 32, 27, 36, ?",
+            "answers": {
+                "A1": "31",
+                "A2": "29",
+                "A3": "27",
+                "A4": "33"
+            },
+            "key": "29",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 31
+        },
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "What letter will come after J in the sequence: A, C, F, J, ?",
+            "answers": {
+                "A1": "G",
+                "A2": "N",
+                "A3": "O",
+                "A4": "Y"
+            },
+            "key": "O",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 28
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A car travels at a speed of 40 mph over a certain distance and then returns over the same distance at a speed of 60 mph. What is the average speed for the total journey?",
+            "answers": {
+                "A1": "46 mph",
+                "A2": "48 mph",
+                "A3": "50 mph",
+                "A4": "52 mph"
+            },
+            "key": "48 mph",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 27
+        },
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A train travelling at a speed of 50 mph enters a tunnel that is 1.75 miles long. The length of the train is 3/8 miles. How long does it take for all the train to pass through the tunnel, from the moment the front enters to the moment the rear emerges?",
+            "answers": {
+                "A1": "3 minutes 18 seconds",
+                "A2": "2 minutes 18 seconds",
+                "A3": "2 minutes 33 seconds",
+                "A4": "3 minutes 33 seconds"
+            },
+            "key": "2 minutes 33 seconds",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 33
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "Correct: 'Hardly ___ the guests arrived ___ the party began.'",
+            "answers": {
+                "A1": "had...when",
+                "A2": "have...then",
+                "A3": "did...than",
+                "A4": "would...if"
+            },
+            "key": "had...when",
+            "justification": "Hardly...when construction",
+            "justified_by": "JSON-Fallback",
+            "frequency": 11
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "Correct: 'The committee ___ decided to postpone.'",
+            "answers": {
+                "A1": "have",
+                "A2": "has",
+                "A3": "were",
+                "A4": "was"
+            },
+            "key": "have",
+            "justification": "British English plural with collective",
+            "justified_by": "JSON-Fallback",
+            "frequency": 14
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Choose similar meaning to PRAGMATIC:",
+            "answers": {
+                "A1": "Idealistic",
+                "A2": "Practical",
+                "A3": "Theoretical",
+                "A4": "Romantic"
+            },
+            "key": "Practical",
+            "justification": "Pragmatic means dealing realistically",
+            "justified_by": "JSON-Fallback",
+            "frequency": 9
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "The military general's ___ strategy led decisively to an overwhelming victory.",
+            "answers": {
+                "A1": "flawed",
+                "A2": "astute",
+                "A3": "misguided",
+                "A4": "reckless"
+            },
+            "key": "astute",
+            "justification": "Winning strategy is astute",
+            "justified_by": "JSON-Fallback",
+            "frequency": 12
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "BIBLIOPHILE : BOOKS",
+            "answers": {
+                "A1": "Chef : Cooking",
+                "A2": "Audiophile : Sound",
+                "A3": "Teacher : Students",
+                "A4": "Artist : Painting",
+                "A5": "Writer : Stories"
+            },
+            "key": "Audiophile : Sound",
+            "justification": "Lover of specific domain",
+            "justified_by": "JSON-Fallback",
+            "frequency": 8
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Choose similar meaning to TENACIOUS:",
+            "answers": {
+                "A1": "Weak",
+                "A2": "Persistent",
+                "A3": "Flexible",
+                "A4": "Yielding"
+            },
+            "key": "Persistent",
+            "justification": "Tenacious means holding firmly",
+            "justified_by": "JSON-Fallback",
+            "frequency": 7
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "His ___ remarks at the meeting offended several colleagues present.",
+            "answers": {
+                "A1": "tactful",
+                "A2": "caustic",
+                "A3": "diplomatic",
+                "A4": "considerate"
+            },
+            "key": "caustic",
+            "justification": "Offending remarks are caustic",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "The lawyer's ___ line of questioning confused and frustrated the witness.",
+            "answers": {
+                "A1": "straightforward",
+                "A2": "circuitous",
+                "A3": "direct",
+                "A4": "simple"
+            },
+            "key": "circuitous",
+            "justification": "Confusing questioning is circuitous",
+            "justified_by": "JSON-Fallback",
+            "frequency": 8
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Choose similar meaning to NASCENT:",
+            "answers": {
+                "A1": "Mature",
+                "A2": "Emerging",
+                "A3": "Established",
+                "A4": "Complete"
+            },
+            "key": "Emerging",
+            "justification": "Nascent means beginning",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Choose similar meaning to UBIQUITOUS:",
+            "answers": {
+                "A1": "Rare",
+                "A2": "Omnipresent",
+                "A3": "Unique",
+                "A4": "Occasional"
+            },
+            "key": "Omnipresent",
+            "justification": "Ubiquitous means present everywhere",
+            "justified_by": "JSON-Fallback",
+            "frequency": 13
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "The Olympic athlete's ___ training regimen prepared him for international competition.",
+            "answers": {
+                "A1": "lax",
+                "A2": "rigorous",
+                "A3": "casual",
+                "A4": "relaxed"
+            },
+            "key": "rigorous",
+            "justification": "Olympic training is rigorous",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "The candidate's ___ approach to problem-solving impressed all selection committee members.",
+            "answers": {
+                "A1": "apathetic",
+                "A2": "zealous",
+                "A3": "indifferent",
+                "A4": "lethargic"
+            },
+            "key": "zealous",
+            "justification": "Passionate approach is zealous",
+            "justified_by": "JSON-Fallback",
+            "frequency": 9
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "Correct: 'I wish I ___ taller.'",
+            "answers": {
+                "A1": "am",
+                "A2": "was",
+                "A3": "were",
+                "A4": "would be"
+            },
+            "key": "were",
+            "justification": "Subjunctive after wish",
+            "justified_by": "JSON-Fallback",
+            "frequency": 11
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "Correct: 'If I ___ his number, I would call him.'",
+            "answers": {
+                "A1": "know",
+                "A2": "knew",
+                "A3": "had known",
+                "A4": "will know"
+            },
+            "key": "knew",
+            "justification": "Second conditional requires past tense",
+            "justified_by": "JSON-Fallback",
+            "frequency": 12
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Opposite of VERBOSE:",
+            "answers": {
+                "A1": "Wordy",
+                "A2": "Concise",
+                "A3": "Long-winded",
+                "A4": "Rambling"
+            },
+            "key": "Concise",
+            "justification": "Opposite of using many words",
+            "justified_by": "JSON-Fallback",
+            "frequency": 8
+        },
+        {
+            "type": "easy",
+            "category": "OOP",
+            "question": "What is a virtual function?",
+            "answers": {
+                "A1": "A function that doesn't really exist",
+                "A2": "A function declared in base class that can be overridden in derived classes",
+                "A3": "A function that is always static",
+                "A4": "A function that cannot be called"
+            },
+            "key": "A function declared in base class that can be overridden in derived classes",
+            "justification": "Virtual functions enable runtime polymorphism, allowing the correct overridden method to be called based on actual object type.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 14
+        },
+        {
+            "type": "hard",
+            "category": "OOP",
+            "question": "What is std::type_info?",
+            "answers": {
+                "A1": "Information about type definitions",
+                "A2": "A class providing information about types (name, equality, ordering)",
+                "A3": "A type of container",
+                "A4": "A function for type checking"
+            },
+            "key": "A class providing information about types (name, equality, ordering)",
+            "justification": "type_info provides runtime information about types including names and comparison capabilities.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 20
+        },
+        {
+            "type": "medium",
+            "category": "OOP",
+            "question": "What is a const_cast in C++?",
+            "answers": {
+                "A1": "A cast that makes everything constant",
+                "A2": "A cast that adds or removes const qualifier",
+                "A3": "A cast between const and non-const pointers/references",
+                "A4": "A type of inheritance"
+            },
+            "key": "A cast that adds or removes const qualifier",
+            "justification": "const_cast allows explicit conversion between const and non-const types, should be used carefully.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 17
+        },
+        {
+            "type": "easy",
+            "category": "Data Structures",
+            "question": "What is a collision in the context of hash table implementation?",
+            "answers": {
+                "A1": "Algorithm failure",
+                "A2": "When two keys hash to the same index",
+                "A3": "Memory error",
+                "A4": "Performance issue"
+            },
+            "key": "When two keys hash to the same index",
+            "justification": "Collisions occur in hash tables",
+            "justified_by": "JSON-Fallback",
+            "frequency": 15
+        },
+        {
+            "type": "easy",
+            "category": "Data Structures",
+            "question": "Preorder traversal of a binary tree visits nodes in which specific sequence?",
+            "answers": {
+                "A1": "Left-Root-Right",
+                "A2": "Root-Left-Right",
+                "A3": "Left-Right-Root",
+                "A4": "Right-Left-Root"
+            },
+            "key": "Root-Left-Right",
+            "justification": "Preorder is root-left-right sequence",
+            "justified_by": "JSON-Fallback",
+            "frequency": 27
+        },
+        {
+            "type": "easy",
+            "category": "Data Structures",
+            "question": "Breadth First Search (BFS) is a graph traversal algorithm that primarily uses which data structure?",
+            "answers": {
+                "A1": "Stack structure",
+                "A2": "Queue structure",
+                "A3": "Array structure",
+                "A4": "Tree structure"
+            },
+            "key": "Queue structure",
+            "justification": "BFS uses queue for traversal",
+            "justified_by": "JSON-Fallback",
+            "frequency": 21
+        },
+        {
+            "type": "hard",
+            "category": "Data Base",
+            "question": "What is database partitioning?",
+            "answers": {
+                "A1": "Dividing database into parts",
+                "A2": "Splitting large table into smaller logical parts",
+                "A3": "Physical separation of databases",
+                "A4": "Partitioning disk space"
+            },
+            "key": "Splitting large table into smaller logical parts",
+            "justification": "Partitioning improves performance",
+            "justified_by": "JSON-Fallback",
+            "frequency": 23
+        },
+        {
+            "type": "hard",
+            "category": "Data Base",
+            "question": "What is Fourth Normal Form (4NF)?",
+            "answers": {
+                "A1": "Fourth database level",
+                "A2": "In BCNF without non-trivial multivalued dependencies",
+                "A3": "After third form",
+                "A4": "Advanced normalization"
+            },
+            "key": "In BCNF without non-trivial multivalued dependencies",
+            "justification": "4NF handles multivalued dependencies",
+            "justified_by": "JSON-Fallback",
+            "frequency": 14
+        },
+        {
+            "type": "easy",
+            "category": "Data Base",
+            "question": "What is a modification anomaly?",
+            "answers": {
+                "A1": "Strange modification",
+                "A2": "Inconsistency from updating redundant data",
+                "A3": "Data change",
+                "A4": "Software update"
+            },
+            "key": "Inconsistency from updating redundant data",
+            "justification": "Modification anomaly creates inconsistency",
+            "justified_by": "JSON-Fallback",
+            "frequency": 23
+        },
+        {
+            "type": "medium",
+            "category": "Computer Networks",
+            "question": "What is delay?",
+            "answers": {
+                "A1": "Postponement",
+                "A2": "Time to send packet across network",
+                "A3": "Wait time",
+                "A4": "Processing time"
+            },
+            "key": "Time to send packet across network",
+            "justification": "Delay measures latency",
+            "justified_by": "JSON-Fallback",
+            "frequency": 14
+        },
+        {
+            "type": "hard",
+            "category": "Computer Networks",
+            "question": "What is deviation?",
+            "answers": {
+                "A1": "Deviation from path",
+                "A2": "Variation from RTT estimate",
+                "A3": "Variance measure",
+                "A4": "Error measure"
+            },
+            "key": "Variation from RTT estimate",
+            "justification": "Deviation affects timeout",
+            "justified_by": "JSON-Fallback",
+            "frequency": 12
+        },
+        {
+            "type": "medium",
+            "category": "Computer Networks",
+            "question": "What is SYN flood?",
+            "answers": {
+                "A1": "Excessive synchronization",
+                "A2": "DoS attack sending many SYN packets",
+                "A3": "Sync overflow",
+                "A4": "Connection flood"
+            },
+            "key": "DoS attack sending many SYN packets",
+            "justification": "SYN flood is common attack",
+            "justified_by": "JSON-Fallback",
+            "frequency": 4
+        },
+        {
+            "type": "medium",
+            "category": "JavaScript",
+            "question": "How do you write an arrow function with multiple parameters?",
+            "answers": {
+                "A1": "x, y => x + y",
+                "A2": "(x, y) => x + y",
+                "A3": "Both A and B are correct",
+                "A4": "x y => x + y"
+            },
+            "key": "(x, y) => x + y",
+            "justification": "Multiple parameters require parentheses.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 17
+        },
+        {
+            "type": "medium",
+            "category": "JavaScript",
+            "question": "What is the purpose of the 'const' keyword?",
+            "answers": {
+                "A1": "Declares a constant variable that cannot be reassigned",
+                "A2": "Declares a global variable",
+                "A3": "Declares a private variable",
+                "A4": "Declares a temporary variable"
+            },
+            "key": "Declares a constant variable that cannot be reassigned",
+            "justification": "const prevents reassignment but doesn't prevent mutation of objects.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 15
+        },
+        {
+            "type": "medium",
+            "category": "CSS",
+            "question": "When you specify font-family as 'Arial, sans-serif', what happens if Arial is unavailable on the user's device?",
+            "answers": {
+                "A1": "The browser leaves the text blank",
+                "A2": "The browser uses the next font in the list (sans-serif)",
+                "A3": "The browser crashes",
+                "A4": "The page fails to load"
+            },
+            "key": "The browser uses the next font in the list (sans-serif)",
+            "justification": "Browsers try fonts in order. If Arial isn't available, they move to the next option. 'sans-serif' is a generic fallback font.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 12
+        },
+        {
+            "type": "hard",
+            "category": "Local Search",
+            "question": "What is particle swarm optimization?",
+            "answers": {
+                "A1": "Optimization of particles",
+                "A2": "Metaheuristic inspired by bird flocking",
+                "A3": "Swarm intelligence",
+                "A4": "Particle movement"
+            },
+            "key": "Metaheuristic inspired by bird flocking",
+            "justification": "PSO is effective for continuous optimization.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 7
+        },
+        {
+            "type": "easy",
+            "category": "Search",
+            "question": "What is a goal state?",
+            "answers": {
+                "A1": "A state that looks good",
+                "A2": "A state satisfying the problem's objective",
+                "A3": "The ending state",
+                "A4": "The final position"
+            },
+            "key": "A state satisfying the problem's objective",
+            "justification": "Goal states are what we're trying to reach.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 7
+        },
+        {
+            "type": "hard",
+            "category": "Machine Learning",
+            "question": "What is semantic meaning in NLP?",
+            "answers": {
+                "A1": "The dictionary definition of individual words",
+                "A2": "Understanding the meaning of text beyond syntax",
+                "A3": "The study of signs and symbols in language",
+                "A4": "Analysis of semantic content in data"
+            },
+            "key": "Understanding the meaning of text beyond syntax",
+            "justification": "Semantic understanding is crucial for NLP applications.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 12
+        },
+        {
+            "type": "hard",
+            "category": "Machine Learning",
+            "question": "What is data augmentation for NLP?",
+            "answers": {
+                "A1": "Increasing text data",
+                "A2": "Creating variations of text to improve robustness",
+                "A3": "Text generation",
+                "A4": "Data expansion"
+            },
+            "key": "Creating variations of text to improve robustness",
+            "justification": "Text augmentation improves generalization",
+            "justified_by": "JSON-Fallback",
+            "frequency": 8
+        },
+        {
+            "type": "medium",
+            "category": "Logistic Regression",
+            "question": "Why use logistic regression instead of linear regression for classification?",
+            "answers": {
+                "A1": "Linear regression is less accurate",
+                "A2": "Logistic regression outputs probabilities between 0 and 1",
+                "A3": "Linear regression cannot predict",
+                "A4": "Logistic is always better"
+            },
+            "key": "Logistic regression outputs probabilities between 0 and 1",
+            "justification": "Sigmoid ensures valid probability outputs",
+            "justified_by": "JSON-Fallback",
+            "frequency": 11
+        },
+        {
+            "type": "medium",
+            "category": "k-Nearest Neighbors",
+            "question": "How does kNN make predictions?",
+            "answers": {
+                "A1": "Using a distance formula",
+                "A2": "Majority vote or average of k nearest points' labels",
+                "A3": "Finding nearest neighbors",
+                "A4": "Proximity calculation"
+            },
+            "key": "Majority vote or average of k nearest points' labels",
+            "justification": "kNN uses simple neighbor voting mechanism",
+            "justified_by": "JSON-Fallback",
+            "frequency": 8
+        }
+    ],
+    "generated_at": "2026-04-26 01:00:52",
+    "source": "RAG-Ollama"
+}

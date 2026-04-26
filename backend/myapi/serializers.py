@@ -137,12 +137,13 @@ class ApplicationSerializer(serializers.ModelSerializer):
     """Serializer for Application model"""
     timeline = ApplicationTimelineSerializer(many=True, read_only=True)
     test_deadline = serializers.SerializerMethodField()
+    company_logo_url = serializers.SerializerMethodField()
     
     class Meta:
         model = Application
         fields = [
             'id', 'user', 'job', 'job_title', 'company_name', 'company_logo_color',
-            'company_logo_initial', 'location', 'salary_range', 'status',
+            'company_logo_initial', 'company_logo_url', 'location', 'salary_range', 'status',
             'interview_type', 'interview_date', 'interview_notes', 'offer_deadline',
             'test_score', 'test_completed_at', 'test_deadline',
             # Interview results
@@ -152,6 +153,11 @@ class ApplicationSerializer(serializers.ModelSerializer):
             'created_at', 'updated_at', 'timeline'
         ]
         read_only_fields = ['id', 'created_at', 'updated_at', 'last_status_update']
+
+    def get_company_logo_url(self, obj):
+        if obj.job and obj.job.company:
+            return obj.job.company.logo_url
+        return '/loop.png'
 
     def get_test_deadline(self, obj):
         if not hasattr(obj, 'job') or obj.job is None:

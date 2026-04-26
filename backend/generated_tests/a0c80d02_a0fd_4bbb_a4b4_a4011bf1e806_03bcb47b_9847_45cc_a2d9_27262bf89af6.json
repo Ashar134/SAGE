@@ -1,0 +1,93 @@
+{
+    "candidate_id": "a0c80d02-a0fd-4bbb-a4b4-a4011bf1e806",
+    "job_id": "03bcb47b-9847-45cc-a2d9-27262bf89af6",
+    "job_title": "Backend Engineer",
+    "requirements": [
+        "Backend Engineer"
+    ],
+    "total_questions": 5,
+    "distribution": {
+        "analytical": 1,
+        "english": 1,
+        "job_specific": 3
+    },
+    "questions": [
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "What number should replace the question mark? 70 & 91 & 120 , 14 & 13 & 24 , 5 & 7 & ?",
+            "answers": {
+                "A1": "10",
+                "A2": "15",
+                "A3": "12",
+                "A4": "5"
+            },
+            "key": "5",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 24
+        },
+        {
+            "type": "medium",
+            "category": "English",
+            "question": "Choose similar meaning to ASTUTE:",
+            "answers": {
+                "A1": "Naive",
+                "A2": "Shrewd",
+                "A3": "Ignorant",
+                "A4": "Foolish"
+            },
+            "key": "Shrewd",
+            "justification": "Astute means having sharp judgment",
+            "justified_by": "JSON-Fallback",
+            "frequency": 10
+        },
+        {
+            "type": "medium",
+            "category": "OOP",
+            "question": "What is an exception in OOP?",
+            "answers": {
+                "A1": "An error message",
+                "A2": "An event that disrupts normal program flow, handled through try-catch blocks",
+                "A3": "A type of loop",
+                "A4": "A function that doesn't work"
+            },
+            "key": "An event that disrupts normal program flow, handled through try-catch blocks",
+            "justification": "Exceptions are runtime errors that can be thrown and caught, allowing structured error handling.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 12
+        },
+        {
+            "type": "easy",
+            "category": "OOP",
+            "question": "What is a const member function?",
+            "answers": {
+                "A1": "A function that cannot be called",
+                "A2": "A function that cannot modify member variables",
+                "A3": "A function that is static",
+                "A4": "A function that must be inlined"
+            },
+            "key": "A function that cannot modify member variables",
+            "justification": "A const member function promises not to modify any member variables of the object, ensuring data integrity.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 17
+        },
+        {
+            "type": "medium",
+            "category": "OOP",
+            "question": "What is the purpose of a move constructor?",
+            "answers": {
+                "A1": "To move an object to a different location in memory",
+                "A2": "To create an object by moving resources from a temporary object",
+                "A3": "To change the position of member variables",
+                "A4": "To merge two objects"
+            },
+            "key": "To create an object by moving resources from a temporary object",
+            "justification": "A move constructor efficiently transfers resources from a temporary (rvalue) object, improving performance by avoiding unnecessary copies.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 16
+        }
+    ],
+    "generated_at": "2026-04-26 17:35:07",
+    "source": "RAG-Ollama"
+}

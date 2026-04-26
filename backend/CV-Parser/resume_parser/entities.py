@@ -1,12 +1,17 @@
 import re
 from typing import Dict, Iterable, List, Optional, Tuple
 
-import en_core_web_sm  # type: ignore
-
 from .city_country import infer_country, is_country
 from .normalizer import top_lines
 
-NLP = en_core_web_sm.load()
+_NLP = None
+
+def get_nlp():
+    global _NLP
+    if _NLP is None:
+        import en_core_web_sm
+        _NLP = en_core_web_sm.load()
+    return _NLP
 
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
 # Accept dots/dashes/spaces between blocks to catch formats like 999.777.9311
@@ -40,7 +45,7 @@ def _clean_name(name: str) -> str:
 def extract_name(text: str) -> Optional[str]:
     lines = top_lines(text, limit=5)
     for line in lines:
-        doc = NLP(line)
+        doc = get_nlp()(line)
         for ent in doc.ents:
             if ent.label_ == "PERSON":
                 cleaned = _clean_name(ent.text)
@@ -102,7 +107,7 @@ def extract_location(text: str) -> Tuple[Optional[str], Optional[str]]:
     # Try explicit city/country labels
     for m in CITY_COUNTRY_LINE_RE.finditer(text):
         maybe = m.group(2)
-        doc = NLP(maybe)
+        doc = get_nlp()(maybe)
         city = None
         country = None
         for ent in doc.ents:
@@ -113,7 +118,7 @@ def extract_location(text: str) -> Tuple[Optional[str], Optional[str]]:
         if city or country:
             return city, country
 
-    doc = NLP(text[:2000])  # only first part to stay fast
+    doc = get_nlp()(text[:2000])  # only first part to stay fast
     city = None
     country = None
     for ent in doc.ents:
