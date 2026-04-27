@@ -62,8 +62,8 @@ export function ChartsRow({ lineData = [], barData = [], onExport }) {
             <LineChart data={lineData}>
               <defs>
                 <linearGradient id="lineGradient" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0%" stopColor="#2563eb" stopOpacity={0.4} />
-                  <stop offset="100%" stopColor="#2563eb" stopOpacity={0.05} />
+                  <stop offset="0%" stopColor="#e0f0ff" stopOpacity={0.6} />
+                  <stop offset="100%" stopColor="#e0f0ff" stopOpacity={0.1} />
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="4 4" stroke="#E2E8F0" />
@@ -78,10 +78,10 @@ export function ChartsRow({ lineData = [], barData = [], onExport }) {
               <Line
                 type="monotone"
                 dataKey="applications"
-                stroke="#2563eb"
+                stroke="#272727"
                 strokeWidth={2.6}
-                dot={{ r: 4, fill: "#2563eb" }}
-                activeDot={{ r: 7, fill: "#1d4ed8" }}
+                dot={{ r: 4, fill: "#272727" }}
+                activeDot={{ r: 7, fill: "#000000" }}
                 fill="url(#lineGradient)"
               />
             </LineChart>
@@ -143,8 +143,8 @@ export function ChartsRow({ lineData = [], barData = [], onExport }) {
               />
               <defs>
                 <linearGradient id="barGradient" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0%" stopColor="#0ea5e9" stopOpacity={0.95} />
-                  <stop offset="100%" stopColor="#0284c7" stopOpacity={0.95} />
+                  <stop offset="0%" stopColor="#272727" stopOpacity={0.95} />
+                  <stop offset="100%" stopColor="#272727" stopOpacity={0.8} />
                 </linearGradient>
               </defs>
             </BarChart>

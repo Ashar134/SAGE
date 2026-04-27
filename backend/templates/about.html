@@ -1,0 +1,509 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sage - Your Hiring Partner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/landingPagestyle.css' %}">
+
+    <link rel="icon" type="image/png" href="/static/images/sage-logo.png">
+    <meta name="description"
+        content="Sage - Your Hiring Partner. Connect, Match, and Get Hired with our AI-powered recruitment platform.">
+    <meta name="keywords" content="Sage, Hiring, Recruitment, AI, Jobs, Talent Acquisition">
+    <meta name="author" content="Sage Team">
+    <meta property="og:title" content="Sage - Your Hiring Partner">
+    <meta property="og:description"
+        content="Connect, Match, and Get Hired with Sage's AI-powered recruitment platform.">
+    <meta property="og:image" content="/static/images/sage-og-image.png">
+
+    <style>
+        body,
+        html {
+
+            scroll-behavior: smooth;
+            scroll-padding-top: 110px;
+        }
+
+        .page-header {
+            position: fixed;
+        }
+
+
+        .feature-icon--ai-testing {
+            background-image: url('/static/images/AI-Powered-Testing-Card.png');
+
+        }
+
+        .feature-icon--smart-interviews {
+            background-image: url('/static/images/Smart-Interviews-Card.png');
+        }
+
+        .feature-icon--smart-matching {
+            background-image: url('/static/images/Smart-Matching-Card.png');
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="landing-page">
+        <!-- Header Navigation -->
+        <header class="page-header">
+            <div class="container header-container">
+                <div class="logo-brand">
+                    <img class="logo-image" src="/static/images/sage-logo.png" alt="Sage-Logo" />
+                    <h1 class="brand-name">
+                        Sa<span class="brand-highlight">ge</span>
+                    </h1>
+                    <p class="brand-name-slogan">Your Hiring Partner</p>
+                </div>
+
+                <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle"
+                    aria-label="Toggle navigation menu">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </button>
+
+                <nav class="main-navigation" id="mainNavigation">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="/#home" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/about/" class="nav-link">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/#features" class="nav-link">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/#process" class="nav-link">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/#testimonials" class="nav-link">Success Stories</a>
+                        </li>
+                        <li class="nav-item nav-item--highlight">
+                            <a href="/auth" class="button button--primary">Get Started</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- About Hero Section (Loop-style) -->
+        <section class="loop-hero-section">
+            <div class="container loop-hero-container">
+                <div class="loop-hero-content">
+                    <div class="loop-badge">
+                        <!-- <span class="loop-dot"></span> -->
+                        Our Story
+                    </div>
+                    <h1 class="loop-title">
+                        Building the future<br>
+                        of <span class="brand-highlight">recruitment.</span>
+                    </h1>
+                    <p class="loop-subtitle">
+                        We believe that hiring should be fast, fair, and focused on potential. Sage was built to bridge
+                        the gap between exceptional talent and visionary companies through intelligent, bias-free
+                        technology.
+                    </p>
+                    <div class="loop-actions">
+                        <a href="/#process" class="button button--primary">See How It Works</a>
+                        <a href="#team" class="button button--outline">Meet The Team</a>
+                    </div>
+                </div>
+
+                <div class="loop-hero-visual">
+                    <div class="loop-stat-card">
+                        <p class="stat-label">WE AIM TO PROCESS</p>
+                        <p class="stat-value">1M+ <span> Candidates </span></p>
+                    </div>
+                    <div class="loop-stat-card">
+                        <p class="stat-label">OUR NETWORK VISION</p>
+                        <p class="stat-value">500+ <span> Partners </span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ticker Section -->
+        <div class="loop-ticker">
+            <div class="ticker-track">
+                <span>INNOVATION</span> <span class="ticker-dot">✦</span>
+                <span>INTEGRITY</span> <span class="ticker-dot">✦</span>
+                <span>EXCELLENCE</span> <span class="ticker-dot">✦</span>
+                <span>GROWTH</span> <span class="ticker-dot">✦</span>
+                <span>INNOVATION</span> <span class="ticker-dot">✦</span>
+                <span>INTEGRITY</span> <span class="ticker-dot">✦</span>
+                <span>EXCELLENCE</span> <span class="ticker-dot">✦</span>
+                <span>GROWTH</span> <span class="ticker-dot">✦</span>
+            </div>
+        </div>
+
+        <!-- Why Sage (Grid Section) -->
+        <section class="loop-grid-section">
+            <div class="container">
+                <div class="grid-header-split">
+                    <h2 class="grid-title">Our Core Pillars</h2>
+                    <p class="grid-desc">We are on a mission to redefine the way companies hire. By leveraging advanced
+                        deep learning, we ensure that every hiring decision is backed by intelligent data.</p>
+                </div>
+
+                <div class="loop-grid">
+                    <div class="l-card">
+                        <span class="l-card-index">01</span>
+                        <div class="l-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                            </svg>
+                        </div>
+                        <h3>AI-Powered Precision</h3>
+                        <p>Our algorithms go beyond keywords, understanding the true potential of candidates to find the
+                            perfect match for every role.</p>
+                    </div>
+                    <div class="l-card">
+                        <span class="l-card-index">02</span>
+                        <div class="l-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 8v4l3 3" />
+                            </svg>
+                        </div>
+                        <h3>Unbiased Selection</h3>
+                        <p>We eliminate human bias from the initial screening process, ensuring fair and equitable
+                            opportunities for all applicants.</p>
+                    </div>
+                    <div class="l-card">
+                        <span class="l-card-index">03</span>
+                        <div class="l-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                        </div>
+                        <h3>End-to-End Automation</h3>
+                        <p>From automated skill profiling to integrity-verified adaptive testing, we streamline the
+                            entire recruitment lifecycle.</p>
+                    </div>
+                    <div class="l-card">
+                        <span class="l-card-index">04</span>
+                        <div class="l-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <h3>Data-Driven Insights</h3>
+                        <p>Empower your hiring managers with comprehensive analytics and sentiment analysis for smarter
+                            hiring decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open Roles Empty State -->
+        <section id="roles" class="loop-roles-section">
+            <div class="container">
+                <div class="roles-header">
+                    <h2>Ready to transform your hiring?</h2>
+                    <a href="/auth" class="button button--outline">Create an account</a>
+                </div>
+
+                <div class="roles-empty-card">
+                    <div class="empty-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" />
+                        </svg>
+                    </div>
+                    <h3>Join the Hiring Revolution</h3>
+                    <p>Whether you're a high-growth startup or an established enterprise, Sage adapts to your unique
+                        hiring workflows. Start finding better talent today.</p>
+                    <br>
+                    <a href="/auth" class="button button--primary">Get Started Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet The Team -->
+        <section id="team" class="loop-team-section">
+            <div class="container">
+                <div class="team-header">
+                    <h2 class="grid-title">Meet The Minds Behind Sage</h2>
+                    <p class="grid-desc" style="margin-top: 16px; max-width: 500px;">We're a team of engineers,
+                        innovators, and designers passionate about building technology that changes how the world hires.
+                    </p>
+                </div>
+
+                <div class="leadership-grid">
+                    <!-- Team Member 1 -->
+                    <div class="leadership-card">
+                        <div class="leadership-avatar ashar-avatar">
+                            <img src="/static/images/ashar-image.png" alt="Ashar Naveed">
+                        </div>
+                        <div class="leadership-info">
+                            <h3>Ashar Naveed</h3>
+                            <!-- <p>Founder & CEO</p> -->
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="leadership-card">
+                        <div class="leadership-avatar dilawar-avatar">
+                            <img src="/static/images/dilawar-image.png" alt="Dilawar">
+                        </div>
+                        <div class="leadership-info">
+                            <h3>Dilawar</h3>
+                            <!-- <p>Co-Founder</p> -->
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="leadership-card">
+                        <div class="leadership-avatar abdullah-avatar">
+                            <img src="/static/images/abdullah-image.png" alt="Abdullah">
+                        </div>
+                        <div class="leadership-info">
+                            <h3>Abdullah</h3>
+                            <!-- <p>Co-Founder</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="container">
+
+                <!-- Top grid: 4 columns -->
+                <div class="footer-grid">
+
+                    <!-- Col 1 — Brand -->
+                    <div class="footer-col footer-col--brand">
+                        <div class="footer-brand">
+                            <img class="footer-logo" src="/static/images/sage-logo.png" alt="Sage logo" />
+                            <span class="footer-brand-name">Sa<span class="footer-brand-accent">ge</span></span>
+                        </div>
+                        <p class="footer-tagline">
+                            AI-powered recruitment that connects talent with opportunity — faster, smarter, and fairer.
+                        </p>
+                        <!-- Social icons -->
+                        <div class="footer-socials">
+                            <a href="/#" class="footer-social-icon" aria-label="Twitter / X">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.845L2.025 2.25H8.08l4.253 5.622 5.911-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" />
+                                </svg>
+                            </a>
+                            <a href="/#" class="footer-social-icon" aria-label="LinkedIn">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20.447 20.452H17.21v-5.569c0-1.327-.025-3.035-1.85-3.035-1.851 0-2.134 1.444-2.134 2.937v5.667H9.99V9h3.104v1.561h.045c.431-.818 1.485-1.68 3.058-1.68 3.268 0 3.87 2.151 3.87 4.947v6.624ZM5.337 7.433a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6ZM6.956 20.452H3.717V9h3.239v11.452ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003Z" />
+                                </svg>
+                            </a>
+                            <a href="/#" class="footer-social-icon" aria-label="GitHub">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Col 2 — Product -->
+                    <div class="footer-col">
+                        <h4 class="footer-col-heading">Product</h4>
+                        <ul class="footer-links">
+                            <li><a href="/#features" class="footer-link">Features</a></li>
+                            <li><a href="/#process" class="footer-link">How It Works</a></li>
+                            <li><a href="/#testimonials" class="footer-link">Success Stories</a></li>
+                            <li><a href="/auth" class="footer-link">Get Started</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 3 — Company -->
+                    <div class="footer-col">
+                        <h4 class="footer-col-heading">Company</h4>
+                        <ul class="footer-links">
+                            <li><a href="/about/" class="footer-link">About Us</a></li>
+                            <li><a href="#" class="footer-link">Careers</a></li>
+                            <li><a href="/#contact" class="footer-link">Contact</a></li>
+                            <li><a href="/#" class="footer-link">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 4 — Contact -->
+                    <div class="footer-col">
+                        <h4 class="footer-col-heading">Get In Touch</h4>
+                        <address class="footer-address">
+                            <p>FAST Peshawar Campus</p>
+                            <p>Industrial Estate Road, Phase-1</p>
+                            <p>Hayatabad, Peshawar, Pakistan</p>
+                        </address>
+                        <div class="footer-contact-links">
+                            <a href="mailto:info.sage@gmail.com" class="footer-contact-item">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                </svg>
+                                info.sage@gmail.com
+                            </a>
+                            <a href="tel:+923318200475" class="footer-contact-item">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.64 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.13 6.13l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z" />
+                                </svg>
+                                +92 331 8200 475
+                            </a>
+                        </div>
+                    </div>
+
+                </div><!-- /footer-grid -->
+
+                <!-- Divider -->
+                <div class="footer-divider"></div>
+
+                <!-- Bottom bar -->
+                <div class="footer-bottom">
+                    <p class="footer-copyright">
+                        &copy; 2025 Sage. All rights reserved.
+                    </p>
+                    <div class="footer-bottom-links">
+                        <a href="/#" class="footer-bottom-link">Terms</a>
+                        <a href="/#" class="footer-bottom-link">Privacy</a>
+                        <a href="/#" class="footer-bottom-link">Cookies</a>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // State management
+        let isMenuOpen = false;
+
+        // DOM elements
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mainNavigation = document.getElementById('mainNavigation');
+        const contactForm = document.getElementById('contactForm');
+
+        // Toggle mobile menu
+        function toggleMobileMenu() {
+            isMenuOpen = !isMenuOpen;
+            mainNavigation.classList.toggle('nav-visible', isMenuOpen);
+            mobileMenuToggle.classList.toggle('menu-open', isMenuOpen);
+
+            // Update aria-expanded attribute for accessibility
+            mobileMenuToggle.setAttribute('aria-expanded', isMenuOpen);
+        }
+
+        // Handle form submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            // Form submission logic would go here
+            console.log('Form submitted');
+            // In a real application, you would send the form data to a server
+            alert('Thank you for your inquiry! We will get back to you soon.');
+            contactForm.reset();
+        }
+
+        // Initialize event listeners
+        function initializeEventListeners() {
+            // Mobile menu toggle
+            mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+
+            // Form submission
+            contactForm.addEventListener('submit', handleFormSubmit);
+
+            // Close mobile menu when clicking on a nav link
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (isMenuOpen) {
+                        toggleMobileMenu();
+                    }
+                });
+            });
+        }
+
+        // Process Section Interactivity
+        const timelineSteps = document.querySelectorAll('.timeline-step');
+        const processCards = document.querySelectorAll('.process-card');
+        const paginationDots = document.querySelectorAll('.p-dot');
+
+        function setActiveStep(index) {
+            timelineSteps.forEach((step, i) => {
+                step.classList.toggle('active', i <= index); // i <= index fills the line up to current
+                // Actually in the screenshot only the current is black.
+                // Re-matching screenshot exactly:
+                step.classList.toggle('active', i === index);
+            });
+
+            processCards.forEach((card, i) => {
+                card.classList.toggle('active', i === index);
+            });
+
+            paginationDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        paginationDots.forEach((dot, index) => {
+            dot.style.cursor = 'pointer';
+            dot.addEventListener('click', () => setActiveStep(index));
+        });
+
+        timelineSteps.forEach((step, index) => {
+            step.style.cursor = 'pointer';
+            step.addEventListener('click', () => setActiveStep(index));
+        });
+
+        processCards.forEach((card, index) => {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', () => setActiveStep(index));
+        });
+
+        // Initialize the application
+        function init() {
+            initializeEventListeners();
+        }
+
+        // Start the application when DOM is loaded
+        document.addEventListener('DOMContentLoaded', init);
+
+        // ── CTA Scroll-Reveal ──────────────────────────────────────────────
+        (function () {
+            const ctaSection = document.querySelector('.cta-section');
+            if (!ctaSection) return;
+
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting) {
+                        ctaSection.classList.add('cta-revealed');
+                        observer.disconnect(); // fire once
+                    }
+                },
+                { threshold: 0.18 }
+            );
+            observer.observe(ctaSection);
+        })();
+    </script>
+</body>
+
+</html>

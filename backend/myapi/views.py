@@ -124,6 +124,10 @@ def homepage(request):
     return render(request, "homepage.html")
 
 
+def about_page(request):
+    return render(request, "about.html")
+
+
 # Login and Registration Page
 @csrf_exempt  # Demo-only: bypass CSRF so form can post without setup
 def authenticate_user(request):

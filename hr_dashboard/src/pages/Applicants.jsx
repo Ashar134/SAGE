@@ -420,7 +420,7 @@ export default function Applicants() {
                   </TableCell>
                   <TableCell>
                     <Badge className="text-xs px-3 py-1.5 font-medium"
-                      style={{ backgroundColor: '#e0f0ff', color: '#111827' }}>
+                      style={{ backgroundColor: '#e0f0ff', color: '#272727' }}>
                       {formatStatus(a.status)}
                     </Badge>
                   </TableCell>
@@ -464,7 +464,7 @@ export default function Applicants() {
       {selected && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm px-3">
           <div className="relative w-full max-w-4xl bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden animate-[fadeIn_0.2s_ease]">
-            <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_20%_20%,#6366f1,transparent_35%),radial-gradient(circle_at_80%_0,#0ea5e9,transparent_40%)]" />
+            <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_20%_20%,#e0f0ff,transparent_35%),radial-gradient(circle_at_80%_0,#e0f0ff,transparent_40%)]" />
 
             <div className="flex items-start justify-between px-6 py-5 border-b relative">
               <div className="space-y-1">
@@ -487,25 +487,25 @@ export default function Applicants() {
 
                   {Number.isFinite(selected.skillScore) && (
                     <span className="inline-flex items-center rounded-full px-3 py-1.5 text-sm font-semibold"
-                      style={{ backgroundColor: 'rgb(224, 240, 255)', color: '#111827' }}>
+                      style={{ backgroundColor: 'rgb(224, 240, 255)', color: '#272727' }}>
                       Skill {selected.skillScore}%
                     </span>
                   )}
                   {Number.isFinite(selected.testScore) && (
                     <span className="inline-flex items-center rounded-full px-3 py-1.5 text-sm font-semibold"
-                      style={{ backgroundColor: 'rgb(224, 240, 255)', color: '#111827' }}>
+                      style={{ backgroundColor: 'rgb(224, 240, 255)', color: '#272727' }}>
                       Test {selected.testScore}%
                     </span>
                   )}
                   {selected.interviewScore && (
                     <span className="inline-flex items-center rounded-full px-3 py-1.5 text-sm font-semibold"
-                      style={{ backgroundColor: 'rgb(224, 240, 255)', color: '#111827' }}>
+                      style={{ backgroundColor: 'rgb(224, 240, 255)', color: '#272727' }}>
                       Interview {selected.interviewScore}%
                     </span>
                   )}
                   {Number.isFinite(selected.matchScore) && (
                     <span className="inline-flex items-center rounded-full px-3 py-1.5 text-sm font-semibold"
-                      style={{ backgroundColor: 'rgb(224, 240, 255)', color: '#111827' }}>
+                      style={{ backgroundColor: 'rgb(224, 240, 255)', color: '#272727' }}>
                       Match {selected.matchScore}%
                     </span>
                   )}
@@ -515,9 +515,9 @@ export default function Applicants() {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700">
-                  <div className="rounded-xl border border-gray-100 bg-gray-50 px-3 py-2">
+                  <div className="rounded-xl border border-[#f9fafb] bg-[#f9fafb] px-3 py-2">
                     <p className="text-xs uppercase text-gray-400">Current stage</p>
-                    <p className="font-semibold text-gray-900">{formatStatus(selected.status || "Unknown")}</p>
+                    <p className="font-semibold text-[#272727]">{formatStatus(selected.status || "Unknown")}</p>
                   </div>
                   <div className="rounded-xl border border-gray-100 bg-gray-50 px-3 py-2">
                     <p className="text-xs uppercase text-gray-400">Role / Dept</p>

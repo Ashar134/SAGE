@@ -258,31 +258,31 @@ export default function Kanban() {
                     <div className="mt-2">
                       {col.id === "applied" && item.skillScore != null && (
                         <div className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-[11px] font-semibold border border-blue-100"
-                          style={{ backgroundColor: "#e0f0ff", color: "#1e40af" }}>
+                          style={{ backgroundColor: "#e0f0ff", color: "#272727" }}>
                           Skill Matched: {item.skillScore}%
                         </div>
                       )}
                       {col.id === "test" && item.testScore != null && (
                         <div className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-[11px] font-semibold border border-blue-100"
-                          style={{ backgroundColor: "#e0f0ff", color: "#1e40af" }}>
+                          style={{ backgroundColor: "#e0f0ff", color: "#272727" }}>
                           Assessment: {Math.round(item.testScore)}%
                         </div>
                       )}
                       {col.id === "interview" && item.interviewScore != null && (
                         <div className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-[11px] font-semibold border border-blue-100"
-                          style={{ backgroundColor: "#e0f0ff", color: "#1e40af" }}>
+                          style={{ backgroundColor: "#e0f0ff", color: "#272727" }}>
                           Interview: {Math.round(item.interviewScore)}%
                         </div>
                       )}
                       {col.id === "offer" && item.matchScore != null && (
                         <div className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-[11px] font-semibold border border-blue-100"
-                          style={{ backgroundColor: "#e0f0ff", color: "#1e40af" }}>
+                          style={{ backgroundColor: "#e0f0ff", color: "#272727" }}>
                           Overall Match: {item.matchScore}%
                         </div>
                       )}
                       {["reviewing", "rejected"].includes(col.id) && item.matchScore != null && (
                         <div className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-[11px] font-semibold border border-blue-100"
-                          style={{ backgroundColor: "#e0f0ff", color: "#1e40af" }}>
+                          style={{ backgroundColor: "#e0f0ff", color: "#272727" }}>
                           Match Score: {item.matchScore}%
                         </div>
                       )}

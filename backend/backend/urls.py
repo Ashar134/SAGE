@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include, re_path
+from myapi import views
 from django.conf import settings
 from django.conf.urls.static import static
 from django.http import FileResponse, HttpResponse
@@ -64,10 +65,11 @@ def serve_video(request, path):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('about/', views.about_page, name='about_page'),
     path('', include('myapi.urls')),
 ]
 
-if settings.DEBUG:
+if settings.DEBUG: 
     # Serve interview videos with range request support for seek bar
     urlpatterns += [
         re_path(r'^media/interviews/(?P<path>[^/]+\.webm)$', serve_video),

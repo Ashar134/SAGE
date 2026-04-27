@@ -12,6 +12,8 @@ const statusStyles = {
   Completed: "bg-emerald-50 text-emerald-700",
   "No-Show": "bg-red-50 text-red-700",
   Cancelled: "bg-red-50 text-red-700",
+  reviewing: "bg-[#e0f0ff] text-[#272727]",
+  Reviewing: "bg-[#e0f0ff] text-[#272727]",
 };
 
 const typeIcon = {
@@ -256,7 +258,8 @@ export default function Interviews() {
               <div key={item.id} className="rounded-lg border border-emerald-50 bg-white p-3 text-sm text-gray-700">
                 <div className="flex items-center justify-between">
                   <div className="font-semibold text-gray-900">{item.candidate}</div>
-                  <Badge className="bg-emerald-50 text-emerald-700 border border-emerald-100 text-[10px] px-2 py-1">
+                  <Badge className="text-[10px] px-2 py-1 font-medium border border-[#e0f0ff]"
+                    style={{ backgroundColor: '#e0f0ff', color: '#272727' }}>
                     {item.decision}
                   </Badge>
                 </div>
@@ -285,17 +288,15 @@ export default function Interviews() {
               <div key={item.id} className="rounded-lg border border-gray-200 bg-white p-3 text-sm text-gray-700 space-y-1">
                 <div className="flex items-center justify-between">
                   <div className="font-semibold text-gray-900">{item.candidate}</div>
-                  <Badge className="bg-emerald-50 text-emerald-700 border border-emerald-100 text-[10px] px-2 py-1">
+                  <Badge className="text-[10px] px-2 py-1 font-medium border border-[#e0f0ff]"
+                    style={{ backgroundColor: 'rgb(243 244 246 / var(--tw-bg-opacity, 1))', color: '#272727' }}>
                     {item.decision}
                   </Badge>
                 </div>
                 <div className="text-xs text-gray-500">
                   {item.role} · {item.department}
                 </div>
-                <div className="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2 py-1 text-[11px] text-gray-700">
-                  <Video size={12} />
-                  {item.type}
-                </div>
+
                 <a
                   className="mt-2 inline-flex items-center gap-1 rounded-md border px-2 py-1 text-xs text-gray-700 hover:bg-gray-50"
                   href={item.recording}
