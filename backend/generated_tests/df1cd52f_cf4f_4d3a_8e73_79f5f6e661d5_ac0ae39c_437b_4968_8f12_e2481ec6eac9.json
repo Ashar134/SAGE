@@ -1,0 +1,94 @@
+{
+    "candidate_id": "df1cd52f-cf4f-4d3a-8e73-79f5f6e661d5",
+    "job_id": "ac0ae39c-437b-4968-8f12-e2481ec6eac9",
+    "job_title": "software engineer",
+    "requirements": [
+        "software engineer"
+    ],
+    "total_questions": 5,
+    "distribution": {
+        "analytical": 1,
+        "english": 1,
+        "job_specific": 3
+    },
+    "questions": [
+        {
+            "type": "easy",
+            "category": "analytical",
+            "question": "What number should replace the question mark? 70 & 91 & 120 , 14 & 13 & 24 , 5 & 7 & ?",
+            "answers": {
+                "A1": "10",
+                "A2": "15",
+                "A3": "12",
+                "A4": "5"
+            },
+            "key": "5",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 24
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "EPHEMERAL : DURATION",
+            "answers": {
+                "A1": "Infinite : Space",
+                "A2": "Massive : Weight",
+                "A3": "Minuscule : Size",
+                "A4": "Rapid : Speed",
+                "A5": "Ancient : Time"
+            },
+            "key": "Minuscule : Size",
+            "justification": "Adjective describing measurement",
+            "justified_by": "JSON-Fallback",
+            "frequency": 14
+        },
+        {
+            "type": "hard",
+            "category": "OOP",
+            "question": "What is thread safety in OOP?",
+            "answers": {
+                "A1": "Threads are always safe",
+                "A2": "Property that data structures work correctly when accessed by multiple threads simultaneously",
+                "A3": "Making threads read-only",
+                "A4": "A type of encryption"
+            },
+            "key": "Property that data structures work correctly when accessed by multiple threads simultaneously",
+            "justification": "Thread safety ensures data consistency and correctness when multiple threads access shared resources.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 21
+        },
+        {
+            "type": "medium",
+            "category": "OOP",
+            "question": "What is operator overloading in C++?",
+            "answers": {
+                "A1": "Using operators multiple times",
+                "A2": "Defining custom behavior for operators when applied to user-defined types",
+                "A3": "Creating new operators",
+                "A4": "Removing built-in operators"
+            },
+            "key": "Defining custom behavior for operators when applied to user-defined types",
+            "justification": "Operator overloading allows operators like +, -, * to work with custom classes by providing specific implementations.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 16
+        },
+        {
+            "type": "medium",
+            "category": "OOP",
+            "question": "Can multiple catch blocks follow a single try block?",
+            "answers": {
+                "A1": "No, only one catch block allowed",
+                "A2": "Yes, multiple catch blocks can handle different exception types",
+                "A3": "Only in Java, not C++",
+                "A4": "Only if they handle the same exception type"
+            },
+            "key": "Yes, multiple catch blocks can handle different exception types",
+            "justification": "Multiple catch blocks allow handling different exception types with specific recovery logic for each.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 13
+        }
+    ],
+    "generated_at": "2026-04-27 20:17:44",
+    "source": "RAG-Ollama"
+}

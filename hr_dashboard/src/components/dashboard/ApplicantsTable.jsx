@@ -55,11 +55,12 @@ export default function ApplicantsTable({ items = [] }) {
               <Badge
                 className={
                   "text-xs px-2.5 py-1 font-semibold rounded-full " +
-                  (statusColorClasses[applicant.status] ||
+                  (statusColorClasses[applicant.status.charAt(0).toUpperCase() + applicant.status.slice(1).toLowerCase()] ||
+                    statusColorClasses[applicant.status] ||
                     "bg-gray-100 text-gray-700")
                 }
               >
-                {applicant.status}
+                {applicant.status.charAt(0).toUpperCase() + applicant.status.slice(1)}
               </Badge>
             </TableCell>
           </TableRow>

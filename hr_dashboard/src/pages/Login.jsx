@@ -3,12 +3,14 @@ import { Navigate, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 export default function Login() {
-  const { isAuthenticated, login } = useAuth();
+  const { isAuthenticated, loading, login } = useAuth();
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [loadingBtn, setLoadingBtn] = useState(false);
+
+  if (loading) return null;
 
   if (isAuthenticated) {
     return <Navigate to="/" replace />;
@@ -16,7 +18,7 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
+    setLoadingBtn(true);
     setError("");
     const res = login(username.trim(), password);
     if (res.success) {
@@ -24,7 +26,7 @@ export default function Login() {
     } else {
       setError(res.error || "Login failed");
     }
-    setLoading(false);
+    setLoadingBtn(false);
   };
 
   return (
@@ -65,10 +67,10 @@ export default function Login() {
           )}
           <button
             type="submit"
-            disabled={loading}
+            disabled={loadingBtn}
             className="w-full rounded-lg bg-indigo-600 text-white py-2 text-sm font-semibold hover:bg-indigo-500 disabled:opacity-60"
           >
-            {loading ? "Signing in..." : "Login"}
+            {loadingBtn ? "Signing in..." : "Login"}
           </button>
         </form>
       </div>

@@ -11,19 +11,20 @@
    Job Page Header
    ============================================================================ */
 
+.app-header,
+.cv-onboarding-header-section,
 .job-header {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 5%;
+    padding: 50px 5% 60px;
     background: linear-gradient(135deg, #F0F2F0 0%, #000C40 100%);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     gap: 40px;
     overflow: hidden;
-    min-height: 170px;
-    padding-bottom: 60px;
-    /* margin-bottom: 30px; */
+    min-height: 280px;
+    width: 100%;
 }
 
 .job-header::after {

@@ -6,6 +6,7 @@ const HR_USER = { username: "admin", password: "admin123", role: "HR" };
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
@@ -17,6 +18,7 @@ export function AuthProvider({ children }) {
         localStorage.removeItem(STORAGE_KEY);
       }
     }
+    setLoading(false);
   }, []);
 
   const login = (username, password) => {
@@ -35,7 +37,7 @@ export function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, isAuthenticated: !!user, login, logout }}>
+    <AuthContext.Provider value={{ user, isAuthenticated: !!user, loading, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

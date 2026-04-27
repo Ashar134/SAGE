@@ -25,6 +25,7 @@ const defaultForm = {
   test_no_of_questions: "100",
   test_time_allowed: "60",
   test_deadline_days: "3",
+  available_positions: "1",
 };
 
 const jobTypes = ["Full-time", "Part-time", "Contract", "Visiting"];
@@ -260,7 +261,17 @@ export default function JobPostings() {
 
               <div className="pt-2 border-t border-gray-100">
                 <h3 className="text-sm font-semibold text-gray-900 mb-3">Test Configuration</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-gray-600">Available Positions *</label>
+                    <Input
+                      type="number"
+                      min="1"
+                      value={form.available_positions}
+                      onChange={handleChange("available_positions")}
+                      placeholder="1"
+                    />
+                  </div>
                   <div className="space-y-1">
                     <label className="text-xs font-semibold text-gray-600">No. of Questions *</label>
                     <Input
@@ -352,6 +363,7 @@ export default function JobPostings() {
                 <TableHead>Department</TableHead>
                 <TableHead>Type</TableHead>
                 <TableHead>Location</TableHead>
+                <TableHead>Positions</TableHead>
                 <TableHead>Deadline</TableHead>
                 <TableHead>Salary</TableHead>
                 <TableHead className="text-right">Actions</TableHead>
@@ -380,6 +392,7 @@ export default function JobPostings() {
                       <TableCell className="text-gray-700">{job.department}</TableCell>
                       <TableCell className="text-gray-700">{job.type}</TableCell>
                       <TableCell className="text-gray-700">{job.location}</TableCell>
+                      <TableCell className="text-gray-700">{job.available_positions || 1}</TableCell>
                       <TableCell className="text-gray-700">
                         {job.deadline || "—"}
                       </TableCell>

@@ -17,12 +17,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 48px 5%;
+  padding: 50px 5% 60px;
   background: linear-gradient(135deg, #F0F2F0 0%, #000C40 100%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   gap: 32px;
   overflow: hidden;
-  min-height: 180px;
+  min-height: 280px;
+  width: 100%;
   margin-top: 75px;
   margin-bottom: 0;
 }

@@ -522,10 +522,7 @@ const InterviewPage = () => {
           {/* Bot tile — PiP bottom right */}
           <div className="meet-tile meet-tile-bot">
             <div className="meet-bot-avatar">
-              <svg width="56" height="56" viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="12" r="12" fill="#6366f1" />
-                <path d="M12 13a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm-7 7a7 7 0 0 1 14 0H5z" fill="white" />
-              </svg>
+              <img src="/sage-logo.png" alt="Sage Logo" />
             </div>
             <span className="meet-tile-label">SAGE Interviewer</span>
             {state === "speaking" && (

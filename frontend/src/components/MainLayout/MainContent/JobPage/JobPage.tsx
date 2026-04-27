@@ -222,7 +222,7 @@ function JobPage() {
                       <div className="job-logo" style={{ background: '#ffffff', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid #eee' }}>
                         <img src={job.logoUrl || "/loop.png"} alt="Company Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                       </div>
-                      <div className="job-item-info"><h3>{job.title}</h3><p className="company">{job.company}</p></div>
+                      <div className="job-item-info"><h3>{job.title}</h3></div>
                       <button className={`btn-bookmark ${isSaved(job.id) ? 'bookmarked' : ''}`} onClick={(e) => handleBookmark(e, job.id)}>
                         <svg width="18" height="18" fill={isSaved(job.id) ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
                       </button>

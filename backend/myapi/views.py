@@ -1100,6 +1100,7 @@ def _serialize_hr_job(job):
         'test_no_of_questions': job.test_no_of_questions,
         'test_time_allowed': job.test_time_allowed,
         'test_deadline_days': job.test_deadline_days,
+        'available_positions': job.available_positions,
         'company': {
             'logo_url': job.company.logo_url if job.company else '/loop.png'
         }
@@ -1227,6 +1228,7 @@ def _serialize_hr_applicant(app):
         'resume_url': resume_url,
         'rejection_reason': app.notes,
         'job_id': str(app.job_id) if app.job_id else None,
+        'available_positions': app.job.available_positions if app.job else 1,
         'company_logo': app.job.company.logo_url if app.job and app.job.company else '/loop.png',
     }
 
@@ -1329,6 +1331,7 @@ def hr_jobs(request):
             test_no_of_questions=int(data.get('test_no_of_questions', 100)),
             test_time_allowed=int(data.get('test_time_allowed', 60)),
             test_deadline_days=int(data.get('test_deadline_days', 3)),
+            available_positions=int(data.get('available_positions', 1)),
         )
 
         return Response({'success': True, 'job': _serialize_hr_job(job)}, status=status.HTTP_201_CREATED)

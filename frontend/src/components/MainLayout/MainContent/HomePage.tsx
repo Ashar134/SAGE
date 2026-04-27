@@ -242,7 +242,6 @@ const JobCard = ({ job, onBookmark, isBookmarked }: {
             </div>
 
             <div className="job-meta-top">
-                <span className="company-name">{job.company}</span>
                 <span className="posted-time">{job.postedTime}</span>
             </div>
 

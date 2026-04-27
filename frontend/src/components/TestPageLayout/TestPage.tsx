@@ -14,7 +14,7 @@ interface Question {
 const API_BASE_URL = "http://localhost:8000"; // Django backend URL
 
 const TestPage = () => {
-  const { isAuthenticated, loading: authLoading, user } = useAuth();
+  const { isAuthenticated, loading: authLoading, user, accessToken } = useAuth();
   const [searchParams] = useSearchParams();
   const jobTitle = searchParams.get('job') || 'Software Engineer';  // passed from Take Test button
   const jobId = searchParams.get('job_id') || '';  // Job UUID for fetching requirements
@@ -66,7 +66,11 @@ const TestPage = () => {
         const encodedJobTitle = encodeURIComponent(jobTitle);
         const candidateId = user?.id || 'default';
         const response = await fetch(`${API_BASE_URL}/api/generate-test/?job_title=${encodedJobTitle}&job_id=${jobId}&candidate_id=${candidateId}`, {
-          signal: controller.signal
+          signal: controller.signal,
+          headers: {
+            "Authorization": `Bearer ${accessToken || localStorage.getItem("accessToken")}`
+          },
+          credentials: 'include'
         });
 
         if (!response.ok) {
@@ -145,8 +149,9 @@ const TestPage = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${localStorage.getItem("access_token")}`
+          "Authorization": `Bearer ${accessToken || localStorage.getItem("accessToken")}`
         },
+        credentials: 'include',
         body: JSON.stringify({
           job_id: jobId,
           candidate_id: user?.id,

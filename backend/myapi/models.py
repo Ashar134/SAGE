@@ -229,6 +229,9 @@ class Job(models.Model):
     source_url = models.URLField(max_length=500, blank=True, null=True)
     is_active = models.BooleanField(default=True)
     
+    # Vacancy
+    available_positions = models.IntegerField(default=1, help_text="Number of open positions / seats for this job", blank=True, null=True)
+
     # Test Configuration
     test_no_of_questions = models.IntegerField(default=100, blank=True, null=True)
     test_time_allowed = models.IntegerField(default=60, help_text="Time allowed in minutes", blank=True, null=True)

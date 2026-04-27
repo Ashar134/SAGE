@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HiDotsVertical } from 'react-icons/hi';
+import { HiDotsVertical, HiChevronDown } from 'react-icons/hi';
 import { useAuth } from '../../../../contexts/AuthContext';
 import { ApplicationPageSkeleton } from '../../../Skeletons/Skeletons';
 import './ApplicationPage.css';
@@ -341,6 +341,9 @@ function ApplicationPage() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState<string>('');
+  const [calendarOffset, setCalendarOffset] = useState<number>(0);
+  const [showMonthDropdown, setShowMonthDropdown] = useState<boolean>(false);
+  const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
 
   // Fetch applications from the database
   useEffect(() => {
@@ -495,7 +498,7 @@ function ApplicationPage() {
       return activeApps;
     }
     if (status === 'offer') {
-      return activeApps.filter(app => app.status === 'offer' || app.status === 'accepted');
+      return activeApps.filter(app => app.status === 'offer');
     }
     if (status === 'reviewing') {
       return activeApps.filter(app => app.status === 'reviewing');
@@ -660,7 +663,17 @@ function ApplicationPage() {
           <span>Calendar</span>
           <span className="tab-badge">{getTimelineEvents().length}</span>
         </button>
-
+        <button
+          className={`tab-button ${activeTab === 'offered' ? 'active' : ''}`}
+          onClick={() => setActiveTab('offered')}
+        >
+          <svg className="tab-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+          <span>Offered</span>
+          <span className="tab-badge">{applications.filter(app => app.status === 'accepted').length}</span>
+        </button>
       </div>
 
       {/* Pipeline - Full Kanban Board */}
@@ -832,9 +845,11 @@ function ApplicationPage() {
         <div className="calendar-view">
           {(() => {
             const now = new Date();
-            const currentYear = now.getFullYear();
-            const currentMonth = now.getMonth(); // 0-indexed
+            const displayDate = new Date(now.getFullYear(), now.getMonth() + calendarOffset, 1);
+            const currentYear = displayDate.getFullYear();
+            const currentMonth = displayDate.getMonth(); // 0-indexed
             const currentDay = now.getDate();
+            const isDisplayingCurrentMonth = calendarOffset === 0;
 
             // Get first day of month and calculate calendar grid
             const firstDay = new Date(currentYear, currentMonth, 1);
@@ -948,8 +963,86 @@ function ApplicationPage() {
             return (
               <>
                 <div className="calendar-header">
-                  <h2>{monthNames[currentMonth]} {currentYear}</h2>
-                  <p>View all your upcoming interviews, tests, and deadlines</p>
+                  <div className="calendar-title-group">
+                    <h2 className="calendar-display-title">{monthNames[currentMonth]} {currentYear}</h2>
+                    <p>View all your upcoming interviews, tests, and deadlines</p>
+                  </div>
+
+                  <div className="calendar-filter-container">
+                    <div className="calendar-dropdown-wrapper">
+                      <button 
+                        className="calendar-month-selector"
+                        onClick={() => setShowMonthDropdown(!showMonthDropdown)}
+                      >
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '8px', opacity: 0.6 }}>
+                          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                          <line x1="16" y1="2" x2="16" y2="6"></line>
+                          <line x1="8" y1="2" x2="8" y2="6"></line>
+                          <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>Select Month</span>
+                        <HiChevronDown className={`chevron-icon ${showMonthDropdown ? 'open' : ''}`} />
+                      </button>
+
+                      <AnimatePresence>
+                        {showMonthDropdown && (
+                          <motion.div 
+                            className="month-dropdown-picker"
+                            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                            transition={{ duration: 0.2 }}
+                          >
+                            <div className="picker-header">
+                              <button 
+                                className="year-nav-btn"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setSelectedYear(prev => prev - 1);
+                                }}
+                                disabled={selectedYear <= now.getFullYear()}
+                              >
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                              </button>
+                              <span className="current-year-display">{selectedYear}</span>
+                              <button 
+                                className="year-nav-btn"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setSelectedYear(prev => prev + 1);
+                                }}
+                              >
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                              </button>
+                            </div>
+                            
+                            <div className="month-picker-grid">
+                              {monthNames.map((month, monthIndex) => {
+                                // Calculate if this month is in the past
+                                const isPast = selectedYear === now.getFullYear() && monthIndex < now.getMonth();
+                                const isSelected = calendarOffset === (selectedYear - now.getFullYear()) * 12 + (monthIndex - now.getMonth());
+                                
+                                return (
+                                  <button
+                                    key={month}
+                                    className={`month-picker-item ${isSelected ? 'active' : ''} ${isPast ? 'disabled' : ''}`}
+                                    disabled={isPast}
+                                    onClick={() => {
+                                      const newOffset = (selectedYear - now.getFullYear()) * 12 + (monthIndex - now.getMonth());
+                                      setCalendarOffset(newOffset);
+                                      setShowMonthDropdown(false);
+                                    }}
+                                  >
+                                    {month.slice(0, 3)}
+                                  </button>
+                                );
+                              })}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="calendar-grid">
@@ -964,9 +1057,8 @@ function ApplicationPage() {
 
                   {/* Calendar Days */}
                   {calendarDays.map((dayInfo, index) => {
-                    const isToday = dayInfo.currentMonth &&
-                      dayInfo.day === currentDay &&
-                      currentMonth === now.getMonth();
+                    const isToday = isDisplayingCurrentMonth &&
+                      dayInfo.day === currentDay;
 
                     return (
                       <div
@@ -1020,6 +1112,36 @@ function ApplicationPage() {
               </>
             );
           })()}
+        </div>
+      )}
+
+      {/* Offered View - Accepted Applications */}
+      {activeTab === 'offered' && (
+        <div className="upcoming-view">
+          <div className="upcoming-header">
+            <h2>Accepted Offers</h2>
+            <p>Congratulations on your new roles! Here are the offers you've accepted.</p>
+          </div>
+          <div className="upcoming-grid">
+            {applications.filter(app => app.status === 'accepted').length > 0 ? (
+              applications.filter(app => app.status === 'accepted').map((app: Application) => (
+                <ApplicationCard
+                  key={app.id}
+                  application={app}
+                  onStatusUpdate={handleStatusUpdate}
+                  onDelete={handleDeleteApplication}
+                />
+              ))
+            ) : (
+              <div className="empty-state-full">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ccc" strokeWidth="1.5">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <p>No accepted offers yet. Keep going!</p>
+              </div>
+            )}
+          </div>
         </div>
       )}
 

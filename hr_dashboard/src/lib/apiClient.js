@@ -39,6 +39,7 @@ const toCamelApplicant = (row) => ({
   resumeUrl: row.resume_url,
   rejectionReason: row.rejection_reason,
   jobId: row.job_id,
+  availablePositions: row.available_positions || 1,
   companyLogo: row.company_logo || "/loop.png",
 });
 

@@ -58,13 +58,13 @@
 .hero-section {
   position: relative;
   background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
-  padding: 56px 4% 64px;
+  padding: 60px 4% 80px;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 280px;
-  max-height: 340px;
+  min-height: 380px;
+  width: 100%;
 }
 
 .hero-content {

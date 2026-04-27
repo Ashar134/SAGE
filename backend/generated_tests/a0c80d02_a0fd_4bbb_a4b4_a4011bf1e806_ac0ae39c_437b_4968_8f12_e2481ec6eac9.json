@@ -1,0 +1,93 @@
+{
+    "candidate_id": "a0c80d02-a0fd-4bbb-a4b4-a4011bf1e806",
+    "job_id": "ac0ae39c-437b-4968-8f12-e2481ec6eac9",
+    "job_title": "software engineer",
+    "requirements": [
+        "software engineer"
+    ],
+    "total_questions": 5,
+    "distribution": {
+        "analytical": 1,
+        "english": 1,
+        "job_specific": 3
+    },
+    "questions": [
+        {
+            "type": "medium",
+            "category": "analytical",
+            "question": "A car travels at a speed of 40 mph over a certain distance and then returns over the same distance at a speed of 60 mph. What is the average speed for the total journey?",
+            "answers": {
+                "A1": "46 mph",
+                "A2": "48 mph",
+                "A3": "50 mph",
+                "A4": "52 mph"
+            },
+            "key": "48 mph",
+            "justification": "",
+            "justified_by": "JSON-Fallback",
+            "frequency": 27
+        },
+        {
+            "type": "hard",
+            "category": "English",
+            "question": "The philosopher's ___ arguments were extremely difficult for students to comprehend.",
+            "answers": {
+                "A1": "lucid",
+                "A2": "abstruse",
+                "A3": "clear",
+                "A4": "simple"
+            },
+            "key": "abstruse",
+            "justification": "Difficult arguments are abstruse",
+            "justified_by": "JSON-Fallback",
+            "frequency": 12
+        },
+        {
+            "type": "easy",
+            "category": "OOP",
+            "question": "What is the difference between method overloading and method overriding?",
+            "answers": {
+                "A1": "They are the same concept",
+                "A2": "Overloading: same class, different params; Overriding: inheritance, same signature",
+                "A3": "Overriding: same class, different params; Overloading: inheritance, same signature",
+                "A4": "Overloading uses virtual functions; Overriding doesn't"
+            },
+            "key": "Overloading: same class, different params; Overriding: inheritance, same signature",
+            "justification": "Overloading is compile-time polymorphism in the same class with different parameters. Overriding is runtime polymorphism across inheritance hierarchy with same signature.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 19
+        },
+        {
+            "type": "hard",
+            "category": "OOP",
+            "question": "What is the Interface Segregation Principle?",
+            "answers": {
+                "A1": "Interfaces should have many methods",
+                "A2": "Clients should not depend on interfaces they don't use",
+                "A3": "Classes must implement all interface methods",
+                "A4": "Interfaces should be as large as possible"
+            },
+            "key": "Clients should not depend on interfaces they don't use",
+            "justification": "Interfaces should be small and focused, with clients implementing only the methods they need.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 15
+        },
+        {
+            "type": "medium",
+            "category": "OOP",
+            "question": "What is a const_cast in C++?",
+            "answers": {
+                "A1": "A cast that makes everything constant",
+                "A2": "A cast that adds or removes const qualifier",
+                "A3": "A cast between const and non-const pointers/references",
+                "A4": "A type of inheritance"
+            },
+            "key": "A cast that adds or removes const qualifier",
+            "justification": "const_cast allows explicit conversion between const and non-const types, should be used carefully.",
+            "justified_by": "JSON-Fallback",
+            "frequency": 17
+        }
+    ],
+    "generated_at": "2026-04-27 20:51:35",
+    "source": "RAG-Ollama"
+}

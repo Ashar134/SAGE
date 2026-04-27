@@ -11,7 +11,16 @@ import Login from "./pages/Login";
 import { useAuth } from "./context/AuthContext";
 
 function PrivateRoute({ children }) {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, loading } = useAuth();
+  
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="text-sm text-gray-500 animate-pulse">Checking session...</div>
+      </div>
+    );
+  }
+  
   if (!isAuthenticated) return <Navigate to="/login" replace />;
   return children;
 }

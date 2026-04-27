@@ -166,11 +166,39 @@ export default function Applicants() {
         : shortlisted.filter((a) => a.role === tableJobFilter);
 
     // Sort by match score descending (highest first)
-    return [...jobFiltered].sort((a, b) => {
+    const sortedAll = [...jobFiltered].sort((a, b) => {
       const matchA = Number.isFinite(a.matchScore) ? a.matchScore : -1;
       const matchB = Number.isFinite(b.matchScore) ? b.matchScore : -1;
       return matchB - matchA;
     });
+
+    // Limit to 2 * availablePositions per job
+    if (tableJobFilter !== "all") {
+      const first = sortedAll[0];
+      const limit = first ? (first.availablePositions || 1) * 2 : 6;
+      return sortedAll.slice(0, limit);
+    } else {
+      // Group by role to apply limit per job
+      const groups = {};
+      sortedAll.forEach((a) => {
+        if (!groups[a.role]) groups[a.role] = [];
+        groups[a.role].push(a);
+      });
+
+      let finalResults = [];
+      Object.keys(groups).forEach((role) => {
+        const group = groups[role];
+        const limit = (group[0].availablePositions || 1) * 2;
+        finalResults = [...finalResults, ...group.slice(0, limit)];
+      });
+
+      // Re-sort the combined list to maintain global top match ranking
+      return finalResults.sort((a, b) => {
+        const matchA = Number.isFinite(a.matchScore) ? a.matchScore : -1;
+        const matchB = Number.isFinite(b.matchScore) ? b.matchScore : -1;
+        return matchB - matchA;
+      });
+    }
   }, [filtered, tableJobFilter]);
 
   const formatDateTime = (value) => {
@@ -267,7 +295,7 @@ export default function Applicants() {
                       <div className="text-xs text-gray-500">{a.role}</div>
                     </div>
                   </div>
-                  <Badge className="text-xs px-2.5 py-1 font-medium bg-emerald-50 text-emerald-700">
+                  <Badge className="text-xs px-2.5 py-1 font-medium bg-emerald-50 text-emerald-700 hover:bg-emerald-50">
                     Offer Accepted
                   </Badge>
                 </div>
