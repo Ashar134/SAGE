@@ -4,10 +4,6 @@
 
 <div align="center">
 
-# SAGE
-
-**AI-Powered Autonomous Recruitment Intelligence Platform**
-
 An end-to-end intelligent recruitment system from CV parsing and semantic job matching to AI-generated assessments and multi-dimensional interview scoring.
 
 [![Django](https://img.shields.io/badge/Django-5.2-092E20?style=flat-square)](https://www.djangoproject.com/)
