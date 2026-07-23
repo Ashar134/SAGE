@@ -11,8 +11,9 @@ An end-to-end intelligent recruitment system from CV parsing and semantic job ma
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?style=flat-square)](https://www.typescriptlang.org/)
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=flat-square)](https://www.mysql.com/)
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-black?style=flat-square)](LICENSE)
-
+<a href="https://github.com/VoltAgent/voltagent">
+     <img width="1500"  alt="claude-skills" src="https://cdn.voltagent.dev/awesome-repo/logo.json.svg" />
+</a>
 </div>
 
 ---
