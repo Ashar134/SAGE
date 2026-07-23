@@ -4,7 +4,7 @@
 
 **AI-Powered Autonomous Recruitment Intelligence Platform**
 
-An end-to-end intelligent recruitment system — from CV parsing and semantic job matching to AI-generated assessments and multi-dimensional interview scoring.
+An end-to-end intelligent recruitment system from CV parsing and semantic job matching to AI-generated assessments and multi-dimensional interview scoring.
 
 [![Django](https://img.shields.io/badge/Django-5.2-092E20?style=flat-square)](https://www.djangoproject.com/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square)](https://react.dev/)
@@ -292,23 +292,23 @@ All routes are prefixed `/api/`. Requests to protected routes require an `Author
 
 ## AI Modules
 
-### CV Parser — `backend/CV-Parser/`
+### CV Parser - `backend/CV-Parser/`
 
 Uses spaCy to extract structured data from PDF resumes: personal information, classified skills (language, framework, tool, soft skill), education with GPA, work experience with responsibilities, projects, certifications, and publications.
 
-### Test Generator — `backend/test_generator/`
+### Test Generator - `backend/test_generator/`
 
 A retrieval-augmented generation pipeline. Job descriptions are embedded and stored in ChromaDB. At test time, LangChain retrieves the most relevant context and passes it to a locally running Ollama model, which generates role-specific multiple-choice questions.
 
-### Interview Bot — `backend/interview/`
+### Interview Bot - `backend/interview/`
 
 Five scoring modules run independently per response and are combined into a final weighted score:
 
-- `communication.py` — readability, sentence fluency, and coherence (textstat)
-- `relevance.py` — cosine similarity between the answer and expected key points (sentence-transformers)
-- `technical.py` — technical term density and concept coverage
-- `reasoning.py` — logical connective density and argument structure
-- `confidence.py` — MediaPipe pose estimation and DeepFace emotion classification from the interview recording
+- `communication.py` - readability, sentence fluency, and coherence (textstat)
+- `relevance.py` - cosine similarity between the answer and expected key points (sentence-transformers)
+- `technical.py` - technical term density and concept coverage
+- `reasoning.py` - logical connective density and argument structure
+- `confidence.py` - MediaPipe pose estimation and DeepFace emotion classification from the interview recording
 
 ### Job Matcher
 
