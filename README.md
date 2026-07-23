@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="./assets/banner.mp4" alt="SAGE Banner" width="100%">
-</p>
+🎥 **Watch the Demo:** [Demo Video](./assets/banner.mp4)
 
 <div align="center">
 
