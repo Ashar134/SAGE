@@ -4,13 +4,21 @@
 
 <div align="center">
 
-An end-to-end intelligent recruitment system from CV parsing and semantic job matching to AI-generated assessments and multi-dimensional interview scoring.
+# Sage - AI-Powered Intelligent Recruitment Platform
 
+An end-to-end intelligent recruitment platform that automates the hiring lifecycle through AI-powered CV parsing, semantic candidate-job matching, adaptive assessment generation, and multi-dimensional interview analysis.
+
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square)](https://www.python.org/)
 [![Django](https://img.shields.io/badge/Django-5.2-092E20?style=flat-square)](https://www.djangoproject.com/)
+[![Django REST](https://img.shields.io/badge/Django_REST_Framework-3.16-red?style=flat-square)](https://www.django-rest-framework.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?style=flat-square)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=flat-square)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.x-06B6D4?style=flat-square)](https://tailwindcss.com/)
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=flat-square)](https://www.mysql.com/)
-[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square)](https://www.python.org/)
+[![LangChain](https://img.shields.io/badge/LangChain-Framework-00A67E?style=flat-square)](https://www.langchain.com/)
+[![Ollama](https://img.shields.io/badge/Ollama-Local_LLM-000000?style=flat-square)](https://ollama.com/)
+[![ChromaDB](https://img.shields.io/badge/ChromaDB-Vector_DB-6E56CF?style=flat-square)](https://www.trychroma.com/)
 
 </div>
 
