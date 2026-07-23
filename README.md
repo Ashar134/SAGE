@@ -322,7 +322,7 @@ All endpoints are prefixed with `/api/`. Authentication uses **JWT Bearer tokens
 
 ## AI & ML Modules
 
-### 📄 CV Parser (`backend/CV-Parser/`)
+### CV Parser (`backend/CV-Parser/`)
 
 Uses **spaCy** and **pycountry** to extract structured data from PDF resumes:
 - Personal information (name, email, phone, address)
