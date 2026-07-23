@@ -144,7 +144,7 @@ The system serves **two distinct user types**:
 | **OpenCV** | Video frame processing |
 | **textstat** | Communication quality scoring |
 
-### Frontend — Candidate Portal
+### Frontend - Candidate Portal
 
 | Technology | Role |
 |---|---|
@@ -156,7 +156,7 @@ The system serves **two distinct user types**:
 | **Leaflet / React-Leaflet** | Interactive maps |
 | **Tailwind CSS 4** | Utility styling |
 
-### Frontend — HR Dashboard
+### Frontend - HR Dashboard
 
 | Technology | Role |
 |---|---|
@@ -357,9 +357,5 @@ Interview Score = weighted average of:
 ### Job Matcher
 
 `sentence-transformers` generates embeddings for both job descriptions and candidate profiles. Cosine similarity ranks the best-fit jobs for each user.
-
----
-
-*Django · React · spaCy · LangChain · MediaPipe · DeepFace · sentence-transformers*
 
 </div>
