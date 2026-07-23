@@ -1,95 +1,55 @@
 <div align="center">
 
-# 🧠SAGE | AI-Powered Autonomous Recruitment Intelligence Platform
-### *An end-to-end, AI-powered recruitment ecosystem for the modern hiring era*
+# SAGE
 
-[![Django](https://img.shields.io/badge/Django-5.2-092E20?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
-[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
-[![LangChain](https://img.shields.io/badge/LangChain-RAG-1C3C3C?style=for-the-badge&logo=chainlink&logoColor=white)](https://langchain.com/)
-[![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)](LICENSE)
+**Smart AI-Guided Employment Platform**
 
-<br/>
+An end-to-end intelligent recruitment system — from CV parsing and semantic job matching to AI-generated assessments and multi-dimensional interview scoring.
 
->  **Final Year Project** | A full-stack intelligent hiring platform that automates CV parsing, AI test generation, real-time interview scoring, and HR pipeline management - powered by LLMs, NLP, and computer vision.
+[![Django](https://img.shields.io/badge/Django-5.2-092E20?style=flat-square)](https://www.djangoproject.com/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?style=flat-square)](https://www.typescriptlang.org/)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=flat-square)](https://www.mysql.com/)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-black?style=flat-square)](LICENSE)
 
 </div>
 
 ---
 
-## Table of Contents
+## What is SAGE?
 
-- [Overview](#-overview)
-- [Architecture](#️-architecture)
-- [Key Features](#-key-features)
-- [Tech Stack](#️-tech-stack)
-- [Project Structure](#-project-structure)
-- [Getting Started](#️-getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Backend Setup](#backend-setup)
-  - [Frontend Setup](#frontend-setup-candidate-portal)
-  - [HR Dashboard Setup](#hr-dashboard-setup)
-- [API Overview](#-api-overview)
-- [AI & ML Modules](#-ai--ml-modules)
-- [Database Schema](#️-database-schema)
-- [Testing](#-testing)
-- [Contributors](#-contributors)
+SAGE is a full-stack, AI-driven recruitment platform built as a Final Year Project. It automates the entire hiring pipeline on both sides of the table — candidates upload their CV, get matched to relevant roles, sit a generated assessment, then complete a voice-based AI interview. Recruiters manage everything through a separate analytics dashboard.
 
----
+Three independently running applications share a single Django REST backend:
 
-## Overview
-
-**SAGE** is a production-grade, AI-driven recruitment platform built as a Final Year Project. It digitises and automates the entire hiring pipeline - from a candidate's first visit, through CV parsing and skill matching, automated test generation, live AI-powered interviews, and finally HR pipeline management via a dedicated analytics dashboard.
-
-The system serves **two distinct user types**:
-
-| Portal | Audience | Technology |
+| Application | Audience | Stack |
 |---|---|---|
-| **Candidate Portal** | Job seekers applying for roles | React + TypeScript + Vite |
-| **HR Dashboard** | Recruiters managing the pipeline | React + JSX + Shadcn/UI |
-| **Backend API** | Shared services & AI engine | Django REST Framework |
+| Candidate Portal | Job seekers | React + TypeScript + Vite |
+| HR Dashboard | Recruiters | React + Shadcn/UI + Recharts |
+| Backend API | Shared service layer | Django REST Framework + MySQL |
 
 ---
 
 ## Architecture
 
 ```
-┌───────────────────────────────────────────────────────────────────────┐
-│                           SAGE Platform                               │
-│                                                                       │
-│  ┌─────────────────────┐        ┌─────────────────────────────────┐  │
-│  │   Candidate Portal  │        │         HR Dashboard            │  │
-│  │  React + TypeScript │        │   React + Shadcn/UI + Recharts  │  │
-│  │   (Port 5173)       │        │         (Port 5174)             │  │
-│  └────────┬────────────┘        └───────────────┬─────────────────┘  │
-│           │                                     │                    │
-│           └─────────────┬───────────────────────┘                    │
-│                         │  REST API (JWT Auth)                        │
-│                         ▼                                             │
-│         ┌───────────────────────────────┐                            │
-│         │    Django REST Framework      │                            │
-│         │         (Port 8000)           │                            │
-│         │                               │                            │
-│         │  ┌──────────┐ ┌────────────┐  │                            │
-│         │  │  CV/NLP  │ │  RAG / LLM │  │                            │
-│         │  │  Parser  │ │  (Ollama)  │  │                            │
-│         │  └──────────┘ └────────────┘  │                            │
-│         │  ┌──────────┐ ┌────────────┐  │                            │
-│         │  │Interview │ │  Sentence  │  │                            │
-│         │  │  Bot AI  │ │ Embeddings │  │                            │
-│         │  └──────────┘ └────────────┘  │                            │
-│         │  ┌──────────┐ ┌────────────┐  │                            │
-│         │  │MediaPipe │ │  DeepFace  │  │                            │
-│         │  │Confidence│ │  Emotion   │  │                            │
-│         │  └──────────┘ └────────────┘  │                            │
-│         └───────────────────────────────┘                            │
-│                         │                                             │
-│                         ▼                                             │
-│              ┌────────────────────┐                                   │
-│              │   MySQL Database   │                                   │
-│              └────────────────────┘                                   │
-└───────────────────────────────────────────────────────────────────────┘
+Candidate Portal (5173)     HR Dashboard (5174)
+         |                          |
+         +----------+  +-----------+
+                    |  |
+              JWT REST API
+                    |
+          Django REST Framework (8000)
+                    |
+      +-------------+-------------+
+      |             |             |
+  CV Parser    RAG Engine    Interview Bot
+  (spaCy)    (LangChain +   (gTTS + Whisper +
+              Ollama +        MediaPipe +
+              ChromaDB)       DeepFace)
+                    |
+              MySQL Database
 ```
 
 ---
@@ -98,30 +58,36 @@ The system serves **two distinct user types**:
 
 ### Candidate Portal
 
-- **Auth & Onboarding** - Secure JWT-based authentication with CV-driven profile onboarding
-- **Smart CV Parser** - Upload a PDF resume and have skills, experience, and education auto-extracted using spaCy NLP
-- **AI-Powered Job Matching** - Semantic similarity matching between candidate profiles and job descriptions using `sentence-transformers`
-- **Job Applications** - Apply to jobs and track status through a live application timeline
-- **AI-Generated Tests** - Sit auto-generated assessments built from job descriptions using RAG (LangChain + Ollama)
-- **AI Interview Bot** - Live voice-based interview with gTTS speech synthesis and OpenAI Whisper transcription
-- **Saved Jobs & Profile Management** - Bookmark jobs, manage resume, skills, education, and experience
+- **CV Onboarding** — Upload a PDF resume; spaCy extracts skills, experience, education, and projects into a structured profile automatically
+- **Semantic Job Matching** — `sentence-transformers` embeddings rank jobs by cosine similarity against the candidate's profile
+- **AI-Generated Tests** — RAG pipeline (LangChain + Ollama + ChromaDB) generates role-specific MCQ assessments from job descriptions
+- **Voice Interview** — gTTS reads questions aloud; OpenAI Whisper transcribes responses; scoring runs immediately after each answer
+- **Application Tracking** — Full timeline of status changes from applied through offer or rejection
+- **Saved Jobs** — Bookmark listings; manage resume, skills, education, and work history
 
 ### HR Dashboard
 
-- **Recruitment Analytics** - Charts and KPIs covering applications, interviews, and offer rates (Recharts)
-- **Applicants Management** - Full applicant table with status filters and pipeline views
-- **Kanban Board** - Drag-and-drop style visual hiring pipeline
-- **Interview Management** - Schedule and review interview outcomes with AI confidence scores
-- **Department & Job Postings** - Manage departments, create and publish job listings
-- **Pipeline Insights** - Deep-dive analytics into each hiring stage
+- **Pipeline Overview** — KPI cards and charts across the full recruitment funnel (Recharts)
+- **Applicant Table** — Filterable list of all candidates with inline status management
+- **Kanban Board** — Visual drag-style pipeline from screening to offer
+- **Interview Review** — Per-applicant interview scores, confidence ratings, and transcripts
+- **Job Postings** — Create, edit, and deactivate listings; configure test parameters per role
+- **Department Management** — Organise roles and headcount by department
+- **Pipeline Insights** — Stage-by-stage drop-off analysis and conversion rates
 
 ### AI Engine
 
-- **Confidence Scoring** - MediaPipe + DeepFace analyze facial expressions and body language during video interviews
-- **Answer Relevance** - Sentence-level semantic scoring of interview answers against expected topics
-- **Communication Quality** - Textstat-powered readability and fluency analysis
-- **Technical Depth** - Keyword and concept density scoring for technical roles
-- **Reasoning & Logic** - Structured reasoning assessment in candidate responses
+The interview scoring engine evaluates each candidate response across five independent dimensions:
+
+| Dimension | Method |
+|---|---|
+| Communication | Readability and fluency via `textstat` |
+| Relevance | Semantic similarity to expected answer via `sentence-transformers` |
+| Technical Depth | Keyword and concept density analysis |
+| Reasoning | Logical structure and argument coherence |
+| Confidence | Facial expression and posture analysis via MediaPipe + DeepFace |
+
+Final interview score is a weighted average of all five dimensions.
 
 ---
 
@@ -129,96 +95,101 @@ The system serves **two distinct user types**:
 
 ### Backend
 
-| Technology | Role |
-|---|---|
-| **Django 5.2** | Web framework & ORM |
-| **Django REST Framework** | RESTful API layer |
-| **SimpleJWT** | JWT authentication |
-| **MySQL** | Primary relational database |
-| **spaCy** | CV/Resume NLP parsing |
-| **sentence-transformers** | Semantic job-matching embeddings |
-| **LangChain + Ollama** | RAG pipeline for test generation |
-| **ChromaDB** | Vector store for RAG |
-| **gTTS + Whisper** | Interview voice I/O |
-| **MediaPipe + DeepFace** | Visual confidence analysis |
-| **OpenCV** | Video frame processing |
-| **textstat** | Communication quality scoring |
+| Package | Version | Purpose |
+|---|---|---|
+| Django | 5.2.4 | Web framework and ORM |
+| djangorestframework | 3.16.0 | REST API layer |
+| djangorestframework-simplejwt | 5.5.0 | JWT authentication |
+| mysqlclient | 2.2.7 | MySQL database driver |
+| spacy | 3.8.7 | CV / NLP parsing |
+| sentence-transformers | 3.4.1 | Semantic embeddings |
+| langchain-ollama | 0.3.3 | LLM inference via Ollama |
+| langchain-chroma | 0.2.4 | Vector store integration |
+| chromadb | >=1.0.9 | Embedding vector store |
+| gTTS | 2.5.3 | Interview question text-to-speech |
+| openai-whisper | latest | Interview response transcription |
+| mediapipe | latest | Pose and facial landmark detection |
+| deepface | latest | Facial emotion recognition |
+| opencv-python | latest | Video frame processing |
+| textstat | latest | Readability scoring |
 
-### Frontend - Candidate Portal
+### Candidate Portal
 
-| Technology | Role |
-|---|---|
-| **React 19 + TypeScript** | UI framework |
-| **Vite 7** | Build tool |
-| **React Router v7** | Client-side routing |
-| **Framer Motion** | Animations |
-| **Axios** | API communication |
-| **Leaflet / React-Leaflet** | Interactive maps |
-| **Tailwind CSS 4** | Utility styling |
+| Package | Version | Purpose |
+|---|---|---|
+| react | 19.1.1 | UI framework |
+| typescript | 5.9.3 | Type-safe JavaScript |
+| vite | 7.1.7 | Build tooling |
+| react-router-dom | 7.10.1 | Client-side routing |
+| framer-motion | 12.25.0 | Animations |
+| axios | 1.12.2 | HTTP client |
+| react-leaflet | 5.0.0 | Interactive maps |
+| tailwindcss | 4.x | Utility CSS |
 
-### Frontend - HR Dashboard
+### HR Dashboard
 
-| Technology | Role |
-|---|---|
-| **React 19 + JSX** | UI framework |
-| **Vite 7** | Build tool |
-| **Shadcn/UI + Radix UI** | Component library |
-| **Recharts** | Analytics charts |
-| **Framer Motion** | Animations |
-| **Tailwind CSS 3** | Utility styling |
-| **Lucide React** | Icons |
+| Package | Version | Purpose |
+|---|---|---|
+| react | 19.2.0 | UI framework |
+| vite | 7.2.4 | Build tooling |
+| @radix-ui/* | latest | Accessible UI primitives |
+| recharts | 3.5.1 | Data visualisation |
+| framer-motion | 12.23.24 | Animations |
+| lucide-react | 0.555.0 | Icon set |
+| tailwindcss | 3.4.18 | Utility CSS |
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Final-Year-Project/
-│
-├── 📂 backend/                      # Django REST API
-│   ├── 📂 myapi/                    # Core API app
-│   │   ├── models.py                # Database models (User, Job, Application…)
-│   │   ├── serializers.py           # DRF serializers
-│   │   ├── views.py                 # API view logic
-│   │   └── urls.py                  # API routes
-│   ├── 📂 interview/                # AI Interview scoring engine
-│   │   ├── communication.py         # Fluency & communication scoring
-│   │   ├── confidence.py            # MediaPipe + DeepFace visual scoring
-│   │   ├── relevance.py             # Semantic answer relevance
-│   │   ├── technical.py             # Technical depth analysis
-│   │   └── reasoning.py             # Logic & reasoning scoring
-│   ├── 📂 CV-Parser/                # Resume PDF parser (spaCy)
-│   ├── 📂 test_generator/           # RAG-based test question generator
-│   │   └── RAG_FYP/                 # LangChain + ChromaDB + Ollama pipeline
-│   ├── 📂 Sage_Questions/           # Question bank management
-│   └── requirements.txt
-│
-├── 📂 frontend/                     # Candidate-facing React app (TypeScript)
-│   └── src/
-│       ├── 📂 components/
-│       │   ├── Auth/                # Login / registration
-│       │   ├── MainLayout/          # Home, Jobs, Applications, Profile
-│       │   ├── TestPageLayout/      # AI-generated test interface
-│       │   ├── InterviewPageLayout/ # Voice interview UI
-│       │   └── Onboarding/          # CV-driven profile setup
-│       ├── 📂 contexts/             # Auth & SavedJobs context providers
-│       └── 📂 utils/                # Helper utilities
-│
-├── 📂 hr_dashboard/                 # HR-facing React app (JSX + Shadcn)
-│   └── src/
-│       ├── 📂 components/dashboard/ # Reusable dashboard widgets
-│       └── 📂 pages/
-│           ├── Dashboard.jsx        # KPI overview
-│           ├── Applicants.jsx       # Applicant management
-│           ├── Interviews.jsx       # Interview tracking
-│           ├── JobPostings.jsx      # Job listing management
-│           ├── Kanban.jsx           # Visual hiring pipeline
-│           ├── Departments.jsx      # Department management
-│           ├── Analytics.jsx        # Recruitment analytics
-│           └── PipelineInsights.jsx # Stage-by-stage funnel
-│
-├── sage_db.sql                      # MySQL database dump
-└── test_results.json                # Automated test results
+|
++-- backend/
+|   +-- myapi/
+|   |   +-- models.py          # Core data models
+|   |   +-- serializers.py     # DRF serializers
+|   |   +-- views.py           # API endpoints
+|   |   +-- urls.py            # URL routing
+|   +-- interview/
+|   |   +-- communication.py   # Fluency scoring
+|   |   +-- confidence.py      # Visual confidence scoring
+|   |   +-- relevance.py       # Semantic relevance scoring
+|   |   +-- technical.py       # Technical depth scoring
+|   |   +-- reasoning.py       # Reasoning quality scoring
+|   +-- CV-Parser/             # spaCy resume extraction
+|   +-- test_generator/        # RAG MCQ generation pipeline
+|   |   +-- RAG_FYP/           # LangChain + ChromaDB + Ollama
+|   +-- Sage_Questions/        # Question bank
+|   +-- run_test_suite.py      # Automated test runner
+|   +-- requirements.txt
+|
++-- frontend/
+|   +-- src/
+|       +-- components/
+|       |   +-- Auth/                  # Login and registration
+|       |   +-- MainLayout/            # Home, Jobs, Applications, Profile
+|       |   +-- TestPageLayout/        # Assessment interface
+|       |   +-- InterviewPageLayout/   # Voice interview interface
+|       |   +-- Onboarding/            # CV-driven profile setup
+|       +-- contexts/                  # Auth and SavedJobs providers
+|       +-- utils/
+|
++-- hr_dashboard/
+|   +-- src/
+|       +-- components/dashboard/      # Reusable widgets
+|       +-- pages/
+|           +-- Dashboard.jsx          # KPI overview
+|           +-- Applicants.jsx         # Candidate management
+|           +-- Interviews.jsx         # Interview tracking
+|           +-- JobPostings.jsx        # Job listing management
+|           +-- Kanban.jsx             # Visual pipeline
+|           +-- Departments.jsx        # Department management
+|           +-- Analytics.jsx          # Charts and metrics
+|           +-- PipelineInsights.jsx   # Funnel analysis
+|
++-- sage_db.sql                        # Full MySQL schema and seed data
++-- test_results.json                  # Recorded test run output
 ```
 
 ---
@@ -227,52 +198,51 @@ Final-Year-Project/
 
 ### Prerequisites
 
-| Tool | Version |
+| Tool | Required Version |
 |---|---|
-| Python | >= 3.11 |
-| Node.js | >= 20.x |
-| MySQL | >= 8.0 |
-| Ollama | Latest (for LLM test generation) |
+| Python | 3.11 or later |
+| Node.js | 20.x or later |
+| MySQL | 8.0 or later |
+| Ollama | Latest stable |
 
->  **Ollama must be running** with the required model pulled before starting the backend if you intend to use test generation.
+Ollama must be running with a supported model pulled before the backend will serve test generation requests.
 
 ---
 
-### Backend Setup
+### Backend
 
 ```bash
-# 1. Navigate to the backend directory
 cd backend
 
-# 2. Create and activate a virtual environment
+# Create and activate a virtual environment
 python -m venv venv
-venv\Scripts\activate          # Windows
-# source venv/bin/activate     # macOS/Linux
+venv\Scripts\activate        # Windows
+source venv/bin/activate     # macOS / Linux
 
-# 3. Install all Python dependencies
+# Install dependencies
 pip install -r requirements.txt
 
-# 4. Download spaCy language model
+# Download the spaCy language model
 python -m spacy download en_core_web_sm
 
-# 5. Configure environment variables
-cp .env.example .env           # then fill in your values
+# Set environment variables
+copy .env.example .env       # then edit the file
 
-# 6. Import the database
+# Import the database
 mysql -u root -p < ../sage_db.sql
 
-# 7. Apply Django migrations
+# Run migrations
 python manage.py migrate
 
-# 8. Start the development server
+# Start the server
 python manage.py runserver
 ```
 
-> API available at **http://localhost:8000**
+API base URL: `http://localhost:8000`
 
 ---
 
-### Frontend Setup (Candidate Portal)
+### Candidate Portal
 
 ```bash
 cd frontend
@@ -280,11 +250,11 @@ npm install
 npm run dev
 ```
 
-> Candidate portal available at **http://localhost:5173**
+Available at: `http://localhost:5173`
 
 ---
 
-### HR Dashboard Setup
+### HR Dashboard
 
 ```bash
 cd hr_dashboard
@@ -292,70 +262,154 @@ npm install
 npm run dev
 ```
 
-> HR dashboard available at **http://localhost:5174**
+Available at: `http://localhost:5174`
 
 ---
 
-## API Overview
+## Environment Variables
 
-All endpoints are prefixed with `/api/`. Authentication uses **JWT Bearer tokens**.
+### `backend/.env`
 
-| Category | Endpoint | Description |
+```
+SECRET_KEY=
+DEBUG=True
+ALLOWED_HOSTS=localhost,127.0.0.1
+
+DB_NAME=sage_db
+DB_USER=root
+DB_PASSWORD=
+DB_HOST=localhost
+DB_PORT=3306
+```
+
+### `frontend/.env.development`
+
+```
+VITE_API_URL=http://localhost:8000
+```
+
+### `frontend/.env.production`
+
+```
+VITE_API_URL=https://your-api-domain.com
+```
+
+---
+
+## API Reference
+
+All routes are prefixed `/api/`. Requests to protected routes require an `Authorization: Bearer <token>` header.
+
+| Method | Endpoint | Description |
 |---|---|---|
-| **Auth** | `POST /api/auth/register/` | Register new user |
-| **Auth** | `POST /api/auth/login/` | Login & obtain JWT |
-| **Profile** | `GET/PUT /api/profile/` | View & update profile |
-| **CV** | `POST /api/cv/parse/` | Parse uploaded CV |
-| **Jobs** | `GET /api/jobs/` | List all active jobs |
-| **Jobs** | `GET /api/jobs/recommended/` | AI-matched job recommendations |
-| **Applications** | `POST /api/applications/` | Submit a job application |
-| **Applications** | `GET /api/applications/` | List user applications |
-| **Tests** | `GET /api/test/{job_id}/` | Fetch AI-generated test |
-| **Tests** | `POST /api/test/submit/` | Submit test answers |
-| **Interview** | `POST /api/interview/start/` | Start AI interview session |
-| **Interview** | `POST /api/interview/score/` | Score interview response |
-| **HR** | `GET /api/hr/applicants/` | List all applicants (HR) |
-| **HR** | `GET /api/hr/analytics/` | Recruitment analytics data |
-| **HR** | `PUT /api/hr/applications/{id}/status/` | Update applicant status |
+| POST | `/api/auth/register/` | Create a new account |
+| POST | `/api/auth/login/` | Authenticate and receive JWT |
+| GET / PUT | `/api/profile/` | Read or update user profile |
+| POST | `/api/cv/parse/` | Parse an uploaded PDF resume |
+| GET | `/api/jobs/` | List active job postings |
+| GET | `/api/jobs/recommended/` | Semantically ranked job matches |
+| POST | `/api/applications/` | Submit an application |
+| GET | `/api/applications/` | List the current user's applications |
+| GET | `/api/test/{job_id}/` | Retrieve a generated assessment |
+| POST | `/api/test/submit/` | Submit assessment answers |
+| POST | `/api/interview/start/` | Begin an AI interview session |
+| POST | `/api/interview/score/` | Score a single interview response |
+| GET | `/api/hr/applicants/` | List all applicants (HR only) |
+| GET | `/api/hr/analytics/` | Aggregated recruitment metrics |
+| PUT | `/api/hr/applications/{id}/status/` | Update an applicant's pipeline status |
 
 ---
 
-## AI & ML Modules
-
-### CV Parser (`backend/CV-Parser/`)
-
-Uses **spaCy** and **pycountry** to extract structured data from PDF resumes:
-- Personal information (name, email, phone, address)
-- Skills with type classification (language, framework, tool, soft skill)
-- Education history (degree, institution, GPA)
-- Work experience (title, company, dates, responsibilities)
-- Projects, certifications, and publications
-
-### Test Generator (`backend/test_generator/`)
-
-A **RAG (Retrieval-Augmented Generation)** pipeline powered by:
-- **LangChain** for pipeline orchestration
-- **Ollama** for local LLM inference
-- **ChromaDB** as the vector store
-- **HuggingFace Embeddings** for document vectorisation
-
-Generates role-specific MCQ assessments from job descriptions.
-
-### Interview Bot (`backend/interview/`)
-
-A multi-dimensional AI scoring system evaluating candidates across 5 axes:
+## Database Schema
 
 ```
-Interview Score = weighted average of:
-  ├── Communication  - fluency, readability, coherence
-  ├── Relevance      - semantic match to expected answer
-  ├── Technical      - concept depth & keyword density
-  ├── Reasoning      - logical structure & argument quality
-  └── Confidence     - MediaPipe pose + DeepFace emotion analysis
+users
+  |-- user_skills
+  |-- education
+  |-- work_experience
+  |-- user_certificates
+  |-- user_research
+  |-- user_projects
+  |-- saved_jobs
+  |-- applications
+        |-- application_timeline
+
+companies
+  |-- jobs
+        |-- applications
 ```
+
+Full DDL and seed data: [`sage_db.sql`](./sage_db.sql)
+
+---
+
+## Testing
+
+```bash
+# Backend test suite
+cd backend
+python run_test_suite.py
+```
+
+```bash
+# Frontend unit tests (Vitest + Testing Library)
+cd frontend
+npm run test
+```
+
+Stored results from the most recent run are in [`test_results.json`](./test_results.json).
+
+---
+
+## AI Modules
+
+### CV Parser — `backend/CV-Parser/`
+
+Uses spaCy to extract structured data from PDF resumes: personal information, classified skills (language, framework, tool, soft skill), education with GPA, work experience with responsibilities, projects, certifications, and publications.
+
+### Test Generator — `backend/test_generator/`
+
+A retrieval-augmented generation pipeline. Job descriptions are embedded and stored in ChromaDB. At test time, LangChain retrieves the most relevant context and passes it to a locally running Ollama model, which generates role-specific multiple-choice questions.
+
+### Interview Bot — `backend/interview/`
+
+Five scoring modules run independently per response and are combined into a final weighted score:
+
+- `communication.py` — readability, sentence fluency, and coherence (textstat)
+- `relevance.py` — cosine similarity between the answer and expected key points (sentence-transformers)
+- `technical.py` — technical term density and concept coverage
+- `reasoning.py` — logical connective density and argument structure
+- `confidence.py` — MediaPipe pose estimation and DeepFace emotion classification from the interview recording
 
 ### Job Matcher
 
-`sentence-transformers` generates embeddings for both job descriptions and candidate profiles. Cosine similarity ranks the best-fit jobs for each user.
+On profile completion or update, sentence-transformer embeddings are computed for both the candidate profile and all active job descriptions. Cosine similarity scores rank the jobs returned by the `/api/jobs/recommended/` endpoint.
+
+---
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m "Add your feature"`)
+4. Push to the branch (`git push origin feature/your-feature`)
+5. Open a pull request
+
+Please open an issue first to discuss significant changes before submitting a PR.
+
+---
+
+## License
+
+MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+<div align="center">
+
+Final Year Project — Bachelor of Science in Computer Science
+
+Django · React · spaCy · LangChain · sentence-transformers · MediaPipe · DeepFace
 
 </div>
+
