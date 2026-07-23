@@ -30,28 +30,6 @@ Three independently running applications share a single Django REST backend:
 
 ---
 
-## Architecture
-
-```
-Candidate Portal (5173)     HR Dashboard (5174)
-         |                          |
-         +----------+  +-----------+
-                    |  |
-              JWT REST API
-                    |
-          Django REST Framework (8000)
-                    |
-      +-------------+-------------+
-      |             |             |
-  CV Parser    RAG Engine    Interview Bot
-  (spaCy)    (LangChain +   (gTTS + Whisper +
-              Ollama +        MediaPipe +
-              ChromaDB)       DeepFace)
-                  
-```
-
----
-
 ## Key Features
 
 ### Candidate Portal
