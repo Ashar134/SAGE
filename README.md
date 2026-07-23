@@ -1,5 +1,5 @@
 <a href="https://github.com/VoltAgent/voltagent">
-     <img width="1500"  alt="claude-skills" src="https://cdn.voltagent.dev/awesome-repo/logo.json.svg" />
+     <img width="1500"  alt="claude-skills" src="./assets/banner.svg" />
 </a>
 
 <div align="center">
