@@ -2,7 +2,7 @@
 
 # SAGE
 
-**Smart AI-Guided Employment Platform**
+**AI-Powered Autonomous Recruitment Intelligence Platform**
 
 An end-to-end intelligent recruitment system — from CV parsing and semantic job matching to AI-generated assessments and multi-dimensional interview scoring.
 
@@ -58,22 +58,22 @@ Candidate Portal (5173)     HR Dashboard (5174)
 
 ### Candidate Portal
 
-- **CV Onboarding** — Upload a PDF resume; spaCy extracts skills, experience, education, and projects into a structured profile automatically
-- **Semantic Job Matching** — `sentence-transformers` embeddings rank jobs by cosine similarity against the candidate's profile
-- **AI-Generated Tests** — RAG pipeline (LangChain + Ollama + ChromaDB) generates role-specific MCQ assessments from job descriptions
-- **Voice Interview** — gTTS reads questions aloud; OpenAI Whisper transcribes responses; scoring runs immediately after each answer
-- **Application Tracking** — Full timeline of status changes from applied through offer or rejection
-- **Saved Jobs** — Bookmark listings; manage resume, skills, education, and work history
+- **CV Onboarding** - Upload a PDF resume; spaCy extracts skills, experience, education, and projects into a structured profile automatically
+- **Semantic Job Matching** - `sentence-transformers` embeddings rank jobs by cosine similarity against the candidate's profile
+- **AI-Generated Tests** - RAG pipeline (LangChain + Ollama + ChromaDB) generates role-specific MCQ assessments from job descriptions
+- **Voice Interview** - gTTS reads questions aloud; OpenAI Whisper transcribes responses; scoring runs immediately after each answer
+- **Application Tracking** - Full timeline of status changes from applied through offer or rejection
+- **Saved Jobs** - Bookmark listings; manage resume, skills, education, and work history
 
 ### HR Dashboard
 
-- **Pipeline Overview** — KPI cards and charts across the full recruitment funnel (Recharts)
-- **Applicant Table** — Filterable list of all candidates with inline status management
-- **Kanban Board** — Visual drag-style pipeline from screening to offer
-- **Interview Review** — Per-applicant interview scores, confidence ratings, and transcripts
-- **Job Postings** — Create, edit, and deactivate listings; configure test parameters per role
-- **Department Management** — Organise roles and headcount by department
-- **Pipeline Insights** — Stage-by-stage drop-off analysis and conversion rates
+- **Pipeline Overview** - KPI cards and charts across the full recruitment funnel (Recharts)
+- **Applicant Table** - Filterable list of all candidates with inline status management
+- **Kanban Board** - Visual drag-style pipeline from screening to offer
+- **Interview Review** - Per-applicant interview scores, confidence ratings, and transcripts
+- **Job Postings** - Create, edit, and deactivate listings; configure test parameters per role
+- **Department Management** - Organise roles and headcount by department
+- **Pipeline Insights** - Stage-by-stage drop-off analysis and conversion rates
 
 ### AI Engine
 
@@ -266,36 +266,6 @@ Available at: `http://localhost:5174`
 
 ---
 
-## Environment Variables
-
-### `backend/.env`
-
-```
-SECRET_KEY=
-DEBUG=True
-ALLOWED_HOSTS=localhost,127.0.0.1
-
-DB_NAME=sage_db
-DB_USER=root
-DB_PASSWORD=
-DB_HOST=localhost
-DB_PORT=3306
-```
-
-### `frontend/.env.development`
-
-```
-VITE_API_URL=http://localhost:8000
-```
-
-### `frontend/.env.production`
-
-```
-VITE_API_URL=https://your-api-domain.com
-```
-
----
-
 ## API Reference
 
 All routes are prefixed `/api/`. Requests to protected routes require an `Authorization: Bearer <token>` header.
@@ -317,47 +287,6 @@ All routes are prefixed `/api/`. Requests to protected routes require an `Author
 | GET | `/api/hr/applicants/` | List all applicants (HR only) |
 | GET | `/api/hr/analytics/` | Aggregated recruitment metrics |
 | PUT | `/api/hr/applications/{id}/status/` | Update an applicant's pipeline status |
-
----
-
-## Database Schema
-
-```
-users
-  |-- user_skills
-  |-- education
-  |-- work_experience
-  |-- user_certificates
-  |-- user_research
-  |-- user_projects
-  |-- saved_jobs
-  |-- applications
-        |-- application_timeline
-
-companies
-  |-- jobs
-        |-- applications
-```
-
-Full DDL and seed data: [`sage_db.sql`](./sage_db.sql)
-
----
-
-## Testing
-
-```bash
-# Backend test suite
-cd backend
-python run_test_suite.py
-```
-
-```bash
-# Frontend unit tests (Vitest + Testing Library)
-cd frontend
-npm run test
-```
-
-Stored results from the most recent run are in [`test_results.json`](./test_results.json).
 
 ---
 
@@ -397,19 +326,6 @@ On profile completion or update, sentence-transformer embeddings are computed fo
 
 Please open an issue first to discuss significant changes before submitting a PR.
 
----
-
-## License
-
-MIT License. See [LICENSE](LICENSE) for details.
-
----
-
-<div align="center">
-
-Final Year Project — Bachelor of Science in Computer Science
-
-Django · React · spaCy · LangChain · sentence-transformers · MediaPipe · DeepFace
 
 </div>
 
