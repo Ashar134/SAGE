@@ -1,6 +1,6 @@
-<a href="https://github.com/VoltAgent/voltagent">
-     <img width="1500"  alt="claude-skills" src="./assets/banner.svg" />
-</a>
+<p align="center">
+  <img src="./assets/banner.svg" alt="SAGE Banner" width="100%">
+</p>
 
 <div align="center">
 
