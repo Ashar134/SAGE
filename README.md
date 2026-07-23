@@ -12,7 +12,7 @@
 
 <br/>
 
->  **Final Year Project** — A full-stack intelligent hiring platform that automates CV parsing, AI test generation, real-time interview scoring, and HR pipeline management — powered by LLMs, NLP, and computer vision.
+>  **Final Year Project** | A full-stack intelligent hiring platform that automates CV parsing, AI test generation, real-time interview scoring, and HR pipeline management - powered by LLMs, NLP, and computer vision.
 
 </div>
 
@@ -40,7 +40,7 @@
 
 ## Overview
 
-**SAGE** is a production-grade, AI-driven recruitment platform built as a Final Year Project. It digitises and automates the entire hiring pipeline — from a candidate's first visit, through CV parsing and skill matching, automated test generation, live AI-powered interviews, and finally HR pipeline management via a dedicated analytics dashboard.
+**SAGE** is a production-grade, AI-driven recruitment platform built as a Final Year Project. It digitises and automates the entire hiring pipeline - from a candidate's first visit, through CV parsing and skill matching, automated test generation, live AI-powered interviews, and finally HR pipeline management via a dedicated analytics dashboard.
 
 The system serves **two distinct user types**:
 
@@ -98,34 +98,34 @@ The system serves **two distinct user types**:
 
 ### Candidate Portal
 
-- **Auth & Onboarding** — Secure JWT-based authentication with CV-driven profile onboarding
-- **Smart CV Parser** — Upload a PDF resume and have skills, experience, and education auto-extracted using spaCy NLP
-- **AI-Powered Job Matching** — Semantic similarity matching between candidate profiles and job descriptions using `sentence-transformers`
-- **Job Applications** — Apply to jobs and track status through a live application timeline
-- **AI-Generated Tests** — Sit auto-generated assessments built from job descriptions using RAG (LangChain + Ollama)
-- **AI Interview Bot** — Live voice-based interview with gTTS speech synthesis and OpenAI Whisper transcription
-- **Saved Jobs & Profile Management** — Bookmark jobs, manage resume, skills, education, and experience
+- **Auth & Onboarding** - Secure JWT-based authentication with CV-driven profile onboarding
+- **Smart CV Parser** - Upload a PDF resume and have skills, experience, and education auto-extracted using spaCy NLP
+- **AI-Powered Job Matching** - Semantic similarity matching between candidate profiles and job descriptions using `sentence-transformers`
+- **Job Applications** - Apply to jobs and track status through a live application timeline
+- **AI-Generated Tests** - Sit auto-generated assessments built from job descriptions using RAG (LangChain + Ollama)
+- **AI Interview Bot** - Live voice-based interview with gTTS speech synthesis and OpenAI Whisper transcription
+- **Saved Jobs & Profile Management** - Bookmark jobs, manage resume, skills, education, and experience
 
 ### HR Dashboard
 
-- **Recruitment Analytics** — Charts and KPIs covering applications, interviews, and offer rates (Recharts)
-- **Applicants Management** — Full applicant table with status filters and pipeline views
-- **Kanban Board** — Drag-and-drop style visual hiring pipeline
-- **Interview Management** — Schedule and review interview outcomes with AI confidence scores
-- **Department & Job Postings** — Manage departments, create and publish job listings
-- **Pipeline Insights** — Deep-dive analytics into each hiring stage
+- **Recruitment Analytics** - Charts and KPIs covering applications, interviews, and offer rates (Recharts)
+- **Applicants Management** - Full applicant table with status filters and pipeline views
+- **Kanban Board** - Drag-and-drop style visual hiring pipeline
+- **Interview Management** - Schedule and review interview outcomes with AI confidence scores
+- **Department & Job Postings** - Manage departments, create and publish job listings
+- **Pipeline Insights** - Deep-dive analytics into each hiring stage
 
 ### AI Engine
 
-- **Confidence Scoring** — MediaPipe + DeepFace analyze facial expressions and body language during video interviews
-- **Answer Relevance** — Sentence-level semantic scoring of interview answers against expected topics
-- **Communication Quality** — Textstat-powered readability and fluency analysis
-- **Technical Depth** — Keyword and concept density scoring for technical roles
-- **Reasoning & Logic** — Structured reasoning assessment in candidate responses
+- **Confidence Scoring** - MediaPipe + DeepFace analyze facial expressions and body language during video interviews
+- **Answer Relevance** - Sentence-level semantic scoring of interview answers against expected topics
+- **Communication Quality** - Textstat-powered readability and fluency analysis
+- **Technical Depth** - Keyword and concept density scoring for technical roles
+- **Reasoning & Logic** - Structured reasoning assessment in candidate responses
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Backend
 
@@ -296,7 +296,7 @@ npm run dev
 
 ---
 
-## 📡 API Overview
+## API Overview
 
 All endpoints are prefixed with `/api/`. Authentication uses **JWT Bearer tokens**.
 
@@ -320,7 +320,7 @@ All endpoints are prefixed with `/api/`. Authentication uses **JWT Bearer tokens
 
 ---
 
-## 🤖 AI & ML Modules
+## AI & ML Modules
 
 ### 📄 CV Parser (`backend/CV-Parser/`)
 
@@ -331,7 +331,7 @@ Uses **spaCy** and **pycountry** to extract structured data from PDF resumes:
 - Work experience (title, company, dates, responsibilities)
 - Projects, certifications, and publications
 
-### 🧪 Test Generator (`backend/test_generator/`)
+### Test Generator (`backend/test_generator/`)
 
 A **RAG (Retrieval-Augmented Generation)** pipeline powered by:
 - **LangChain** for pipeline orchestration
@@ -341,20 +341,20 @@ A **RAG (Retrieval-Augmented Generation)** pipeline powered by:
 
 Generates role-specific MCQ assessments from job descriptions.
 
-### 🎤 Interview Bot (`backend/interview/`)
+### Interview Bot (`backend/interview/`)
 
 A multi-dimensional AI scoring system evaluating candidates across 5 axes:
 
 ```
 Interview Score = weighted average of:
-  ├── 🗣️  Communication  — fluency, readability, coherence
-  ├── 🎯  Relevance      — semantic match to expected answer
-  ├── 💡  Technical      — concept depth & keyword density
-  ├── 🧩  Reasoning      — logical structure & argument quality
-  └── 😐  Confidence     — MediaPipe pose + DeepFace emotion analysis
+  ├── Communication  - fluency, readability, coherence
+  ├── Relevance      - semantic match to expected answer
+  ├── Technical      - concept depth & keyword density
+  ├── Reasoning      - logical structure & argument quality
+  └── Confidence     - MediaPipe pose + DeepFace emotion analysis
 ```
 
-### 🔍 Job Matcher
+### Job Matcher
 
 `sentence-transformers` generates embeddings for both job descriptions and candidate profiles. Cosine similarity ranks the best-fit jobs for each user.
 
