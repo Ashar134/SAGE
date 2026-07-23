@@ -171,9 +171,7 @@ Final-Year-Project/
 |           +-- Departments.jsx        # Department management
 |           +-- Analytics.jsx          # Charts and metrics
 |           +-- PipelineInsights.jsx   # Funnel analysis
-|
-+-- sage_db.sql                        # Full MySQL schema and seed data
-+-- test_results.json                  # Recorded test run output
+
 ```
 
 ---
