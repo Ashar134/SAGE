@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/banner.svg" alt="SAGE Banner" width="100%">
+  <img src="./assets/banner.mp4" alt="SAGE Banner" width="100%">
 </p>
 
 <div align="center">
