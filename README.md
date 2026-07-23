@@ -18,7 +18,7 @@ An end-to-end intelligent recruitment system from CV parsing and semantic job ma
 
 ## What is SAGE?
 
-SAGE is a full-stack, AI-driven recruitment platform built as a Final Year Project. It automates the entire hiring pipeline on both sides of the table — candidates upload their CV, get matched to relevant roles, sit a generated assessment, then complete a voice-based AI interview. Recruiters manage everything through a separate analytics dashboard.
+SAGE is a full-stack, AI-driven recruitment platform built as a Final Year Project. It automates the entire hiring pipeline on both sides of the table - candidates upload their CV, get matched to relevant roles, sit a generated assessment, then complete a voice-based AI interview. Recruiters manage everything through a separate analytics dashboard.
 
 Three independently running applications share a single Django REST backend:
 
@@ -47,8 +47,7 @@ Candidate Portal (5173)     HR Dashboard (5174)
   (spaCy)    (LangChain +   (gTTS + Whisper +
               Ollama +        MediaPipe +
               ChromaDB)       DeepFace)
-                    |
-              MySQL Database
+                  
 ```
 
 ---
